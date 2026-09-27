@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import { Quiz, getLocalizedText } from '@/types/quiz';
-import { Clock, HelpCircle, Users, ArrowRight, Sparkles, Tag, Zap } from 'lucide-react';
+import { Clock, HelpCircle, Users, ArrowRight, Heart } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useState } from 'react';
 
 interface QuizCardProps {
   quiz: Quiz;
@@ -11,6 +12,7 @@ interface QuizCardProps {
 
 export default function QuizCard({ quiz }: QuizCardProps) {
   const { lang, t } = useLanguage();
+  const [liked, setLiked] = useState(false);
 
   const title = getLocalizedText(quiz, 'title', lang);
   const description = getLocalizedText(quiz, 'description', lang);
@@ -18,78 +20,85 @@ export default function QuizCard({ quiz }: QuizCardProps) {
   const tagLabel = quiz.tag ? t.tags[quiz.tag] || quiz.tag : null;
 
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-3xl border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-sm hover:shadow-xl hover:border-violet-500/50 transition-all duration-300">
-      {/* Top Banner Gradient */}
+    <div className="bg-white rounded-2xl border-2 border-purple-100 shadow-lg shadow-purple-500/5 overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/10 active:scale-[0.99] flex flex-col justify-between mb-4">
+      {/* 카드 헤더 비주얼 썸네일 */}
       <div
-        className={`relative h-40 w-full bg-gradient-to-r ${quiz.gradient} p-4 sm:p-5 flex flex-col justify-between overflow-hidden`}
+        className={`h-28 bg-gradient-to-r ${quiz.gradient} p-4 relative flex flex-col justify-between overflow-hidden`}
       >
-        <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
-        {/* Background Decorative Emoji */}
-        <div className="absolute -right-5 -bottom-6 text-7xl opacity-20 select-none transition-transform duration-300 group-hover:scale-110">
-          {quiz.coverEmoji}
-        </div>
-
-        {/* Top Badges */}
-        <div className="relative z-10 flex items-center justify-between gap-2">
+        <div className="flex items-center justify-between z-10">
           <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="rounded-full bg-black/35 backdrop-blur-md px-3 py-1 text-xs font-black text-white tracking-wide">
-              {categoryLabel}
+            <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md rounded-full text-xs font-black text-purple-700 tracking-wider uppercase shadow-xs">
+              {categoryLabel} {tagLabel ? `· ${tagLabel}` : ''}
             </span>
-            {tagLabel && (
-              <span className="rounded-full bg-white/25 backdrop-blur-md px-2.5 py-0.5 text-[11px] font-bold text-white flex items-center gap-1">
-                <Tag className="w-2.5 h-2.5" />
-                {tagLabel}
-              </span>
-            )}
+            <span className="px-2 py-0.5 bg-emerald-400 text-emerald-950 font-black text-[11px] rounded-full flex items-center gap-1 shadow-xs">
+              ⚡ +100 XP
+            </span>
           </div>
-
-          {/* Reward XP Badge */}
-          <div className="flex items-center gap-1 rounded-full bg-amber-400 text-amber-950 px-2.5 py-1 text-xs font-black shadow-md border-b-2 border-amber-600 shrink-0">
-            <Zap className="w-3 h-3 fill-current" />
-            +100 XP
-          </div>
+          <button
+            onClick={(e) => {
+              e.preventDefault();
+              setLiked(!liked);
+            }}
+            className="w-8 h-8 rounded-full bg-black/20 backdrop-blur-md flex items-center justify-center text-white active:scale-90 transition-transform"
+            aria-label="Favorite quiz"
+          >
+            <Heart
+              className={`w-4 h-4 transition-colors ${
+                liked ? 'fill-rose-400 text-rose-400' : 'fill-white text-white'
+              }`}
+            />
+          </button>
         </div>
 
-        {/* Big Emoji */}
-        <div className="relative z-10 text-4xl filter drop-shadow">
+        <div className="flex items-center gap-2 z-10">
+          <span className="px-2 py-0.5 bg-black/40 backdrop-blur-md rounded-md text-[11px] font-bold text-amber-300">
+            ★ 4.9 ({quiz.totalPlays})
+          </span>
+          <span className="px-2 py-0.5 bg-white/20 backdrop-blur-md rounded-md text-[11px] font-bold text-white">
+            ✨ {lang === 'ko' ? '덕력 마스터 뱃지' : 'Master Badge'}
+          </span>
+        </div>
+
+        {/* 배경 데코 하트 & 이모지 */}
+        <div className="absolute -right-2 -bottom-6 text-white/20 text-8xl font-black pointer-events-none select-none">
           {quiz.coverEmoji}
         </div>
       </div>
 
-      {/* Content Body */}
-      <div className="flex flex-1 flex-col justify-between p-5 sm:p-6">
+      {/* 카드 바디 */}
+      <div className="p-5 flex flex-col flex-1 justify-between">
         <div>
-          <h3 className="text-base sm:text-lg font-black text-zinc-900 dark:text-zinc-100 group-hover:text-violet-600 dark:group-hover:text-violet-400 transition-colors line-clamp-2 leading-snug">
+          <h3 className="text-lg font-black text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-1 hover:text-purple-600 transition-colors">
             {title}
           </h3>
-          <p className="mt-2 text-xs text-zinc-500 dark:text-zinc-400 line-clamp-2 leading-relaxed font-medium">
+          <p className="text-xs text-slate-500 font-medium line-clamp-2 mb-4 leading-relaxed">
             {description}
           </p>
         </div>
 
-        {/* Metadata & 3D Play Button */}
-        <div className="mt-5 border-t border-zinc-100 dark:border-zinc-800/80 pt-4">
-          <div className="flex items-center justify-between text-xs text-zinc-500 dark:text-zinc-400 mb-4 font-semibold">
-            <span className="flex items-center gap-1">
-              <HelpCircle className="w-3.5 h-3.5 text-zinc-400" />
+        <div>
+          <div className="flex items-center gap-3 text-xs font-semibold text-slate-400 mb-4 pb-4 border-b border-slate-100">
+            <span className="flex items-center gap-1 text-slate-600">
+              <HelpCircle className="w-3.5 h-3.5 text-slate-400" />
               {quiz.questions.length} {t.questionsCount}
             </span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5 text-zinc-400" />
+            <span className="flex items-center gap-1 text-slate-600">
+              <Clock className="w-3.5 h-3.5 text-slate-400" />
               ~{quiz.estimatedMinutes} {t.mins}
             </span>
-            <span className="flex items-center gap-1">
-              <Users className="w-3.5 h-3.5 text-zinc-400" />
-              {quiz.totalPlays}
+            <span className="flex items-center gap-1 text-purple-600 font-bold">
+              <Users className="w-3.5 h-3.5 text-purple-500" />
+              {quiz.totalPlays} {lang === 'ko' ? '도전자' : 'Players'}
             </span>
           </div>
 
+          {/* 풀사이즈 CTA 젤리 버튼 */}
           <Link
             href={`/quiz/${quiz.slug}`}
-            className="flex items-center justify-center gap-2 w-full rounded-2xl border-b-4 border-violet-800 bg-violet-600 hover:bg-violet-700 active:border-b-0 active:translate-y-1 text-white py-3 px-4 text-xs sm:text-sm font-black shadow-md transition-all group-hover:shadow-lg"
+            className="w-full py-3.5 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-xl shadow-md shadow-purple-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
           >
             <span>{t.startChallenge}</span>
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

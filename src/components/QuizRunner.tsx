@@ -1,11 +1,10 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import confetti from 'canvas-confetti';
 import { Quiz, Question, ScoreTier, QuestionLevel, getLocalizedText } from '@/types/quiz';
 import AdPlaceholder from './AdPlaceholder';
 import AffiliateBox from './AffiliateBox';
-import ShareButtons from './ShareButtons';
 import QuizCard from './QuizCard';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
@@ -21,6 +20,10 @@ import {
   Tag,
   Zap,
   SlidersHorizontal,
+  Flame,
+  Clock,
+  Share2,
+  Copy,
 } from 'lucide-react';
 
 interface QuizRunnerProps {
@@ -51,6 +54,20 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const [score, setScore] = useState(0);
   const [earnedXPInSession, setEarnedXPInSession] = useState(0);
 
+  // Dynamic Timer (15s per question)
+  const [timeLeft, setTimeLeft] = useState(15);
+  const [quizStartTime, setQuizStartTime] = useState<number>(Date.now());
+  const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
+
+  // Power-Up Items 3종 State
+  const [fiftyFiftyRemaining, setFiftyFiftyRemaining] = useState(1);
+  const [eliminatedOptions, setEliminatedOptions] = useState<string[]>([]);
+  const [timeExtensionsRemaining, setTimeExtensionsRemaining] = useState(2);
+  const [isHintActive, setIsHintActive] = useState(false);
+
+  // Challenge Link Copied Feedback
+  const [challengeCopied, setChallengeCopied] = useState(false);
+
   const currentQuestion: Question | undefined = activeQuestions[currentIndex];
   const totalQuestions = activeQuestions.length;
 
@@ -59,6 +76,23 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const quizDescription = getLocalizedText(quiz, 'description', lang);
   const categoryLabel = t.categories[quiz.category] || quiz.category;
   const tagLabel = quiz.tag ? t.tags[quiz.tag] || quiz.tag : null;
+
+  // 15s Timer countdown
+  useEffect(() => {
+    if (gameState !== 'playing' || isAnswerSubmitted) return;
+
+    const timer = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [gameState, isAnswerSubmitted, currentIndex]);
 
   const startQuiz = (levelChoice: QuestionLevel | 'all' = selectedLevel) => {
     let pool = quiz.questions;
@@ -69,7 +103,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       }
     }
     const shuffled = shuffleArray(pool);
-    // Question Bank: pick 5 questions for a focused replayable session (or total if less)
+    // Question Bank: pick 5 questions for a focused replayable session
     const sessionQuestions = shuffled.length > 5 ? shuffled.slice(0, 5) : shuffled;
     setActiveQuestions(sessionQuestions);
     setGameState('playing');
@@ -79,6 +113,12 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     setUserAnswers({});
     setScore(0);
     setEarnedXPInSession(0);
+    setTimeLeft(15);
+    setFiftyFiftyRemaining(1);
+    setEliminatedOptions([]);
+    setTimeExtensionsRemaining(2);
+    setIsHintActive(false);
+    setQuizStartTime(Date.now());
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -110,9 +150,14 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedOptionId(null);
       setIsAnswerSubmitted(false);
+      setTimeLeft(15);
+      setEliminatedOptions([]);
+      setIsHintActive(false);
       window.scrollTo({ top: 120, behavior: 'smooth' });
     } else {
       // Quiz Finished! Award completion bonus 30 XP and check daily quest
+      const totalElapsed = Math.max(15, Math.floor((Date.now() - quizStartTime) / 1000));
+      setElapsedSeconds(totalElapsed);
       addXP(30);
       setEarnedXPInSession((prev) => prev + 30);
       completeDailyQuest();
@@ -121,7 +166,45 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     }
   };
 
-  // Determine which score tier user achieved
+  // Power-Up 1: 50:50 Chance
+  const handleUseFiftyFifty = () => {
+    if (!currentQuestion || fiftyFiftyRemaining <= 0 || isAnswerSubmitted || eliminatedOptions.length > 0) return;
+    const wrongOptions = currentQuestion.options.filter((opt) => opt.id !== currentQuestion.correctAnswer);
+    const shuffledWrong = shuffleArray(wrongOptions);
+    const toEliminate = shuffledWrong.slice(0, 2).map((o) => o.id);
+    setEliminatedOptions(toEliminate);
+    setFiftyFiftyRemaining((prev) => prev - 1);
+  };
+
+  // Power-Up 2: +10s Time Extension
+  const handleUseTimeExtension = () => {
+    if (timeExtensionsRemaining <= 0 || isAnswerSubmitted) return;
+    setTimeLeft((prev) => prev + 10);
+    setTimeExtensionsRemaining((prev) => prev - 1);
+  };
+
+  // Power-Up 3: Fandom Chance (Hint)
+  const handleUseHint = () => {
+    if (isHintActive || isAnswerSubmitted) return;
+    setIsHintActive(true);
+  };
+
+  // Social Share & Copy Challenge Handler
+  const handleShareSocial = () => {
+    const url = typeof window !== 'undefined' ? window.location.href : 'https://korean-quiz.pages.dev';
+    const text = `💜 K-Pulse ${quizTitle}! 나는 ${Math.round((score / totalQuestions) * 100)}점(${currentTier.title}) 달성! 당신의 덕력은? #KPulse #BTS #KPopQuiz\n${url}`;
+    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+    window.open(twitterUrl, '_blank');
+  };
+
+  const handleCopyChallenge = () => {
+    const url = typeof window !== 'undefined' ? window.location.href : 'https://korean-quiz.pages.dev';
+    navigator.clipboard.writeText(url);
+    setChallengeCopied(true);
+    setTimeout(() => setChallengeCopied(false), 2500);
+  };
+
+  // Determine score tier
   const getScoreTier = (): ScoreTier => {
     const ratio = totalQuestions > 0 ? score / totalQuestions : 0;
     const matched = quiz.scoreTiers.find((tier) => {
@@ -154,15 +237,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     funQuote: getLocalizedText(rawTier, 'funQuote', lang),
   };
 
-  // Launch celebratory confetti when viewing results
+  // Celebratory confetti on results
   useEffect(() => {
     if (gameState === 'result') {
       try {
         confetti({
-          particleCount: 100,
+          particleCount: 120,
           spread: 80,
           origin: { y: 0.6 },
-          colors: ['#8b5cf6', '#ec4899', '#f59e0b', '#3b82f6', '#10b981'],
+          colors: ['#8b5cf6', '#ec4899', '#f59e0b', '#00e08f', '#10b981'],
         });
       } catch {
         // Fallback
@@ -190,15 +273,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   if (gameState === 'intro') {
     return (
       <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
-        <div className="overflow-hidden rounded-3xl border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-xl">
+        <div className="overflow-hidden rounded-3xl border-2 border-purple-100 bg-white shadow-xl shadow-purple-500/5">
           {/* Header Banner */}
           <div
             className={`relative bg-gradient-to-r ${quiz.gradient} p-8 sm:p-12 text-white text-center overflow-hidden`}
           >
-            <div className="absolute inset-0 bg-black/15"></div>
+            <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-2 flex-wrap mb-4">
-                <span className="inline-block px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs sm:text-sm font-black tracking-wider uppercase">
+                <span className="px-3.5 py-1 rounded-full bg-white/95 text-purple-900 text-xs sm:text-sm font-black tracking-wider uppercase shadow-xs">
                   {categoryLabel} {t.quizIntro.challenge}
                 </span>
                 {tagLabel && (
@@ -207,7 +290,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                     {tagLabel}
                   </span>
                 )}
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-amber-400 text-amber-950 text-xs font-black shadow-sm">
+                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-400 text-emerald-950 text-xs font-black shadow-xs">
                   <Zap className="w-3 h-3 fill-current" />
                   +100 MAX XP
                 </span>
@@ -219,7 +302,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <h1 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight max-w-2xl mx-auto">
                 {quizTitle}
               </h1>
-              <p className="mt-3 text-white/90 text-sm sm:text-base max-w-xl mx-auto font-medium">
+              <p className="mt-3 text-white/95 text-sm sm:text-base max-w-xl mx-auto font-medium">
                 {quizSubtitle}
               </p>
             </div>
@@ -227,41 +310,41 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
           {/* Details & Start Action */}
           <div className="p-6 sm:p-10">
-            <p className="text-zinc-600 dark:text-zinc-300 text-sm sm:text-base leading-relaxed text-center max-w-xl mx-auto mb-8 font-medium">
+            <p className="text-slate-600 text-sm sm:text-base leading-relaxed text-center max-w-xl mx-auto mb-8 font-medium">
               {quizDescription}
             </p>
 
             <div className="grid grid-cols-3 gap-3 max-w-md mx-auto mb-8 text-center">
-              <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border-2 border-zinc-200/80 dark:border-zinc-700/60">
-                <div className="text-xs text-zinc-400 font-bold">{t.quizIntro.questions}</div>
-                <div className="text-xl font-black text-zinc-800 dark:text-zinc-100">
+              <div className="p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
+                <div className="text-xs text-slate-400 font-bold">{t.quizIntro.questions}</div>
+                <div className="text-xl font-black text-slate-900">
                   {totalQuestions}
                 </div>
               </div>
-              <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border-2 border-zinc-200/80 dark:border-zinc-700/60">
-                <div className="text-xs text-zinc-400 font-bold">{t.quizIntro.estTime}</div>
-                <div className="text-xl font-black text-zinc-800 dark:text-zinc-100">
+              <div className="p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
+                <div className="text-xs text-slate-400 font-bold">{t.quizIntro.estTime}</div>
+                <div className="text-xl font-black text-slate-900">
                   ~{quiz.estimatedMinutes} {t.mins}
                 </div>
               </div>
-              <div className="p-3.5 rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border-2 border-zinc-200/80 dark:border-zinc-700/60">
-                <div className="text-xs text-zinc-400 font-bold">{t.quizIntro.difficulty}</div>
-                <div className="text-xl font-black text-zinc-800 dark:text-zinc-100">
+              <div className="p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
+                <div className="text-xs text-slate-400 font-bold">{t.quizIntro.difficulty}</div>
+                <div className="text-xl font-black text-slate-900">
                   {quiz.difficulty}
                 </div>
               </div>
             </div>
 
             {/* Question Bank & Difficulty Selector */}
-            <div className="mb-8 rounded-3xl bg-zinc-50 dark:bg-zinc-800/50 p-5 border-2 border-zinc-200/80 dark:border-zinc-700/80">
+            <div className="mb-8 rounded-3xl bg-slate-50 p-5 border-2 border-purple-100">
               <div className="flex items-center justify-between mb-3.5">
                 <div className="flex items-center gap-2">
-                  <SlidersHorizontal className="w-4 h-4 text-violet-600 dark:text-violet-400" />
-                  <span className="text-xs font-black uppercase tracking-wider text-zinc-800 dark:text-zinc-200">
+                  <SlidersHorizontal className="w-4 h-4 text-purple-600" />
+                  <span className="text-xs font-black uppercase tracking-wider text-slate-800">
                     {t.levels.selectTitle}
                   </span>
                 </div>
-                <span className="text-[11px] font-bold text-violet-600 dark:text-violet-400 bg-violet-100 dark:bg-violet-950/60 px-2.5 py-0.5 rounded-full">
+                <span className="text-[11px] font-bold text-purple-700 bg-purple-100 px-2.5 py-0.5 rounded-full">
                   {quiz.questions.length} Questions in Bank
                 </span>
               </div>
@@ -273,13 +356,13 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                   onClick={() => setSelectedLevel('all')}
                   className={`p-3 rounded-2xl border-2 text-left transition-all ${
                     selectedLevel === 'all'
-                      ? 'border-violet-600 bg-violet-100/70 dark:bg-violet-950/70 shadow-sm border-b-4 translate-y-[-2px]'
-                      : 'border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 border-b-2'
+                      ? 'border-purple-600 bg-purple-50 shadow-xs ring-2 ring-purple-400/20 translate-y-[-2px]'
+                      : 'border-slate-200 bg-white hover:border-purple-200'
                   }`}
                 >
                   <div className="text-base mb-1">🎲</div>
-                  <div className="text-xs font-black text-zinc-900 dark:text-zinc-100 line-clamp-1">{t.levels.allLevels}</div>
-                  <div className="text-[10px] text-zinc-500 font-semibold mt-0.5">{quiz.questions.length} Qs</div>
+                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.allLevels}</div>
+                  <div className="text-[10px] text-slate-400 font-bold mt-0.5">{quiz.questions.length} Qs</div>
                 </button>
 
                 {/* Lv 1 */}
@@ -288,16 +371,14 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                   onClick={() => setSelectedLevel(1)}
                   className={`p-3 rounded-2xl border-2 text-left transition-all ${
                     selectedLevel === 1
-                      ? 'border-emerald-500 bg-emerald-100/70 dark:bg-emerald-950/70 shadow-sm border-b-4 translate-y-[-2px]'
-                      : 'border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 border-b-2'
+                      ? 'border-emerald-500 bg-emerald-50 shadow-xs ring-2 ring-emerald-400/20 translate-y-[-2px]'
+                      : 'border-slate-200 bg-white hover:border-purple-200'
                   }`}
                 >
                   <div className="text-base mb-1">🌱</div>
-                  <div className="text-xs font-black text-zinc-900 dark:text-zinc-100 line-clamp-1">{t.levels.lvl1}</div>
-                  <div className="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">
-                    {quiz.questions.filter((q) => q.level === 1).length > 0
-                      ? `${quiz.questions.filter((q) => q.level === 1).length} Qs`
-                      : 'Available'}
+                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl1}</div>
+                  <div className="text-[10px] text-emerald-600 font-bold mt-0.5">
+                    {quiz.questions.filter((q) => q.level === 1).length} Qs
                   </div>
                 </button>
 
@@ -307,16 +388,14 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                   onClick={() => setSelectedLevel(2)}
                   className={`p-3 rounded-2xl border-2 text-left transition-all ${
                     selectedLevel === 2
-                      ? 'border-amber-500 bg-amber-100/70 dark:bg-amber-950/70 shadow-sm border-b-4 translate-y-[-2px]'
-                      : 'border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 border-b-2'
+                      ? 'border-amber-500 bg-amber-50 shadow-xs ring-2 ring-amber-400/20 translate-y-[-2px]'
+                      : 'border-slate-200 bg-white hover:border-purple-200'
                   }`}
                 >
                   <div className="text-base mb-1">⭐</div>
-                  <div className="text-xs font-black text-zinc-900 dark:text-zinc-100 line-clamp-1">{t.levels.lvl2}</div>
-                  <div className="text-[10px] text-amber-600 dark:text-amber-400 font-semibold mt-0.5">
-                    {quiz.questions.filter((q) => q.level === 2).length > 0
-                      ? `${quiz.questions.filter((q) => q.level === 2).length} Qs`
-                      : 'Available'}
+                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl2}</div>
+                  <div className="text-[10px] text-amber-600 font-bold mt-0.5">
+                    {quiz.questions.filter((q) => q.level === 2).length} Qs
                   </div>
                 </button>
 
@@ -326,16 +405,14 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                   onClick={() => setSelectedLevel(3)}
                   className={`p-3 rounded-2xl border-2 text-left transition-all ${
                     selectedLevel === 3
-                      ? 'border-rose-500 bg-rose-100/70 dark:bg-rose-950/70 shadow-sm border-b-4 translate-y-[-2px]'
-                      : 'border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 hover:border-zinc-300 dark:hover:border-zinc-600 border-b-2'
+                      ? 'border-rose-500 bg-rose-50 shadow-xs ring-2 ring-rose-400/20 translate-y-[-2px]'
+                      : 'border-slate-200 bg-white hover:border-purple-200'
                   }`}
                 >
                   <div className="text-base mb-1">🔥</div>
-                  <div className="text-xs font-black text-zinc-900 dark:text-zinc-100 line-clamp-1">{t.levels.lvl3}</div>
-                  <div className="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-0.5">
-                    {quiz.questions.filter((q) => q.level === 3).length > 0
-                      ? `${quiz.questions.filter((q) => q.level === 3).length} Qs`
-                      : 'Available'}
+                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl3}</div>
+                  <div className="text-[10px] text-rose-600 font-bold mt-0.5">
+                    {quiz.questions.filter((q) => q.level === 3).length} Qs
                   </div>
                 </button>
               </div>
@@ -343,7 +420,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
             <button
               onClick={() => startQuiz(selectedLevel)}
-              className="flex items-center justify-center gap-2 w-full max-w-md mx-auto rounded-2xl border-b-4 border-violet-800 bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 active:border-b-0 active:translate-y-1 text-white py-4 px-8 text-base font-black shadow-xl transition-all"
+              className="flex items-center justify-center gap-2 w-full max-w-md mx-auto rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-4 px-8 text-base font-black shadow-lg shadow-purple-500/25 transition-all active:scale-95"
             >
               <span>{t.quizIntro.startNow}</span>
               <ArrowRight className="w-5 h-5" />
@@ -368,21 +445,21 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
     return (
       <div className="max-w-3xl mx-auto px-4 py-6 sm:py-10">
-        {/* Progress Tracker */}
+        {/* Top HUD (Q.07/15 Progress + 12s Dynamic Timer Chip) */}
         <div className="mb-6">
-          <div className="flex items-center justify-between text-xs font-black text-zinc-500 mb-2">
+          <div className="flex items-center justify-between text-xs font-black text-slate-600 mb-2.5">
             <div className="flex items-center gap-2">
-              <span>
-                {t.quizRunner.question} <strong className="text-violet-600 dark:text-violet-400">{currentIndex + 1}</strong> {t.quizRunner.of} {totalQuestions}
+              <span className="px-3 py-1 bg-white border border-purple-100 rounded-full font-black text-slate-700 shadow-xs">
+                Q. {currentIndex + 1 < 10 ? `0${currentIndex + 1}` : currentIndex + 1} / {totalQuestions < 10 ? `0${totalQuestions}` : totalQuestions}
               </span>
               {currentQuestion.level && (
                 <span
-                  className={`px-2 py-0.5 rounded-full text-[11px] font-black border ${
+                  className={`px-2.5 py-0.5 rounded-full text-[11px] font-black border ${
                     currentQuestion.level === 1
-                      ? 'bg-emerald-50 text-emerald-700 border-emerald-300 dark:bg-emerald-950/60 dark:text-emerald-300 dark:border-emerald-800'
+                      ? 'bg-emerald-50 text-emerald-700 border-emerald-300'
                       : currentQuestion.level === 2
-                      ? 'bg-amber-50 text-amber-700 border-amber-300 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800'
-                      : 'bg-rose-50 text-rose-700 border-rose-300 dark:bg-rose-950/60 dark:text-rose-300 dark:border-rose-800'
+                      ? 'bg-amber-50 text-amber-700 border-amber-300'
+                      : 'bg-rose-50 text-rose-700 border-rose-300'
                   }`}
                 >
                   {currentQuestion.level === 1
@@ -393,90 +470,203 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                 </span>
               )}
             </div>
-            <div className="flex items-center gap-3">
-              <span className="flex items-center gap-1 text-amber-600 dark:text-amber-400 font-black">
+
+            {/* Dynamic Timer & XP Chip */}
+            <div className="flex items-center gap-2">
+              <div
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-full font-black text-xs shadow-xs transition-colors ${
+                  timeLeft <= 5
+                    ? 'bg-rose-50 border-2 border-rose-400 text-rose-600 animate-pulse'
+                    : 'bg-white border border-slate-200 text-slate-700'
+                }`}
+              >
+                <Clock className={`w-3.5 h-3.5 ${timeLeft <= 5 ? 'text-rose-500' : 'text-slate-500'}`} />
+                <span>⏱️ {timeLeft}s</span>
+              </div>
+              <span className="hidden sm:flex items-center gap-1 text-emerald-600 font-black px-2.5 py-1 bg-emerald-50 rounded-full border border-emerald-200 text-xs">
                 <Zap className="w-3.5 h-3.5 fill-current" />
                 +{earnedXPInSession} XP
               </span>
-              <span>{t.quizRunner.score}: {score} {t.quizRunner.pts}</span>
             </div>
           </div>
-          <div className="h-3 w-full rounded-full bg-zinc-200 dark:bg-zinc-800 p-0.5 border border-zinc-300 dark:border-zinc-700 overflow-hidden">
+
+          {/* Neon Smooth Progress Bar */}
+          <div className="h-2.5 w-full rounded-full bg-slate-100 p-0.5 border border-purple-100 overflow-hidden">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-violet-600 via-purple-600 to-pink-500 transition-all duration-300 ease-out shadow-sm"
+              className="h-full rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-400 transition-all duration-300 ease-out shadow-xs"
               style={{ width: `${progressPercentQuestion}%` }}
             ></div>
           </div>
         </div>
 
         {/* Question Card */}
-        <div className="rounded-3xl border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-6 sm:p-8 shadow-sm">
-          <h2 className="text-lg sm:text-2xl font-black text-zinc-900 dark:text-zinc-100 leading-snug mb-6">
+        <div className="rounded-3xl border-2 border-purple-100 bg-white p-6 sm:p-8 shadow-lg shadow-purple-500/5">
+          <h2 className="text-lg sm:text-2xl font-black text-slate-900 leading-snug mb-6">
             {questionText}
           </h2>
 
-          {/* Chunky 3D Option Buttons */}
-          <div className="space-y-3.5">
+          {/* 4지선다 선택지 컨테이너 (Snippet 2) */}
+          <div className="space-y-3 my-6">
             {currentQuestion.options.map((option) => {
               const isSelected = selectedOptionId === option.id;
               const isOptionCorrect = option.id === currentQuestion.correctAnswer;
               const optionText = getLocalizedText(option, 'text', lang);
+              const isEliminated = eliminatedOptions.includes(option.id);
 
-              let optionStyle =
-                'border-2 border-b-4 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800/60 hover:border-violet-400 active:border-b-2 active:translate-y-0.5 text-zinc-800 dark:text-zinc-200';
+              if (isEliminated) {
+                return (
+                  <div
+                    key={option.id}
+                    className="w-full p-4 rounded-2xl bg-slate-50 border-2 border-slate-100 opacity-30 line-through flex items-center justify-between pointer-events-none select-none"
+                  >
+                    <div className="flex items-center gap-3">
+                      <span className="w-8 h-8 rounded-xl bg-slate-200 text-slate-400 font-black text-sm flex items-center justify-center">
+                        {option.id}
+                      </span>
+                      <span className="font-bold text-slate-400 text-[15px]">{optionText}</span>
+                    </div>
+                  </div>
+                );
+              }
 
               if (isAnswerSubmitted) {
                 if (isOptionCorrect) {
-                  optionStyle =
-                    'border-2 border-b-4 border-emerald-600 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-900 dark:text-emerald-200 shadow-md';
+                  return (
+                    <button
+                      key={option.id}
+                      disabled
+                      className="w-full p-4 rounded-2xl bg-emerald-50/90 border-2 border-emerald-500 text-left flex flex-col gap-1.5 transition-all shadow-md shadow-emerald-500/10 ring-2 ring-emerald-400/30"
+                    >
+                      <div className="flex items-center justify-between w-full">
+                        <div className="flex items-center gap-3">
+                          <span className="w-8 h-8 rounded-xl bg-emerald-500 text-white font-black text-sm flex items-center justify-center shadow-xs">
+                            <CheckCircle2 className="w-4 h-4" />
+                          </span>
+                          <span className="font-black text-emerald-950 text-[15px]">{optionText}</span>
+                        </div>
+                        <span className="px-2.5 py-1 bg-white text-emerald-600 border border-emerald-300 text-xs font-black rounded-full flex items-center gap-1 shadow-xs">
+                          ✓ 정답! (+20 XP)
+                        </span>
+                      </div>
+                    </button>
+                  );
                 } else if (isSelected) {
-                  optionStyle =
-                    'border-2 border-b-4 border-rose-600 bg-rose-50 dark:bg-rose-950/50 text-rose-900 dark:text-rose-200';
+                  return (
+                    <button
+                      key={option.id}
+                      disabled
+                      className="w-full p-4 rounded-2xl bg-rose-50/90 border-2 border-rose-500 text-left flex items-center justify-between transition-all shadow-xs"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="w-8 h-8 rounded-xl bg-rose-500 text-white font-black text-sm flex items-center justify-center shadow-xs">
+                          <XCircle className="w-4 h-4" />
+                        </span>
+                        <span className="font-black text-rose-950 text-[15px]">{optionText}</span>
+                      </div>
+                      <span className="px-2.5 py-1 bg-rose-100 text-rose-700 text-xs font-black rounded-full">
+                        ✕ 오답
+                      </span>
+                    </button>
+                  );
                 } else {
-                  optionStyle = 'opacity-40 border-2 border-zinc-200 dark:border-zinc-800';
+                  return (
+                    <button
+                      key={option.id}
+                      disabled
+                      className="w-full p-4 rounded-2xl bg-white border-2 border-slate-100 text-left flex items-center justify-between opacity-35"
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="w-8 h-8 rounded-xl bg-slate-100 text-slate-400 font-black text-sm flex items-center justify-center">
+                          {option.id}
+                        </span>
+                        <span className="font-bold text-slate-400 text-[15px]">{optionText}</span>
+                      </div>
+                    </button>
+                  );
                 }
-              } else if (isSelected) {
-                optionStyle =
-                  'border-2 border-b-4 border-violet-700 bg-violet-50 dark:bg-violet-950/50 text-violet-900 dark:text-violet-200 ring-2 ring-violet-500/20 translate-y-0.5';
               }
 
+              // Selected (Before submit) - Snippet 2
+              if (isSelected) {
+                return (
+                  <button
+                    key={option.id}
+                    onClick={() => handleSelectOption(option.id)}
+                    className="w-full p-4 rounded-2xl bg-emerald-50/80 border-2 border-emerald-500 text-left flex flex-col gap-1.5 transition-all shadow-md shadow-emerald-500/10 ring-2 ring-emerald-400/30"
+                  >
+                    <div className="flex items-center justify-between w-full">
+                      <div className="flex items-center gap-3">
+                        <span className="w-8 h-8 rounded-xl bg-emerald-500 text-white font-black text-sm flex items-center justify-center shadow-xs">
+                          {option.id}
+                        </span>
+                        <span className="font-black text-slate-900 text-[15px]">{optionText}</span>
+                      </div>
+                      <span className="px-2.5 py-1 bg-white text-emerald-600 border border-emerald-300 text-xs font-black rounded-full flex items-center gap-1 shadow-xs">
+                        ✓ 선택됨
+                      </span>
+                    </div>
+                    <div className="ml-11 text-xs font-bold text-emerald-700 flex items-center gap-1">
+                      ✨ 정답 확신 92%의 팬덤 추천!
+                    </div>
+                  </button>
+                );
+              }
+
+              // Default unselected - Snippet 2
               return (
                 <button
                   key={option.id}
                   onClick={() => handleSelectOption(option.id)}
-                  disabled={isAnswerSubmitted}
-                  className={`flex w-full items-center gap-3.5 rounded-2xl p-4 text-left transition-all duration-150 ${optionStyle}`}
+                  className="w-full p-4 rounded-2xl bg-white border-2 border-slate-200 hover:border-purple-300 hover:bg-purple-50/30 text-left flex items-center justify-between transition-all active:scale-[0.99] group shadow-xs"
                 >
-                  <span
-                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl text-xs font-black transition-all ${
-                      isAnswerSubmitted && isOptionCorrect
-                        ? 'bg-emerald-500 text-white shadow-sm'
-                        : isAnswerSubmitted && isSelected
-                        ? 'bg-rose-500 text-white shadow-sm'
-                        : isSelected
-                        ? 'bg-violet-600 text-white shadow-sm'
-                        : 'bg-zinc-100 dark:bg-zinc-700 text-zinc-700 dark:text-zinc-300'
-                    }`}
-                  >
-                    {isAnswerSubmitted && isOptionCorrect ? (
-                      <CheckCircle2 className="w-5 h-5" />
-                    ) : isAnswerSubmitted && isSelected ? (
-                      <XCircle className="w-5 h-5" />
-                    ) : (
-                      option.id
-                    )}
-                  </span>
-                  <span className="text-sm sm:text-base font-bold leading-normal flex-1">
-                    {optionText}
-                  </span>
+                  <div className="flex items-center gap-3">
+                    <span className="w-8 h-8 rounded-xl bg-slate-100 group-hover:bg-purple-100 text-slate-600 group-hover:text-purple-700 font-black text-sm flex items-center justify-center transition-colors">
+                      {option.id}
+                    </span>
+                    <span className="font-bold text-slate-800 text-[15px]">{optionText}</span>
+                  </div>
                 </button>
               );
             })}
           </div>
 
-          {/* Action Bar */}
-          <div className="mt-7 flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-zinc-100 dark:border-zinc-800/80 pt-5">
-            <span className="text-xs text-zinc-400 font-medium order-2 sm:order-1">
+          {/* 파워업 아이템 찬스 3종 (Snippet 2) */}
+          <div className="grid grid-cols-3 gap-2.5 pt-2 mb-6">
+            <button
+              type="button"
+              onClick={handleUseFiftyFifty}
+              disabled={isAnswerSubmitted || fiftyFiftyRemaining <= 0 || eliminatedOptions.length > 0}
+              className="p-3 bg-white border border-slate-200 hover:border-purple-300 rounded-xl flex flex-col items-center gap-1 text-center shadow-xs active:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+            >
+              <span className="text-lg">💡</span>
+              <span className="text-xs font-bold text-slate-700">50:50 찬스</span>
+              <span className="text-[10px] text-purple-600 font-extrabold">{fiftyFiftyRemaining}회 남음</span>
+            </button>
+            <button
+              type="button"
+              onClick={handleUseTimeExtension}
+              disabled={isAnswerSubmitted || timeExtensionsRemaining <= 0}
+              className="p-3 bg-white border border-slate-200 hover:border-purple-300 rounded-xl flex flex-col items-center gap-1 text-center shadow-xs active:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+            >
+              <span className="text-lg">⏱️</span>
+              <span className="text-xs font-bold text-slate-700">+10초 연장</span>
+              <span className="text-[10px] text-rose-500 font-extrabold">{timeExtensionsRemaining}회 남음</span>
+            </button>
+            <button
+              type="button"
+              onClick={handleUseHint}
+              disabled={isAnswerSubmitted || isHintActive}
+              className="p-3 bg-white border border-slate-200 hover:border-purple-300 rounded-xl flex flex-col items-center gap-1 text-center shadow-xs active:bg-slate-50 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+            >
+              <span className="text-lg">🔮</span>
+              <span className="text-xs font-bold text-slate-700">팬덤 찬스</span>
+              <span className="text-[10px] text-emerald-600 font-extrabold">{isHintActive ? '힌트 공개' : '무료 힌트'}</span>
+            </button>
+          </div>
+
+          {/* Action Button Bar */}
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-100 pt-5">
+            <span className="text-xs text-slate-400 font-medium order-2 sm:order-1">
               {!isAnswerSubmitted
                 ? selectedOptionId
                   ? t.quizRunner.readyPrompt
@@ -488,7 +678,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <button
                 onClick={handleSubmitAnswer}
                 disabled={!selectedOptionId}
-                className="w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-2xl border-b-4 border-violet-800 bg-violet-600 hover:bg-violet-700 disabled:opacity-40 disabled:cursor-not-allowed disabled:border-b-0 text-white py-3.5 px-7 text-sm font-black transition-all shadow-md active:border-b-0 active:translate-y-1"
+                className="w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 disabled:opacity-40 disabled:cursor-not-allowed text-white py-3.5 px-8 text-sm font-black transition-all shadow-md shadow-purple-500/25 active:scale-95"
               >
                 <span>{t.quizRunner.checkAnswer}</span>
                 <ChevronRight className="w-4 h-4" />
@@ -496,7 +686,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             ) : (
               <button
                 onClick={handleNextQuestion}
-                className="w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-2xl border-b-4 border-violet-800 bg-gradient-to-r from-violet-600 to-pink-600 hover:from-violet-700 hover:to-pink-700 text-white py-3.5 px-7 text-sm font-black transition-all shadow-lg active:border-b-0 active:translate-y-1 animate-pulse"
+                className="w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-3.5 px-8 text-sm font-black transition-all shadow-lg shadow-purple-500/25 active:scale-95 animate-pulse"
               >
                 <span>
                   {currentIndex + 1 < totalQuestions
@@ -508,29 +698,39 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             )}
           </div>
 
-          {/* Explanation & Trivia Card */}
-          {isAnswerSubmitted && (
-            <div className="mt-6 rounded-2xl border-2 border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800/50 p-5 animate-fadeIn">
-              <div className="flex items-center gap-2 mb-2">
-                {isCorrect ? (
-                  <span className="flex items-center gap-1.5 text-xs font-black text-emerald-600 dark:text-emerald-400">
-                    <CheckCircle2 className="w-4 h-4" /> {t.quizRunner.correct} (+20 XP!)
+          {/* Explanation & Trivia Card (or Hint reveal) */}
+          {(isAnswerSubmitted || isHintActive) && (
+            <div className="mt-6 rounded-2xl border-2 border-purple-100 bg-purple-50/50 p-5 animate-fadeIn">
+              {isAnswerSubmitted ? (
+                <>
+                  <div className="flex items-center gap-2 mb-2">
+                    {isCorrect ? (
+                      <span className="flex items-center gap-1.5 text-xs font-black text-emerald-600">
+                        <CheckCircle2 className="w-4 h-4" /> {t.quizRunner.correct} (+20 XP!)
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-1.5 text-xs font-black text-rose-600">
+                        <XCircle className="w-4 h-4" /> {t.quizRunner.incorrect}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3 font-medium">
+                    {explanationText}
+                  </p>
+                </>
+              ) : (
+                <div className="mb-2">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-black text-purple-700">
+                    🔮 팬덤 찬스 힌트가 도착했습니다!
                   </span>
-                ) : (
-                  <span className="flex items-center gap-1.5 text-xs font-black text-rose-600 dark:text-rose-400">
-                    <XCircle className="w-4 h-4" /> {t.quizRunner.incorrect}
-                  </span>
-                )}
-              </div>
-              <p className="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed mb-3 font-medium">
-                {explanationText}
-              </p>
+                </div>
+              )}
 
               {funFactText && (
-                <div className="flex items-start gap-2.5 rounded-xl bg-violet-500/10 dark:bg-violet-500/15 p-3 text-xs text-violet-800 dark:text-violet-300">
+                <div className="flex items-start gap-2.5 rounded-xl bg-white p-3 text-xs text-purple-900 border border-purple-100 shadow-xs">
                   <Lightbulb className="w-4 h-4 shrink-0 text-amber-500 mt-0.5" />
                   <div>
-                    <strong className="font-bold">{t.quizRunner.funLore}</strong> {funFactText}
+                    <strong className="font-black">{t.quizRunner.funLore}</strong> {funFactText}
                   </div>
                 </div>
               )}
@@ -546,102 +746,103 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     );
   }
 
-  // 3. RESULT VIEW
+  // 3. RESULT VIEW (Snippet 3)
+  const minutesSpent = Math.floor(elapsedSeconds / 60);
+  const secondsSpent = elapsedSeconds % 60;
+  const timeFormatted = `${minutesSpent > 0 ? `${minutesSpent}분 ` : ''}${secondsSpent}초`;
+  const isPerfect = score === totalQuestions;
+  const rankLabel = isPerfect ? 'RANK S+ 💜' : score >= 4 ? 'RANK S 🏆' : score >= 3 ? 'RANK A ⭐' : 'RANK B 🌱';
+
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
-      {/* Result Card */}
-      <div className="overflow-hidden rounded-3xl border-2 border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 shadow-2xl mb-8">
-        {/* Top Banner with Badge */}
-        <div
-          className={`relative bg-gradient-to-r ${quiz.gradient} p-8 sm:p-12 text-white text-center overflow-hidden`}
-        >
-          <div className="absolute inset-0 bg-black/20"></div>
-          <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 rounded-full bg-black/35 backdrop-blur-md px-4 py-1 text-xs font-black uppercase tracking-wider mb-3">
-              <Trophy className="w-4 h-4 text-amber-400" />
-              {t.resultView.officialResult}
-            </div>
+    <div className="max-w-xl mx-auto px-4 py-8 sm:py-12">
+      {/* 결과 축하 스코어보드 & 보상 결산 (Snippet 3) */}
+      <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-purple-100 shadow-xl shadow-purple-500/10 text-center relative overflow-hidden my-4">
+        {/* 상단 퍼펙트 뱃지 */}
+        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 text-white rounded-full text-xs font-black shadow-md shadow-pink-500/20 mb-4">
+          {isPerfect ? '🎉 ALL CLEAR! 퍼펙트 클리어 ✨' : '🎉 CHALLENGE COMPLETED! ✨'}
+        </div>
 
-            <div className="my-2">
-              <span className="text-5xl sm:text-7xl font-black tracking-tight drop-shadow-md">
-                {score} / {totalQuestions}
-              </span>
-              <span className="text-lg sm:text-xl font-bold text-white/80 ml-2">
-                ({Math.round((score / totalQuestions) * 100)}%)
-              </span>
-            </div>
+        <div className="text-purple-600 font-black text-2xl tracking-tight mb-1">
+          {rankLabel}
+        </div>
+        <div className="text-slate-500 font-bold text-sm mb-4">
+          {currentTier.title} ({currentTier.badge})
+        </div>
 
-            {/* Total XP Earned Pill */}
-            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-amber-400 text-amber-950 font-black text-sm shadow-lg border-b-2 border-amber-600 mt-2">
-              <Zap className="w-4 h-4 fill-current" />
-              <span>+{earnedXPInSession} XP EARNED</span>
-            </div>
+        {/* 대형 스코어 */}
+        <div className="flex items-baseline justify-center gap-1 mb-2">
+          <span className="text-6xl font-black text-emerald-600 tracking-tighter">
+            {Math.round((score / totalQuestions) * 100)}
+          </span>
+          <span className="text-2xl font-black text-slate-300">/ 100점</span>
+        </div>
 
-            <div className="block mt-4">
-              <div className="inline-block rounded-2xl bg-white/20 backdrop-blur-md px-5 py-2.5 border border-white/30">
-                <h2 className="text-xl sm:text-2xl font-black">{currentTier.badge}</h2>
-                <div className="text-xs sm:text-sm font-bold text-white/95">
-                  {t.resultView.tier}: {currentTier.title}
-                </div>
-              </div>
-            </div>
+        <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600 mb-6">
+          <span>⏱️ {timeFormatted} 소요</span>
+          <span className="text-rose-500 font-black">• 전체 상위 1% 번개손</span>
+        </div>
+
+        {/* 보상 스탯 그리드 */}
+        <div className="grid grid-cols-2 gap-2 text-left mb-5">
+          <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
+            <span className="text-[11px] font-bold text-slate-400 block mb-1">기본 경험치</span>
+            <span className="text-base font-black text-emerald-600">+{earnedXPInSession} XP</span>
+          </div>
+          <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
+            <span className="text-[11px] font-bold text-slate-400 block mb-1">퍼펙트 보너스</span>
+            <span className="text-base font-black text-rose-500">{isPerfect ? '+50 BONUS' : '+0 BONUS'}</span>
           </div>
         </div>
 
-        {/* Level Progression & Description */}
-        <div className="p-6 sm:p-10">
-          {/* Level Progress Gauge */}
-          <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border-2 border-zinc-200 dark:border-zinc-700/60 p-5 mb-6">
-            <div className="flex items-center justify-between text-xs font-black mb-2">
-              <span className="flex items-center gap-1.5 text-violet-700 dark:text-violet-400">
-                <span>{currentLevel.badgeEmoji}</span>
-                <span>Level {currentLevel.level}: {lang === 'ko' ? currentLevel.titleKo : currentLevel.title}</span>
-              </span>
-              <span className="text-amber-600 dark:text-amber-400 font-bold">{xp} Total XP</span>
-            </div>
-            <div className="h-2.5 w-full rounded-full bg-zinc-200 dark:bg-zinc-700 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-violet-600 to-amber-400 transition-all duration-500"
-                style={{ width: `${progressPercent}%` }}
-              ></div>
-            </div>
+        {/* Level Progress Gauge */}
+        <div className="rounded-2xl bg-purple-50/70 border border-purple-100 p-4 mb-5 text-left">
+          <div className="flex items-center justify-between text-xs font-black mb-2">
+            <span className="text-purple-900 font-black">
+              {currentLevel.badgeEmoji} Level {currentLevel.level}: {lang === 'ko' ? currentLevel.titleKo : currentLevel.title}
+            </span>
+            <span className="text-amber-600 font-bold">{xp} Total XP</span>
           </div>
+          <div className="h-2 w-full rounded-full bg-slate-200 overflow-hidden">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-purple-500 to-emerald-400 transition-all duration-500"
+              style={{ width: `${progressPercent}%` }}
+            ></div>
+          </div>
+        </div>
 
-          <div className="rounded-2xl bg-zinc-50 dark:bg-zinc-800/60 border border-zinc-200 dark:border-zinc-700/60 p-5 mb-6 text-center">
-            <p className="text-sm sm:text-base font-bold text-zinc-800 dark:text-zinc-200 leading-relaxed mb-3">
-              {currentTier.description}
-            </p>
-            <div className="text-xs text-zinc-500 dark:text-zinc-400 italic font-medium">
-              &quot;{currentTier.funQuote}&quot;
-            </div>
-          </div>
+        {/* 소셜 공유 CTA */}
+        <button
+          onClick={handleShareSocial}
+          className="w-full py-4 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-2xl shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 active:scale-95 transition-all mb-3"
+        >
+          <span>결과 카드 인스타 / X 공유하기 📸</span>
+        </button>
 
-          {/* Social Share Buttons */}
-          <div className="mb-6">
-            <ShareButtons
-              quizTitle={quizTitle}
-              scoreText={`${score}/${totalQuestions}`}
-              badgeTitle={currentTier.title}
-            />
-          </div>
+        {/* 친구 도전장 링크 복사 CTA */}
+        <button
+          onClick={handleCopyChallenge}
+          className="w-full py-3 bg-white border-2 border-purple-200 hover:bg-purple-50 text-purple-700 font-black text-xs rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all mb-5"
+        >
+          <Copy className="w-4 h-4" />
+          <span>{challengeCopied ? '✓ 도전장 링크 복사 완료!' : '친구에게 도전장 보내기 (링크 복사) ⚔️'}</span>
+        </button>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center">
-            <button
-              onClick={() => startQuiz(selectedLevel)}
-              className="flex items-center justify-center gap-2 rounded-2xl border-b-4 border-violet-800 bg-violet-600 hover:bg-violet-700 active:border-b-0 active:translate-y-1 text-white py-3.5 px-6 text-sm font-black transition-all shadow-md"
-            >
-              <RotateCcw className="w-4 h-4" />
-              <span>{t.resultView.retake} (🎲 New Shuffle)</span>
-            </button>
-            <button
-              onClick={() => setGameState('intro')}
-              className="flex items-center justify-center gap-2 rounded-2xl border-2 border-zinc-300 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800 text-zinc-800 dark:text-zinc-200 py-3.5 px-6 text-sm font-black transition-all active:translate-y-0.5"
-            >
-              <SlidersHorizontal className="w-4 h-4" />
-              <span>{t.levels.selectTitle}</span>
-            </button>
-          </div>
+        {/* Action Buttons: 다시 풀기 & 난이도 변경 */}
+        <div className="flex gap-2.5 justify-center pt-3 border-t border-slate-100">
+          <button
+            onClick={() => startQuiz(selectedLevel)}
+            className="flex-1 py-3 px-4 rounded-xl bg-purple-100 hover:bg-purple-200 text-purple-800 text-xs font-black transition-all flex items-center justify-center gap-1.5 active:scale-95"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>{t.resultView.retake} (🎲 셔플)</span>
+          </button>
+          <button
+            onClick={() => setGameState('intro')}
+            className="flex-1 py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black transition-all flex items-center justify-center gap-1.5 active:scale-95"
+          >
+            <SlidersHorizontal className="w-3.5 h-3.5" />
+            <span>{t.levels.selectTitle}</span>
+          </button>
         </div>
       </div>
 
@@ -655,13 +856,13 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
       {/* Next Quizzes to Multiply Pageviews */}
       {relatedQuizzes.length > 0 && (
-        <div className="my-12">
-          <div className="flex items-center justify-between mb-6">
-            <h3 className="text-xl font-black text-zinc-900 dark:text-zinc-100">
+        <div className="my-10">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-xl font-black text-slate-900">
               {t.resultView.keepPlaying}
             </h3>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {relatedQuizzes.map((item) => (
               <QuizCard key={item.slug} quiz={item} />
             ))}

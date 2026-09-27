@@ -52,26 +52,26 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#F9FAFB]">
       {/* 1. GAMIFIED HERO & DAILY CHALLENGE SECTION */}
-      <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-16 border-b-2 border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-violet-100/40 via-[#FAF9F6] to-transparent dark:from-violet-950/25 dark:via-zinc-950 dark:to-transparent">
+      <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-16 border-b-2 border-purple-100 bg-gradient-to-b from-purple-100/50 via-white to-[#F9FAFB]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           {/* Main Title Banner */}
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full border-2 border-violet-500/25 bg-violet-100/70 dark:bg-violet-900/40 px-4 py-1.5 text-xs font-black text-violet-800 dark:text-violet-300 mb-4 shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-4 py-1.5 text-xs font-black text-purple-700 mb-4 shadow-xs">
               <Sparkles className="w-3.5 h-3.5 text-pink-500 animate-spin" style={{ animationDuration: '5s' }} />
               <span>{t.heroBadge}</span>
             </div>
 
-            <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-zinc-900 dark:text-white leading-[1.12]">
+            <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-900 leading-[1.15]">
               {t.heroTitlePre} <br className="hidden sm:inline" />
-              <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent">
                 {t.heroTitleHighlight}
               </span>{' '}
-              🇰🇷
+              ✨
             </h1>
 
-            <p className="mt-4 text-xs sm:text-base text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto font-medium leading-relaxed">
+            <p className="mt-4 text-xs sm:text-base text-slate-600 max-w-xl mx-auto font-medium leading-relaxed">
               {t.heroSubtitle}
             </p>
           </div>
@@ -99,10 +99,10 @@ export default function HomePage() {
         <div className="flex flex-col gap-5 mb-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-white tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
                 {t.trendingTitle}
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 font-medium">
+              <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium">
                 {t.trendingDesc}
               </p>
             </div>
@@ -116,10 +116,10 @@ export default function HomePage() {
                   <button
                     key={category}
                     onClick={() => handleCategoryChange(category)}
-                    className={`rounded-2xl px-4 py-2 text-xs sm:text-sm font-black transition-all ${
+                    className={`rounded-full px-5 py-2.5 text-xs sm:text-sm font-black transition-all active:scale-95 ${
                       isActive
-                        ? 'border-b-4 border-violet-800 bg-violet-600 text-white shadow-md active:border-b-0 active:translate-y-1'
-                        : 'border-2 border-b-4 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 active:border-b-2 active:translate-y-0.5'
+                        ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md shadow-purple-500/25'
+                        : 'bg-white border-2 border-purple-100 hover:border-purple-300 text-slate-700 shadow-xs'
                     }`}
                   >
                     {categoryLabel}
@@ -131,9 +131,9 @@ export default function HomePage() {
 
           {/* Sub-tag Bar */}
           {availableTags.length > 1 && (
-            <div className="flex items-center gap-2 flex-wrap pt-3 border-t-2 border-zinc-200/60 dark:border-zinc-800/80">
-              <span className="text-xs font-black text-zinc-400 flex items-center gap-1 mr-1 uppercase tracking-wider">
-                <Tag className="w-3.5 h-3.5 text-violet-500" />
+            <div className="flex items-center gap-2 flex-wrap pt-3 border-t border-purple-100">
+              <span className="text-xs font-black text-slate-400 flex items-center gap-1 mr-1 uppercase tracking-wider">
+                <Tag className="w-3.5 h-3.5 text-purple-500" />
                 {t.filterByTag}
               </span>
               {availableTags.map((tag) => {
@@ -143,10 +143,10 @@ export default function HomePage() {
                   <button
                     key={tag}
                     onClick={() => setSelectedTag(tag)}
-                    className={`rounded-xl px-3 py-1 text-xs font-bold transition-all ${
+                    className={`rounded-full px-3.5 py-1 text-xs font-bold transition-all active:scale-95 ${
                       isActive
-                        ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 shadow-md'
-                        : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700'
+                        ? 'bg-purple-900 text-white shadow-xs'
+                        : 'bg-white border border-purple-100 text-slate-600 hover:bg-purple-50'
                     }`}
                   >
                     {tagLabel}
