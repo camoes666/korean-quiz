@@ -1,69 +1,215 @@
-import Image from "next/image";
+'use client';
 
-export default function Home() {
+import { useState } from 'react';
+import Link from 'next/link';
+import { getAllQuizzes } from '@/data/quizzes';
+import { Category } from '@/types/quiz';
+import QuizCard from '@/components/QuizCard';
+import AdPlaceholder from '@/components/AdPlaceholder';
+import DailyQuestCard from '@/components/DailyQuestCard';
+import PlayerLevelCard from '@/components/PlayerLevelCard';
+import LeaderboardCard from '@/components/LeaderboardCard';
+import { Sparkles, Trophy, Globe, Flame, Heart, ArrowRight, Tag } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
+
+const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
+
+export default function HomePage() {
+  const { t } = useLanguage();
+  const [selectedCategory, setSelectedCategory] = useState<Category>('All');
+  const [selectedTag, setSelectedTag] = useState<string>('All');
+
+  const allQuizzes = getAllQuizzes();
+
+  // Pick the daily quest quiz (e.g., BTS or Spicy Food)
+  const dailyQuestQuiz = allQuizzes.find((q) => q.slug === 'bts-army-trivia') || allQuizzes[0];
+
+  // Extract relevant tags based on category
+  const getAvailableTags = () => {
+    const pool =
+      selectedCategory === 'All'
+        ? allQuizzes
+        : allQuizzes.filter((q) => q.category === selectedCategory);
+
+    const tags = Array.from(new Set(pool.map((q) => q.tag).filter(Boolean))) as string[];
+    return ['All', ...tags];
+  };
+
+  const availableTags = getAvailableTags();
+
+  // Filter quizzes
+  const filteredQuizzes = allQuizzes.filter((quiz) => {
+    const matchesCategory =
+      selectedCategory === 'All' || quiz.category === selectedCategory;
+    const matchesTag =
+      selectedTag === 'All' || quiz.tag === selectedTag;
+    return matchesCategory && matchesTag;
+  });
+
+  const handleCategoryChange = (category: Category) => {
+    setSelectedCategory(category);
+    setSelectedTag('All');
+  };
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="flex flex-col min-h-screen">
+      {/* 1. GAMIFIED HERO & DAILY CHALLENGE SECTION */}
+      <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-16 border-b-2 border-zinc-200 dark:border-zinc-800 bg-gradient-to-b from-violet-100/40 via-[#FAF9F6] to-transparent dark:from-violet-950/25 dark:via-zinc-950 dark:to-transparent">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          {/* Main Title Banner */}
+          <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+            <div className="inline-flex items-center gap-2 rounded-full border-2 border-violet-500/25 bg-violet-100/70 dark:bg-violet-900/40 px-4 py-1.5 text-xs font-black text-violet-800 dark:text-violet-300 mb-4 shadow-sm">
+              <Sparkles className="w-3.5 h-3.5 text-pink-500 animate-spin" style={{ animationDuration: '5s' }} />
+              <span>{t.heroBadge}</span>
+            </div>
+
+            <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-zinc-900 dark:text-white leading-[1.12]">
+              {t.heroTitlePre} <br className="hidden sm:inline" />
+              <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                {t.heroTitleHighlight}
+              </span>{' '}
+              🇰🇷
+            </h1>
+
+            <p className="mt-4 text-xs sm:text-base text-zinc-600 dark:text-zinc-400 max-w-xl mx-auto font-medium leading-relaxed">
+              {t.heroSubtitle}
+            </p>
+          </div>
+
+          {/* Daily Quest Highlight Card */}
+          <div className="mb-8">
+            <DailyQuestCard questQuiz={dailyQuestQuiz} />
+          </div>
+
+          {/* Gamified Widgets Grid: Player Stats & Leaderboard */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <PlayerLevelCard />
+            <LeaderboardCard />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Ad Placement */}
+      <div className="max-w-5xl mx-auto px-4 w-full">
+        <AdPlaceholder format="horizontal" label={t.ads.sponsored} />
+      </div>
+
+      {/* 2. QUIZ COLLECTION SECTION WITH 3D PILL FILTERS */}
+      <section id="quizzes" className="max-w-6xl mx-auto px-4 sm:px-6 py-10 w-full">
+        <div className="flex flex-col gap-5 mb-8">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-black text-zinc-900 dark:text-white tracking-tight">
+                {t.trendingTitle}
+              </h2>
+              <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-1 font-medium">
+                {t.trendingDesc}
+              </p>
+            </div>
+
+            {/* Category Chunky Filter Pills */}
+            <div className="flex flex-wrap items-center gap-2">
+              {CATEGORIES.map((category) => {
+                const isActive = selectedCategory === category;
+                const categoryLabel = t.categories[category] || category;
+                return (
+                  <button
+                    key={category}
+                    onClick={() => handleCategoryChange(category)}
+                    className={`rounded-2xl px-4 py-2 text-xs sm:text-sm font-black transition-all ${
+                      isActive
+                        ? 'border-b-4 border-violet-800 bg-violet-600 text-white shadow-md active:border-b-0 active:translate-y-1'
+                        : 'border-2 border-b-4 border-zinc-200 dark:border-zinc-700 bg-white dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-50 dark:hover:bg-zinc-700 active:border-b-2 active:translate-y-0.5'
+                    }`}
+                  >
+                    {categoryLabel}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Sub-tag Bar */}
+          {availableTags.length > 1 && (
+            <div className="flex items-center gap-2 flex-wrap pt-3 border-t-2 border-zinc-200/60 dark:border-zinc-800/80">
+              <span className="text-xs font-black text-zinc-400 flex items-center gap-1 mr-1 uppercase tracking-wider">
+                <Tag className="w-3.5 h-3.5 text-violet-500" />
+                {t.filterByTag}
+              </span>
+              {availableTags.map((tag) => {
+                const isActive = selectedTag === tag;
+                const tagLabel = tag === 'All' ? t.allTags : t.tags[tag] || tag;
+                return (
+                  <button
+                    key={tag}
+                    onClick={() => setSelectedTag(tag)}
+                    className={`rounded-xl px-3 py-1 text-xs font-bold transition-all ${
+                      isActive
+                        ? 'bg-zinc-900 text-white dark:bg-zinc-100 dark:text-zinc-900 shadow-md'
+                        : 'bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 hover:bg-zinc-200 dark:hover:bg-zinc-700'
+                    }`}
+                  >
+                    {tagLabel}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
-      </main>
+
+        {/* Quiz Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredQuizzes.map((quiz) => (
+            <QuizCard key={quiz.slug} quiz={quiz} />
+          ))}
+        </div>
+
+        {filteredQuizzes.length === 0 && (
+          <div className="text-center py-16 text-zinc-400">
+            <p className="text-base font-bold">No quizzes found for this filter.</p>
+            <button
+              onClick={() => {
+                setSelectedCategory('All');
+                setSelectedTag('All');
+              }}
+              className="mt-3 text-xs text-violet-600 font-bold hover:underline"
+            >
+              Reset Filters
+            </button>
+          </div>
+        )}
+      </section>
+
+      {/* 3. SEO / AD-APPROVAL VALUE SECTION */}
+      <section className="border-t-2 border-zinc-200 dark:border-zinc-800 bg-white/60 dark:bg-zinc-900/40 py-16">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-10">
+            <h2 className="text-xl sm:text-2xl font-black text-zinc-900 dark:text-zinc-100">
+              {t.whySectionTitle}
+            </h2>
+            <p className="text-xs sm:text-sm text-zinc-500 dark:text-zinc-400 mt-2 font-medium">
+              {t.whySectionDesc}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-left">
+            {t.whyCards.map((card, idx) => (
+              <div
+                key={idx}
+                className="p-6 rounded-3xl bg-white dark:bg-zinc-800 border-2 border-zinc-200 dark:border-zinc-700 shadow-sm"
+              >
+                <div className="text-3xl mb-3">{card.emoji}</div>
+                <h3 className="font-black text-sm sm:text-base text-zinc-900 dark:text-zinc-100 mb-1.5">
+                  {card.title}
+                </h3>
+                <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed font-medium">
+                  {card.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
