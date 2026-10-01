@@ -61,10 +61,15 @@ export default function LeaderboardCard() {
           </div>
         </div>
 
-        {/* 1st Place (Champion) */}
+        {/* 1st Place (Champion) with Superstar King Hobi */}
         <div className="flex flex-col items-center justify-end rounded-2xl bg-gradient-to-b from-amber-100/60 via-amber-50/40 to-white border-2 border-amber-400 p-3.5 relative shadow-md shadow-amber-500/10">
-          <div className="absolute -top-3.5 text-2xl animate-bounce">👑</div>
-          <span className="text-2xl mt-1 mb-1">🥇</span>
+          <div className="w-16 h-16 -mt-8 mb-0.5 relative animate-bounce" style={{ animationDuration: '3s' }}>
+            <img
+              src="/images/hobi05.webp"
+              alt="Superstar King Hobi"
+              className="w-full h-full object-contain filter drop-shadow-md"
+            />
+          </div>
           <div className="text-xs font-black text-slate-900 truncate w-full">
             {TOP_USERS[0].flag} {TOP_USERS[0].name}
           </div>

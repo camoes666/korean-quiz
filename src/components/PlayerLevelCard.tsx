@@ -14,8 +14,11 @@ export default function PlayerLevelCard() {
       {/* Header */}
       <div className="flex items-center justify-between gap-3 mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-600 to-pink-500 flex items-center justify-center text-2xl shadow-md shadow-purple-500/20">
-            {currentLevel.badgeEmoji}
+          <div className="relative w-12 h-12 rounded-2xl bg-gradient-to-tr from-purple-100 to-pink-100 p-0.5 border border-purple-200 flex items-center justify-center shadow-md shadow-purple-500/15 shrink-0">
+            <img src="/images/hobi01.webp" alt="Hobi Avatar" className="w-full h-full object-contain" />
+            <div className="absolute -bottom-1.5 -right-1.5 text-sm filter drop-shadow">
+              {currentLevel.badgeEmoji}
+            </div>
           </div>
           <div>
             <div className="flex items-center gap-1.5">

@@ -56,11 +56,27 @@ export default function HomePage() {
       {/* 1. GAMIFIED HERO & DAILY CHALLENGE SECTION */}
       <section className="relative overflow-hidden pt-8 pb-12 sm:pt-14 sm:pb-16 border-b-2 border-purple-100 bg-gradient-to-b from-purple-100/50 via-white to-[#F9FAFB]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          {/* Main Title Banner */}
+          {/* Main Title Banner with Waving Hobi */}
           <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 rounded-full border border-purple-200 bg-purple-50 px-4 py-1.5 text-xs font-black text-purple-700 mb-4 shadow-xs">
-              <Sparkles className="w-3.5 h-3.5 text-pink-500 animate-spin" style={{ animationDuration: '5s' }} />
-              <span>{t.heroBadge}</span>
+            {/* Mascot Greeting Badge */}
+            <div className="flex flex-col items-center justify-center mb-5">
+              <div className="relative group">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-gradient-to-tr from-purple-100 via-pink-50 to-indigo-100 p-2 border-2 border-purple-200/80 shadow-lg shadow-purple-500/10 flex items-center justify-center group-hover:scale-105 transition-all">
+                  <img
+                    src="/images/hobi01.webp"
+                    alt="Hobi White Tiger Mascot"
+                    className="w-full h-full object-contain filter drop-shadow hover:rotate-3 transition-transform"
+                  />
+                </div>
+                <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black text-[11px] whitespace-nowrap shadow-sm shadow-purple-500/25 border border-white">
+                  마스코트 호비 🐯
+                </div>
+              </div>
+
+              <div className="mt-5 inline-flex items-center gap-2 rounded-full border border-purple-200 bg-white/90 backdrop-blur-md px-4 py-1.5 text-xs font-black text-purple-700 shadow-xs">
+                <Sparkles className="w-3.5 h-3.5 text-pink-500 animate-spin" style={{ animationDuration: '5s' }} />
+                <span>{t.heroBadge}</span>
+              </div>
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-slate-900 leading-[1.15]">

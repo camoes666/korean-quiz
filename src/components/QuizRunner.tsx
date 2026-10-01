@@ -296,8 +296,17 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                 </span>
               </div>
 
-              <div className="text-6xl sm:text-7xl mb-4 animate-bounce">
-                {quiz.coverEmoji}
+              <div className="flex items-center justify-center gap-3.5 mb-4">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-md p-1.5 border-2 border-white/50 shadow-lg shadow-black/10 flex items-center justify-center">
+                  <img
+                    src="/images/hobi01.webp"
+                    alt="Hobi Mascot"
+                    className="w-full h-full object-contain filter drop-shadow hover:scale-105 transition-transform"
+                  />
+                </div>
+                <div className="text-5xl sm:text-6xl animate-bounce">
+                  {quiz.coverEmoji}
+                </div>
               </div>
               <h1 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight max-w-2xl mx-auto">
                 {quizTitle}
@@ -706,11 +715,13 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                   <div className="flex items-center gap-2 mb-2">
                     {isCorrect ? (
                       <span className="flex items-center gap-1.5 text-xs font-black text-emerald-600">
+                        <img src="/images/hobi02.webp" alt="Correct" className="w-5 h-5 object-contain" />
                         <CheckCircle2 className="w-4 h-4" /> {t.quizRunner.correct} (+20 XP!)
                       </span>
                     ) : (
                       <span className="flex items-center gap-1.5 text-xs font-black text-rose-600">
-                        <XCircle className="w-4 h-4" /> {t.quizRunner.incorrect}
+                        <img src="/images/hobi03.webp" alt="Cheer" className="w-5 h-5 object-contain" />
+                        <XCircle className="w-4 h-4" /> {t.quizRunner.incorrect} (호비가 응원해요!)
                       </span>
                     )}
                   </div>
@@ -758,11 +769,38 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       {/* 결과 축하 스코어보드 & 보상 결산 (Snippet 3) */}
       <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-purple-100 shadow-xl shadow-purple-500/10 text-center relative overflow-hidden my-4">
         {/* 상단 퍼펙트 뱃지 */}
-        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 text-white rounded-full text-xs font-black shadow-md shadow-pink-500/20 mb-4">
+        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 text-white rounded-full text-xs font-black shadow-md shadow-pink-500/20 mb-3">
           {isPerfect ? '🎉 ALL CLEAR! 퍼펙트 클리어 ✨' : '🎉 CHALLENGE COMPLETED! ✨'}
         </div>
 
-        <div className="text-purple-600 font-black text-2xl tracking-tight mb-1">
+        {/* Dynamic Hobi Mascot Celebration / Encouragement */}
+        <div className="w-36 h-36 sm:w-44 sm:h-44 mx-auto my-2 relative">
+          {score >= 4 ? (
+            <div className="relative w-full h-full animate-bounce" style={{ animationDuration: '2.5s' }}>
+              <img
+                src="/images/hobi02.webp"
+                alt="Celebrating Hobi Mascot"
+                className="w-full h-full object-contain filter drop-shadow-lg"
+              />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black text-xs whitespace-nowrap shadow-md shadow-purple-500/25 border border-white">
+                {isPerfect ? '대박! 성골 덕후 인정! 💜' : '완벽에 가까운 실력! 🌟'}
+              </div>
+            </div>
+          ) : (
+            <div className="relative w-full h-full">
+              <img
+                src="/images/hobi03.webp"
+                alt="Encouraging Hobi Mascot"
+                className="w-full h-full object-contain filter drop-shadow-md"
+              />
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-rose-500 text-white font-black text-xs whitespace-nowrap shadow-md shadow-rose-500/25 border border-white">
+                파이팅! 다음엔 다 맞힐 수 있어! 🔥
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="text-purple-600 font-black text-2xl tracking-tight mt-4 mb-1">
           {rankLabel}
         </div>
         <div className="text-slate-500 font-bold text-sm mb-4">

@@ -19,8 +19,14 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
       {/* Background Decorative Circles */}
       <div className="absolute top-0 right-0 -mr-10 -mt-10 w-48 h-48 rounded-full bg-white/15 blur-2xl pointer-events-none"></div>
       <div className="absolute bottom-0 left-1/3 w-36 h-36 rounded-full bg-pink-400/25 blur-xl pointer-events-none"></div>
-      <div className="absolute right-4 bottom-2 text-white/10 text-9xl font-black pointer-events-none select-none">
-        🎯
+      {/* Fiery Streak Hobi Mascot (Desktop Illustration) */}
+      <div className="hidden lg:flex items-center justify-center absolute right-48 -bottom-3 w-40 h-40 pointer-events-none select-none z-10">
+        <img
+          src="/images/hobi04.webp"
+          alt="Streak Fire Hobi"
+          className="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)] animate-pulse"
+          style={{ animationDuration: '3s' }}
+        />
       </div>
 
       <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -28,7 +34,7 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
           {/* Top Badges */}
           <div className="flex items-center gap-2 flex-wrap mb-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 text-purple-900 text-xs font-black shadow-xs">
-              <Flame className="w-3.5 h-3.5 fill-current text-rose-500" />
+              <img src="/images/hobi04.webp" alt="Fire Hobi" className="w-4 h-4 object-contain inline-block -my-0.5" />
               {lang === 'ko' ? '오늘의 데일리 챌린지' : "Today's Daily Quest"}
             </span>
 

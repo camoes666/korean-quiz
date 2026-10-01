@@ -38,10 +38,14 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b-2 border-purple-100 bg-white/95 backdrop-blur-md shadow-xs shadow-purple-500/5">
       <div className="max-w-6xl mx-auto px-3 sm:px-6 h-16 flex items-center justify-between gap-2 sm:gap-4">
-        {/* Brand Logo with 3D Pop Effect */}
+        {/* Brand Logo with 3D Pop Effect & Hobi Mascot */}
         <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-purple-600 via-pink-500 to-indigo-600 flex items-center justify-center text-white font-black text-xl shadow-md shadow-purple-500/20 group-hover:scale-105 transition-transform">
-            K
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-purple-100 via-pink-50 to-purple-200 p-0.5 border border-purple-200 flex items-center justify-center shadow-md shadow-purple-500/15 group-hover:scale-105 transition-transform overflow-hidden relative">
+            <img
+              src="/images/hobi01.webp"
+              alt="Hobi Mascot"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
             <div className="flex items-center gap-1.5">
