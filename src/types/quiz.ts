@@ -148,9 +148,20 @@ export function getLocalizedText<T extends Record<string, any>>(
     return String(item[langKey]);
   }
 
-  // Fallback to Korean if available, then English (default)
-  if (item[`${prop}Ko`]) return String(item[`${prop}Ko`]);
-  if (item[prop]) return String(item[prop]);
+  // If Korean is explicitly selected, fallback to Korean first
+  if (lang === 'ko' && item[`${prop}Ko`]) {
+    return String(item[`${prop}Ko`]);
+  }
+
+  // For English, Spanish or any other language, fallback to English (base) first
+  if (item[prop]) {
+    return String(item[prop]);
+  }
+
+  // Final fallback to Korean if English does not exist
+  if (item[`${prop}Ko`]) {
+    return String(item[`${prop}Ko`]);
+  }
 
   return '';
 }

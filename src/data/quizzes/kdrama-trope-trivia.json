@@ -2,10 +2,13 @@
   "slug": "kdrama-trope-trivia",
   "title": "The Iconic K-Drama Tropes & Lore Challenge",
   "titleKo": "K-드라마 명장면 클리셰 & 명대사 마스터 챌린지",
+  "titleEs": "Reto de Clichés, Lore y Momentos Icónicos de K-Dramas",
   "subtitle": "Can you survive 16 episodes without suffering drama amnesia?",
   "subtitleKo": "16부작 드라마에서 기억상실증 안 걸리고 완주할 수 있을까?",
+  "subtitleEs": "¿Podrías sobrevivir a 16 episodios sin sufrir amnesia repentina?",
   "description": "Test your mastery over iconic K-Drama plot twists, famous romantic lines, hilarious product placements (PPL), and timeless romantic tropes!",
   "descriptionKo": "심쿵 유발 로맨스 클리셰부터 웃음 터지는 써브웨이 PPL, 마성의 하얀 트럭, 명대사까지! 당신의 K-드라마 과몰입 지수를 확인해보세요.",
+  "descriptionEs": "¡Pon a prueba tu dominio sobre los giros de trama más famosos de los K-Dramas, frases románticas memorables, divertidos patrocinios (PPL) de Subway y clichés inolvidables!",
   "category": "K-Drama",
   "tag": "Squid Game",
   "coverEmoji": "🎬",
@@ -21,16 +24,39 @@
       "question": "In classic K-Drama romance, what legendary gesture ALWAYS happens when a female lead has had one too many drinks?",
       "questionKo": "한국 정통 로맨스 드라마에서 여주인공이 술에 취했을 때 남주인공이 무조건 시전하는 레전드 클리셰는?",
       "options": [
-        { "id": "A", "text": "The male lead calls her an ambulance", "textKo": "119 구급차를 불러준다" },
-        { "id": "B", "text": "A sweet, brooding piggyback ride all the way home", "textKo": "감미로운 배경음악과 함께 집까지 묵묵히 '어부바(업어주기)' 해준다" },
-        { "id": "C", "text": "They challenge each other to a push-up contest", "textKo": "길바닥에서 팔굽혀펴기 대결을 한다" },
-        { "id": "D", "text": "She forgets her bag and he flies to Paris", "textKo": "가방을 챙겨 파리로 출장을 떠난다" }
+        {
+          "id": "A",
+          "text": "The male lead calls her an ambulance",
+          "textKo": "119 구급차를 불러준다",
+          "textEs": "El protagonista masculino llama a una ambulancia"
+        },
+        {
+          "id": "B",
+          "text": "A sweet, brooding piggyback ride all the way home",
+          "textKo": "감미로운 배경음악과 함께 집까지 묵묵히 '어부바(업어주기)' 해준다",
+          "textEs": "La lleva a caballito en su espalda (Eobuba) todo el camino hasta casa con música suave"
+        },
+        {
+          "id": "C",
+          "text": "They challenge each other to a push-up contest",
+          "textKo": "길바닥에서 팔굽혀펴기 대결을 한다",
+          "textEs": "Se retan a un duelo de flexiones en la calle"
+        },
+        {
+          "id": "D",
+          "text": "She forgets her bag and he flies to Paris",
+          "textKo": "가방을 챙겨 파리로 출장을 떠난다",
+          "textEs": "Ella olvida su bolso y él vuela de negocios a París"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "The romantic piggyback ride (어부바 / Eobuba) is the undisputed king of romantic K-Drama tropes, complete with slow-motion walking, gentle music, and sweet drunken confessions.",
       "explanationKo": "로맨틱한 OST와 함께 밤길을 묵묵히 업고 걸어가는 '어부바'는 취중 진담과 심쿵 고백이 터져 나오는 K-드라마의 전설적인 필수 공식입니다.",
       "funFact": "Actors often practice squats and endurance training before filming to carry their co-stars gracefully through multiple takes!",
-      "funFactKo": "배우들은 흔들림 없이 멋진 표정으로 상대 배우를 업고 수십 번의 테이크를 소화하기 위해 하체 운동을 열심히 한다고 합니다!"
+      "funFactKo": "배우들은 흔들림 없이 멋진 표정으로 상대 배우를 업고 수십 번의 테이크를 소화하기 위해 하체 운동을 열심히 한다고 합니다!",
+      "questionEs": "En el romance clásico de K-Drama, ¿qué legendario gesto SIEMPRE ocurre cuando la protagonista femenina bebe de más?",
+      "explanationEs": "Llevar a la protagonista a caballito (어부바 / Eobuba) es el rey indiscutible de los clichés románticos de K-Drama, acompañado de pasos lentos, banda sonora emotiva y confesiones sinceras.",
+      "funFactEs": "¡Los actores a menudo practican sentadillas y resistencia física para cargar con elegancia a sus coprotagonistas durante múltiples tomas!"
     },
     {
       "id": 2,
@@ -38,16 +64,39 @@
       "question": "What is the famous romantic flirtation question in Korean pop culture: 'Do you want to eat ramyeon before you go?' (라면 먹고 갈래?)",
       "questionKo": "영화 '봄날은 간다'에서 시작되어 대표적인 플러팅 멘트가 된 '라면 먹고 갈래?'의 실제 속뜻은?",
       "options": [
-        { "id": "A", "text": "A genuine nutritional inquiry about dietary sodium", "textKo": "나트륨 섭취량을 걱정하는 순수한 영양학적 질문" },
-        { "id": "B", "text": "An invitation to come inside and spend the night together (the Korean equivalent of 'Netflix and chill')", "textKo": "집에 들어와 함께 밤을 보내자는 은근하고 설레는 유혹 (한국판 Netflix and chill)" },
-        { "id": "C", "text": "A secret code phrase used by spies", "textKo": "첩보원들이 접선할 때 쓰는 암호" },
-        { "id": "D", "text": "An invitation to go grocery shopping together", "textKo": "마트에 함께 장 보러 가자는 권유" }
+        {
+          "id": "A",
+          "text": "A genuine nutritional inquiry about dietary sodium",
+          "textKo": "나트륨 섭취량을 걱정하는 순수한 영양학적 질문",
+          "textEs": "Una preocupación médica genuina sobre la ingesta de sodio"
+        },
+        {
+          "id": "B",
+          "text": "An invitation to come inside and spend the night together (the Korean equivalent of 'Netflix and chill')",
+          "textKo": "집에 들어와 함께 밤을 보내자는 은근하고 설레는 유혹 (한국판 Netflix and chill)",
+          "textEs": "Una invitación a entrar a casa y pasar la noche juntos (el equivalente coreano de 'Netflix and chill')"
+        },
+        {
+          "id": "C",
+          "text": "A secret code phrase used by spies",
+          "textKo": "첩보원들이 접선할 때 쓰는 암호",
+          "textEs": "Un código secreto utilizado por agentes de espionaje"
+        },
+        {
+          "id": "D",
+          "text": "An invitation to go grocery shopping together",
+          "textKo": "마트에 함께 장 보러 가자는 권유",
+          "textEs": "Una invitación para ir juntos de compras al supermercado"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "Originally popularized by the 2001 classic film 'One Fine Spring Day', asking someone if they want to eat ramyeon at your house is the quintessential flirty invitation.",
       "explanationKo": "2001년 영화 '봄날은 간다'의 이영애 명대사에서 유래한 말로, 이성에게 밤늦게 집으로 들어오라고 제안하는 대표적인 K-플러팅의 대명사입니다.",
       "funFact": "Variants now exist in comedy sketches, such as asking if they want to 'come see my cat' or 'have some tea'!",
-      "funFactKo": "요즘은 '우리 집 고양이 보러 갈래?' 같은 다양한 변형 멘트로 진화했습니다!"
+      "funFactKo": "요즘은 '우리 집 고양이 보러 갈래?' 같은 다양한 변형 멘트로 진화했습니다!",
+      "questionEs": "¿Cuál es el famoso coqueteo en la cultura pop coreana: '¿Quieres comer ramyeon antes de irte?' (라면 먹고 갈래?)",
+      "explanationEs": "Popularizada por la película clásica de 2001 'One Fine Spring Day', invitar a alguien a comer ramyeon a casa es la propuesta romántica y sugerente por excelencia en Corea.",
+      "funFactEs": "¡Hoy en día existen variantes modernas divertidas como preguntar si quieren 'venir a ver a mi gato' o 'tomar un té'!"
     },
     {
       "id": 3,
@@ -55,16 +104,39 @@
       "question": "Which global restaurant franchise is notoriously famous for appearing in virtually EVERY K-Drama due to massive Product Placement (PPL)?",
       "questionKo": "도깨비부터 사랑의 불시착까지, 온갖 K-드라마에 거의 무조건 등장하는 전설의 PPL(간접광고) 샌드위치 브랜드는?",
       "options": [
-        { "id": "A", "text": "Subway sandwiches", "textKo": "써브웨이 (Subway)" },
-        { "id": "B", "text": "Taco Bell", "textKo": "타코벨 (Taco Bell)" },
-        { "id": "C", "text": "Chipotle", "textKo": "치폴레 (Chipotle)" },
-        { "id": "D", "text": "In-N-Out Burger", "textKo": "인앤아웃 (In-N-Out)" }
+        {
+          "id": "A",
+          "text": "Subway sandwiches",
+          "textKo": "써브웨이 (Subway)",
+          "textEs": "Sándwiches Subway"
+        },
+        {
+          "id": "B",
+          "text": "Taco Bell",
+          "textKo": "타코벨 (Taco Bell)",
+          "textEs": "Taco Bell"
+        },
+        {
+          "id": "C",
+          "text": "Chipotle",
+          "textKo": "치폴레 (Chipotle)",
+          "textEs": "Chipotle"
+        },
+        {
+          "id": "D",
+          "text": "In-N-Out Burger",
+          "textKo": "인앤아웃 (In-N-Out)",
+          "textEs": "In-N-Out Burger"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Subway has sponsored and seamlessly (or hilariously conspicuously) woven footlong sandwiches into hits like 'Crash Landing on You', 'Goblin', 'Descendants of the Sun', and 'Memories of the Alhambra'.",
       "explanationKo": "써브웨이는 도깨비, 태양의 후예, 사랑의 불시착, 알함브라 궁전의 추억 등 굵직한 히트작마다 등장해 '저승사자도 먹고 재벌도 먹는 샌드위치'로 유명합니다.",
       "funFact": "Even grim reapers, North Korean soldiers, and billionaires in dramas find themselves eating fresh Italian B.M.T. subs!",
-      "funFactKo": "해외 K-드라마 팬들 사이에서도 '모든 갈등은 써브웨이 매장에서 대화로 해결된다'는 밈(Meme)이 존재합니다."
+      "funFactKo": "해외 K-드라마 팬들 사이에서도 '모든 갈등은 써브웨이 매장에서 대화로 해결된다'는 밈(Meme)이 존재합니다.",
+      "questionEs": "¿Qué franquicia de restaurantes es notoriamente famosa por aparecer en prácticamente TODOS los K-Dramas debido a masivos patrocinios (PPL)?",
+      "explanationEs": "Subway ha patrocinado y tejido sus sándwiches en éxitos colosales como 'Aterrizaje de emergencia en tu corazón', 'Goblin', 'Descendientes del sol' y 'Recuerdos de la Alhambra'.",
+      "funFactEs": "¡Incluso ángeles de la muerte, soldados y millonarios en los dramas terminan comiendo sándwiches B.M.T. italiano recién preparados!"
     },
     {
       "id": 4,
@@ -72,16 +144,39 @@
       "question": "What tragic plot device frequently strikes characters when a drama urgently needs amnesia, a time jump, or sudden emotional stakes?",
       "questionKo": "드라마에서 기억상실증이나 갑작스러운 위기가 필요할 때 횡단보도에서 등장하는 마성의 존재는?",
       "options": [
-        { "id": "A", "text": "The Truck of Doom (white delivery truck collision)", "textKo": "어디선가 굉음을 내며 달려오는 '하얀 트럭 (Truck of Doom)'" },
-        { "id": "B", "text": "A rogue golf cart attack", "textKo": "폭주하는 골프 카트" },
-        { "id": "C", "text": "An accidental trip over a sleeping corgi", "textKo": "길가에 잠든 웰시코기에 걸려 넘어지기" },
-        { "id": "D", "text": "Sudden allergy to expensive silk shirts", "textKo": "고급 실크 셔츠 알레르기" }
+        {
+          "id": "A",
+          "text": "The Truck of Doom (white delivery truck collision)",
+          "textKo": "어디선가 굉음을 내며 달려오는 '하얀 트럭 (Truck of Doom)'",
+          "textEs": "El 'Camión del Destino' (un camión blanco de carga que aparece de la nada)"
+        },
+        {
+          "id": "B",
+          "text": "A rogue golf cart attack",
+          "textKo": "폭주하는 골프 카트",
+          "textEs": "El ataque de un carrito de golf descontrolado"
+        },
+        {
+          "id": "C",
+          "text": "An accidental trip over a sleeping corgi",
+          "textKo": "길가에 잠든 웰시코기에 걸려 넘어지기",
+          "textEs": "Tropezar accidentalmente con un perro corgi dormido"
+        },
+        {
+          "id": "D",
+          "text": "Sudden allergy to expensive silk shirts",
+          "textKo": "고급 실크 셔츠 알레르기",
+          "textEs": "Alergia repentina a las camisas de seda caras"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "The 'Truck of Doom' is a beloved meme trope where a speeding white truck appears out of nowhere while a character is frozen in the middle of a crosswalk talking on the phone.",
       "explanationKo": "해외 팬들에게 'Truck of Doom(파멸의 트럭)'이라 불리는 클리셰로, 주인공이 멍하니 서 있을 때 하얀 1톤 트럭이 나타나며 극의 긴장감을 극대화합니다.",
       "funFact": "This trope is so common that viewers keep count of how many near-misses happen per drama season!",
-      "funFactKo": "최근에는 이를 비틀어 트럭을 멋지게 피하거나, 오히려 판타지 환생의 매개체로 쓰는 유쾌한 패러디도 많습니다."
+      "funFactKo": "최근에는 이를 비틀어 트럭을 멋지게 피하거나, 오히려 판타지 환생의 매개체로 쓰는 유쾌한 패러디도 많습니다.",
+      "questionEs": "¿Qué trágico recurso de guion aparece con frecuencia cuando un drama necesita amnesia, un salto temporal o drama emocional urgente?",
+      "explanationEs": "El 'Truck of Doom' (Camión del Destino) es un célebre cliché donde un camión blanco a toda velocidad surge de la nada mientras un personaje se queda inmóvil en el paso de peatones hablando por teléfono.",
+      "funFactEs": "¡Este cliché es tan habitual que los fans internacionales llevan la cuenta de cuántos incidentes ocurren por temporada!"
     },
     {
       "id": 5,
@@ -89,16 +184,39 @@
       "question": "In the historic 2021 global sensation 'Squid Game', what is the name of the traditional sugar honeycomb candy game in Episode 3?",
       "questionKo": "넷플릭스 역대 최고 흥행작 '오징어 게임' 3화에서 바늘로 부서지지 않게 모양을 쪼개던 전통 설탕 과자는?",
       "options": [
-        { "id": "A", "text": "Dalgona (달고나)", "textKo": "달고나 (뽑기)" },
-        { "id": "B", "text": "Bungeoppang (붕어빵)", "textKo": "붕어빵" },
-        { "id": "C", "text": "Hotteok (호떡)", "textKo": "호떡" },
-        { "id": "D", "text": "Yakgwa (약과)", "textKo": "약과" }
+        {
+          "id": "A",
+          "text": "Dalgona (달고나)",
+          "textKo": "달고나 (뽑기)",
+          "textEs": "Dalgona (달고나)"
+        },
+        {
+          "id": "B",
+          "text": "Bungeoppang (붕어빵)",
+          "textKo": "붕어빵",
+          "textEs": "Bungeoppang (붕어빵)"
+        },
+        {
+          "id": "C",
+          "text": "Hotteok (호떡)",
+          "textKo": "호떡",
+          "textEs": "Hotteok (호떡)"
+        },
+        {
+          "id": "D",
+          "text": "Yakgwa (약과)",
+          "textKo": "약과",
+          "textEs": "Yakgwa (약과)"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Dalgona (also known as Ppopgi) is made by melting sugar and adding a pinch of baking soda, stamped with metal shapes (umbrella, star, triangle, circle) that street vendors challenge kids to carve out with a needle.",
       "explanationKo": "설탕을 국자에 녹여 소다를 쳐서 부풀린 후 틀로 찍어내는 '달고나(뽑기)'는 전 세계 틱톡과 SNS를 통해 폭발적인 DIY 열풍을 일으켰습니다.",
       "funFact": "The Seoul street vendor who actually cooked the 700+ dalgona candies for the filming crew saw lines around the block for months after the show aired!",
-      "funFactKo": "촬영 현장에서 직접 700개 이상의 달고나를 제작한 혜화동 달고나 장인 부부는 방송 후 연일 문전성시를 이뤘습니다."
+      "funFactKo": "촬영 현장에서 직접 700개 이상의 달고나를 제작한 혜화동 달고나 장인 부부는 방송 후 연일 문전성시를 이뤘습니다.",
+      "questionEs": "En el fenómeno global de 2021 'El juego del calamar' (Squid Game), ¿cómo se llama el dulce tradicional de azúcar que deben recortar con una aguja en el Episodio 3?",
+      "explanationEs": "El Dalgona (también conocido como Ppopgi) se prepara derritiendo azúcar con una pizca de bicarbonato, estampando figuras (paraguas, estrella, triángulo, círculo) que los niños intentan recortar con una aguja sin romperlas.",
+      "funFactEs": "¡El vendedor ambulante de Seúl que preparó más de 700 dulces dalgona para el rodaje tuvo filas interminables durante meses tras el estreno de la serie!"
     },
     {
       "id": 6,
@@ -106,16 +224,39 @@
       "question": "What is the typical career of the handsome male lead in a classic Chaebol romance drama?",
       "questionKo": "정통 K-로맨스 드라마에서 겉은 차갑지만 속은 상처를 지닌 남주인공의 단골 직업은?",
       "options": [
-        { "id": "A", "text": "An arrogant yet secretly wounded CEO / Director of a conglomerate", "textKo": "대기업 재벌 후계자 본부장님 또는 젊은 총괄 대표(CEO)" },
-        { "id": "B", "text": "A kindergarten bus driver", "textKo": "유치원 통학버스 기사님" },
-        { "id": "C", "text": "A librarian who dislikes books", "textKo": "책을 싫어하는 도서관 사서" },
-        { "id": "D", "text": "A freelance bicycle mechanic", "textKo": "자전거 수리점 프리랜서" }
+        {
+          "id": "A",
+          "text": "An arrogant yet secretly wounded CEO / Director of a conglomerate",
+          "textKo": "대기업 재벌 후계자 본부장님 또는 젊은 총괄 대표(CEO)",
+          "textEs": "Un arrogante director ejecutivo / heredero de un conglomerado con un dolor oculto en su pasado"
+        },
+        {
+          "id": "B",
+          "text": "A kindergarten bus driver",
+          "textKo": "유치원 통학버스 기사님",
+          "textEs": "Un conductor de autobús escolar de guardería"
+        },
+        {
+          "id": "C",
+          "text": "A librarian who dislikes books",
+          "textKo": "책을 싫어하는 도서관 사서",
+          "textEs": "Un bibliotecario al que no le gustan los libros"
+        },
+        {
+          "id": "D",
+          "text": "A freelance bicycle mechanic",
+          "textKo": "자전거 수리점 프리랜서",
+          "textEs": "Un mecánico de bicicletas independiente"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "The tall, impeccably tailored Chaebol heir (or CEO) with a hidden childhood trauma who slowly melts because of the hardworking, cheerful female lead is the golden formula of K-Romance.",
       "explanationKo": "완벽한 수트 핏에 까칠한 성격이지만, 씩씩한 여주인공을 만나 서서히 마음의 문을 여는 '재벌 2세 본부장님'은 불패의 로맨틱 흥행 보증 수표입니다.",
       "funFact": "He almost always has an ultra-loyal, comical personal secretary who helps him organize surprise romantic dates!",
-      "funFactKo": "본부장님 곁에는 늘 눈치 빠르고 코믹한 만능 비서 실장님이 든든한 조력자로 등장합니다."
+      "funFactKo": "본부장님 곁에는 늘 눈치 빠르고 코믹한 만능 비서 실장님이 든든한 조력자로 등장합니다.",
+      "questionEs": "¿Cuál es la profesión típica del apuesto protagonista masculino en un drama romántico clásico de Chaebol?",
+      "explanationEs": "El heredero Chaebol (o CEO) impecablemente vestido, con un trauma infantil oculto, que poco a poco se ablanda gracias a la alegre y trabajadora protagonista, es la fórmula dorada del K-Romance.",
+      "funFactEs": "¡Casi siempre cuenta con un leal y cómico secretario personal que lo ayuda a planificar citas románticas sorpresa!"
     },
     {
       "id": 7,
@@ -123,16 +264,39 @@
       "question": "What dramatic object is invariably brought out when it unexpectedly starts pouring rain during a romantic walk?",
       "questionKo": "갑자기 쏟아지는 소나기 속에서 두 주인공의 거리를 좁혀주는 로맨틱한 소품은?",
       "options": [
-        { "id": "A", "text": "A transparent or bright yellow shared umbrella", "textKo": "한 사람 어깨가 다 젖을 정도로 기울여 씌워주는 '하나의 우산'" },
-        { "id": "B", "text": "A trash bag ponchos", "textKo": "쓰레기봉투 우비" },
-        { "id": "C", "text": "A giant sheet of cardboard", "textKo": "거대한 종이박스" },
-        { "id": "D", "text": "A swimming kickboard", "textKo": "수영 킥판" }
+        {
+          "id": "A",
+          "text": "A transparent or bright yellow shared umbrella",
+          "textKo": "한 사람 어깨가 다 젖을 정도로 기울여 씌워주는 '하나의 우산'",
+          "textEs": "Un paraguas compartido (inclinado para cubrir a la protagonista)"
+        },
+        {
+          "id": "B",
+          "text": "A trash bag ponchos",
+          "textKo": "쓰레기봉투 우비",
+          "textEs": "Ponchos hechos con bolsas de basura"
+        },
+        {
+          "id": "C",
+          "text": "A giant sheet of cardboard",
+          "textKo": "거대한 종이박스",
+          "textEs": "Una lámina gigante de cartón"
+        },
+        {
+          "id": "D",
+          "text": "A swimming kickboard",
+          "textKo": "수영 킥판",
+          "textEs": "Una tabla flotadora de natación"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Rain scenes with an umbrella (from 'Something in the Rain' to 'Goblin' and 'Lovely Runner') are essential for creating heart-fluttering close proximity between leads.",
       "explanationKo": "'밥 잘 사주는 예쁜 누나', '선재 업고 튀어' 등에서 보듯, 비 오는 날 우산 하나를 나눠 쓰며 상대방 쪽으로 우산을 기울여주는 장면은 K-로맨스의 정석입니다.",
       "funFact": "Notice how the male lead's shoulder is always soaked because he tilts the entire umbrella over the girl to keep her dry!",
-      "funFactKo": "여주인공이 비를 맞지 않도록 우산을 완전히 넘겨줘서 남주인공의 한쪽 어깨가 흠뻑 젖어 있는 것이 심쿵 디테일 포인트입니다."
+      "funFactKo": "여주인공이 비를 맞지 않도록 우산을 완전히 넘겨줘서 남주인공의 한쪽 어깨가 흠뻑 젖어 있는 것이 심쿵 디테일 포인트입니다.",
+      "questionEs": "¿Qué dramático objeto aparece infaliblemente cuando empieza a llover a cántaros durante una caminata romántica?",
+      "explanationEs": "Las escenas bajo la lluvia con un solo paraguas (desde 'Something in the Rain' y 'Goblin' hasta 'Lovely Runner') son esenciales para crear una cercanía conmovedora entre los protagonistas.",
+      "funFactEs": "¡Observa cómo el hombro del protagonista siempre termina empapado porque inclina todo el paraguas sobre ella para protegerla!"
     },
     {
       "id": 8,
@@ -140,16 +304,39 @@
       "question": "What is the iconic Korean term for a wealthy family matriarch offering money in a white envelope to make someone break up with her son?",
       "questionKo": "재벌가 사모님이 여주인공을 카페로 불러내 '내 아들과 헤어져'라며 테이블 위로 쓱 내미는 것은?",
       "options": [
-        { "id": "A", "text": "White envelope bribe (Bongtu / 봉투)", "textKo": "두툼한 하얀 돈 봉투" },
-        { "id": "B", "text": "The Gold Card Toss", "textKo": "한도 없는 골드카드 던지기" },
-        { "id": "C", "text": "The Coffee Splash Special", "textKo": "커피 쿠폰 10장 모음집" },
-        { "id": "D", "text": "The Real Estate Handover", "textKo": "부동산 권리증" }
+        {
+          "id": "A",
+          "text": "White envelope bribe (Bongtu / 봉투)",
+          "textKo": "두툼한 하얀 돈 봉투",
+          "textEs": "El soborno en un sobre blanco (Bongtu / 봉투)"
+        },
+        {
+          "id": "B",
+          "text": "The Gold Card Toss",
+          "textKo": "한도 없는 골드카드 던지기",
+          "textEs": "El lanzamiento de una tarjeta de crédito dorada ilimitada"
+        },
+        {
+          "id": "C",
+          "text": "The Coffee Splash Special",
+          "textKo": "커피 쿠폰 10장 모음집",
+          "textEs": "Un cupón para diez cafés gratis"
+        },
+        {
+          "id": "D",
+          "text": "The Real Estate Handover",
+          "textKo": "부동산 권리증",
+          "textEs": "La entrega de las escrituras de una mansión"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "The dramatic mother-in-law sliding a thick white envelope across a coffee table with the line 'Take this and never see my son again!' is an all-time classic melodrama staple.",
       "explanationKo": "'이거 받고 우리 아들과 헤어져 줘'라며 하얀 봉투를 내미는 장면은 막장 드라마와 정통 멜로를 넘나드는 최고의 명장면 클리셰입니다.",
       "funFact": "If the heroine refuses the envelope, the scene usually escalates to a splash of ice water directly to the face!",
-      "funFactKo": "봉투를 거절하면 곧바로 테이블 위의 냉수나 오렌지 주스가 얼굴에 날아오는 2단계 클리셰로 이어집니다!"
+      "funFactKo": "봉투를 거절하면 곧바로 테이블 위의 냉수나 오렌지 주스가 얼굴에 날아오는 2단계 클리셰로 이어집니다!",
+      "questionEs": "¿Cuál es la icónica escena donde la madre adinerada ofrece dinero para que la protagonista termine con su hijo?",
+      "explanationEs": "La dramática suegra deslizando un grueso sobre blanco sobre la mesa de una cafetería diciendo '¡Toma esto y aléjate de mi hijo!' es un clásico absoluto del melodrama coreano.",
+      "funFactEs": "¡Si la heroína rechaza el sobre con dignidad, la escena suele escalar inmediatamente a un vaso de agua fría directo a la cara!"
     },
     {
       "id": 9,
@@ -157,16 +344,39 @@
       "question": "What beloved food do characters in dramas ALWAYS rush to eat the morning after a night of heavy drinking?",
       "questionKo": "드라마 속 주인공들이 전날 과음한 뒤 아침에 속을 풀기 위해 후루룩 들이켜는 음식은?",
       "options": [
-        { "id": "A", "text": "Haejang-guk (Hangover stew) or bean sprout soup", "textKo": "얼큰한 해장국 또는 콩나물국밥" },
-        { "id": "B", "text": "Double cheeseburgers", "textKo": "더블 치즈버거" },
-        { "id": "C", "text": "Pancakes with maple syrup", "textKo": "메이플 시럽 팬케이크" },
-        { "id": "D", "text": "Chocolate milkshake", "textKo": "초콜릿 밀크셰이크" }
+        {
+          "id": "A",
+          "text": "Haejang-guk (Hangover stew) or bean sprout soup",
+          "textKo": "얼큰한 해장국 또는 콩나물국밥",
+          "textEs": "Haejang-guk (Sopa para la resaca) o sopa de brotes de soja"
+        },
+        {
+          "id": "B",
+          "text": "Double cheeseburgers",
+          "textKo": "더블 치즈버거",
+          "textEs": "Hamburguesas dobles con queso"
+        },
+        {
+          "id": "C",
+          "text": "Pancakes with maple syrup",
+          "textKo": "메이플 시럽 팬케이크",
+          "textEs": "Pancakes con jarabe de arce"
+        },
+        {
+          "id": "D",
+          "text": "Chocolate milkshake",
+          "textKo": "초콜릿 밀크셰이크",
+          "textEs": "Batido de chocolate con crema"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Haejang-guk (해장국, literally 'soup to chase a hangover') and Kongnamul-guk (bean sprout soup with asparagine) are Korean cultural remedies to soothe an exhausted stomach.",
       "explanationKo": "'해장(解酲)'은 숙취를 푼다는 뜻으로, 뚝배기에서 보글보글 끓는 해장국이나 아스파라긴산이 풍부한 콩나물국밥은 한국인의 소울푸드입니다.",
       "funFact": "Watching characters noisily and gratefully slurp hot soup with rice is guaranteed to make viewers hungry at midnight!",
-      "funFactKo": "야심한 밤에 드라마에서 깍두기와 함께 해장국을 먹는 모습을 보면 군침이 돌아 야식을 부릅니다."
+      "funFactKo": "야심한 밤에 드라마에서 깍두기와 함께 해장국을 먹는 모습을 보면 군침이 돌아 야식을 부릅니다.",
+      "questionEs": "¿Qué reconfortante plato corren a comer SIEMPRE los personajes de dramas la mañana siguiente a una noche de fiesta con alcohol?",
+      "explanationEs": "El Haejang-guk (해장국, literalmente 'sopa para curar la resaca') y el Kongnamul-guk (sopa de brotes de soja con asparagina) son los remedios tradicionales coreanos para calmar el estómago.",
+      "funFactEs": "¡Ver a los personajes sorber con gratitud la sopa hirviendo en un cuenco de barro con arroz inevitablemente despierta el apetito de los espectadores a medianoche!"
     },
     {
       "id": 10,
@@ -174,16 +384,39 @@
       "question": "In 'Crash Landing on You' (2019-2020), what unexpected disaster causes South Korean heiress Yoon Se-ri to land in North Korea?",
       "questionKo": "'사랑의 불시착'에서 재벌 상속녀 윤세리가 북한에 불시착하게 된 기상천외한 원인은?",
       "options": [
-        { "id": "A", "text": "A freak paragliding tornado accident", "textKo": "패러글라이딩 시험 비행 중 맞닥뜨린 돌풍(토네이도)" },
-        { "id": "B", "text": "A rogue hot air balloon drift", "textKo": "열기구 조종 실수" },
-        { "id": "C", "text": "Falling asleep on a bullet train", "textKo": "KTX에서 잠들어 종점 지나치기" },
-        { "id": "D", "text": "A malfunctioning yacht GPS", "textKo": "요트 내비게이션 고장" }
+        {
+          "id": "A",
+          "text": "A freak paragliding tornado accident",
+          "textKo": "패러글라이딩 시험 비행 중 맞닥뜨린 돌풍(토네이도)",
+          "textEs": "Un tornado repentino mientras volaba en parapente"
+        },
+        {
+          "id": "B",
+          "text": "A rogue hot air balloon drift",
+          "textKo": "열기구 조종 실수",
+          "textEs": "Una falla en la dirección de un globo aerostático"
+        },
+        {
+          "id": "C",
+          "text": "Falling asleep on a bullet train",
+          "textKo": "KTX에서 잠들어 종점 지나치기",
+          "textEs": "Quedarse dormida en un tren de alta velocidad y pasarse de estación"
+        },
+        {
+          "id": "D",
+          "text": "A malfunctioning yacht GPS",
+          "textKo": "요트 내비게이션 고장",
+          "textEs": "Una falla en el GPS de un yate de lujo"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "While testing her company's extreme sports apparel line on a sunny paragliding trip over Seoul, an unexpected freak tornado sweeps Yoon Se-ri across the DMZ straight into Captain Ri's arms.",
       "explanationKo": "아웃도어 신제품 출시를 위해 패러글라이딩을 하던 윤세리가 갑작스러운 회오리바람에 휩쓸려 비무장지대를 넘어 리정혁 대위의 품에 떨어집니다.",
       "funFact": "'Crash Landing on You' became one of the highest-rated cable dramas in Korean TV history and sparked real-life marriage between the leads (Hyun Bin and Son Ye-jin)!",
-      "funFactKo": "이 작품은 tvN 역대 시청률 1위를 기록했을 뿐만 아니라, 주연 배우 현빈과 손예진이 실제 결혼에 골인하며 '세기의 커플'이 되었습니다."
+      "funFactKo": "이 작품은 tvN 역대 시청률 1위를 기록했을 뿐만 아니라, 주연 배우 현빈과 손예진이 실제 결혼에 골인하며 '세기의 커플'이 되었습니다.",
+      "questionEs": "En 'Aterrizaje de emergencia en tu corazón' (Crash Landing on You, 2019-2020), ¿qué desastre inesperado causa que la heredera Yoon Se-ri aterrice en Corea del Norte?",
+      "explanationEs": "Mientras probaba ropa deportiva extrema en un vuelo de parapente sobre Seúl, un inesperado tornado desvía a Yoon Se-ri a través de la Zona Desmilitarizada (DMZ) directo a los brazos del Capitán Ri.",
+      "funFactEs": "¡'Crash Landing on You' se convirtió en uno de los dramas por cable más vistos de la historia y sus protagonistas (Hyun Bin y Son Ye-jin) se casaron en la vida real!"
     }
   ],
   "scoreTiers": [
@@ -197,7 +430,11 @@
       "description": "Unbelievable! You've watched so many K-Dramas that you can predict the plot twists before the opening credits finish. You understand the soul of Hallyu romance!",
       "descriptionKo": "대단합니다! 오프닝 음악만 듣고도 16화 엔딩까지 결말을 내다보실 드라마 덕력의 최정상에 오르셨습니다.",
       "funQuote": "You're already bracing for the white truck and carrying an extra umbrella just in case.",
-      "funQuoteKo": "길 건널 때 하얀 트럭이 오나 살피고, 비 올 때를 대비해 우산 각도를 미리 연습해두셨을 실력!"
+      "funQuoteKo": "길 건널 때 하얀 트럭이 오나 살피고, 비 올 때를 대비해 우산 각도를 미리 연습해두셨을 실력!",
+      "titleEs": "Estatus de Guionista Estrella",
+      "badgeEs": "🎬 Director de Dramas en Horario Estelar",
+      "descriptionEs": "¡Increíble! Has visto tantos K-Dramas que puedes predecir los giros de guion antes de que terminen los créditos iniciales. ¡Comprendes el alma del romance Hallyu a la perfección!",
+      "funQuoteEs": "¡Ya estás atento por si aparece el camión blanco y llevas un paraguas extra por si llueve de repente!"
     },
     {
       "minScore": 7,
@@ -209,7 +446,11 @@
       "description": "Great job! You know the classic tropes, the Subway sandwich placements, and the best romantic moments. Your Netflix queue is 90% romantic comedies.",
       "descriptionKo": "훌륭합니다! 써브웨이 PPL부터 심쿵 어부바까지 로맨틱 명장면들을 훤히 꿰뚫고 계시네요.",
       "funQuote": "You've definitely cried to a drama OST at 2 AM on a Tuesday.",
-      "funQuoteKo": "새벽 2시에 드라마 OST 들으면서 눈물 한 방울 흘려본 경험이 있으실 확률 100%!"
+      "funQuoteKo": "새벽 2시에 드라마 OST 들으면서 눈물 한 방울 흘려본 경험이 있으실 확률 100%!",
+      "titleEs": "Maratonista Experto de 16 Episodios",
+      "badgeEs": "🍿 Campeón de Maratones",
+      "descriptionEs": "¡Gran trabajo! Conoces los clichés clásicos, los sándwiches Subway en cada escena y los momentos románticos más tiernos. Tu catálogo de Netflix es 90% comedias románticas coreanas.",
+      "funQuoteEs": "¡Seguro has llorado con la banda sonora de un drama a las 2 de la madrugada un martes!"
     },
     {
       "minScore": 4,
@@ -221,7 +462,11 @@
       "description": "You know the big global hits like Squid Game and Crash Landing on You! There is a whole universe of hilarious romantic comedy tropes waiting for your next binge session.",
       "descriptionKo": "오징어 게임이나 사랑의 불시착 같은 대작들을 잘 알고 계시는군요! K-드라마의 달콤한 로코 세계관을 더 즐겨보세요.",
       "funQuote": "Next time you watch, see how many Subways and piggybacks you can spot!",
-      "funQuoteKo": "다음 드라마 볼 때는 어부바 장면과 써브웨이가 몇 번 나오는지 세어보세요!"
+      "funQuoteKo": "다음 드라마 볼 때는 어부바 장면과 써브웨이가 몇 번 나오는지 세어보세요!",
+      "titleEs": "Espectador Casual de K-Dramas",
+      "badgeEs": "📺 Espectador de Fin de Semana",
+      "descriptionEs": "¡Conoces grandes éxitos globales como El juego del calamar y Aterrizaje de emergencia en tu corazón! Hay todo un universo de romances y comedias esperando por tu próxima maratón.",
+      "funQuoteEs": "¡La próxima vez que veas un drama, cuenta cuántas veces comen Subway o se llevan a caballito!"
     },
     {
       "minScore": 0,
@@ -233,7 +478,11 @@
       "description": "You're just at the beginning of an amazing storytelling journey. Grab some popcorn, fire up Netflix or Viki, and get ready for heart flutter after heart flutter!",
       "descriptionKo": "이제 막 설레는 K-드라마의 세계에 발을 들이셨군요! 넷플릭스를 켜고 심장이 쿵쾅거리는 명작들을 정주행해보세요.",
       "funQuote": "Episode 1 has just started—don't forget the tissues!",
-      "funQuoteKo": "1화가 방금 시작되었습니다. 휴지 한 통 챙겨두시는 거 잊지 마세요!"
+      "funQuoteKo": "1화가 방금 시작되었습니다. 휴지 한 통 챙겨두시는 거 잊지 마세요!",
+      "titleEs": "Principiante en el Episodio 1",
+      "badgeEs": "🎟️ Novato del Episodio 1",
+      "descriptionEs": "¡Estás al inicio de un viaje narrativo inolvidable! Prepara palomitas de maíz, abre Netflix o Viki y prepárate para que tu corazón lata a mil por hora.",
+      "funQuoteEs": "¡El episodio 1 acaba de comenzar: no olvides tener pañuelos a mano!"
     }
   ],
   "affiliateSuggestion": {
@@ -249,6 +498,12 @@
     "buttonTextKo": "드라마 한국어 교재 보러가기 →",
     "targetUrl": "https://talktomeinkorean.com",
     "badgeText": "Best for Learners",
-    "badgeTextKo": "학습자 추천"
+    "badgeTextKo": "학습자 추천",
+    "tagEs": "Aprende Coreano con Series",
+    "titleEs": "Aprende Coreano Real a través de tus K-Dramas Favoritos",
+    "productNameEs": "Expresiones de K-Dramas de la Vida Real - Talk To Me In Korean (TTMIK)",
+    "descriptionEs": "Domina las palabras reales, frases románticas y el humor coloquial utilizado por los mejores actores en los dramas de televisión coreanos.",
+    "buttonTextEs": "Ver Libros de K-Dramas →",
+    "badgeTextEs": "Recomendado para Estudiantes"
   }
 }

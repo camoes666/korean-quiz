@@ -2,10 +2,13 @@
   "slug": "kpop-fandom-trivia",
   "title": "The Ultimate K-Pop Fandom & Lore Trivia",
   "titleKo": "궁극의 K-Pop 팬덤 & 아이돌 역사 상식 퀴즈",
+  "titleEs": "El Test Definitivo de Lore y Fandoms del K-Pop",
   "subtitle": "Are you a casual listener or a certified multi-stan?",
   "subtitleKo": "당신은 단순 라이트 팬인가요, 아니면 진정한 K-Pop 올팬인가요?",
+  "subtitleEs": "¿Eres un oyente casual o un verdadero multi-stan certificado?",
   "description": "Prove your knowledge across legendary 2nd, 3rd, and 4th/5th generation K-Pop icons! From official lightsticks and fandom origins to iconic music show moments.",
   "descriptionKo": "2세대 레전드부터 3·4·5세대 대세 아이돌까지! 공식 응원봉의 유래, 팬덤명의 비밀, 음악방송 엔딩요정 비하인드까지 나의 덕력을 테스트해보세요.",
+  "descriptionEs": "¡Demuestra tu conocimiento a través de los íconos legendarios de la 2.ª, 3.ª y 4.ª/5.ª generación del K-Pop! Desde lightsticks oficiales y orígenes de fandoms hasta momentos icónicos de programas musicales.",
   "category": "K-Pop",
   "tag": "BLACKPINK",
   "coverEmoji": "🎤",
@@ -21,16 +24,39 @@
       "question": "What is the official full meaning of BTS's fandom name, 'ARMY'?",
       "questionKo": "방탄소년단(BTS)의 공식 팬덤명 '아미(ARMY)'의 정식 풀네임 의미는?",
       "options": [
-        { "id": "A", "text": "All Rounders Making Youth", "textKo": "All Rounders Making Youth" },
-        { "id": "B", "text": "Adorable Representative M.C. for Youth", "textKo": "Adorable Representative M.C. for Youth (청춘을 대변하는 사랑스러운 MC)" },
-        { "id": "C", "text": "Association of Real Music Youths", "textKo": "Association of Real Music Youths" },
-        { "id": "D", "text": "Always Ready Musically for You", "textKo": "Always Ready Musically for You" }
+        {
+          "id": "A",
+          "text": "All Rounders Making Youth",
+          "textKo": "All Rounders Making Youth",
+          "textEs": "All Rounders Making Youth"
+        },
+        {
+          "id": "B",
+          "text": "Adorable Representative M.C. for Youth",
+          "textKo": "Adorable Representative M.C. for Youth (청춘을 대변하는 사랑스러운 MC)",
+          "textEs": "Adorable Representative M.C. for Youth"
+        },
+        {
+          "id": "C",
+          "text": "Association of Real Music Youths",
+          "textKo": "Association of Real Music Youths",
+          "textEs": "Association of Real Music Youths"
+        },
+        {
+          "id": "D",
+          "text": "Always Ready Musically for You",
+          "textKo": "Always Ready Musically for You",
+          "textEs": "Always Ready Musically for You"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "ARMY stands for 'Adorable Representative M.C. for Youth'. It also carries the symbolic meaning that BTS represents bulletproof armor and the fans are the army standing alongside them.",
       "explanationKo": "ARMY는 '청춘을 위한 사랑스러운 대변인'이라는 뜻과 함께, 방탄복(BTS)과 군대(ARMY)처럼 항상 함께한다는 의미를 담고 있습니다.",
       "funFact": "The fandom name was officially established on July 9, 2013, which is celebrated annually as 'ARMY Day'!",
-      "funFactKo": "아미라는 이름은 2013년 7월 9일에 공식 제정되었으며, 팬들은 매년 이 날을 '아미의 생일'로 축하합니다!"
+      "funFactKo": "아미라는 이름은 2013년 7월 9일에 공식 제정되었으며, 팬들은 매년 이 날을 '아미의 생일'로 축하합니다!",
+      "questionEs": "¿Cuál es el significado oficial y completo del nombre del fandom de BTS, 'ARMY'?",
+      "explanationEs": "ARMY significa 'Adorable Representative M.C. for Youth' (Adorable Representante M.C. para la Juventud). También simboliza que BTS representa una armadura antibalas y los fans son el ejército que los acompaña.",
+      "funFactEs": "¡El nombre del fandom se estableció oficialmente el 9 de julio de 2013, que se celebra anualmente como el 'Día de ARMY'!"
     },
     {
       "id": 2,
@@ -38,16 +64,39 @@
       "question": "What unique shape is BLACKPINK's official lightstick (the 'BI-Ping-Bong') famously modeled after?",
       "questionKo": "블랙핑크(BLACKPINK)의 공식 응원봉 '뿅봉'은 어떤 독특한 모양을 본떠 만들어졌을까요?",
       "options": [
-        { "id": "A", "text": "A pink squeaky toy hammer", "textKo": "소리 나는 핑크색 뿅망치 장난감" },
-        { "id": "B", "text": "A diamond crown", "textKo": "다이아몬드 왕관" },
-        { "id": "C", "text": "A microphone wand", "textKo": "마이크 요술봉" },
-        { "id": "D", "text": "A spinning pink heart", "textKo": "회전하는 핑크 하트" }
+        {
+          "id": "A",
+          "text": "A pink squeaky toy hammer",
+          "textKo": "소리 나는 핑크색 뿅망치 장난감",
+          "textEs": "Un martillo de juguete rosa que suena al golpear"
+        },
+        {
+          "id": "B",
+          "text": "A diamond crown",
+          "textKo": "다이아몬드 왕관",
+          "textEs": "Una corona de diamantes"
+        },
+        {
+          "id": "C",
+          "text": "A microphone wand",
+          "textKo": "마이크 요술봉",
+          "textEs": "Una varita de micrófono"
+        },
+        {
+          "id": "D",
+          "text": "A spinning pink heart",
+          "textKo": "회전하는 핑크 하트",
+          "textEs": "Un corazón rosa giratorio"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "BLACKPINK's lightstick features two soft silicone pink hammer heads that actually make a cute squeaking sound when struck, co-designed with the members themselves.",
       "explanationKo": "멤버들이 직접 디자인 아이디어에 참여한 응원봉으로, 핑크색 실리콘 뿅망치 모양에 실제로 때리면 뿅뿅 귀여운 소리가 납니다.",
       "funFact": "The squeaker was included so fans could playfully make noise during comedy variety shows and concert breaks!",
-      "funFactKo": "예능 프로그램에서 자주 쓰는 뿅망치 벌칙에서 영감을 얻어 팬들이 콘서트 중간에도 재미있게 즐길 수 있도록 소리를 넣었습니다."
+      "funFactKo": "예능 프로그램에서 자주 쓰는 뿅망치 벌칙에서 영감을 얻어 팬들이 콘서트 중간에도 재미있게 즐길 수 있도록 소리를 넣었습니다.",
+      "questionEs": "¿A qué objeto único y divertido rinde homenaje el lightstick oficial de BLACKPINK ('BI-Ping-Bong')?",
+      "explanationEs": "El lightstick de BLACKPINK cuenta con dos cabezas de martillo de silicona suave rosa que emiten un tierno chirrido al golpearse, codiseñado por las propias integrantes.",
+      "funFactEs": "¡El chirrido se incorporó para que los fans pudieran hacer ruido alegremente durante pausas de conciertos y programas de variedades!"
     },
     {
       "id": 3,
@@ -55,16 +104,39 @@
       "question": "Which mega-hit broke internet history in 2012 by becoming the FIRST video ever to reach 1 BILLION views on YouTube?",
       "questionKo": "2012년 전 세계 유튜브 역사상 '최초로 10억 뷰'를 돌파하며 신기록을 세운 메가 히트곡은?",
       "options": [
-        { "id": "A", "text": "BIGBANG – 'Fantastic Baby'", "textKo": "빅뱅 – 'Fantastic Baby'" },
-        { "id": "B", "text": "Girls' Generation – 'Gee'", "textKo": "소녀시대 – 'Gee'" },
-        { "id": "C", "text": "PSY – 'Gangnam Style'", "textKo": "싸이 – '강남스타일 (Gangnam Style)'" },
-        { "id": "D", "text": "Super Junior – 'Sorry, Sorry'", "textKo": "슈퍼주니어 – 'Sorry, Sorry'" }
+        {
+          "id": "A",
+          "text": "BIGBANG – 'Fantastic Baby'",
+          "textKo": "빅뱅 – 'Fantastic Baby'",
+          "textEs": "BIGBANG – 'Fantastic Baby'"
+        },
+        {
+          "id": "B",
+          "text": "Girls' Generation – 'Gee'",
+          "textKo": "소녀시대 – 'Gee'",
+          "textEs": "Girls' Generation – 'Gee'"
+        },
+        {
+          "id": "C",
+          "text": "PSY – 'Gangnam Style'",
+          "textKo": "싸이 – '강남스타일 (Gangnam Style)'",
+          "textEs": "PSY – 'Gangnam Style'"
+        },
+        {
+          "id": "D",
+          "text": "Super Junior – 'Sorry, Sorry'",
+          "textKo": "슈퍼주니어 – 'Sorry, Sorry'",
+          "textEs": "Super Junior – 'Sorry, Sorry'"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "PSY's 'Gangnam Style' achieved global viral phenomenon status, breaking YouTube's 32-bit view counter limit and forcing Google engineers to rewrite the site's code for 64-bit integers.",
       "explanationKo": "싸이의 강남스타일은 전 세계적인 말춤 열풍을 일으키며 유튜브의 32비트 정수 조회수 카운터 한계를 초과시켜 구글이 시스템 코드를 업그레이드하게 만든 전설적인 곡입니다.",
       "funFact": "The horse-riding dance was learned and performed by global leaders, athletes, and world pop stars alike in 2012!",
-      "funFactKo": "UN 사무총장부터 할리우드 스타, 스포츠 선수들까지 전 세계인이 말춤을 따라 췄습니다!"
+      "funFactKo": "UN 사무총장부터 할리우드 스타, 스포츠 선수들까지 전 세계인이 말춤을 따라 췄습니다!",
+      "questionEs": "¿Qué mega éxito rompió la historia de internet en 2012 al convertirse en el PRIMER video en alcanzar 1.000 MILLONES de vistas en YouTube?",
+      "explanationEs": "'Gangnam Style' de PSY fue un fenómeno viral mundial que superó el límite de enteros de 32 bits de YouTube, obligando a los ingenieros de Google a reescribir el contador a 64 bits.",
+      "funFactEs": "¡El baile del caballo fue realizado por mandatarios mundiales, deportistas de élite y estrellas pop internacionales en 2012!"
     },
     {
       "id": 4,
@@ -72,16 +144,39 @@
       "question": "What is the heartfelt meaning behind TWICE's official fandom name, 'ONCE'?",
       "questionKo": "트와이스(TWICE)의 팬덤명 '원스(ONCE)'에 담긴 감동적인 의미는?",
       "options": [
-        { "id": "A", "text": "They only debut once in a lifetime", "textKo": "평생 단 한 번뿐인 데뷔의 순간" },
-        { "id": "B", "text": "If you love them even ONCE, they will repay you with TWICE their love", "textKo": "팬들이 '한 번(ONCE)' 사랑을 주면, 트와이스는 '두 배(TWICE)'의 사랑으로 보답한다" },
-        { "id": "C", "text": "One Nation Celebrating Excellence", "textKo": "원 네이션 셀러브레이팅 엑설런스" },
-        { "id": "D", "text": "They will conquer the charts once and for all", "textKo": "차트를 단번에 정복하겠다는 포부" }
+        {
+          "id": "A",
+          "text": "They only debut once in a lifetime",
+          "textKo": "평생 단 한 번뿐인 데뷔의 순간",
+          "textEs": "Solo debutan una vez en la vida"
+        },
+        {
+          "id": "B",
+          "text": "If you love them even ONCE, they will repay you with TWICE their love",
+          "textKo": "팬들이 '한 번(ONCE)' 사랑을 주면, 트와이스는 '두 배(TWICE)'의 사랑으로 보답한다",
+          "textEs": "Si les das tu amor aunque sea UNA vez (ONCE), ellas te lo devolverán el DOBLE (TWICE)"
+        },
+        {
+          "id": "C",
+          "text": "One Nation Celebrating Excellence",
+          "textKo": "원 네이션 셀러브레이팅 엑설런스",
+          "textEs": "One Nation Celebrating Excellence"
+        },
+        {
+          "id": "D",
+          "text": "They will conquer the charts once and for all",
+          "textKo": "차트를 단번에 정복하겠다는 포부",
+          "textEs": "Conquistarán las listas musicales de una vez por todas"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "The members explained: 'If you love us even once, we will repay you with twice our love. It's hard to make a connection with people, and getting people to love us is the hardest of all.'",
       "explanationKo": "멤버들이 직접 밝힌 의미로, '한 번 주신 사랑도 두 배로 갚아드리겠다'는 팬들에 대한 깊은 감사와 진심이 담겨 있습니다.",
       "funFact": "Their official lightstick is called the 'CandyBong', inspired by the candy swirls in their song 'Candy Boy'!",
-      "funFactKo": "트와이스의 공식 응원봉 이름은 롤리팝 사탕을 닮은 '캔디봉(CandyBong)'입니다."
+      "funFactKo": "트와이스의 공식 응원봉 이름은 롤리팝 사탕을 닮은 '캔디봉(CandyBong)'입니다.",
+      "questionEs": "¿Cuál es el emotivo significado detrás del nombre oficial del fandom de TWICE, 'ONCE'?",
+      "explanationEs": "Las integrantes explicaron: 'Si nos amas aunque sea una vez, te devolveremos el doble de nuestro amor. Conectar con las personas es difícil, y lograr que te amen es lo más valioso de todo'.",
+      "funFactEs": "¡Su lightstick oficial se llama 'CandyBong', inspirado en una paleta de caramelo de su canción 'Candy Boy'!"
     },
     {
       "id": 5,
@@ -89,16 +184,39 @@
       "question": "In K-Pop concert and fandom culture, what does the phrase 'Borahae' (보라해 / 'I Purple You') signify?",
       "questionKo": "방탄소년단 뷔가 만들어 전 세계 랜드마크를 물들인 유행어 '보라해 (I Purple You)'의 뜻은?",
       "options": [
-        { "id": "A", "text": "Purple is royal and superior to all other fandom colors", "textKo": "보라색은 다른 모든 팬덤 색상보다 귀족적이라는 뜻" },
-        { "id": "B", "text": "Purple is the last color of the rainbow, meaning to trust and love each other for a long time", "textKo": "무지개의 마지막 색인 보라색처럼, 끝까지 서로를 믿고 오랫동안 사랑하자는 뜻" },
-        { "id": "C", "text": "Purple represents grape juice which the idols drank as trainees", "textKo": "연습생 시절 마시던 포도주스를 추억하는 말" },
-        { "id": "D", "text": "Purple shines brightest under stadium stage lights", "textKo": "스타디움 조명 아래서 가장 빛나는 색이라는 뜻" }
+        {
+          "id": "A",
+          "text": "Purple is royal and superior to all other fandom colors",
+          "textKo": "보라색은 다른 모든 팬덤 색상보다 귀족적이라는 뜻",
+          "textEs": "El púrpura es un color real y superior a todos los demás"
+        },
+        {
+          "id": "B",
+          "text": "Purple is the last color of the rainbow, meaning to trust and love each other for a long time",
+          "textKo": "무지개의 마지막 색인 보라색처럼, 끝까지 서로를 믿고 오랫동안 사랑하자는 뜻",
+          "textEs": "El morado es el último color del arcoíris, lo que significa confiar y amarse mutuamente durante mucho tiempo"
+        },
+        {
+          "id": "C",
+          "text": "Purple represents grape juice which the idols drank as trainees",
+          "textKo": "연습생 시절 마시던 포도주스를 추억하는 말",
+          "textEs": "El morado representa el jugo de uva que bebían como aprendices"
+        },
+        {
+          "id": "D",
+          "text": "Purple shines brightest under stadium stage lights",
+          "textKo": "스타디움 조명 아래서 가장 빛나는 색이라는 뜻",
+          "textEs": "El morado brilla más bajo los reflectores del estadio"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "Coined by BTS's V (Kim Taehyung) at a 2016 fan meeting when the arena lit up in purple: 'Purple is the last color of the rainbow colors. Purple means I will trust and love you for a long time.'",
       "explanationKo": "2016년 팬미팅에서 아미밤이 보라색으로 물든 것을 본 뷔가 즉석에서 '무지개의 마지막 색인 보라처럼 끝까지 함께 사랑하자'며 건넨 따뜻한 말에서 탄생했습니다.",
       "funFact": "Landmarks worldwide, including the Empire State Building and Wembley Stadium, have lit up purple in honor of this phrase during world tours!",
-      "funFactKo": "BTS 월드투어 때마다 엠파이어 스테이트 빌딩, 웸블리 스타디움 등 세계적인 랜드마크들이 보라색 조명으로 환영식을 열었습니다."
+      "funFactKo": "BTS 월드투어 때마다 엠파이어 스테이트 빌딩, 웸블리 스타디움 등 세계적인 랜드마크들이 보라색 조명으로 환영식을 열었습니다.",
+      "questionEs": "En los conciertos y la cultura del fandom de K-Pop, ¿qué significa la frase 'Borahae' (보라해 / 'I Purple You')?",
+      "explanationEs": "Acuñada por V de BTS (Kim Taehyung) en 2016 cuando el recinto se iluminó de púrpura: 'El morado es el último color del arcoíris. Significa que confiaré en ustedes y los amaré por mucho tiempo'.",
+      "funFactEs": "¡Monumentos como el Empire State Building y el Estadio de Wembley se han iluminado de morado en su honor durante giras mundiales!"
     },
     {
       "id": 6,
@@ -106,16 +224,39 @@
       "question": "Why does SEVENTEEN have 13 members instead of 17?",
       "questionKo": "세븐틴(SEVENTEEN)의 멤버는 17명이 아닌 13명인데, 그룹명의 공식 의미 공식은?",
       "options": [
-        { "id": "A", "text": "4 members left before their official TV debut", "textKo": "데뷔 직전 4명의 멤버가 빠져서" },
-        { "id": "B", "text": "13 members + 3 specialized units (Vocal, Hip-Hop, Performance) + 1 team = 17", "textKo": "13명의 멤버 + 3개의 유닛(보컬, 힙합, 퍼포먼스) + 하나의 팀(1) = 17" },
-        { "id": "C", "text": "Their average trainee age was 17 when formed", "textKo": "결성 당시 멤버들의 평균 나이가 17세여서" },
-        { "id": "D", "text": "They were formed on the 17th day of the month", "textKo": "17일에 결성된 기념으로" }
+        {
+          "id": "A",
+          "text": "4 members left before their official TV debut",
+          "textKo": "데뷔 직전 4명의 멤버가 빠져서",
+          "textEs": "4 miembros abandonaron el grupo antes de debutar en televisión"
+        },
+        {
+          "id": "B",
+          "text": "13 members + 3 specialized units (Vocal, Hip-Hop, Performance) + 1 team = 17",
+          "textKo": "13명의 멤버 + 3개의 유닛(보컬, 힙합, 퍼포먼스) + 하나의 팀(1) = 17",
+          "textEs": "13 miembros + 3 unidades especializadas (Vocal, Hip-Hop, Performance) + 1 equipo unido = 17"
+        },
+        {
+          "id": "C",
+          "text": "Their average trainee age was 17 when formed",
+          "textKo": "결성 당시 멤버들의 평균 나이가 17세여서",
+          "textEs": "Su edad promedio como aprendices era de 17 años"
+        },
+        {
+          "id": "D",
+          "text": "They were formed on the 17th day of the month",
+          "textKo": "17일에 결성된 기념으로",
+          "textEs": "Se formaron el día 17 del mes"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "The formula stands for: 13 members + 3 units (Vocal Team, Hip-Hop Team, Performance Team) + 1 united group = 17!",
       "explanationKo": "13명의 멤버, 보컬팀·힙합팀·퍼포먼스팀 3개의 고유 유닛, 그리고 이들이 모인 하나의 팀(1)이 더해져 17(SEVENTEEN)이 된다는 공식입니다.",
       "funFact": "SEVENTEEN is widely celebrated as 'self-producing idols', with member Woozi and 3RACHA/Bumzu composing virtually all of their title tracks!",
-      "funFactKo": "세븐틴은 멤버 우지를 필두로 작사·작곡·안무까지 직접 소화하는 대표적인 '자체제작돌'입니다."
+      "funFactKo": "세븐틴은 멤버 우지를 필두로 작사·작곡·안무까지 직접 소화하는 대표적인 '자체제작돌'입니다.",
+      "questionEs": "¿Por qué SEVENTEEN tiene 13 miembros en lugar de 17?",
+      "explanationEs": "La fórmula oficial es: 13 integrantes + 3 subunidades (Vocal, Hip-Hop, Performance) + 1 grupo unido = ¡17!",
+      "funFactEs": "¡SEVENTEEN es reconocido como un grupo 'autoproducido', con Woozi y Bumzu componiendo prácticamente todas sus canciones principales!"
     },
     {
       "id": 7,
@@ -123,16 +264,39 @@
       "question": "What girl group shocked the industry in July 2022 by dropping 'Attention' directly onto YouTube with ZERO prior teasers or member reveals?",
       "questionKo": "2022년 7월 사전 티저나 멤버 공개 전혀 없이 곧바로 뮤직비디오를 기습 공개하며 가요계를 뒤흔든 걸그룹은?",
       "options": [
-        { "id": "A", "text": "aespa", "textKo": "에스파 (aespa)" },
-        { "id": "B", "text": "LE SSERAFIM", "textKo": "르세라핌 (LE SSERAFIM)" },
-        { "id": "C", "text": "NewJeans", "textKo": "뉴진스 (NewJeans)" },
-        { "id": "D", "text": "IVE", "textKo": "아이브 (IVE)" }
+        {
+          "id": "A",
+          "text": "aespa",
+          "textKo": "에스파 (aespa)",
+          "textEs": "aespa"
+        },
+        {
+          "id": "B",
+          "text": "LE SSERAFIM",
+          "textKo": "르세라핌 (LE SSERAFIM)",
+          "textEs": "LE SSERAFIM"
+        },
+        {
+          "id": "C",
+          "text": "NewJeans",
+          "textKo": "뉴진스 (NewJeans)",
+          "textEs": "NewJeans"
+        },
+        {
+          "id": "D",
+          "text": "IVE",
+          "textKo": "아이브 (IVE)",
+          "textEs": "IVE"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "NewJeans launched straight into the music scene on July 22, 2022, dropping the full 'Attention' music video with no pre-debut announcement, instantly sparking a Y2K aesthetic revolution.",
       "explanationKo": "뉴진스는 아무런 티저 없이 2022년 7월 22일 자정 'Attention' 뮤직비디오를 기습 드롭하며 전 세계적인 Y2K 신드롬을 일으켰습니다.",
       "funFact": "Their fandom name is 'Bunnies' (or 'Tokki' in Korean), matching their iconic bunny logo and lightstick!",
-      "funFactKo": "뉴진스의 팬덤명은 토끼를 뜻하는 '버니즈(Bunnies / 버니)'이며 응원봉도 귀여운 빙키봉(BinkyBong)입니다."
+      "funFactKo": "뉴진스의 팬덤명은 토끼를 뜻하는 '버니즈(Bunnies / 버니)'이며 응원봉도 귀여운 빙키봉(BinkyBong)입니다.",
+      "questionEs": "¿Qué grupo femenino sorprendió a la industria en julio de 2022 al lanzar 'Attention' en YouTube sin NINGÚN teaser previo ni revelación de miembros?",
+      "explanationEs": "NewJeans irrumpió en la escena musical el 22 de julio de 2022 lanzando directamente el video musical de 'Attention' sin anuncio previo, desatando una revolución estética Y2K instantánea.",
+      "funFactEs": "¡El nombre de su fandom es 'Bunnies' (o 'Tokki' en coreano), a juego con su icónico logotipo de conejito y su lightstick BinkyBong!"
     },
     {
       "id": 8,
@@ -140,16 +304,39 @@
       "question": "What is an 'Ending Fairy' (엔딩요정) on Korean music television broadcasts?",
       "questionKo": "한국 음악방송 무대 마지막에 카메라가 단독 클로즈업할 때 격한 숨을 몰아쉬며 포즈를 취하는 멤버를 부르는 말은?",
       "options": [
-        { "id": "A", "text": "The host who announces the weekly winner at the close of the show", "textKo": "방송 마지막에 1위를 발표하는 MC" },
-        { "id": "B", "text": "The member shown in a close-up camera shot catching their breath with a charismatic or funny pose at the final beat", "textKo": "무대 직후 숨을 헐떡이며 카메라를 향해 윙크나 잔망스러운 표정을 짓는 '엔딩요정'" },
-        { "id": "C", "text": "A mascot character who sweeps confetti off the stage", "textKo": "무대 꽃가루를 청소하는 마스코트 캐릭터" },
-        { "id": "D", "text": "The staff member who turns off stage spotlights", "textKo": "무대 조명을 끄는 현장 스태프" }
+        {
+          "id": "A",
+          "text": "The host who announces the weekly winner at the close of the show",
+          "textKo": "방송 마지막에 1위를 발표하는 MC",
+          "textEs": "El presentador que anuncia al ganador semanal al final del programa"
+        },
+        {
+          "id": "B",
+          "text": "The member shown in a close-up camera shot catching their breath with a charismatic or funny pose at the final beat",
+          "textKo": "무대 직후 숨을 헐떡이며 카메라를 향해 윙크나 잔망스러운 표정을 짓는 '엔딩요정'",
+          "textEs": "El miembro enfocado en un primer plano de cámara recuperando el aliento con una pose carismática, divertida o guiño al compás final"
+        },
+        {
+          "id": "C",
+          "text": "A mascot character who sweeps confetti off the stage",
+          "textKo": "무대 꽃가루를 청소하는 마스코트 캐릭터",
+          "textEs": "El personaje mascota que barre el confeti del escenario"
+        },
+        {
+          "id": "D",
+          "text": "The staff member who turns off stage spotlights",
+          "textKo": "무대 조명을 끄는 현장 스태프",
+          "textEs": "El miembro del personal técnico que apaga las luces del escenario"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "The 'Ending Fairy' is a beloved K-Pop tradition where cameras zoom in on individual members holding the final pose. Idols often use this time for viral antics, fake panting, comedy skits, or cute winks.",
       "explanationKo": "엔딩요정은 음악방송 무대가 끝난 후 약 5~10초간 클로즈업되는 멤버로, 강렬한 눈빛부터 귀여운 윙크, 장난기 가득한 예능식 헐떡임까지 다양한 매력을 뽐냅니다.",
       "funFact": "SHINee's Key is famous for dramatically exaggerating his exhausted breathing as an ironic parody of ending fairies!",
-      "funFactKo": "샤이니 키는 과장되게 가쁜 숨을 몰아쉬는 유쾌한 엔딩요정 패러디로 큰 화제를 모았습니다."
+      "funFactKo": "샤이니 키는 과장되게 가쁜 숨을 몰아쉬는 유쾌한 엔딩요정 패러디로 큰 화제를 모았습니다.",
+      "questionEs": "¿Qué es un 'Ending Fairy' (엔딩요정 / Hada de cierre) en los programas musicales de televisión coreanos?",
+      "explanationEs": "El 'Ending Fairy' es una entrañable tradición donde las cámaras hacen un zoom prolongado en integrantes que mantienen la pose final, aprovechando para hacer muecas adorables o bromas virales.",
+      "funFactEs": "¡Key de SHINee se volvió viral por exagerar dramáticamente su respiración agitada como una parodia cómica de las hadas de cierre!"
     },
     {
       "id": 9,
@@ -157,16 +344,39 @@
       "question": "In K-Pop song production, what does the industry term 'Killing Part' (킬링파트) describe?",
       "questionKo": "K-Pop 곡과 안무에서 대중의 뇌리에 가장 강렬하게 박히는 핵심 하이라이트 구간을 뜻하는 용어는?",
       "options": [
-        { "id": "A", "text": "The part of a contract that terminates member activities", "textKo": "계약 해지 조항을 뜻하는 법적 용어" },
-        { "id": "B", "text": "The single most memorable, catchy, or punchy hook/visual moment of the song", "textKo": "곡의 몰입감을 극대화하는 가장 중독적이고 강렬한 포인트 파트 ('킬링파트')" },
-        { "id": "C", "text": "The most difficult dance move where dancers get injured", "textKo": "체력 소모가 극심한 고난도 안무 구간" },
-        { "id": "D", "text": "The quiet acoustic bridge before the finale", "textKo": "곡 후반부의 조용한 어쿠스틱 구간" }
+        {
+          "id": "A",
+          "text": "The part of a contract that terminates member activities",
+          "textKo": "계약 해지 조항을 뜻하는 법적 용어",
+          "textEs": "La cláusula del contrato que finaliza las actividades del grupo"
+        },
+        {
+          "id": "B",
+          "text": "The single most memorable, catchy, or punchy hook/visual moment of the song",
+          "textKo": "곡의 몰입감을 극대화하는 가장 중독적이고 강렬한 포인트 파트 ('킬링파트')",
+          "textEs": "El momento visual o gancho más pegadizo, memorable e impactante de toda la canción"
+        },
+        {
+          "id": "C",
+          "text": "The most difficult dance move where dancers get injured",
+          "textKo": "체력 소모가 극심한 고난도 안무 구간",
+          "textEs": "El paso de baile más peligroso donde los bailarines se lesionan"
+        },
+        {
+          "id": "D",
+          "text": "The quiet acoustic bridge before the finale",
+          "textKo": "곡 후반부의 조용한 어쿠스틱 구간",
+          "textEs": "El puente acústico y tranquilo antes del final"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "The 'Killing Part' is the undeniable highlight moment of a song or performance—like Sana's 'Shy Shy Shy' in TWICE's 'Cheer Up'—that gets stuck in listeners' heads forever.",
       "explanationKo": "트와이스 사나의 '샤샤샤'처럼, 노래 전체에서 대중의 마음을 단숨에 사로잡고 유행을 이끄는 결정적인 시그니처 파트를 뜻합니다.",
       "funFact": "Idols often battle intensely in practice rooms to win the right to perform the killing part in their group songs!",
-      "funFactKo": "아이돌 연습생이나 멤버들은 킬링파트를 맡기 위해 녹음실과 안무 연습실에서 치열한 오디션을 거칩니다."
+      "funFactKo": "아이돌 연습생이나 멤버들은 킬링파트를 맡기 위해 녹음실과 안무 연습실에서 치열한 오디션을 거칩니다.",
+      "questionEs": "En la producción de canciones de K-Pop, ¿qué describe el término de la industria 'Killing Part' (킬링파트)?",
+      "explanationEs": "La 'Killing Part' es el instante culminante de una canción o coreografía —como el 'Shy Shy Shy' de Sana en 'Cheer Up' de TWICE— que queda grabado en la mente de todos para siempre.",
+      "funFactEs": "¡Los idols suelen competir intensamente en las salas de ensayo para ganarse el derecho de interpretar la killing part de sus canciones!"
     },
     {
       "id": 10,
@@ -174,16 +384,39 @@
       "question": "Which self-producing Stray Kids trio produces the group's signature explosive sound and tracks?",
       "questionKo": "스트레이 키즈(Stray Kids)의 독보적이고 에너제틱한 음악을 자체 프로듀싱하는 3인조 프로듀싱 유닛의 이름은?",
       "options": [
-        { "id": "A", "text": "3RACHA (Bang Chan, Changbin, Han)", "textKo": "쓰리라차 (3RACHA - 방찬, 창빈, 한)" },
-        { "id": "B", "text": "DANCE RACHA (Lee Know, Hyunjin, Felix)", "textKo": "댄스라차 (DANCE RACHA)" },
-        { "id": "C", "text": "VOCAL RACHA (Seungmin, I.N)", "textKo": "보컬라차 (VOCAL RACHA)" },
-        { "id": "D", "text": "TRIPLE S", "textKo": "트리플 에스 (TRIPLE S)" }
+        {
+          "id": "A",
+          "text": "3RACHA (Bang Chan, Changbin, Han)",
+          "textKo": "쓰리라차 (3RACHA - 방찬, 창빈, 한)",
+          "textEs": "3RACHA (Bang Chan, Changbin, Han)"
+        },
+        {
+          "id": "B",
+          "text": "DANCE RACHA (Lee Know, Hyunjin, Felix)",
+          "textKo": "댄스라차 (DANCE RACHA)",
+          "textEs": "DANCE RACHA (Lee Know, Hyunjin, Felix)"
+        },
+        {
+          "id": "C",
+          "text": "VOCAL RACHA (Seungmin, I.N)",
+          "textKo": "보컬라차 (VOCAL RACHA)",
+          "textEs": "VOCAL RACHA (Seungmin, I.N)"
+        },
+        {
+          "id": "D",
+          "text": "TRIPLE S",
+          "textKo": "트리플 에스 (TRIPLE S)",
+          "textEs": "TRIPLE S"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "3RACHA—consisting of Bang Chan (CB97), Changbin (SPEARB), and Han (J.ONE)—began producing mixtapes before debut and writes almost every single Stray Kids title track.",
       "explanationKo": "쓰리라차는 방찬, 창빈, 한으로 구성된 스트레이 키즈의 프로듀싱 팀으로, 데뷔 전부터 믹스테이프를 제작하며 빌보드 200 1위 대기록을 견인했습니다.",
       "funFact": "All three members of 3RACHA are regular members of KOMCA (Korea Music Copyright Association) with hundreds of registered songs!",
-      "funFactKo": "쓰리라차 세 멤버 전원이 한국음악저작권협회(KOMCA) 정회원으로 등재되어 있을 만큼 막강한 작사·작곡 능력을 인정받고 있습니다."
+      "funFactKo": "쓰리라차 세 멤버 전원이 한국음악저작권협회(KOMCA) 정회원으로 등재되어 있을 만큼 막강한 작사·작곡 능력을 인정받고 있습니다.",
+      "questionEs": "¿Qué trío de Stray Kids produce por sí mismo el sonido enérgico y explosivo característico del grupo?",
+      "explanationEs": "3RACHA—integrado por Bang Chan, Changbin y Han—comenzó a producir mixtapes antes del debut y compone casi todas las canciones emblemáticas de Stray Kids.",
+      "funFactEs": "¡Los tres miembros de 3RACHA son miembros regulares de KOMCA (Asociación de Derechos de Autor Musical de Corea) con cientos de canciones registradas!"
     }
   ],
   "scoreTiers": [
@@ -197,7 +430,11 @@
       "description": "Flawless! Your knowledge spans all generations, lore, music shows, and fandom history. You probably have a pristine photocard binder and a packed concert schedule!",
       "descriptionKo": "만점입니다! 세대를 막론한 가요계 역사부터 응원법, 세계관, 비하인드까지 모르는 게 없는 진정한 성골 K-Pop 마스터이십니다.",
       "funQuote": "You hear a 0.5-second intro beat and already know the choreography and fanchant.",
-      "funQuoteKo": "인트로 전주 0.5초만 듣고도 노래 제목과 포인트 안무를 바로 맞히실 실력자입니다."
+      "funQuoteKo": "인트로 전주 0.5초만 듣고도 노래 제목과 포인트 안무를 바로 맞히실 실력자입니다.",
+      "titleEs": "Stan Definitivo de Nivel Diamante",
+      "badgeEs": "👑 Enciclopedia Viviente del K-Pop",
+      "descriptionEs": "¡Impecable! Tu conocimiento abarca todas las generaciones, lore, programas musicales e historia de los fandoms. ¡Seguro tienes álbumes repletos de photocards y una agenda llena de conciertos!",
+      "funQuoteEs": "Escuchas 0.5 segundos del intro de una canción y ya conoces la coreografía y el fanchant completo."
     },
     {
       "minScore": 7,
@@ -209,7 +446,11 @@
       "description": "Very impressive! You know your fanchants, lightsticks, and iconic industry moments like the back of your hand. You're the friend people turn to for K-Pop recommendations.",
       "descriptionKo": "매우 뛰어납니다! 주요 아이돌들의 응원봉과 시그니처 킬링파트, 대기록들을 훤히 꿰뚫고 계시네요.",
       "funQuote": "Your Spotify Wrapped is 95% K-Pop and you wear that badge with honor!",
-      "funQuoteKo": "스포티파이/멜론 연말 결산 플레이리스트의 90% 이상이 K-Pop으로 가득 차 있으실 것 같아요!"
+      "funQuoteKo": "스포티파이/멜론 연말 결산 플레이리스트의 90% 이상이 K-Pop으로 가득 차 있으실 것 같아요!",
+      "titleEs": "Multi-Stan Experimentado",
+      "badgeEs": "⭐ Fan de Alto Rango",
+      "descriptionEs": "¡Muy impresionante! Conoces los fanchants, lightsticks y momentos icónicos de la industria como la palma de tu mano. Eres a quien todos acuden para pedir recomendaciones de K-Pop.",
+      "funQuoteEs": "¡Tu resumen anual de Spotify es 95% K-Pop y lo presumes con total orgullo!"
     },
     {
       "minScore": 4,
@@ -221,7 +462,11 @@
       "description": "You definitely enjoy the hottest comeback tracks and watch viral TikTok dance challenges! With so much deep group lore to explore, your K-Pop journey is just getting started.",
       "descriptionKo": "음원 차트 상위권 곡들과 숏폼 댄스 챌린지를 즐겨보시는 트렌디한 리스너이십니다! 무궁무진한 세계관을 더 탐험해보세요.",
       "funQuote": "You know the choruses by heart—now it's time to dive into the B-sides and variety shows!",
-      "funQuoteKo": "후렴구는 완벽히 아시니, 이제 자체 예능과 수록곡 명곡들을 찾아볼 차례입니다!"
+      "funQuoteKo": "후렴구는 완벽히 아시니, 이제 자체 예능과 수록곡 명곡들을 찾아볼 차례입니다!",
+      "titleEs": "Amante Casual de Playlists",
+      "badgeEs": "🎵 Oyente de Tendencias",
+      "descriptionEs": "¡Disfrutas de los comebacks más populares y de los bailes virales en TikTok! Con tanto lore fascinante por descubrir, tu aventura en el K-Pop apenas comienza.",
+      "funQuoteEs": "Te sabes los coros de memoria; ¡ahora es momento de explorar los lados B y los programas de variedades!"
     },
     {
       "minScore": 0,
@@ -233,7 +478,11 @@
       "description": "Welcome down the rabbit hole! K-Pop is a vibrant universe of world-class performances, music videos, and amazing communities. Get ready for an addictive musical adventure!",
       "descriptionKo": "환상적인 K-Pop의 세계에 오신 것을 환영합니다! 빠져들수록 놀라운 퍼포먼스와 음악이 가득하니 최애를 찾아 즐겨보세요.",
       "funQuote": "Pick your first bias, grab some headphones, and welcome to the family!",
-      "funQuoteKo": "마음에 쏙 드는 첫 최애(Bias)를 정하고 신나는 음악을 감상해보세요!"
+      "funQuoteKo": "마음에 쏙 드는 첫 최애(Bias)를 정하고 신나는 음악을 감상해보세요!",
+      "titleEs": "Fan Principiante en Formación",
+      "badgeEs": "🌱 Nuevo Recluta",
+      "descriptionEs": "¡Bienvenido a este increíble universo! El K-Pop ofrece actuaciones de clase mundial, videos cinematográficos y una comunidad maravillosa. ¡Prepárate para una aventura musical adictiva!",
+      "funQuoteEs": "¡Elige a tu primer bias, ponte los auriculares y bienvenido a la familia!"
     }
   ],
   "affiliateSuggestion": {
@@ -249,6 +498,12 @@
     "buttonTextKo": "공식 앨범 & 굿즈 특가 확인하기 →",
     "targetUrl": "https://www.yesstyle.com",
     "badgeText": "100% Official",
-    "badgeTextKo": "100% 정품"
+    "badgeTextKo": "100% 정품",
+    "tagEs": "Merch Oficial",
+    "titleEs": "Apoya a tus Idols Favoritos",
+    "productNameEs": "Álbumes y Lightsticks Oficiales de K-Pop en YesStyle / Ktown4u",
+    "descriptionEs": "¡Contabilizados en las listas Hanteo y Circle! Descubre álbumes oficiales, fotolibros de edición limitada y lightsticks auténticos enviados a todo el mundo.",
+    "buttonTextEs": "Ver Ofertas de Merch K-Pop →",
+    "badgeTextEs": "100% Oficial"
   }
 }
