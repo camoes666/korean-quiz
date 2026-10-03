@@ -15,7 +15,7 @@ import { useLanguage } from '@/context/LanguageContext';
 const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
 
 export default function HomePage() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [selectedTag, setSelectedTag] = useState<string>('All');
 
@@ -69,7 +69,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black text-[11px] whitespace-nowrap shadow-sm shadow-purple-500/25 border border-white">
-                  마스코트 호비 🐯
+                  {lang === 'ko' ? '마스코트 호비 🐯' : lang === 'es' ? 'Mascota Hobi 🐯' : 'Mascot Hobi 🐯'}
                 </div>
               </div>
 

@@ -55,7 +55,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             ★ 4.9 ({quiz.totalPlays})
           </span>
           <span className="px-2 py-0.5 bg-white/20 backdrop-blur-md rounded-md text-[11px] font-bold text-white">
-            ✨ {lang === 'ko' ? '덕력 마스터 뱃지' : 'Master Badge'}
+            ✨ {lang === 'ko' ? '덕력 마스터 뱃지' : lang === 'es' ? 'Insignia Maestra' : 'Master Badge'}
           </span>
         </div>
 
@@ -88,7 +88,8 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             </span>
             <span className="flex items-center gap-1 text-purple-600 font-bold">
               <Users className="w-3.5 h-3.5 text-purple-500" />
-              {quiz.totalPlays} {lang === 'ko' ? '도전자' : 'Players'}
+              {quiz.totalPlays}{' '}
+              {lang === 'ko' ? '도전자' : lang === 'es' ? 'Jugadores' : 'Players'}
             </span>
           </div>
 

@@ -24,6 +24,8 @@ export default function ShareButtons({
   const shareText =
     lang === 'ko'
       ? `🎉 K-Pulse 퀴즈 "${quizTitle}"에서 [${badgeTitle}] 뱃지를 획득했어요! (내 점수: ${scoreText}) 친구들도 도전해보세요! #KPulse #KCulture #KPop #KDrama`
+      : lang === 'es'
+      ? `🎉 ¡Obtuve ${scoreText} en "${quizTitle}" y gané la insignia [${badgeTitle}] en K-Pulse! ¿Puedes superar mi puntuación? #KPulse #KCulture #KPop #KDrama`
       : `🎉 I scored ${scoreText} on "${quizTitle}" and got [${badgeTitle}] on K-Pulse! Can you beat my score? #KPulse #KCulture #KPop #KDrama`;
 
   const handleCopy = async () => {

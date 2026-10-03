@@ -44,9 +44,19 @@ export default function PlayerLevelCard() {
       {/* Level Up Progress Bar */}
       <div className="mt-4">
         <div className="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-1.5">
-          <span>{lang === 'ko' ? '다음 레벨까지' : 'Progress to next level'}</span>
+          <span>
+            {lang === 'ko'
+              ? '다음 레벨까지'
+              : lang === 'es'
+              ? 'Para el siguiente nivel'
+              : 'Progress to next level'}
+          </span>
           <span className="font-extrabold text-purple-600">
-            {xpToNextLevel > 0 ? `${xpToNextLevel} XP needed` : 'MAX LEVEL'}
+            {xpToNextLevel > 0
+              ? lang === 'es'
+                ? `${xpToNextLevel} XP necesarios`
+                : `${xpToNextLevel} XP needed`
+              : 'MAX LEVEL'}
           </span>
         </div>
         <div className="h-3 w-full rounded-full bg-slate-100 p-0.5 border border-slate-200 overflow-hidden">
@@ -61,11 +71,24 @@ export default function PlayerLevelCard() {
       <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500 font-medium">
         <span className="flex items-center gap-1">
           <Flame className="w-3.5 h-3.5 text-rose-500 fill-current animate-pulse" />
-          <span className="font-bold text-slate-700">{streak} {lang === 'ko' ? '일 연속 출석' : 'day streak'}</span>
+          <span className="font-bold text-slate-700">
+            {streak}{' '}
+            {lang === 'ko'
+              ? '일 연속 출석'
+              : lang === 'es'
+              ? 'días de racha'
+              : 'day streak'}
+          </span>
         </span>
         <span className="flex items-center gap-1 text-purple-600 font-black bg-purple-50 px-2.5 py-0.5 rounded-full">
           <Trophy className="w-3.5 h-3.5" />
-          <span>{lang === 'ko' ? '상위 12% 랭커' : 'Top 12% Challenger'}</span>
+          <span>
+            {lang === 'ko'
+              ? '상위 12% 랭커'
+              : lang === 'es'
+              ? 'Top 12% Retador'
+              : 'Top 12% Challenger'}
+          </span>
         </span>
       </div>
     </div>

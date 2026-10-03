@@ -10,11 +10,9 @@ export interface LanguageOption {
 }
 
 export const LANGUAGE_OPTIONS: LanguageOption[] = [
-  { code: 'ko', label: '한국어', flag: '🇰🇷' },
   { code: 'en', label: 'English', flag: '🇺🇸' },
   { code: 'es', label: 'Español', flag: '🇪🇸' },
-  { code: 'ru', label: 'Русский', flag: '🇷🇺' },
-  { code: 'zh', label: '中文 (简体)', flag: '🇨🇳' },
+  { code: 'ko', label: '한국어', flag: '🇰🇷' },
 ];
 
 interface LanguageContextType {
@@ -27,7 +25,7 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>('ko');
+  const [lang, setLangState] = useState<Language>('en');
 
   useEffect(() => {
     const saved = localStorage.getItem('kpulse_lang') as Language;
@@ -41,7 +39,7 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
     localStorage.setItem('kpulse_lang', newLang);
   };
 
-  const t = translations[lang] || translations.ko;
+  const t = translations[lang] || translations.en;
 
   return (
     <LanguageContext.Provider value={{ lang, setLang, t, languages: LANGUAGE_OPTIONS }}>

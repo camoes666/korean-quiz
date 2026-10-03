@@ -33,10 +33,18 @@ export default function LeaderboardCard() {
           </div>
           <div>
             <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
-              {lang === 'ko' ? '글로벌 명예의 전당' : 'Global Leaderboard'}
+              {lang === 'ko'
+                ? '글로벌 명예의 전당'
+                : lang === 'es'
+                ? 'Salón de la Fama Global'
+                : 'Global Leaderboard'}
             </h3>
             <p className="text-[11px] text-slate-400 font-medium">
-              {lang === 'ko' ? '실시간 주간 랭킹 TOP 5' : 'Top challengers this week'}
+              {lang === 'ko'
+                ? '실시간 주간 랭킹 TOP 5'
+                : lang === 'es'
+                ? 'Top 5 retadores esta semana'
+                : 'Top challengers this week'}
             </p>
           </div>
         </div>
@@ -121,7 +129,11 @@ export default function LeaderboardCard() {
             YOU
           </span>
           <span className="text-xs font-black text-purple-900">
-            {lang === 'ko' ? '내 현재 순위: #42' : 'Your Rank: #42'}
+            {lang === 'ko'
+              ? '내 현재 순위: #42'
+              : lang === 'es'
+              ? 'Tu Rango: #42'
+              : 'Your Rank: #42'}
           </span>
         </div>
         <div className="flex items-center gap-1 text-xs font-black text-amber-600">

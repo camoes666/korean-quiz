@@ -11,12 +11,42 @@ interface AffiliateBoxProps {
 export default function AffiliateBox({ affiliate }: AffiliateBoxProps) {
   const { lang } = useLanguage();
 
-  const tag = lang === 'ko' && affiliate.tagKo ? affiliate.tagKo : affiliate.tag;
-  const title = lang === 'ko' && affiliate.titleKo ? affiliate.titleKo : affiliate.title;
-  const productName = lang === 'ko' && affiliate.productNameKo ? affiliate.productNameKo : affiliate.productName;
-  const description = lang === 'ko' && affiliate.descriptionKo ? affiliate.descriptionKo : affiliate.description;
-  const buttonText = lang === 'ko' && affiliate.buttonTextKo ? affiliate.buttonTextKo : affiliate.buttonText;
-  const badgeText = lang === 'ko' && affiliate.badgeTextKo ? affiliate.badgeTextKo : affiliate.badgeText;
+  const tag =
+    lang === 'ko' && affiliate.tagKo
+      ? affiliate.tagKo
+      : lang === 'es' && affiliate.tagEs
+      ? affiliate.tagEs
+      : affiliate.tag;
+  const title =
+    lang === 'ko' && affiliate.titleKo
+      ? affiliate.titleKo
+      : lang === 'es' && affiliate.titleEs
+      ? affiliate.titleEs
+      : affiliate.title;
+  const productName =
+    lang === 'ko' && affiliate.productNameKo
+      ? affiliate.productNameKo
+      : lang === 'es' && affiliate.productNameEs
+      ? affiliate.productNameEs
+      : affiliate.productName;
+  const description =
+    lang === 'ko' && affiliate.descriptionKo
+      ? affiliate.descriptionKo
+      : lang === 'es' && affiliate.descriptionEs
+      ? affiliate.descriptionEs
+      : affiliate.description;
+  const buttonText =
+    lang === 'ko' && affiliate.buttonTextKo
+      ? affiliate.buttonTextKo
+      : lang === 'es' && affiliate.buttonTextEs
+      ? affiliate.buttonTextEs
+      : affiliate.buttonText;
+  const badgeText =
+    lang === 'ko' && affiliate.badgeTextKo
+      ? affiliate.badgeTextKo
+      : lang === 'es' && affiliate.badgeTextEs
+      ? affiliate.badgeTextEs
+      : affiliate.badgeText;
 
   return (
     <div className="my-8 overflow-hidden rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-500/10 via-purple-500/5 to-pink-500/10 p-5 sm:p-6 shadow-sm">
@@ -54,6 +84,8 @@ export default function AffiliateBox({ affiliate }: AffiliateBoxProps) {
       <p className="mt-2 text-[10px] text-zinc-400">
         {lang === 'ko'
           ? '*제휴 링크가 포함되어 있을 수 있으며, 구매 시 플랫폼에 소정의 수수료가 지급될 수 있습니다.'
+          : lang === 'es'
+          ? '*Puede contener enlaces de afiliados. Podemos ganar una pequeña comisión sin costo adicional para ti.'
           : '*May contain affiliate links. We may earn a small commission at zero extra cost to you.'}
       </p>
     </div>
