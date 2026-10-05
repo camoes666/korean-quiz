@@ -191,7 +191,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
   // Social Share & Copy Challenge Handler
   const handleShareSocial = () => {
-    const url = typeof window !== 'undefined' ? window.location.href : 'https://korean-quiz.pages.dev';
+    const url = typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com';
     const pct = Math.round((score / totalQuestions) * 100);
     const tierName = getLocalizedText(currentTier, 'title', lang);
     const text =
@@ -205,7 +205,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   };
 
   const handleCopyChallenge = () => {
-    const url = typeof window !== 'undefined' ? window.location.href : 'https://korean-quiz.pages.dev';
+    const url = typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com';
     navigator.clipboard.writeText(url);
     setChallengeCopied(true);
     setTimeout(() => setChallengeCopied(false), 2500);

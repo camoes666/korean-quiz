@@ -30,14 +30,25 @@ export async function generateMetadata({
     title: `${quiz.title} | K-Pulse`,
     description: quiz.description,
     openGraph: {
-      title: `${quiz.title} - Can You Score 10/10?`,
+      title: `${quiz.title} - Can You Score 10/10? | K-Pulse`,
       description: quiz.description,
+      url: `https://kpulsequiz.com/quiz/${quiz.slug}`,
+      siteName: 'K-Pulse',
       type: 'website',
+      images: [
+        {
+          url: '/images/og-banner.png',
+          width: 1200,
+          height: 630,
+          alt: `${quiz.title} - K-Pulse Trivia Challenge`,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${quiz.title} - K-Pulse Trivia Challenge`,
+      title: `${quiz.title} - Can You Score 10/10? | K-Pulse`,
       description: quiz.description,
+      images: ['/images/og-banner.png'],
     },
   };
 }

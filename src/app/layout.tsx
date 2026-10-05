@@ -17,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://kpulsequiz.com'),
   title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
   description:
     'Play, compete, and level up your Korean culture IQ! Daily trivia challenges, global leaderboard, and iconic K-Pop lore.',
@@ -32,15 +33,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
     description:
-      'Learn, compete, and win daily with Korean culture, K-Pop, and K-Drama quizzes!',
-    url: 'https://kpulse-quiz.com',
+      'Play, compete, and level up your Korean culture IQ! Daily trivia challenges, global leaderboard, and iconic K-Pop lore.',
+    url: 'https://kpulsequiz.com',
     siteName: 'K-Pulse',
+    locale: 'en_US',
+    alternateLocale: ['es_ES', 'ko_KR'],
     type: 'website',
+    images: [
+      {
+        url: '/images/og-banner.png',
+        width: 1200,
+        height: 630,
+        alt: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
-    description: 'Learn, compete, and win daily with Korean culture & K-Pop quizzes!',
+    description:
+      'Play, compete, and level up your Korean culture IQ! Daily trivia challenges, global leaderboard, and iconic K-Pop lore.',
+    images: ['/images/og-banner.png'],
   },
 };
 
