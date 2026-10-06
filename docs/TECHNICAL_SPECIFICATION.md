@@ -177,6 +177,9 @@ export function getLocalizedText<T extends Record<string, any>>(
 export const metadata: Metadata = {
   metadataBase: new URL('https://kpulsequiz.com'),
   title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
+  verification: {
+    google: '5_kHZ_qOX7BeXe3ASq_I5sL5nEg7JBfryf-xdI-a6CI', // Google Search Console 소유권 인증
+  },
   // ...
   openGraph: {
     images: [{ url: '/images/og-banner.png', width: 1200, height: 630 }],
@@ -190,6 +193,10 @@ export const metadata: Metadata = {
 
 ### 5.2. 개별 퀴즈 정적 메타데이터: `src/app/quiz/[slug]/page.tsx`
 각 퀴즈 URL(`https://kpulsequiz.com/quiz/bts-army-trivia`)마다 고유한 Title과 Description이 적용되며, 1200x630 카드 이미지가 표시되도록 설정되어 있습니다.
+
+### 5.3. 검색엔진 색인 및 크롤러 제어 (`sitemap.ts`, `robots.ts`)
+- `https://kpulsequiz.com/sitemap.xml`: 전체 퀴즈 및 루트 경로 자동 동기화 (`priority: 0.8`, `weekly`).
+- `https://kpulsequiz.com/robots.txt`: 모든 검색엔진 크롤러에 접근 허용(`Allow: /`) 및 sitemap 경로 제공.
 
 ---
 
