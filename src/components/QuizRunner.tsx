@@ -6,6 +6,7 @@ import { Quiz, Question, ScoreTier, QuestionLevel, getLocalizedText } from '@/ty
 import AdPlaceholder from './AdPlaceholder';
 import AffiliateBox from './AffiliateBox';
 import QuizCard from './QuizCard';
+import ShareButtons from './ShareButtons';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import {
@@ -64,9 +65,6 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const [eliminatedOptions, setEliminatedOptions] = useState<string[]>([]);
   const [timeExtensionsRemaining, setTimeExtensionsRemaining] = useState(2);
   const [isHintActive, setIsHintActive] = useState(false);
-
-  // Challenge Link Copied Feedback
-  const [challengeCopied, setChallengeCopied] = useState(false);
 
   const currentQuestion: Question | undefined = activeQuestions[currentIndex];
   const totalQuestions = activeQuestions.length;
@@ -187,28 +185,6 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const handleUseHint = () => {
     if (isHintActive || isAnswerSubmitted) return;
     setIsHintActive(true);
-  };
-
-  // Social Share & Copy Challenge Handler
-  const handleShareSocial = () => {
-    const url = typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com';
-    const pct = Math.round((score / totalQuestions) * 100);
-    const tierName = getLocalizedText(currentTier, 'title', lang);
-    const text =
-      lang === 'ko'
-        ? `💜 K-Pulse "${quizTitle}"! 나는 ${pct}점(${tierName}) 달성! 당신의 실력은? #KPulse #KCulture #KPopQuiz\n${url}`
-        : lang === 'es'
-        ? `💜 ¡Completé "${quizTitle}" en K-Pulse con ${pct}% (${tierName})! ¿Puedes superar mi puntuación? #KPulse #KCulture #KPopQuiz\n${url}`
-        : `💜 I scored ${pct}% (${tierName}) on "${quizTitle}" at K-Pulse! Can you beat my score? #KPulse #KCulture #KPopQuiz\n${url}`;
-    const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
-    window.open(twitterUrl, '_blank');
-  };
-
-  const handleCopyChallenge = () => {
-    const url = typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com';
-    navigator.clipboard.writeText(url);
-    setChallengeCopied(true);
-    setTimeout(() => setChallengeCopied(false), 2500);
   };
 
   // Determine score tier
@@ -938,40 +914,16 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           </div>
         </div>
 
-        {/* 소셜 공유 CTA */}
-        <button
-          onClick={handleShareSocial}
-          className="w-full py-4 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-2xl shadow-lg shadow-purple-500/25 flex items-center justify-center gap-2 active:scale-95 transition-all mb-3"
-        >
-          <span>
-            {lang === 'ko'
-              ? '결과 카드 인스타 / X 공유하기 📸'
-              : lang === 'es'
-              ? 'Compartir resultado en Instagram / X 📸'
-              : 'Share Result Card to Instagram / X 📸'}
-          </span>
-        </button>
-
-        {/* 친구 도전장 링크 복사 CTA */}
-        <button
-          onClick={handleCopyChallenge}
-          className="w-full py-3 bg-white border-2 border-purple-200 hover:bg-purple-50 text-purple-700 font-black text-xs rounded-xl flex items-center justify-center gap-2 active:scale-95 transition-all mb-5"
-        >
-          <Copy className="w-4 h-4" />
-          <span>
-            {challengeCopied
-              ? lang === 'ko'
-                ? '✓ 도전장 링크 복사 완료!'
-                : lang === 'es'
-                ? '✓ ¡Enlace de desafío copiado!'
-                : '✓ Challenge link copied!'
-              : lang === 'ko'
-              ? '친구에게 도전장 보내기 (링크 복사) ⚔️'
-              : lang === 'es'
-              ? 'Desafiar a un amigo (Copiar enlace) ⚔️'
-              : 'Challenge a Friend (Copy Link) ⚔️'}
-          </span>
-        </button>
+        {/* 업그레이드된 바이럴 소셜 공유 및 친구 도전장 모듈 */}
+        <div className="mb-5">
+          <ShareButtons
+            quizTitle={quizTitle}
+            score={score}
+            totalQuestions={totalQuestions}
+            badgeTitle={tierTitle}
+            badgeEmoji={tierBadge}
+          />
+        </div>
 
         {/* Action Buttons: 다시 풀기 & 난이도 변경 */}
         <div className="flex gap-2.5 justify-center pt-3 border-t border-slate-100">
