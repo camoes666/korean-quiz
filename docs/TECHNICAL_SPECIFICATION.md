@@ -90,6 +90,7 @@ c:\Users\USER\code\quiz_site/
 │   │   └── quizzes/                  # 퀴즈 데이터 저장소 (JSON)
 │   │       ├── index.ts              # 퀴즈 데이터 로더 & 슬러그 검색 유틸리티 함수
 │   │       ├── bts-army-trivia.json  # BTS 아미 퀴즈
+│   │       ├── blackpink-blink-trivia.json # BLACKPINK 블링크 퀴즈
 │   │       ├── korean-spicy-food.json# 한국 매운맛 음식 챌린지 퀴즈
 │   │       ├── korean-culture-iq.json# 한국 문화 IQ 테스트
 │   │       ├── kpop-fandom-trivia.json# K-Pop 팬덤 퀴즈

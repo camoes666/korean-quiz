@@ -146,6 +146,20 @@ Play free on K-Pulse:
 ```
 *(글자수: 약 235자 - 안전 발행 가능)*
 
+#### [Template 5] BLACKPINK 블링크 퀴즈 (글로벌 걸그룹 팬덤 타깃)
+```
+Think you're a true BLINK? 🖤💖
+
+From debut records to Coachella history, pet names & trainee lore, test your knowledge in the ultimate 10-question challenge!
+
+Can you score 10/10? 🏆
+
+👉 https://kpulsequiz.com/quiz/blackpink-blink-trivia
+
+#BLACKPINK #BLINK #KPopQuiz #블랙핑크
+```
+*(글자수: 약 258자 - 안전 발행 가능)*
+
 ---
 
 ## 3. 채널 2: 레딧 (Reddit) 침투 & 스팸 필터 우회 전략

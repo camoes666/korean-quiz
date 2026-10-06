@@ -4,9 +4,11 @@ import kpopFandomTrivia from './kpop-fandom-trivia.json';
 import kdramaTropeTrivia from './kdrama-trope-trivia.json';
 import btsArmyTrivia from './bts-army-trivia.json';
 import koreanSpicyFood from './korean-spicy-food.json';
+import blackpinkBlinkTrivia from './blackpink-blink-trivia.json';
 
 export const quizzes: Quiz[] = [
   btsArmyTrivia as Quiz,
+  blackpinkBlinkTrivia as Quiz,
   koreanSpicyFood as Quiz,
   koreanCultureIq as Quiz,
   kpopFandomTrivia as Quiz,
