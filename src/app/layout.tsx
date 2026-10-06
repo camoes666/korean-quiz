@@ -30,6 +30,9 @@ export const metadata: Metadata = {
     'K-Pulse',
   ],
   authors: [{ name: 'K-Pulse Team' }],
+  verification: {
+    google: '5_kHZ_qOX7BeXe3ASq_I5sL5nEg7JBfryf-xdI-a6CI',
+  },
   openGraph: {
     title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
     description:
