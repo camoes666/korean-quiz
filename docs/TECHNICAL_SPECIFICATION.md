@@ -66,6 +66,8 @@ c:\Users\USER\code\quiz_site/
 │   ├── app/                          # Next.js App Router 디렉토리
 │   │   ├── layout.tsx                # 전역 루트 레이아웃 (OG 메타데이터, 폰트, Provider)
 │   │   ├── page.tsx                  # 메인 홈 화면 (퀴즈 목록, 카테고리 필터, 퀘스트/리더보드)
+│   │   ├── sitemap.ts                # 검색엔진용 sitemap.xml 자동 생성기 (Next.js MetadataRoute)
+│   │   ├── robots.ts                 # 검색엔진 크롤러 지침 robots.txt 생성기
 │   │   ├── globals.css               # 전역 Tailwind CSS v4 지시어
 │   │   └── quiz/
 │   │       └── [slug]/
