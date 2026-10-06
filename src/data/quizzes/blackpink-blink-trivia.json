@@ -3,19 +3,19 @@
   "title": "BLACKPINK Fandom Lore & Ultimate Trivia",
   "titleKo": "블랙핑크 블링크(BLINK) 덕력고사 & 얼티밋 퀴즈",
   "titleEs": "Trivia Definitiva y Lore de BLACKPINK para BLINKs",
-  "subtitle": "Can you score 10/10 and prove you are a true BLINK?",
-  "subtitleKo": "10점 만점을 받고 성골 블링크임을 증명할 수 있을까요?",
-  "subtitleEs": "¿Podrás obtener 10/10 y demostrar que eres un verdadero BLINK?",
-  "description": "Test your knowledge on BLACKPINK's debut records, Coachella history, solo hits, and inside fandom lore!",
-  "descriptionKo": "데뷔 신기록부터 코첼라 헤드라이너, 솔로곡, 그리고 찐팬만 아는 비하인드까지 모두 풀어보세요!",
-  "descriptionEs": "¡Demuestra cuánto sabes sobre récords de debut, Coachella, proyectos en solitario y secretos de BLACKPINK!",
+  "subtitle": "50-Question Massive Bank: From Debut to Coachella & Solo Hits!",
+  "subtitleKo": "50문제 대형 문제은행: 데뷔부터 코첼라, 솔로 신기록까지 완벽 총망라!",
+  "subtitleEs": "Banco masivo de 50 preguntas: ¡Desde el debut hasta Coachella y éxitos solistas!",
+  "description": "Challenge the deepest 50-question BLACKPINK trivia bank on the web! Debut records, Coachella headliner, Guinness records, solo projects, fashion ambassadorships, and hidden fandom lore.",
+  "descriptionKo": "웹상에서 가장 방대한 50문제 블랙핑크 덕력고사! 데뷔 신기록, 코첼라 헤드라이너, 기네스 신기록, 솔로곡, 명품 앰버서더, 비하인드 스토리까지 완벽하게 정복해보세요.",
+  "descriptionEs": "¡El banco de 50 preguntas más completo sobre BLACKPINK! Récords de debut, Coachella, récords Guinness, proyectos individuales, moda y secretos para verdaderos BLINKs.",
   "category": "K-Pop",
   "tag": "BLACKPINK",
   "coverEmoji": "🖤",
   "gradient": "from-pink-600 via-rose-500 to-zinc-950",
   "difficulty": "Medium",
   "estimatedMinutes": 3,
-  "totalPlays": "1.8k",
+  "totalPlays": "2.4k",
   "featured": true,
   "questions": [
     {
@@ -25,10 +25,30 @@
       "questionKo": "블랙핑크가 2016년 8월 8일 '휘파람'과 '붐바야'를 더블 타이틀곡으로 발표하며 데뷔한 싱글 앨범의 이름은?",
       "questionEs": "¿Con qué álbum sencillo debutó oficialmente BLACKPINK el 8 de agosto de 2016, incluyendo los temas 'Whistle' y 'Boombayah'?",
       "options": [
-        { "id": "A", "text": "SQUARE UP", "textKo": "SQUARE UP", "textEs": "SQUARE UP" },
-        { "id": "B", "text": "SQUARE ONE", "textKo": "SQUARE ONE", "textEs": "SQUARE ONE" },
-        { "id": "C", "text": "SQUARE TWO", "textKo": "SQUARE TWO", "textEs": "SQUARE TWO" },
-        { "id": "D", "text": "THE ALBUM", "textKo": "THE ALBUM", "textEs": "THE ALBUM" }
+        {
+          "id": "A",
+          "text": "SQUARE UP",
+          "textKo": "SQUARE UP",
+          "textEs": "SQUARE UP"
+        },
+        {
+          "id": "B",
+          "text": "SQUARE ONE",
+          "textKo": "SQUARE ONE",
+          "textEs": "SQUARE ONE"
+        },
+        {
+          "id": "C",
+          "text": "SQUARE TWO",
+          "textKo": "SQUARE TWO",
+          "textEs": "SQUARE TWO"
+        },
+        {
+          "id": "D",
+          "text": "THE ALBUM",
+          "textKo": "THE ALBUM",
+          "textEs": "THE ALBUM"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "BLACKPINK officially debuted on August 8, 2016, with the digital single album SQUARE ONE, which swept music charts immediately upon release.",
@@ -41,14 +61,34 @@
     {
       "id": 2,
       "level": 1,
-      "question": "BLACKPINK consists of Jisoo, Jennie, Rosé, and Lisa. What is unique about BLACKPINK's leadership structure compared to other YG Entertainment groups?",
+      "question": "What is unique about BLACKPINK's leadership structure compared to other YG Entertainment groups?",
       "questionKo": "소속사 YG엔터테인먼트 그룹 중 블랙핑크의 리더십 구조가 가진 특별한 점은 무엇일까요?",
       "questionEs": "¿Qué tiene de especial la estructura de liderazgo de BLACKPINK en comparación con otros grupos de YG Entertainment?",
       "options": [
-        { "id": "A", "text": "Eldest member Jisoo is the official leader", "textKo": "최연장자인 지수가 공식 리더이다", "textEs": "La integrante mayor Jisoo es la líder oficial" },
-        { "id": "B", "text": "The leader role rotates with every comeback", "textKo": "컴백 때마다 리더가 교체된다", "textEs": "El rol de líder rota con cada regreso musical" },
-        { "id": "C", "text": "The group has no official leader as members interact like close friends", "textKo": "네 멤버가 친구처럼 지내 공식 리더가 없다", "textEs": "No tienen líder oficial ya que las cuatro integrantes se tratan como amigas cercanas" },
-        { "id": "D", "text": "Main rapper Jennie serves as the official leader", "textKo": "메인래퍼인 제니가 리더를 맡고 있다", "textEs": "La rapera principal Jennie actúa como líder oficial" }
+        {
+          "id": "A",
+          "text": "Eldest member Jisoo is the official leader",
+          "textKo": "최연장자인 지수가 공식 리더이다",
+          "textEs": "La integrante mayor Jisoo es la líder oficial"
+        },
+        {
+          "id": "B",
+          "text": "The leader role rotates with every comeback",
+          "textKo": "컴백 때마다 리더가 교체된다",
+          "textEs": "El rol de líder rota con cada regreso musical"
+        },
+        {
+          "id": "C",
+          "text": "The group has no official leader as members interact like close friends",
+          "textKo": "네 멤버가 친구처럼 지내 공식 리더가 없다",
+          "textEs": "No tienen líder oficial ya que las cuatro integrantes se tratan como amigas cercanas"
+        },
+        {
+          "id": "D",
+          "text": "Main rapper Jennie serves as the official leader",
+          "textKo": "메인래퍼인 제니가 리더를 맡고 있다",
+          "textEs": "La rapera principal Jennie actúa como líder oficial"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "BLACKPINK is YG Entertainment's first group without an official leader, as management decided an official leader was unnecessary because all four members are as close as friends.",
@@ -61,14 +101,34 @@
     {
       "id": 3,
       "level": 1,
-      "question": "What is BLACKPINK's official fandom name, which was officially confirmed in January 2017?",
+      "question": "What is BLACKPINK's official fandom name, confirmed in January 2017?",
       "questionKo": "2017년 1월에 공식 확정된 블랙핑크의 팬덤 이름은 무엇일까요?",
       "questionEs": "¿Cuál es el nombre oficial del fandom de BLACKPINK, confirmado en enero de 2017?",
       "options": [
-        { "id": "A", "text": "BLINK", "textKo": "BLINK (블링크)", "textEs": "BLINK" },
-        { "id": "B", "text": "PINKY", "textKo": "PINKY", "textEs": "PINKY" },
-        { "id": "C", "text": "BLACKIES", "textKo": "BLACKIES", "textEs": "BLACKIES" },
-        { "id": "D", "text": "ROSES", "textKo": "ROSES", "textEs": "ROSES" }
+        {
+          "id": "A",
+          "text": "BLINK",
+          "textKo": "BLINK (블링크)",
+          "textEs": "BLINK"
+        },
+        {
+          "id": "B",
+          "text": "PINKY",
+          "textKo": "PINKY",
+          "textEs": "PINKY"
+        },
+        {
+          "id": "C",
+          "text": "BLACKIES",
+          "textKo": "BLACKIES",
+          "textEs": "BLACKIES"
+        },
+        {
+          "id": "D",
+          "text": "ROSES",
+          "textKo": "ROSES",
+          "textEs": "ROSES"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "The official fandom name 'BLINK' combines 'BL' from Black and 'INK' from Pink, signifying starting and ending together with BLACKPINK.",
@@ -80,15 +140,515 @@
     },
     {
       "id": 4,
+      "level": 1,
+      "question": "Which BLACKPINK member has served as a Global Ambassador for French luxury house Chanel since 2017 and is fondly nicknamed 'Human Chanel'?",
+      "questionKo": "2017년부터 프랑스 명품 브랜드 샤넬(Chanel)의 글로벌 앰버서더로 활약하며 '인간 샤넬'이라는 애칭으로 불리는 멤버는?",
+      "questionEs": "¿Qué integrante de BLACKPINK es embajadora global de Chanel desde 2017 y recibe el cariñoso apodo de 'Human Chanel'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jisoo (지수)",
+          "textKo": "지수",
+          "textEs": "Jisoo"
+        },
+        {
+          "id": "B",
+          "text": "Jennie (제니)",
+          "textKo": "제니",
+          "textEs": "Jennie"
+        },
+        {
+          "id": "C",
+          "text": "Rosé (로제)",
+          "textKo": "로제",
+          "textEs": "Rosé"
+        },
+        {
+          "id": "D",
+          "text": "Lisa (리사)",
+          "textKo": "리사",
+          "textEs": "Lisa"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Jennie has represented Chanel as a global house ambassador across various high-fashion campaigns since 2017.",
+      "explanationKo": "제니는 2017년부터 샤넬의 글로벌 하우스 앰버서더로서 활약하며 '인간 샤넬'이라는 상징적인 수식어를 얻었습니다.",
+      "explanationEs": "Jennie representa a Chanel como embajadora global desde 2017, consolidando su icónico estatus en la moda.",
+      "funFact": "Jennie made her Met Gala debut in May 2023 wearing a vintage 1990 Chanel minidress with white camellia details.",
+      "funFactKo": "제니는 2023년 5월 흰색 카멜리아 장식이 들어간 1990년 샤넬 빈티지 드레스를 입고 멧 갈라(Met Gala) 데뷔를 마쳤습니다.",
+      "funFactEs": "Jennie debutó en la Met Gala de 2023 con un vestido vintage Chanel de 1990 con camelias blancas."
+    },
+    {
+      "id": 5,
+      "level": 1,
+      "question": "What is the title of Rosé's debut solo single album released in March 2021, featuring title track 'On The Ground'?",
+      "questionKo": "2021년 3월 발매되어 타이틀곡 'On The Ground'를 선보인 로제의 솔로 데뷔 싱글 앨범 이름은 무엇일까요?",
+      "questionEs": "¿Cuál es el título del álbum sencillo debut en solitario de Rosé lanzado en marzo de 2021, que incluye el tema 'On The Ground'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "R",
+          "textKo": "R",
+          "textEs": "R"
+        },
+        {
+          "id": "B",
+          "text": "ROSIE",
+          "textKo": "ROSIE",
+          "textEs": "ROSIE"
+        },
+        {
+          "id": "C",
+          "text": "On The Ground",
+          "textKo": "On The Ground",
+          "textEs": "On The Ground"
+        },
+        {
+          "id": "D",
+          "text": "Gone",
+          "textKo": "Gone",
+          "textEs": "Gone"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Rosé released her first solo single album 'R' on March 12, 2021, setting a record as the first Korean female soloist to achieve half-million seller status in first-week sales.",
+      "explanationKo": "로제는 2021년 3월 첫 싱글 앨범 'R'을 발매하며 여성 솔로 최초로 초동 하프 밀리언셀러를 달성했습니다.",
+      "explanationEs": "Rosé lanzó su álbum sencillo 'R' en marzo de 2021, convirtiéndose en la primera solista coreana en vender medio millón de copias en su primera semana.",
+      "funFact": "The lead track 'On The Ground' debuted at No. 1 on both the Billboard Global 200 and Billboard Global Excl. US charts.",
+      "funFactKo": "'On The Ground'는 빌보드 글로벌 200과 글로벌 Excl. US 차트 모두에서 동시 1위로 데뷔했습니다.",
+      "funFactEs": "'On The Ground' debutó en el número 1 tanto en el Billboard Global 200 como en el Global Excl. US."
+    },
+    {
+      "id": 6,
+      "level": 1,
+      "question": "Which collaboration single with Selena Gomez, released in August 2020, reached No. 13 on the US Billboard Hot 100?",
+      "questionKo": "2020년 8월 발매되어 미국 빌보드 핫 100 13위에 오른 셀레나 고메즈와의 협업 싱글은?",
+      "questionEs": "¿Qué sencillo en colaboración con Selena Gomez, lanzado en agosto de 2020, alcanzó el puesto 13 en el Billboard Hot 100?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sour Candy",
+          "textKo": "Sour Candy",
+          "textEs": "Sour Candy"
+        },
+        {
+          "id": "B",
+          "text": "Kiss and Make Up",
+          "textKo": "Kiss and Make Up",
+          "textEs": "Kiss and Make Up"
+        },
+        {
+          "id": "C",
+          "text": "Ice Cream",
+          "textKo": "Ice Cream",
+          "textEs": "Ice Cream"
+        },
+        {
+          "id": "D",
+          "text": "Ready For Love",
+          "textKo": "Ready For Love",
+          "textEs": "Ready For Love"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "'Ice Cream' (with Selena Gomez) debuted and peaked at No. 13 on the Billboard Hot 100 in September 2020.",
+      "explanationKo": "셀레나 고메즈와 함께 부른 'Ice Cream'은 빌보드 핫 100 13위를 기록하며 당시 K-Pop 여성 아티스트 최고 순위를 세웠습니다.",
+      "explanationEs": "'Ice Cream' (con Selena Gomez) alcanzó el puesto 13 en el Billboard Hot 100 en septiembre de 2020.",
+      "funFact": "The music video features an adorable pastel retro ice cream truck concept filmed during the pandemic.",
+      "funFactKo": "뮤직비디오는 파스텔톤 레트로 아이스크림 트럭 콘셉트로 글로벌 팬들의 폭발적인 사랑을 받았습니다.",
+      "funFactEs": "El video musical presenta un encantador concepto retro de camión de helados en tonos pastel."
+    },
+    {
+      "id": 7,
+      "level": 1,
+      "question": "Jisoo's debut solo title track 'Flower' (꽃) in March 2023 sparked a viral dance challenge. What is the iconic hand gesture featured in the chorus?",
+      "questionKo": "2023년 3월 발표된 지수의 솔로 데뷔곡 '꽃(FLOWER)' 후렴구의 시그니처 챌린지 안무는?",
+      "questionEs": "El tema debut en solitario de Jisoo, 'Flower' (marzo de 2023), desató un baile viral. ¿Cuál es el gesto icónico del coro?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pointing finger dance",
+          "textKo": "손가락 지적 댄스",
+          "textEs": "Baile de señalar con el dedo"
+        },
+        {
+          "id": "B",
+          "text": "Hand flower choreo",
+          "textKo": "손꽃 안무",
+          "textEs": "Coreografía de la flor con las manos"
+        },
+        {
+          "id": "C",
+          "text": "Squeaky hammer dance",
+          "textKo": "뿅망치 댄스",
+          "textEs": "Baile del martillo sonoro"
+        },
+        {
+          "id": "D",
+          "text": "Mirror reflection choreo",
+          "textKo": "거울 댄스",
+          "textEs": "Coreografía del espejo"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Jisoo's 'Flower' became a massive global sensation with its memorable 'hand flower' choreography forming a blooming flower with both hands.",
+      "explanationKo": "지수의 '꽃'은 양손을 번갈아 뒤집으며 꽃봉오리를 형상화한 '손꽃 안무'로 전 세계적인 숏폼 열풍을 일으켰습니다.",
+      "explanationEs": "La canción de Jisoo se volvió viral gracias a la coreografía de 'la flor con las manos' en el coro.",
+      "funFact": "Pets all over TikTok and Instagram also joined the trend with owners creating flower collars around their faces.",
+      "funFactKo": "틱톡과 인스타그램에서는 반려동물 얼굴에 손꽃을 씌우는 챌린지가 폭발적으로 유행했습니다.",
+      "funFactEs": "En TikTok e Instagram, los dueños de mascotas grabaron a sus perros y gatos participando en el 'Flower Challenge'."
+    },
+    {
+      "id": 8,
+      "level": 1,
+      "question": "What is the title of BLACKPINK's debut world tour, held from 2018 to early 2020?",
+      "questionKo": "2018년부터 2020년 초까지 진행된 블랙핑크의 첫 번째 월드투어의 타이틀은?",
+      "questionEs": "¿Cuál fue el título de la primera gira mundial de BLACKPINK, celebrada entre 2018 y principios de 2020?",
+      "options": [
+        {
+          "id": "A",
+          "text": "IN YOUR AREA",
+          "textKo": "IN YOUR AREA",
+          "textEs": "IN YOUR AREA"
+        },
+        {
+          "id": "B",
+          "text": "BLACKPINK ARENA TOUR",
+          "textKo": "BLACKPINK ARENA TOUR",
+          "textEs": "BLACKPINK ARENA TOUR"
+        },
+        {
+          "id": "C",
+          "text": "THE SHOW",
+          "textKo": "THE SHOW",
+          "textEs": "THE SHOW"
+        },
+        {
+          "id": "D",
+          "text": "BORN PINK",
+          "textKo": "BORN PINK",
+          "textEs": "BORN PINK"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "BLACKPINK's debut world tour was titled 'In Your Area World Tour', spanning Asia, North America, Europe, and Oceania.",
+      "explanationKo": "블랙핑크의 첫 단독 월드투어 공식 명칭은 'In Your Area World Tour'였습니다.",
+      "explanationEs": "La primera gira mundial oficial de BLACKPINK se tituló 'In Your Area World Tour'.",
+      "funFact": "During this tour in December 2018, BLACKPINK performed to a sold-out crowd of 50,000 fans at Kyocera Dome Osaka.",
+      "funFactKo": "2018년 12월 쿄세라 돔 오사카 공연에서는 5만 명 전석 매진을 기록하며 첫 해외 돔 콘서트를 가졌습니다.",
+      "funFactEs": "En diciembre de 2018, llenaron el Kyocera Dome de Osaka con 50.000 fanáticos."
+    },
+    {
+      "id": 9,
+      "level": 1,
+      "question": "Which BLACKPINK hit music video became the FIRST by a K-pop group to surpass both 1 Billion and 2 Billion views on YouTube?",
+      "questionKo": "K-Pop 그룹 최초로 유튜브에서 10억 뷰와 20억 뷰를 연달아 돌파한 대표 히트곡 뮤직비디오는?",
+      "questionEs": "¿Qué video musical de BLACKPINK fue el PRIMERO de un grupo de K-pop en superar los mil y dos mil millones de visitas en YouTube?",
+      "options": [
+        {
+          "id": "A",
+          "text": "DDU-DU DDU-DU (뚜두뚜두)",
+          "textKo": "뚜두뚜두 (DDU-DU DDU-DU)",
+          "textEs": "DDU-DU DDU-DU"
+        },
+        {
+          "id": "B",
+          "text": "Kill This Love",
+          "textKo": "Kill This Love",
+          "textEs": "Kill This Love"
+        },
+        {
+          "id": "C",
+          "text": "BOOMBAYAH",
+          "textKo": "붐바야 (BOOMBAYAH)",
+          "textEs": "BOOMBAYAH"
+        },
+        {
+          "id": "D",
+          "text": "Pink Venom",
+          "textKo": "Pink Venom",
+          "textEs": "Pink Venom"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'DDU-DU DDU-DU' reached 1 billion views in 2019 and made history as the first K-pop group video to hit 2 billion views in 2023.",
+      "explanationKo": "'뚜두뚜두'는 2019년 10억 뷰를 넘긴 데 이어 2023년 K-Pop 그룹 최초로 20억 뷰 고지를 밟았습니다.",
+      "explanationEs": "'DDU-DU DDU-DU' alcanzó mil millones de visitas en 2019 y se convirtió en el primer video de un grupo de K-pop en alcanzar los dos mil millones en 2023.",
+      "funFact": "The iconic gun-shooting choreography in the chorus became an instant global dance craze.",
+      "funFactKo": "양손으로 권총을 쏘는 포인트 안무는 전 세계적인 댄스 챌린지 열풍을 이끌었습니다.",
+      "funFactEs": "La icónica coreografía simulando disparar armas se convirtió en un fenómeno viral instantáneo."
+    },
+    {
+      "id": 10,
+      "level": 1,
+      "question": "What is the official Netflix documentary film released in 2020 that followed BLACKPINK's journey from trainees to global superstars?",
+      "questionKo": "2020년 넷플릭스에서 공개된 블랙핑크의 연습생 시절부터 글로벌 스타 등극까지를 다룬 오리지널 다큐멘터리 영화는?",
+      "questionEs": "¿Cuál es el documental oficial de Netflix lanzado en 2020 que retrata el camino de BLACKPINK desde aprendices hasta superestrellas globales?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BLACKPINK: Light Up the Sky",
+          "textKo": "블랙핑크: 세상을 밝혀라 (Light Up the Sky)",
+          "textEs": "BLACKPINK: Light Up the Sky"
+        },
+        {
+          "id": "B",
+          "text": "BLACKPINK: The Movie",
+          "textKo": "블랙핑크: 더 무비",
+          "textEs": "BLACKPINK: The Movie"
+        },
+        {
+          "id": "C",
+          "text": "Born Pink: The Journey",
+          "textKo": "본 핑크: 더 저니",
+          "textEs": "Born Pink: The Journey"
+        },
+        {
+          "id": "D",
+          "text": "In Your Area: The Untold",
+          "textKo": "인 유어 에어리어: 비하인드",
+          "textEs": "In Your Area: The Untold"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'BLACKPINK: Light Up the Sky', directed by Caroline Suh, premiered on Netflix in October 2020 as Netflix's first K-pop original documentary.",
+      "explanationKo": "'블랙핑크: 세상을 밝혀라'는 2020년 10월 넷플릭스 최초의 K-Pop 오리지널 다큐멘터리로 공개되어 큰 찬사를 받았습니다.",
+      "explanationEs": "'BLACKPINK: Light Up the Sky' se estrenó en octubre de 2020 como el primer documental original de K-pop de Netflix.",
+      "funFact": "The film includes never-before-seen trainee audition tapes and raw interviews revealing their deepest emotions.",
+      "funFactKo": "멤버들의 미공개 연습생 오디션 영상과 진솔한 속마음 인터뷰가 담겨 큰 감동을 주었습니다.",
+      "funFactEs": "El documental incluye imágenes inéditas de sus audiciones y sinceras entrevistas personales."
+    },
+    {
+      "id": 11,
+      "level": 1,
+      "question": "Which BLACKPINK song was featured in the 2017 DC superhero film 'Justice League' in the background of Batman's scene?",
+      "questionKo": "2017년 개봉한 DC 코믹스 히어로 영화 '저스티스 리그'에서 배트맨과 플래시의 만남 장면에 배경음악으로 등장한 곡은?",
+      "questionEs": "¿Qué canción de BLACKPINK apareció de fondo en la película de superhéroes 'Justice League' (2017) de DC en la escena de Batman y Flash?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Playing with Fire (불장난)",
+          "textKo": "불장난",
+          "textEs": "Playing with Fire"
+        },
+        {
+          "id": "B",
+          "text": "As If It's Your Last (마지막처럼)",
+          "textKo": "마지막처럼",
+          "textEs": "As If It's Your Last"
+        },
+        {
+          "id": "C",
+          "text": "Whistle (휘파람)",
+          "textKo": "휘파람",
+          "textEs": "Whistle"
+        },
+        {
+          "id": "D",
+          "text": "Stay",
+          "textKo": "Stay",
+          "textEs": "Stay"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "'As If It's Your Last' and its music video played on the monitors in Barry Allen's (The Flash) secret hideout when Bruce Wayne visited him in 'Justice League'.",
+      "explanationKo": "영화 '저스티스 리그'에서 브루스 웨인이 배리 앨런의 아지트를 찾아오는 장면에 '마지막처럼' 뮤직비디오와 노래가 그대로 흘러나왔습니다.",
+      "explanationEs": "'As If It's Your Last' sonó en la guarida secreta de Flash cuando Bruce Wayne lo visitó en 'Justice League'.",
+      "funFact": "Actor Ezra Miller (The Flash) confirmed during promo interviews that he is a huge fan of BLACKPINK.",
+      "funFactKo": "플래시 역의 배우 에즈라 밀러는 인터뷰에서 자신이 실제로 블랙핑크의 열렬한 팬이라고 밝혔습니다.",
+      "funFactEs": "El actor Ezra Miller confirmó en entrevistas que es un gran seguidor de BLACKPINK."
+    },
+    {
+      "id": 12,
+      "level": 1,
+      "question": "Where was member Lisa born before moving to South Korea in 2011 to become a YG trainee?",
+      "questionKo": "2011년 YG 연습생이 되기 위해 한국으로 오기 전, 멤버 리사가 태어난 고향은 어디일까요?",
+      "questionEs": "¿Dónde nació Lisa antes de mudarse a Corea del Sur en 2011 para convertirse en aprendiz de YG?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Buriram Province, Thailand",
+          "textKo": "태국 부리람 주",
+          "textEs": "Provincia de Buriram, Tailandia"
+        },
+        {
+          "id": "B",
+          "text": "Bangkok, Thailand",
+          "textKo": "태국 방콕",
+          "textEs": "Bangkok, Tailandia"
+        },
+        {
+          "id": "C",
+          "text": "Phuket, Thailand",
+          "textKo": "태국 푸켓",
+          "textEs": "Phuket, Tailandia"
+        },
+        {
+          "id": "D",
+          "text": "Chiang Mai, Thailand",
+          "textKo": "태국 치앙마이",
+          "textEs": "Chiang Mai, Tailandia"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lisa was born in Buriram Province, Thailand, and later raised in Bangkok before moving to Seoul.",
+      "explanationKo": "리사는 태국 부리람(Buriram) 주에서 태어났으며 방콕에서 성장한 후 서울로 왔습니다.",
+      "explanationEs": "Lisa nació en la provincia de Buriram, Tailandia, y creció en Bangkok antes de mudarse a Seúl.",
+      "funFact": "Lisa paid homage to her hometown and traditional Thai headdress in the music video for her solo debut 'LALISA'.",
+      "funFactKo": "리사는 솔로 데뷔곡 'LALISA' 뮤직비디오에서 태국 전통 의상과 전통 궁중 머리장식을 선보여 고국에 대한 자부심을 표현했습니다.",
+      "funFactEs": "Lisa rindió homenaje a su país vistiendo trajes tradicionales tailandeses en el video musical de 'LALISA'."
+    },
+    {
+      "id": 13,
+      "level": 1,
+      "question": "Which country did Rosé spend most of her childhood and school years in after being born in Auckland, New Zealand?",
+      "questionKo": "뉴질랜드 오클랜드에서 태어난 로제가 유년기와 학창 시절을 보낸 나라는 어디일까요?",
+      "questionEs": "¿En qué país pasó Rosé la mayor parte de su infancia y años escolares tras nacer en Auckland, Nueva Zelanda?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Australia (Melbourne)",
+          "textKo": "호주 (멜버른)",
+          "textEs": "Australia (Melbourne)"
+        },
+        {
+          "id": "B",
+          "text": "United Kingdom (London)",
+          "textKo": "영국 (런던)",
+          "textEs": "Reino Unido (Londres)"
+        },
+        {
+          "id": "C",
+          "text": "Canada (Vancouver)",
+          "textKo": "캐나다 (밴쿠버)",
+          "textEs": "Canadá (Vancouver)"
+        },
+        {
+          "id": "D",
+          "text": "United States (Los Angeles)",
+          "textKo": "미국 (로스앤젤레스)",
+          "textEs": "Estados Unidos (Los Ángeles)"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Rosé was born in Auckland, New Zealand, but moved to Melbourne, Australia at age 7, where she grew up and attended Canterbury Girls' Secondary College.",
+      "explanationKo": "로제는 7살 때 호주 멜버른으로 이주하여 학창 시절을 보냈으며, 2012년 시드니 오디션에서 1위를 차지했습니다.",
+      "explanationEs": "Rosé se mudó a Melbourne, Australia, a los 7 años, donde creció antes de aprobar la audición de YG.",
+      "funFact": "Her father was the one who noticed her passion for singing and encouraged her to audition for YG in Sydney.",
+      "funFactKo": "피아노를 치며 노래 부르기를 좋아하던 로제에게 YG 호주 오디션을 적극 권유한 사람은 그녀의 아버지였습니다.",
+      "funFactEs": "Fue su padre quien la animó a presentarse a la audición de YG tras escucharla cantar constantemente en casa."
+    },
+    {
+      "id": 14,
+      "level": 1,
+      "question": "Jennie studied abroad for five years during her childhood. In which country did she attend ACG Parnell College?",
+      "questionKo": "제니가 어린 시절 5년간 유학하며 ACG 파넬 칼리지에 다녔던 나라는 어디일까요?",
+      "questionEs": "¿En qué país estudió Jennie en el extranjero durante cinco años de su infancia en ACG Parnell College?",
+      "options": [
+        {
+          "id": "A",
+          "text": "New Zealand (Auckland)",
+          "textKo": "뉴질랜드 (오클랜드)",
+          "textEs": "Nueva Zelanda (Auckland)"
+        },
+        {
+          "id": "B",
+          "text": "Australia (Sydney)",
+          "textKo": "호주 (시드니)",
+          "textEs": "Australia (Sídney)"
+        },
+        {
+          "id": "C",
+          "text": "United States (Florida)",
+          "textKo": "미국 (플로리다)",
+          "textEs": "Estados Unidos (Florida)"
+        },
+        {
+          "id": "D",
+          "text": "Switzerland (Geneva)",
+          "textKo": "스위스 (제네바)",
+          "textEs": "Suiza (Ginebra)"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jennie lived and studied in Auckland, New Zealand from age 9 to 14 before returning to Korea to pursue music at YG Entertainment.",
+      "explanationKo": "제니는 만 9세부터 14세까지 뉴질랜드 오클랜드에서 유학 생활을 하여 원어민 수준의 영어를 구사합니다.",
+      "explanationEs": "Jennie vivió y estudió en Auckland, Nueva Zelanda, desde los 9 hasta los 14 años antes de regresar a Corea.",
+      "funFact": "A 2006 documentary by MBC titled 'English, Must Change to Survive' featured 10-year-old Jennie studying in New Zealand.",
+      "funFactKo": "2006년 MBC 다큐멘터리 '영어, 변해야 산다'에 뉴질랜드 홈스테이 중이던 10살 제니의 모습이 방송된 적이 있습니다.",
+      "funFactEs": "En 2006, Jennie apareció brevemente en un documental de MBC sobre estudiantes de intercambio en Nueva Zelanda."
+    },
+    {
+      "id": 15,
+      "level": 1,
+      "question": "Which Korean city is eldest member Jisoo originally from?",
+      "questionKo": "블랙핑크의 맏언니 지수의 고향은 어디일까요?",
+      "questionEs": "¿De qué ciudad surcoreana es originaria Jisoo, la integrante mayor?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gunpo, Gyeonggi-do",
+          "textKo": "경기도 군포시",
+          "textEs": "Gunpo, Gyeonggi-do"
+        },
+        {
+          "id": "B",
+          "text": "Busan",
+          "textKo": "부산광역시",
+          "textEs": "Busan"
+        },
+        {
+          "id": "C",
+          "text": "Daegu",
+          "textKo": "대구광역시",
+          "textEs": "Daegu"
+        },
+        {
+          "id": "D",
+          "text": "Gwangju",
+          "textKo": "광주광역시",
+          "textEs": "Gwangju"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jisoo was born in Gunpo, Gyeonggi-do, South Korea, where she attended Taeeul Elementary, Yongho Middle, and School of Performing Arts Seoul.",
+      "explanationKo": "지수는 경기도 군포시 산본동 출신입니다.",
+      "explanationEs": "Jisoo nació en la ciudad de Gunpo, en la provincia de Gyeonggi-do, Corea del Sur.",
+      "funFact": "During her school days, Jisoo was well known for her beauty and warm, humorous personality.",
+      "funFactKo": "학창 시절 지수는 빼어난 미모뿐만 아니라 털털하고 유쾌한 성격으로 교내에서 인기가 많았습니다.",
+      "funFactEs": "En su escuela, Jisoo era muy popular tanto por su belleza como por su carácter alegre y divertido."
+    },
+    {
+      "id": 16,
       "level": 2,
       "question": "In April 2023, BLACKPINK made music history at the Coachella Festival in the US. What milestone did they achieve?",
       "questionKo": "2023년 4월 미국 '코첼라 페스티벌'에서 블랙핑크가 세운 역사적인 대기록은 무엇일까요?",
       "questionEs": "En abril de 2023, BLACKPINK hizo historia en el festival Coachella en EE.UU. ¿Qué hito histórico lograron?",
       "options": [
-        { "id": "A", "text": "First K-pop group to perform as an opening act", "textKo": "K-Pop 아티스트 최초 오프닝 무대 연출", "textEs": "Primer grupo de K-pop en actuar como acto de apertura" },
-        { "id": "B", "text": "First Asian act and K-pop group to headline Coachella", "textKo": "아시아 아티스트 및 K-Pop 그룹 최초 코첼라 헤드라이너 등극", "textEs": "Primer acto asiático y grupo de K-pop en encabezar (headliner) Coachella" },
-        { "id": "C", "text": "First K-pop group to perform an entirely acoustic set", "textKo": "K-Pop 최초 전곡 어쿠스틱 세트 연주", "textEs": "Primer grupo de K-pop en presentar un set completamente acústico" },
-        { "id": "D", "text": "First K-pop group to release a live album with Lady Gaga", "textKo": "레이디 가가와의 라이브 무대 합동 음반 발매", "textEs": "Primer grupo de K-pop en lanzar un álbum en vivo con Lady Gaga" }
+        {
+          "id": "A",
+          "text": "First K-pop group to perform as an opening act",
+          "textKo": "K-Pop 아티스트 최초 오프닝 무대 연출",
+          "textEs": "Primer grupo de K-pop en actuar como acto de apertura"
+        },
+        {
+          "id": "B",
+          "text": "First Asian act and K-pop group to headline Coachella",
+          "textKo": "아시아 아티스트 및 K-Pop 그룹 최초 코첼라 헤드라이너 등극",
+          "textEs": "Primer acto asiático y grupo de K-pop en encabezar (headliner) Coachella"
+        },
+        {
+          "id": "C",
+          "text": "First K-pop group to perform an entirely acoustic set",
+          "textKo": "K-Pop 최초 전곡 어쿠스틱 세트 연주",
+          "textEs": "Primer grupo de K-pop en presentar un set completamente acústico"
+        },
+        {
+          "id": "D",
+          "text": "First K-pop group to release a live album with Lady Gaga",
+          "textKo": "레이디 가가와의 라이브 무대 합동 음반 발매",
+          "textEs": "Primer grupo de K-pop en lanzar un álbum en vivo con Lady Gaga"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "In 2023, BLACKPINK returned to Coachella four years after their 2019 debut performance to become the first Asian act and K-pop group in history to headline the festival.",
@@ -99,16 +659,36 @@
       "funFactEs": "BLACKPINK lució la estética tradicional coreana en Coachella con un techo estilo Hanok y trajes Hanbok modernizados a medida."
     },
     {
-      "id": 5,
+      "id": 17,
       "level": 2,
       "question": "In November 2018, Jennie became the first BLACKPINK member to launch a solo project. What was the title of her debut solo single?",
       "questionKo": "2018년 11월, 블랙핑크 멤버 중 가장 먼저 솔로 프로젝트를 발표한 제니의 데뷔 솔로곡 제목은 무엇일까요?",
       "questionEs": "En noviembre de 2018, Jennie fue la primera integrante en lanzar un proyecto en solitario. ¿Cuál fue el título de su sencillo debut?",
       "options": [
-        { "id": "A", "text": "On The Ground", "textKo": "On The Ground", "textEs": "On The Ground" },
-        { "id": "B", "text": "LALISA", "textKo": "LALISA", "textEs": "LALISA" },
-        { "id": "C", "text": "SOLO", "textKo": "SOLO", "textEs": "SOLO" },
-        { "id": "D", "text": "FLOWER", "textKo": "FLOWER", "textEs": "FLOWER" }
+        {
+          "id": "A",
+          "text": "On The Ground",
+          "textKo": "On The Ground",
+          "textEs": "On The Ground"
+        },
+        {
+          "id": "B",
+          "text": "LALISA",
+          "textKo": "LALISA",
+          "textEs": "LALISA"
+        },
+        {
+          "id": "C",
+          "text": "SOLO",
+          "textKo": "SOLO",
+          "textEs": "SOLO"
+        },
+        {
+          "id": "D",
+          "text": "FLOWER",
+          "textKo": "FLOWER",
+          "textEs": "FLOWER"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "Jennie made her solo debut in November 2018 with 'SOLO', topping South Korea's Circle Digital Chart and the US Billboard World Digital Song Sales chart.",
@@ -119,16 +699,36 @@
       "funFactEs": "El video musical de 'SOLO' fue el primero de una solista femenina coreana en superar los mil millones de visitas en YouTube."
     },
     {
-      "id": 6,
+      "id": 18,
       "level": 2,
       "question": "BLACKPINK's 2022 second full-length album, BORN PINK, achieved an unprecedented global chart record for a female group. What was this achievement?",
       "questionKo": "블랙핑크의 2022년 정규 2집 BORN PINK가 여성 그룹으로서 달성한 전무후무한 차트 기록은?",
       "questionEs": "El segundo álbum de estudio de BLACKPINK de 2022, BORN PINK, logró un récord histórico mundial para un grupo femenino. ¿Cuál fue?",
       "options": [
-        { "id": "A", "text": "Simultaneously topping both the US Billboard 200 and UK Official Albums Chart", "textKo": "미국 빌보드 200과 영국 오피셜 앨범 차트 동시 1위 석권", "textEs": "Liderar simultáneamente el Billboard 200 de EE.UU. y la lista oficial del Reino Unido" },
-        { "id": "B", "text": "Remaining on the Billboard Hot 100 chart for 100 consecutive weeks", "textKo": "빌보드 핫 100 차트 100주 연속 진입", "textEs": "Permanecer en el Billboard Hot 100 durante 100 semanas consecutivas" },
-        { "id": "C", "text": "Selling 10 million physical album copies within 24 hours", "textKo": "24시간 만에 음반 1,000만 장 판매", "textEs": "Vender 10 millones de copias físicas en 24 horas" },
-        { "id": "D", "text": "Winning Best Album of the Year at the US Grammy Awards", "textKo": "그래미 어워드 올해의 앨범상 수상", "textEs": "Ganar el Álbum del Año en los Premios Grammy" }
+        {
+          "id": "A",
+          "text": "Simultaneously topping both the US Billboard 200 and UK Official Albums Chart",
+          "textKo": "미국 빌보드 200과 영국 오피셜 앨범 차트 동시 1위 석권",
+          "textEs": "Liderar simultáneamente el Billboard 200 de EE.UU. y la lista oficial del Reino Unido"
+        },
+        {
+          "id": "B",
+          "text": "Remaining on the Billboard Hot 100 chart for 100 consecutive weeks",
+          "textKo": "빌보드 핫 100 차트 100주 연속 진입",
+          "textEs": "Permanecer en el Billboard Hot 100 durante 100 semanas consecutivas"
+        },
+        {
+          "id": "C",
+          "text": "Selling 10 million physical album copies within 24 hours",
+          "textKo": "24시간 만에 음반 1,000만 장 판매",
+          "textEs": "Vender 10 millones de copias físicas en 24 horas"
+        },
+        {
+          "id": "D",
+          "text": "Winning Best Album of the Year at the US Grammy Awards",
+          "textKo": "그래미 어워드 올해의 앨범상 수상",
+          "textEs": "Ganar el Álbum del Año en los Premios Grammy"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "BORN PINK made BLACKPINK the first Asian female act to reach No. 1 simultaneously on both the US Billboard 200 and the UK Official Albums Chart.",
@@ -139,16 +739,36 @@
       "funFactEs": "Fue el primer grupo femenino en todo el mundo en liderar ambas listas simultáneamente desde Destiny's Child en 2001 (21 años después)."
     },
     {
-      "id": 7,
+      "id": 19,
       "level": 2,
       "question": "Before her official debut with BLACKPINK, Rosé featured on G-Dragon's 2012 song 'Without You' (결국). How was she credited on the original album tracklist?",
       "questionKo": "블랙핑크 데뷔 전인 2012년, 로제가 지드래곤의 수록곡 '결국(Without You)'에 피처링으로 참여했을 당시 앨범 표지에 어떻게 표기되었을까요?",
       "questionEs": "Antes de debutar con BLACKPINK, Rosé colaboró en la canción 'Without You' (2012) de G-Dragon. ¿Cómo figuraba en la lista de canciones?",
       "options": [
-        { "id": "A", "text": "Feat. ROSÉ of BLACKPINK", "textKo": "Feat. ROSÉ of BLACKPINK", "textEs": "Feat. ROSÉ of BLACKPINK" },
-        { "id": "B", "text": "Feat. Roseanne Park", "textKo": "Feat. Roseanne Park", "textEs": "Feat. Roseanne Park" },
-        { "id": "C", "text": "Feat. ? of YG New Girl Group", "textKo": "Feat. ? of YG New Girl Group", "textEs": "Feat. ? of YG New Girl Group" },
-        { "id": "D", "text": "Feat. Australian Mystery Vocalist", "textKo": "Feat. Australian Mystery Vocalist", "textEs": "Feat. Australian Mystery Vocalist" }
+        {
+          "id": "A",
+          "text": "Feat. ROSÉ of BLACKPINK",
+          "textKo": "Feat. ROSÉ of BLACKPINK",
+          "textEs": "Feat. ROSÉ of BLACKPINK"
+        },
+        {
+          "id": "B",
+          "text": "Feat. Roseanne Park",
+          "textKo": "Feat. Roseanne Park",
+          "textEs": "Feat. Roseanne Park"
+        },
+        {
+          "id": "C",
+          "text": "Feat. ? of YG New Girl Group",
+          "textKo": "Feat. ? of YG New Girl Group",
+          "textEs": "Feat. ? of YG New Girl Group"
+        },
+        {
+          "id": "D",
+          "text": "Feat. Australian Mystery Vocalist",
+          "textKo": "Feat. Australian Mystery Vocalist",
+          "textEs": "Feat. Australian Mystery Vocalist"
+        }
       ],
       "correctAnswer": "C",
       "explanation": "When G-Dragon released 'Without You' in 2012, Rosé was credited anonymously as 'Feat. ? of YG New Girl Group', keeping her identity hidden until she was revealed in 2016.",
@@ -159,16 +779,676 @@
       "funFactEs": "Rosé se unió a YG Entertainment en 2012 tras quedar en 1er lugar entre 700 aspirantes en la audición de Sídney, Australia."
     },
     {
-      "id": 8,
+      "id": 20,
+      "level": 2,
+      "question": "In September 2021, Lisa made her solo debut with 'LALISA'. Which B-side track became an international viral streaming monster on Spotify and Billboard?",
+      "questionKo": "2021년 9월 리사의 솔로 데뷔 싱글 수록곡 중, 스포티파이와 빌보드에서 전 세계적 바이럴 신드롬을 일으킨 곡은?",
+      "questionEs": "En septiembre de 2021, Lisa debutó en solitario con 'LALISA'. ¿Qué canción del lado B se convirtió en un monstruo de streaming viral en Spotify y Billboard?",
+      "options": [
+        {
+          "id": "A",
+          "text": "MONEY",
+          "textKo": "MONEY",
+          "textEs": "MONEY"
+        },
+        {
+          "id": "B",
+          "text": "SG",
+          "textKo": "SG",
+          "textEs": "SG"
+        },
+        {
+          "id": "C",
+          "text": "SHOONG!",
+          "textKo": "SHOONG!",
+          "textEs": "SHOONG!"
+        },
+        {
+          "id": "D",
+          "text": "Rockstar",
+          "textKo": "Rockstar",
+          "textEs": "Rockstar"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lisa's B-side track 'MONEY' became an international viral hit, surpassing 1 billion streams on Spotify and entering the Billboard Hot 100.",
+      "explanationKo": "리사의 수록곡 'MONEY'는 폭발적인 숏폼 댄스 챌린지 열풍을 타고 스포티파이 10억 스트리밍과 빌보드 핫 100 차트인을 기록했습니다.",
+      "explanationEs": "El tema 'MONEY' de Lisa se convirtió en un éxito viral internacional, superando mil millones de reproducciones en Spotify.",
+      "funFact": "It became the first song by a K-pop solo artist in history to pass 1 billion streams on Spotify.",
+      "funFactKo": "이 곡은 K-Pop 솔로 아티스트 최초로 스포티파이 10억 회 스트리밍을 돌파한 역사적인 곡이 되었습니다.",
+      "funFactEs": "Fue la primera canción de un solista de K-pop en la historia en superar los mil millones de reproducciones en Spotify."
+    },
+    {
+      "id": 21,
+      "level": 2,
+      "question": "In May 2020, BLACKPINK featured on Lady Gaga's sixth studio album 'Chromatica'. What was the title of this collaborative track?",
+      "questionKo": "2020년 5월 레이디 가가의 정규 6집 앨범 'Chromatica'에 블랙핑크가 피처링으로 참여한 콜라보레이션 곡은?",
+      "questionEs": "En mayo de 2020, BLACKPINK colaboró en el sexto álbum de Lady Gaga, 'Chromatica'. ¿Cuál fue el título de este tema?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sour Candy",
+          "textKo": "Sour Candy",
+          "textEs": "Sour Candy"
+        },
+        {
+          "id": "B",
+          "text": "Sweet Poison",
+          "textKo": "Sweet Poison",
+          "textEs": "Sweet Poison"
+        },
+        {
+          "id": "C",
+          "text": "Bitter Love",
+          "textKo": "Bitter Love",
+          "textEs": "Bitter Love"
+        },
+        {
+          "id": "D",
+          "text": "Candy Pink",
+          "textKo": "Candy Pink",
+          "textEs": "Candy Pink"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'Sour Candy' debuted at No. 33 on the US Billboard Hot 100 and No. 17 on the UK Official Singles Chart.",
+      "explanationKo": "'Sour Candy'는 발매 즉시 빌보드 핫 100 33위와 영국 오피셜 싱글 차트 17위에 올랐습니다.",
+      "explanationEs": "'Sour Candy' debutó en el número 33 del Billboard Hot 100 y en el 17 de la lista oficial británica.",
+      "funFact": "Lady Gaga personally phoned BLACKPINK to invite them to collaborate, sharing that she loved their power and style.",
+      "funFactKo": "레이디 가가가 블랙핑크의 파워풀한 매력에 반해 직접 연락하여 콜라보를 제안한 것으로 알려졌습니다.",
+      "funFactEs": "Lady Gaga llamó personalmente a BLACKPINK para invitarlas a colaborar tras admirar su talento y estilo."
+    },
+    {
+      "id": 22,
+      "level": 2,
+      "question": "Released in October 2018, which song marked BLACKPINK's first official collaboration with a Western pop superstar, featuring British singer Dua Lipa?",
+      "questionKo": "2018년 10월 발매되어 영국 팝스타 두아 리파(Dua Lipa)와 함께한 블랙핑크의 첫 공식 글로벌 콜라보레이션 싱글은?",
+      "questionEs": "Lanzada en octubre de 2018, ¿qué canción marcó la primera colaboración oficial de BLACKPINK con una estrella pop occidental, la británica Dua Lipa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kiss and Make Up",
+          "textKo": "Kiss and Make Up",
+          "textEs": "Kiss and Make Up"
+        },
+        {
+          "id": "B",
+          "text": "Scared to Be Lonely",
+          "textKo": "Scared to Be Lonely",
+          "textEs": "Scared to Be Lonely"
+        },
+        {
+          "id": "C",
+          "text": "New Rules",
+          "textKo": "New Rules",
+          "textEs": "New Rules"
+        },
+        {
+          "id": "D",
+          "text": "Physical",
+          "textKo": "Physical",
+          "textEs": "Physical"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'Kiss and Make Up' with Dua Lipa earned BLACKPINK their first BRIT Certified Silver certification in the UK.",
+      "explanationKo": "두아 리파와의 협업곡 'Kiss and Make Up'은 영국 음반산업협회(BPI) 실버 인증을 획득하며 유럽 시장의 문을 열었습니다.",
+      "explanationEs": "'Kiss and Make Up' con Dua Lipa le valió a BLACKPINK su primera certificación de plata en el Reino Unido.",
+      "funFact": "Dua Lipa and BLACKPINK met backstage at Dua Lipa's concert in Seoul earlier that year before deciding to collaborate.",
+      "funFactKo": "두아 리파의 서울 콘서트 백스테이지에서 만난 제니와 지수의 인연이 계기가 되어 음원 협업이 성사되었습니다.",
+      "funFactEs": "Dua Lipa y las integrantes se conocieron entre bastidores en Seúl antes de acordar la colaboración."
+    },
+    {
+      "id": 23,
+      "level": 2,
+      "question": "Under what stage name did Jennie make her official acting debut in the 2023 HBO television series 'The Idol'?",
+      "questionKo": "제니가 2023년 HBO 드라마 시리즈 'The Idol'에 출연하여 배우로 데뷔했을 당시 사용한 공식 예명은?",
+      "questionEs": "¿Con qué nombre artístico debutó Jennie como actriz en la serie de HBO de 2023 'The Idol'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jennie Ruby Jane",
+          "textKo": "Jennie Ruby Jane",
+          "textEs": "Jennie Ruby Jane"
+        },
+        {
+          "id": "B",
+          "text": "Jennie Kim",
+          "textKo": "Jennie Kim",
+          "textEs": "Jennie Kim"
+        },
+        {
+          "id": "C",
+          "text": "Ruby Jennie",
+          "textKo": "Ruby Jennie",
+          "textEs": "Ruby Jennie"
+        },
+        {
+          "id": "D",
+          "text": "Jane Kim",
+          "textKo": "Jane Kim",
+          "textEs": "Jane Kim"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jennie made her acting debut credited as 'Jennie Ruby Jane' and attended the 76th Cannes Film Festival for the premiere.",
+      "explanationKo": "제니는 'Jennie Ruby Jane'이라는 이름으로 연기자 데뷔를 마쳤으며, 제76회 칸 국제영화제 레드카펫을 밟았습니다.",
+      "explanationEs": "Jennie debutó acreditada como 'Jennie Ruby Jane' y asistió al Festival de Cannes para el estreno.",
+      "funFact": "The soundtrack collaboration 'One of the Girls' with The Weeknd and Lily-Rose Depp became a massive Billboard Hot 100 streaming hit.",
+      "funFactKo": "더 위켄드, 릴리 로즈 뎁과 함께 부른 OST 'One of the Girls'는 빌보드 핫 100 차트에서 역주행 롱런 히트를 기록했습니다.",
+      "funFactEs": "El tema 'One of the Girls' de la banda sonora logró una gran longevidad en las listas de Billboard."
+    },
+    {
+      "id": 24,
+      "level": 2,
+      "question": "Jisoo was appointed Global Ambassador for French jewelry house Cartier in May 2022, joining which iconic panther-inspired community?",
+      "questionKo": "2022년 5월 지수가 까르띠에(Cartier) 글로벌 앰버서더로 발탁되며 합류한 까르띠에의 상징적인 커뮤니티는?",
+      "questionEs": "Jisoo fue nombrada embajadora global de Cartier en mayo de 2022, uniéndose a qué icónica comunidad inspirada en la pantera:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Panthère Community",
+          "textKo": "판테르(Panthère) 커뮤니티",
+          "textEs": "Comunidad Panthère"
+        },
+        {
+          "id": "B",
+          "text": "Trinity Circle",
+          "textKo": "트리니티 서클",
+          "textEs": "Círculo Trinity"
+        },
+        {
+          "id": "C",
+          "text": "Love Tribe",
+          "textKo": "러브 트라이브",
+          "textEs": "Tribu Love"
+        },
+        {
+          "id": "D",
+          "text": "Santos Guild",
+          "textKo": "산토스 길드",
+          "textEs": "Gremio Santos"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jisoo was welcomed into Cartier's Panthère community as a global ambassador alongside stars like Emma Chamberlain and Chang Chen.",
+      "explanationKo": "지수는 까르띠에를 상징하는 표범의 우아함을 대변하는 '판테르(Panthère)' 커뮤니티의 글로벌 앰버서더로 공식 합류했습니다.",
+      "explanationEs": "Jisoo se unió a la comunidad Panthère de Cartier como embajadora global, representando la elegancia felina de la maison.",
+      "funFact": "Jisoo generated over 45% of Cartier's total Earned Media Value (EMV) in 2022 through her high-profile appearances.",
+      "funFactKo": "2022년 지수는 인스타그램 등을 통해 까르띠에 전체 미디어 가치(EMV)의 45%를 홀로 창출하는 독보적인 영향력을 보여주었습니다.",
+      "funFactEs": "En 2022, Jisoo generó el 45% del valor mediático total de Cartier gracias a su presencia en redes."
+    },
+    {
+      "id": 25,
+      "level": 2,
+      "question": "Jennie launched a limited capsule collection designed directly with which global denim and innerwear brand in May 2023?",
+      "questionKo": "2023년 5월 제니가 직접 기획·디자인에 참여한 한정판 캡슐 컬렉션을 선보인 글로벌 브랜드는?",
+      "questionEs": "¿Con qué marca global de denim y ropa interior lanzó Jennie una colección cápsula diseñada por ella en mayo de 2023?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Calvin Klein",
+          "textKo": "캘빈클라인 (Calvin Klein)",
+          "textEs": "Calvin Klein"
+        },
+        {
+          "id": "B",
+          "text": "Levi's",
+          "textKo": "리바이스 (Levi's)",
+          "textEs": "Levi's"
+        },
+        {
+          "id": "C",
+          "text": "Tommy Hilfiger",
+          "textKo": "타미 힐피거",
+          "textEs": "Tommy Hilfiger"
+        },
+        {
+          "id": "D",
+          "text": "Guess",
+          "textKo": "게스 (Guess)",
+          "textEs": "Guess"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jennie partnered with Calvin Klein to create 'Jennie for Calvin Klein', featuring personal lilac color palettes and custom embroidery of her handwritten logo.",
+      "explanationKo": "제니는 캘빈클라인과 협업하여 자신의 손글씨 로고와 라일락 컬러를 녹여낸 'Jennie for Calvin Klein' 컬렉션을 전 세계에 동시 발매했습니다.",
+      "explanationEs": "Jennie colaboró con Calvin Klein en la colección cápsula 'Jennie for Calvin Klein', con sus colores favoritos y su letra bordada.",
+      "funFact": "Pop-up stores in Seoul, Tokyo, and New York saw thousands of fans camping overnight to buy items from the collection.",
+      "funFactKo": "서울, 도쿄, 뉴욕 팝업스토어에는 컬렉션을 구매하기 위해 수천 명의 팬들이 밤샘 오픈런을 벌였습니다.",
+      "funFactEs": "Las tiendas temporales en Seúl y Nueva York tuvieron colas kilométricas para adquirir prendas de la colección."
+    },
+    {
+      "id": 26,
+      "level": 2,
+      "question": "Rosé became a Global Ambassador for Tiffany & Co. in 2021. What dedicated jewelry collection did the brand launch in her honor in 2023?",
+      "questionKo": "2021년 티파니앤코의 글로벌 앰버서더가 된 로제를 기념하여 2023년 브랜드에서 단독 출시한 컬렉션의 이름은?",
+      "questionEs": "¿Qué colección exclusiva de joyería lanzó Tiffany & Co. en honor a Rosé en 2023?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tiffany Lock ROSÉ Edition",
+          "textKo": "티파니 락 로제 에디션 (Tiffany Lock ROSÉ Edition)",
+          "textEs": "Tiffany Lock ROSÉ Edition"
+        },
+        {
+          "id": "B",
+          "text": "Tiffany T Diamond Rosé",
+          "textKo": "티파니 T 다이아몬드 로제",
+          "textEs": "Tiffany T Diamond Rosé"
+        },
+        {
+          "id": "C",
+          "text": "Tiffany HardWear Rose Gold",
+          "textKo": "티파니 하드웨어 로즈골드",
+          "textEs": "Tiffany HardWear Rose Gold"
+        },
+        {
+          "id": "D",
+          "text": "Tiffany Knot Pink Edition",
+          "textKo": "티파니 매듭 핑크 에디션",
+          "textEs": "Tiffany Knot Pink Edition"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Tiffany & Co. unveiled the 'Tiffany Lock ROSÉ Edition' in September 2023, featuring rare pink sapphires inspired by Rosé.",
+      "explanationKo": "티파니앤코는 2023년 9월 로제에게서 영감을 받은 희귀 핑크 사파이어가 세팅된 '티파니 락 로제 에디션'을 런칭했습니다.",
+      "explanationEs": "Tiffany & Co. presentó la 'Tiffany Lock ROSÉ Edition' en septiembre de 2023, adornada con zafiros rosas inspirados en la cantante.",
+      "funFact": "Rosé attended the 2021 Met Gala in New York alongside Saint Laurent creative director Anthony Vaccarello.",
+      "funFactKo": "로제는 2021년 생 로랑의 수석 디자이너 안토니 바카렐로의 에스코트를 받으며 멧 갈라 레드카펫에 섰습니다.",
+      "funFactEs": "Rosé desfiló en la alfombra roja de la Met Gala 2021 del brazo del director creativo de Saint Laurent, Anthony Vaccarello."
+    },
+    {
+      "id": 27,
+      "level": 2,
+      "question": "In 2024, which world-renowned French luxury fashion house under LVMH officially announced Lisa as its new House Ambassador?",
+      "questionKo": "2024년 LVMH 그룹 산하의 프랑스 대표 명품 패션 하우스가 리사를 새로운 하우스 앰버서더로 전격 발표했습니다. 이 브랜드는?",
+      "questionEs": "En 2024, ¿qué casa de lujo francesa de LVMH anunció oficialmente a Lisa como su nueva embajadora de la casa?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Louis Vuitton",
+          "textKo": "루이 비통 (Louis Vuitton)",
+          "textEs": "Louis Vuitton"
+        },
+        {
+          "id": "B",
+          "text": "Gucci",
+          "textKo": "구찌 (Gucci)",
+          "textEs": "Gucci"
+        },
+        {
+          "id": "C",
+          "text": "Prada",
+          "textKo": "프라다 (Prada)",
+          "textEs": "Prada"
+        },
+        {
+          "id": "D",
+          "text": "Hermès",
+          "textKo": "에르메스 (Hermès)",
+          "textEs": "Hermès"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Louis Vuitton creative director Nicolas Ghesquière officially welcomed Lisa as House Ambassador in July 2024.",
+      "explanationKo": "루이 비통의 여성복 아티스틱 디렉터 니콜라 제스키에르는 2024년 7월 리사를 브랜드의 새로운 얼굴로 공식 발탁했습니다.",
+      "explanationEs": "El director creativo de Louis Vuitton, Nicolas Ghesquière, dio la bienvenida oficial a Lisa en julio de 2024.",
+      "funFact": "Lisa previously made a surprise appearance front row at the Louis Vuitton Fall/Winter 2024 show in Paris.",
+      "funFactKo": "리사는 앞서 파리 패션위크 루이 비통 2024 F/W 쇼에 예고 없이 깜짝 등장해 전 세계 언론의 스포트라이트를 독차지했습니다.",
+      "funFactEs": "Antes del anuncio oficial, Lisa causó sensación al asistir por sorpresa al desfile de Louis Vuitton en París."
+    },
+    {
+      "id": 28,
+      "level": 2,
+      "question": "BLACKPINK's BORN PINK World Tour (2022–2023) grossed ~$330 million, breaking whose long-standing record as the highest-grossing tour by a female group?",
+      "questionKo": "총 3억 3천만 달러의 매출을 올린 BORN PINK 투어가 어떤 전설적인 걸그룹의 기록을 깨고 역대 최고 매출 1위에 올랐을까요?",
+      "questionEs": "La gira BORN PINK de BLACKPINK recaudó unos 330 millones de dólares, superando el récord histórico de qué legendario grupo femenino:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spice Girls",
+          "textKo": "스파이스 걸스 (Spice Girls)",
+          "textEs": "Spice Girls"
+        },
+        {
+          "id": "B",
+          "text": "Destiny's Child",
+          "textKo": "데스티니 차일드",
+          "textEs": "Destiny's Child"
+        },
+        {
+          "id": "C",
+          "text": "TLC",
+          "textKo": "TLC",
+          "textEs": "TLC"
+        },
+        {
+          "id": "D",
+          "text": "Little Mix",
+          "textKo": "리틀 믹스",
+          "textEs": "Little Mix"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "BORN PINK surpassed Spice Girls' 'Spice World – 2019 Tour' to become the highest-grossing tour by a girl group in global music history.",
+      "explanationKo": "BORN PINK 월드투어는 영국의 스파이스 걸스가 보유하던 기록을 경신하고 전 세계 걸그룹 역사상 최고 수익 투어 1위를 기록했습니다.",
+      "explanationEs": "BORN PINK superó la gira de 2019 de las Spice Girls, convirtiéndose en la gira femenina más taquillera de todos los tiempos.",
+      "funFact": "It also stands as the highest-grossing concert tour by any Asian musical act in history.",
+      "funFactKo": "걸그룹뿐만 아니라 역사상 모든 아시아 아티스트의 투어를 통틀어서도 역대 1위 매출 기록입니다.",
+      "funFactEs": "Es además la gira de conciertos con mayor recaudación en la historia para cualquier artista asiático."
+    },
+    {
+      "id": 29,
+      "level": 2,
+      "question": "Over 66 shows during the BORN PINK World Tour, how many total live audience members did BLACKPINK draw globally?",
+      "questionKo": "BORN PINK 월드투어 66회 공연 동안 블랙핑크가 전 세계에서 동원한 총 관객 수는 몇 명일까요?",
+      "questionEs": "A lo largo de 66 conciertos en la gira BORN PINK, ¿cuántos espectadores en vivo reunió BLACKPINK en todo el mundo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Approximately 2.11 million attendees",
+          "textKo": "약 211만 명",
+          "textEs": "Aproximadamente 2,11 millones de espectadores"
+        },
+        {
+          "id": "B",
+          "text": "Approximately 1.00 million attendees",
+          "textKo": "약 100만 명",
+          "textEs": "Aproximadamente 1 millón de espectadores"
+        },
+        {
+          "id": "C",
+          "text": "Approximately 500,000 attendees",
+          "textKo": "약 50만 명",
+          "textEs": "Aproximadamente 500.000 espectadores"
+        },
+        {
+          "id": "D",
+          "text": "Approximately 3.50 million attendees",
+          "textKo": "약 350만 명",
+          "textEs": "Aproximadamente 3,5 millones de espectadores"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "YG Entertainment confirmed that the tour attracted a total of 2.11 million live attendees across North America, Europe, Asia, and Oceania.",
+      "explanationKo": "YG엔터테인먼트에 따르면 BORN PINK 월드투어는 총 211만 명의 현장 관객을 동원해 K-Pop 걸그룹 역대 신기록을 세웠습니다.",
+      "explanationEs": "YG Entertainment confirmó que la gira atrajo a 2,11 millones de personas en vivo a nivel mundial.",
+      "funFact": "Their stadium stops included Dodger Stadium in LA, MetLife Stadium in New Jersey, and Stade de France in Paris.",
+      "funFactKo": "LA 다저 스타디움, 뉴저지 메트라이프 스타디움, 파리 스타드 드 프랑스 등 세계적인 초대형 스타디움을 모두 매진시켰습니다.",
+      "funFactEs": "Llenaron estadios míticos como el Dodger Stadium en Los Ángeles y el Stade de France en París."
+    },
+    {
+      "id": 30,
+      "level": 2,
+      "question": "In September 2023, BLACKPINK became the FIRST K-pop girl group to hold a solo concert at which historic indoor venue in Seoul for their tour finale?",
+      "questionKo": "2023년 9월, 블랙핑크가 K-Pop 걸그룹 최초로 단독 콘서트를 개최한 서울의 대형 돔 공연장은?",
+      "questionEs": "En septiembre de 2023, ¿en qué histórico recinto cubierto de Seúl se convirtió BLACKPINK en el PRIMER grupo femenino de K-pop en dar un concierto en solitario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Gocheok Sky Dome",
+          "textKo": "고척 스카이돔 (Gocheok Sky Dome)",
+          "textEs": "Gocheok Sky Dome"
+        },
+        {
+          "id": "B",
+          "text": "Seoul Olympic Stadium",
+          "textKo": "잠실 종합운동장 주경기장",
+          "textEs": "Estadio Olímpico de Seúl"
+        },
+        {
+          "id": "C",
+          "text": "Sangam World Cup Stadium",
+          "textKo": "상암 월드컵경기장",
+          "textEs": "Estadio de la Copa Mundial de Seúl"
+        },
+        {
+          "id": "D",
+          "text": "Incheon Munhak Stadium",
+          "textKo": "인천 문학경기장",
+          "textEs": "Estadio Munhak de Incheon"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "On September 16–17, 2023, BLACKPINK became the first girl group in K-pop history to hold a solo concert at the Gocheok Sky Dome.",
+      "explanationKo": "블랙핑크는 2023년 9월 16~17일 양일간 걸그룹 최초로 2만여 석 규모의 고척 스카이돔에서 단독 콘서트를 열었습니다.",
+      "explanationEs": "BLACKPINK hizo historia el 16 y 17 de septiembre de 2023 como el primer grupo femenino en llenar el Gocheok Sky Dome en solitario.",
+      "funFact": "Fans from over 80 countries flew into Seoul to witness the historic finale of the BORN PINK era.",
+      "funFactKo": "BORN PINK 투어의 역사적인 피날레를 보기 위해 전 세계 80여 개국에서 블링크들이 서울로 모여들었습니다.",
+      "funFactEs": "Fanáticos de más de 80 países viajaron a Seúl para asistir al cierre de la histórica gira."
+    },
+    {
+      "id": 31,
+      "level": 2,
+      "question": "Upon release in June 2020, how many views did BLACKPINK's 'How You Like That' music video accumulate within the first 24 hours on YouTube, setting 5 Guinness World Records?",
+      "questionKo": "2020년 6월 'How You Like That' 뮤직비디오가 유튜브 공개 24시간 만에 기록하여 5개 부문 기네스북에 오른 조회수는?",
+      "questionEs": "Tras su estreno en junio de 2020, ¿cuántas visitas acumuló el video de 'How You Like That' en 24 horas en YouTube, logrando 5 récords Guinness?",
+      "options": [
+        {
+          "id": "A",
+          "text": "86.3 million views",
+          "textKo": "8,630만 뷰",
+          "textEs": "86,3 millones de visitas"
+        },
+        {
+          "id": "B",
+          "text": "50.0 million views",
+          "textKo": "5,000만 뷰",
+          "textEs": "50 millones de visitas"
+        },
+        {
+          "id": "C",
+          "text": "100.0 million views",
+          "textKo": "1억 뷰",
+          "textEs": "100 millones de visitas"
+        },
+        {
+          "id": "D",
+          "text": "120.0 million views",
+          "textKo": "1억 2,000만 뷰",
+          "textEs": "120 millones de visitas"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'How You Like That' garnered 86.3 million views in its first 24 hours, shattering the Guinness record for the most-viewed YouTube video in 24 hours at the time.",
+      "explanationKo": "'How You Like That'은 공개 단 24시간 만에 8,630만 조회수를 기록하며 당시 전 세계 24시간 최다 조회수 기네스 신기록을 세웠습니다.",
+      "explanationEs": "'How You Like That' alcanzó 86,3 millones de visitas en 24 horas, batiendo el récord Guinness al video más visto en su primer día.",
+      "funFact": "The live YouTube premiere set another record with 1.66 million peak concurrent viewers.",
+      "funFactKo": "유튜브 최초 공개(라이브 프리미어) 동시 접속자 수 역시 166만 명으로 기네스 세계 기록을 달성했습니다.",
+      "funFactEs": "El estreno en directo en YouTube reunió a 1,66 millones de espectadores simultáneos."
+    },
+    {
+      "id": 32,
+      "level": 2,
+      "question": "In November 2023, King Charles III presented all four members of BLACKPINK with which prestigious honor at Buckingham Palace?",
+      "questionKo": "2023년 11월 버킹엄 궁전에서 영국 찰스 3세 국왕이 블랙핑크 멤버 전원에게 수여한 영예로운 훈장은?",
+      "questionEs": "En noviembre de 2023, ¿qué prestigioso honor otorgó el rey Carlos III a las cuatro integrantes de BLACKPINK en el Palacio de Buckingham?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Member of the Order of the British Empire (MBE)",
+          "textKo": "대영제국훈장 (MBE)",
+          "textEs": "Miembro de la Orden del Imperio Británico (MBE)"
+        },
+        {
+          "id": "B",
+          "text": "Légion d'Honneur",
+          "textKo": "레지옹 도뇌르 훈장",
+          "textEs": "Legión de Honor"
+        },
+        {
+          "id": "C",
+          "text": "Royal Victorian Order",
+          "textKo": "로열 빅토리아 훈장",
+          "textEs": "Real Orden Victoriana"
+        },
+        {
+          "id": "D",
+          "text": "Order of Merit",
+          "textKo": "공로 훈장",
+          "textEs": "Orden del Mérito"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "BLACKPINK members were awarded Honorary Members of the Order of the British Empire (MBE) in recognition of their advocacy for the COP26 climate summit.",
+      "explanationKo": "블랙핑크는 제26차 유엔 기후변화협약 당사국총회(COP26) 홍보대사로서 기후 위기 인식을 높인 공로를 인정받아 대영제국훈장을 수훈했습니다.",
+      "explanationEs": "Las integrantes recibieron la Orden del Imperio Británico (MBE) por su labor de concienciación climática en la cumbre COP26.",
+      "funFact": "The 1st Battalion Coldstream Guards band played a military brass rendition of 'DDU-DU DDU-DU' during the Changing of the Guard ceremony.",
+      "funFactKo": "버킹엄 궁전 근위대 군악대는 근위병 교대식에서 축하의 의미로 '뚜두뚜두'를 취주악으로 연주해 전 세계적인 화제가 되었습니다.",
+      "funFactEs": "La banda de la Guardia Real británica interpretó 'DDU-DU DDU-DU' durante el cambio de guardia en su honor."
+    },
+    {
+      "id": 33,
+      "level": 2,
+      "question": "At the 2023 MTV Video Music Awards, BLACKPINK won 'Group of the Year', becoming the first girl group to win this category in 24 years since which legendary group in 1999?",
+      "questionKo": "2023년 MTV VMA에서 블랙핑크가 '올해의 그룹상'을 수상했습니다. 1999년 이 그룹 이후 24년 만에 걸그룹으로서 처음 수상한 기록인데, 이 90년대 그룹은?",
+      "questionEs": "En los MTV VMA de 2023, BLACKPINK ganó 'Grupo del Año', siendo el primer grupo femenino en ganarlo en 24 años desde qué mítico grupo en 1999:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spice Girls",
+          "textKo": "스파이스 걸스",
+          "textEs": "Spice Girls"
+        },
+        {
+          "id": "B",
+          "text": "TLC",
+          "textKo": "TLC",
+          "textEs": "TLC"
+        },
+        {
+          "id": "C",
+          "text": "Destiny's Child",
+          "textKo": "데스티니 차일드",
+          "textEs": "Destiny's Child"
+        },
+        {
+          "id": "D",
+          "text": "En Vogue",
+          "textKo": "엔 보그",
+          "textEs": "En Vogue"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "BLACKPINK won 'Group of the Year' at the 2023 MTV VMAs, becoming the first female group since American R&B trio TLC in 1999 to take home the prize.",
+      "explanationKo": "블랙핑크는 2023년 VMA에서 1999년 미국의 전설적인 3인조 그룹 TLC 이후 24년 만에 '올해의 그룹상'을 차지한 걸그룹이 되었습니다.",
+      "explanationEs": "BLACKPINK ganó 'Grupo del Año' en los VMAs de 2023, siendo el primer grupo femenino desde TLC en 1999 en lograrlo.",
+      "funFact": "They were also nominated for Best Choreography, Best Art Direction, and Best Editing for 'Pink Venom'.",
+      "funFactKo": "블랙핑크는 같은 해 'Pink Venom'으로 베스트 안무, 베스트 미술 등 4개 부문 후보에 올랐습니다.",
+      "funFactEs": "Ese mismo año recibieron múltiples nominaciones técnicas por el videoclip de 'Pink Venom'."
+    },
+    {
+      "id": 34,
+      "level": 2,
+      "question": "Which traditional Korean instrument's iconic opening riff introduces BLACKPINK's 2022 hit pre-release single 'Pink Venom'?",
+      "questionKo": "2022년 발매된 'Pink Venom'의 시작을 알리는 강렬한 인트로 연주에 사용된 한국 전통 악기는?",
+      "questionEs": "¿Qué instrumento tradicional coreano protagoniza el icónico riff de apertura en el éxito de 2022 'Pink Venom'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Geomungo (거문고)",
+          "textKo": "거문고",
+          "textEs": "Geomungo"
+        },
+        {
+          "id": "B",
+          "text": "Gayageum (가야금)",
+          "textKo": "가야금",
+          "textEs": "Gayageum"
+        },
+        {
+          "id": "C",
+          "text": "Haegeum (해금)",
+          "textKo": "해금",
+          "textEs": "Haegeum"
+        },
+        {
+          "id": "D",
+          "text": "Daegeum (대금)",
+          "textKo": "대금",
+          "textEs": "Daegeum"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'Pink Venom' opens with a traditional Korean Geomungo (six-stringed plucked zither) riff, played in the music video by member Jisoo.",
+      "explanationKo": "'Pink Venom'의 도입부에는 한국 전통 현악기인 거문고 선율이 등장하며, 뮤직비디오에서 지수가 직접 연주하는 장면이 연출되었습니다.",
+      "explanationEs": "'Pink Venom' arranca con el punteo del Geomungo (cítara tradicional coreana de seis cuerdas), interpretado por Jisoo en el videoclip.",
+      "funFact": "The song seamlessly blends traditional Korean instrumentation with heavy hip-hop boom-bap 90s vibes.",
+      "funFactKo": "거문고의 한국적인 소리와 90년대 올드스쿨 힙합 붐뱁 비트의 조화는 글로벌 음악 평단으로부터 찬사를 받았습니다.",
+      "funFactEs": "La mezcla de música folclórica coreana con hip-hop noventero fue ampliamente aclamada por la crítica internacional."
+    },
+    {
+      "id": 35,
+      "level": 2,
+      "question": "Which classical masterpiece by Niccolò Paganini was sampled as the central violin melody in BLACKPINK's title track 'Shut Down'?",
+      "questionKo": "2022년 타이틀곡 'Shut Down'의 메인 바이올린 멜로디에 샘플링된 니콜로 파가니니의 클래식 명곡은?",
+      "questionEs": "¿Qué obra maestra clásica de Niccolò Paganini fue sampleada como melodía principal de violín en el tema 'Shut Down'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "La Campanella (라 캄파넬라)",
+          "textKo": "라 캄파넬라 (La Campanella)",
+          "textEs": "La Campanella"
+        },
+        {
+          "id": "B",
+          "text": "Caprice No. 24",
+          "textKo": "카프리스 24번",
+          "textEs": "Capricho n.º 24"
+        },
+        {
+          "id": "C",
+          "text": "Four Seasons (사계)",
+          "textKo": "비발디 사계",
+          "textEs": "Las Cuatro Estaciones"
+        },
+        {
+          "id": "D",
+          "text": "Flight of the Bumblebee",
+          "textKo": "왕벌의 비행",
+          "textEs": "El vuelo del moscardón"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'Shut Down' famously samples the violin solo from Paganini's Violin Concerto No. 2 in B minor, 'La Campanella' (The Little Bell).",
+      "explanationKo": "'Shut Down'은 악마의 바이올리니스트로 불린 파가니니의 바이올린 협주곡 2번 3악장 '라 캄파넬라(작은 종)'를 샘플링했습니다.",
+      "explanationEs": "'Shut Down' samplea de forma magistral el solo de violín del tercer movimiento del Concierto para violín n.º 2 de Paganini, 'La Campanella'.",
+      "funFact": "The music video for 'Shut Down' recreated iconic sets and scenes from their past music videos, celebrating their journey.",
+      "funFactKo": "뮤직비디오에는 데뷔곡 '휘파람'부터 '뚜두뚜두'까지 과거 뮤직비디오들의 상징적인 명장면 세트가 그대로 오마주되었습니다.",
+      "funFactEs": "El videoclip de 'Shut Down' recreó escenarios icónicos de sus videos anteriores como homenaje a su trayectoria."
+    },
+    {
+      "id": 36,
       "level": 3,
-      "question": "What is the popular official nickname of BLACKPINK's lightstick, designed in the shape of a pink-and-black squeaky toy hammer with members' participation?",
+      "question": "What is the popular official nickname of BLACKPINK's lightstick, designed in the shape of a pink-and-black squeaky toy hammer with members' input?",
       "questionKo": "분홍색과 검은색의 뿅망치 모양으로 멤버들이 직접 디자인에 참여하여 제작된 블랙핑크 공식 응원봉의 대표적인 별명은?",
       "questionEs": "¿Cuál es el apodo oficial del lightstick de BLACKPINK, diseñado como un martillo de juguete sonoro con la participación del grupo?",
       "options": [
-        { "id": "A", "text": "Bling-Bong (블링봉)", "textKo": "블링봉 (Bling-Bong)", "textEs": "Bling-Bong" },
-        { "id": "B", "text": "Bi-ping-bong / Bbong-bong (뿅봉)", "textKo": "뿅봉 (Bi-ping-bong / Bbong-bong)", "textEs": "Bi-ping-bong / Bbong-bong" },
-        { "id": "C", "text": "Hammer-Bong (망치봉)", "textKo": "망치봉 (Hammer-Bong)", "textEs": "Hammer-Bong" },
-        { "id": "D", "text": "Pink-Bong (핑크봉)", "textKo": "핑크봉 (Pink-Bong)", "textEs": "Pink-Bong" }
+        {
+          "id": "A",
+          "text": "Bling-Bong (블링봉)",
+          "textKo": "블링봉 (Bling-Bong)",
+          "textEs": "Bling-Bong"
+        },
+        {
+          "id": "B",
+          "text": "Bi-ping-bong / Bbong-bong (뿅봉)",
+          "textKo": "뿅봉 (Bi-ping-bong / Bbong-bong)",
+          "textEs": "Bi-ping-bong / Bbong-bong"
+        },
+        {
+          "id": "C",
+          "text": "Hammer-Bong (망치봉)",
+          "textKo": "망치봉 (Hammer-Bong)",
+          "textEs": "Hammer-Bong"
+        },
+        {
+          "id": "D",
+          "text": "Pink-Bong (핑크봉)",
+          "textKo": "핑크봉 (Pink-Bong)",
+          "textEs": "Pink-Bong"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "BLACKPINK's official lightstick is affectionately named 'Bi-ping-bong' (뿅봉) and features a glowing squeaky hammer design in pink and black.",
@@ -179,36 +1459,76 @@
       "funFactEs": "Antes de que se lanzara en mayo de 2018, los fans creaban lightsticks caseros con botellas de agua con gas Trevi, marca que promocionaba el grupo."
     },
     {
-      "id": 9,
+      "id": 37,
       "level": 3,
-      "question": "Member Rosé adopted a rescued dog named Hank from the Gangneung Animal Love Center. Following donations made by fans to the shelter in Hank's honor, what special official recognition was awarded?",
-      "questionKo": "멤버 로제는 강릉시동물사랑센터에서 유기견 '행크(Hank)'를 입양했습니다. 팬들이 행크의 입양을 기념해 센터에 기증을 이어간 결과 받게 된 특별한 상은 무엇일까요?",
+      "question": "Member Rosé adopted a rescued dog named Hank from Gangneung. Following donations made by fans in Hank's honor, what special official recognition was awarded?",
+      "questionKo": "로제는 강릉시 유기동물 보호소에서 유기견 '행크(Hank)'를 입양했습니다. 팬들의 기증 릴레이로 받게 된 특별한 상은 무엇일까요?",
       "questionEs": "Rosé adoptó un perro rescatado llamado Hank en Gangneung. Tras las donaciones de los fans en honor a Hank, ¿qué reconocimiento oficial recibieron?",
       "options": [
-        { "id": "A", "text": "A Commendation Plaque from the Mayor of Gangneung", "textKo": "강릉시장 감사패", "textEs": "Una placa de reconocimiento del alcalde de Gangneung" },
-        { "id": "B", "text": "UNICEF Humanitarian Award", "textKo": "유니세프 감사장", "textEs": "Premio Humanitario de UNICEF" },
-        { "id": "C", "text": "Billboard Animal Welfare Special Award", "textKo": "빌보드 특별상", "textEs": "Premio Especial Billboard de Bienestar Animal" },
-        { "id": "D", "text": "PETA Global Pet Ambassador Title", "textKo": "PETA 글로벌 앰버서더", "textEs": "Título de Embajador Global de Mascotas de PETA" }
+        {
+          "id": "A",
+          "text": "A Commendation Plaque from the Mayor of Gangneung",
+          "textKo": "강릉시장 감사패",
+          "textEs": "Una placa de reconocimiento del alcalde de Gangneung"
+        },
+        {
+          "id": "B",
+          "text": "UNICEF Humanitarian Award",
+          "textKo": "유니세프 감사장",
+          "textEs": "Premio Humanitario de UNICEF"
+        },
+        {
+          "id": "C",
+          "text": "Billboard Animal Welfare Special Award",
+          "textKo": "빌보드 특별상",
+          "textEs": "Premio Especial Billboard de Bienestar Animal"
+        },
+        {
+          "id": "D",
+          "text": "PETA Global Pet Ambassador Title",
+          "textKo": "PETA 글로벌 앰버서더",
+          "textEs": "Título de Embajador Global de Mascotas de PETA"
+        }
       ],
       "correctAnswer": "A",
-      "explanation": "Rosé's fan union donated pet care equipment and blankets featuring drawings of Hank to the shelter where he was rescued, receiving an official plaque of appreciation from the Mayor of Gangneung.",
+      "explanation": "Rosé's fan union donated pet care equipment and blankets to the shelter where Hank was rescued, receiving an official plaque of appreciation from the Mayor of Gangneung.",
       "explanationKo": "로제의 팬클럽은 행크가 구조되었던 강릉시동물사랑센터에 입원장과 담요 등을 기증하여 강릉시장으로부터 감사패를 수여받았습니다.",
       "explanationEs": "El club de fans de Rosé donó equipos médicos y mantas al refugio donde rescataron a Hank, recibiendo una placa de agradecimiento del alcalde de Gangneung.",
-      "funFact": "The members' pets—Jisoo's Dalgom, Jennie's Kuma, Rosé's Hank, and Lisa's 'L Family' (cats Leo, Luca, Lily, Louis, Lego, and dog Love)—are all widely celebrated among fans.",
-      "funFactKo": "지수의 '달곰', 제니의 '쿠마', 로제의 '행크', 리사의 'L 패밀리'(레오·루카·릴리·루이·레고, 반려견 러브) 등 멤버들의 반려동물도 찐팬들에게 큰 사랑을 받고 있습니다.",
-      "funFactEs": "Las mascotas de las integrantes (Dalgom de Jisoo, Kuma de Jennie, Hank de Rosé y la 'Familia L' de Lisa) son muy queridas por el fandom."
+      "funFact": "Hank has over 4 million followers on his personal Instagram account (@hank_says_hank).",
+      "funFactKo": "반려견 행크의 인스타그램 단독 계정(@hank_says_hank)은 팔로워 수가 400만 명이 넘는 글로벌 스타견입니다.",
+      "funFactEs": "Hank acumula más de 4 millones de seguidores en su cuenta de Instagram personal."
     },
     {
-      "id": 10,
+      "id": 38,
       "level": 3,
       "question": "Before confirming the name BLACKPINK (meaning 'pretty isn't everything'), which of the following was ONE of the provisional candidate group names during their trainee era?",
       "questionKo": "'예쁘게만 보지 마라'라는 반전 의미의 'BLACKPINK'로 확정되기 전, 연습생 시절 검토되었던 가칭 그룹명 후보 중 하나는 무엇이었을까요?",
       "questionEs": "Antes de confirmar el nombre BLACKPINK ('lo bonito no lo es todo'), ¿cuál fue uno de los nombres provisionales considerados durante su etapa de aprendices?",
       "options": [
-        { "id": "A", "text": "Pink Punk", "textKo": "Pink Punk (핑크펑크)", "textEs": "Pink Punk" },
-        { "id": "B", "text": "Red Velvet", "textKo": "Red Velvet (레드벨벳)", "textEs": "Red Velvet" },
-        { "id": "C", "text": "Neon Rose", "textKo": "Neon Rose (네온로즈)", "textEs": "Neon Rose" },
-        { "id": "D", "text": "Black Diamonds", "textKo": "Black Diamonds (블랙다이아몬드)", "textEs": "Black Diamonds" }
+        {
+          "id": "A",
+          "text": "Pink Punk",
+          "textKo": "Pink Punk (핑크펑크)",
+          "textEs": "Pink Punk"
+        },
+        {
+          "id": "B",
+          "text": "Red Velvet",
+          "textKo": "Red Velvet (레드벨벳)",
+          "textEs": "Red Velvet"
+        },
+        {
+          "id": "C",
+          "text": "Neon Rose",
+          "textKo": "Neon Rose (네온로즈)",
+          "textEs": "Neon Rose"
+        },
+        {
+          "id": "D",
+          "text": "Black Diamonds",
+          "textKo": "Black Diamonds (블랙다이아몬드)",
+          "textEs": "Black Diamonds"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Prior to selecting BLACKPINK, provisional names considered during preparations included 'Pink Punk', 'Baby Monster', and 'Magnum'.",
@@ -217,12 +1537,492 @@
       "funFact": "Lisa was the sole applicant who passed YG Entertainment's 2010 Thailand audition, training for 5 years and 3 months before debut.",
       "funFactKo": "리사는 2010년 YG 태국 오디션에서 유일하게 합격하여 5년 3개월간의 연습생 생활을 거친 후 데뷔했습니다.",
       "funFactEs": "Lisa fue la única aspirante que aprobó la audición de YG en Tailandia en 2010, entrenando durante 5 años y 3 meses antes de debutar."
+    },
+    {
+      "id": 39,
+      "level": 3,
+      "question": "In October 2024, Rosé achieved a historic global chart mega-hit with her pre-release collaboration 'APT.' with Bruno Mars. What traditional Korean game inspired the song?",
+      "questionKo": "2024년 10월 로제가 브루노 마스와 협업하여 전 세계 음원 차트 1위를 휩쓴 'APT.(아파트)'의 모티브가 된 한국 전통 술자리 게임은?",
+      "questionEs": "En octubre de 2024, Rosé logró un bombazo mundial con su colaboración 'APT.' junto a Bruno Mars. ¿Qué juego coreano tradicional inspiró la canción?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Apartment Game (아파트 게임)",
+          "textKo": "아파트 게임 (Apartment Game)",
+          "textEs": "El juego del apartamento (Apartment Game)"
+        },
+        {
+          "id": "B",
+          "text": "Zero Game (제로 게임)",
+          "textKo": "제로 게임",
+          "textEs": "El juego del cero"
+        },
+        {
+          "id": "C",
+          "text": "Cham Cham Cham (참참참)",
+          "textKo": "참참참",
+          "textEs": "Cham Cham Cham"
+        },
+        {
+          "id": "D",
+          "text": "Baskin Robbins 31",
+          "textKo": "배스킨라빈스 31",
+          "textEs": "Baskin Robbins 31"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'APT.' is directly inspired by the popular Korean social drinking game 'Apartment', where players stack their hands on top of each other.",
+      "explanationKo": "'APT.'는 한국인들이 술자리에서 손을 포개어 쌓는 '아파트 게임'의 구호와 리듬에서 착안하여 만든 글로벌 히트곡입니다.",
+      "explanationEs": "'APT.' está inspirada directamente en el popular juego coreano de beber donde los participantes apilan sus manos como pisos de un edificio.",
+      "funFact": "The song debuted at No. 8 on the US Billboard Hot 100, making Rosé the first female K-pop artist in history to enter the Hot 100 top 10.",
+      "funFactKo": "이 곡은 미국 빌보드 핫 100 8위로 데뷔하며, 로제는 K-Pop 여성 아티스트 최초로 빌보드 핫 100 톱 10에 진입하는 대기록을 썼습니다.",
+      "funFactEs": "Debutó en el puesto 8 del Billboard Hot 100, convirtiendo a Rosé en la primera artista femenina de K-pop en entrar al top 10."
+    },
+    {
+      "id": 40,
+      "level": 3,
+      "question": "What is the name of the independent management label founded by Jennie in November 2023 for her solo activities?",
+      "questionKo": "2023년 11월 제니가 솔로 활동을 위해 설립한 개인 레이블의 이름은 무엇일까요?",
+      "questionEs": "¿Cómo se llama el sello independiente fundado por Jennie en noviembre de 2023 para sus actividades en solitario?",
+      "options": [
+        {
+          "id": "A",
+          "text": "OA (ODD ATELIER)",
+          "textKo": "OA (ODD ATELIER / 오드 아틀리에)",
+          "textEs": "OA (ODD ATELIER)"
+        },
+        {
+          "id": "B",
+          "text": "LLOUD",
+          "textKo": "LLOUD",
+          "textEs": "LLOUD"
+        },
+        {
+          "id": "C",
+          "text": "BLISSOO",
+          "textKo": "BLISSOO",
+          "textEs": "BLISSOO"
+        },
+        {
+          "id": "D",
+          "text": "THE BLACK LABEL",
+          "textKo": "더블랙레이블",
+          "textEs": "THE BLACK LABEL"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jennie established 'OA (ODD ATELIER)' to pursue her individual music and fashion endeavors with creative freedom.",
+      "explanationKo": "제니는 '주목을 끄는 새로운 것을 창조하는 공간'이라는 뜻을 담아 개인 레이블 'OA(ODD ATELIER)'를 설립했습니다.",
+      "explanationEs": "Jennie fundó 'OA (ODD ATELIER)' para gestionar sus proyectos individuales de moda y música con plena libertad creativa.",
+      "funFact": "Jennie released her vibrant solo single 'Mantra' under OA and Columbia Records in October 2024.",
+      "funFactKo": "2024년 10월 제니는 OA와 미국 컬럼비아 레코드를 통해 솔로 싱글 'Mantra'를 발표해 글로벌 차트를 강타했습니다.",
+      "funFactEs": "En octubre de 2024, lanzó su enérgico sencillo en solitario 'Mantra' bajo este sello y Columbia Records."
+    },
+    {
+      "id": 41,
+      "level": 3,
+      "question": "What is the name of Lisa's artist management company founded in February 2024, through which she released 'Rockstar' in partnership with RCA Records?",
+      "questionKo": "2024년 2월 리사가 설립하여 미국 RCA 레코드와 함께 싱글 'Rockstar'를 발표한 개인 기획사 레이블은?",
+      "questionEs": "¿Cuál es el nombre de la compañía de gestión fundada por Lisa en febrero de 2024, con la que lanzó 'Rockstar' junto a RCA Records?",
+      "options": [
+        {
+          "id": "A",
+          "text": "LLOUD",
+          "textKo": "LLOUD (라우드)",
+          "textEs": "LLOUD"
+        },
+        {
+          "id": "B",
+          "text": "ODD ATELIER",
+          "textKo": "ODD ATELIER",
+          "textEs": "ODD ATELIER"
+        },
+        {
+          "id": "C",
+          "text": "BLISSOO",
+          "textKo": "BLISSOO",
+          "textEs": "BLISSOO"
+        },
+        {
+          "id": "D",
+          "text": "Manobal Ent.",
+          "textKo": "마노발 엔터",
+          "textEs": "Manobal Ent."
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lisa founded LLOUD as a platform to showcase her overall vision in music and entertainment, retaining ownership of all her master recordings.",
+      "explanationKo": "리사는 개인 기획사 'LLOUD(라우드)'를 설립하고 글로벌 음반사 RCA 레코드와 파트너십을 체결했습니다.",
+      "explanationEs": "Lisa fundó LLOUD como plataforma para su visión artística, manteniendo la propiedad de sus grabaciones maestras.",
+      "funFact": "The music video for 'Rockstar' was filmed on location in Yaowarat (Chinatown), Bangkok, closing down the famous street for production.",
+      "funFactKo": "'Rockstar' 뮤직비디오는 태국 방콕의 차이나타운 야오와랏 로드 전체를 대관하여 촬영되어 큰 화제를 모았습니다.",
+      "funFactEs": "El video de 'Rockstar' se filmó en el concurrido barrio chino de Bangkok (Yaowarat), cerrando la famosa avenida."
+    },
+    {
+      "id": 42,
+      "level": 3,
+      "question": "What is the name of the personal agency established by Jisoo in February 2024 alongside her brother, with the motto 'Sharing Happiness'?",
+      "questionKo": "2024년 2월 지수가 친오빠와 함께 '행복을 나누다'라는 비전으로 설립한 개인 레이블의 이름은?",
+      "questionEs": "¿Cuál es el nombre de la agencia personal fundada por Jisoo en febrero de 2024 con el lema de 'compartir la felicidad'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BLISSOO",
+          "textKo": "BLISSOO (블리수)",
+          "textEs": "BLISSOO"
+        },
+        {
+          "id": "B",
+          "text": "JISOO COMPANY",
+          "textKo": "지수 컴퍼니",
+          "textEs": "JISOO COMPANY"
+        },
+        {
+          "id": "C",
+          "text": "LLOUD",
+          "textKo": "LLOUD",
+          "textEs": "LLOUD"
+        },
+        {
+          "id": "D",
+          "text": "ODD ATELIER",
+          "textKo": "ODD ATELIER",
+          "textEs": "ODD ATELIER"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jisoo announced the launch of her official personal label BLISSOO (combining 'Bliss' and 'Soo') to pursue acting and solo music projects.",
+      "explanationKo": "지수는 더없는 행복을 뜻하는 'BLISS'에 본명의 'SOO'를 결합한 개인 레이블 'BLISSOO(블리수)'를 설립했습니다.",
+      "explanationEs": "Jisoo lanzó su sello personal BLISSOO (combinando 'Bliss' y 'Soo') para gestionar sus proyectos de actuación y música.",
+      "funFact": "Following BLISSOO's launch, Jisoo confirmed lead roles in the zombie thriller drama 'Newtopia' and the film 'Omniscient Reader's Viewpoint'.",
+      "funFactKo": "지수는 쿠팡플레이 오리지널 드라마 '뉴토피아'와 영화 '전지적 독자 시점'에 주연으로 캐스팅되며 배우로서의 입지를 굳혔습니다.",
+      "funFactEs": "Jisoo protagonizará el drama de zombis 'Newtopia' y la película 'Omniscient Reader's Viewpoint'."
+    },
+    {
+      "id": 43,
+      "level": 3,
+      "question": "In March 2021, Christian Dior creative director Maria Grazia Chiuri officially revealed that Dior's Autumn/Winter 2021 collection was directly inspired by which member?",
+      "questionKo": "2021년 3월 디올의 크리에이티브 디렉터 마리아 그라치아 치우리가 디올 2021 A/W 컬렉션의 뮤즈이자 영감의 원천이라고 밝힌 멤버는?",
+      "questionEs": "En marzo de 2021, la directora creativa de Dior, Maria Grazia Chiuri, reveló que la colección Otoño/Invierno 2021 se inspiró directamente en:",
+      "options": [
+        {
+          "id": "A",
+          "text": "Jisoo",
+          "textKo": "지수",
+          "textEs": "Jisoo"
+        },
+        {
+          "id": "B",
+          "text": "Jennie",
+          "textKo": "제니",
+          "textEs": "Jennie"
+        },
+        {
+          "id": "C",
+          "text": "Rosé",
+          "textKo": "로제",
+          "textEs": "Rosé"
+        },
+        {
+          "id": "D",
+          "text": "Lisa",
+          "textKo": "리사",
+          "textEs": "Lisa"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Dior creative director Maria Grazia Chiuri publicly stated that Dior's Autumn/Winter 2021 collection was deeply inspired by Global Ambassador Jisoo.",
+      "explanationKo": "디올의 크리에이티브 디렉터 마리아 그라치아 치우리는 2021 가을/겨울 컬렉션이 글로벌 앰버서더 지수에게서 직접 영감을 받아 탄생했다고 밝혔습니다.",
+      "explanationEs": "Maria Grazia Chiuri declaró que la colección Otoño/Invierno 2021 de Dior estuvo inspirada en la elegancia de Jisoo.",
+      "funFact": "Dior also created a dedicated lip balm shade, Dior Addict Lip Glow #025 'Seoul Scarlet', inspired by Jisoo's favorite tone.",
+      "funFactKo": "디올은 지수의 취향을 담은 전용 립밤 컬러인 디올 어딕트 립 글로우 #025 '서울 스칼렛(Seoul Scarlet)'을 한정 출시했습니다.",
+      "funFactEs": "Dior creó un tono de bálsamo labial exclusivo llamado #025 'Seoul Scarlet' en honor a Jisoo."
+    },
+    {
+      "id": 44,
+      "level": 3,
+      "question": "Lisa collaborated with Italian luxury brand Bulgari to design a limited-edition watch. What special floral engraving was featured on the case back?",
+      "questionKo": "리사가 불가리(Bulgari)와 협업하여 직접 디자인한 한정판 시계 뒷면에 새겨 넣은 꽃 각인은?",
+      "questionEs": "¿Qué flor grabada personalizada incluyó Lisa en la parte posterior de la edición limitada de relojes que diseñó con Bulgari?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Edelweiss flower",
+          "textKo": "에델바이스 꽃 (Edelweiss)",
+          "textEs": "Flor de Edelweiss"
+        },
+        {
+          "id": "B",
+          "text": "Rose flower",
+          "textKo": "장미꽃",
+          "textEs": "Rosa"
+        },
+        {
+          "id": "C",
+          "text": "Hibiscus (Mugunghwa)",
+          "textKo": "무궁화",
+          "textEs": "Mugunghwa"
+        },
+        {
+          "id": "D",
+          "text": "Lotus flower",
+          "textKo": "연꽃",
+          "textEs": "Flor de loto"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lisa designed the 'Bulgari Bulgari X Lisa Limited Edition' watch featuring her favorite flower, the edelweiss, engraved on the case back.",
+      "explanationKo": "리사는 불가리와 협업한 시계 뒷면에 자신이 가장 좋아하는 꽃인 알프스의 '에델바이스'를 직접 그려 새겼습니다.",
+      "explanationEs": "Lisa diseñó la edición limitada de Bulgari incluyendo un grabado de su flor favorita, el edelweiss.",
+      "funFact": "The watch dial changes color with ambient light, reflecting shades of green, blue, and purple.",
+      "funFactKo": "시계의 다이얼은 빛의 각도에 따라 오묘한 초록, 파랑, 보라색으로 변하는 특수 마더오브펄로 제작되었습니다.",
+      "funFactEs": "La esfera del reloj cambia de color según la luz, reflejando destellos verdes, azules y púrpuras."
+    },
+    {
+      "id": 45,
+      "level": 3,
+      "question": "In February 2026, BLACKPINK became the first musical artist in history to surpass what YouTube subscriber milestone, receiving a custom Red Diamond Creator Award?",
+      "questionKo": "2026년 2월 블랙핑크가 전 세계 음악 아티스트 최초로 유튜브에서 돌파하여 레드 다이아몬드 어워드를 수상한 구독자 수 기록은?",
+      "questionEs": "¿Qué hito histórico de suscriptores en YouTube superó BLACKPINK en febrero de 2026 para recibir el botón de creador de Diamante Rojo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "100 million subscribers",
+          "textKo": "1억 명 (100 Million)",
+          "textEs": "100 millones de suscriptores"
+        },
+        {
+          "id": "B",
+          "text": "50 million subscribers",
+          "textKo": "5,000만 명",
+          "textEs": "50 millones de suscriptores"
+        },
+        {
+          "id": "C",
+          "text": "75 million subscribers",
+          "textKo": "7,500만 명",
+          "textEs": "75 millones de suscriptores"
+        },
+        {
+          "id": "D",
+          "text": "150 million subscribers",
+          "textKo": "1억 5,000만 명",
+          "textEs": "150 millones de suscriptores"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "BLACKPINK became the first music artist in global history to hit 100 million subscribers on YouTube on February 20, 2026.",
+      "explanationKo": "블랙핑크는 2026년 2월 20일 전 세계 음악 아티스트 사상 최초로 유튜브 구독자 수 1억 명을 돌파했습니다.",
+      "explanationEs": "BLACKPINK se convirtió en el primer artista musical de la historia en superar los 100 millones de suscriptores en YouTube.",
+      "funFact": "Their cumulative channel view count exceeds 40 billion views, making them the most-viewed music channel for a group in Guinness World Records.",
+      "funFactKo": "누적 동영상 조회수는 400억 뷰를 넘어서며 기네스 세계 기록의 역대 그룹 최다 조회수 타이틀을 보유하고 있습니다.",
+      "funFactEs": "Su canal supera los 40 mil millones de visualizaciones acumuladas, un récord Guinness absoluto."
+    },
+    {
+      "id": 46,
+      "level": 3,
+      "question": "What was the title of BLACKPINK's first-ever online live-streamed concert, held on YouTube in January 2021?",
+      "questionKo": "2021년 1월 유튜브를 통해 전 세계로 생중계된 블랙핑크의 첫 라이브스트림 온라인 콘서트의 공식 명칭은?",
+      "questionEs": "¿Cuál fue el título del primer concierto transmitido en vivo online de BLACKPINK, celebrado en YouTube en enero de 2021?",
+      "options": [
+        {
+          "id": "A",
+          "text": "THE SHOW",
+          "textKo": "THE SHOW",
+          "textEs": "THE SHOW"
+        },
+        {
+          "id": "B",
+          "text": "THE MOVIE",
+          "textKo": "THE MOVIE",
+          "textEs": "THE MOVIE"
+        },
+        {
+          "id": "C",
+          "text": "IN YOUR AREA LIVE",
+          "textKo": "IN YOUR AREA LIVE",
+          "textEs": "IN YOUR AREA LIVE"
+        },
+        {
+          "id": "D",
+          "text": "BORN PINK ONLINE",
+          "textKo": "BORN PINK ONLINE",
+          "textEs": "BORN PINK ONLINE"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'THE SHOW' was held on January 31, 2021, drawing approximately 280,000 paying live-stream viewers from across the globe.",
+      "explanationKo": "'THE SHOW'는 약 28만 명의 유료 회원을 모으며 전 세계적인 온라인 스트리밍 콘서트의 표준을 제시했습니다.",
+      "explanationEs": "'THE SHOW' se celebró en enero de 2021, atrayendo a unos 280.000 suscriptores de pago de todo el mundo.",
+      "funFact": "Rosé previewed her solo track 'Gone' for the first time ever on stage during 'THE SHOW'.",
+      "funFactKo": "로제는 'THE SHOW' 무대를 통해 자신의 첫 솔로 수록곡 'Gone'의 라이브 퍼포먼스를 최초 공개했습니다.",
+      "funFactEs": "Rosé estrenó en directo por primera vez su tema en solitario 'Gone' durante este concierto."
+    },
+    {
+      "id": 47,
+      "level": 3,
+      "question": "In BLACKPINK's 2020 single 'Bet You Wanna' from 'THE ALBUM', which Grammy-winning American rapper was featured?",
+      "questionKo": "2020년 정규 1집 'THE ALBUM'의 수록곡 'Bet You Wanna'에 피처링으로 참여한 미국의 그래미 수상 여성 래퍼는?",
+      "questionEs": "En la canción de 2020 'Bet You Wanna' de 'THE ALBUM', ¿qué rapera estadounidense ganadora del Grammy colaboró con BLACKPINK?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cardi B",
+          "textKo": "카디 비 (Cardi B)",
+          "textEs": "Cardi B"
+        },
+        {
+          "id": "B",
+          "text": "Megan Thee Stallion",
+          "textKo": "메간 디 스탈리온",
+          "textEs": "Megan Thee Stallion"
+        },
+        {
+          "id": "C",
+          "text": "Nicki Minaj",
+          "textKo": "니키 미나즈",
+          "textEs": "Nicki Minaj"
+        },
+        {
+          "id": "D",
+          "text": "Doja Cat",
+          "textKo": "도자 캣",
+          "textEs": "Doja Cat"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "American superstar rapper Cardi B delivered a verse on 'Bet You Wanna', expressing her adoration for BLACKPINK on social media.",
+      "explanationKo": "미국 최정상 여성 래퍼 카디 비가 피처링으로 참여해 통통 튀는 랩과 환상적인 케미를 선보였습니다.",
+      "explanationEs": "Cardi B colaboró con sus versos en 'Bet You Wanna', elogiando con entusiasmo a las integrantes en redes.",
+      "funFact": "Cardi B affectionately referred to the group as 'Bardipink' on Twitter leading up to the album release.",
+      "funFactKo": "카디 비는 앨범 발매 당시 트위터에 '바디핑크(Bardipink)'라는 애칭을 사용하며 콜라보를 자축했습니다.",
+      "funFactEs": "Cardi B bautizó cariñosamente la unión como 'Bardipink' en sus redes sociales."
+    },
+    {
+      "id": 48,
+      "level": 3,
+      "question": "What is the full Thai birth name given to member Lisa before her mother changed it for good luck following a fortune teller's advice?",
+      "questionKo": "승려의 조언에 따라 개명하기 전, 리사의 출생 당시 원래 본명(태국 이름)은 무엇이었을까요?",
+      "questionEs": "¿Cuál era el nombre tailandés original de Lisa antes de que su madre lo cambiara por sugerencia de un adivino para atraer la buena suerte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pranpriya Manobal",
+          "textKo": "프란프리야 마노발 (Pranpriya Manobal)",
+          "textEs": "Pranpriya Manobal"
+        },
+        {
+          "id": "B",
+          "text": "Lalisa Manobal",
+          "textKo": "라리사 마노발",
+          "textEs": "Lalisa Manobal"
+        },
+        {
+          "id": "C",
+          "text": "Chonnasorn Manobal",
+          "textKo": "촌나손 마노발",
+          "textEs": "Chonnasorn Manobal"
+        },
+        {
+          "id": "D",
+          "text": "Porntip Manobal",
+          "textKo": "폰팁 마노발",
+          "textEs": "Porntip Manobal"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Lisa's original birth name was Pranpriya Manobal (meaning 'beloved soul'), which her family legally changed to Lalisa (meaning 'one who is praised') for fortune.",
+      "explanationKo": "리사의 원래 본명은 '프란프리야(사랑스러운 영혼)'였으나, 번영과 행운을 가져다준다는 '칭찬받는 자'라는 뜻의 '라리사'로 개명했습니다.",
+      "explanationEs": "El nombre de nacimiento de Lisa era Pranpriya Manobal ('alma amada'), cambiado a Lalisa ('la que es elogiada') para atraer el éxito.",
+      "funFact": "Her childhood nickname was 'Pokpak', which friends and family called her in Thailand.",
+      "funFactKo": "어릴 적 태국에서 가족과 친구들이 부르던 애칭은 '폭팍(Pokpak)'이었습니다.",
+      "funFactEs": "Su apodo de la infancia en Tailandia entre amigos y familiares era 'Pokpak'."
+    },
+    {
+      "id": 49,
+      "level": 3,
+      "question": "Which BLACKPINK music video reached 100 million views in a then-record time of just 43 days following their debut, making them 'Monster Rookies'?",
+      "questionKo": "데뷔 불과 43일 만에 K-Pop 그룹 최단 시간 1억 뷰를 돌파하며 '괴물 신인' 타이틀을 굳힌 데뷔곡 뮤직비디오는?",
+      "questionEs": "¿Qué video musical de debut de BLACKPINK superó los 100 millones de visitas en solo 43 días, coronándolas como 'Monster Rookies'?",
+      "options": [
+        {
+          "id": "A",
+          "text": "BOOMBAYAH",
+          "textKo": "붐바야 (BOOMBAYAH)",
+          "textEs": "BOOMBAYAH"
+        },
+        {
+          "id": "B",
+          "text": "Whistle",
+          "textKo": "휘파람",
+          "textEs": "Whistle"
+        },
+        {
+          "id": "C",
+          "text": "Playing with Fire",
+          "textKo": "불장난",
+          "textEs": "Playing with Fire"
+        },
+        {
+          "id": "D",
+          "text": "Stay",
+          "textKo": "Stay",
+          "textEs": "Stay"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "'BOOMBAYAH' became the fastest debut music video in K-pop history to hit 100 million views on YouTube at the time.",
+      "explanationKo": "'붐바야'는 당시 K-Pop 데뷔곡 사상 최단기간인 5개월여 만에 1억 뷰를 돌파하며 K-Pop 걸그룹의 새 역사를 열었습니다.",
+      "explanationEs": "'BOOMBAYAH' se convirtió en su momento en el videoclip de debut de K-pop más rápido en alcanzar los 100 millones de reproducciones.",
+      "funFact": "Renowned American choreographer Kyle Hanagami helped design the energetic, hair-flipping dance moves.",
+      "funFactKo": "세계적인 안무가 카일 하나가미가 안무 제작에 참여하여 역동적인 헤어 플립 안무를 완성했습니다.",
+      "funFactEs": "El afamado coreógrafo Kyle Hanagami colaboró en el diseño de los enérgicos pasos de baile."
+    },
+    {
+      "id": 50,
+      "level": 3,
+      "question": "In October 2020, BLACKPINK released their first full-length Korean studio album titled 'THE ALBUM'. Which lead single was co-written by members Jisoo and Jennie?",
+      "questionKo": "2020년 10월 발표된 정규 1집 'THE ALBUM'의 타이틀곡 중 지수와 제니가 작사에 직접 참여한 곡은?",
+      "questionEs": "En octubre de 2020, BLACKPINK lanzó 'THE ALBUM'. ¿En qué sencillo principal coescribieron la letra las integrantes Jisoo y Jennie?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Lovesick Girls",
+          "textKo": "Lovesick Girls",
+          "textEs": "Lovesick Girls"
+        },
+        {
+          "id": "B",
+          "text": "How You Like That",
+          "textKo": "How You Like That",
+          "textEs": "How You Like That"
+        },
+        {
+          "id": "C",
+          "text": "Pretty Savage",
+          "textKo": "Pretty Savage",
+          "textEs": "Pretty Savage"
+        },
+        {
+          "id": "D",
+          "text": "Crazy Over You",
+          "textKo": "Crazy Over You",
+          "textEs": "Crazy Over You"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Members Jisoo and Jennie both contributed to the emotional lyrics of 'Lovesick Girls', while Jennie also participated in the song's composition.",
+      "explanationKo": "'Lovesick Girls'의 작사에는 지수와 제니가 공동 참여했으며, 제니는 작곡에도 이름을 올렸습니다.",
+      "explanationEs": "Jisoo y Jennie participaron en la letra de 'Lovesick Girls', y Jennie además colaboró en la composición.",
+      "funFact": "The music video featured intense acting scenes from all four members, capturing the heartache of searching for love.",
+      "funFactKo": "뮤직비디오에서 네 멤버는 눈물 연기와 감정 열연을 선보이며 완성도 높은 연기력을 뽐냈습니다.",
+      "funFactEs": "El video musical destacó por las emotivas escenas interpretadas por las cuatro integrantes."
     }
   ],
   "scoreTiers": [
     {
       "minScore": 0,
-      "maxScore": 3,
+      "maxScore": 1,
       "title": "Baby Monster Trainee",
       "titleKo": "루키 블링크 연습생",
       "titleEs": "Aprendiz Novato BLINK",
@@ -237,8 +2037,8 @@
       "funQuoteEs": "¡Muy pronto serás un verdadero BLINK!"
     },
     {
-      "minScore": 4,
-      "maxScore": 6,
+      "minScore": 2,
+      "maxScore": 3,
       "title": "DDU-DU DDU-DU Warrior",
       "titleKo": "뚜두뚜두 열혈 팬",
       "titleEs": "Guerrero DDU-DU DDU-DU",
@@ -253,8 +2053,8 @@
       "funQuoteEs": "¡Golpeas fuerte como DDU-DU DDU-DU!"
     },
     {
-      "minScore": 7,
-      "maxScore": 9,
+      "minScore": 4,
+      "maxScore": 4,
       "title": "BORN PINK Icon",
       "titleKo": "본 핑크 아이콘",
       "titleEs": "Ícono BORN PINK",
@@ -269,17 +2069,17 @@
       "funQuoteEs": "¡Dominas el escenario por completo!"
     },
     {
-      "minScore": 10,
-      "maxScore": 10,
+      "minScore": 5,
+      "maxScore": 5,
       "title": "Global BLINK Legend",
       "titleKo": "월드 클래스 블링크 레전드",
       "titleEs": "Leyenda Global BLINK",
       "badge": "🖤💖 5th Member of BLACKPINK",
       "badgeKo": "🖤💖 블핑 명예 5번째 멤버",
       "badgeEs": "🖤💖 Quinta Integrante Honoraria",
-      "description": "Flawless 10/10! You conquered Hank, Pink Punk, and Coachella. You are true Royalty.",
-      "descriptionKo": "10점 만점 퍼펙트! 행크부터 핑크펑크까지 꿰뚫어 보는 당신은 진정한 블링크의 정점입니다.",
-      "descriptionEs": "¡Puntuación perfecta 10/10! Conoces a Hank, Pink Punk y Coachella. Eres realeza BLINK.",
+      "description": "Flawless 5/5! You conquered Hank, Pink Punk, and Coachella. You are true Royalty.",
+      "descriptionKo": "5점 만점 퍼펙트! 행크부터 핑크펑크까지 꿰뚫어 보는 당신은 진정한 블링크의 정점입니다.",
+      "descriptionEs": "¡Puntuación perfecta 5/5! Conoces a Hank, Pink Punk y Coachella. Eres realeza BLINK.",
       "funQuote": "BLACKPINK in your area FOREVER!",
       "funQuoteKo": "블랙핑크 인 유어 에어리어 포에버!",
       "funQuoteEs": "¡BLACKPINK en tu área para siempre!"
