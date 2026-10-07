@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import confetti from 'canvas-confetti';
 import { Quiz, Question, ScoreTier, QuestionLevel, getLocalizedText } from '@/types/quiz';
 import AdPlaceholder from './AdPlaceholder';
@@ -16,15 +17,14 @@ import {
   RotateCcw,
   Sparkles,
   Lightbulb,
-  Trophy,
   ChevronRight,
   Tag,
   Zap,
   SlidersHorizontal,
   Flame,
   Clock,
-  Share2,
-  Copy,
+  Shuffle,
+  Home,
 } from 'lucide-react';
 
 interface QuizRunnerProps {
@@ -43,7 +43,7 @@ function shuffleArray<T>(items: T[]): T[] {
 
 export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const { lang, t } = useLanguage();
-  const { addXP, completeDailyQuest, xp, currentLevel, progressPercent } = useGame();
+  const { addXP, completeDailyQuest, xp, currentLevel, progressPercent, xpToNextLevel } = useGame();
 
   const [selectedLevel, setSelectedLevel] = useState<QuestionLevel | 'all'>('all');
   const [activeQuestions, setActiveQuestions] = useState<Question[]>(quiz.questions);
@@ -57,7 +57,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
   // Dynamic Timer (15s per question)
   const [timeLeft, setTimeLeft] = useState(15);
-  const [quizStartTime, setQuizStartTime] = useState<number>(Date.now());
+  const [quizStartTime, setQuizStartTime] = useState<number>(() => Date.now());
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
 
   // Power-Up Items 3종 State
@@ -906,13 +906,49 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             </span>
             <span className="text-amber-600 font-bold">{xp} Total XP</span>
           </div>
-          <div className="h-2 w-full rounded-full bg-slate-200 overflow-hidden">
+          <div className="h-2 w-full rounded-full bg-slate-200 overflow-hidden mb-2">
             <div
               className="h-full rounded-full bg-gradient-to-r from-purple-500 to-emerald-400 transition-all duration-500"
               style={{ width: `${progressPercent}%` }}
             ></div>
           </div>
+          {xpToNextLevel > 0 && (
+            <div className="text-[11px] font-extrabold text-purple-700 bg-white/80 border border-purple-200/60 rounded-lg px-2.5 py-1 text-center flex items-center justify-center gap-1 shadow-2xs">
+              <Sparkles className="w-3 h-3 text-pink-500" />
+              <span>{t.resultView.levelUpNudge.replace('{xp}', String(xpToNextLevel))}</span>
+            </div>
+          )}
         </div>
+
+        {/* ⚡ High-Impact Primary CTA: Next Recommended Quiz */}
+        {relatedQuizzes.length > 0 && (
+          <div className="mb-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-purple-600 via-pink-600 to-indigo-700 text-white text-left shadow-lg shadow-purple-500/25 relative overflow-hidden group">
+            <div className="absolute top-0 right-0 translate-x-4 -translate-y-4 w-28 h-28 bg-white/10 rounded-full blur-xl pointer-events-none" />
+            <div className="flex items-center justify-between gap-2 mb-2">
+              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-black tracking-wide text-amber-200 shadow-xs">
+                <Zap className="w-3.5 h-3.5 fill-amber-300 text-amber-300 animate-pulse" />
+                {t.resultView.nextChallengeBadge}
+              </span>
+              <span className="text-[11px] font-extrabold text-white/90 flex items-center gap-1">
+                <Flame className="w-3.5 h-3.5 text-amber-300 fill-amber-300" />
+                {t.resultView.streakKeep}
+              </span>
+            </div>
+            <h4 className="text-base sm:text-lg font-black text-white mb-1 line-clamp-1 group-hover:text-amber-200 transition-colors">
+              {getLocalizedText(relatedQuizzes[0], 'title', lang)}
+            </h4>
+            <p className="text-xs text-white/85 line-clamp-2 mb-3.5">
+              {getLocalizedText(relatedQuizzes[0], 'description', lang)}
+            </p>
+            <Link
+              href={`/quiz/${relatedQuizzes[0].slug}`}
+              className="w-full py-3.5 px-4 rounded-xl bg-white hover:bg-amber-50 text-purple-700 hover:text-purple-900 font-black text-sm flex items-center justify-center gap-2 shadow-md transition-all active:scale-98"
+            >
+              <span>{t.resultView.playNextQuiz}</span>
+              <ArrowRight className="w-4 h-4 text-pink-600" />
+            </Link>
+          </div>
+        )}
 
         {/* 업그레이드된 바이럴 소셜 공유 및 친구 도전장 모듈 */}
         <div className="mb-5">
@@ -925,43 +961,49 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           />
         </div>
 
-        {/* Action Buttons: 다시 풀기 & 난이도 변경 */}
-        <div className="flex gap-2.5 justify-center pt-3 border-t border-slate-100">
+        {/* Action Buttons: 다시 풀기 & 난이도 변경 & 홈으로 */}
+        <div className="flex flex-wrap gap-2 justify-center pt-3 border-t border-slate-100">
           <button
             onClick={() => startQuiz(selectedLevel)}
-            className="flex-1 py-3 px-4 rounded-xl bg-purple-100 hover:bg-purple-200 text-purple-800 text-xs font-black transition-all flex items-center justify-center gap-1.5 active:scale-95"
+            className="flex-1 min-w-[120px] py-2.5 px-3 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5 active:scale-95"
           >
             <RotateCcw className="w-3.5 h-3.5" />
-            <span>
-              {t.resultView.retake}{' '}
-              {lang === 'ko' ? '(🎲 셔플)' : lang === 'es' ? '(🎲 Aleatorio)' : '(🎲 Shuffle)'}
-            </span>
+            <span>{t.resultView.retake}</span>
           </button>
           <button
             onClick={() => setGameState('intro')}
-            className="flex-1 py-3 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black transition-all flex items-center justify-center gap-1.5 active:scale-95"
+            className="flex-1 min-w-[120px] py-2.5 px-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5 active:scale-95"
           >
             <SlidersHorizontal className="w-3.5 h-3.5" />
             <span>{t.levels.selectTitle}</span>
           </button>
+          <Link
+            href="/"
+            className="w-full sm:w-auto py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-bold transition-all flex items-center justify-center gap-1.5 active:scale-95"
+          >
+            <Home className="w-3.5 h-3.5" />
+            <span>{t.resultView.backToHome}</span>
+          </Link>
         </div>
       </div>
 
-      {/* AdSense Leaderboard Placement */}
-      <AdPlaceholder format="horizontal" label={t.ads.sponsored} />
-
-      {/* Affiliate Suggestion Section */}
-      {quiz.affiliateSuggestion && (
-        <AffiliateBox affiliate={quiz.affiliateSuggestion} />
-      )}
-
-      {/* Next Quizzes to Multiply Pageviews */}
+      {/* Next Quizzes to Multiply Pageviews (Elevated above Ads for immediate retention) */}
       {relatedQuizzes.length > 0 && (
-        <div className="my-10">
+        <div className="my-8">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-xl font-black text-slate-900">
-              {t.resultView.keepPlaying}
+            <h3 className="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
+              <Flame className="w-5 h-5 text-rose-500 fill-rose-500" />
+              <span>{t.resultView.keepPlaying}</span>
             </h3>
+            {relatedQuizzes.length > 1 && (
+              <Link
+                href={`/quiz/${relatedQuizzes[1].slug}`}
+                className="text-xs font-black text-purple-700 hover:text-purple-900 flex items-center gap-1 bg-purple-50 hover:bg-purple-100 border border-purple-200 px-3 py-1.5 rounded-full transition-colors shadow-2xs"
+              >
+                <Shuffle className="w-3 h-3 text-pink-500" />
+                <span>{t.resultView.randomQuiz}</span>
+              </Link>
+            )}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {relatedQuizzes.map((item) => (
@@ -969,6 +1011,14 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             ))}
           </div>
         </div>
+      )}
+
+      {/* AdSense Leaderboard Placement */}
+      <AdPlaceholder format="horizontal" label={t.ads.sponsored} className="my-6" />
+
+      {/* Affiliate Suggestion Section */}
+      {quiz.affiliateSuggestion && (
+        <AffiliateBox affiliate={quiz.affiliateSuggestion} />
       )}
     </div>
   );

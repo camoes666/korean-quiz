@@ -61,7 +61,7 @@ export default async function QuizPage({ params }: QuizPageProps) {
     notFound();
   }
 
-  const relatedQuizzes = getRelatedQuizzes(quiz.slug, 2);
+  const relatedQuizzes = getRelatedQuizzes(quiz.slug, 4);
 
   return (
     <main className="min-h-screen pb-16">

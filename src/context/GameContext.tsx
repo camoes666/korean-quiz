@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 
 export interface LevelInfo {
   level: number;
@@ -34,29 +34,37 @@ interface GameContextType {
 const GameContext = createContext<GameContextType | undefined>(undefined);
 
 export function GameProvider({ children }: { children: React.ReactNode }) {
-  const [xp, setXp] = useState<number>(60);
-  const [streak, setStreak] = useState<number>(1);
-  const [dailyQuestCompleted, setDailyQuestCompleted] = useState<boolean>(false);
-  const [floatingXP, setFloatingXP] = useState<number | null>(null);
-
-  // Load saved game stats
-  useEffect(() => {
+  const [xp, setXp] = useState<number>(() => {
+    if (typeof window === 'undefined') return 60;
     try {
-      const savedXP = localStorage.getItem('kpulse_xp');
-      const savedStreak = localStorage.getItem('kpulse_streak');
-      const savedQuest = localStorage.getItem('kpulse_quest_date');
-
-      if (savedXP) setXp(Number(savedXP));
-      if (savedStreak) setStreak(Number(savedStreak));
-
-      const today = new Date().toDateString();
-      if (savedQuest === today) {
-        setDailyQuestCompleted(true);
-      }
+      const saved = localStorage.getItem('kpulse_xp');
+      return saved ? Number(saved) : 60;
     } catch {
-      // Safe fallback
+      return 60;
     }
-  }, []);
+  });
+
+  const [streak, setStreak] = useState<number>(() => {
+    if (typeof window === 'undefined') return 1;
+    try {
+      const saved = localStorage.getItem('kpulse_streak');
+      return saved ? Number(saved) : 1;
+    } catch {
+      return 1;
+    }
+  });
+
+  const [dailyQuestCompleted, setDailyQuestCompleted] = useState<boolean>(() => {
+    if (typeof window === 'undefined') return false;
+    try {
+      const savedQuest = localStorage.getItem('kpulse_quest_date');
+      return savedQuest === new Date().toDateString();
+    } catch {
+      return false;
+    }
+  });
+
+  const [floatingXP, setFloatingXP] = useState<number | null>(null);
 
   // Determine level
   const currentLevel =

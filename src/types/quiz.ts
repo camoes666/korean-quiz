@@ -132,35 +132,36 @@ export interface Quiz {
 }
 
 // Universal localized property resolver helper
-export function getLocalizedText<T extends Record<string, any>>(
+export function getLocalizedText<T extends object>(
   item: T,
   prop: string,
   lang: Language
 ): string {
   if (!item) return '';
 
+  const record = item as Record<string, unknown>;
   const langKey =
     lang === 'en'
       ? prop
       : `${prop}${lang.charAt(0).toUpperCase() + lang.slice(1)}`;
 
-  if (item[langKey]) {
-    return String(item[langKey]);
+  if (record[langKey]) {
+    return String(record[langKey]);
   }
 
   // If Korean is explicitly selected, fallback to Korean first
-  if (lang === 'ko' && item[`${prop}Ko`]) {
-    return String(item[`${prop}Ko`]);
+  if (lang === 'ko' && record[`${prop}Ko`]) {
+    return String(record[`${prop}Ko`]);
   }
 
   // For English, Spanish or any other language, fallback to English (base) first
-  if (item[prop]) {
-    return String(item[prop]);
+  if (record[prop]) {
+    return String(record[prop]);
   }
 
   // Final fallback to Korean if English does not exist
-  if (item[`${prop}Ko`]) {
-    return String(item[`${prop}Ko`]);
+  if (record[`${prop}Ko`]) {
+    return String(record[`${prop}Ko`]);
   }
 
   return '';

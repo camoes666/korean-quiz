@@ -81,6 +81,12 @@ export interface TranslationDictionary {
     copied: string;
     retake: string;
     keepPlaying: string;
+    nextChallengeBadge: string;
+    streakKeep: string;
+    playNextQuiz: string;
+    randomQuiz: string;
+    backToHome: string;
+    levelUpNudge: string;
   };
   ads: {
     sponsored: string;
@@ -212,8 +218,14 @@ export const translations: Record<Language, TranslationDictionary> = {
       reddit: '레딧에 공유',
       copyLink: '결과 링크 복사',
       copied: '복사 완료!',
-      retake: '다른 난이도로 다시 풀기',
-      keepPlaying: '다른 퀴즈 더 풀어보기 🔥',
+      retake: '이 퀴즈 다시 풀기',
+      keepPlaying: '다음 추천 퀴즈 바로 도전하기 🔥',
+      nextChallengeBadge: 'NEXT CHALLENGE (+30 BONUS XP)',
+      streakKeep: '연속 콤보 유지하기 🔥',
+      playNextQuiz: '다음 퀴즈 바로 도전하기',
+      randomQuiz: '랜덤 퀴즈 🎲',
+      backToHome: '홈으로 이동',
+      levelUpNudge: '다음 레벨까지 단 {xp} XP! 1개만 더 풀면 레벨업!',
     },
     ads: {
       sponsored: '스폰서 광고',
@@ -344,8 +356,14 @@ export const translations: Record<Language, TranslationDictionary> = {
       reddit: 'Reddit',
       copyLink: 'Copy Link',
       copied: 'Copied!',
-      retake: 'Try Another Difficulty',
-      keepPlaying: 'Keep Playing More Quizzes 🔥',
+      retake: 'Retake This Quiz',
+      keepPlaying: 'Keep Playing: Next Recommended Quizzes 🔥',
+      nextChallengeBadge: 'NEXT CHALLENGE (+30 BONUS XP)',
+      streakKeep: 'Keep the Streak Alive 🔥',
+      playNextQuiz: 'Play Next Quiz Now',
+      randomQuiz: 'Surprise Quiz 🎲',
+      backToHome: 'Back to Home',
+      levelUpNudge: 'Only {xp} XP to next level! Complete 1 more quiz to level up!',
     },
     ads: {
       sponsored: 'Sponsored Advertisement',
@@ -476,8 +494,14 @@ export const translations: Record<Language, TranslationDictionary> = {
       reddit: 'Compartir en Reddit',
       copyLink: 'Copiar Enlace',
       copied: '¡Copiado!',
-      retake: 'Intentar Otro Nivel',
-      keepPlaying: 'Jugar Más Quizzes 🔥',
+      retake: 'Repetir este quiz',
+      keepPlaying: 'Siguiente Reto Recomendado 🔥',
+      nextChallengeBadge: 'SIGUIENTE RETO (+30 XP BONUS)',
+      streakKeep: '¡Mantén la racha viva! 🔥',
+      playNextQuiz: 'Jugar Siguiente Quiz Ahora',
+      randomQuiz: 'Quiz Sorpresa 🎲',
+      backToHome: 'Volver al Inicio',
+      levelUpNudge: '¡Solo {xp} XP para subir de nivel! ¡Juega 1 más!',
     },
     ads: {
       sponsored: 'Anuncio Patrocinado',
@@ -610,6 +634,12 @@ export const translations: Record<Language, TranslationDictionary> = {
       copied: 'Скопировано!',
       retake: 'Выбрать другой уровень',
       keepPlaying: 'Играть в другие тесты 🔥',
+      nextChallengeBadge: 'СЛЕДУЮЩИЙ ТЕСТ (+30 БОНУС XP)',
+      streakKeep: 'Сохраняйте серию 🔥',
+      playNextQuiz: 'Начать следующий тест',
+      randomQuiz: 'Случайный тест 🎲',
+      backToHome: 'На главную',
+      levelUpNudge: 'Всего {xp} XP до нового уровня! Пройдите ещё 1 тест!',
     },
     ads: {
       sponsored: 'Реклама',
@@ -742,6 +772,12 @@ export const translations: Record<Language, TranslationDictionary> = {
       copied: '已复制！',
       retake: '尝试其他难度挑战',
       keepPlaying: '继续探索更多测验 🔥',
+      nextChallengeBadge: '下一项挑战 (+30 额外经验)',
+      streakKeep: '保持连胜纪录 🔥',
+      playNextQuiz: '立即挑战下一测验',
+      randomQuiz: '随机惊喜测验 🎲',
+      backToHome: '返回首页',
+      levelUpNudge: '距下一等级仅差 {xp} XP！再答一套即可升级！',
     },
     ads: {
       sponsored: '赞助广告',

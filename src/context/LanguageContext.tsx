@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import { Language, translations, TranslationDictionary } from '@/lib/translations';
 
 export interface LanguageOption {
@@ -25,14 +25,18 @@ interface LanguageContextType {
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>('en');
-
-  useEffect(() => {
-    const saved = localStorage.getItem('kpulse_lang') as Language;
-    if (saved && translations[saved]) {
-      setLangState(saved);
+  const [lang, setLangState] = useState<Language>(() => {
+    if (typeof window === 'undefined') return 'en';
+    try {
+      const saved = localStorage.getItem('kpulse_lang') as Language;
+      if (saved && translations[saved]) {
+        return saved;
+      }
+    } catch {
+      // Safe fallback
     }
-  }, []);
+    return 'en';
+  });
 
   const setLang = (newLang: Language) => {
     setLangState(newLang);

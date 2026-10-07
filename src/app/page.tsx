@@ -66,6 +66,8 @@ export default function HomePage() {
                     src="/images/hobi01.webp"
                     alt="Hobi White Tiger Mascot"
                     className="w-full h-full object-contain filter drop-shadow hover:rotate-3 transition-transform"
+                    loading="eager"
+                    fetchPriority="high"
                   />
                 </div>
                 <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black text-[11px] whitespace-nowrap shadow-sm shadow-purple-500/25 border border-white">
