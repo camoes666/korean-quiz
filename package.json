@@ -4,10 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/generate-og-images.js && next build",
     "start": "next start",
     "lint": "eslint",
-    "export:quizzes": "node scripts/export-quiz-reviews.js"
+    "export:quizzes": "node scripts/export-quiz-reviews.js",
+    "generate:og": "node scripts/generate-og-images.js"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",

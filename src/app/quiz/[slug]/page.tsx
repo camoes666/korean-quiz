@@ -37,7 +37,7 @@ export async function generateMetadata({
       type: 'website',
       images: [
         {
-          url: '/images/og-banner.png',
+          url: `/images/og/${quiz.slug}.png`,
           width: 1200,
           height: 630,
           alt: `${quiz.title} - K-Pulse Trivia Challenge`,
@@ -48,7 +48,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: `${quiz.title} - Can You Score 10/10? | K-Pulse`,
       description: quiz.description,
-      images: ['/images/og-banner.png'],
+      images: [`/images/og/${quiz.slug}.png`],
     },
   };
 }
