@@ -1,0 +1,698 @@
+{
+  "slug": "which-bts-member-are-you",
+  "quizType": "personality",
+  "title": "Which BTS Member Matches Your Soul?",
+  "titleKo": "나와 영혼이 통하는 BTS 멤버 찾기",
+  "titleEs": "¿Qué miembro de BTS es tu alma gemela?",
+  "subtitle": "Discover your Bangtan archetype, BT21 twin, and ideal member chemistry!",
+  "subtitleKo": "당신과 가장 닮은 방탄소년단 멤버, BT21 캐릭터, 그리고 환상의 케미 멤버를 찾아보세요!",
+  "subtitleEs": "¡Descubre tu arquetipo de Bangtan, tu gemelo BT21 y tu química ideal con los miembros!",
+  "description": "Are you a wise leader like RM, worldwide handsome moodmaker like Jin, quiet genius SUGA, hopeful sunshine J-Hope, empathetic fairy Jimin, artistic soul V, or golden maknae Jungkook? Take the 10-question test!",
+  "descriptionKo": "지혜로운 리더 RM, 유쾌한 맏형 진, 츤데레 천재 슈가, 햇살 희망 제이홉, 다정한 요정 지민, 낭만 예술가 뷔, 한계 없는 황금막내 정국 중 당신의 영혼과 통하는 멤버는 누구일까요?",
+  "descriptionEs": "¿Eres un sabio líder como RM, carismático como Jin, genio silencioso como SUGA, rayo de sol J-Hope, dulce ángel Jimin, alma artística V o el talentoso Jungkook? ¡Haz el test de 10 preguntas!",
+  "category": "K-Pop",
+  "tag": "BTS",
+  "coverEmoji": "💜",
+  "gradient": "from-purple-950 via-indigo-900 to-violet-800",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "342.1K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "rm": {
+      "id": "rm",
+      "name": "RM (Kim Namjoon)",
+      "nameKo": "RM (김남준)",
+      "nameEs": "RM (Kim Namjoon)",
+      "title": "The Philosophical Visionary & Wise Leader",
+      "titleKo": "깊은 사색과 통찰력을 지닌 지혜로운 리더",
+      "titleEs": "El Líder Visionario y Filosófico",
+      "subtitle": "Deep Thinker · Art Museum Explorer · Calm Anchor",
+      "subtitleKo": "깊은 사색가 · 미술관 탐방러 · 단단한 버팀목",
+      "subtitleEs": "Pensador Profundo · Amante del Arte · Pilar Fuerte",
+      "skzoo": "KOYA (The Thoughtful Koala)",
+      "skzooKo": "코야 (KOYA - 사색적인 아기 코알라)",
+      "skzooEs": "KOYA (El Coala Pensativo)",
+      "emoji": "🐨",
+      "traits": [
+        "Deep & Reflective",
+        "Book & Art Lover",
+        "Empathetic Leader"
+      ],
+      "traitsKo": [
+        "사색과 독서",
+        "미술관과 자연",
+        "묵직한 리더십"
+      ],
+      "traitsEs": [
+        "Reflexivo y Profundo",
+        "Amante del Arte",
+        "Líder Sabio"
+      ],
+      "description": "Like Namjoon, you possess profound emotional maturity and wisdom. You love finding peace in nature, books, and quiet thoughts, guiding others with empathy rather than authority.",
+      "descriptionKo": "남준처럼 깊이 있는 통찰력과 지적인 매력을 가진 당신! 책과 전시회, 자연 속에서 힐링하며 주변 사람들에게 묵직하고 따뜻한 영감을 주는 든든한 버팀목입니다.",
+      "descriptionEs": "Como Namjoon, tienes una gran madurez emocional y sabiduría. Te gusta encontrar paz en el arte, los libros y la naturaleza, guiando a otros con empatía y comprensión.",
+      "bestMatchId": "jimin",
+      "bestMatchName": "Jimin",
+      "bestMatchNameKo": "지민 (Jimin)",
+      "bestMatchNameEs": "Jimin",
+      "bestMatchReason": "Namjoon's calm intellect and Jimin's sweet emotional warmth create the ultimate soul-soothing bond.",
+      "bestMatchReasonKo": "남준의 깊은 생각과 지민의 따뜻한 공감이 만나 세상에서 가장 편안한 영혼의 쉼터가 되어줍니다.",
+      "bestMatchReasonEs": "La sabiduría de Namjoon y la ternura de Jimin crean una conexión inquebrantable y reconfortante.",
+      "colorHex": "#4f46e5",
+      "bgGradient": "from-indigo-600 via-blue-700 to-slate-900"
+    },
+    "jin": {
+      "id": "jin",
+      "name": "Jin (Kim Seokjin)",
+      "nameKo": "진 (김석진)",
+      "nameEs": "Jin (Kim Seokjin)",
+      "title": "Worldwide Handsome & Joyful Moodmaker",
+      "titleKo": "자신감 넘치는 월드와이드 핸섬 무드메이커",
+      "titleEs": "El Carismático Worldwide Handsome",
+      "subtitle": "Effortless Humor · Caring Big Brother · Life Enjoyer",
+      "subtitleKo": "유쾌한 아재개그 · 다정한 맏형 · 인생을 즐기는 긍정왕",
+      "subtitleEs": "Humor Brillante · Hermano Protector · Alma Positiva",
+      "skzoo": "RJ (The Fluffy Foodie Alpaca)",
+      "skzooKo": "알제이 (RJ - 미식가 알파카)",
+      "skzooEs": "RJ (La Alpaca Gourmet)",
+      "emoji": "🐹",
+      "traits": [
+        "Playful Confidence",
+        "Generous Heart",
+        "Stress Reliever"
+      ],
+      "traitsKo": [
+        "기분 좋은 유쾌함",
+        "따뜻한 배려심",
+        "긍정 마인드셋"
+      ],
+      "traitsEs": [
+        "Confianza Alegre",
+        "Corazón Generoso",
+        "Alivia el Estrés"
+      ],
+      "description": "Like Jin, you know how to break tension with laughter and infectious charm. You take care of everyone behind the scenes while keeping the mood light and bright.",
+      "descriptionKo": "석진처럼 유쾌한 농담으로 사람들을 웃게 만드는 긍정의 마술사! 겉으로는 장난스러워 보여도 뒤에서 사람들을 묵묵히 챙겨주는 따뜻한 맏형 같은 든든함을 품고 있습니다.",
+      "descriptionEs": "Al igual que Jin, iluminas cualquier lugar con tu humor y carisma. Detrás de tus bromas divertidas hay un corazón generoso que siempre cuida de sus seres queridos.",
+      "bestMatchId": "suga",
+      "bestMatchName": "SUGA",
+      "bestMatchNameKo": "슈가 (SUGA)",
+      "bestMatchNameEs": "SUGA",
+      "bestMatchReason": "The eternal roommates! Jin's bright humor perfectly balances SUGA's quiet intensity.",
+      "bestMatchReasonKo": "영원한 룸메이트! 석진의 유쾌한 텐션이 슈가의 깊고 차분한 내면과 완벽한 균형을 이룹니다.",
+      "bestMatchReasonEs": "¡Los compañeros eternos! El humor de Jin equilibra la intensidad tranquila de SUGA.",
+      "colorHex": "#ec4899",
+      "bgGradient": "from-pink-600 via-rose-600 to-indigo-950"
+    },
+    "suga": {
+      "id": "suga",
+      "name": "SUGA (Min Yoongi)",
+      "nameKo": "슈가 (민윤기 / Agust D)",
+      "nameEs": "SUGA (Min Yoongi)",
+      "title": "The Quiet Genius & Warm Realist",
+      "titleKo": "츤데레 천재 프로듀서 & 따뜻한 현실주의자",
+      "titleEs": "El Genio Creativo y Realista Afectuoso",
+      "subtitle": "Cat Energy · Deep Focus · Lowkey Affectionate",
+      "subtitleKo": "냥이 모먼트 · 무서운 몰입력 · 무심한 척 다정한 츤데레",
+      "subtitleEs": "Energía Felina · Enfoque Total · Cariño Sincero",
+      "skzoo": "SHOOKY (The Spicy Cookie)",
+      "skzooKo": "슈키 (SHOOKY - 당돌한 쿠키)",
+      "skzooEs": "SHOOKY (La Galleta Picante)",
+      "emoji": "🐱",
+      "traits": [
+        "Quiet Passion",
+        "Honest & Grounded",
+        "Secretly Sweet"
+      ],
+      "traitsKo": [
+        "묵직한 열정",
+        "단단한 현실감각",
+        "무심한 듯 따뜻함"
+      ],
+      "traitsEs": [
+        "Pasión Silenciosa",
+        "Honesto y Auténtico",
+        "Dulzura Oculta"
+      ],
+      "description": "Like Yoongi, you don't waste energy on superficial drama. You speak through your craft, value your quiet sanctuary, and protect the people you love with quiet, unwavering loyalty.",
+      "descriptionKo": "윤기처럼 겉은 시크하지만 속은 누구보다 뜨거운 열정과 따스함을 지닌 츤데레! 말보다 행동으로 증명하며, 혼자만의 온전한 시간 속에서 위대한 결과를 만들어냅니다.",
+      "descriptionEs": "Como Yoongi, eres auténtico, directo y apasionado por lo que haces. Valoras tu espacio personal y demuestras tu afecto con hechos más que con palabras.",
+      "bestMatchId": "jhope",
+      "bestMatchName": "J-Hope",
+      "bestMatchNameKo": "제이홉 (J-Hope)",
+      "bestMatchNameEs": "J-Hope",
+      "bestMatchReason": "Legendary SOPE chemistry! J-Hope's radiant sunshine makes SUGA smile and feel utterly cherished.",
+      "bestMatchReasonKo": "전설의 솝(SOPE) 조합! 제이홉의 눈부신 햇살 에너지가 슈가의 마음에 가장 환한 미소를 피워냅니다.",
+      "bestMatchReasonEs": "¡La mítica dupla SOPE! El optimismo de J-Hope ilumina la profundidad de SUGA.",
+      "colorHex": "#0f766e",
+      "bgGradient": "from-teal-800 via-slate-900 to-indigo-950"
+    },
+    "jhope": {
+      "id": "jhope",
+      "name": "J-Hope (Jung Hoseok)",
+      "nameKo": "제이홉 (정호석)",
+      "nameEs": "J-Hope (Jung Hoseok)",
+      "title": "The Ultimate Sunshine & Master Performer",
+      "titleKo": "인간 비타민 햇살 & 완벽한 댄스 캡틴",
+      "titleEs": "El Rayo de Sol y Maestro del Ritmo",
+      "subtitle": "Vibrant Energy · Detail Perfectionist · Hope Giver",
+      "subtitleKo": "세상을 밝히는 희망 · 디테일 장인 · 분위기 메이커",
+      "subtitleEs": "Energía Radiante · Perfeccionista · Portador de Esperanza",
+      "skzoo": "MANG (The Dancing Pony)",
+      "skzooKo": "망 (MANG - 가면 벗은 댄싱 포니)",
+      "skzooEs": "MANG (El Pony Bailarín)",
+      "emoji": "🐿️",
+      "traits": [
+        "Radiant Optimism",
+        "Flawless Rhythm",
+        "Thoughtful Planner"
+      ],
+      "traitsKo": [
+        "밝은 긍정 에너지",
+        "철저한 꼼꼼함",
+        "모두를 챙기는 배려"
+      ],
+      "traitsEs": [
+        "Optimismo Brillante",
+        "Ritmo Impecable",
+        "Organizador Dedicado"
+      ],
+      "description": "Like Hoseok, you are the heartbeat of any group! Your radiant smile lights up everyone's day, yet beneath that cheerful glow lies immense discipline, focus, and professionalism.",
+      "descriptionKo": "호석처럼 주위를 환하게 물들이는 인간 비타민! 밝은 웃음 뒤에 철저한 자기관리와 프로페셔널한 디테일을 갖추고 있어 어디서나 모두의 신뢰와 사랑을 한몸에 받습니다.",
+      "descriptionEs": "Como Hoseok, eres la chispa de alegría en cualquier grupo. Tu sonrisa contagiosa y tu disciplina impecable inspiran a todos a dar lo mejor de sí mismos.",
+      "bestMatchId": "suga",
+      "bestMatchName": "SUGA",
+      "bestMatchNameKo": "슈가 (SUGA)",
+      "bestMatchNameEs": "SUGA",
+      "bestMatchReason": "Opposites attract! J-Hope brings the joy and beat that draws SUGA out of his quiet shell.",
+      "bestMatchReasonKo": "서로 다른 두 사람이 만들어내는 최고의 하모니! 제이홉의 활력이 슈가를 가장 편안하게 웃게 만듭니다.",
+      "bestMatchReasonEs": "¡Polos opuestos que se complementan! La calidez de J-Hope saca lo mejor de SUGA.",
+      "colorHex": "#eab308",
+      "bgGradient": "from-amber-500 via-orange-600 to-purple-900"
+    },
+    "jimin": {
+      "id": "jimin",
+      "name": "Jimin (Park Jimin)",
+      "nameKo": "지민 (박지민)",
+      "nameEs": "Jimin (Park Jimin)",
+      "title": "The Angelic Empath & Soulful Artist",
+      "titleKo": "세상 다정한 공감 천사 & 매혹적인 예술가",
+      "titleEs": "El Ángel Dulce y Artista Apasionado",
+      "subtitle": "Heartfelt Empathy · Magnetic Elegance · Pure Devotion",
+      "subtitleKo": "따뜻한 공감능력 · 우아한 카리스마 · 무한한 정성",
+      "subtitleEs": "Empatía Total · Elegancia Magnética · Devoción Pura",
+      "skzoo": "CHIMMY (The Passionate Puppy)",
+      "skzooKo": "치미 (CHIMMY - 열정 강아지)",
+      "skzooEs": "CHIMMY (El Perrito Apasionado)",
+      "emoji": "🐥",
+      "traits": [
+        "Gentle Empathy",
+        "Artistic Grace",
+        "Lovable Warmth"
+      ],
+      "traitsKo": [
+        "다정한 위로",
+        "섬세한 예술성",
+        "사랑스러운 매력"
+      ],
+      "traitsEs": [
+        "Empatía Dulce",
+        "Gracia Artística",
+        "Calidez Tierna"
+      ],
+      "description": "Like Jimin, your emotional sensitivity is your superpower. You make everyone feel heard and treasured, combined with breathtaking dedication to your crafts.",
+      "descriptionKo": "지민처럼 상대방의 아픔을 먼저 헤아릴 줄 아는 다정한 요정! 무대 위에서는 숨막히게 우아하고, 일상에서는 누구보다 사랑스럽고 따스하게 사람들을 보듬어줍니다.",
+      "descriptionEs": "Como Jimin, tu sensibilidad y empatía son mágicas. Tienes el don especial de hacer que todos se sientan amados, acompañado de una devoción total por tus sueños.",
+      "bestMatchId": "v",
+      "bestMatchName": "V",
+      "bestMatchNameKo": "뷔 (V)",
+      "bestMatchNameEs": "V",
+      "bestMatchReason": "Soulmate duo (95z)! An unbreakable bond born from shared tears, laughter, and eternal trust.",
+      "bestMatchReasonKo": "전설의 구오즈(95z) 소울메이트! 눈빛만 봐도 통하는 깊은 유대감과 무조건적인 믿음을 나눕니다.",
+      "bestMatchReasonEs": "¡Los legendarios 95z Soulmates! Una conexión cósmica basada en amor y complicidad absoluta.",
+      "colorHex": "#f59e0b",
+      "bgGradient": "from-amber-400 via-rose-500 to-indigo-900"
+    },
+    "v": {
+      "id": "v",
+      "name": "V (Kim Taehyung)",
+      "nameKo": "뷔 (김태형)",
+      "nameEs": "V (Kim Taehyung)",
+      "title": "The Free-Spirited Soul & Romantic Artist",
+      "titleKo": "낭만을 아는 자유로운 영혼 & 독보적 예술가",
+      "titleEs": "El Artista Bohemio y Alma Libre",
+      "subtitle": "Vintage Jazz · Unfiltered Charm · Deep Affection",
+      "subtitleKo": "클래식 감성 · 독보적인 아우라 · 순수한 매력",
+      "subtitleEs": "Jazz Clásico · Encanto Genuino · Afecto Profundo",
+      "skzoo": "TATA (The Shapeshifting Prince)",
+      "skzooKo": "타타 (TATA - 사랑을 전하는 하트 왕자)",
+      "skzooEs": "TATA (El Príncipe del Amor)",
+      "emoji": "🐻",
+      "traits": [
+        "Unique Perspective",
+        "Vintage Aesthetics",
+        "Warm Hearted"
+      ],
+      "traitsKo": [
+        "자유로운 상상력",
+        "낭만적인 취향",
+        "순수하고 다정함"
+      ],
+      "traitsEs": [
+        "Perspectiva Única",
+        "Estética Retro",
+        "Corazón Puro"
+      ],
+      "description": "Like Taehyung, you view the world through a cinematic lens of nostalgia, music, and honest heart. You march to your own rhythm without fear, drawing people in with your warm authenticity.",
+      "descriptionKo": "태형처럼 세상 하나뿐인 독창적인 시선과 낭만을 지닌 사람! 앤티크한 음악과 사진, 순수한 호기심으로 세상을 바라보며 주변을 특별하고 영화 같은 순간으로 채웁니다.",
+      "descriptionEs": "Como Taehyung, ves la vida como una película de arte llena de música, estética retro y sentimientos genuinos. Tu encanto bohemio fascina a todos a tu alrededor.",
+      "bestMatchId": "jungkook",
+      "bestMatchName": "Jungkook",
+      "bestMatchNameKo": "정국 (Jungkook)",
+      "bestMatchNameEs": "Jungkook",
+      "bestMatchReason": "Taekook chemistry! Endless laughter, spontaneous adventures, and matching playful spirits.",
+      "bestMatchReasonKo": "언제나 장난기와 꿀케미가 넘쳐흐르는 태꾹! 함께 있으면 지루할 틈 없는 유쾌한 모험이 펼쳐집니다.",
+      "bestMatchReasonEs": "¡La química de Taekook! Risas infinitas, complicidad y energía juvenil compartida.",
+      "colorHex": "#8b5cf6",
+      "bgGradient": "from-purple-600 via-violet-700 to-indigo-950"
+    },
+    "jungkook": {
+      "id": "jungkook",
+      "name": "Jungkook (Jeon Jungkook)",
+      "nameKo": "정국 (전정국)",
+      "nameEs": "Jungkook (Jeon Jungkook)",
+      "title": "The Golden Maknae & Limitless Achiever",
+      "titleKo": "황금막내 & 한계 없는 올라운더",
+      "titleEs": "El Golden Maknae de Talento Infinito",
+      "subtitle": "All-Rounder Talent · Pure Passion · Playful Giant",
+      "subtitleKo": "만능 능력치 · 불타는 승부욕 · 순수한 열정맨",
+      "subtitleEs": "Multitalento · Pasión Feroz · Corazón Noble",
+      "skzoo": "COOKY (The Muscular Bunny)",
+      "skzooKo": "쿠키 (COOKY - 열정 토끼)",
+      "skzooEs": "COOKY (El Conejo Fuerte)",
+      "emoji": "🐰",
+      "traits": [
+        "Infinite Potential",
+        "Burning Passion",
+        "Humble & Kind"
+      ],
+      "traitsKo": [
+        "무한한 재능",
+        "식지 않는 열정",
+        "겸손하고 순수한 마음"
+      ],
+      "traitsEs": [
+        "Potencial Infinito",
+        "Pasión Imparable",
+        "Humilde y Noble"
+      ],
+      "description": "Like Jungkook, once you set your mind on something, you master it with fierce discipline and raw talent. You remain humble, gentle, and fiercely loyal to the people you love.",
+      "descriptionKo": "정국처럼 한번 꽂히면 끝장을 보는 황금빛 재능의 소유자! 노래, 운동, 창작 무엇이든 만능으로 해내면서도 늘 초심과 겸손함을 잃지 않는 순수한 열정의 대명사입니다.",
+      "descriptionEs": "Como Jungkook, todo lo que te propones lo dominas con pasión y dedicación incansable. A pesar de tu brillantez, mantienes un corazón humilde, dulce y leal.",
+      "bestMatchId": "rm",
+      "bestMatchName": "RM",
+      "bestMatchNameKo": "RM",
+      "bestMatchNameEs": "RM",
+      "bestMatchReason": "The origin story! Jungkook chose BTS because of RM's brilliance; their mutual admiration is eternal.",
+      "bestMatchReasonKo": "방탄소년단의 시작점! RM을 동경해 빅히트에 입사했던 정국처럼, 서로를 가장 존경하고 든든하게 받쳐주는 운명적 케미입니다.",
+      "bestMatchReasonEs": "¡El origen de todo! Jungkook eligió su destino por admiración a RM; su respeto mutuo es eterno.",
+      "colorHex": "#dc2626",
+      "bgGradient": "from-rose-600 via-purple-700 to-slate-950"
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "question": "An unexpected 24 hours of total free time is granted to you. How do you spend it?",
+      "questionKo": "예상치 못한 24시간의 완전한 자유 시간이 주어졌다면, 당신은 무엇을 하고 있을까요?",
+      "questionEs": "Tienes 24 horas completamente libres e inesperadas. ¿Cómo las pasas?",
+      "emoji": "⏳",
+      "options": [
+        {
+          "id": "A",
+          "text": "Strolling through an art museum or quiet park with a good book and coffee",
+          "textKo": "따뜻한 커피 한 잔 들고 한적한 미술관이나 숲길을 천천히 산책하기",
+          "textEs": "Pasear por un museo de arte o un parque tranquilo con un buen libro y café",
+          "scores": { "rm": 3, "v": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Cooking delicious comfort food, gaming, or watching comedy shows at home",
+          "textKo": "맛있는 음식을 요리해 먹고, 게임하거나 유쾌한 예능 보며 편하게 쉬기",
+          "textEs": "Cocinar algo delicioso, jugar videojuegos o ver comedia relajado en casa",
+          "scores": { "jin": 3, "suga": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Diving into a creative hobby, working out at the gym, or practicing music",
+          "textKo": "헬스장에서 땀 흘려 운동하거나 음악 작업, 영상 편집 등 창작에 몰두하기",
+          "textEs": "Hacer ejercicio intenso, entrenar o sumergirme en un proyecto creativo",
+          "scores": { "jungkook": 3, "jhope": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Listening to vintage jazz vinyl records or taking artistic film camera photos",
+          "textKo": "빈티지 재즈 LP를 틀어두거나 필름 카메라를 들고 나만의 낭만적인 풍경 담기",
+          "textEs": "Escuchar discos de jazz vintage o salir con una cámara analógica a capturar momentos",
+          "scores": { "v": 3, "jimin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "A close friend calls you late at night crying because of a tough day. Your immediate reaction?",
+      "questionKo": "친한 친구가 힘든 일로 울먹이며 심야에 전화를 걸어왔을 때, 당신의 반응은?",
+      "questionEs": "Un amigo cercano te llama tarde en la noche llorando por un mal día. ¿Qué haces?",
+      "emoji": "📞",
+      "options": [
+        {
+          "id": "A",
+          "text": "I listen with my whole heart, gently comforting them and saying 'You did your best, I'm right here'",
+          "textKo": "아무 말 없이 끝까지 다 들어주며 '네가 최고야, 내가 곁에 있을게'라며 진심 어린 위로를 건넨다",
+          "textEs": "Escucho con todo mi corazón, consolándolo y diciendo 'Hiciste lo mejor, estoy aquí para ti'",
+          "scores": { "jimin": 3, "jhope": 1 }
+        },
+        {
+          "id": "B",
+          "text": "I listen calmly, help untangle the root problem with philosophical perspective and steady advice",
+          "textKo": "차분하게 상황을 들어보고, 넓은 시야에서 원인을 짚어주며 깊이 있는 조언과 멘탈 케어를 돕는다",
+          "textEs": "Escucho con calma y ofrezco una perspectiva sabia y reflexiva para ayudarlo a ver la solución",
+          "scores": { "rm": 3, "suga": 1 }
+        },
+        {
+          "id": "C",
+          "text": "I make a witty joke to make them smile first, then order late-night food to their door",
+          "textKo": "일단 유쾌한 농담으로 피식 웃게 만든 뒤, 맛있는 야식을 배달시켜 보내준다",
+          "textEs": "Hago una broma divertida para sacarle una sonrisa primero y luego le envío comida rica a domicilio",
+          "scores": { "jin": 3, "v": 1 }
+        },
+        {
+          "id": "D",
+          "text": "'Don't stress over what you can't control.' I offer grounded, realistic comfort and quiet loyalty",
+          "textKo": "'지나간 일은 털어버려. 넌 잘하고 있어.' 무심한 듯 든든한 한마디로 마음의 짐을 덜어준다",
+          "textEs": "'No te castigues por lo que pasó.' Ofrezco palabras realistas, directas y lealtad incondicional",
+          "scores": { "suga": 3, "jungkook": 1 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "It's 1 hour before the BTS concert begins outside the Olympic Stadium! What are you doing?",
+      "questionKo": "방탄소년단 콘서트 시작 1시간 전! 올림픽주경기장 앞 당신의 모습은?",
+      "questionEs": "¡Falta 1 hora para el concierto de BTS afuera del estadio! ¿Qué estás haciendo?",
+      "emoji": "🏟️",
+      "options": [
+        {
+          "id": "A",
+          "text": "Already synced my ARMY Bomb Bluetooth, memorized every fanchant, and hyped the crowd around me!",
+          "textKo": "아미밤 블루투스 연동 완료, 응원법 완벽 암기! 주변 아미들과 벌써 축제 텐션으로 즐기기",
+          "textEs": "¡ARMY Bomb sincronizado, fanchants memorizados al 100% y contagiando energía a todos alrededor!",
+          "scores": { "jhope": 3, "jimin": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Quietly soaking in the purple ocean, observing the banners, and feeling emotional gratitude",
+          "textKo": "보랏빛으로 물든 경기장을 바라보며 가사 한 구절을 떠올리고, 벅찬 감동을 가만히 음미하기",
+          "textEs": "Contemplando el mar morado en silencio, leyendo los banners y sintiendo una profunda gratitud",
+          "scores": { "rm": 3, "v": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Checking out concert merch, enjoying stadium snacks, and taking funny photos with friends",
+          "textKo": "공식 굿즈 꼼꼼히 챙기고, 맛있는 간식 챙겨 먹으며 친구들과 신나게 포토존 인증샷 찍기",
+          "textEs": "Comprando snacks deliciosos, revisando el merch y tomándome fotos divertidas con amigos",
+          "scores": { "jin": 3, "jungkook": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Focusing my physical stamina, keeping calm, saving all my voice and energy for the live sound drops",
+          "textKo": "조용히 체력을 아껴두며, 인트로 비트가 터지는 순간 온몸을 던져 떼창할 준비를 마친다",
+          "textEs": "Guardando energía en calma para darlo todo cantando cada nota en cuanto suene el primer beat",
+          "scores": { "suga": 3, "jungkook": 2 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "When facing a creative block or slump in life, how do you overcome it?",
+      "questionKo": "인생에서 슬럼프나 막막한 한계에 부딪혔을 때, 당신은 어떻게 극복하나요?",
+      "questionEs": "¿Cómo superas un momento de bloqueo creativo o desánimo en tu vida?",
+      "emoji": "💡",
+      "options": [
+        {
+          "id": "A",
+          "text": "I keep working through it relentlessly until I break through. Action conquers doubt!",
+          "textKo": "될 때까지 파고든다! 몸을 움직이고 연습을 반복하며 실력과 행동으로 돌파한다",
+          "textEs": "Sigo practicando y trabajando sin parar hasta superarlo. ¡La acción vence la duda!",
+          "scores": { "jungkook": 3, "jhope": 1 }
+        },
+        {
+          "id": "B",
+          "text": "I step back completely. Sleep, rest in quiet solitude, and let the storm pass naturally",
+          "textKo": "일단 모든 걸 내려놓고 푹 잔다. 혼자만의 조용한 시간 속에서 자연스럽게 생각이 정리될 때까지 기다린다",
+          "textEs": "Me desconecto por completo. Duermo, descanso en silencio y dejo que la tormenta pase sola",
+          "scores": { "suga": 3, "rm": 1 }
+        },
+        {
+          "id": "C",
+          "text": "I talk to people who love me, listen to warm music, and embrace my honest feelings without guilt",
+          "textKo": "소중한 사람들과 대화하며 내 감정을 솔직하게 마주하고, 따뜻한 음악으로 마음을 위로받는다",
+          "textEs": "Hablo con la gente que quiero, escucho música reconfortante y acepto mis emociones con cariño",
+          "scores": { "jimin": 3, "v": 1 }
+        },
+        {
+          "id": "D",
+          "text": "I don't overthink it. 'Whatever happens, it's fine!' I laugh it off and take it easy",
+          "textKo": "'뭐 어때! 어떻게든 되겠지!' 유쾌하게 훌훌 털어버리고 긍정적인 마음으로 가볍게 넘긴다",
+          "textEs": "No me complico. '¡Qué más da, todo saldrá bien!' Me río y sigo adelante con calma",
+          "scores": { "jin": 3, "v": 1 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Which visual aesthetic and music mood resonates deepest with your inner soul?",
+      "questionKo": "당신의 영혼에 가장 깊은 울림을 주는 비주얼 & 음악 무드는?",
+      "questionEs": "¿Qué estilo visual y musical conecta más profundamente con tu alma?",
+      "emoji": "🎨",
+      "options": [
+        {
+          "id": "A",
+          "text": "Poetic, introspective lyrics with calm lo-fi beats, rain sounds, and nature views (like 'mono.')",
+          "textKo": "비 오는 날의 차분함, 숲과 바람, 깊은 시적인 가사가 담긴 로파이 감성 (mono. 무드)",
+          "textEs": "Letras poéticas e introspectivas con ritmos lo-fi relajantes y lluvia (al estilo 'mono.')",
+          "scores": { "rm": 3, "v": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Raw, honest rap beats and deep nighttime studio vibes (like Agust D / D-DAY)",
+          "textKo": "새벽 작업실의 날것 그대로의 솔직함, 단단하고 묵직한 힙합 비트 (Agust D 무드)",
+          "textEs": "Ritmos hip-hop intensos y honestos nacidos en el estudio de madrugada (al estilo Agust D)",
+          "scores": { "suga": 3, "rm": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Vibrant street dance funk, groovy basslines, and retro neon street style (like 'Hope World')",
+          "textKo": "화려한 스트리트 댄스, 그루비한 리듬과 밝은 네온 컬러의 에너지 (Hope World 무드)",
+          "textEs": "Street dance vibrante, líneas de bajo con groove y estilo retro (al estilo 'Hope World')",
+          "scores": { "jhope": 3, "jungkook": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Classic vintage jazz, cinematic film noir, and warm acoustic baritone tones (like 'Layover')",
+          "textKo": "클래식한 재즈 선율, 아날로그 필름 감성과 낭만적인 중저음 바리톤 (Layover 무드)",
+          "textEs": "Jazz clásico, fotografía analógica nostálgica y tonos barítonos románticos (al estilo 'Layover')",
+          "scores": { "v": 3, "jimin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "In a team project or group trip, what role do you naturally fall into?",
+      "questionKo": "팀 프로젝트나 친구들과의 단체 여행에서 당신이 자연스럽게 맡게 되는 포지션은?",
+      "questionEs": "En un proyecto de equipo o viaje grupal, ¿qué rol asumes naturalmente?",
+      "emoji": "🧭",
+      "options": [
+        {
+          "id": "A",
+          "text": "The strategist: setting the vision, organizing goals, and synthesizing everyone's opinions",
+          "textKo": "전체적인 방향성을 잡고, 구성원들의 의견을 조율하며 큰 그림을 그리는 기획자",
+          "textEs": "El estratega: define el rumbo, coordina opiniones y mantiene la visión general",
+          "scores": { "rm": 3, "suga": 1 }
+        },
+        {
+          "id": "B",
+          "text": "The detail manager: making timetables, checking rehearsals, ensuring nothing is missed",
+          "textKo": "일정표와 준비물을 꼼꼼히 체크하고, 시간과 디테일을 완벽하게 챙기는 정리 장인",
+          "textEs": "El organizador detallista: revisa horarios, preparativos y se asegura de que todo funcione",
+          "scores": { "jhope": 3, "jungkook": 1 }
+        },
+        {
+          "id": "C",
+          "text": "The peacemaker: creating a warm atmosphere, checking if anyone is feeling left out",
+          "textKo": "어색한 분위기를 풀고, 소외되는 사람 없이 모두가 편안하도록 다정하게 챙기는 케어러",
+          "textEs": "El conciliador: cuida a todos con dulzura para que nadie se sienta excluido",
+          "scores": { "jimin": 3, "jin": 1 }
+        },
+        {
+          "id": "D",
+          "text": "The heavy-lifter all-rounder: executing key tasks with top skill while keeping team spirit high",
+          "textKo": "실질적인 핵심 실행을 도맡아 해결하고, 특유의 에너지로 팀의 사기를 북돋우는 행동대장",
+          "textEs": "El ejecutor estrella: resuelve las tareas más difíciles con talento y entusiasmo",
+          "scores": { "jungkook": 3, "jin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "How do you express genuine love and affection to the people you cherish most?",
+      "questionKo": "소중한 사람들에게 당신만의 진심 어린 사랑과 애정을 표현하는 방식은?",
+      "questionEs": "¿Cómo expresas tu cariño y amor sincero a las personas que más te importan?",
+      "emoji": "💜",
+      "options": [
+        {
+          "id": "A",
+          "text": "Through warm hugs, constant check-ins, and expressing sweet words of encouragement",
+          "textKo": "따뜻한 포옹과 애교, '밥은 먹었어? 오늘도 수고했어'라는 다정한 말과 눈빛으로",
+          "textEs": "Con abrazos cálidos, mensajes dulces y asegurándome de que sepan cuánto los quiero",
+          "scores": { "jimin": 3, "v": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Without saying much: quietly buying them what they needed or fixing problems behind their back",
+          "textKo": "말은 무심하게 툭 던져도, 필요한 걸 기억해뒀다 슬쩍 챙겨주거나 뒤에서 묵묵히 돕는다",
+          "textEs": "En silencio: recordando lo que necesitan y solucionando sus problemas sin pedir nada a cambio",
+          "scores": { "suga": 3, "jin": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Making them delicious food, telling funny jokes to see them laugh until their stomach hurts",
+          "textKo": "맛있는 음식을 직접 차려주고, 유쾌한 개그로 배꼽 빠지게 웃겨주며 행복하게 만들기",
+          "textEs": "Cocinándoles comida rica y haciéndolos reír hasta que les duela el estómago",
+          "scores": { "jin": 3, "jhope": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Giving thoughtful, unique gifts, writing heartfelt letters, or capturing candid moments for them",
+          "textKo": "직접 고른 특별한 선물이나 진심이 담긴 편지, 그 사람만의 예쁜 순간을 사진에 담아 건넨다",
+          "textEs": "Con regalos únicos y especiales, cartas sentidas o fotos sinceras de momentos compartidos",
+          "scores": { "v": 3, "rm": 1 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "At a karaoke room with close friends, which song type do you belt out first?",
+      "questionKo": "노래방에서 마이크를 잡았을 때, 당신이 가장 먼저 선곡하는 스타일은?",
+      "questionEs": "En el karaoke con amigos cercanos, ¿qué estilo de canción eliges primero?",
+      "emoji": "🎤",
+      "options": [
+        {
+          "id": "A",
+          "text": "A hype banger that gets everyone jumping, dancing, and shouting the chorus together!",
+          "textKo": "모두가 제자리에서 방방 뛰고 떼창할 수 있는 흥 폭발 댄스곡 (텐션 끌어올리기!)",
+          "textEs": "¡Un temazo enérgico que haga saltar, bailar y gritar el coro a todo el mundo!",
+          "scores": { "jhope": 3, "jin": 1 }
+        },
+        {
+          "id": "B",
+          "text": "A high-note power vocal ballad or dynamic pop track where I showcase full vocal skill",
+          "textKo": "고음이 시원하게 터지는 명품 보컬 곡이나 팝송으로 가창력 제대로 뽐내기",
+          "textEs": "Una balada de notas altas o pop vocal impecable para lucir todo el talento",
+          "scores": { "jungkook": 3, "jimin": 1 }
+        },
+        {
+          "id": "C",
+          "text": "A deep, soulful indie/jazz ballad with rich emotional tone and poetic atmosphere",
+          "textKo": "매력적인 중저음으로 잔잔한 감동을 주는 감성 발라드나 인디 재즈 곡",
+          "textEs": "Una balada indie o jazz profunda con una atmósfera emotiva y poética",
+          "scores": { "v": 3, "rm": 1 }
+        },
+        {
+          "id": "D",
+          "text": "A fast-spitting, razor-sharp hip-hop rap track that shocks everyone with rhythmic fire",
+          "textKo": "숨 쉴 틈 없이 쏟아내는 폭풍 랩핑 트랙으로 힙합 스웨그 보여주기",
+          "textEs": "Un rap veloz y afilado que deje a todos boquiabiertos con su ritmo y potencia",
+          "scores": { "suga": 3, "rm": 2 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "When you have to make a major life decision, what is your ultimate compass?",
+      "questionKo": "인생의 중대한 결정을 내려야 할 때, 당신이 가장 신뢰하는 나침반은?",
+      "questionEs": "Al tomar una decisión importante en tu vida, ¿cuál es tu brújula interior?",
+      "emoji": "🧭",
+      "options": [
+        {
+          "id": "A",
+          "text": "My core values, long-term purpose, and whether this decision aligns with my authentic self",
+          "textKo": "나의 삶의 본질과 가치관, 그리고 '내가 진정으로 나다울 수 있는 길인가'에 대한 성찰",
+          "textEs": "Mis valores fundamentales, mi propósito y si la decisión es fiel a quien realmente soy",
+          "scores": { "rm": 3, "suga": 1 }
+        },
+        {
+          "id": "B",
+          "text": "My gut feeling and sheer determination. If I want it, I will make it work by working harder!",
+          "textKo": "나의 직관과 불타는 의지! 일단 하고 싶다면 어떤 어려움도 노력으로 돌파한다는 결심",
+          "textEs": "Mi instinto y mi determinación feroz. ¡Si lo quiero, trabajaré hasta lograrlo!",
+          "scores": { "jungkook": 3, "jhope": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Will this protect my peace and happiness, without causing unnecessary stress or regret?",
+          "textKo": "이 결정이 나와 주변 사람들에게 스트레스 대신 웃음과 편안한 행복을 가져다줄 수 있는가?",
+          "textEs": "¿Esto protegerá mi paz mental y felicidad sin causarme estrés innecesario?",
+          "scores": { "jin": 3, "jimin": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Following my artistic intuition and passion, even if the path is unconventional and unique",
+          "textKo": "남들의 시선이나 정형화된 틀 대신, 내 마음이 이끄는 독창적인 감각과 이끌림",
+          "textEs": "Seguir mi intuición artística y mi corazón, aunque sea un camino poco convencional",
+          "scores": { "v": 3, "jimin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "If you could whisper one heartfelt message to BTS right now, what would it be?",
+      "questionKo": "지금 이 순간, 방탄소년단에게 진심을 담아 딱 한마디를 전할 수 있다면?",
+      "questionEs": "Si pudieras decirle un mensaje de corazón a BTS ahora mismo, ¿cuál sería?",
+      "emoji": "✨",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Thank you for reminding me to love myself. Let's walk together until the very end.'",
+          "textKo": "'나 자신을 사랑하는 법을 알려줘서 고마워요. 어떤 계절이 와도 영원히 함께 걸어가요.'",
+          "textEs": "'Gracias por enseñarme a amarme a mí mismo. Caminemos juntos por siempre.'",
+          "scores": { "rm": 2, "jimin": 2 }
+        },
+        {
+          "id": "B",
+          "text": "'Your music saved me on my darkest days. Stay healthy, happy, and keep laughing!'",
+          "textKo": "'힘든 날마다 여러분의 음악이 제 구원이었어요. 아프지 말고 언제나 행복하게 웃어줘요!'",
+          "textEs": "'Su música me salvó en mis días más oscuros. ¡Manténganse saludables y felices siempre!'",
+          "scores": { "suga": 2, "jin": 2 }
+        },
+        {
+          "id": "C",
+          "text": "'Your passion inspires me every day to dream bigger and become the best version of myself.'",
+          "textKo": "'무대 위의 뜨거운 열정 덕분에 매일 더 큰 꿈을 꿉니다. 내 자랑스러운 영웅들!'",
+          "textEs": "'Su pasión infinita me inspira a soñar en grande y ser mi mejor versión cada día.'",
+          "scores": { "jungkook": 2, "jhope": 2 }
+        },
+        {
+          "id": "D",
+          "text": "'Borahae! 💜 More than yesterday, less than tomorrow, I will always trust and love you.'",
+          "textKo": "'보라해! 💜 어제보다 더, 내일보다 덜, 온 마음을 다해 믿고 사랑합니다.'",
+          "textEs": "'¡Borahae! 💜 Más que ayer y menos que mañana, siempre confiaré y los amaré.'",
+          "scores": { "v": 3, "jimin": 1 }
+        }
+      ]
+    }
+  ]
+}

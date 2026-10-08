@@ -1,5 +1,5 @@
 'use client';
-
+ 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Quiz, PersonalityQuestion, PersonalityMemberResult, getLocalizedText } from '@/types/quiz';
@@ -7,6 +7,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Heart, Trophy, Compass } from 'lucide-react';
 import QuizCard from './QuizCard';
+import { getQuizMascot } from '@/lib/mascot';
 
 interface PersonalityTestRunnerProps {
   quiz: Quiz;
@@ -19,23 +20,23 @@ export default function PersonalityTestRunner({
 }: PersonalityTestRunnerProps) {
   const { lang, t } = useLanguage();
   const { addXP } = useGame();
+  const mascot = getQuizMascot(quiz.slug, quiz.tag);
 
   const questions: PersonalityQuestion[] = quiz.personalityQuestions || [];
   const resultsMap: Record<string, PersonalityMemberResult> = quiz.personalityResults || {};
 
+  const getInitialScores = () => {
+    const initial: Record<string, number> = {};
+    Object.keys(resultsMap).forEach((id) => {
+      initial[id] = 0;
+    });
+    return initial;
+  };
+
   const [testState, setTestState] = useState<'intro' | 'answering' | 'calculating' | 'result'>('intro');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
-  const [scores, setScores] = useState<Record<string, number>>({
-    bangchan: 0,
-    leeknow: 0,
-    changbin: 0,
-    hyunjin: 0,
-    han: 0,
-    felix: 0,
-    seungmin: 0,
-    in: 0,
-  });
+  const [scores, setScores] = useState<Record<string, number>>(() => getInitialScores());
   const [matchedResult, setMatchedResult] = useState<PersonalityMemberResult | null>(null);
   const [copied, setCopied] = useState(false);
 
@@ -46,16 +47,7 @@ export default function PersonalityTestRunner({
     setTestState('answering');
     setCurrentIndex(0);
     setSelectedOptionId(null);
-    setScores({
-      bangchan: 0,
-      leeknow: 0,
-      changbin: 0,
-      hyunjin: 0,
-      han: 0,
-      felix: 0,
-      seungmin: 0,
-      in: 0,
-    });
+    setScores(getInitialScores());
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -88,7 +80,7 @@ export default function PersonalityTestRunner({
             }
           });
 
-          const winner = resultsMap[topMemberId] || resultsMap.felix;
+          const winner = resultsMap[topMemberId] || Object.values(resultsMap)[0];
           setMatchedResult(winner);
           setTestState('result');
           addXP(50); // Award 50 XP for completing personality test
@@ -108,22 +100,31 @@ export default function PersonalityTestRunner({
   const handleShareTwitter = () => {
     if (!matchedResult) return;
     const memberName = lang === 'ko' ? matchedResult.nameKo : matchedResult.name;
+    const groupName = quiz.tag || 'K-Pop';
     const text =
       lang === 'ko'
-        ? `나의 스트레이 키즈 소울메이트는 [${memberName}]! 🐺✨ 나와 100% 일치하는 스키즈 멤버를 지금 확인해보세요!`
+        ? `나의 ${groupName} 소울메이트는 [${memberName}]! ✨ 나와 100% 일치하는 멤버를 지금 확인해보세요!`
         : lang === 'es'
-        ? `¡Mi alma gemela de Stray Kids es [${memberName}]! 🐺✨ ¿Con cuál de los 8 miembros tienes vibra gemela? ¡Descúbrelo aquí!`
-        : `My Stray Kids soulmate is [${memberName}]! 🐺✨ Which SKZ member matches your vibe? Take the test:`;
+        ? `¡Mi alma gemela de ${groupName} es [${memberName}]! ✨ ¿Quién es tu match perfecto? ¡Descúbrelo aquí!`
+        : `My ${groupName} soulmate is [${memberName}]! ✨ Which member matches your vibe? Take the test:`;
+
+    const hashtags =
+      quiz.tag === 'BTS'
+        ? 'BTS,BTSARMY,KPulse'
+        : quiz.tag === 'BLACKPINK'
+        ? 'BLACKPINK,BLINK,KPulse'
+        : 'StrayKids,SKZ,STAY,KPulse';
 
     const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       text
-    )}&url=${encodeURIComponent('https://kpulsequiz.com/quiz/which-stray-kids-member-are-you')}&hashtags=StrayKids,SKZ,STAY,KPulse`;
+    )}&url=${encodeURIComponent(`https://kpulsequiz.com/quiz/${quiz.slug}`)}&hashtags=${hashtags}`;
 
     window.open(shareUrl, '_blank', 'width=550,height=420');
   };
 
   // 1. INTRO SCREEN
   if (testState === 'intro') {
+    const memberCount = Object.keys(resultsMap).length;
     return (
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="bg-white rounded-3xl border-2 border-purple-100 shadow-xl shadow-purple-500/10 overflow-hidden">
@@ -139,7 +140,7 @@ export default function PersonalityTestRunner({
                   ? '공식 소울메이트 성격 테스트'
                   : lang === 'es'
                   ? 'Test Oficial de Personalidad'
-                  : 'Official SKZ Personality Test'}
+                  : `Official ${quiz.tag || 'K-Pop'} Personality Test`}
               </span>
             </div>
 
@@ -153,20 +154,20 @@ export default function PersonalityTestRunner({
             {/* Mascot Preview */}
             <div className="mt-6 flex items-center justify-center gap-3">
               <img
-                src="/images/mascot/hobi-skz-v2.webp"
-                alt="Stay Hobi"
+                src={mascot.avatarUrl}
+                alt={mascot.name}
                 className="w-16 h-16 object-contain drop-shadow-md"
               />
               <div className="text-left bg-black/25 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-white/15">
                 <span className="text-[11px] font-black text-amber-300 block">
-                  {lang === 'ko' ? '스테이 호비의 가이드' : lang === 'es' ? 'Guía de Hobi STAY' : "Stay Hobi's Guide"}
+                  {mascot.badgeTitle}
                 </span>
                 <span className="text-xs text-white/90 font-medium">
                   {lang === 'ko'
-                    ? '정답은 없어요! 내 마음에 가장 와닿는 답변을 골라보세요 🐺'
+                    ? '정답은 없어요! 내 마음에 가장 와닿는 답변을 골라보세요 ✨'
                     : lang === 'es'
-                    ? '¡No hay respuestas incorrectas! Elige lo que dicte tu corazón 🐺'
-                    : 'No wrong answers! Pick what resonates with your heart 🐺'}
+                    ? '¡No hay respuestas incorrectas! Elige lo que dicte tu corazón ✨'
+                    : 'No wrong answers! Pick what resonates with your heart ✨'}
                 </span>
               </div>
             </div>
@@ -179,19 +180,19 @@ export default function PersonalityTestRunner({
                 <span className="text-xs text-slate-400 block font-medium">
                   {lang === 'ko' ? '문항 수' : lang === 'es' ? 'Preguntas' : 'Questions'}
                 </span>
-                <span className="text-base font-black text-purple-700">10 문항</span>
+                <span className="text-base font-black text-purple-700">{questions.length} {lang === 'ko' ? '문항' : 'Q'}</span>
               </div>
               <div className="p-3 bg-rose-50 rounded-2xl border border-rose-100">
                 <span className="text-xs text-slate-400 block font-medium">
                   {lang === 'ko' ? '소요 시간' : lang === 'es' ? 'Tiempo' : 'Time'}
                 </span>
-                <span className="text-base font-black text-rose-600">~2 분</span>
+                <span className="text-base font-black text-rose-600">~{quiz.estimatedMinutes || 3} {t.mins}</span>
               </div>
               <div className="p-3 bg-emerald-50 rounded-2xl border border-emerald-100">
                 <span className="text-xs text-slate-400 block font-medium">
                   {lang === 'ko' ? '결과 유형' : lang === 'es' ? 'Resultados' : 'Outcomes'}
                 </span>
-                <span className="text-base font-black text-emerald-700">8 멤버</span>
+                <span className="text-base font-black text-emerald-700">{memberCount} {lang === 'ko' ? '멤버' : lang === 'es' ? 'Miembros' : 'Members'}</span>
               </div>
             </div>
 
@@ -204,7 +205,7 @@ export default function PersonalityTestRunner({
                   ? '소울메이트 테스트 시작하기 ✨'
                   : lang === 'es'
                   ? 'Comenzar Test de Personalidad ✨'
-                  : 'Find My SKZ Soulmate ✨'}
+                  : 'Find Your Soulmate ✨'}
               </span>
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -216,30 +217,31 @@ export default function PersonalityTestRunner({
 
   // 2. CALCULATING ANIMATION
   if (testState === 'calculating') {
+    const memberCount = Object.keys(resultsMap).length;
     return (
       <div className="max-w-md mx-auto px-4 py-24 text-center">
         <div className="bg-white rounded-3xl p-10 border-2 border-purple-100 shadow-xl shadow-purple-500/10 flex flex-col items-center">
           <div className="relative mb-6">
             <img
-              src="/images/mascot/hobi-skz-v2.webp"
-              alt="Hobi calculating"
+              src={mascot.avatarUrl}
+              alt="Mascot calculating"
               className="w-32 h-32 object-contain animate-bounce drop-shadow-md"
             />
             <Compass className="w-8 h-8 text-rose-500 absolute -bottom-1 -right-1 animate-spin" />
           </div>
           <h2 className="text-xl font-black text-slate-900 mb-2">
             {lang === 'ko'
-              ? '호비가 소울메이트를 분석 중입니다... 🐺'
+              ? `${mascot.name}가 소울메이트를 분석 중입니다... ✨`
               : lang === 'es'
-              ? 'Hobi está analizando tu alma gemela... 🐺'
-              : 'Hobi is calculating your soulmate... 🐺'}
+              ? `${mascot.name} está analizando tu alma gemela... ✨`
+              : `${mascot.name} is calculating your soulmate... ✨`}
           </h2>
           <p className="text-xs text-slate-500 font-medium">
             {lang === 'ko'
-              ? '8명 멤버 중 나와 가장 닮은 바이브를 찾는 중!'
+              ? `${memberCount}명의 멤버 중 나와 가장 닮은 바이브를 찾는 중!`
               : lang === 'es'
-              ? '¡Descubriendo cuál de los 8 miembros tiene tu misma energía!'
-              : 'Matching your answers across all 8 Stray Kids members!'}
+              ? `¡Descubriendo cuál de los ${memberCount} miembros tiene tu misma energía!`
+              : `Matching your answers across all ${memberCount} members!`}
           </p>
         </div>
       </div>
@@ -421,35 +423,48 @@ export default function PersonalityTestRunner({
           </div>
         </div>
 
-        {/* Continuous Binge Banner: Link to 60-Question Stray Kids Trivia */}
-        <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-950 p-6 sm:p-8 rounded-3xl text-white shadow-xl mb-10 flex flex-col sm:flex-row items-center justify-between gap-6 border border-purple-500/20">
-          <div>
-            <span className="px-3 py-1 rounded-full bg-rose-500/30 text-rose-300 text-xs font-black uppercase tracking-wider mb-2 inline-block border border-rose-500/40">
-              ⚡ NEXT CHALLENGE (+100 XP)
-            </span>
-            <h3 className="text-xl sm:text-2xl font-black tracking-tight mb-1">
-              {lang === 'ko'
-                ? '스키즈 60문제 상식 퀴즈도 도전해볼까요?'
-                : lang === 'es'
-                ? '¿Listo para el Desafío STAY de 60 Preguntas?'
-                : 'Ready for the 60-Question STAY Trivia?'}
-            </h3>
-            <p className="text-xs sm:text-sm text-purple-200/80 max-w-md font-medium">
-              {lang === 'ko'
-                ? '데뷔곡 District 9부터 빌보드 200 대기록까지, 당신의 진정한 스테이 레벨을 증명하세요!'
-                : lang === 'es'
-                ? '¡Desde District 9 hasta récords de Billboard! ¡Demuestra cuánto sabes de Stray Kids!'
-                : 'From District 9 to historic Billboard #1 records, prove your true STAY status!'}
-            </p>
-          </div>
-          <Link
-            href="/quiz/stray-kids-stay-trivia"
-            className="w-full sm:w-auto px-6 py-3.5 bg-rose-500 hover:bg-rose-400 active:scale-95 text-white font-black text-sm rounded-full shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 shrink-0 transition-all"
-          >
-            <span>{lang === 'ko' ? '60문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 60 Preguntas' : 'Play 60-Question Trivia'}</span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
+        {/* Dynamic Continuous Binge Banner */}
+        {(() => {
+          let bingeHref = '/quiz/stray-kids-stay-trivia';
+          let bingeTitle = lang === 'ko' ? '스키즈 60문제 상식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío STAY de 60 Preguntas?' : 'Ready for the 60-Question STAY Trivia?';
+          let bingeDesc = lang === 'ko' ? '데뷔곡 District 9부터 빌보드 200 대기록까지, 당신의 진정한 스테이 레벨을 증명하세요!' : lang === 'es' ? '¡Desde District 9 hasta récords de Billboard! ¡Demuestra cuánto sabes de Stray Kids!' : 'From District 9 to historic Billboard #1 records, prove your true STAY status!';
+          let bingeBtn = lang === 'ko' ? '60문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 60 Preguntas' : 'Play 60-Question Trivia';
+
+          if (quiz.tag === 'BTS') {
+            bingeHref = '/quiz/bts-army-trivia';
+            bingeTitle = lang === 'ko' ? '방탄소년단 35문제 아미 지식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío ARMY de 35 Preguntas?' : 'Ready for the 35-Question BTS ARMY Trivia?';
+            bingeDesc = lang === 'ko' ? '데뷔곡 No More Dream부터 빌보드 Hot 100 대기록까지, 아미 레벨을 증명하세요!' : lang === 'es' ? '¡Desde No More Dream hasta el Hot 100! ¡Demuestra tu nivel ARMY!' : 'From No More Dream to Billboard Hot 100 records, prove your true ARMY status!';
+            bingeBtn = lang === 'ko' ? '35문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 35 Preguntas' : 'Play 35-Question Trivia';
+          } else if (quiz.tag === 'BLACKPINK') {
+            bingeHref = '/quiz/blackpink-blink-trivia';
+            bingeTitle = lang === 'ko' ? '블랙핑크 50문제 블링크 지식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío BLINK de 50 Preguntas?' : 'Ready for the 50-Question BLINK Trivia?';
+            bingeDesc = lang === 'ko' ? '휘파람, 뚜두뚜두부터 코첼라 헤드라이너까지, 당신의 블링크 지식을 테스트하세요!' : lang === 'es' ? '¡Desde Whistle hasta Coachella! ¡Pon a prueba cuánto sabes de BLACKPINK!' : 'From Whistle to headlining Coachella, put your BLINK knowledge to the test!';
+            bingeBtn = lang === 'ko' ? '50문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 50 Preguntas' : 'Play 50-Question Trivia';
+          }
+
+          return (
+            <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-950 p-6 sm:p-8 rounded-3xl text-white shadow-xl mb-10 flex flex-col sm:flex-row items-center justify-between gap-6 border border-purple-500/20">
+              <div>
+                <span className="px-3 py-1 rounded-full bg-rose-500/30 text-rose-300 text-xs font-black uppercase tracking-wider mb-2 inline-block border border-rose-500/40">
+                  ⚡ NEXT CHALLENGE (+100 XP)
+                </span>
+                <h3 className="text-xl sm:text-2xl font-black tracking-tight mb-1">
+                  {bingeTitle}
+                </h3>
+                <p className="text-xs sm:text-sm text-purple-200/80 max-w-md font-medium">
+                  {bingeDesc}
+                </p>
+              </div>
+              <Link
+                href={bingeHref}
+                className="w-full sm:w-auto px-6 py-3.5 bg-rose-500 hover:bg-rose-400 active:scale-95 text-white font-black text-sm rounded-full shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 shrink-0 transition-all"
+              >
+                <span>{bingeBtn}</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          );
+        })()}
 
         {/* Related Quizzes */}
         <div>

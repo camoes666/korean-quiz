@@ -1,0 +1,569 @@
+{
+  "slug": "which-blackpink-member-are-you",
+  "quizType": "personality",
+  "title": "Which BLACKPINK Member Are You?",
+  "titleKo": "나와 가장 잘 맞는 블랙핑크 멤버 찾기",
+  "titleEs": "¿Qué miembro de BLACKPINK eres?",
+  "subtitle": "Discover your iconic BLACKPINK persona, style aura, and sisterly chemistry!",
+  "subtitleKo": "당신의 독보적인 블랙핑크 페르소나, 스타일 아우라, 그리고 환상의 케미 멤버를 찾아보세요!",
+  "subtitleEs": "¡Descubre tu icónica personalidad de BLACKPINK, tu aura de estilo y tu química ideal!",
+  "description": "Are you 4D witty queen Jisoo, trendsetting fashion icon Jennie, soulful romantic songbird Rosé, or electrifying dance dynamo Lisa? Take the 10-question test!",
+  "descriptionKo": "단단한 멘탈의 4D 분위기메이커 지수, 세상을 리드하는 트렌드세터 제니, 감성 충만한 보컬리스트 로제, 압도적인 퍼포먼스 퀸 리사 중 당신의 영혼과 가장 닮은 멤버는 누구일까요?",
+  "descriptionEs": "¿Eres la reina del ingenio Jisoo, el icono de moda Jennie, la dulce y emotiva Rosé o la arrolladora reina del baile Lisa? ¡Haz el test de 10 preguntas!",
+  "category": "K-Pop",
+  "tag": "BLACKPINK",
+  "coverEmoji": "💖",
+  "gradient": "from-zinc-950 via-pink-950 to-rose-900",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "289.4K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "jisoo": {
+      "id": "jisoo",
+      "name": "Jisoo (Kim Jisoo)",
+      "nameKo": "지수 (김지수)",
+      "nameEs": "Jisoo (Kim Jisoo)",
+      "title": "The Cool Unnie & 4D Humor Queen",
+      "titleKo": "쿨하고 단단한 맏언니 & 4D 매력의 분위기 메이커",
+      "titleEs": "La Hermana Mayor Genial y Reina del Humor",
+      "subtitle": "Unshakable Mindset · Gamer Soul · Effortless Cool",
+      "subtitleKo": "단단한 멘탈 · 겜순이 모먼트 · 털털한 유쾌함",
+      "subtitleEs": "Mentalidad de Acero · Gamer · Carisma Relajado",
+      "skzoo": "Turtle Rabbit Kim (Dalgomi's Mom)",
+      "skzooKo": "터틀래빗킴 (달곰이 엄마)",
+      "skzooEs": "Turtle Rabbit Kim (Mamá de Dalgom)",
+      "emoji": "🐰",
+      "traits": [
+        "Unshakable Mindset",
+        "Playful Wit",
+        "Caring Anchor"
+      ],
+      "traitsKo": [
+        "흔들리지 않는 멘탈",
+        "엉뚱 발랄 유머",
+        "든든한 맏언니"
+      ],
+      "traitsEs": [
+        "Mente Inquebrantable",
+        "Humor Ingenioso",
+        "Apoyo Incondicional"
+      ],
+      "description": "Like Jisoo, you possess rare inner calm, resilience, and a delightfully witty humor! You don't let petty drama shake you, keeping the mood light and looking out for everyone with warm sisterly wisdom.",
+      "descriptionKo": "지수처럼 웬만한 일에는 눈 하나 깜짝하지 않는 강철 멘탈과 엉뚱 유쾌한 매력의 소유자! 맏언니처럼 주변을 편안하게 지켜주면서도 웃음을 잃지 않는 쿨하고 사랑스러운 존재입니다.",
+      "descriptionEs": "Como Jisoo, tienes una fortaleza interior admirable y un sentido del humor único. No te dejas afectar por los problemas y siempre mantienes la sonrisa de quienes te rodean con tu sabiduría y calidez.",
+      "bestMatchId": "jennie",
+      "bestMatchName": "Jennie",
+      "bestMatchNameKo": "제니 (Jennie)",
+      "bestMatchNameEs": "Jennie",
+      "bestMatchReason": "JenSoo harmony! Jisoo's grounded calm and Jennie's chic sweetness create the ultimate power duo.",
+      "bestMatchReasonKo": "전설의 젠슈(JenSoo) 조합! 지수의 단단한 멘탈과 제니의 러블리한 감성이 만나 가장 든든하고 완벽한 시너지를 만듭니다.",
+      "bestMatchReasonEs": "¡La legendaria dupla JenSoo! La serenidad de Jisoo y la dulzura de Jennie forman el equipo perfecto.",
+      "colorHex": "#e11d48",
+      "bgGradient": "from-rose-600 via-pink-700 to-slate-950"
+    },
+    "jennie": {
+      "id": "jennie",
+      "name": "Jennie (Kim Jennie)",
+      "nameKo": "제니 (김제니 / Ruby Jane)",
+      "nameEs": "Jennie (Kim Jennie)",
+      "title": "Iconic Trendsetter & Sweet Homebody",
+      "titleKo": "세상을 리드하는 트렌드세터 & 러블리 집순이",
+      "titleEs": "Icono de Tendencias y Corazón Tierno",
+      "subtitle": "Runway Aura · Sweet Shy Baby · Trend Creator",
+      "subtitleKo": "독보적 아우라 · 반전 애교 · 확실한 취향과 안목",
+      "subtitleEs": "Aura de Pasarela · Dulzura Tierna · Creadora de Moda",
+      "skzoo": "Baby Nini (Kuma's Mom)",
+      "skzooKo": "베이비 니니 (쿠마 엄마)",
+      "skzooEs": "Baby Nini (Mamá de Kuma)",
+      "emoji": "🥟",
+      "traits": [
+        "Magnetic Style",
+        "Selective Intimacy",
+        "Bold Creativity"
+      ],
+      "traitsKo": [
+        "확실한 감각",
+        "내 사람에게만 보여주는 다정함",
+        "독보적 카리스마"
+      ],
+      "traitsEs": [
+        "Estilo Magnético",
+        "Círculo Íntimo Fiel",
+        "Creatividad Audaz"
+      ],
+      "description": "Like Jennie, you command attention wherever you walk with effortless charisma. While fierce and poised in the spotlight, you are sweet, cuddly, and fiercely protective with your inner circle.",
+      "descriptionKo": "제니처럼 뿜어져 나오는 세련된 아우라와 반전 애교를 동시에 가진 매력 부자! 겉으로는 도도해 보여도 내 사람들에게는 한없이 다정하며, 자신만의 독보적인 스타일로 세상을 매료시킵니다.",
+      "descriptionEs": "Como Jennie, desprendes una elegancia y magnetismo únicos donde sea que vayas. En público eres audaz e impecable, pero en confianza eres dulce, tierna y leal con tus seres queridos.",
+      "bestMatchId": "rose",
+      "bestMatchName": "Rosé",
+      "bestMatchNameKo": "로제 (Rosé)",
+      "bestMatchNameEs": "Rosé",
+      "bestMatchReason": "Chaennie harmony! Shared artistic sensibilities and deep mutual comfort.",
+      "bestMatchReasonKo": "챙니(Chaennie) 케미! 감성과 음악적 취향을 공유하며 서로에게 가장 큰 정서적 쉼터가 되어줍니다.",
+      "bestMatchReasonEs": "¡La química Chaennie! Complicidad artística profunda y comprensión mutua sin palabras.",
+      "colorHex": "#db2777",
+      "bgGradient": "from-zinc-950 via-pink-900 to-black"
+    },
+    "rose": {
+      "id": "rose",
+      "name": "Rosé (Park Chaeyoung)",
+      "nameKo": "로제 (박채영 / ROSÉ)",
+      "nameEs": "Rosé (Park Chaeyoung)",
+      "title": "Soulful Songbird & Romantic Dreamer",
+      "titleKo": "감성 가득한 보이스 & 사랑스러운 낭만파",
+      "titleEs": "Voz del Alma y Soñadora Romántica",
+      "subtitle": "Acoustic Soul · Heartfelt Foodie · Emotional Depth",
+      "subtitleKo": "새벽 감성 기타 · 진심인 먹방러 · 풍부한 감수성",
+      "subtitleEs": "Alma Acústica · Gourmet Apasionada · Emociones Puras",
+      "skzoo": "Chipmunk Chaeng (Hank's Mom)",
+      "skzooKo": "다람쥐 챙 (행크 엄마)",
+      "skzooEs": "Chipmunk Chaeng (Mamá de Hank)",
+      "emoji": "🐿️",
+      "traits": [
+        "Passionate Soul",
+        "Deep Sensitivity",
+        "Pure Joy for Food"
+      ],
+      "traitsKo": [
+        "풍부한 감수성",
+        "음악과 예술 사랑",
+        "맛있는 음식에 진심"
+      ],
+      "traitsEs": [
+        "Sensibilidad Profunda",
+        "Amor por el Arte",
+        "Pasión por la Buena Comida"
+      ],
+      "description": "Like Rosé, you live and breathe pure emotion, melodies, and romantic ideals. You appreciate the beauty in everyday moments, love delicious food with a pure heart, and touch souls with your honesty.",
+      "descriptionKo": "로제처럼 음악과 감성, 낭만에 푹 빠져 사는 순수한 예술가! 맛있는 음식을 먹을 때 온 세상이 환해지며, 솔직하고 깊이 있는 감수성으로 사람들의 마음을 따스하게 어루만집니다.",
+      "descriptionEs": "Como Rosé, vives conectada a la música, el arte y los sentimientos sinceros. Disfrutas de las cosas bellas de la vida, amas la buena comida y tocas el corazón de todos con tu autenticidad.",
+      "bestMatchId": "lisa",
+      "bestMatchName": "Lisa",
+      "bestMatchNameKo": "리사 (Lisa)",
+      "bestMatchNameEs": "Lisa",
+      "bestMatchReason": "ChaeLisa besties! The chaotic 97-line laughter that turns ordinary moments into unforgettable memories.",
+      "bestMatchReasonKo": "전설의 채리사(ChaeLisa) 97즈! 만나기만 하면 웃음이 빵빵 터지는 찐친 모먼트로 인생의 비타민이 되어줍니다.",
+      "bestMatchReasonEs": "¡Las inseparables ChaeLisa! Amigas del alma de la 97-line que llenan cada momento de risas y aventura.",
+      "colorHex": "#fb7185",
+      "bgGradient": "from-rose-500 via-pink-600 to-purple-950"
+    },
+    "lisa": {
+      "id": "lisa",
+      "name": "Lisa (Lalisa Manobal)",
+      "nameKo": "리사 (라리사 마노반 / LISA)",
+      "nameEs": "Lisa (Lalisa Manobal)",
+      "title": "Dancing Dynamo & Global Sunshine",
+      "titleKo": "압도적인 퍼포먼스 퀸 & 긍정 비타민 막내",
+      "titleEs": "Reina del Escenario y Energía Solar",
+      "subtitle": "Electrifying Stage · Playful Humor · Fearless Pioneer",
+      "subtitleKo": "폭발적인 무대 장악력 · 유쾌한 장난꾸러기 · 두려움 없는 도전가",
+      "subtitleEs": "Poder en Escenario · Bromista Divertida · Pionera Valiente",
+      "skzoo": "Lili Cat (L Family Mom)",
+      "skzooKo": "릴리 캣 (L 패밀리 집사)",
+      "skzooEs": "Lili Cat (Mamá de la familia L)",
+      "emoji": "🐱",
+      "traits": [
+        "Stage Dominance",
+        "Playful Humor",
+        "Global Ambition"
+      ],
+      "traitsKo": [
+        "무대 장악력",
+        "쾌활한 에너지",
+        "거침없는 도전 정신"
+      ],
+      "traitsEs": [
+        "Dominio Escénico",
+        "Humor Juguetón",
+        "Ambición Valiente"
+      ],
+      "description": "Like Lisa, you possess electric stage presence and an irrepressible spark of joy! You embrace bold adventures without hesitation, turning relentless hard work into effortless triumph.",
+      "descriptionKo": "리사처럼 무대 위에서는 카리스마를 폭발시키고, 일상에서는 장난기 가득한 인간 비타민! 두려움 없이 새로운 세상에 도전하며, 자신의 열정으로 전 세계를 매료시키는 멋진 주인공입니다.",
+      "descriptionEs": "Como Lisa, tienes una energía magnética e imparable. En tus metas eres feroz y dedicada, pero en el día a día eres la persona más divertida y cariñosa del mundo.",
+      "bestMatchId": "jisoo",
+      "bestMatchName": "Jisoo",
+      "bestMatchNameKo": "지수 (Jisoo)",
+      "bestMatchNameEs": "Jisoo",
+      "bestMatchReason": "LiSoo comedy sisters! Endless playful teasing and unconditional sisterly warmth.",
+      "bestMatchReasonKo": "리수(LiSoo) 자매 케미! 끝없는 장난과 티키타카 속에 싹트는 가장 편안하고 따뜻한 유대감을 나눕니다.",
+      "bestMatchReasonEs": "¡El dúo cómico LiSoo! Bromas constantes, risas y un cariño fraternal incondicional.",
+      "colorHex": "#f59e0b",
+      "bgGradient": "from-amber-500 via-pink-600 to-indigo-950"
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "question": "What is your go-to weekend outfit when heading out with friends?",
+      "questionKo": "주말에 친구들과 약속이 있을 때, 당신이 가장 선호하는 착장 스타일은?",
+      "questionEs": "¿Cuál es tu estilo favorito para salir con amigos un fin de semana?",
+      "emoji": "👗",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chic luxury streetwear with bold sunglasses and iconic silhouette accessories",
+          "textKo": "트렌디한 스트리트 무드와 럭셔리 포인트, 힙한 선글라스와 감각적인 실루엣",
+          "textEs": "Streetwear chic con accesorios de lujo, gafas de sol y una silueta impecable",
+          "scores": { "jennie": 3, "lisa": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Comfortable oversized hoodie, stylish cap, and cool sneakers for effortless swagger",
+          "textKo": "편안한 오버핏 후드나 재킷, 볼캡과 힙한 스니커즈로 완성한 쿨하고 캐주얼한 룩",
+          "textEs": "Sudadera oversized cómoda, gorra estilosa y zapatillas geniales con actitud relajada",
+          "scores": { "lisa": 3, "jisoo": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Vintage rock tee, wide-leg trousers, acoustic guitar strap vibe, and leather jacket",
+          "textKo": "빈티지 락 티셔츠, 와이드 슬랙스나 가죽 재킷으로 멋을 낸 낭만적인 그런지 룩",
+          "textEs": "Camiseta rock vintage, pantalones anchos, chaqueta de cuero y aire bohemio",
+          "scores": { "rose": 3, "jennie": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Classic, neat, and elegant: a timeless knit, pretty dress, or sweet cardigan",
+          "textKo": "단정하고 클래식한 니트나 원피스, 편안하면서도 우아함이 돋보이는 룩",
+          "textEs": "Clásico, limpio y elegante: un suéter atemporal, vestido lindo o cárdigan dulce",
+          "scores": { "jisoo": 3, "rose": 1 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "After weeks of intense schedules, how do you recharge your energy?",
+      "questionKo": "바쁘고 치열했던 일정이 끝난 뒤, 당신이 에너지를 충전하는 가장 이상적인 방법은?",
+      "questionEs": "Después de semanas de trabajo intenso, ¿cómo recargas tu energía?",
+      "emoji": "🛋️",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cozy in bed with my pet, scented candles, quiet movies, and total peace at home",
+          "textKo": "향초를 켜고 푹신한 침대 속에서 반려견과 함께 조용히 넷플릭스 보며 쉬기",
+          "textEs": "En la cama con mi mascota, velas aromáticas, películas tranquilas y paz total en casa",
+          "scores": { "jennie": 3, "jisoo": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Gaming marathon on PC/console, bingeing webtoons, laughing at silly memes",
+          "textKo": "좋아하는 컴퓨터/모바일 게임을 밤새 달리고, 재밌는 영상 보며 킬킬거리기",
+          "textEs": "Maratón de videojuegos, leer webtoons y reírme con memes divertidos",
+          "scores": { "jisoo": 3, "lisa": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Hunting down viral gourmet food spots, eating incredible dishes with pure joy",
+          "textKo": "유명한 맛집을 찾아가 진심 어린 감탄을 쏟아내며 맛있는 음식으로 힐링하기",
+          "textEs": "Buscar los mejores restaurantes y disfrutar de platos deliciosos con pura felicidad",
+          "scores": { "rose": 3, "jennie": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Dancing to new beats, hanging out with friends, or going on a spontaneous trip",
+          "textKo": "신나는 음악에 맞춰 몸을 흔들거나, 친구들과 즉흥으로 드라이브 떠나기",
+          "textEs": "Bailar con música nueva, salir con amigos o hacer un viaje espontáneo y divertido",
+          "scores": { "lisa": 3, "rose": 1 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "In a big group project or friend circle, what role do you naturally embody?",
+      "questionKo": "친구 모임이나 팀 프로젝트에서 당신이 자연스럽게 맡게 되는 포지션은?",
+      "questionEs": "En un grupo de amigos o proyecto en equipo, ¿qué rol sueles ocupar?",
+      "emoji": "👑",
+      "options": [
+        {
+          "id": "A",
+          "text": "The anchor: staying calm when others panic, solving crises with a cool head and wit",
+          "textKo": "모두가 당황할 때 흔들리지 않고 중심을 잡아주며 유쾌하게 긴장을 풀어주는 멘탈 지킴이",
+          "textEs": "El ancla: mantener la calma cuando otros entran en pánico y resolver crisis con humor",
+          "scores": { "jisoo": 3, "rose": 1 }
+        },
+        {
+          "id": "B",
+          "text": "The creative director: bringing impeccable aesthetic standards, vision, and polish",
+          "textKo": "트렌디한 감각과 높은 퀄리티 기준으로 결과물의 디테일과 비주얼을 책임지는 디렉터",
+          "textEs": "La directora creativa: aportar estándares estéticos impecables, visión y estilo",
+          "scores": { "jennie": 3, "lisa": 1 }
+        },
+        {
+          "id": "C",
+          "text": "The emotional heart: pouring pure soul and musical warmth, inspiring everyone's mood",
+          "textKo": "따뜻한 진심과 세심한 감성으로 팀원들의 마음을 북돋우고 감동을 불어넣는 감성 메이커",
+          "textEs": "El corazón emotivo: poner pasión y calidez sincera, inspirando el ánimo de todos",
+          "scores": { "rose": 3, "jisoo": 1 }
+        },
+        {
+          "id": "D",
+          "text": "The spark plug: lighting up the room with high energy, jokes, and show-stopping execution",
+          "textKo": "지칠 때마다 넘치는 에너지와 장난으로 분위기를 띄우고, 행동으로 증명하는 에너자이저",
+          "textEs": "La chispa de energía: encender el ambiente con entusiasmo, bromas y ejecución brillante",
+          "scores": { "lisa": 3, "jennie": 1 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "When you walk onto a stage or give a big presentation, what happens?",
+      "questionKo": "무대에 오르거나 많은 사람들 앞에서 발표를 해야 할 때, 당신의 내면은?",
+      "questionEs": "¿Qué sientes al subir a un escenario o dar una presentación importante?",
+      "emoji": "🎤",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pure adrenaline rush! My eyes ignite, and I own the spotlight with fierce power",
+          "textKo": "심장이 짜릿하게 뛰며 아드레날린 폭발! 눈빛이 돌변하며 무대를 온전히 장악한다",
+          "textEs": "¡Adrenalina pura! Mi mirada cambia y domino el escenario con poder absoluto",
+          "scores": { "lisa": 3, "jennie": 1 }
+        },
+        {
+          "id": "B",
+          "text": "I feel butterflies, but the second the music starts, an effortlessly chic alter-ego takes over",
+          "textKo": "처음엔 긴장되지만, 시작되는 순간 나만의 독보적인 카리스마와 매력이 흘러나온다",
+          "textEs": "Siento nervios al inicio, pero en cuanto empieza, una confianza magnética se apodera de mí",
+          "scores": { "jennie": 3, "rose": 1 }
+        },
+        {
+          "id": "C",
+          "text": "I channel every drop of emotion through my voice, aiming to give everyone goosebumps",
+          "textKo": "모든 감정을 목소리에 실어 청중의 가슴에 진한 여운과 소름 돋는 울림을 전한다",
+          "textEs": "Canalizo cada gota de emoción a través de mi voz para erizar la piel del público",
+          "scores": { "rose": 3, "jisoo": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Calm, steady, and focused. I deliver flawlessly without letting pressure faze me",
+          "textKo": "차분하고 안정감 있게! 어떤 돌발 상황이 생겨도 의연하게 해낸다",
+          "textEs": "Tranquila, firme y enfocada. Cumplo a la perfección sin dejar que la presión me afecte",
+          "scores": { "jisoo": 3, "lisa": 1 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Which snack or comfort food makes you the happiest person on earth?",
+      "questionKo": "세상에서 당신을 가장 행복하게 만드는 소울 푸드는?",
+      "questionEs": "¿Qué comida o postre te hace la persona más feliz del planeta?",
+      "emoji": "🍜",
+      "options": [
+        {
+          "id": "A",
+          "text": "Steaming hot spicy Kimchi Jjigae or ramen that hits the spot with deep savory flavor",
+          "textKo": "얼큰하고 칼칼한 김치찌개나 라면, 밥 한 공기 뚝딱 비우는 든든한 한식",
+          "textEs": "Un Kimchi Jjigae caliente o ramen picante que reconforta el alma con su sabor profundo",
+          "scores": { "jisoo": 3, "jennie": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Crispy pastries, sweet bakery treats, ice cream, or trendy bakery desserts",
+          "textKo": "달콤한 베이커리 빵, 아이스크림이나 감각적인 디저트 카페의 시그니처 메뉴",
+          "textEs": "Pasteles crujientes, postres dulces, helado o delicias de panadería moderna",
+          "scores": { "jennie": 3, "rose": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Fresh vibrant food! Juicy hot pot, fresh greens, Vietnamese Pho, and rich gourmet sauces",
+          "textKo": "깊은 국물의 쌀국수, 신선한 월남쌈, 맛있는 고기와 진한 소스가 가득한 미식 한 상",
+          "textEs": "¡Comida gourmet! Pho vietnamita caliente, rollos frescos y platos llenos de sabor",
+          "scores": { "rose": 3, "lisa": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Crispy fried chicken, potato fries, and sweet milk tea or bubble tea!",
+          "textKo": "바삭한 치킨, 감자튀김, 그리고 달콤하고 시원한 버블티 한 잔의 완벽한 조합!",
+          "textEs": "Pollo frito crujiente, patatas fritas y un bubble tea dulce bien frío",
+          "scores": { "lisa": 3, "jisoo": 1 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "How do you handle rumors, drama, or unfair criticism?",
+      "questionKo": "근거 없는 소문이나 불필요한 시선, 스트레스에 대처하는 당신만의 방식은?",
+      "questionEs": "¿Cómo manejas los chismes, el drama o las críticas injustas?",
+      "emoji": "🛡️",
+      "options": [
+        {
+          "id": "A",
+          "text": "I literally don't care. I know who I am, laugh it off, and live my best life",
+          "textKo": "눈길조차 주지 않는다. 내가 누구인지 내가 잘 알기에 피식 웃고 내 갈 길을 간다",
+          "textEs": "Literalmente no me importa. Sé quién soy, me río de ello y disfruto mi vida",
+          "scores": { "jisoo": 3, "lisa": 1 }
+        },
+        {
+          "id": "B",
+          "text": "I keep my circle small and private. My true achievements speak louder than noise",
+          "textKo": "믿는 사람들과만 마음을 나누고, 결과와 실력으로 우아하게 증명해 보인다",
+          "textEs": "Mantengo mi círculo íntimo cerrado. Mis logros hablan mucho más fuerte que el ruido",
+          "scores": { "jennie": 3, "rose": 1 }
+        },
+        {
+          "id": "C",
+          "text": "It can hurt at first, but I pour all those emotions into honest music and art to heal",
+          "textKo": "마음이 쓰릴 때도 있지만, 그 감정들을 음악이나 글, 창작으로 승화시켜 단단해진다",
+          "textEs": "Puede doler al principio, pero transformo esas emociones en música sincera y arte",
+          "scores": { "rose": 3, "jennie": 1 }
+        },
+        {
+          "id": "D",
+          "text": "I work 10x harder, dance it out, and let my undeniable success shut down any doubts",
+          "textKo": "땀 흘려 연습하고 무대에서 압도적인 실력으로 보여주어 모든 의심을 잠재운다",
+          "textEs": "Trabajo diez veces más duro y dejo que mi éxito indiscutible silencie cualquier duda",
+          "scores": { "lisa": 3, "jisoo": 1 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What is your dream travel destination and style?",
+      "questionKo": "당신이 꿈꾸는 가장 이상적인 해외 여행지와 스타일은?",
+      "questionEs": "¿Cuál es tu destino de viaje soñado y tu estilo al viajar?",
+      "emoji": "✈️",
+      "options": [
+        {
+          "id": "A",
+          "text": "Paris or Milan during fashion week, boutique shopping, charming cafés, and private art galleries",
+          "textKo": "패션과 예술이 살아 숨 쉬는 파리/밀라노의 감성 카페와 프라이빗 갤러리 투어",
+          "textEs": "París o Milán: cafeterías encantadoras, compras exclusivas y galerías de arte",
+          "scores": { "jennie": 3, "rose": 1 }
+        },
+        {
+          "id": "B",
+          "text": "A sun-kissed tropical beach resort, ocean swimming, sunset boat parties with friends",
+          "textKo": "햇살 가득한 에메랄드빛 휴양지 바다에서 서핑하고 친구들과 선셋 파티 즐기기",
+          "textEs": "Un resort tropical soleado: nadar en el mar, fiestas al atardecer y aventura",
+          "scores": { "lisa": 3, "jisoo": 1 }
+        },
+        {
+          "id": "C",
+          "text": "A romantic European countryside villa with acoustic guitars, flower fields, and wine",
+          "textKo": "꽃향기 가득한 유럽 시골 마을의 포근한 숙소에서 기타 치고 와인과 함께 사색하기",
+          "textEs": "Una villa romántica en el campo europeo con guitarras, viñedos y atardeceres mágicos",
+          "scores": { "rose": 3, "jennie": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Exploring charming historic towns, quiet theme parks, and eating delicious local street treats",
+          "textKo": "유서 깊은 소도시나 놀이공원을 여유롭게 거닐며 맛있는 로컬 길거리 간식 맛보기",
+          "textEs": "Recorrer pueblos históricos, parques temáticos y probar comida callejera deliciosa",
+          "scores": { "jisoo": 3, "lisa": 1 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "Which iconic BLACKPINK anthem lyric speaks right to your core?",
+      "questionKo": "블랙핑크의 대표 명곡 가사 중 당신의 가슴을 가장 뜨겁게 뛰게 하는 구절은?",
+      "questionEs": "¿Qué verso icónico de BLACKPINK resuena más con tu espíritu?",
+      "emoji": "🖤",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Look at you, now look at me! How you like that?' (Confidence in the face of adversity)",
+          "textKo": "'보란 듯이 무너졌지만 바닥을 치고 올라왔지, How you like that!' (당당한 자신감)",
+          "textEs": "'Look at you, now look at me! How you like that?' (Superación y triunfo)",
+          "scores": { "jisoo": 2, "lisa": 2 }
+        },
+        {
+          "id": "B",
+          "text": "'Bitch, I'm a star, but not a Patrick / Shining solo on my own throne' (Solo independence)",
+          "textKo": "'빛이 나는 솔로! 나만의 빛으로 누구보다 당당하게 빛나는 독보적 아우라'",
+          "textEs": "'Brillando sola en mi propio trono: elegancia, poder y libertad'",
+          "scores": { "jennie": 3, "lisa": 1 }
+        },
+        {
+          "id": "C",
+          "text": "'I worked the whole night, now I get to be what I want to be' (Pure passion for dreams)",
+          "textKo": "'밤새워 꿈을 좇았던 모든 눈물과 열정이 지금의 찬란한 나를 만들었어' (순수한 열정)",
+          "textEs": "'Trabajé toda la noche para convertirme en quien quiero ser' (Pasión por los sueños)",
+          "scores": { "rose": 3, "jennie": 1 }
+        },
+        {
+          "id": "D",
+          "text": "'Say Lalisa, love me, Lalisa, love me! Catch me if you can!' (Magnetic world domination)",
+          "textKo": "'세상 어디서든 내 이름을 외치게 만드는 폭발적인 에너지와 당당함!'",
+          "textEs": "'¡Energía imparable que conquista el mundo con carisma y ritmo!'",
+          "scores": { "lisa": 3, "jisoo": 1 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What is your photography vibe when sharing on Instagram / social media?",
+      "questionKo": "인스타그램 등 SNS에 사진을 올릴 때 당신만의 무드는?",
+      "questionEs": "¿Cuál es tu estilo al compartir fotos en Instagram o redes sociales?",
+      "emoji": "📸",
+      "options": [
+        {
+          "id": "A",
+          "text": "High fashion editorial look: mood lighting, candid luxury details, minimalist aesthetic",
+          "textKo": "마치 패션 화보 같은 세련된 조명과 앵글, 미니멀하면서도 감각적인 일상 디테일",
+          "textEs": "Estilo editorial de moda: iluminación cuidada, detalles chic y estética minimalista",
+          "scores": { "jennie": 3, "rose": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Warm golden hour sunlight, aesthetic blurry motion shots, and acoustic vintage tones",
+          "textKo": "따뜻한 노을빛, 살짝 흔들린 감성 사진, 빈티지 필름 카메라 느낌의 낭만적인 피드",
+          "textEs": "Luz dorada del atardecer, fotos analógicas con encanto nostálgicoy toques bohemios",
+          "scores": { "rose": 3, "jennie": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Bold, dynamic poses: high energy, bright sunshine smiles, and striking street fashion",
+          "textKo": "힙한 포즈와 시원한 미소, 컬러풀하고 에너지 넘치는 스트리트 스타일",
+          "textEs": "Poses dinámicas y audaces, sonrisa radiante y looks urbanos llamativos",
+          "scores": { "lisa": 3, "jisoo": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Pretty, natural, candid moments with funny captions or cute pets",
+          "textKo": "자연스럽고 예쁜 본연의 모습, 귀여운 반려견 사진과 위트 있는 한 줄 캡션",
+          "textEs": "Momentos bonitos, naturales y espontáneos con mascotas lindas y pies de foto graciosos",
+          "scores": { "jisoo": 3, "lisa": 1 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "What makes a person truly irresistible and attractive in your eyes?",
+      "questionKo": "당신의 눈에 한 사람을 가장 매력적이고 빛나게 만드는 요소는 무엇인가요?",
+      "questionEs": "¿Qué hace que una persona sea verdaderamente irresistible y atractiva para ti?",
+      "emoji": "✨",
+      "options": [
+        {
+          "id": "A",
+          "text": "Effortless confidence, unique personal style, and being genuine without pretending",
+          "textKo": "자신만의 확고한 색깔과 감각, 억지로 꾸미지 않아도 묻어나는 자연스러운 당당함",
+          "textEs": "Confianza natural, estilo auténtico y ser fiel a uno mismo sin fingir",
+          "scores": { "jennie": 3, "lisa": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Emotional sincerity, warm heartfelt empathy, and a deep passion for what they love",
+          "textKo": "진심 어린 따뜻한 공감능력, 자신이 사랑하는 일에 온 마음을 다하는 순수한 열정",
+          "textEs": "Sinceridad emocional, empatía profunda y pasión pura por lo que aman",
+          "scores": { "rose": 3, "jisoo": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Fierce talent, bright contagious laughter, and the bravery to try new adventures",
+          "textKo": "거침없는 실력과 함께 있을 때 사람들을 웃게 만드는 유쾌하고 밝은 비타민 에너지",
+          "textEs": "Gran talento, risa contagiosa y la valentía de explorar nuevas aventuras",
+          "scores": { "lisa": 3, "jennie": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Inner peace, unwavering loyalty to loved ones, and witty humor that diffuses any storm",
+          "textKo": "쉽게 흔들리지 않는 단단한 내면, 내 사람을 향한 의리와 위트 있는 따스함",
+          "textEs": "Paz interior, lealtad incondicional hacia los suyos y un humor reconfortante",
+          "scores": { "jisoo": 3, "rose": 1 }
+        }
+      ]
+    }
+  ]
+}

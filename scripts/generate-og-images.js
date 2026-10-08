@@ -84,6 +84,24 @@ const THEMES = {
     pillText: '#ffffff',
     tag: 'PERSONALITY TEST · STRAY KIDS 🔮🐺',
   },
+  'which-bts-member-are-you': {
+    bgStart: '#0b0217',
+    bgMid: '#2e1065',
+    bgEnd: '#7c3aed',
+    accent: '#c084fc',
+    pillBg: '#9333ea',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · BTS ARMY 🔮💜',
+  },
+  'which-blackpink-member-are-you': {
+    bgStart: '#14030d',
+    bgMid: '#380922',
+    bgEnd: '#db2777',
+    accent: '#f43f5e',
+    pillBg: '#f43f5e',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · BLACKPINK 🔮💖',
+  },
 };
 
 const files = fs.readdirSync(QUIZZES_DIR).filter((f) => f.endsWith('.json'));
@@ -189,10 +207,10 @@ async function generateAll() {
     const outputPath = path.join(OUTPUT_DIR, `${quiz.slug}.png`);
 
     let mascotFile = HOBI_PATH;
-    if (quiz.slug === 'blackpink-blink-trivia') {
+    if (quiz.slug === 'blackpink-blink-trivia' || quiz.slug === 'which-blackpink-member-are-you') {
       const bpMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'bomi-blackpink.png');
       if (fs.existsSync(bpMascot)) mascotFile = bpMascot;
-    } else if (quiz.slug === 'bts-army-trivia') {
+    } else if (quiz.slug === 'bts-army-trivia' || quiz.slug === 'which-bts-member-are-you') {
       const btsMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-bts.png');
       if (fs.existsSync(btsMascot)) mascotFile = btsMascot;
     } else if (quiz.slug === 'stray-kids-stay-trivia' || quiz.slug === 'which-stray-kids-member-are-you') {
