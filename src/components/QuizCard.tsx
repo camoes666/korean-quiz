@@ -124,10 +124,10 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             <span>
               {quiz.quizType === 'personality'
                 ? lang === 'ko'
-                  ? '나의 멤버 찾기 →'
+                  ? '나의 멤버 찾기'
                   : lang === 'es'
-                  ? 'Descubrir Mi Miembro →'
-                  : 'Find Your Soulmate →'
+                  ? 'Descubrir Mi Miembro'
+                  : 'Find Your Soulmate'
                 : t.startChallenge}
             </span>
             <ArrowRight className="w-4 h-4" />
