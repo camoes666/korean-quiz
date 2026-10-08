@@ -11,6 +11,12 @@ export default function AdPlaceholder({
   label = 'Advertisement',
   className = '',
 }: AdPlaceholderProps) {
+  // Hide empty ad placeholders prior to AdSense approval to maintain clean UI and pass review
+  const adsEnabled = process.env.NEXT_PUBLIC_ENABLE_ADS === 'true' || !!process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  if (!adsEnabled) {
+    return null;
+  }
+
   const getDimensions = () => {
     switch (format) {
       case 'rectangle':

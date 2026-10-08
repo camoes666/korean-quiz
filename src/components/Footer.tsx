@@ -29,8 +29,17 @@ export default function Footer() {
             <Link href="/#quizzes" className="hover:text-violet-600 transition-colors">
               {t.footer.allQuizzes}
             </Link>
+            <Link href="/about" className="hover:text-violet-600 transition-colors">
+              About Us
+            </Link>
+            <Link href="/privacy" className="hover:text-violet-600 transition-colors">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="hover:text-violet-600 transition-colors">
+              Terms
+            </Link>
             <a
-              href="https://twitter.com"
+              href="https://x.com/JIlmong"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-violet-600 transition-colors"

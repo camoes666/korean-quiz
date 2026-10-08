@@ -37,21 +37,21 @@ export default function LeaderboardCard() {
                 ? '글로벌 명예의 전당'
                 : lang === 'es'
                 ? 'Salón de la Fama Global'
-                : 'Global Leaderboard'}
+                : 'Global Hall of Fame'}
             </h3>
             <p className="text-[11px] text-slate-400 font-medium">
               {lang === 'ko'
-                ? '실시간 주간 랭킹 TOP 5'
+                ? '시즌 1 명예의 전당 TOP 5 (시즌 2 오픈 예정)'
                 : lang === 'es'
-                ? 'Top 5 retadores esta semana'
-                : 'Top challengers this week'}
+                ? 'Top 5 Temporada 1 (Temporada 2 Próximamente)'
+                : 'Season 1 Top Challengers (Season 2 Coming Soon)'}
             </p>
           </div>
         </div>
 
-        <span className="flex items-center gap-1.5 text-[11px] font-black px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-600 border border-emerald-200">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-          LIVE
+        <span className="flex items-center gap-1.5 text-[11px] font-black px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
+          <span>🏆</span>
+          <span>{lang === 'ko' ? '시즌 1' : lang === 'es' ? 'Temporada 1' : 'Season 1'}</span>
         </span>
       </div>
 
