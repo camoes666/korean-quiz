@@ -4,18 +4,18 @@
   "title": "Which Korean Food Matches Your Soul?",
   "titleKo": "나와 영혼이 닮은 K-푸드 소울푸드 테스트",
   "titleEs": "¿Qué comida coreana es tu alma gemela?",
-  "subtitle": "Discover your Korean food archetype across 30 delicious lifestyle questions!",
-  "subtitleKo": "30개의 침샘 자극 문답으로 알아보는 나의 K-푸드 본캐와 환상의 궁합!",
-  "subtitleEs": "¡Descubre tu arquetipo de comida coreana a través de 30 deliciosas preguntas!",
-  "description": "Are you fiery Spicy Tteokbokki, dependable K-BBQ Samgyeopsal, comforting Kimchi Jjigae, cheerful Chimaek, cozy Bungeoppang, harmonious Bibimbap, adventurous Han River Ramen, or trendy Snow Bingsu? Take the 30-question test!",
+  "subtitle": "Discover your Korean food archetype across 10 delicious lifestyle questions!",
+  "subtitleKo": "10개의 침샘 자극 문답으로 알아보는 나의 K-푸드 본캐와 환상의 궁합!",
+  "subtitleEs": "¡Descubre tu arquetipo de comida coreana a través de 10 deliciosas preguntas!",
+  "description": "Are you fiery Spicy Tteokbokki, dependable K-BBQ Samgyeopsal, comforting Kimchi Jjigae, cheerful Chimaek, cozy Bungeoppang, harmonious Bibimbap, adventurous Han River Ramen, or trendy Snow Bingsu? Take the 10-question test!",
   "descriptionKo": "화끈한 엽기 떡볶이, 든든한 삼겹살 쌈, 포근한 김치찌개, 파티 비타민 양념치킨, 달콤한 붕어빵, 균형 잡힌 돌솥비빔밥, 낭만적인 한강 라면, 감각적인 눈꽃빙수 중 나의 소울푸드는?",
-  "descriptionEs": "¿Eres el picante Tteokbokki, el confiable Samgyeopsal, el reconfortante Kimchi Jjigae, el festivo Chimaek, el tierno Bungeoppang, el armónico Bibimbap, el libre Ramen del Río Han o el dulce Bingsu? ¡Descúbrelo con 30 preguntas!",
+  "descriptionEs": "¿Eres el picante Tteokbokki, el confiable Samgyeopsal, el reconfortante Kimchi Jjigae, el festivo Chimaek, el tierno Bungeoppang, el armónico Bibimbap, el libre Ramen del Río Han o el dulce Bingsu? ¡Descúbrelo con 10 preguntas!",
   "category": "Food",
   "tag": "K-Food",
   "coverEmoji": "🍜",
   "gradient": "from-orange-600 via-amber-600 to-red-700",
   "difficulty": "Easy",
-  "estimatedMinutes": 5,
+  "estimatedMinutes": 3,
   "totalPlays": "194.2K",
   "featured": true,
   "questions": [],
@@ -591,75 +591,75 @@
     },
     {
       "id": 7,
-      "question": "You travel abroad for 10 days. Day 4 hits. What Korean food do you desperately crave?",
-      "questionKo": "해외여행 4일 차, 현지 음식만 먹다 보니 문득 사무치게 그리워지는 한국의 맛은?",
-      "questionEs": "Viajas 10 días al extranjero. Es el 4.º día. ¿Qué sabor coreano extrañas con locura?",
-      "emoji": "✈️",
+      "question": "It's a breezy spring afternoon at Han River Park (한강공원). What is your essential stop?",
+      "questionKo": "화창한 봄날, 한강공원에 돗자리 펴고 피크닉을 갔다! 절대 빼놓을 수 없는 코스는?",
+      "questionEs": "Tarde de pícnic en el parque del Río Han en Seúl. ¿Cuál es tu parada obligatoria?",
+      "emoji": "🏕️",
       "options": [
         {
           "id": "A",
-          "text": "That deep, sour, spicy Kimchi stew with white rice that resets your entire stomach",
-          "textKo": "속을 뻥 뚫어주는 얼큰하고 칼칼한 김치찌개 국물과 하얀 쌀밥!",
-          "textEs": "Un caldo de kimchi fermentado bien picante que reinicie el estómago",
-          "scores": { "kimchijjigae": 3, "bibimbap": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Spicy Korean instant ramen cooked in a pot with chopped garlic and green onions",
-          "textKo": "파 송송 계란 탁 넣고 끓인 칼칼한 한국 신라면 국물 한 모금",
-          "textEs": "Un ramen coreano clásico cocinado en olla con cebollino fresco",
+          "text": "The Foil Ramen Machine: Pressing the boiling button and watching the noodles bubble by the river!",
+          "textKo": "한강 편의점 즉석 라면 조리기! 은박지 용기 올려두고 보글보글 끓여 강바람 맞으며 먹기",
+          "textEs": "La máquina de ramen en bandeja de aluminio: cocinar frente al río y comer con la brisa",
           "scores": { "hangangramen": 3, "tteokbokki": 1 }
         },
         {
+          "id": "B",
+          "text": "Delivery Zone: Ordering crispy chicken directly to Picnic Tent Zone #3!",
+          "textKo": "한강 배달존에서 갓 튀긴 치킨 받아서 돗자리에 펼쳐놓고 노을 보며 치맥하기",
+          "textEs": "Zona de entrega: pedir pollo frito crujiente directamente a la manta de pícnic",
+          "scores": { "chimaek": 3, "samgyeopsal": 1 }
+        },
+        {
           "id": "C",
-          "text": "Fresh sesame oil aroma: a colorful warm bowl of Bibimbap with red chili paste",
-          "textKo": "고소한 참기름 냄새 솔솔 풍기는 나물 듬뿍 비빔밥에 고추장 슥슥 비비기",
-          "textEs": "El aroma a aceite de sésamo en un bol de Bibimbap fresco con gochujang",
-          "scores": { "bibimbap": 3, "samgyeopsal": 1 }
+          "text": "Street snacks: Walking along the stalls buying Hotteok, corn, and grilled skewers",
+          "textKo": "강변 산책로를 따라 걷다가 만난 길거리 간식과 붕어빵을 사 들고 벤치에서 즐기기",
+          "textEs": "Comprar snacks callejeros a los vendedores ambulantes y pasear por la orilla",
+          "scores": { "bungeoppang": 3, "bingsu": 1 }
         },
         {
           "id": "D",
-          "text": "Fiery tteokbokki that burns away the heavy grease of foreign butter and cheese",
-          "textKo": "느끼함을 단번에 날려버릴 눈물 콧물 쏙 빼는 새빨간 매운 떡볶이",
-          "textEs": "Tteokbokki bien rojo y picante que borre la pesadez de tanta comida grasosa",
-          "scores": { "tteokbokki": 3, "chimaek": 1 }
+          "text": "A beautiful fruit and snack platter packed neatly in aesthetic lunch boxes",
+          "textKo": "예쁜 도시락통에 정갈하게 싸 온 과일과 김밥을 꺼내 감성 사진 남기기",
+          "textEs": "Una cesta estética con fruta fresca y kimbap bien cortado para fotos bonitas",
+          "scores": { "bibimbap": 3, "bingsu": 1 }
         }
       ]
     },
     {
       "id": 8,
-      "question": "Meeting an awkward acquaintance for dinner. What restaurant do you pick?",
-      "questionKo": "아직 조금 어색한 사람과 첫 식사 약속을 잡아야 한다면, 당신이 제안할 식당은?",
-      "questionEs": "Cena con un conocido con el que aún hay timidez. ¿Qué tipo de restaurante eliges?",
-      "emoji": "🤝",
+      "question": "On a freezing winter evening walk, you spot steam rising from a street cart. Your reaction?",
+      "questionKo": "영하의 추운 겨울밤, 길거리 포장마차에서 모락모락 김이 피어오르는 것을 보았다면?",
+      "questionEs": "En una noche helada de invierno ves vapor saliendo de un puesto callejero. ¿Qué haces?",
+      "emoji": "🍢",
       "options": [
         {
           "id": "A",
-          "text": "A neat, elegant Korean dining restaurant with balanced set trays (Bansang / Bibimbap)",
-          "textKo": "깔끔하고 정갈한 1인 솥밥이나 정식 한 상이 나오는 조용하고 단정한 식당",
-          "textEs": "Un restaurante coreano pulcro y elegante con bandejas individuales equilibradas",
-          "scores": { "bibimbap": 3, "bingsu": 1 }
+          "text": "I immediately stop, grab a wooden skewer of fish cake, and sip the steaming soup!",
+          "textKo": "발걸음 자동 정지! 종이컵에 뜨끈한 어묵 국물 국자로 떠서 호호 불며 원샷",
+          "textEs": "¡Parada obligatoria! Tomar una brocheta de pescado y beber el caldo hirviendo",
+          "scores": { "kimchijjigae": 3, "hangangramen": 1 }
         },
         {
           "id": "B",
-          "text": "A lively K-BBQ spot where grilling food breaks the awkward ice naturally",
-          "textKo": "고기 굽는 소리와 함께 자연스럽게 어색함이 풀리는 활기찬 삼겹살집",
-          "textEs": "Una barbacoa coreana animada donde asar comida rompa el hielo sin esfuerzo",
-          "scores": { "samgyeopsal": 3, "chimaek": 1 }
+          "text": "Buy a bag of fresh Bungeoppang or Hotteok to keep in my jacket pocket like a hand warmer",
+          "textKo": "갓 구운 붕어빵 종이봉투를 사서 주머니에 핫팩처럼 넣고 행복하게 걸어가기",
+          "textEs": "Comprar una bolsa de Bungeoppang caliente y llevarla en el bolsillo como calentador",
+          "scores": { "bungeoppang": 3, "bingsu": 1 }
         },
         {
           "id": "C",
-          "text": "A casual chicken & beer pub where cold drinks make conversations flow easily",
-          "textKo": "부담 없이 시원한 맥주 한잔 곁들이며 이야기 나누기 좋은 트렌디한 펍",
-          "textEs": "Un pub casual de pollo frito y cerveza donde relajarse y charlar con calma",
-          "scores": { "chimaek": 3, "hangangramen": 1 }
+          "text": "Step inside the plastic tent, order tteokbokki and blood sausage (Sundae) with dipping salt",
+          "textKo": "비닐 천막 젖히고 들어가 빨간 떡볶이와 순대 내장 섞어서 푸짐하게 먹기",
+          "textEs": "Entrar a la carpa plástica y pedir tteokbokki con morcilla coreana (Sundae)",
+          "scores": { "tteokbokki": 3, "samgyeopsal": 1 }
         },
         {
           "id": "D",
-          "text": "A cozy neighborhood stew place with homey, heartwarming vibes",
-          "textKo": "가식 없이 편안하고 따스한 온기가 느껴지는 골목길 백반/찌개 맛집",
-          "textEs": "Un local acogedor de comida casera tradicional con un ambiente hogareño",
-          "scores": { "kimchijjigae": 3, "bungeoppang": 1 }
+          "text": "Call a friend: 'Hey, are you free right now? Meet me at the street cart!'",
+          "textKo": "친구에게 바로 전화! '야 너 지금 어디야? 여기 포차로 나와 치킨에 한잔하자!'",
+          "textEs": "Llamar a un amigo: 'Oye, ¿estás libre? ¡Ven al puesto a tomar algo caliente!'",
+          "scores": { "chimaek": 3, "hangangramen": 1 }
         }
       ]
     },
@@ -702,746 +702,6 @@
     },
     {
       "id": 10,
-      "question": "You walk into a Korean convenience store (CU / GS25). What is your shopping style?",
-      "questionKo": "K-편의점(CU, GS25)에 들어섰을 때, 당신의 바구니를 채우는 쇼핑 스타일은?",
-      "questionEs": "Entras a un convenience store coreano (CU/GS25). ¿Cómo llenas tu cesta?",
-      "emoji": "🏪",
-      "options": [
-        {
-          "id": "A",
-          "text": "The Chemist: Combining viral hacks (Buldak ramen + triangle kimbap + string cheese)!",
-          "textKo": "편의점 꿀조합 연금술사! 불닭볶음면 + 참치마요 삼각김밥 + 스트링치즈 조합 완성",
-          "textEs": "El alquimista: combinando ramen picante, triángulo de arroz y queso en tiras",
-          "scores": { "hangangramen": 3, "tteokbokki": 1 }
-        },
-        {
-          "id": "B",
-          "text": "The Trend Chaser: Searching for newly released viral desserts and cute character snacks",
-          "textKo": "SNS에서 화제인 신상 디저트와 귀여운 캐릭터 콜라보 간식부터 먼저 스캔",
-          "textEs": "El cazador de novedades: buscando los postres virales y snacks de moda",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "C",
-          "text": "The Beer & Meat Hunter: Scanning the 4-cans-for-discount beer fridge and sausage snacks",
-          "textKo": "수입 맥주 4캔 만원 코너와 핫바, 안줏거리 스낵 코너로 직진하는 실속파",
-          "textEs": "Directo a la nevera de cervezas en oferta y salchichas para picar con amigos",
-          "scores": { "chimaek": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "D",
-          "text": "The Classic Comfort: Steaming hot steamed bun (Hoppang) or comfort banana milk",
-          "textKo": "계산대 옆 따뜻한 호빵 찜기나 추억의 항아리 바나나우유로 채우는 따스함",
-          "textEs": "Lo entrañable: un bollo al vapor caliente o la clásica leche de plátano",
-          "scores": { "bungeoppang": 3, "kimchijjigae": 1 }
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "question": "On a freezing winter evening walk, you spot steam rising from a street cart. Your reaction?",
-      "questionKo": "영하의 추운 겨울밤, 길거리 포장마차에서 모락모락 김이 피어오르는 것을 보았다면?",
-      "questionEs": "En una noche helada de invierno ves vapor saliendo de un puesto callejero. ¿Qué haces?",
-      "emoji": "🍢",
-      "options": [
-        {
-          "id": "A",
-          "text": "I immediately stop, grab a wooden skewer of fish cake, and sip the steaming soup!",
-          "textKo": "발걸음 자동 정지! 종이컵에 뜨끈한 어묵 국물 국자로 떠서 호호 불며 원샷",
-          "textEs": "¡Parada obligatoria! Tomar una brocheta de pescado y beber el caldo hirviendo",
-          "scores": { "kimchijjigae": 3, "hangangramen": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Buy a bag of fresh Bungeoppang or Hotteok to keep in my jacket pocket like a hand warmer",
-          "textKo": "갓 구운 붕어빵 종이봉투를 사서 주머니에 핫팩처럼 넣고 행복하게 걸어가기",
-          "textEs": "Comprar una bolsa de Bungeoppang caliente y llevarla en el bolsillo como calentador",
-          "scores": { "bungeoppang": 3, "bingsu": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Step inside the plastic tent, order tteokbokki and blood sausage (Sundae) with dipping salt",
-          "textKo": "비닐 천막 젖히고 들어가 빨간 떡볶이와 순대 내장 섞어서 푸짐하게 먹기",
-          "textEs": "Entrar a la carpa plástica y pedir tteokbokki con morcilla coreana (Sundae)",
-          "scores": { "tteokbokki": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Call a friend: 'Hey, are you free right now? Meet me at the street cart!'",
-          "textKo": "친구에게 바로 전화! '야 너 지금 어디야? 여기 포차로 나와 치킨에 한잔하자!'",
-          "textEs": "Llamar a un amigo: 'Oye, ¿estás libre? ¡Ven al puesto a tomar algo caliente!'",
-          "scores": { "chimaek": 3, "hangangramen": 1 }
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "question": "What is your honest spice tolerance level when eating Korean food?",
-      "questionKo": "솔직히 고백하는 당신의 '맵부심(매운맛 감당 능력)' 수준은?",
-      "questionEs": "¿Cuál es tu nivel sincero de tolerancia al picante coreano?",
-      "emoji": "🌶️",
-      "options": [
-        {
-          "id": "A",
-          "text": "Fire God: Buldak sauce is just normal seasoning to me. The spicier, the better!",
-          "textKo": "불닭볶음면은 기본! 청양고추 팍팍 넣고 땀 흘려야 진짜 먹은 것 같은 불사조",
-          "textEs": "Dios del fuego: el picante extremo es mi salsa diaria. ¡Cuanto más arda, mejor!",
-          "scores": { "tteokbokki": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Comfort Spice: Kimchi stew and mild Shin Ramyun are perfect, but keep milk nearby",
-          "textKo": "신라면이나 김치찌개의 맛있게 매콤한 수준이 딱 좋고 너무 매우면 우유 필수",
-          "textEs": "Nivel placentero: el picante del Shin Ramyun es ideal, pero con agua cerca",
-          "scores": { "kimchijjigae": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Savory > Spicy: I prefer rich garlic, soy sauce, sesame oil, and crispy fried flavors",
-          "textKo": "매운 것보다는 고소한 참기름, 간장 소스, 마늘 풍미의 감칠맛이 훨씬 좋은 사람",
-          "textEs": "Prefiero sabor a picante: aceite de sésamo, salsa de soja y ajo frito crujiente",
-          "scores": { "samgyeopsal": 3, "bibimbap": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Sweet Tooth Sweetie: I reach for custard cream, sweet sauces, and iced mango instead!",
-          "textKo": "매운맛은 사양할게요! 달콤한 슈크림, 꿀, 아이스크림 디저트가 제일 안전해",
-          "textEs": "Alma dulce: ¡el picante me asusta! Prefiero crema dulce, miel y helado de mango",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "question": "When enjoying a meal, what matters the most to your culinary happiness?",
-      "questionKo": "음식을 먹을 때 당신의 행복을 결정짓는 가장 중요한 요소는?",
-      "questionEs": "Al disfrutar de una comida, ¿qué es lo más importante para tu felicidad?",
-      "emoji": "✨",
-      "options": [
-        {
-          "id": "A",
-          "text": "The people: Laughing, sharing stories, and clinking glasses together",
-          "textKo": "함께하는 사람들! 누구와 함께 웃으며 건배하고 이야기를 나누는가가 제일 중요",
-          "textEs": "La compañía: reír, compartir anécdotas y brindar con las personas que amo",
-          "scores": { "chimaek": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "B",
-          "text": "The depth of flavor: A rich broth simmered with devotion that warms the soul",
-          "textKo": "깊은 맛의 내공! 정성스레 우려낸 진한 국물과 속을 채워주는 진짜 밥의 위로",
-          "textEs": "La profundidad del sabor: un caldo cocinado con amor que abrigue el alma",
-          "scores": { "kimchijjigae": 3, "bibimbap": 1 }
-        },
-        {
-          "id": "C",
-          "text": "The visual aesthetic & mood: Beautiful presentation, trendy lighting, and clean vibes",
-          "textKo": "감각적인 분위기와 비주얼! 보기 좋은 떡이 먹기도 좋듯 예쁘고 감성적인 순간",
-          "textEs": "La estética visual y el ambiente: presentación cuidada, luz bonita y buen estilo",
-          "scores": { "bingsu": 3, "bibimbap": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Unfiltered freedom: Eating casually in comfy clothes without stiff manners",
-          "textKo": "눈치 보지 않는 자유로움! 편한 옷 입고 내 속도대로 편하게 즐기는 한 끼",
-          "textEs": "Libertad total: comer relajado con ropa cómoda sin etiquetas ni protocolos",
-          "scores": { "hangangramen": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "question": "When you step into the kitchen to cook for yourself, what is your style?",
-      "questionKo": "직접 요리를 하기 위해 주방에 섰을 때, 당신의 요리 스타일은?",
-      "questionEs": "Cuando entras a la cocina a prepararte algo, ¿cuál es tu estilo?",
-      "emoji": "🍳",
-      "options": [
-        {
-          "id": "A",
-          "text": "Intuitive Chef: No measuring spoons! I taste as I go, adding garlic and pepper with feeling",
-          "textKo": "눈대중과 손맛의 달인! 계량컵 없이 마늘 듬뿍, 고춧가루 팍팍 간 보며 직관으로 완성",
-          "textEs": "Cocinero intuitivo: sin medidas exactas, mucho ajo y sazón según el corazón",
-          "scores": { "kimchijjigae": 3, "tteokbokki": 1 }
-        },
-        {
-          "id": "B",
-          "text": "The Clean Plater: Balancing vibrant colors, veggies, protein, and neat sesame topping",
-          "textKo": "영양과 색감의 균형! 채소와 단백질을 고루 배치하고 통깨를 톡톡 뿌려 정갈하게 완성",
-          "textEs": "Equilibrio visual: cuidando los colores, nutrientes y un toque final de sésamo",
-          "scores": { "bibimbap": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Fast & Efficient: Quick high-heat cooking or clever hacks that taste delicious in 5 minutes",
-          "textKo": "스피드와 효율이 생명! 5분 만에 뚝딱 최고의 맛을 내는 영리한 간편 요리",
-          "textEs": "Rápido y eficaz: recetas inteligentes a fuego vivo listas en cinco minutos",
-          "scores": { "hangangramen": 3, "chimaek": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Baking & Plating: Measuring ingredients carefully to create sweet, photogenic magic",
-          "textKo": "베이킹이나 예쁜 플레이팅처럼 정성스럽게 달콤한 디저트나 브런치를 빚어내는 스타일",
-          "textEs": "Repostería detallista: midiendo cada gramo para crear una delicia hermosa",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "question": "A heartbroken friend comes to your home crying. What do you serve them?",
-      "questionKo": "실연당해 펑펑 우는 친구가 당신의 집으로 찾아왔다. 친구를 위해 차려줄 음식은?",
-      "questionEs": "Un amigo con el corazón roto llega llorando a tu casa. ¿Qué le preparas?",
-      "emoji": "💔",
-      "options": [
-        {
-          "id": "A",
-          "text": "A warm bowl of steaming soup and white rice: 'Eat this first, you need warm food in you'",
-          "textKo": "따뜻한 찌개에 밥 한 공기 꾹꾹 담아 '일단 따뜻한 밥부터 먹고 힘내자' 다독이기",
-          "textEs": "Un plato de sopa caliente y arroz blanco: 'Come primero, necesitas calor en el alma'",
-          "scores": { "kimchijjigae": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "B",
-          "text": "The spiciest tteokbokki on earth: 'Cry all you want while burning away that jerk's memory!'",
-          "textKo": "극강의 매운 떡볶이를 시켜주고 '땀 흘리고 매워서 울어버려, 그 사람 잊어버려!'",
-          "textEs": "El tteokbokki más picante del mundo: '¡Llora por el picante y olvida a esa persona!'",
-          "scores": { "tteokbokki": 3, "chimaek": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Piles of fried chicken and cold beers: 'Tonight we feast and trash-talk until morning!'",
-          "textKo": "치킨 세트 시키고 시원한 맥주 따르며 밤새 통쾌하게 편들어주고 욕해주기",
-          "textEs": "Montañas de pollo frito y cerveza fría: '¡Esta noche comemos y rajamos hasta el alba!'",
-          "scores": { "chimaek": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "D",
-          "text": "A mountain of sweet bingsu, ice cream, and chocolate: pure sweet dopamine therapy",
-          "textKo": "달콤한 빙수와 아이스크림, 달달한 디저트를 한가득 안겨주며 눈물 닦아주기",
-          "textEs": "Una montaña de bingsu dulce con helado y chocolate: terapia pura de dopamina dulce",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "question": "It's a breezy spring afternoon at Han River Park (한강공원). What is your essential stop?",
-      "questionKo": "화창한 봄날, 한강공원에 돗자리 펴고 피크닉을 갔다! 절대 빼놓을 수 없는 코스는?",
-      "questionEs": "Tarde de pícnic en el parque del Río Han en Seúl. ¿Cuál es tu parada obligatoria?",
-      "emoji": "🏕️",
-      "options": [
-        {
-          "id": "A",
-          "text": "The Foil Ramen Machine: Pressing the boiling button and watching the noodles bubble by the river!",
-          "textKo": "한강 편의점 즉석 라면 조리기! 은박지 용기 올려두고 보글보글 끓여 강바람 맞으며 먹기",
-          "textEs": "La máquina de ramen en bandeja de aluminio: cocinar frente al río y comer con la brisa",
-          "scores": { "hangangramen": 3, "tteokbokki": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Delivery Zone: Ordering crispy chicken directly to Picnic Tent Zone #3!",
-          "textKo": "한강 배달존에서 갓 튀긴 치킨 받아서 돗자리에 펼쳐놓고 노을 보며 치맥하기",
-          "textEs": "Zona de entrega: pedir pollo frito crujiente directamente a la manta de pícnic",
-          "scores": { "chimaek": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Street snacks: Walking along the stalls buying Hotteok, corn, and grilled skewers",
-          "textKo": "강변 산책로를 따라 걷다가 만난 길거리 간식과 붕어빵을 사 들고 벤치에서 즐기기",
-          "textEs": "Comprar snacks callejeros a los vendedores ambulantes y pasear por la orilla",
-          "scores": { "bungeoppang": 3, "bingsu": 1 }
-        },
-        {
-          "id": "D",
-          "text": "A beautiful fruit and snack platter packed neatly in aesthetic lunch boxes",
-          "textKo": "예쁜 도시락통에 정갈하게 싸 온 과일과 김밥을 꺼내 감성 사진 남기기",
-          "textEs": "Una cesta estética con fruta fresca y kimbap bien cortado para fotos bonitas",
-          "scores": { "bibimbap": 3, "bingsu": 1 }
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "question": "When you look back on the single 'most memorable meal' in your memory, what was it?",
-      "questionKo": "인생을 돌아봤을 때 당신의 기억 속에 가장 깊이 남아있는 '최고의 식사'는?",
-      "questionEs": "Al recordar la comida más memorable de toda tu vida, ¿cómo era?",
-      "emoji": "🏆",
-      "options": [
-        {
-          "id": "A",
-          "text": "A simple meal eaten with people I love after overcoming a huge challenge together",
-          "textKo": "큰 고생이나 도전을 끝내고 소중한 사람들과 둘러앉아 홀가분하게 나눠 먹은 고기와 밥",
-          "textEs": "Una comida sencilla compartida con personas queridas tras superar un gran reto",
-          "scores": { "samgyeopsal": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Mom's / Grandma's homemade warm stew when I was sick and needed comfort",
-          "textKo": "몸이 아프거나 외로웠을 때, 가족이 끓여준 따스한 찌개 한 숟가락의 온기",
-          "textEs": "El guiso casero caliente que me prepararon cuando estaba enfermo y solo",
-          "scores": { "kimchijjigae": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "C",
-          "text": "A spontaneous, hilarious midnight adventure where we laughed till our bellies hurt",
-          "textKo": "예상치 못한 즉흥 야식 여행에서 친구들과 배꼽 잡고 웃으며 먹었던 길거리 음식",
-          "textEs": "Una escapada nocturna espontánea y divertida comiendo ramen riendo a carcajadas",
-          "scores": { "hangangramen": 3, "chimaek": 1 }
-        },
-        {
-          "id": "D",
-          "text": "A breathtaking culinary visual experience at an unforgettable scenic spot",
-          "textKo": "아름다운 풍경이 펼쳐진 곳에서 맛보았던 환상적인 비주얼의 특별한 요리와 디저트",
-          "textEs": "Un plato hermoso y delicioso en un lugar con vistas inolvidables de postal",
-          "scores": { "bingsu": 3, "bibimbap": 1 }
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "question": "What is your honest attitude toward solo dining (혼밥 - Honbap)?",
-      "questionKo": "식당에서 혼자 밥을 먹는 '혼밥' 상황에 대한 당신의 솔직한 생각은?",
-      "questionEs": "¿Qué piensas sinceramente sobre comer solo en un restaurante (Honbap)?",
-      "emoji": "🥢",
-      "options": [
-        {
-          "id": "A",
-          "text": "Total peace! I watch my favorite YouTube video, chew slowly, and cherish my solitude",
-          "textKo": "완벽한 힐링! 좋아하는 유튜브 영상 틀어두고 누구 방해도 받지 않는 나만의 시간",
-          "textEs": "¡Paz total! Veo mi video favorito en YouTube, saboreo a mi ritmo y disfruto mi espacio",
-          "scores": { "hangangramen": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "B",
-          "text": "I can do it if needed, but delicious food is 100x better when shared with friends",
-          "textKo": "할 수는 있지만, 역시 맛있는 건 다 같이 '이것 봐 진짜 맛있다!' 외치며 먹어야 제맛",
-          "textEs": "Puedo hacerlo, pero la comida rica sabe cien veces mejor compartida entre amigos",
-          "scores": { "samgyeopsal": 3, "chimaek": 1 }
-        },
-        {
-          "id": "C",
-          "text": "I treat myself properly: ordering full, balanced set meals so my body feels nourished",
-          "textKo": "혼자 먹더라도 대충 때우지 않고, 영양과 밸런스가 갖춰진 정갈한 한 끼를 챙겨 먹는다",
-          "textEs": "Me cuido: aunque coma solo, elijo un menú completo y nutritivo que me haga bien",
-          "scores": { "bibimbap": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Quick spicy street snack on the go: Grab it fast, eat with joy, and keep moving!",
-          "textKo": "시간 낭비 없이 떡볶이나 김밥 1인분 빠르게 포장해서 시원하게 먹고 이동!",
-          "textEs": "Rápido y al paso: comprar una porción de tteokbokki, disfrutarla y seguir mi camino",
-          "scores": { "tteokbokki": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "question": "The main dinner has ended, but someone shouts: 'Let's go for Round 2 (2차)!' What do you want?",
-      "questionKo": "1차 식사가 끝나고 누군가 '2차 가자!'를 외쳤다. 당신이 가장 바라는 2차 코스는?",
-      "questionEs": "Termina la cena y alguien grita: '¡Vamos por la segunda ronda (2차)!'. ¿Qué prefieres?",
-      "emoji": "🍻",
-      "options": [
-        {
-          "id": "A",
-          "text": "Crispy fried chicken or dried snacks with cold draft beer: let the party continue!",
-          "textKo": "시원한 맥주에 바삭한 먹태나 감자튀김, 본격적으로 흥을 돋우는 2차 호프집",
-          "textEs": "Un pub de cerveza helada con pollo crujiente: ¡que siga la fiesta!",
-          "scores": { "chimaek": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "B",
-          "text": "A late-night dessert café: Shaved ice bingsu, waffles, and sweet soothing drinks",
-          "textKo": "술 대신 달콤한 시원함! 늦게까지 여는 디저트 카페에서 과일 빙수와 와플",
-          "textEs": "Una cafetería nocturna de postres: bingsu de frutas, gofres y algo dulce",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "C",
-          "text": "A cozy street tent (Pojangmacha) with hot fish cake soup and soju",
-          "textKo": "빨간 플라스틱 의자에 앉아 칼칼한 국물에 도란도란 속 깊은 이야기 나누는 포차",
-          "textEs": "Una carpa tradicional con caldo caliente de pescado y soju para hablar de verdad",
-          "scores": { "kimchijjigae": 3, "tteokbokki": 1 }
-        },
-        {
-          "id": "D",
-          "text": "A midnight walk by the convenience store with an ice cream or warm snack",
-          "textKo": "선선한 밤공기 마시며 편의점에서 아이스크림 하나 물고 기분 좋게 귀가",
-          "textEs": "Un paseo nocturno tomando un helado de tienda de camino a casa",
-          "scores": { "hangangramen": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "question": "How do you eat your rice with a hot Korean stew (Kimchi Jjigae / Doenjang Jjigae)?",
-      "questionKo": "뜨거운 찌개가 나왔을 때, 밥과 국물을 즐기는 당신만의 식사 스타일은?",
-      "questionEs": "¿Cómo comes el arroz cuando te sirven un guiso coreano hirviendo?",
-      "emoji": "🥣",
-      "options": [
-        {
-          "id": "A",
-          "text": "The Pourer: Ladle generous spoonfuls of rich soup directly over the rice and mix!",
-          "textKo": "찌개 국물과 건더기를 밥그릇에 듬뿍 얹고 슥슥 자작하게 비벼 먹는 스타일",
-          "textEs": "Verter generosas cucharadas de caldo y verduras sobre el arroz y mezclar",
-          "scores": { "kimchijjigae": 3, "bibimbap": 1 }
-        },
-        {
-          "id": "B",
-          "text": "The Dipper: Keep rice clean in one bowl, dip the spoon into the bubbling pot separately",
-          "textKo": "밥 본연의 고소함을 지키며, 밥 한술 뜨고 찌개 국물 한 숟가락 따로 음미하기",
-          "textEs": "Mantener el arroz limpio: tomar una cucharada de arroz y luego una de caldo",
-          "scores": { "samgyeopsal": 3, "bibimbap": 1 }
-        },
-        {
-          "id": "C",
-          "text": "The Spicy Enhancer: Add extra chili, kimchi, and side dishes to make it even richer",
-          "textKo": "밑반찬과 김치를 곁들여 한 숟가락마다 다채롭고 매콤한 맛의 극치를 추구하기",
-          "textEs": "Añadir más kimchi, guarniciones y picante para elevar el sabor al máximo",
-          "scores": { "tteokbokki": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "D",
-          "text": "The Fast Slurper: Blow cool air on the hot noodles or soup and eat with pure relish!",
-          "textKo": "후후 불어가며 면발과 국물을 뚝딱 시원하게 비워내는 호쾌한 먹방 스타일",
-          "textEs": "Soplar rápido para enfriar y saborear cada cucharada con entusiasmo voraz",
-          "scores": { "hangangramen": 3, "chimaek": 1 }
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "question": "A foreign friend visits Korea for the first time. What is their very first welcome meal?",
-      "questionKo": "외국인 친구가 한국에 처음 놀러 왔다! 당신이 첫 끼로 대접할 자랑스러운 메뉴는?",
-      "questionEs": "Un amigo extranjero pisa Corea por primera vez. ¿Cuál es su primera comida de bienvenida?",
-      "emoji": "🇰🇷",
-      "options": [
-        {
-          "id": "A",
-          "text": "A grand K-BBQ experience: thick sizzling pork belly, leafy wraps, and lively atmosphere",
-          "textKo": "한국 고깃집의 신세계! 두툼한 삼겹살과 다양한 쌈, 지글거리는 활기찬 분위기",
-          "textEs": "La gran experiencia de barbacoa: panceta crujiente, envoltorios verdes y ambiente único",
-          "scores": { "samgyeopsal": 3, "chimaek": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Korean fried chicken with crispy sweet garlic glaze and pickled radish",
-          "textKo": "호불호 없이 세계인을 사로잡는 바삭하고 촉촉한 K-치킨의 정석과 아삭한 치킨무",
-          "textEs": "Pollo frito coreano crujiente con salsa agridulce que enamora a cualquiera",
-          "scores": { "chimaek": 3, "bingsu": 1 }
-        },
-        {
-          "id": "C",
-          "text": "A royal colorful Dolsot Bibimbap: visually stunning, healthy, and quintessentially Korean",
-          "textKo": "오색 나물과 참기름 향이 예술인 전주비빔밥! 건강하고 아름다운 한국의 미학",
-          "textEs": "Dolsot Bibimbap en cuenco de piedra: colorido, saludable y quintaesencia coreana",
-          "scores": { "bibimbap": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "D",
-          "text": "A bustling traditional street market: spicy tteokbokki, hotteok, and bungeoppang!",
-          "textKo": "광장시장이나 야시장으로 직행! 매콤한 떡볶이와 갓 구운 붕어빵의 날것 그대로의 활기",
-          "textEs": "Mercado tradicional: tteokbokki picante, bungeoppang dulce y vida callejera pura",
-          "scores": { "tteokbokki": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 22,
-      "question": "At an all-you-can-eat buffet, what is your plate strategy?",
-      "questionKo": "뷔페에 입장했다! 접시를 채우는 당신만의 전략은?",
-      "questionEs": "Entras a un buffet libre. ¿Cuál es tu estrategia con el plato?",
-      "emoji": "🍽️",
-      "options": [
-        {
-          "id": "A",
-          "text": "Meat first: high-value premium barbecue and hot savory specialties!",
-          "textKo": "고기 위주 실속 공략! 갓 구운 바비큐와 육류 코너부터 확실하게 정복",
-          "textEs": "Carnes primero: aprovechar los cortes a la parrilla y platos más suculentos",
-          "scores": { "samgyeopsal": 3, "chimaek": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Color balance: a little bit of everything in neat harmony across multiple rounds",
-          "textKo": "조화로운 구성! 샐러드, 메인, 면류를 예쁘게 담아 다채롭게 즐기는 밸런스파",
-          "textEs": "Equilibrio: un poco de todo distribuido armoniosamente en varias rondas",
-          "scores": { "bibimbap": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Dessert is 50% of the reason I came: leaving massive room for pastries and bingsu",
-          "textKo": "디저트 코너부터 눈도장! 과일, 케이크, 빙수를 먹기 위해 배를 든든히 비워둔다",
-          "textEs": "El postre es el 50% del plan: guardo mucho espacio para frutas y bingsu",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Spicy and intense: spicy noodles, fried specialties, and savory kickers",
-          "textKo": "매콤하고 자극적인 메뉴 위주로 입맛을 돋우며 화끈하게 즐기는 스타일",
-          "textEs": "Platos picantes e intensos que despierten el apetito con sabor audaz",
-          "scores": { "tteokbokki": 3, "hangangramen": 1 }
-        }
-      ]
-    },
-    {
-      "id": 23,
-      "question": "On a lazy Sunday afternoon, what is your ideal comfort routine?",
-      "questionKo": "느긋하고 나른한 일요일 오후, 당신에게 가장 완벽한 힐링 루틴은?",
-      "questionEs": "Domingo por la tarde perezoso. ¿Cuál es tu rutina de descanso ideal?",
-      "emoji": "🛋️",
-      "options": [
-        {
-          "id": "A",
-          "text": "Bingeing series in pajamas with a big bag of fresh sweet street pastries",
-          "textKo": "포근한 수면바지 입고 따뜻한 붕어빵 먹으며 좋아하는 드라마 정주행",
-          "textEs": "Ver series en pijama comiendo algo dulce y calentito recién comprado",
-          "scores": { "bungeoppang": 3, "bingsu": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Boiling instant ramen, adding an egg, slurping directly from the pot lid",
-          "textKo": "냄비 뚜껑에 라면 건져 올려 후루룩 먹고 개운하게 낮잠 자기",
-          "textEs": "Cocinar ramen rápido, comerlo sobre la tapa de la olla y echarse una siesta",
-          "scores": { "hangangramen": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Visiting an aesthetic terrace café for mango snow ice and aesthetic photos",
-          "textKo": "햇살 좋은 테라스 카페에서 시원한 망고 빙수 먹으며 여유로운 감성 충전",
-          "textEs": "Ir a una terraza bonita a comer un bingsu helado de mango y tomar fotos",
-          "scores": { "bingsu": 3, "bibimbap": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Simmering a rich pot of soup while organizing thoughts for the coming week",
-          "textKo": "새로운 한 주를 준비하며 천천히 찌개를 끓이고 마음을 정리하는 차분한 시간",
-          "textEs": "Cocinar un guiso a fuego lento mientras organizo mis pensamientos con calma",
-          "scores": { "kimchijjigae": 3, "samgyeopsal": 1 }
-        }
-      ]
-    },
-    {
-      "id": 24,
-      "question": "When enjoying a drink with friends, which pairing makes your heart sing?",
-      "questionKo": "좋은 사람들과 술잔을 기울일 때, 당신의 심장을 뛰게 하는 최고의 안주 조합은?",
-      "questionEs": "Al tomar algo con amigos, ¿qué maridaje hace cantar a tu corazón?",
-      "emoji": "🍻",
-      "options": [
-        {
-          "id": "A",
-          "text": "Golden crispy fried chicken with frosty, fizzy draft beer (Chimaek)",
-          "textKo": "시원한 거품이 톡 쏘는 생맥주와 바삭바삭한 치킨 (영원한 진리 치맥)",
-          "textEs": "Pollo frito crujiente con cerveza rubia helada (el eterno Chimaek)",
-          "scores": { "chimaek": 3, "hangangramen": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Clear clean Soju with thick sizzling pork belly and garlic ssam",
-          "textKo": "투명하고 깔끔한 소주 한 잔에 기름진 삼겹살 한 쌈의 완벽한 밸런스",
-          "textEs": "Soju bien frío con una porción de panceta asada a la parrilla y ajo",
-          "scores": { "samgyeopsal": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Spicy stew or spicy stir-fried rice cakes with soju: fiery fire & cold alcohol",
-          "textKo": "얼큰한 김치찌개나 매운 안주에 소주 한 잔 털어 넣는 깊은 맛",
-          "textEs": "Guiso picante o tteokbokki con soju: contraste de fuego y frío",
-          "scores": { "tteokbokki": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Sweet fruity cocktails or mocktails paired with light sweet treats",
-          "textKo": "달콤한 과일 하이볼이나 칵테일에 가볍고 예쁜 핑거푸드 디저트",
-          "textEs": "Cócteles afrutados dulces o mocktails con aperitivos bonitos y ligeros",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        }
-      ]
-    },
-    {
-      "id": 25,
-      "question": "When eating Bungeoppang (fish-shaped bun), which part do you bite first?",
-      "questionKo": "붕어빵을 손에 쥐었을 때, 당신이 가장 먼저 베어 무는 부위는?",
-      "questionEs": "Al comer Bungeoppang (bollo con forma de pez), ¿por dónde muerdes primero?",
-      "emoji": "🐟",
-      "options": [
-        {
-          "id": "A",
-          "text": "The Head: Passionate, optimistic, and likes to dive straight into things!",
-          "textKo": "머리부터 앙! 적극적이고 낙천적이며 일단 직진하는 열정파",
-          "textEs": "¡Por la cabeza! Entusiasta, decidido y directo a lo que quiere",
-          "scores": { "tteokbokki": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "B",
-          "text": "The Tail: Saving the crispiest, sweetest part for last, cautious and romantic!",
-          "textKo": "꼬리부터 냠! 바삭함을 아끼고 섬세하며 낭만을 즐기는 감성파",
-          "textEs": "¡Por la cola! Detallista, aprecia lo crujiente y guarda lo mejor para el final",
-          "scores": { "bungeoppang": 3, "bingsu": 1 }
-        },
-        {
-          "id": "C",
-          "text": "The Belly: Loves the rich custard cream or red bean filling right away!",
-          "textKo": "배부터 공략! 팥이나 슈크림이 꽉 찬 핵심부터 먼저 맛보는 실속파",
-          "textEs": "¡Por el centro! Directo al relleno dulce de crema o judía roja sin rodeos",
-          "scores": { "kimchijjigae": 3, "chimaek": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Break it in half: Shares with someone beside me or checks the filling ratio first!",
-          "textKo": "반으로 뚝 잘라서! 곁에 있는 사람과 나눠 먹거나 속을 확인하는 배려파",
-          "textEs": "Partirlo por la mitad: compartirlo con quien está al lado con cariño",
-          "scores": { "bibimbap": 3, "hangangramen": 1 }
-        }
-      ]
-    },
-    {
-      "id": 26,
-      "question": "Magic spell! For 24 hours, ALL calories are ZERO. What is your ultimate feast?",
-      "questionKo": "마법이 일어나 오늘 하루 모든 음식의 칼로리가 0이 된다면, 당신의 선택은?",
-      "questionEs": "¡Hechizo mágico! Durante 24 horas las calorías son CERO. ¿Cuál es tu banquete?",
-      "emoji": "✨",
-      "options": [
-        {
-          "id": "A",
-          "text": "Mountains of crispy fried chicken and endless cheesy tteokbokki with no guilt!",
-          "textKo": "치즈 폭포 떡볶이와 갓 튀긴 치킨을 죄책감 0%로 배 터질 때까지 무한 흡입",
-          "textEs": "Montañas de pollo frito con queso y tteokbokki sin una gota de culpa",
-          "scores": { "tteokbokki": 3, "chimaek": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Thick premium K-BBQ pork belly and beef ribs with unlimited rice and stew",
-          "textKo": "최고급 삼겹살과 소갈비를 배가 찢어질 때까지 굽고 볶음밥까지 올킬",
-          "textEs": "Panceta premium y costillas a la parrilla sin parar con arroz y guisos",
-          "scores": { "samgyeopsal": 3, "kimchijjigae": 1 }
-        },
-        {
-          "id": "C",
-          "text": "Every viral bakery pastry, huge chocolate bingsu, and sweet milk cakes",
-          "textKo": "유명 디저트 베이커리의 모든 빵과 초대형 초코 망고 빙수 정복하기",
-          "textEs": "Todos los pasteles de repostería de moda y bingsu gigante de chocolate",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Every variety of Korean instant noodle and street snacks in one giant table",
-          "textKo": "전국 모든 종류의 라면을 끓여놓고 어묵, 핫도그와 함께 즐기는 축제",
-          "textEs": "Probar cada variedad de ramen coreano y snacks callejeros en una mesa gigante",
-          "scores": { "hangangramen": 3, "bibimbap": 1 }
-        }
-      ]
-    },
-    {
-      "id": 27,
-      "question": "You're on a strict diet, but it's 11 PM and intense hunger strikes. How do you respond?",
-      "questionKo": "다이어트 중인데 밤 11시, 참을 수 없는 배고픔의 유혹이 닥쳤다! 당신의 선택은?",
-      "questionEs": "Estás a dieta estricta, son las 11 PM y te ruge el estómago. ¿Qué haces?",
-      "emoji": "⚖️",
-      "options": [
-        {
-          "id": "A",
-          "text": "'Life is short!' I order what I crave immediately and run extra tomorrow!",
-          "textKo": "'인생 뭐 있어! 맛있게 먹으면 0칼로리!' 바로 배달 앱 켜서 주문하고 내일 운동한다",
-          "textEs": "'¡La vida es corta!' Pido lo que se me antoja ya y mañana entreno el doble",
-          "scores": { "chimaek": 3, "tteokbokki": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Drink warm water or tea, soothe my stomach, and go to sleep right away",
-          "textKo": "따뜻한 보리차나 물 한 컵 마시며 위를 달래고 얼른 눈을 감아 잠을 청한다",
-          "textEs": "Tomar un vaso de agua tibia o té, calmar el estómago e irme a dormir ya",
-          "scores": { "kimchijjigae": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "C",
-          "text": "A healthy, balanced compromise: fresh fruit, boiled egg, or light tofu bibimbap",
-          "textKo": "두부나 계란, 신선한 방울토마토로 가볍고 건강하게 타협점을 찾는다",
-          "textEs": "Un punto medio saludable: tofu, un huevo cocido o fruta fresca ligera",
-          "scores": { "bibimbap": 3, "bingsu": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Watch Mukbang videos until I feel vicariously full!",
-          "textKo": "좋아하는 유튜버의 먹방 영상을 보며 대리만족으로 위안 삼기",
-          "textEs": "¡Poner videos de Mukbang coreano en YouTube hasta sentirme lleno por osmosis!",
-          "scores": { "hangangramen": 3, "samgyeopsal": 1 }
-        }
-      ]
-    },
-    {
-      "id": 28,
-      "question": "On a scorching 35°C (95°F) summer day in Seoul, what rescues you from the heat?",
-      "questionKo": "체감온도 35도 폭염의 한여름 날씨, 더위를 단숨에 날려버릴 당신의 구원투수는?",
-      "questionEs": "Día de verano a 35 °C en Seúl. ¿Qué te rescata de golpe del calor abrasador?",
-      "emoji": "🍧",
-      "options": [
-        {
-          "id": "A",
-          "text": "A mountain of ice-cold snow bingsu overflowing with mango and sweet milk!",
-          "textKo": "머리가 띵할 정도로 시원하고 달콤한 산더미 망고 눈꽃빙수 한 그릇!",
-          "textEs": "¡Una montaña de bingsu helado con mango dulce y leche condensada bien fría!",
-          "scores": { "bingsu": 3, "bungeoppang": 1 }
-        },
-        {
-          "id": "B",
-          "text": "Fight fire with fire (이열치열)! Hot bubbling Samgyetang (ginseng chicken soup)",
-          "textKo": "이열치열! 뜨끈한 삼계탕이나 칼칼한 찌개로 땀 쫙 빼고 원기 회복하기",
-          "textEs": "¡Combatir fuego con fuego (Iyeol-chiyeol)! Sopa de pollo caliente para sudar el calor",
-          "scores": { "kimchijjigae": 3, "samgyeopsal": 1 }
-        },
-        {
-          "id": "C",
-          "text": "An icy-cold draft beer with crunchy chicken in an air-conditioned haven",
-          "textKo": "에어컨 빵빵한 곳에서 꿀꺽꿀꺽 들이키는 얼음잔 생맥주와 치킨",
-          "textEs": "Cerveza de barril heladísima con pollo crujiente bajo aire acondicionado a tope",
-          "scores": { "chimaek": 3, "hangangramen": 1 }
-        },
-        {
-          "id": "D",
-          "text": "Chilled spicy cold noodles (Bibim Naengmyeon) with ice cubes and sesame",
-          "textKo": "얼음 동동 띄운 매콤새콤한 비빔냉면으로 입맛 돋우기",
-          "textEs": "Fideos fríos picantes con cubitos de hielo y semillas de sésamo",
-          "scores": { "bibimbap": 3, "tteokbokki": 1 }
-        }
-      ]
-    },
-    {
-      "id": 29,
-      "question": "Exploring a lively Korean night market. Where do your feet naturally take you?",
-      "questionKo": "활기찬 한국 야시장에 도착했다! 당신의 발걸음이 가장 먼저 멈추는 곳은?",
-      "questionEs": "Paseas por un animado mercado nocturno coreano. ¿Dónde te detienes primero?",
-      "emoji": "🏮",
-      "options": [
-        {
-          "id": "A",
-          "text": "The sizzling griddles: watching thick patties, pancakes, and pork belly sizzle",
-          "textKo": "지글지글 고기와 빈대떡 굽는 기름 냄새 가득한 철판 앞",
-          "textEs": "Frente a las planchas calientes viendo asar carne y tortillas crujientes",
-          "scores": { "samgyeopsal": 3, "chimaek": 1 }
-        },
-        {
-          "id": "B",
-          "text": "The bright red sauce vat: giant bubbling tteokbokki and crispy fried treats",
-          "textKo": "새빨간 양념이 보글보글 끓어오르는 대형 떡볶이 판 앞",
-          "textEs": "Frente a la enorme fuente de tteokbokki rojo burbujeante y fritos dorados",
-          "scores": { "tteokbokki": 3, "hangangramen": 1 }
-        },
-        {
-          "id": "C",
-          "text": "The cute sweet stalls: warm bungeoppang, honey hotteok, and candy skewers",
-          "textKo": "노릇노릇 달콤한 냄새가 유혹하는 붕어빵과 꿀호떡 코너",
-          "textEs": "Los puestos dulces: bungeoppang caliente, hotteok de miel y brochetas dulces",
-          "scores": { "bungeoppang": 3, "bingsu": 1 }
-        },
-        {
-          "id": "D",
-          "text": "The colorful bibimbap and noodle counter where you can watch everything mixed live",
-          "textKo": "다채로운 신선한 나물들이 눈앞에 펼쳐진 정겨운 비빔밥과 국수 코너",
-          "textEs": "El mostrador de verduras frescas y bibimbap mezclado al momento en directo",
-          "scores": { "bibimbap": 3, "kimchijjigae": 1 }
-        }
-      ]
-    },
-    {
-      "id": 30,
       "question": "At the end of the day, what does a good meal truly mean to you in life?",
       "questionKo": "마지막 질문! 당신에게 '좋은 한 끼의 식사'란 삶에서 궁극적으로 어떤 의미인가요?",
       "questionEs": "¡Última pregunta! Para ti, ¿qué significa realmente 'una buena comida' en la vida?",
