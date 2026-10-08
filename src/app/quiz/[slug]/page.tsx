@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getQuizBySlug, getRelatedQuizzes, getAllQuizzes } from '@/data/quizzes';
 import QuizRunner from '@/components/QuizRunner';
+import PersonalityTestRunner from '@/components/PersonalityTestRunner';
 import { getQuizThemeGroup } from '@/lib/theme';
 
 interface QuizPageProps {
@@ -27,11 +28,16 @@ export async function generateMetadata({
     };
   }
 
+  const isPersonality = quiz.quizType === 'personality';
+  const ogTitle = isPersonality
+    ? `${quiz.title} - Personality Match | K-Pulse`
+    : `${quiz.title} - Can You Score 10/10? | K-Pulse`;
+
   return {
     title: `${quiz.title} | K-Pulse`,
     description: quiz.description,
     openGraph: {
-      title: `${quiz.title} - Can You Score 10/10? | K-Pulse`,
+      title: ogTitle,
       description: quiz.description,
       url: `https://kpulsequiz.com/quiz/${quiz.slug}`,
       siteName: 'K-Pulse',
@@ -41,13 +47,13 @@ export async function generateMetadata({
           url: `/images/og/${quiz.slug}.png`,
           width: 1200,
           height: 630,
-          alt: `${quiz.title} - K-Pulse Trivia Challenge`,
+          alt: `${quiz.title} - K-Pulse`,
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
-      title: `${quiz.title} - Can You Score 10/10? | K-Pulse`,
+      title: ogTitle,
       description: quiz.description,
       images: [`/images/og/${quiz.slug}.png`],
     },
@@ -64,6 +70,14 @@ export default async function QuizPage({ params }: QuizPageProps) {
 
   const relatedQuizzes = getRelatedQuizzes(quiz.slug, 4);
   const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
+
+  if (quiz.quizType === 'personality') {
+    return (
+      <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
+        <PersonalityTestRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
+      </main>
+    );
+  }
 
   return (
     <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">

@@ -101,8 +101,60 @@ export interface AffiliateSuggestion {
   badgeTextZh?: string;
 }
 
+export type QuizType = 'trivia' | 'personality';
+
+export interface PersonalityMemberResult {
+  id: string; // e.g. 'felix', 'bangchan', etc.
+  name: string;
+  nameKo: string;
+  nameEs: string;
+  title: string;
+  titleKo: string;
+  titleEs: string;
+  subtitle: string;
+  subtitleKo: string;
+  subtitleEs: string;
+  skzoo: string;
+  skzooKo: string;
+  skzooEs: string;
+  emoji: string;
+  traits: string[];
+  traitsKo: string[];
+  traitsEs: string[];
+  description: string;
+  descriptionKo: string;
+  descriptionEs: string;
+  bestMatchId: string;
+  bestMatchName: string;
+  bestMatchNameKo: string;
+  bestMatchNameEs: string;
+  bestMatchReason: string;
+  bestMatchReasonKo: string;
+  bestMatchReasonEs: string;
+  colorHex: string;
+  bgGradient: string;
+}
+
+export interface PersonalityOption {
+  id: string;
+  text: string;
+  textKo?: string;
+  textEs?: string;
+  scores: Record<string, number | undefined>;
+}
+
+export interface PersonalityQuestion {
+  id: number;
+  question: string;
+  questionKo?: string;
+  questionEs?: string;
+  emoji?: string;
+  options: PersonalityOption[];
+}
+
 export interface Quiz {
   slug: string;
+  quizType?: QuizType;
   title: string;
   titleKo?: string;
   titleEs?: string;
@@ -129,6 +181,8 @@ export interface Quiz {
   questions: Question[];
   scoreTiers: ScoreTier[];
   affiliateSuggestion?: AffiliateSuggestion;
+  personalityQuestions?: PersonalityQuestion[];
+  personalityResults?: Record<string, PersonalityMemberResult>;
 }
 
 // Universal localized property resolver helper

@@ -1,0 +1,765 @@
+{
+  "slug": "which-stray-kids-member-are-you",
+  "quizType": "personality",
+  "title": "Which Stray Kids Member Matches Your Soul?",
+  "titleKo": "나와 가장 잘 맞는 스트레이 키즈 멤버 찾기 (소울메이트 테스트)",
+  "titleEs": "¿Qué Miembro de Stray Kids es tu Alma Gemela?",
+  "subtitle": "Discover your Stray Kids twin & personality match among all 8 members! 🐺✨",
+  "subtitleKo": "8명 멤버 중 나와 바이브가 100% 일치하는 스키즈 소울메이트를 찾아보세요!",
+  "subtitleEs": "¡Descubre con cuál de los 8 miembros de Stray Kids compartes tu vibra y personalidad!",
+  "description": "Are you a sunshine angel like Felix, a dedicated captain like Bang Chan, or an artistic soul like Hyunjin? Take the viral 10-question Stray Kids personality test!",
+  "descriptionKo": "사랑스러운 햇살 필릭스, 든든한 캡틴 방찬, 감성 아티스트 현진까지! 10개 질문으로 알아보는 나의 스트레이 키즈 소울메이트 유형 테스트.",
+  "descriptionEs": "¿Eres un rayo de sol como Felix, un líder protector como Bang Chan o un alma artística como Hyunjin? ¡Descubre tu match con este test de 10 preguntas!",
+  "category": "K-Pop",
+  "tag": "Stray Kids",
+  "coverEmoji": "🔮",
+  "gradient": "from-rose-600 via-purple-700 to-indigo-800",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "210.4K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "felix": {
+      "id": "felix",
+      "name": "Felix (필릭스)",
+      "nameKo": "필릭스 (Felix)",
+      "nameEs": "Felix (Lee Yong-bok)",
+      "title": "The Pure Sunshine & Gentle Angel",
+      "titleKo": "세상을 밝히는 무해한 햇살 천사",
+      "titleEs": "El Ángel Radiante de Corazón Puro",
+      "subtitle": "Warm, deeply empathetic, and spreading happiness wherever you go",
+      "subtitleKo": "따뜻함과 다정함으로 주변 사람들을 행복하게 만드는 긍정 아우라의 소유자",
+      "subtitleEs": "Cálido, profundamente empático y esparciendo felicidad por donde vas",
+      "skzoo": "BbokAri 🐣",
+      "skzooKo": "뽁아리 (BbokAri 🐣)",
+      "skzooEs": "BbokAri 🐣",
+      "emoji": "☀️",
+      "colorHex": "#F59E0B",
+      "bgGradient": "from-amber-400 via-orange-500 to-rose-500",
+      "traits": [
+        "Unconditional Sunshine Energy",
+        "Deeply Empathetic & Caring",
+        "Loves Baking & Sharing Gifts",
+        "Charming Contrast Voice"
+      ],
+      "traitsKo": [
+        "무조건적인 긍정 햇살 에너지",
+        "세심한 공감 요정 & 다정함 보스",
+        "베이킹과 깜짝 선물 나누기 마니아",
+        "반전의 매력적인 저음 보이스"
+      ],
+      "traitsEs": [
+        "Energía de Sol Puro e Incondicional",
+        "Profundamente Empático y Dulce",
+        "Ama Hornear y Compartir Regalos",
+        "Increíble Contraste con Voz Profunda"
+      ],
+      "description": "You are the beacon of warmth in your friend group! You have a pure, selfless heart that genuinely roots for everyone around you. Like Felix baking brownies for the staff, your acts of kindness brighten the darkest days. People are drawn to your gentle demeanor, infectious smile, and unexpected charismatic depth.",
+      "descriptionKo": "당신은 주변 사람들에게 비타민이자 안식처 같은 존재입니다! 힘든 일이 있어도 다정한 미소와 따뜻한 말 한마디로 분위기를 환하게 밝히는 특별한 힘을 가지고 있습니다. 사람들을 향한 순수한 애정과 배려심은 주변 친구들에게 큰 감동과 용기를 줍니다.",
+      "descriptionEs": "¡Eres el faro de luz en tu grupo de amigos! Tienes un corazón noble y empático que siempre busca hacer sonreír a los demás. Al igual que Felix horneando brownies para el equipo, tus pequeños gestos llenan el mundo de alegría. Tu energía positiva y carisma son irresistibles.",
+      "bestMatchId": "bangchan",
+      "bestMatchName": "Bang Chan (방찬)",
+      "bestMatchNameKo": "방찬 (Bang Chan)",
+      "bestMatchNameEs": "Bang Chan",
+      "bestMatchReason": "Bang Chan provides the steady, protective anchor that cherishes your pure warmth and shields your sensitive heart.",
+      "bestMatchReasonKo": "방찬의 든든한 책임감과 보호자 같은 배려가 당신의 여린 마음을 따뜻하게 지켜주는 최고의 소울메이트 조합입니다.",
+      "bestMatchReasonEs": "Bang Chan es el ancla protectora que valora tu calidez pura y cuida de ti con cariño incondicional."
+    },
+    "bangchan": {
+      "id": "bangchan",
+      "name": "Bang Chan (방찬)",
+      "nameKo": "방찬 (Bang Chan)",
+      "nameEs": "Bang Chan (Christopher Bahng)",
+      "title": "The Reliable & Protective Captain",
+      "titleKo": "모두를 지키는 든든한 올라운더 리더",
+      "titleEs": "El Líder Protector y Confiable",
+      "subtitle": "Selfless, resilient, and always putting your loved ones first",
+      "subtitleKo": "강한 책임감과 헌신으로 사람들을 이끄는 믿음직한 캡틴",
+      "subtitleEs": "Resiliente, generoso y siempre priorizando a sus seres queridos",
+      "skzoo": "Wolf Chan 🐺",
+      "skzooKo": "울프찬 (Wolf Chan 🐺)",
+      "skzooEs": "Wolf Chan 🐺",
+      "emoji": "🛡️",
+      "colorHex": "#4338CA",
+      "bgGradient": "from-indigo-600 via-blue-700 to-slate-900",
+      "traits": [
+        "Unshakeable Sense of Duty",
+        "Night-Owl Hard Worker",
+        "Warm Virtual 'Big Hugs'",
+        "Natural Protective Leader"
+      ],
+      "traitsKo": [
+        "흔들리지 않는 굳건한 책임감",
+        "새벽까지 끝을 보는 열정의 올빼미파",
+        "다정하고 든든한 맏형 바이브",
+        "내 사람들을 끝까지 지키는 보호자"
+      ],
+      "traitsEs": [
+        "Sentido Inquebrantable del Deber",
+        "Trabajador Incansable y Nocturno",
+        "Cálidos Abrazos Reconfortantes",
+        "Líder Protector por Naturaleza"
+      ],
+      "description": "You are the rock that everyone leans on. When life gets chaotic, your composure and leadership steady the ship. You have a deep capacity for self-sacrifice and work tirelessly behind the scenes to make sure the people you love thrive. A true pillar of trust and unconditional support.",
+      "descriptionKo": "어떤 혼란스러운 상황에서도 중심을 잡고 팀을 이끄는 든든한 기둥 같은 사람입니다! 묵묵히 밤을 새워서라도 맡은 일을 완벽하게 해내며, 나보다 주변 사람들의 행복과 안정을 먼저 생각하는 깊은 그릇을 지녔습니다.",
+      "descriptionEs": "Eres el pilar inquebrantable en el que todos confían. Tu serenidad y sentido de responsabilidad inspiran a quienes te rodean. Siempre estás dispuesto a trabajar duro en las sombras con tal de que tu equipo brille. Un líder noble y protector.",
+      "bestMatchId": "felix",
+      "bestMatchName": "Felix (필릭스)",
+      "bestMatchNameKo": "필릭스 (Felix)",
+      "bestMatchNameEs": "Felix",
+      "bestMatchReason": "Felix's boundless sunshine brings effortless joy and healing to your hardworking shoulders.",
+      "bestMatchReasonKo": "필릭스의 무해한 미소와 다정한 애교가 무거운 책임감을 내려놓고 편안하게 웃게 만들어주는 찰떡 케미입니다.",
+      "bestMatchReasonEs": "La luz pura de Felix reconforta tu corazón y alivia la pesada carga de tus responsabilidades."
+    },
+    "leeknow": {
+      "id": "leeknow",
+      "name": "Lee Know (리노)",
+      "nameKo": "리노 (Lee Know)",
+      "nameEs": "Lee Know (Lee Min-ho)",
+      "title": "The Tsundere Dancing Cat Master",
+      "titleKo": "겉차속따 엉뚱발랄 댄싱 고양이",
+      "titleEs": "El Genio Tsundere y Bailarín Felino",
+      "subtitle": "Sharp-witted, quirky, fiercely independent yet secretly caring",
+      "subtitleKo": "시크한 눈빛 뒤에 숨겨진 세심한 배려와 엉뚱한 매력의 소유자",
+      "subtitleEs": "Perspicaz, independiente y secretamente el más atento",
+      "skzoo": "Leebit 🐰",
+      "skzooKo": "리빗 (Leebit 🐰)",
+      "skzooEs": "Leebit 🐰",
+      "emoji": "😼",
+      "colorHex": "#059669",
+      "bgGradient": "from-emerald-500 via-teal-600 to-slate-900",
+      "traits": [
+        "Tsundere (Cold Outside, Warm Inside)",
+        "Passionate Cat Protector",
+        "180° Air Fryer Sense of Humor",
+        "Perfectionist in Your Craft"
+      ],
+      "traitsKo": [
+        "겉은 시크하지만 속은 따뜻한 츤데레",
+        "고양이 집사 본능 & 섬세한 챙김",
+        "예측불허 엉뚱한 4차원 유머 감각",
+        "자신의 분야에서는 타협 없는 완벽주의"
+      ],
+      "traitsEs": [
+        "Tsundere (Frío por fuera, dulce por dentro)",
+        "Amante Protector de los Gatos",
+        "Humor Único y Sarcasmo Brillante",
+        "Perfeccionista en Cada Detalle"
+      ],
+      "description": "You might seem unbothered or sharp at first glance, but those who know you understand you have the softest heart. You express love through actions rather than sweet words—feeding people, noticing small details, and quietly having their backs. Independent, stylish, and delightfully unpredictable!",
+      "descriptionKo": "오글거리는 말보다는 조용히 밥을 챙겨주고 무심하게 챙겨주는 행동파! 처음엔 다가가기 어려워 보일 수 있지만, 알면 알수록 유쾌한 입담과 진한 인간미에 빠져들게 만드는 치명적인 매력을 가졌습니다.",
+      "descriptionEs": "A primera vista puedes parecer distante o impredecible, pero por dentro eres quien más se preocupa por todos. No necesitas palabras cursis: demuestras tu lealtad cuidando detalles y alimentando a tus amigos. Un misterio fascinante y leal.",
+      "bestMatchId": "han",
+      "bestMatchName": "Han (한)",
+      "bestMatchNameKo": "한 (Han)",
+      "bestMatchNameEs": "Han",
+      "bestMatchReason": "Han's witty banter and musical chemistry make you laugh uncontrollably, bringing out your softest side.",
+      "bestMatchReasonKo": "한(Han)과의 티키타카는 말하지 않아도 서로의 코드를 100% 이해하는 영혼의 단짝 조합입니다.",
+      "bestMatchReasonEs": "La química cómica y el talento de Han sacan tus carcajadas más sinceras y tu lado más dulce."
+    },
+    "changbin": {
+      "id": "changbin",
+      "name": "Changbin (창빈)",
+      "nameKo": "창빈 (Changbin)",
+      "nameEs": "Changbin (Seo Chang-bin)",
+      "title": "The Unstoppable Jutdae Powerhouse",
+      "titleKo": "줏대 있는 긍정 에너지 폭격기",
+      "titleEs": "La Fuerza Positiva con Principios (Jutdae)",
+      "subtitle": "Unapologetically yourself, bold, athletic, and full of vibrant spirit",
+      "subtitleKo": "확고한 나만의 주관(줏대)과 지치지 않는 텐션의 분위기 메이커",
+      "subtitleEs": "Firme en sus convicciones, atlético y el alma de la fiesta",
+      "skzoo": "Dwaekki 🐷🐰",
+      "skzooKo": "돼끼 (Dwaekki 🐷🐰)",
+      "skzooEs": "Dwaekki 🐷🐰",
+      "emoji": "💪",
+      "colorHex": "#DC2626",
+      "bgGradient": "from-rose-600 via-red-600 to-zinc-900",
+      "traits": [
+        "Solid 'Jutdae' (Strong Personal Principles)",
+        "Gym & Fitness Enthusiast",
+        "Irresistible Mood Maker",
+        "Razor-Sharp Creative Talent"
+      ],
+      "traitsKo": [
+        "흔들리지 않는 단단한 줏대(주관)",
+        "언제나 열정 넘치는 헬스&운동 사랑",
+        "어떤 모임이든 웃음바다로 만드는 비타민",
+        "속사포처럼 번뜩이는 추진력과 센스"
+      ],
+      "traitsEs": [
+        "Principios Sólidos (Jutdae)",
+        "Entusiasta de la Fuerza y el Fitness",
+        "Creador de Ambiente Divertido",
+        "Talento Intenso y Rápido"
+      ],
+      "description": "Confidence is your superpower! You don't let other people's opinions dictate your path. When you walk into a room, your infectious energy and witty humor lift everyone up. Behind your powerhouse persona lies incredible dedication, emotional intelligence, and unwavering loyalty to your friends.",
+      "descriptionKo": "남의 시선에 휘둘리지 않고 나만의 신념(줏대)으로 당당하게 전진하는 사람! 모임에서 어색한 침묵을 참지 못하고 모두를 웃게 만드는 인간 비타민이며, 운동과 자기계발에서도 최고의 끈기를 보여줍니다.",
+      "descriptionEs": "¡La confianza es tu superpoder! No dejas que las opiniones ajenas definan tu camino. Tu energía radiante y tu humor ingenioso encienden cualquier habitación. Detrás de tu fuerza arrolladora hay una gran sensibilidad y lealtad.",
+      "bestMatchId": "seungmin",
+      "bestMatchName": "Seungmin (승민)",
+      "bestMatchNameKo": "승민 (Seungmin)",
+      "bestMatchNameEs": "Seungmin",
+      "bestMatchReason": "Seungmin's dry wit and sarcastic comebacks provide the perfect playful sparring partner for your boundless energy.",
+      "bestMatchReasonKo": "승민의 팩트 폭격 장난과 당신의 유쾌한 텐션이 만나면 하루 종일 웃음이 멈추지 않는 환상의 콤비가 됩니다.",
+      "bestMatchReasonEs": "El humor sarcástico de Seungmin es el contrapunto perfecto para equilibrar tu energía explosiva con risas sin fin."
+    },
+    "hyunjin": {
+      "id": "hyunjin",
+      "name": "Hyunjin (현진)",
+      "nameKo": "현진 (Hyunjin)",
+      "nameEs": "Hyunjin (Hwang Hyun-jin)",
+      "title": "The Passionate & Dramatic Artist",
+      "titleKo": "섬세한 감성을 그리는 무대 위의 예술가",
+      "titleEs": "El Artista Apasionado y Sensible",
+      "subtitle": "Expressive, deeply artistic, emotional, and captivating in every moment",
+      "subtitleKo": "풍부한 감수성과 눈부신 열정으로 매 순간을 빛내는 아티스트",
+      "subtitleEs": "Expresivo, amante del arte, emocional y magnético",
+      "skzoo": "Jiniret 🥟",
+      "skzooKo": "지니렛 (Jiniret 🥟)",
+      "skzooEs": "Jiniret 🥟",
+      "emoji": "🎨",
+      "colorHex": "#E11D48",
+      "bgGradient": "from-pink-500 via-rose-600 to-purple-900",
+      "traits": [
+        "Deeply Artistic & Expressive",
+        "Perfectionist on the Big Stage",
+        "Emotional & Empathetic Soul",
+        "Stylish Trendsetter Vibe"
+      ],
+      "traitsKo": [
+        "풍부한 미적 감각과 그림/예술 사랑",
+        "무대 위에서 폭발하는 프로페셔널 열정",
+        "웃음도 눈물도 많은 순수한 감수성",
+        "어디서나 눈길을 사로잡는 독보적 분위기"
+      ],
+      "traitsEs": [
+        "Profundo Sentido Artístico y Visual",
+        "Feroz Perfeccionista en el Escenario",
+        "Alma Sensible Llena de Pasión",
+        "Estilo Magnético e Inolvidable"
+      ],
+      "description": "You feel the world in full color! Highly intuitive and artistic, you pour your heart and soul into everything you love. You might shed tears at a beautiful movie or work for hours perfecting a creative project. Your intense charisma and vulnerability make you impossible to forget.",
+      "descriptionKo": "세상의 모든 아름다움과 감정을 스펀지처럼 흡수하는 감성파 예술가! 자신이 좋아하는 일에는 모든 열정을 쏟아부으며, 겉으로 보이는 화려함 뒤에 끊임없는 노력과 섬세한 순수함을 간직하고 있습니다.",
+      "descriptionEs": "¡Vives la vida a todo color! Eres intuitivo, apasionado y entregas tu alma a tus creaciones. Puedes emocionarte hasta las lágrimas con una buena canción y luego deslumbrar con tu presencia. Tu carisma y vulnerabilidad te hacen inolvidable.",
+      "bestMatchId": "bangchan",
+      "bestMatchName": "Bang Chan (방찬)",
+      "bestMatchNameKo": "방찬 (Bang Chan)",
+      "bestMatchNameEs": "Bang Chan",
+      "bestMatchReason": "Bang Chan's steady embrace gives you the unconditional safety net you need to create your greatest art.",
+      "bestMatchReasonKo": "방찬의 든든한 지지와 포용력이 당신의 섬세한 예술적 영감을 가장 안전하고 자유롭게 피어나게 해줍니다.",
+      "bestMatchReasonEs": "La estabilidad de Bang Chan te da la seguridad emocional que necesitas para desatar tu máximo potencial artístico."
+    },
+    "han": {
+      "id": "han",
+      "name": "Han (한)",
+      "nameKo": "한 (Han Jisung)",
+      "nameEs": "Han (Han Ji-sung)",
+      "title": "The Introverted Sunshine & Creative Genius",
+      "titleKo": "집돌이 감성과 번뜩이는 천재성의 공존",
+      "titleEs": "El Genio Musical y Ermitaño Adorable",
+      "subtitle": "Brilliant storyteller, homebody lover, and lyrical mastermind",
+      "subtitleKo": "침대 위 힐링을 사랑하는 집돌이이자 무대 위 올라운더 천재",
+      "subtitleEs": "Maestro de las letras, amante de su cama y creativo sin límites",
+      "skzoo": "HAN QUOKKA 🐿️",
+      "skzooKo": "한쿼카 (HAN QUOKKA 🐿️)",
+      "skzooEs": "HAN QUOKKA 🐿️",
+      "emoji": "🎧",
+      "colorHex": "#D97706",
+      "bgGradient": "from-amber-500 via-orange-600 to-slate-900",
+      "traits": [
+        "Cozy Homebody Enthusiast",
+        "Master Lyricist & Melodist",
+        "Deeply Introspective ('Alien' Vibe)",
+        "Instant Comic Genius"
+      ],
+      "traitsKo": [
+        "이불 밖은 위험해! 궁극의 집돌이 본능",
+        "번뜩이는 아이디어의 천재 멜로디 메이커",
+        "혼자 있을 땐 깊은 사색을 즐기는 감성파",
+        "친구들과 있을 땐 쉴 틈 없는 예능 천재"
+      ],
+      "traitsEs": [
+        "Ermitaño Feliz en su Cama",
+        "Genio Lírico y Melódico Asombroso",
+        "Profundo y Poético ('Alien')",
+        "Chispas Cómicas Inolvidables"
+      ],
+      "description": "A true genius with an introspective heart! When outside, your quick wit and comedic timing steal the show, but you truly recharge in your cozy room with your favorite snacks, movies, and music. Deeply poetic and observant, you turn fleeting feelings into timeless art.",
+      "descriptionKo": "재치 있는 유머와 반짝이는 재능으로 무대를 압도하지만, 집에서는 침대와 한 몸이 되어 조용히 감성을 충전하는 반전 매력의 소유자! 홀로 사색하며 떠올린 생각들을 멋진 작품과 이야기로 엮어내는 천재적인 재능이 있습니다.",
+      "descriptionEs": "¡Un genio creativo con alma reflexiva! Frente a tus amigos eres divertidísimo y elocuente, pero tu verdadera energía se recarga en tu habitación con películas y música. Tu sensibilidad poética te permite transformar cualquier emoción en arte.",
+      "bestMatchId": "leeknow",
+      "bestMatchName": "Lee Know (리노)",
+      "bestMatchNameKo": "리노 (Lee Know)",
+      "bestMatchNameEs": "Lee Know",
+      "bestMatchReason": "Lee Know understands your unspoken social battery and quietly protects your personal space with good food.",
+      "bestMatchReasonKo": "리노(Lee Know)는 당신의 내향적 배터리를 말없이 이해해주고, 맛있는 음식을 챙겨주며 가장 편안하게 해주는 소울메이트입니다.",
+      "bestMatchReasonEs": "Lee Know comprende tus momentos de silencio y cuida de ti con comidas deliciosas y lealtad incondicional."
+    },
+    "seungmin": {
+      "id": "seungmin",
+      "name": "Seungmin (승민)",
+      "nameKo": "승민 (Seungmin)",
+      "nameEs": "Seungmin (Kim Seung-min)",
+      "title": "The Dedicated & Sarcastic Dandy Puppy",
+      "titleKo": "성실함 200%의 맑은 눈의 광인 댕댕이",
+      "titleEs": "El Cachorro Dandi Diligente y Sarcástico",
+      "subtitle": "Disciplined, laser-focused, razor-sharp with honest humor",
+      "subtitleKo": "철저한 루틴과 성실함 뒤에 숨겨진 뼈 때리는 팩트폭격 유머",
+      "subtitleEs": "Disciplinado, con humor ácido brillante y voz dorada",
+      "skzoo": "PuppyM 🐶",
+      "skzooKo": "퍼피엠 (PuppyM 🐶)",
+      "skzooEs": "PuppyM 🐶",
+      "emoji": "🐶",
+      "colorHex": "#2563EB",
+      "bgGradient": "from-blue-600 via-indigo-700 to-slate-900",
+      "traits": [
+        "Unbeatable Daily Routine Discipline",
+        "Dry Sarcastic 'Clear-Eyed Madman' Wit",
+        "Perfectionist Vocal Devotion",
+        "Loyal and Endearing Puppy Energy"
+      ],
+      "traitsKo": [
+        "절대 흐트러지지 않는 철저한 자기관리",
+        "맑은 눈으로 핵심을 찌르는 팩폭 장인",
+        "보컬과 꿈을 향한 지치지 않는 연습 벌레",
+        "묵묵히 곁을 지키는 듬직한 반려견 매력"
+      ],
+      "traitsEs": [
+        "Rutina Diaria Implacable y Disciplina",
+        "Humor Ácido y Comentarios Impecables",
+        "Dedicación Total al Crecimiento Personal",
+        "Lealtad Incondicional de Cachorro Fiel"
+      ],
+      "description": "Consistency is your crown! You believe in hard work, disciplined routines, and constant improvement. Beneath your calm and polite exterior hides a delightfully savage sense of humor with impeccable timing. You don't sugarcoat things, but your honesty comes from a place of deep devotion.",
+      "descriptionKo": "하루하루의 루틴과 약속을 철저히 지키며 스스로를 성장시키는 성실함의 교과서! 얌전해 보이지만 방심한 순간 뼈를 때리는 기막힌 유머를 날리며, 꾸밈없는 솔직함 속에 친구들을 향한 깊은 의리와 진심이 담겨 있습니다.",
+      "descriptionEs": "¡La constancia es tu mayor virtud! Crees en la superación diaria y en mantenerte fiel a tus metas. Tras tu apariencia educada y dandi se esconde un sentido del humor afilado e hilarante. Eres directo y honesto, pero profundamente leal.",
+      "bestMatchId": "changbin",
+      "bestMatchName": "Changbin (창빈)",
+      "bestMatchNameKo": "창빈 (Changbin)",
+      "bestMatchNameEs": "Changbin",
+      "bestMatchReason": "Changbin is the one person you can tease relentlessly who will always respond with hearty laughter and big love.",
+      "bestMatchReasonKo": "창빈의 호탕한 웃음과 당신의 팩폭 티키타카는 하루 종일 붙어있어도 질리지 않는 최고의 예능 케미입니다.",
+      "bestMatchReasonEs": "Changbin es a quien puedes molestar sin parar y siempre te responderá con risas sinceras y un abrazo gigante."
+    },
+    "in": {
+      "id": "in",
+      "name": "I.N (아이엔)",
+      "nameKo": "아이엔 (I.N / 양정인)",
+      "nameEs": "I.N (Yang Jeong-in)",
+      "title": "The Charming & Clever Maknae on Top",
+      "titleKo": "형들을 조련하는 사랑스러운 막내온탑",
+      "titleEs": "El Encantador y Audaz Maknae on Top",
+      "subtitle": "Playfully wise, observant, patient, and radiating youthful charm",
+      "subtitleKo": "사막여우 눈웃음 뒤에 어른스러운 침착함을 겸비한 실세 막내",
+      "subtitleEs": "Sabio, paciente, risueño y con un encanto magnético",
+      "skzoo": "FoxI.Ny 🦊",
+      "skzooKo": "폭시니 (FoxI.Ny 🦊)",
+      "skzooEs": "FoxI.Ny 🦊",
+      "emoji": "🦊",
+      "colorHex": "#7C3AED",
+      "bgGradient": "from-purple-600 via-fuchsia-600 to-slate-900",
+      "traits": [
+        "'Maknae on Top' Quiet Authority",
+        "Irresistible Fennec Fox Eye Smile",
+        "Calm & Mature Beyond Years",
+        "Endless Growth Mindset"
+      ],
+      "traitsKo": [
+        "모두의 귀여움을 독차지하는 막내온탑",
+        "보는 사람까지 미소 짓게 하는 사막여우 눈웃음",
+        "나이보다 훨씬 어른스럽고 침착한 멘탈",
+        "포기하지 않고 묵묵히 성장하는 뚝심"
+      ],
+      "traitsEs": [
+        "Autoridad Suave de 'Maknae on Top'",
+        "Sonrisa Encantadora de Zorro Fénec",
+        "Maduro, Paciente y Sereno",
+        "Perseverancia Constante en Silencio"
+      ],
+      "description": "You possess the quiet wisdom that keeps everyone grounded. Even as the younger or cute one in a circle, you carry yourself with poise and patience. You playfully let others spoil you while subtly steering things in the right direction. Your warm eye smile can disarm anyone in seconds!",
+      "descriptionKo": "주변 사람들의 사랑을 한몸에 받으면서도 결코 휘둘리지 않는 단단한 내면의 소유자! 특유의 사랑스러운 눈웃음으로 분위기를 녹이고, 중요한 순간에는 묵직한 어른스러움으로 상황을 지혜롭게 이끌어가는 실세 타입입니다.",
+      "descriptionEs": "Posees una sabiduría tranquila que mantiene la calma en cualquier grupo. Aunque los demás te mimen por tu ternura, en el fondo eres paciente, sensato y tienes el control. Tu tierna sonrisa desarma a cualquiera al instante.",
+      "bestMatchId": "seungmin",
+      "bestMatchName": "Seungmin (승민)",
+      "bestMatchNameKo": "승민 (Seungmin)",
+      "bestMatchNameEs": "Seungmin",
+      "bestMatchReason": "Seungmin shares your quiet dedication, practicing vocals side-by-side while sharing unspoken mutual respect.",
+      "bestMatchReasonKo": "승민과 함께 보컬라차로 서로를 성장시키며 묵묵히 기댈 수 있는 가장 든든한 동반자 케미입니다.",
+      "bestMatchReasonEs": "Seungmin comparte tu disciplina vocal y te acompaña hombro con hombro con respeto mutuo y risas cómplices."
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "question": "It's Friday night after a grueling week. What is your ideal way to recharge your soul?",
+      "questionKo": "길고 치열했던 한 주가 끝난 금요일 밤, 당신이 에너지를 완벽하게 재충전하는 방법은?",
+      "questionEs": "Es viernes por la noche tras una semana agotadora. ¿Cómo recargas tu energía al máximo?",
+      "emoji": "🌙",
+      "options": [
+        {
+          "id": "A",
+          "text": "Curling up in bed under soft blankets, binging favorite anime/movies in complete solitude",
+          "textKo": "집에서 포근한 이불 덮고 밀린 애니/영화 보며 온전한 혼자만의 시간 즐기기",
+          "textEs": "Acurrucarme en la cama viendo anime/películas en completa soledad y paz",
+          "scores": { "han": 2, "hyunjin": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Baking treats or cooking delicious comfort food to surprise and feed loved ones",
+          "textKo": "달콤한 디저트나 맛있는 음식을 직접 요리해서 소중한 사람들과 나눠 먹기",
+          "textEs": "Hornear postres o cocinar algo delicioso para compartir con mis seres queridos",
+          "scores": { "felix": 2, "in": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Hitting the gym hard for a heavy workout, sweating away all stress and fatigue",
+          "textKo": "헬스장으로 직행해서 땀 흘리며 시원하게 쇠질하고 스트레스 날려버리기",
+          "textEs": "Ir al gimnasio a entrenar duro, sudando todo el estrés y la fatiga",
+          "scores": { "changbin": 2, "bangchan": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Cuddling with pets, journaling the week, or organizing my space with quiet satisfaction",
+          "textKo": "반려동물과 뒹굴거리거나 한 주를 기록하고 방을 깔끔하게 정리하기",
+          "textEs": "Acariciar a mis mascotas, escribir en mi diario o poner orden con satisfacción",
+          "scores": { "leeknow": 2, "seungmin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "When planning a road trip with close friends, what role do you naturally end up taking?",
+      "questionKo": "친한 친구들과 함께 여행을 떠날 때, 내가 자연스럽게 맡게 되는 포지션은?",
+      "questionEs": "Cuando organizas un viaje con amigos, ¿qué rol terminas asumiendo naturalmente?",
+      "emoji": "🗺️",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Master Organizer: Booking hotels, mapping every route, and keeping the group safe",
+          "textKo": "숙소 예약부터 이동 동선까지 꼼꼼히 챙기는 든든한 총괄 플래너",
+          "textEs": "El Organizador: Reservar hoteles, trazar rutas y cuidar que todos estén seguros",
+          "scores": { "bangchan": 2, "seungmin": 1 }
+        },
+        {
+          "id": "B",
+          "text": "The Energy Vitamin: Keeping the mood upbeat with jokes, playlist hype, and loud laughter",
+          "textKo": "플레이리스트를 틀고 쉬지 않고 웃긴 멘트를 던지는 인간 비타민 분위기 메이커",
+          "textEs": "El Alma del Viaje: Poner la música, hacer chistes y mantener las risas al 100%",
+          "scores": { "changbin": 2, "han": 1 }
+        },
+        {
+          "id": "C",
+          "text": "The Silent Guardian: Checking local food joints and making sure no one gets lost without making a fuss",
+          "textKo": "겉으론 무심한 척하지만 숨은 맛집을 찾아내고 뒤처진 친구 챙기는 해결사",
+          "textEs": "El Guardián Discreto: Encontrar los mejores restaurantes locales y cuidar al grupo sin aspavientos",
+          "scores": { "leeknow": 2, "in": 1 }
+        },
+        {
+          "id": "D",
+          "text": "The Aesthetic Soul: Taking stunning aesthetic photos of the scenery and soaking in the atmosphere",
+          "textKo": "멋진 풍경과 추억을 카메라에 담으며 감성에 푹 젖는 힐링 포토그래퍼",
+          "textEs": "El Alma Estética: Tomar fotos hermosas de los paisajes y disfrutar la magia del momento",
+          "scores": { "hyunjin": 2, "felix": 1 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "A close friend breaks down crying with personal worries. What is your immediate instinct?",
+      "questionKo": "가까운 친구가 힘든 고민을 털어놓으며 눈물을 흘릴 때, 나의 첫 번째 반응은?",
+      "questionEs": "Un amigo cercano rompe a llorar contándote sus problemas. ¿Cuál es tu reacción inmediata?",
+      "emoji": "🫂",
+      "options": [
+        {
+          "id": "A",
+          "text": "Wrap them in a tight hug without saying a word, letting them know they are deeply loved",
+          "textKo": "말없이 꼭 안아주고 따뜻하게 손을 잡아주며 함께 눈물 글썽이기",
+          "textEs": "Abrazarlo con fuerza sin decir una palabra, haciéndole sentir que no está solo",
+          "scores": { "felix": 2, "hyunjin": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Listen to the whole story patiently, then firmly assure them: 'We will solve this together'",
+          "textKo": "끝까지 진심으로 들어준 뒤 '내가 곁에 있으니 다 잘될 거야'라며 단단한 힘 실어주기",
+          "textEs": "Escuchar pacientemente y asegurarle con firmeza: 'Vamos a salir de esta juntos'",
+          "scores": { "bangchan": 2, "changbin": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Hand them delicious comfort food quietly and use dry wit to crack a tiny smile on their face",
+          "textKo": "무심한 척 맛있는 음식을 건네주고 엉뚱한 한마디로 피식 웃음 짓게 만들기",
+          "textEs": "Pasarle comida deliciosa disimuladamente y soltar un chiste seco para sacarle una sonrisa",
+          "scores": { "leeknow": 2, "in": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Help them break down the root issue logically and devise step-by-step practical remedies",
+          "textKo": "친구의 감정을 가라앉힌 뒤, 문제의 원인을 차분하게 정리하고 현실적 해결책 찾아주기",
+          "textEs": "Ayudarle a analizar la causa del problema y trazar soluciones prácticas paso a paso",
+          "scores": { "seungmin": 2, "han": 1 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "You walk into a lively party where you only know the host. How do you behave?",
+      "questionKo": "아는 사람이 주최자 한 명뿐인 파티나 낯선 모임에 갔을 때, 나의 모습은?",
+      "questionEs": "Llegas a una fiesta donde solo conoces al anfitrión. ¿Cómo te desenvuelves?",
+      "emoji": "🎉",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cautious and shy at first, but once I find my vibe buddy, my humor and energy explode",
+          "textKo": "처음엔 낯을 가리며 구석에 있지만, 코드 맞는 사람을 만나면 개그 본능 폭발",
+          "textEs": "Tímido al inicio, pero una vez que encuentro a alguien afín, mi humor explota",
+          "scores": { "han": 2, "in": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Warm and approachable, greeting people with bright smiles and making them feel comfortable",
+          "textKo": "누구에게나 환한 미소로 먼저 다가가며 금세 다정하게 친구가 된다",
+          "textEs": "Cálido y sonriente, saludando con dulzura para que todos se sientan a gusto",
+          "scores": { "felix": 2, "bangchan": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Letting my stylish aura and confidence speak for itself, drawing curious people to me",
+          "textKo": "나만의 독보적인 스타일과 시크한 분위기로 은근한 존재감을 발산한다",
+          "textEs": "Dejo que mi estilo magnético y aura intrigante hagan que la gente se acerque a mí",
+          "scores": { "hyunjin": 2, "leeknow": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Initiating conversations with charismatic humor and turning awkward pauses into hearty laughs",
+          "textKo": "자연스럽게 대화를 트고 어색한 분위기를 유쾌한 드립으로 주도한다",
+          "textEs": "Rompo el hielo con ocurrencias ingeniosas y me convierto en el centro de las risas",
+          "scores": { "changbin": 2, "seungmin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "When taking on an ambitious new project or creative hobby, what is your mindset?",
+      "questionKo": "새로운 취미나 야심찬 도전을 시작할 때, 나를 움직이는 원동력은?",
+      "questionEs": "¿Qué mentalidad te impulsa cuando comienzas un proyecto ambicioso o pasatiempo?",
+      "emoji": "🔥",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stick firmly to my personal principles ('Jutdae') and charge forward without doubt!",
+          "textKo": "남의 시선에 흔들리지 않고 내 줏대대로 밀어붙인다! 포기란 없다!",
+          "textEs": "¡Mantenerme firme en mis convicciones (Jutdae) y avanzar sin dudar de mí mismo!",
+          "scores": { "changbin": 2, "bangchan": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Establish a meticulous daily routine and practice tirelessly with laser precision",
+          "textKo": "매일 같은 시간 정해진 연습 루틴을 철저히 지키며 꾸준함으로 승부한다",
+          "textEs": "Establecer una rutina diaria impecable y practicar con disciplina de acero",
+          "scores": { "seungmin": 2, "leeknow": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Immerse myself in intense creative emotion and expressive inspiration",
+          "textKo": "마음이 이끄는 영감과 감수성에 푹 빠져 밤을 새워 몰입한다",
+          "textEs": "Sumergirme en la emoción artística y dejar que la inspiración pura guíe cada paso",
+          "scores": { "hyunjin": 2, "han": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Share my joy and growth with the people around me, making it an uplifting journey",
+          "textKo": "순수한 배움의 기쁨을 주변 사람들과 나누며 행복한 에너지를 전파한다",
+          "textEs": "Compartir la alegría del proceso y contagiar entusiasmo positivo a quienes me rodean",
+          "scores": { "felix": 2, "in": 1 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "A stray cat approaches you on a quiet street corner and stares intently. What do you do?",
+      "questionKo": "조용한 길모퉁이에서 길고양이가 나를 빤히 쳐다보며 다가온다면?",
+      "questionEs": "Un gato callejero se acerca en una esquina y te mira fijamente. ¿Qué haces?",
+      "emoji": "🐱",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Do you like me?' Give it an affectionate tsundere look and quietly unpack some tasty snacks",
+          "textKo": "'너 나 마음에 드냐?' 츤데레 눈빛을 교환한 뒤 가방에서 간식을 꺼내 챙겨준다",
+          "textEs": "'¿Te caigo bien?' Cruzo una mirada cómplice y saco disimuladamente comida de mi mochila",
+          "scores": { "leeknow": 2, "in": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Melt completely from the cuteness, crouch down and talk in the sweetest baby voice ever",
+          "textKo": "심장이 녹아내릴 것 같아 쪼그려 앉아 아기 다루듯 다정한 목소리로 말을 건넨다",
+          "textEs": "Me derrito de ternura, me agacho y le hablo con la voz más dulce y cariñosa del mundo",
+          "scores": { "felix": 2, "hyunjin": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Ensure it's safe from cars, check if it looks hungry, and quietly watch over it as guardian",
+          "textKo": "차가 다니지 않는 안전한 곳에 있는지 살피고 묵묵히 든든하게 지켜본다",
+          "textEs": "Verifico que esté a salvo del tráfico y lo vigilo con mirada protectora",
+          "scores": { "bangchan": 2, "seungmin": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Laugh at its goofy facial expression and take 50 candid photos to post on social media",
+          "textKo": "고양이의 엉뚱한 포즈에 빵 터져서 혼자 큭큭대며 사진을 백 장 찍는다",
+          "textEs": "Me río de sus muecas adorables y le tomo 50 fotos graciosas para compartir",
+          "scores": { "han": 2, "changbin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "In a critical group project, what frustrates you the absolute most?",
+      "questionKo": "중요한 팀 프로젝트나 과제를 할 때, 내가 가장 참을 수 없는 답답한 상황은?",
+      "questionEs": "En un proyecto de equipo crucial, ¿qué es lo que más te frustra?",
+      "emoji": "⚠️",
+      "options": [
+        {
+          "id": "A",
+          "text": "People dodging responsibility and waiting for someone else to carry the burden (I end up doing it all)",
+          "textKo": "아무도 책임 안 지고 눈치만 보며 미루는 상황 (결국 내가 총대 메고 다 해결함)",
+          "textEs": "Gente que elude responsabilidades esperando que otro haga el trabajo (termino haciéndolo yo)",
+          "scores": { "bangchan": 2, "changbin": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Tardiness, breaking agreed deadlines, and sloppy lack of preparation",
+          "textKo": "약속 시간 안 지키고 정해진 루틴과 퀄리티를 흐트러뜨리는 게으른 태도",
+          "textEs": "Impuntualidad, romper fechas límite acordadas y falta de rigor en los detalles",
+          "scores": { "seungmin": 2, "leeknow": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Indecisive fence-sitting with zero personal backbone or distinct opinions",
+          "textKo": "자기만의 줏대나 확실한 의견 없이 이리저리 눈치 보며 휘둘리는 사람",
+          "textEs": "Personas sin convicciones propias que cambian de opinión según sopla el viento",
+          "scores": { "changbin": 2, "in": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Cold interpersonal friction, toxic arguing, and lack of mutual kindness",
+          "textKo": "서로 배려하지 않고 차갑게 날을 세우며 팀 분위기를 얼어붙게 만드는 불협화음",
+          "textEs": "Tensión fría entre personas, egoísmo y falta de consideración hacia los sentimientos del grupo",
+          "scores": { "felix": 2, "hyunjin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "You are granted an unexpected 3-day holiday with no obligations. What is your dream getaway?",
+      "questionKo": "갑자기 아무 제약 없는 3일간의 깜짝 휴가가 주어진다면, 꿈꾸는 휴식은?",
+      "questionEs": "Te dan 3 días libres inesperados sin ninguna obligación. ¿Cuál es tu escapada soñada?",
+      "emoji": "🌴",
+      "options": [
+        {
+          "id": "A",
+          "text": "Flying to a sunny coastal beach to swim, soak in golden sunlight, and breathe in sea breeze",
+          "textKo": "따뜻한 바닷가로 떠나 반짝이는 햇살 아래서 수영하고 자유 만끽하기",
+          "textEs": "Volar a una playa soleada para nadar, tomar el sol y respirar la brisa marina",
+          "scores": { "felix": 2, "bangchan": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Never stepping one foot outside: Bed, delicious delivery feasts, snacks, and zero alarm clocks",
+          "textKo": "집 밖으로 한 발자국도 안 나가고 배달음식과 넷플릭스로 침대와 물아일체",
+          "textEs": "No salir de casa: Cama, comida deliciosa a domicilio, maratón de series y cero alarmas",
+          "scores": { "han": 2, "leeknow": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Exploring modern art galleries, trendy vintage shopping streets, and scenic cafes",
+          "textKo": "감각적인 미술 전시회 관람, 빈티지 쇼핑, 영감을 주는 핫플레이스 탐방하기",
+          "textEs": "Explorar galerías de arte, calles de moda vintage y cafeterías con encanto visual",
+          "scores": { "hyunjin": 2, "seungmin": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Gathering my favorite crew for high-energy Korean BBQ, sports, and hilarious karaoke",
+          "textKo": "친한 사람들과 맛있는 고기 먹고 드라이브 가거나 볼링/노래방에서 신나게 놀기",
+          "textEs": "Juntarme con mis amigos favoritos para una cena épica, deportes y karaoke descontrolado",
+          "scores": { "changbin": 2, "in": 1 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Which personality compliment makes you genuinely blush and feel most recognized?",
+      "questionKo": "친구들에게 들었을 때 가장 가슴이 벅차오르고 인정받았다고 느끼는 칭찬은?",
+      "questionEs": "¿Qué cumplido sobre tu personalidad te alegra el corazón y te hace sentir más valorado?",
+      "emoji": "✨",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Being around you makes everything in my life feel so much lighter and brighter!'",
+          "textKo": "'너랑 같이 있으면 마음이 너무 편안해지고 세상이 환해지는 것 같아!'",
+          "textEs": "'¡Estar a tu lado hace que todo se sienta mucho más cálido y luminoso!'",
+          "scores": { "felix": 2, "in": 1 }
+        },
+        {
+          "id": "B",
+          "text": "'You are the most reliable person I know; I can always trust you completely.'",
+          "textKo": "'넌 내가 아는 사람 중에 제일 든든해. 너만 있으면 무슨 일이든 안심돼.'",
+          "textEs": "'Eres la persona más confiable que conozco; siempre puedo contar contigo.'",
+          "scores": { "bangchan": 2, "seungmin": 1 }
+        },
+        {
+          "id": "C",
+          "text": "'You are so unexpectedly witty and hilarious; you always catch me off guard!'",
+          "textKo": "'너 얌전해 보이는데 진짜 엉뚱하고 미친 듯이 웃겨!'",
+          "textEs": "'¡Eres inesperadamente gracioso y ocurrente; siempre me tomas por sorpresa!'",
+          "scores": { "leeknow": 2, "han": 1 }
+        },
+        {
+          "id": "D",
+          "text": "'Your passion and unique colors are so distinct; nobody else is like you.'",
+          "textKo": "'넌 자기만의 색깔과 주관이 확실해서 정말 멋있고 매력 있어.'",
+          "textEs": "'Tienes una autenticidad y pasión únicas; nadie se compara contigo.'",
+          "scores": { "changbin": 2, "hyunjin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "You are at a massive Stray Kids stadium concert with 50,000 STAYs. What is your mode?",
+      "questionKo": "5만 명의 스테이와 함께하는 대형 스타디움 콘서트장에 도착했을 때, 나의 모드는?",
+      "questionEs": "Estás en un estadio repleto con 50,000 STAYs en un concierto de Stray Kids. ¿Cuál es tu modo?",
+      "emoji": "🏟️",
+      "options": [
+        {
+          "id": "A",
+          "text": "Waving the Nachimbong frantically, screaming every rap fan-chant with 200% adrenaline!",
+          "textKo": "나침봉이 부서져라 흔들며 랩 응원법까지 올클리어! 에너지를 200% 쏟아붓는 열정 폭격기",
+          "textEs": "¡Agitando el Nachimbong a toda potencia y gritando cada verso de rap con adrenalina pura!",
+          "scores": { "changbin": 2, "bangchan": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Teared up from sheer emotional euphoria, soaking in the melodies, staging, and lights",
+          "textKo": "웅장한 멜로디와 무대 연출에 벅차올라 눈물 글썽이며 감동에 흠뻑 젖어드는 감성파",
+          "textEs": "Con lágrimas de emoción en los ojos, sumergiéndome en la melodía y el mar de luces",
+          "scores": { "hyunjin": 2, "felix": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Admiring the flawless live vocal projection, intricate choreo sync, and stage craftsmanship",
+          "textKo": "멤버들의 라이브 성량과 칼군무 댄스 디테일을 날카롭고 감탄하며 감상하는 감별사",
+          "textEs": "Apreciando con admiración la potencia vocal en vivo y la precisión de la coreografía",
+          "scores": { "seungmin": 2, "leeknow": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Cracking up at the members' unscripted banter, enjoying the fun camaraderie all around",
+          "textKo": "토크 타임에 터져 나오는 멤버들의 찐친 티키타카를 보며 광대 승천 힐링 모드",
+          "textEs": "Riendo sin parar con las ocurrencias y bromas entre los miembros en el escenario",
+          "scores": { "han": 2, "in": 1 }
+        }
+      ]
+    }
+  ]
+}

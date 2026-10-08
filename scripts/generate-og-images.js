@@ -75,6 +75,15 @@ const THEMES = {
     pillText: '#ffffff',
     tag: 'K-DRAMA · TROPES & SQUID GAME 🎬',
   },
+  'which-stray-kids-member-are-you': {
+    bgStart: '#110726',
+    bgMid: '#3b0764',
+    bgEnd: '#be123c',
+    accent: '#fb7185',
+    pillBg: '#e11d48',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · STRAY KIDS 🔮🐺',
+  },
 };
 
 const files = fs.readdirSync(QUIZZES_DIR).filter((f) => f.endsWith('.json'));
@@ -186,7 +195,7 @@ async function generateAll() {
     } else if (quiz.slug === 'bts-army-trivia') {
       const btsMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-bts.png');
       if (fs.existsSync(btsMascot)) mascotFile = btsMascot;
-    } else if (quiz.slug === 'stray-kids-stay-trivia') {
+    } else if (quiz.slug === 'stray-kids-stay-trivia' || quiz.slug === 'which-stray-kids-member-are-you') {
       const skzMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-skz.png');
       if (fs.existsSync(skzMascot)) mascotFile = skzMascot;
     }

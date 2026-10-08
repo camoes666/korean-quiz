@@ -34,9 +34,15 @@ export default function QuizCard({ quiz }: QuizCardProps) {
       >
         <div className="flex items-center justify-between z-10">
           <div className="flex items-center gap-1.5 flex-wrap">
-            <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md rounded-full text-xs font-black text-purple-700 tracking-wider uppercase shadow-xs">
-              {categoryLabel} {tagLabel ? `· ${tagLabel}` : ''}
-            </span>
+            {quiz.quizType === 'personality' ? (
+              <span className="px-2.5 py-1 bg-amber-300 text-amber-950 font-black rounded-full text-xs tracking-wider uppercase shadow-xs">
+                🔮 {lang === 'ko' ? '소울메이트 테스트' : lang === 'es' ? 'Test de Personalidad' : 'Personality Test'}
+              </span>
+            ) : (
+              <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md rounded-full text-xs font-black text-purple-700 tracking-wider uppercase shadow-xs">
+                {categoryLabel} {tagLabel ? `· ${tagLabel}` : ''}
+              </span>
+            )}
             <span className="px-2 py-0.5 bg-emerald-400 text-emerald-950 font-black text-[11px] rounded-full flex items-center gap-1 shadow-xs">
               ⚡ +100 XP
             </span>
@@ -94,7 +100,10 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <div className="flex items-center gap-3 text-xs font-semibold text-slate-400 mb-4 pb-4 border-b border-slate-100">
             <span className="flex items-center gap-1 text-slate-600">
               <HelpCircle className="w-3.5 h-3.5 text-slate-400" />
-              {quiz.questions.length} {t.questionsCount}
+              {quiz.quizType === 'personality'
+                ? (quiz.personalityQuestions?.length || 10)
+                : quiz.questions.length}{' '}
+              {t.questionsCount}
             </span>
             <span className="flex items-center gap-1 text-slate-600">
               <Clock className="w-3.5 h-3.5 text-slate-400" />
@@ -112,7 +121,15 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             href={`/quiz/${quiz.slug}`}
             className="qz-btn-primary w-full py-3.5 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-xl shadow-md shadow-purple-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
           >
-            <span>{t.startChallenge}</span>
+            <span>
+              {quiz.quizType === 'personality'
+                ? lang === 'ko'
+                  ? '나의 멤버 찾기 →'
+                  : lang === 'es'
+                  ? 'Descubrir Mi Miembro →'
+                  : 'Find Your Soulmate →'
+                : t.startChallenge}
+            </span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
