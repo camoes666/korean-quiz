@@ -9,8 +9,9 @@ if (!fs.existsSync(TARGET_DIR)) {
 
 const IMAGES = [
   {
-    src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/bomi_blackpink_1791417561436.jpg',
+    src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/bomi_sister_cute_beret_1791419497211.jpg',
     name: 'bomi-blackpink',
+    clearTop: 102, // Clear floating text header
   },
   {
     src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/hobi_bts_1791417580092.jpg',
@@ -31,6 +32,18 @@ async function processImage(item) {
   const width = info.width;
   const height = info.height;
   const channels = info.channels;
+
+  // If item has clearTop, whitewash any text in top area before flood filling
+  if (item.clearTop) {
+    for (let y = 0; y < item.clearTop; y++) {
+      for (let x = 0; x < width; x++) {
+        const idx = (y * width + x) * channels;
+        data[idx] = 255;
+        data[idx + 1] = 255;
+        data[idx + 2] = 255;
+      }
+    }
+  }
 
   // Simple flood or color threshold to make near-white background transparent
   // We can scan from outer edges to avoid removing whites inside the eyes/body
