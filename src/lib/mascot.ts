@@ -24,7 +24,7 @@ export function getQuizMascot(slug?: string, tag?: string): QuizMascot {
     return {
       name: 'Bomi',
       nameKo: '봄이 🌸',
-      avatarUrl: '/images/mascot/bomi-blackpink.webp',
+      avatarUrl: '/images/mascot/bomi-blackpink-v2.webp',
       gender: 'female',
       badgeTitle: '마스코트 봄이 🌸',
       greetingKo: '블링크 전담 마스코트 봄이가 함께해요! 🖤💖',
@@ -44,7 +44,7 @@ export function getQuizMascot(slug?: string, tag?: string): QuizMascot {
     return {
       name: 'Hobi',
       nameKo: '호비 🐯',
-      avatarUrl: '/images/mascot/hobi-bts.webp',
+      avatarUrl: '/images/mascot/hobi-bts-v2.webp',
       gender: 'male',
       badgeTitle: '아미 호비 💜',
       greetingKo: '아미밤을 든 호비와 함께 보라빛 퀴즈 도전! 💜',
@@ -69,7 +69,7 @@ export function getQuizMascot(slug?: string, tag?: string): QuizMascot {
     return {
       name: 'Hobi',
       nameKo: '호비 🐺',
-      avatarUrl: '/images/mascot/hobi-skz.webp',
+      avatarUrl: '/images/mascot/hobi-skz-v2.webp',
       gender: 'male',
       badgeTitle: '스테이 호비 🐺',
       greetingKo: '나침봉을 든 호비와 함께 5성급 스테이 도전! 🐺',

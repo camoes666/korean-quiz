@@ -12,14 +12,17 @@ const IMAGES = [
     src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/bomi_sister_cute_beret_1791419497211.jpg',
     name: 'bomi-blackpink',
     clearTop: 102, // Clear floating text header
+    threshold: 240,
   },
   {
-    src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/hobi_bts_1791417580092.jpg',
+    src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/hobi_bts_slender_cub_1791431351811.jpg',
     name: 'hobi-bts',
+    threshold: 205,
   },
   {
-    src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/hobi_skz_1791417598666.jpg',
+    src: 'C:/Users/USER/.gemini/antigravity/brain/b1576419-706f-4a54-8d0c-3708533ac48a/hobi_skz_slender_cub_1791431374044.jpg',
     name: 'hobi-skz',
+    threshold: 205,
   },
 ];
 
@@ -49,14 +52,14 @@ async function processImage(item) {
   // We can scan from outer edges to avoid removing whites inside the eyes/body
   const visited = new Uint8Array(width * height);
   const queue = [];
+  const threshold = item.threshold || 240;
 
   function isWhite(x, y) {
     const idx = (y * width + x) * channels;
     const r = data[idx];
     const g = data[idx + 1];
     const b = data[idx + 2];
-    // Background is very bright white
-    return r > 240 && g > 240 && b > 240;
+    return r >= threshold && g >= threshold && b >= threshold;
   }
 
   // Push border pixels
@@ -102,6 +105,8 @@ async function processImage(item) {
   const outBuffer = Buffer.from(data);
   const webpPath = path.join(TARGET_DIR, `${item.name}.webp`);
   const pngPath = path.join(TARGET_DIR, `${item.name}.png`);
+  const webpV2Path = path.join(TARGET_DIR, `${item.name}-v2.webp`);
+  const pngV2Path = path.join(TARGET_DIR, `${item.name}-v2.png`);
 
   await sharp(outBuffer, { raw: { width, height, channels } })
     .resize(512, 512, { fit: 'inside' })
@@ -110,8 +115,18 @@ async function processImage(item) {
 
   await sharp(outBuffer, { raw: { width, height, channels } })
     .resize(512, 512, { fit: 'inside' })
+    .webp({ quality: 90 })
+    .toFile(webpV2Path);
+
+  await sharp(outBuffer, { raw: { width, height, channels } })
+    .resize(512, 512, { fit: 'inside' })
     .png({ quality: 90 })
     .toFile(pngPath);
+
+  await sharp(outBuffer, { raw: { width, height, channels } })
+    .resize(512, 512, { fit: 'inside' })
+    .png({ quality: 90 })
+    .toFile(pngV2Path);
 
   console.log(`Processed ${item.name} -> ${webpPath} (${fs.statSync(webpPath).size} bytes)`);
 }
