@@ -20,7 +20,7 @@
   "coverEmoji": "🌶️",
   "gradient": "from-red-600 via-orange-600 to-amber-500",
   "difficulty": "Easy",
-  "estimatedMinutes": 3,
+  "estimatedMinutes": 8,
   "totalPlays": "85.2K",
   "featured": true,
   "questions": [
@@ -33,10 +33,38 @@
       "questionRu": "Какой сладкий молочный напиток корейцы всегда заказывают к острому токпокки, чтобы снять жжение?",
       "questionZh": "在吃超辣炒年糕或辣鸡爪时，韩国人最常点来“解辣灭火”的乳酸菌饮料是？",
       "options": [
-        { "id": "A", "text": "Coolpis (쿨피스 / Juicy Peach Milk Drink)", "textKo": "쿨피스 (Coolpis)", "textEs": "Coolpis (Bebida láctea de melocotón)", "textRu": "Кулпис (Coolpis)", "textZh": "可尔必思/酷尔必思 (Coolpis 蜜桃乳酸菌)" },
-        { "id": "B", "text": "Hot Black Coffee", "textKo": "뜨거운 아메리카노", "textEs": "Café negro caliente", "textRu": "Горячий черный кофе", "textZh": "滚烫的热美式咖啡" },
-        { "id": "C", "text": "Sparkling Soda Water", "textKo": "탄산수", "textEs": "Agua con gas", "textRu": "Газированная вода", "textZh": "原味气泡水" },
-        { "id": "D", "text": "Pure Lemon Juice", "textKo": "레몬즙 원액", "textEs": "Zumo puro de limón", "textRu": "Чистый лимонный сок", "textZh": "纯柠檬汁" }
+        {
+          "id": "A",
+          "text": "Coolpis (쿨피스 / Juicy Peach Milk Drink)",
+          "textKo": "쿨피스 (Coolpis)",
+          "textEs": "Coolpis (Bebida láctea de melocotón)",
+          "textRu": "Кулпис (Coolpis)",
+          "textZh": "可尔必思/酷尔必思 (Coolpis 蜜桃乳酸菌)"
+        },
+        {
+          "id": "B",
+          "text": "Hot Black Coffee",
+          "textKo": "뜨거운 아메리카노",
+          "textEs": "Café negro caliente",
+          "textRu": "Горячий черный кофе",
+          "textZh": "滚烫的热美式咖啡"
+        },
+        {
+          "id": "C",
+          "text": "Sparkling Soda Water",
+          "textKo": "탄산수",
+          "textEs": "Agua con gas",
+          "textRu": "Газированная вода",
+          "textZh": "原味气泡水"
+        },
+        {
+          "id": "D",
+          "text": "Pure Lemon Juice",
+          "textKo": "레몬즙 원액",
+          "textEs": "Zumo puro de limón",
+          "textRu": "Чистый лимонный сок",
+          "textZh": "纯柠檬汁"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Dairy and sweetness break down capsaicin. 'Coolpis' (a sweet peach dairy drink) has been the iconic savior drink in spicy Korean restaurants for decades.",
@@ -56,10 +84,38 @@
       "questionRu": "Какое классическое «золотое трио» заказывают в традиционных уличных палатках (бунсик)?",
       "questionZh": "在韩国传统街头小吃摊（布帐马车/小吃店）里，最不可撼动的“灵魂铁三角”组合是？",
       "options": [
-        { "id": "A", "text": "Tteokbokki + Sundae (Blood Sausage) + Crispy Tempura (Twigim)", "textKo": "떡볶이 + 순대 + 모둠 튀김 (떡순튀)", "textEs": "Tteokbokki + Sundae + Frituras Twigim", "textRu": "Токпокки + Сундэ + Жареные во фритюре Твигим", "textZh": "炒年糕 + 米肠 + 酥脆炸物 (떡튀순组合)" },
-        { "id": "B", "text": "Cheeseburger + French Fries + Cola", "textKo": "치즈버거 + 감자튀김 + 콜라", "textEs": "Hamburguesa + Patatas + Refresco", "textRu": "Бургер + Картошка + Кола", "textZh": "汉堡 + 薯条 + 可乐" },
-        { "id": "C", "text": "Steak + Mashed Potatoes + Salad", "textKo": "스테이크 + 감자샐러드", "textEs": "Filete + Puré de patatas", "textRu": "Стейк + Пюре", "textZh": "牛排 + 土豆泥" },
-        { "id": "D", "text": "Pizza + Garlic Bread", "textKo": "피자 + 마늘빵", "textEs": "Pizza + Pan de ajo", "textRu": "Пицца + Чесночный хлеб", "textZh": "披萨 + 蒜香面包" }
+        {
+          "id": "A",
+          "text": "Tteokbokki + Sundae (Blood Sausage) + Crispy Tempura (Twigim)",
+          "textKo": "떡볶이 + 순대 + 모둠 튀김 (떡순튀)",
+          "textEs": "Tteokbokki + Sundae + Frituras Twigim",
+          "textRu": "Токпокки + Сундэ + Жареные во фритюре Твигим",
+          "textZh": "炒年糕 + 米肠 + 酥脆炸物 (떡튀순组合)"
+        },
+        {
+          "id": "B",
+          "text": "Cheeseburger + French Fries + Cola",
+          "textKo": "치즈버거 + 감자튀김 + 콜라",
+          "textEs": "Hamburguesa + Patatas + Refresco",
+          "textRu": "Бургер + Картошка + Кола",
+          "textZh": "汉堡 + 薯条 + 可乐"
+        },
+        {
+          "id": "C",
+          "text": "Steak + Mashed Potatoes + Salad",
+          "textKo": "스테이크 + 감자샐러드",
+          "textEs": "Filete + Puré de patatas",
+          "textRu": "Стейк + Пюре",
+          "textZh": "牛排 + 土豆泥"
+        },
+        {
+          "id": "D",
+          "text": "Pizza + Garlic Bread",
+          "textKo": "피자 + 마늘빵",
+          "textEs": "Pizza + Pan de ajo",
+          "textRu": "Пицца + Чесночный хлеб",
+          "textZh": "披萨 + 蒜香面包"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "'Tteok-Sun-Twi' (Tteokbokki, Sundae, Twigim) is the holy trinity of Korean comfort food. Dipping the crunchy fried squid and sweet potato directly into spicy red tteokbokki sauce is mandatory!",
@@ -79,10 +135,38 @@
       "questionRu": "Какой рамён породил всемирный челлендж 'Fire Noodle Challenge' в YouTube и TikTok?",
       "questionZh": "哪款风靡全球的拉面在YouTube和TikTok上掀起了席卷全网的“辣面挑战 (Fire Noodle Challenge)”？",
       "options": [
-        { "id": "A", "text": "Buldak Bokkeummyeon (Samyang Hot Chicken Flavor Ramen)", "textKo": "삼양 불닭볶음면 (Buldak)", "textEs": "Samyang Buldak Bokkeummyeon", "textRu": "Samyang Buldak (Огненная курица)", "textZh": "三养火鸡面 (Buldak)" },
-        { "id": "B", "text": "Mild Jin Ramen", "textKo": "진라면 순한맛", "textEs": "Jin Ramen Suave", "textRu": "Jin Ramen Mild", "textZh": "金拉面原味" },
-        { "id": "C", "text": "Chapagetti", "textKo": "짜파게티", "textEs": "Chapagetti", "textRu": "Чапагетти", "textZh": "炸酱面 (Chapagetti)" },
-        { "id": "D", "text": "Ansungtangmyun", "textKo": "안성탕면", "textEs": "Ansungtangmyun", "textRu": "Ансонтанмён", "textZh": "安城汤面" }
+        {
+          "id": "A",
+          "text": "Buldak Bokkeummyeon (Samyang Hot Chicken Flavor Ramen)",
+          "textKo": "삼양 불닭볶음면 (Buldak)",
+          "textEs": "Samyang Buldak Bokkeummyeon",
+          "textRu": "Samyang Buldak (Огненная курица)",
+          "textZh": "三养火鸡面 (Buldak)"
+        },
+        {
+          "id": "B",
+          "text": "Mild Jin Ramen",
+          "textKo": "진라면 순한맛",
+          "textEs": "Jin Ramen Suave",
+          "textRu": "Jin Ramen Mild",
+          "textZh": "金拉面原味"
+        },
+        {
+          "id": "C",
+          "text": "Chapagetti",
+          "textKo": "짜파게티",
+          "textEs": "Chapagetti",
+          "textRu": "Чапагетти",
+          "textZh": "炸酱面 (Chapagetti)"
+        },
+        {
+          "id": "D",
+          "text": "Ansungtangmyun",
+          "textKo": "안성탕면",
+          "textEs": "Ansungtangmyun",
+          "textRu": "Ансонтанмён",
+          "textZh": "安城汤面"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Launched in 2012, Samyang's Buldak sauce boasts around 4,400 to over 10,000+ Scoville units (for 2x Spicy), turning spicy tolerance into a global cultural phenomenon.",
@@ -102,10 +186,38 @@
       "questionRu": "Какую кисло-сладкую хрустящую белую редьку ВСЕГДА подают к корейской жареной курочке?",
       "questionZh": "点韩国炸鸡外卖时，为了清口解腻，店家一定会随单附赠的酸甜爽口白色小菜是？",
       "options": [
-        { "id": "A", "text": "Pickled Radish Cubes (Chikin-Mu / 치킨무)", "textKo": "치킨무 (절임 깍둑 무)", "textEs": "Cubos de rábano encurtido (Chikin-Mu)", "textRu": "Маринованный белый дайкон (Чикин-му)", "textZh": "腌酸萝卜块 (Chicken Mu)" },
-        { "id": "B", "text": "Mashed Sweet Potatoes", "textKo": "고구마 무스", "textEs": "Puré de batata", "textRu": "Бататовое пюре", "textZh": "红薯泥" },
-        { "id": "C", "text": "Potato Chips", "textKo": "감자칩", "textEs": "Patatas chips", "textRu": "Чипсы", "textZh": "原味薯片" },
-        { "id": "D", "text": "Boiled Broccoli", "textKo": "데친 브로콜리", "textEs": "Brócoli hervido", "textRu": "Вареная брокколи", "textZh": "水煮西蓝花" }
+        {
+          "id": "A",
+          "text": "Pickled Radish Cubes (Chikin-Mu / 치킨무)",
+          "textKo": "치킨무 (절임 깍둑 무)",
+          "textEs": "Cubos de rábano encurtido (Chikin-Mu)",
+          "textRu": "Маринованный белый дайкон (Чикин-му)",
+          "textZh": "腌酸萝卜块 (Chicken Mu)"
+        },
+        {
+          "id": "B",
+          "text": "Mashed Sweet Potatoes",
+          "textKo": "고구마 무스",
+          "textEs": "Puré de batata",
+          "textRu": "Бататовое пюре",
+          "textZh": "红薯泥"
+        },
+        {
+          "id": "C",
+          "text": "Potato Chips",
+          "textKo": "감자칩",
+          "textEs": "Patatas chips",
+          "textRu": "Чипсы",
+          "textZh": "原味薯片"
+        },
+        {
+          "id": "D",
+          "text": "Boiled Broccoli",
+          "textKo": "데친 브로콜리",
+          "textEs": "Brócoli hervido",
+          "textRu": "Вареная брокколи",
+          "textZh": "水煮西蓝花"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Chikin-Mu (sweet-vinegar pickled white radish) cleanses the palate between crispy, savory bites of hot fried chicken, making you able to eat twice as much without getting tired of it!",
@@ -125,10 +237,38 @@
       "questionRu": "Почему рамён из автоматических аппаратов на набережной реки Хан кажется невероятно вкусным?",
       "questionZh": "为什么在首尔汉江公园便利店的自动锡纸机上煮出的即食泡面会感觉格外香浓美味？",
       "options": [
-        { "id": "A", "text": "Precise induction boiling time, thin aluminum foil conductivity, and refreshing outdoor riverside breeze", "textKo": "정밀한 인덕션 조리 시간, 알루미늄 은박 전도율, 그리고 탁 트인 강바람의 감성", "textEs": "Tiempo exacto de inducción, papel de aluminio y la brisa fresca del río", "textRu": "Точное время варки на индукции, теплопроводность фольги и атмосфера на свежем воздухе", "textZh": "精确到秒的电磁炉火候、锡纸快速导热以及汉江开阔江风带来的绝妙氛围感" },
-        { "id": "B", "text": "The machines use secret river water", "textKo": "한강 물을 끌어다 써서", "textEs": "Usan agua del río", "textRu": "Берут воду из реки", "textZh": "使用的是江水" },
-        { "id": "C", "text": "The ramen packages contain double MSG", "textKo": "조미료가 2배로 들어가서", "textEs": "Lleva el doble de glutamato", "textRu": "Двойная доза приправ", "textZh": "调料包分量加倍" },
-        { "id": "D", "text": "Eating standing on one leg boosts digestion", "textKo": "서서 먹어서", "textEs": "Comer de pie ayuda", "textRu": "Потому что едят стоя", "textZh": "站着吃利于消化" }
+        {
+          "id": "A",
+          "text": "Precise induction boiling time, thin aluminum foil conductivity, and refreshing outdoor riverside breeze",
+          "textKo": "정밀한 인덕션 조리 시간, 알루미늄 은박 전도율, 그리고 탁 트인 강바람의 감성",
+          "textEs": "Tiempo exacto de inducción, papel de aluminio y la brisa fresca del río",
+          "textRu": "Точное время варки на индукции, теплопроводность фольги и атмосфера на свежем воздухе",
+          "textZh": "精确到秒的电磁炉火候、锡纸快速导热以及汉江开阔江风带来的绝妙氛围感"
+        },
+        {
+          "id": "B",
+          "text": "The machines use secret river water",
+          "textKo": "한강 물을 끌어다 써서",
+          "textEs": "Usan agua del río",
+          "textRu": "Берут воду из реки",
+          "textZh": "使用的是江水"
+        },
+        {
+          "id": "C",
+          "text": "The ramen packages contain double MSG",
+          "textKo": "조미료가 2배로 들어가서",
+          "textEs": "Lleva el doble de glutamato",
+          "textRu": "Двойная доза приправ",
+          "textZh": "调料包分量加倍"
+        },
+        {
+          "id": "D",
+          "text": "Eating standing on one leg boosts digestion",
+          "textKo": "서서 먹어서",
+          "textEs": "Comer de pie ayuda",
+          "textRu": "Потому что едят стоя",
+          "textZh": "站着吃利于消化"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Specialized induction machines calibrate water measurement and rolling boil times to perfection, while eating under the Seoul sky on a picnic mat makes it an unforgettable emotional experience.",
@@ -148,10 +288,38 @@
       "questionRu": "Какое важнейшее правило этикета необходимо соблюдать, наливая или принимая напиток от старших в Корее?",
       "questionZh": "在韩国与长辈或上级互斟互敬酒水时，必须严格遵守的核心传统礼仪是？",
       "options": [
-        { "id": "A", "text": "Use two hands (support forearm) and turn head slightly away while drinking", "textKo": "두 손으로 따르고(팔을 받치며), 마실 때는 고개를 살짝 돌린다", "textEs": "Usar dos manos (sostener el antebrazo) y girar la cabeza al beber", "textRu": "Держать бутылку/бокал двумя руками и слегка отворачивать голову при питье", "textZh": "双手倒酒/接杯（托住前臂），且饮用时身体与头部需微微侧向一边" },
-        { "id": "B", "text": "Stare directly into their eyes while gulping", "textKo": "눈을 똑바로 응시하며 원샷한다", "textEs": "Mirar fijamente a los ojos mientras se bebe", "textRu": "Пристально смотреть в глаза во время питья", "textZh": "直视对方眼睛一饮而尽" },
-        { "id": "C", "text": "Clink your glass much higher than the elder's", "textKo": "어른의 잔보다 내 잔을 훨씬 높게 부딪친다", "textEs": "Chocar la copa más alta que la del mayor", "textRu": "Чокаться так, чтобы твой бокал был выше", "textZh": "碰杯时让自己的杯口高于长辈杯口" },
-        { "id": "D", "text": "Pour using only your left pinky finger", "textKo": "왼손 새끼손가락으로만 따른다", "textEs": "Servir solo con el meñique izquierdo", "textRu": "Наливать только левым мизинцем", "textZh": "仅用左手小拇指倒酒" }
+        {
+          "id": "A",
+          "text": "Use two hands (support forearm) and turn head slightly away while drinking",
+          "textKo": "두 손으로 따르고(팔을 받치며), 마실 때는 고개를 살짝 돌린다",
+          "textEs": "Usar dos manos (sostener el antebrazo) y girar la cabeza al beber",
+          "textRu": "Держать бутылку/бокал двумя руками и слегка отворачивать голову при питье",
+          "textZh": "双手倒酒/接杯（托住前臂），且饮用时身体与头部需微微侧向一边"
+        },
+        {
+          "id": "B",
+          "text": "Stare directly into their eyes while gulping",
+          "textKo": "눈을 똑바로 응시하며 원샷한다",
+          "textEs": "Mirar fijamente a los ojos mientras se bebe",
+          "textRu": "Пристально смотреть в глаза во время питья",
+          "textZh": "直视对方眼睛一饮而尽"
+        },
+        {
+          "id": "C",
+          "text": "Clink your glass much higher than the elder's",
+          "textKo": "어른의 잔보다 내 잔을 훨씬 높게 부딪친다",
+          "textEs": "Chocar la copa más alta que la del mayor",
+          "textRu": "Чокаться так, чтобы твой бокал был выше",
+          "textZh": "碰杯时让自己的杯口高于长辈杯口"
+        },
+        {
+          "id": "D",
+          "text": "Pour using only your left pinky finger",
+          "textKo": "왼손 새끼손가락으로만 따른다",
+          "textEs": "Servir solo con el meñique izquierdo",
+          "textRu": "Наливать только левым мизинцем",
+          "textZh": "仅用左手小拇指倒酒"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Respecting elders is central in Korean culture. Supporting your wrist or chest with your opposite hand demonstrates humility, and turning your head sideways to drink shows politeness.",
@@ -171,10 +339,38 @@
       "questionRu": "Чем знаменит ферментированный скат (Хонъо-хве) — экстремальный корейский деликатес, который решаются попробовать немногие?",
       "questionZh": "哪道以直冲鼻腔的强烈天然氨气（阿摩尼亚）发酵气味著称、连许多韩国本地人都望而生畏的终极硬核发酵海鲜是？",
       "options": [
-        { "id": "A", "text": "Hongeo-hoe (Naturally Fermented Skate Fish with Ammonia Kick)", "textKo": "삭힌 홍어회 (Hongeo-hoe)", "textEs": "Hongeo-hoe (Raya fermentada con aroma a amoníaco)", "textRu": "Хонъо-хве (Ферментированный скат с аммиачным ударом)", "textZh": "发酵鳐鱼刺身 (Hongeo-hoe / 삭힌 홍어회)" },
-        { "id": "B", "text": "Crispy French Fries", "textKo": "감자튀김", "textEs": "Patatas fritas crujientes", "textRu": "Картофель фри", "textZh": "酥脆炸薯条" },
-        { "id": "C", "text": "Sweet Honey Pancakes (Hotteok)", "textKo": "달콤한 호떡", "textEs": "Pancakes dulces Hotteok", "textRu": "Сладкие блинчики хотток", "textZh": "甜糖饼 (Hotteok)" },
-        { "id": "D", "text": "Mild Seaweed Soup (Miyeok-guk)", "textKo": "순한 미역국", "textEs": "Sopa de algas suave", "textRu": "Мягкий суп из водорослей", "textZh": "清淡海带汤" }
+        {
+          "id": "A",
+          "text": "Hongeo-hoe (Naturally Fermented Skate Fish with Ammonia Kick)",
+          "textKo": "삭힌 홍어회 (Hongeo-hoe)",
+          "textEs": "Hongeo-hoe (Raya fermentada con aroma a amoníaco)",
+          "textRu": "Хонъо-хве (Ферментированный скат с аммиачным ударом)",
+          "textZh": "发酵鳐鱼刺身 (Hongeo-hoe / 삭힌 홍어회)"
+        },
+        {
+          "id": "B",
+          "text": "Crispy French Fries",
+          "textKo": "감자튀김",
+          "textEs": "Patatas fritas crujientes",
+          "textRu": "Картофель фри",
+          "textZh": "酥脆炸薯条"
+        },
+        {
+          "id": "C",
+          "text": "Sweet Honey Pancakes (Hotteok)",
+          "textKo": "달콤한 호떡",
+          "textEs": "Pancakes dulces Hotteok",
+          "textRu": "Сладкие блинчики хотток",
+          "textZh": "甜糖饼 (Hotteok)"
+        },
+        {
+          "id": "D",
+          "text": "Mild Seaweed Soup (Miyeok-guk)",
+          "textKo": "순한 미역국",
+          "textEs": "Sopa de algas suave",
+          "textRu": "Мягкий суп из водорослей",
+          "textZh": "清淡海带汤"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Skate stores urea in its flesh, which turns into natural pungent ammonia during the fermentation process. Pairing it with boiled pork slices (Suyuk) and aged Kimchi creates the famous 'Samhap' (삼합) delicacy.",
@@ -194,10 +390,38 @@
       "questionRu": "Какая пропорция соджу и пива считается признанным «Золотым стандартом» для идеального коктейля «Сомэк»?",
       "questionZh": "在韩国酒桌文化中，调制口感最顺滑醇香的“烧啤炸弹酒 (Somaek)”最被推崇的黄金配比是？",
       "options": [
-        { "id": "A", "text": "3 parts Soju to 7 parts Beer (3:7 Golden Ratio)", "textKo": "소주 3 : 맥주 7 (3:7 황금비율)", "textEs": "3 partes de Soju y 7 partes de Cerveza (3:7)", "textRu": "3 части соджу на 7 частей пива (3:7)", "textZh": "3份烧酒 : 7份啤酒 (3:7 黄金比例)" },
-        { "id": "B", "text": "9 parts Soju to 1 part Beer", "textKo": "소주 9 : 맥주 1", "textEs": "9 partes de Soju y 1 de Cerveza", "textRu": "9 частей соджу и 1 пива", "textZh": "9份烧酒 : 1份啤酒" },
-        { "id": "C", "text": "5 parts Soju to 5 parts Orange Juice", "textKo": "소주 5 : 오렌지주스 5", "textEs": "5 partes de Soju y 5 de Zumo", "textRu": "5 соджу и 5 сока", "textZh": "5份烧酒 : 5份橙汁" },
-        { "id": "D", "text": "1 part Soju to 9 parts Vinegar", "textKo": "소주 1 : 식초 9", "textEs": "1 parte de Soju y 9 de Vinagre", "textRu": "1 соджу и 9 уксуса", "textZh": "1份烧酒 : 9份白醋" }
+        {
+          "id": "A",
+          "text": "3 parts Soju to 7 parts Beer (3:7 Golden Ratio)",
+          "textKo": "소주 3 : 맥주 7 (3:7 황금비율)",
+          "textEs": "3 partes de Soju y 7 partes de Cerveza (3:7)",
+          "textRu": "3 части соджу на 7 частей пива (3:7)",
+          "textZh": "3份烧酒 : 7份啤酒 (3:7 黄金比例)"
+        },
+        {
+          "id": "B",
+          "text": "9 parts Soju to 1 part Beer",
+          "textKo": "소주 9 : 맥주 1",
+          "textEs": "9 partes de Soju y 1 de Cerveza",
+          "textRu": "9 частей соджу и 1 пива",
+          "textZh": "9份烧酒 : 1份啤酒"
+        },
+        {
+          "id": "C",
+          "text": "5 parts Soju to 5 parts Orange Juice",
+          "textKo": "소주 5 : 오렌지주스 5",
+          "textEs": "5 partes de Soju y 5 de Zumo",
+          "textRu": "5 соджу и 5 сока",
+          "textZh": "5份烧酒 : 5份橙汁"
+        },
+        {
+          "id": "D",
+          "text": "1 part Soju to 9 parts Vinegar",
+          "textKo": "소주 1 : 식초 9",
+          "textEs": "1 parte de Soju y 9 de Vinagre",
+          "textRu": "1 соджу и 9 уксуса",
+          "textZh": "1份烧酒 : 9份白醋"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "The 3:7 ratio hits the sweet spot where the crisp carbonation and malt flavor of cold beer smoothly masks the sharpness of soju ethanol. Tapping the bottom of the glass with a metal spoon produces microbubbles that instantly homogenize the blend!",
@@ -207,12 +431,1134 @@
       "explanationZh": "3:7是经过无数韩国打工人验证的绝妙配比，啤酒麦芽清爽与气泡感将烧酒的辛辣酒精味巧妙中和，拿铁勺在杯底用力一戳激起细腻奶泡的仪式感更是聚会高潮！",
       "funFact": "There are specially calibrated 'Somaek Glasses' sold with graduated lines marking various strength levels!",
       "funFactKo": "한국 마트나 다이소에서는 알코올 도수별로 3:7, 5:5 등이 눈금으로 표시된 전용 소맥잔을 판매합니다!"
+    },
+    {
+      "id": 9,
+      "level": 2,
+      "question": "After finishing Dakgalbi (Spicy Chicken), Gamjatang, or spicy Tteokbokki, what is the mandatory Korean 'dessert' ordered to scrape the pan clean?",
+      "questionKo": "닭갈비, 감자탕, 즉석 떡볶이를 다 먹은 뒤 배가 불러도 무조건 시켜서 냄비 바닥까지 긁어먹는 '한국인의 찐 디저트'는?",
+      "questionEs": "Después de comer Dakgalbi, Gamjatang o Tteokbokki, ¿cuál es el 'postre' obligatorio que los coreanos piden para dejar la sartén reluciente?",
+      "questionRu": "Какой обязательный корейский «десерт» заказывают после поедания даккальби, камджатхана или токпокки, чтобы до блеска выскрести сковороду?",
+      "questionZh": "吃完辣炒鸡排、土豆排骨汤或即食炒年糕后，哪怕肚子再撑也必须点的“韩国人真正灵魂甜点”是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chocolate Pudding",
+          "textKo": "초콜릿 푸딩",
+          "textEs": "Pudín de chocolate",
+          "textRu": "Шоколадный пудинг",
+          "textZh": "巧克力布丁"
+        },
+        {
+          "id": "B",
+          "text": "Bokkeumbap (Stir-fried rice with seaweed, perilla oil & cheese)",
+          "textKo": "날치알 치즈 볶음밥 (Bokkeumbap)",
+          "textEs": "Bokkeumbap (Arroz salteado con algas, aceite de perilla y queso)",
+          "textRu": "Поккымпап (Жареный рис с нори, кунжутным маслом и сыром)",
+          "textZh": "炒饭 (Bokkeumbap / 铺上海苔碎、芝麻油和芝士的铁板炒饭)"
+        },
+        {
+          "id": "C",
+          "text": "French Croissant",
+          "textKo": "버터 크루아상",
+          "textEs": "Cruasán francés",
+          "textRu": "Французский круассан",
+          "textZh": "黄油羊角可颂"
+        },
+        {
+          "id": "D",
+          "text": "Warm Chicken Broth Cup",
+          "textKo": "닭 육수 한 컵",
+          "textEs": "Taza de caldo de pollo caliente",
+          "textRu": "Кружка куриного бульона",
+          "textZh": "热鸡汤一口闷"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "In Korea, it's an unspoken national rule ('Guk-rul') that any pan with remaining flavorful sauce must finish with Bokkeumbap. The crispy scorched rice at the bottom (Nurungji) is the most coveted bite!",
+      "explanationKo": "한국에서는 자작한 양념 국물이 남는 요리의 마지막은 무조건 볶음밥으로 장식하는 것이 국룰이며, 바닥에 눌어붙은 바삭한 누룽지를 긁어먹는 것이 핵심 묘미입니다.",
+      "explanationEs": "En Corea es una regla de oro ('Guk-rul') que cualquier salsa restante debe terminar con Bokkeumbap. ¡El arroz socarrat o crujiente del fondo (Nurungji) es lo mejor!",
+      "explanationRu": "В Корее негласное золотое правило («Кук-руль») — любой оставшийся соус завершается рисом Поккымпап. Хрустящая корочка на дне сковороды (Нурунджи) — самый лакомый кусочек!",
+      "explanationZh": "在韩国饮食文化中，只要锅底剩下浓郁汤汁，点铁板炒饭收尾就是绝对的“国规（국룰）”，最后刮焦香焦脆的锅巴（Nurungji）才是全餐高潮！",
+      "funFact": "Koreans joke: 'No meal is officially complete until carbs are topped with more fried carbs!'",
+      "funFactKo": "한국인은 탄수화물 요리를 먹고 나서 후식으로 탄수화물(볶음밥)을 먹어야 식사가 비로소 끝난다는 유쾌한 유행어가 있습니다!"
+    },
+    {
+      "id": 10,
+      "level": 1,
+      "question": "When wrapping grilled pork belly (Samgyeopsal) with garlic, ssamjang, and lettuce, what is the ironclad rule of Korean BBQ?",
+      "questionKo": "상추나 깻잎에 노릇하게 구운 삼겹살, 구운 마늘, 쌈장을 얹어 쌈을 쌀 때 지켜야 할 철칙은?",
+      "questionEs": "Al envolver panceta de cerdo a la parrilla (Samgyeopsal) con ajo, ssamjang y lechuga, ¿cuál es la regla de oro del BBQ coreano?",
+      "questionRu": "Какое железное правило корейского барбекю нужно соблюдать, заворачивая жареную свинину (Самгёпсаль) в лист салата с чесноком и ссамджаном?",
+      "questionZh": "在生菜或紫苏叶上放上金黄五花肉、烤大蒜和包饭酱包成“韩式菜包肉（Ssam）”时，必须遵守的铁律是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cut the wrap into 4 pieces with a butter knife",
+          "textKo": "나이프로 쌈을 4등분 잘라 먹는다",
+          "textEs": "Cortar el envoltorio en 4 trozos con un cuchillo",
+          "textRu": "Разрезать ролл на 4 части ножом",
+          "textZh": "用刀把菜包肉切成4小份"
+        },
+        {
+          "id": "B",
+          "text": "Take multiple tiny nibbles while holding it with fingers",
+          "textKo": "베어 물면서 속재료를 흘리며 조금씩 먹는다",
+          "textEs": "Dar varios mordiscos pequeños mientras se sostiene",
+          "textRu": "Откусывать по маленькому кусочку",
+          "textZh": "拿在手里分成好几小口慢慢咬"
+        },
+        {
+          "id": "C",
+          "text": "Stuff the entire wrap into your mouth in one single bite ('Han-ip')",
+          "textKo": "터질 듯 커도 반드시 '한입에 쏙' 털어 넣는다",
+          "textEs": "Comerse todo el wrap de un solo bocado sin morder a la mitad",
+          "textRu": "Съесть весь сверток целиком за один укус («Хан-ип»)",
+          "textZh": "哪怕包得再大也必须“一口吞下整包”，绝不能分两口咬断"
+        },
+        {
+          "id": "D",
+          "text": "Unwrap the lettuce and eat the meat bare",
+          "textKo": "상추를 다시 펼쳐서 고기만 골라 먹는다",
+          "textEs": "Desenvolver la lechuga y comer solo la carne",
+          "textRu": "Развернуть салат и съесть только мясо",
+          "textZh": "把生菜拆开只吃里面的肉"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Biting a ssam in half causes juices and savory fillings to spill out messily. Popping the entire wrap into your mouth in one grand bite delivers the harmonious explosion of flavors all at once!",
+      "explanationKo": "쌈을 중간에 베어 물면 안에 든 양념과 육즙이 주르륵 흘러내리기 때문에, 볼이 빵빵해지더라도 한입에 쏙 넣고 씹는 것이 K-BBQ의 오랜 미식 매너이자 국룰입니다.",
+      "explanationEs": "Morder un ssam por la mitad hace que se derrame la salsa y el jugo de la carne. ¡Meterse el wrap entero de un bocado asegura una explosión de sabores perfecta!",
+      "explanationRu": "Если откусить ссам наполовину, соус и начинка неряшливо выпадут. Закинуть весь лист целиком в рот — единственный правильный способ насладиться вкусом!",
+      "explanationZh": "如果把菜包肉咬成两半，里面的酱汁和大蒜容易散落一桌。一口塞入整包虽然会把腮帮子塞得鼓鼓的，但能让肉香、蒜辣与酱香在口腔完美融合！",
+      "funFact": "Making a lavish ssam and feeding it directly to a friend or partner is a heartwarming sign of deep affection in Korea!",
+      "funFactKo": "정성껏 쌈을 싸서 연인이나 친구 입에 직접 쏙 넣어주는 것은 한국만의 따뜻한 애정 표현입니다!"
+    },
+    {
+      "id": 11,
+      "level": 2,
+      "question": "What is the viral Korean convenience store hack that mixes instant Buldak ramen or spicy tteokbokki with string cheese and a triangle kimbap?",
+      "questionKo": "편의점 꿀조합의 원조! 불닭볶음면이나 자이언트 떡볶이에 스트링 치즈와 삼각김밥을 비벼 먹는 전설의 편의점 레시피는?",
+      "questionEs": "¿Cómo se llama la receta viral de tiendas de conveniencia coreanas que mezcla Buldak o tteokbokki picante con queso en hebras y un kimbap triangular?",
+      "questionRu": "Как называется легендарный вирусный рецепт из круглосуточных магазинов: рамён Булдак, токпокки, сыр косичка и треугольный кимпаб?",
+      "questionZh": "在韩国便利店中掀起风暴、将火鸡面/辣炒年糕、手撕芝士与三角紫菜包饭混在一起微波加热的元祖神仙吃法是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mark Meal (마크정식 / Buldak Cheese Gimbap Risotto)",
+          "textKo": "마크정식 (Mark Meal)",
+          "textEs": "Mark Meal (Combo Mark / Risoto picante con queso)",
+          "textRu": "Марк Мил (Mark Meal)",
+          "textZh": "马克定食 (Mark Meal / 辣炒年糕芝士紫菜包饭炒饭)"
+        },
+        {
+          "id": "B",
+          "text": "Joseon Royal Feast",
+          "textKo": "조선 왕실 수라상",
+          "textEs": "Banquete Real Joseon",
+          "textRu": "Королевский банкет Чосон",
+          "textZh": "朝鲜王室御膳"
+        },
+        {
+          "id": "C",
+          "text": "Ice Cream Ramen Dip",
+          "textKo": "바닐라 아이스크림 라면",
+          "textEs": "Ramen con helado de vainilla",
+          "textRu": "Рамён с мороженым",
+          "textZh": "冰淇淋泡面蘸酱"
+        },
+        {
+          "id": "D",
+          "text": "Coffee Rice Porridge",
+          "textKo": "믹스커피 쌀죽",
+          "textEs": "Gachas de café con arroz",
+          "textRu": "Кофейная рисовая каша",
+          "textZh": "速溶咖啡泡米粥"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Named 'Mark Meal' by a fan of idol Mark (GOT7) in 2016, this combo fuses spicy chewiness, molten string cheese, and rice into a budget-friendly gourmet feast celebrated across YouTube.",
+      "explanationKo": "2016년 아이돌 GOT7 멤버 마크의 팬이 창안한 '마크정식'은 매콤한 떡볶이 국물과 꼬들한 면, 쫀득한 삼각김밥과 고소한 치즈가 환상적으로 어우러져 편의점 모디슈머의 레전드가 되었습니다.",
+      "explanationEs": "Bautizado como 'Mark Meal' por una fan del idol Mark (GOT7), este combo combina el picante, arroz triangular y queso derretido en una obra de arte culinaria accesible.",
+      "explanationRu": "Рецепт 'Mark Meal', созданный фанаткой айдола Марка из GOT7 в 2016 году, стал легендой корейского фастфуда благодаря идеальному сочетанию сыра, соуса и риса.",
+      "explanationZh": "2016年由偶像男团GOT7成员Mark的粉丝创制出的“马克定食”，用浓郁拉丝芝士和三角饭团中和辣味，成为全网便利店神仙吃法的天花板！",
+      "funFact": "Adding a spicy canned tuna (Gochujang Chamchi) triangle kimbap elevates it to five-star status!",
+      "funFactKo": "참치마요 삼각김밥 대신 매콤한 고추참치 삼각김밥을 넣으면 칼칼한 풍미가 한층 더 깊어집니다!"
+    },
+    {
+      "id": 12,
+      "level": 2,
+      "question": "What is Korea's famous indigenous hot pepper, prized for giving stews and broths a sharp, crisp kick without making them heavy?",
+      "questionKo": "한식 국물 요리에 시원하고 칼칼한 매운맛을 내기 위해 애용되는, 스코빌 지수 4,000~12,000의 한국 대표 고추는?",
+      "questionEs": "¿Cuál es el famoso chile autóctono coreano, apreciado por darle a las sopas y caldos un toque picante fresco y limpio?",
+      "questionRu": "Какой знаменитый корейский перец ценится за то, что придает супам и бульонам звонкую, чистую и освежающую остроту?",
+      "questionZh": "在韩国料理熬煮清汤或炖锅时，用来赋予汤头清冽利落、提鲜开胃辣劲的本土代表性辣椒是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mexican Habanero",
+          "textKo": "멕시코 하바네로",
+          "textEs": "Habanero mexicano",
+          "textRu": "Мексиканский хабанеро",
+          "textZh": "墨西哥哈瓦那辣椒"
+        },
+        {
+          "id": "B",
+          "text": "Indian Ghost Pepper",
+          "textKo": "인도 부트 졸로키아",
+          "textEs": "Chile fantasma de la India",
+          "textRu": "Индийский перец-призрак",
+          "textZh": "印度魔鬼椒"
+        },
+        {
+          "id": "C",
+          "text": "American Bell Pepper",
+          "textKo": "달콤한 파프리카",
+          "textEs": "Pimiento dulce morrón",
+          "textRu": "Сладкий болгарский перец",
+          "textZh": "甜彩椒"
+        },
+        {
+          "id": "D",
+          "text": "Cheongyang Chili Pepper (청양고추)",
+          "textKo": "청양고추 (Cheongyang Gochu)",
+          "textEs": "Chile Cheongyang (청양고추)",
+          "textRu": "Перец Чхонъян (Cheongyang Gochu)",
+          "textZh": "青阳辣椒 (Cheongyang Gochu / 韩国青阳辣椒)"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "Bred in South Korea, the Cheongyang pepper is famous for its clean, piercing heat. Slicing just one or two into soybean paste stew (Doenjang-jjigae) or mussel soup provides an invigorating kick without altering color.",
+      "explanationKo": "청양고추는 캡사이신 함량이 높아 칼칼하고 알싸한 뒷맛을 자랑하며, 된장찌개나 조개탕, 어묵탕에 송송 썰어 넣으면 텁텁하지 않고 시원한 감칠맛을 폭발시킵니다.",
+      "explanationEs": "El chile Cheongyang ofrece un picor limpio y penetrante. Picar uno o dos en un guiso de pasta de soja (Doenjang-jjigae) le da una frescura inigualable.",
+      "explanationRu": "Перец Чхонъян славится своей чистой, пронзительной остротой. Пара колечек в супе Твенджан-ччигэ превращает его в шедевр без лишней красноты.",
+      "explanationZh": "青阳辣椒辣味纯粹通透、回味甘冽，在韩式大酱汤、贝类清汤里剪上几圈，能在不破坏汤色的同时激发出令人欲罢不能的爽快鲜辣！",
+      "funFact": "Koreans love dipping crunchy raw Cheongyang peppers directly into Ssamjang as a spicy side dish at BBQ places!",
+      "funFactKo": "삼겹살집에서 아삭이고추 대신 청양고추를 쌈장에 푹 찍어 와삭 베어 무는 '상남자 맵부심' 테스트도 흔합니다!"
+    },
+    {
+      "id": 13,
+      "level": 1,
+      "question": "When standing in front of a pojangmacha eating fishcake skewers (Eomuk) on a freezing winter night, what is the heartwarming custom regarding the broth?",
+      "questionKo": "추운 겨울밤 길거리 포장마차에서 어묵(오뎅) 꼬치를 서서 먹을 때 누릴 수 있는 훈훈한 인심은?",
+      "questionEs": "Al comer brochetas de pastel de pescado (Eomuk) en un carrito callejero en una noche helada de invierno, ¿cuál es la cálida costumbre con el caldo?",
+      "questionRu": "Какая душевная традиция связана с горячим бульоном, когда вы едите рыбные шпажки (Омук) в уличной палатке морозной корейской зимой?",
+      "questionZh": "在寒风凛冽的冬夜站在路边摊（布帐马车）吃鱼饼串（Eomuk）时，摊主最温暖人心的国民级惯例是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Broth costs $10 per cup",
+          "textKo": "국물 한 컵당 만 원씩 따로 청구된다",
+          "textEs": "El caldo cuesta 10 dólares por taza",
+          "textRu": "Бульон стоит 10 долларов за стакан",
+          "textZh": "每喝一杯鱼饼汤额外收费1万韩元"
+        },
+        {
+          "id": "B",
+          "text": "You ladle hot savory broth into a paper cup for free as much as you like",
+          "textKo": "종이컵에 따끈한 어묵 국물을 국자로 마음껏 무료로 떠먹는다",
+          "textEs": "Te sirves caldo caliente en un vaso de papel gratis tantas veces como quieras",
+          "textRu": "Вы можете бесплатно наливать горячий наваристый бульон в бумажный стаканчик сколько угодно",
+          "textZh": "拿起摊上的纸杯用大勺随意盛热腾腾的鲜美鱼饼汤，无限量免费喝到饱"
+        },
+        {
+          "id": "C",
+          "text": "You must pour the broth on the street",
+          "textKo": "국물을 길바닥에 뿌려야 한다",
+          "textEs": "Debes tirar el caldo al suelo",
+          "textRu": "Нужно выливать бульон на асфальт",
+          "textZh": "必须把热汤倒在地上"
+        },
+        {
+          "id": "D",
+          "text": "You are only allowed to inhale the steam",
+          "textKo": "증기 냄새만 맡아야 한다",
+          "textEs": "Solo puedes oler el vapor",
+          "textRu": "Разрешается только нюхать пар",
+          "textZh": "只准闻蒸汽不准喝"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "At street carts, fishcake broth simmered with radish, kelp, and anchovies is unlimited and free. Holding the warm paper cup with both cold hands warms you instantly!",
+      "explanationKo": "길거리 분식집에서는 무, 다시마, 파로 우려낸 감칠맛 가득한 어묵 국물을 종이컵에 담아 몇 번이고 마실 수 있으며, 얼어붙은 손을 녹여주는 겨울철 한국의 대표 온정입니다.",
+      "explanationEs": "En los carritos, el caldo de pescado hervido con rábano y algas es gratuito e ilimitado. Sostener el vaso humeante con ambas manos calienta el cuerpo al instante.",
+      "explanationRu": "Бульон из редьки, водорослей и рыбы подается бесплатно в неограниченных количествах. Горячий стаканчик в замерзших руках — символ корейской зимней заботы.",
+      "explanationZh": "布帐马车用白萝卜、海带与干鳀鱼长时间熬煮出的鱼饼高汤一律免费无限续杯。双手捧着热气腾腾的纸杯啜饮，是韩国冬天最治愈的市井温度！",
+      "funFact": "Don't double dip your skewer into the communal soy sauce container! Instead, use the provided brush or spoon to brush sauce over your fishcake.",
+      "funFactKo": "공용 간장 종지에 베어 문 어묵을 다시 찍는 것은 금물! 비치된 솔이나 숟가락으로 간장을 발라 먹는 것이 매너입니다."
+    },
+    {
+      "id": 14,
+      "level": 2,
+      "question": "When daring to order fiery bone-in chicken feet (Maeun Dakbal) at a late-night soju pocha, what survival gear is always brought to your table?",
+      "questionKo": "야식으로 매운 불닭발(뼈닭발)을 주문했을 때 매운맛을 견디고 편하게 먹기 위해 테이블에 무조건 깔리는 3대 생존 장비는?",
+      "questionEs": "¿Qué kit de supervivencia siempre te traen a la mesa cuando te atreves a pedir patas de pollo ultra picantes (Maeun Dakbal)?",
+      "questionRu": "Какой набор для выживания всегда приносят к столу, когда вы заказываете огненные куриные лапки (Мэун Такпаль)?",
+      "questionZh": "在深夜大排档鼓起勇气点重辣带骨鸡爪（Maeun Dakbal）时，店家一定会端上桌的“终极护胃生存三件套”是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Swimming goggles and a safety helmet",
+          "textKo": "물안경과 오토바이 헬멧",
+          "textEs": "Gafas de natación y casco de seguridad",
+          "textRu": "Очки для плавания и шлем",
+          "textZh": "游泳眼镜和摩托车头盔"
+        },
+        {
+          "id": "B",
+          "text": "Metal steak knife and fork",
+          "textKo": "스테이크 나이프와 포크",
+          "textEs": "Cuchillo y tenedor para filete",
+          "textRu": "Нож для стейка и вилка",
+          "textZh": "西餐牛排刀叉"
+        },
+        {
+          "id": "C",
+          "text": "Disposable plastic gloves, steamed egg (Gyeran-jjim), and DIY seaweed rice balls (Jumeokbap)",
+          "textKo": "비닐 위생장갑 + 날치알 주먹밥 + 부드러운 폭탄 계란찜",
+          "textEs": "Guantes de plástico desechables, huevo al vapor (Gyeran-jjim) y bolas de arroz con algas (Jumeokbap)",
+          "textRu": "Одноразовые полиэтиленовые перчатки, паровой омлет (Керан-ччим) и шарики из риса с икрой (Чумокпап)",
+          "textZh": "一次性塑料手套 + 飞鱼籽海苔自捏饭团 (Jumeokbap) + 滚烫嫩滑火山蒸蛋 (Gyeran-jjim)"
+        },
+        {
+          "id": "D",
+          "text": "Bottle of hot mustard sauce",
+          "textKo": "겨자 소스 원액",
+          "textEs": "Bote de mostaza picante",
+          "textRu": "Бутылка острой горчицы",
+          "textZh": "浓缩黄芥末酱"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Eating bone-in spicy chicken feet requires wearing a plastic glove to grip each piece, while popping fist-sized seasoned rice balls and spoonfuls of fluffy steamed egg neutralizes the searing burn.",
+      "explanationKo": "뼈 있는 불닭발은 비닐장갑을 끼고 손으로 잡고 뜯어야 제맛이며, 입안이 얼얼할 때 고소한 날치알 주먹밥과 뜨거운 계란찜을 한 숟가락 넣으면 매운맛이 기적처럼 진정됩니다.",
+      "explanationEs": "Comer patas de pollo picantes requiere guantes de plástico, mientras que las bolitas de arroz con algas y el huevo al vapor calman el fuego de la capsaicina.",
+      "explanationRu": "Лапки едят руками в перчатках, а огненное жжение моментально нейтрализуется нежным паровым омлетом и рисовыми шариками с кунжутом.",
+      "explanationZh": "啃带骨鸡爪必须戴上塑料手套用手指熟练脱骨，辣到头皮发麻时，塞入一颗自己捏的海苔饭团、舀一勺嫩滑蒸蛋，是不可或缺的救命神组合！",
+      "funFact": "Koreans love compressing the seaweed rice into cute little balls by squeezing the rice firmly in their gloved hands!",
+      "funFactKo": "동행한 친구가 비닐장갑을 끼고 날치알 주먹밥을 조물조물 둥글게 뭉쳐 그릇에 놓아주는 모습에서 끈끈한 우정을 느낍니다!"
+    },
+    {
+      "id": 15,
+      "level": 1,
+      "question": "When dining in Korea and asking a waiter how spicy a dish is, what universal national benchmark do they almost always use to describe 'standard spicy'?",
+      "questionKo": "한국 식당에서 '이거 많이 매워요?'라고 물어봤을 때 직원과 손님 모두가 기준으로 삼는 절대적인 국민 맵기 척도는?",
+      "questionEs": "Al comer en un restaurante coreano y preguntar si un plato es picante, ¿qué referencia universal usan casi siempre para describir el 'picante estándar'?",
+      "questionRu": "Когда вы спрашиваете в корейском ресторане, насколько острое блюдо, какой общепринятый национальный эталон используют для описания?",
+      "questionZh": "在韩国餐厅点菜询问“这个菜很辣吗？”时，店员和顾客之间最通用、无人不知的全国通用基准辣度参照物是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "'It's about as spicy as Shin Ramyun' (신라면 정도 맵기예요)",
+          "textKo": "'신라면 정도 맵기예요'",
+          "textEs": "'Pica más o menos como un Shin Ramyun'",
+          "textRu": "'Остро примерно как Шин Рамён'",
+          "textZh": "“大概跟辛拉面差不多辣（신라면 정도 맵기예요）”"
+        },
+        {
+          "id": "B",
+          "text": "'Sweeter than fresh honey'",
+          "textKo": "'아카시아 꿀보다 달아요'",
+          "textEs": "'Más dulce que la miel'",
+          "textRu": "'Слаще свежего меда'",
+          "textZh": "“比纯蜂蜜还要甜”"
+        },
+        {
+          "id": "C",
+          "text": "'As cold as an iceberg'",
+          "textKo": "'남극 빙하처럼 시원해요'",
+          "textEs": "'Tan frío como un iceberg'",
+          "textRu": "'Холодно как айсберг'",
+          "textZh": "“跟冰山一样凉爽”"
+        },
+        {
+          "id": "D",
+          "text": "'Tastes like pure baby milk'",
+          "textKo": "'분유 맛이에요'",
+          "textEs": "'Sabe a leche de bebé'",
+          "textRu": "'Вкус как у детской смеси'",
+          "textZh": "“像婴儿配方奶的味道”"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Because nearly every single Korean grew up eating Nongshim Shin Ramyun (~2,700–3,400 Scoville), 'Shin Ramyun Level' serves as the universally recognized baseline for medium spiciness.",
+      "explanationKo": "한국인이라면 누구나 신라면의 매운 강도를 몸으로 기억하고 있기 때문에, 식당 맵기 설명에서 '신라면 정도'는 한국인에게 가장 직관적이고 정확한 매운맛의 기준점입니다.",
+      "explanationEs": "Casi todos en Corea conocen el picante del Shin Ramyun, por lo que sirve como el estándar nacional de referencia para medir el picante medio.",
+      "explanationRu": "Поскольку практически каждый кореец вырос на лапше Шин Рамён, фраза 'Острота как у Шин Рамёна' — официальный бытовой стандарт Кореи.",
+      "explanationZh": "由于几乎每个韩国人都对农心辛拉面的辣度（约2700~3400史高维尔）了然于心，店家说“辛拉面辣度”就是最直观精准的微辣/基准辣衡量坐标！",
+      "funFact": "If the waiter warns: 'It's spicier than Buldak' (불닭보다 매워요), only order it if you have extreme spicy tolerance!",
+      "funFactKo": "만약 사장님이 '불닭보다 매운데 괜찮으시겠어요?'라고 되묻는다면 초보자는 반드시 뒤로 물러서야 합니다!"
+    },
+    {
+      "id": 16,
+      "level": 2,
+      "question": "Why do Koreans reflexively crave savory scallion pancakes (Pajeon / Jeon) and cloudy rice wine (Makgeolli) whenever it starts raining?",
+      "questionKo": "한국인들이 비가 주룩주룩 내리는 날이면 반사적으로 바삭한 파전과 달큰한 막걸리를 떠올리는 대표적인 이유는?",
+      "questionEs": "¿Por qué los coreanos sienten antojo automático de panqueques de cebolleta (Pajeon) y vino de arroz (Makgeolli) cada vez que llueve?",
+      "questionRu": "Почему у корейцев при виде дождя возникает непреодолимое желание поесть хрустящих блинчиков с зеленым луком (Паджон) с рисовым вином (Макколли)?",
+      "questionZh": "为什么只要窗外一下雨，韩国人就会条件反射般疯狂想吃香脆的海鲜葱饼（Pajeon）配冰凉香甜的马格利米酒（Makgeolli）？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Korean law offers tax rebates on flour during wet weather",
+          "textKo": "비 오는 날 밀가루 세금을 감면해 줘서",
+          "textEs": "Hay descuentos de impuestos en harina en días de lluvia",
+          "textRu": "Из-за скидок на муку в дождливые дни",
+          "textZh": "雨天面粉有国家税务补贴"
+        },
+        {
+          "id": "B",
+          "text": "Rice wine can only be brewed during heavy thunderstorms",
+          "textKo": "천둥 번개가 칠 때만 막걸리가 발효돼서",
+          "textEs": "El vino de arroz solo fermenta con tormentas",
+          "textRu": "Макколли бродит только в грозу",
+          "textZh": "米酒只有在打雷时才能发酵"
+        },
+        {
+          "id": "C",
+          "text": "Rain makes scallions shrink into noodles",
+          "textKo": "빗물에 쪽파가 면발로 변해서",
+          "textEs": "La lluvia encoge las cebolletas",
+          "textRu": "Дождь превращает лук в лапшу",
+          "textZh": "雨水能把小葱变细"
+        },
+        {
+          "id": "D",
+          "text": "The sizzling sound of frying batter in oil sounds identical to the pitter-patter of raindrops",
+          "textKo": "기름에 파전이 지글지글 부쳐지는 소리가 빗소리와 놀랍도록 닮아서",
+          "textEs": "El chisporroteo del panqueque friéndose en aceite suena idéntico a las gotas de lluvia golpeando el suelo",
+          "textRu": "Звук шкворчания блинчика на сковороде с маслом поразительно похож на шум дождя за окном",
+          "textZh": "滚油铁板上油煎葱饼滋滋作响的声音，与窗外淅淅沥沥的雨声频率完美契合"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "Acoustically, the frying sizzle of oil closely resembles raindrops striking the pavement, evoking cozy comfort. Historically, farmers unable to work in rainy fields gathered indoors to fry flour batter with rice wine.",
+      "explanationKo": "팬에서 전이 부쳐질 때 나는 '치이익~' 소리의 주파수가 빗소리와 거의 같아 뇌를 자극하며, 농경 시대에 비가 오면 농사일을 쉬며 모여 전을 부쳐 막걸리를 나눠 마시던 풍습이 이어졌습니다.",
+      "explanationEs": "El sonido del aceite al freír coincide con la frecuencia acústica de la lluvia. Además, antiguamente los agricultores descansaban los días de lluvia y cocinaban juntos.",
+      "explanationRu": "Акустически треск масла имитирует капли дождя. Традиция идет от древних крестьян, которые в дождливую погоду собирались в домах и жарили лепешки под макколли.",
+      "explanationZh": "面糊在滚油中滋滋爆开的白噪音与雨声声学频率惊人一致，勾起舒适放松感。农耕时代农夫雨天无法下地，便全家围炉烙饼喝米酒，成为国民集体记忆！",
+      "funFact": "Kimchi-jeon (spicy aged kimchi pancake) is just as popular as Haemul Pajeon (seafood scallion pancake) on rainy days!",
+      "funFactKo": "묵은지를 송송 썰어 바삭하게 부친 '김치전' 또한 비 오는 날 파전 못지않은 최고의 막걸리 짝꿍입니다!"
+    },
+    {
+      "id": 17,
+      "level": 2,
+      "question": "What is the classic winter street snack debate dividing Koreans when eating fish-shaped pastries (Bungeoppang)?",
+      "questionKo": "겨울철 국민 간식 붕어빵을 먹을 때 한국인 친구들 사이에서 벌어지는 가장 치열한 취향 논쟁은?",
+      "questionEs": "¿Cuál es el debate clásico entre amigos coreanos al comer los pasteles con forma de pez (Bungeoppang) en invierno?",
+      "questionRu": "О чем ведут шуточные зимние дебаты корейцы, покупая горячие хрустящие рыбки (Бунъоппан)?",
+      "questionZh": "冬天在街头买刚出炉的热腾腾鱼饼烧（Bungeoppang）时，在韩国朋友之间最经典的两大灵魂站队争论是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Whether to boil it in saltwater or vinegar",
+          "textKo": "식초에 담가 먹을지 소금물에 삶아 먹을지",
+          "textEs": "Si hervirlo en agua salada o vinagre",
+          "textRu": "Варить ли рыбку в рассоле или уксусе",
+          "textZh": "用盐水煮还是蘸醋煮着吃"
+        },
+        {
+          "id": "B",
+          "text": "Red Bean (Pat-bung) vs. Choux Cream (Shu-bung) & Eating Head-first vs. Tail-first",
+          "textKo": "팥붕 vs 슈붕 (속재료) & 머리부터 먹기 vs 꼬리부터 먹기",
+          "textEs": "Frijol rojo (Pat-bung) vs Crema pastelera (Shu-bung) & ¿Empezar por la cabeza o por la cola?",
+          "textRu": "Сладкая фасоль (Пхат) против заварного крема (Шу) & Кусать сначала за голову или за хвост?",
+          "textZh": "红豆馅（팥붕）vs 奶油卡仕达馅（슈붕）以及从鱼头先吃 vs 从鱼尾先吃"
+        },
+        {
+          "id": "C",
+          "text": "Whether to feed it to a live fish in the pond",
+          "textKo": "연못의 살아있는 붕어에게 먹이로 줄지 말지",
+          "textEs": "Si dárselo de comer a los peces del estanque",
+          "textRu": "Кормить ли им настоящих карпов",
+          "textZh": "要不要拿去池塘里喂真鱼"
+        },
+        {
+          "id": "D",
+          "text": "Whether to eat it with metal chopsticks or a straw",
+          "textKo": "빨대로 빨아먹을지 쇠젓가락으로 집어먹을지",
+          "textEs": "Si comerlo con palillos o pajita",
+          "textRu": "Есть ли палочками или через трубочку",
+          "textZh": "用吸管吸还是用铁筷子夹"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "The filling battle between traditional sweet red bean ('Pat-bung') and smooth custard cream ('Shu-bung'), combined with personality tests based on eating head-first (optimistic/extrovert) or tail-first (cautious/detail-oriented), is a beloved winter staple.",
+      "explanationKo": "전통의 단팥 붕어빵파와 부드러운 슈크림 붕어빵파의 자존심 대결, 그리고 머리부터 먹느냐 꼬리부터 먹느냐로 성격을 분석하는 심리테스트는 한국 겨울의 소소한 행복입니다.",
+      "explanationEs": "La batalla entre el clásico frijol rojo y la crema pastelera, junto con el test de personalidad de si muerdes primero la cabeza o la cola, es el pasatiempo invernal favorito de Corea.",
+      "explanationRu": "Противостояние традиционной фасоли и крема, а также тест «кто ты, если ешь рыбку с головы или с хвоста» — любимая зимняя тема для разговоров.",
+      "explanationZh": "经典甜红豆馅派与香甜卡仕达奶油派的阵营对决，以及从鱼头下嘴（被戏称性格开朗直率）还是从酥脆鱼尾开吃（细致谨慎）的趣味性格测试，是韩国冬日独有的浪漫话题！",
+      "funFact": "There's even a real mobile map app in Korea called 'Bungeoppang Map' to help locate street vendors in your neighborhood!",
+      "funFactKo": "한국에는 내 주변 붕어빵과 계란빵 포장마차 위치를 실시간으로 알려주는 지도 앱이 있을 정도로 붕어빵에 진심입니다!"
+    },
+    {
+      "id": 18,
+      "level": 1,
+      "question": "Korean tteokbokki connoisseurs have legendary debates over the rice cake texture. What are the two passionate rival camps?",
+      "questionKo": "떡볶이 마니아들 사이에서 '탕수육 부먹 찍먹'만큼이나 평생 끝나지 않는 양대 떡 텍스처 논쟁은?",
+      "questionEs": "Los amantes del tteokbokki en Corea debaten apasionadamente sobre la textura del pastel de arroz. ¿Cuáles son los dos bandos rivales?",
+      "questionRu": "Среди фанатов токпокки ведутся легендарные споры о текстуре рисовых брусочков. Какие два непримиримых лагеря существуют?",
+      "questionZh": "在韩国炒年糕重度爱好者群体中，地位堪比“炸肉蘸酱派vs浇汁派”的永恒两派年糕口感之争是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chewy dense Rice Cakes (Ssal-tteok) vs. Soft sauce-absorbing Flour Cakes (Mil-tteok)",
+          "textKo": "쫀득하고 묵직한 '쌀떡' vs 양념이 쏙 배고 말랑한 '밀떡'",
+          "textEs": "Pastel de arroz denso y chicloso (Ssal-tteok) vs Pastel de harina suave que absorbe la salsa (Mil-tteok)",
+          "textRu": "Тягучий плотный рисовый (Ссаль-тток) против мягкого пшеничного, впитывающего соус (Миль-тток)",
+          "textZh": "筋道厚实的纯大米年糕（쌀떡） vs 软糯吸汁的传统小麦粉年糕（밀떡）"
+        },
+        {
+          "id": "B",
+          "text": "Sweet potato cakes vs. Corn cakes",
+          "textKo": "고구마떡 vs 옥수수떡",
+          "textEs": "Pastel de batata vs maíz",
+          "textRu": "Бататовые против кукурузных",
+          "textZh": "地瓜年糕 vs 玉米年糕"
+        },
+        {
+          "id": "C",
+          "text": "Chocolate tteok vs. Vanilla tteok",
+          "textKo": "초콜릿떡 vs 바닐라떡",
+          "textEs": "Pastel de chocolate vs vainilla",
+          "textRu": "Шоколадные против ванильных",
+          "textZh": "巧克力年糕 vs 香草年糕"
+        },
+        {
+          "id": "D",
+          "text": "Deep-fried cheese vs. Dried seaweed",
+          "textKo": "치즈구이 vs 말린 미역",
+          "textEs": "Queso frito vs algas secas",
+          "textRu": "Сыр фри против сушеной ламинарии",
+          "textZh": "炸芝士块 vs 干海带"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Rice cakes (Ssal-tteok) offer a firm, chewy bite, while wheat/flour cakes (Mil-tteok)—famous from retro schoolyard snack bars—are silky, soft, and soak up the spicy-sweet sauce deep inside.",
+      "explanationKo": "쌀떡은 씹을수록 구수하고 쫄깃한 식감이 일품인 반면, 밀떡은 양념이 속까지 깊게 배어들어 야들야들 호로록 넘어가는 매력으로 학창 시절 분식집의 추억을 자극합니다.",
+      "explanationEs": "El Ssal-tteok ofrece una mordida densa y masticable, mientras que el Mil-tteok escolar es sedoso, tierno y absorbe la salsa picante como una esponja.",
+      "explanationRu": "Рисовый тток более упругий и сытный, а пшеничный — нежный, гладкий и впитывает острый соус до самой сердцевины.",
+      "explanationZh": "大米年糕（Ssal-tteok）越嚼越香、扎实筋道；而学生时代学校门口的传统面粉年糕（Mil-tteok）质地滑嫩顺口，能像海绵一样饱吸浓厚甜辣酱汁！",
+      "funFact": "Many modern tteokbokki brands now offer a 'Half & Half' option so couples don't argue!",
+      "funFactKo": "최근 프랜차이즈 떡볶이점에서는 싸우지 않도록 쌀떡과 밀떡을 반반 섞어주는 옵션도 제공합니다!"
+    },
+    {
+      "id": 19,
+      "level": 2,
+      "question": "What fruit and garnish are traditionally paired with seasoned Korean raw beef tartare (Yukhoe) to add crisp sweetness and silky richness?",
+      "questionKo": "고소한 참기름과 마늘로 버무린 한국식 신선한 소고기 육회(Yukhoe)와 찰떡궁합을 자랑하는 과일과 고명은?",
+      "questionEs": "¿Qué fruta y aderezo se combinan tradicionalmente con el tartar de ternera cruda coreana (Yukhoe) para aportar frescura y textura sedosa?",
+      "questionRu": "Какие фрукты и топпинг традиционно подают к корейскому тартару из свежей говядины (Юкхве), чтобы придать сочность и нежность?",
+      "questionZh": "在用香油、蒜末调味的鲜美韩式生拌牛肉（Yukhoe）旁边，必备的爽口脆甜水果丝和丝滑点睛配料是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Sliced green kiwi and mayonnaise",
+          "textKo": "키위 조각과 마요네즈",
+          "textEs": "Kiwi verde y mayonesa",
+          "textRu": "Киви и майонез",
+          "textZh": "绿奇异果片与蛋黄酱"
+        },
+        {
+          "id": "B",
+          "text": "Mashed strawberries and honey",
+          "textKo": "딸기 잼과 꿀",
+          "textEs": "Fresas machacadas y miel",
+          "textRu": "Клубника и мед",
+          "textZh": "草莓酱与蜂蜜"
+        },
+        {
+          "id": "C",
+          "text": "Crisp julienned Korean pear (Bae) and a golden raw egg yolk",
+          "textKo": "아삭아삭 채 썬 시원한 배와 신선한 달걀 노른자",
+          "textEs": "Pera coreana crujiente en juliana (Bae) y una yema de huevo cruda dorada",
+          "textRu": "Хрустящая корейская груша соломкой (Пэ) и золотистый сырой яичный желток",
+          "textZh": "清脆多汁的切丝韩国梨（Bae）与一颗金黄生生鲜蛋黄"
+        },
+        {
+          "id": "D",
+          "text": "Canned sweet corn and peanut butter",
+          "textKo": "스위트콘과 땅콩버터",
+          "textEs": "Maíz dulce y mantequilla de maní",
+          "textRu": "Кукуруза и арахисовое масло",
+          "textZh": "甜玉米粒与花生酱"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "The crisp sweetness of Korean pear cleanses the palate while digestive enzymes in pears naturally tenderize beef. Piercing the raw egg yolk coats the chilled beef in luxurious velvet richness.",
+      "explanationKo": "시원하고 달콤한 배는 소고기의 단백질을 분해하는 효소가 있어 소화를 돕고 느끼함을 잡아주며, 신선한 달걀 노른자를 톡 터뜨려 비벼 먹으면 극상의 고소함을 선사합니다.",
+      "explanationEs": "La pera coreana aporta dulzor crujiente y enzimas digestivas, mientras que la yema de huevo cruda aporta una untuosidad cremosa inigualable.",
+      "explanationRu": "Сочная корейская груша освежает вкус и помогает усваивать белок, а лопающийся сырой желток обволакивает холодное мясо бархатистой нежностью.",
+      "explanationZh": "清甜爽脆的韩国雪梨丝富含蛋白酶可自然解腻助消化，用筷子戳破最上面的新鲜生蛋黄轻轻拌匀，口感丝滑醇香、妙不可言！",
+      "funFact": "Seoul's Gwangjang Market is world-famous for its bustling Yukhoe alley lined with fresh butchers!",
+      "funFactKo": "서울 종로 광장시장에는 미슐랭 빕구르망에도 오른 반세기 전통의 육회 골목이 항상 북적입니다!"
+    },
+    {
+      "id": 20,
+      "level": 2,
+      "question": "While people in Seoul dip street Sundae (blood sausage) into chili salt, what do locals in Busan and Gyeongsang province famously dip it into?",
+      "questionKo": "서울·경기에서는 순대를 소금·고춧가루에 찍어 먹지만, 부산과 경상도 사람들은 무조건 '이 양념'에 찍어 먹는데, 이것은?",
+      "questionEs": "Mientras en Seúl mojan el Sundae (morcilla) en sal con chile, ¿en qué salsa famosa lo mojan los habitantes de Busan y la provincia de Gyeongsang?",
+      "questionRu": "В Сеуле колбасу Сундэ макают в соль с перцем, а в какой соус её обязательно макают жители Пусана и Кёнсандо?",
+      "questionZh": "首尔和京畿道吃米肠（Sundae）通常蘸辣椒盐，而在釜山和庆尚道地区，当地人绝对少不了的灵魂蘸料是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Tomato ketchup",
+          "textKo": "새콤한 토마토 케첩",
+          "textEs": "Kétchup de tomate",
+          "textRu": "Томатный кетчуп",
+          "textZh": "酸甜番茄酱"
+        },
+        {
+          "id": "B",
+          "text": "Savory Makjang / Ssamjang (Seasoned soybean paste with garlic and cider)",
+          "textKo": "달짝지근하고 짭조름한 막장 (쌈장)",
+          "textEs": "Makjang / Ssamjang sabroso (pasta de soja sazonada con ajo y refresco de lima)",
+          "textRu": "Ароматный Макджан / Ссамджан (соевая паста с чесноком)",
+          "textZh": "风味浓郁咸香的“大酱/包饭酱（Makjang / Ssamjang）”"
+        },
+        {
+          "id": "C",
+          "text": "Pure maple syrup",
+          "textKo": "달콤한 메이플 시럽",
+          "textEs": "Sirope de arce puro",
+          "textRu": "Кленовый сироп",
+          "textZh": "纯枫糖浆"
+        },
+        {
+          "id": "D",
+          "text": "Hot melted chocolate",
+          "textKo": "따뜻하게 녹인 초콜릿",
+          "textEs": "Chocolate caliente derretido",
+          "textRu": "Горячий шоколад",
+          "textZh": "融化的热巧克力"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Regional sauce cultures are iconic in Korea! Busan/Gyeongsang loves savory Makjang/Ssamjang with raw onions, Jeolla province loves Chojang (vinegared chili paste), and Gangwon loves salted shrimp (Saewoojeot).",
+      "explanationKo": "한국의 순대 소스는 지역별 자부심이 뚜렷하여, 경상도는 고소한 막장·양파, 전라도는 새콤매콤한 초고추장, 강원도는 새우젓, 서울·경기는 소금에 찍어 먹는 고유의 문화가 있습니다.",
+      "explanationEs": "¡La salsa del Sundae varía por región! En Busan usan Makjang/Ssamjang, en Jeolla usan Chojang (chile con vinagre) y en Seúl sal aromatizada.",
+      "explanationRu": "Региональные традиции соусов удивительны: в Пусане макают в пасту Макджан, в Чолладо — в острый уксусный Чходжан, а в Сеуле — в соль.",
+      "explanationZh": "米肠蘸料体现了韩国精彩的地域饮食特色：釜山庆尚道必配浓郁麦酱（Makjang）生洋葱，全罗道爱蘸酸辣醋苦椒酱，江原道配虾酱，而首尔则配细辣椒盐！",
+      "funFact": "Busan street carts always serve Sundae accompanied by raw yellow onions and green chili peppers to dip in Makjang!",
+      "funFactKo": "부산 분식집에서는 순대와 함께 생양파와 풋고추를 푸짐하게 썰어주어 막장에 푹 찍어 먹습니다!"
+    },
+    {
+      "id": 21,
+      "level": 1,
+      "question": "Why is an overflowing 'Volcano Steamed Egg' (Poktan Gyeran-jjim) the #1 companion ordered at spicy galbijjim or tteokbokki restaurants?",
+      "questionKo": "뚝배기 위로 봉긋하게 부풀어 오른 '폭탄 계란찜'이 매운 등갈비찜이나 불떡볶이 전문점에서 무조건 팔리는 이유는?",
+      "questionEs": "¿Por qué el 'Huevo al Vapor Volcán' (Poktan Gyeran-jjim) es el acompañamiento número 1 en restaurantes de comida ultra picante?",
+      "questionRu": "Почему пышный паровой омлет «Вулкан» (Керан-ччим) в глиняном горшочке — топ-1 гарнир в ресторанах с острой корейской едой?",
+      "questionZh": "在砂锅上高高鼓起像蘑菇云一般的“火山鸡蛋羹（Poktan Gyeran-jjim）”，为什么是重辣排骨锅或火鸡炒年糕店的点单冠军？",
+      "options": [
+        {
+          "id": "A",
+          "text": "It adds extra fire to burn your lips",
+          "textKo": "입술을 더 맵게 태우기 위해",
+          "textEs": "Para hacer arder más los labios",
+          "textRu": "Чтобы во рту жгло еще сильнее",
+          "textZh": "让嘴唇灼烧得更加厉害"
+        },
+        {
+          "id": "B",
+          "text": "It is used exclusively to take selfies",
+          "textKo": "사진 촬영용 소품으로만 쓰여서",
+          "textEs": "Solo se usa como atrezo para fotos",
+          "textRu": "Исключительно для красивых фото",
+          "textZh": "纯粹为了拍照发朋友圈"
+        },
+        {
+          "id": "C",
+          "text": "It makes your drink turn purple",
+          "textKo": "소주 색깔을 보라색으로 바꿔줘서",
+          "textEs": "Cambia el color de la bebida a morado",
+          "textRu": "Окрашивает соджу в фиолетовый цвет",
+          "textZh": "把烧酒变成紫色"
+        },
+        {
+          "id": "D",
+          "text": "Fluffy, savory egg protein naturally buffers spicy capsaicin and soothes the tongue",
+          "textKo": "부드럽고 몽글몽글한 달걀 단백질이 혀의 캡사이신을 감싸 위벽과 입안의 불을 꺼주기 때문에",
+          "textEs": "La proteína suave y esponjosa del huevo amortigua la capsaicina y calma de inmediato el fuego de la lengua",
+          "textRu": "Нежный белок яиц обволакивает рецепторы и нейтрализует жгучий капсаицин, спасая желудок",
+          "textZh": "嫩滑蓬松的温润鸡蛋蛋白质能有效包裹缓解辣椒素带来的灼痛，保护胃壁并给舌尖灭火"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "Egg proteins and natural fats act as a gentle protective shield against capsaicin, while the savory broth infused with scallions and sesame oil creates irresistible comfort.",
+      "explanationKo": "달걀의 단백질과 유분은 캡사이신의 자극을 중화시켜 매운맛으로 지친 혀와 위장을 편안하게 보호해 주므로 매운 요리엔 떼려야 뗄 수 없는 단짝입니다.",
+      "explanationEs": "Las proteínas y grasas del huevo protegen contra la capsaicina, mientras que el toque de aceite de sésamo y cebolleta resulta reconfortante.",
+      "explanationRu": "Белок яйца мягко нейтрализует остроту перца, а кунжутное масло и зеленый лук создают потрясающий уютный вкус.",
+      "explanationZh": "蛋羹绵密松软，其中的优质蛋白质与微量脂肪能中和辣椒素对舌面神经的刺激，抚慰灼烧感，是韩国公认的解辣护胃神器！",
+      "funFact": "Cooks achieve the dramatic volcano dome by whipping eggs continuously until they steam, then sealing the top with an inverted bowl!",
+      "funFactKo": "뚝배기 위로 솟아오르는 폭탄 비주얼을 만들기 위해 동일한 크기의 뚝배기 뚜껑을 덮어 증기로 부풀리는 기술을 씁니다!"
+    },
+    {
+      "id": 22,
+      "level": 2,
+      "question": "What is the crucial eating safety advice when enjoying freshly prepared, wriggling live octopus tentacles (Sannakji)?",
+      "questionKo": "참기름과 깨를 뿌려 꿈틀거리는 신선한 산낙지(Sannakji)를 안전하고 맛있게 즐기기 위해 반드시 지켜야 할 주의사항은?",
+      "questionEs": "¿Cuál es la recomendación de seguridad esencial al disfrutar de tentáculos de pulpo vivo recién cortados (Sannakji)?",
+      "questionRu": "Какое главное правило безопасности необходимо соблюдать, когда вы пробуете шевелящиеся щупальца живого осьминога (Саннакчи)?",
+      "questionZh": "品尝淋上香油白芝麻、在盘中活跃蠕动的新鲜生拌活章鱼（Sannakji）时，最致命关键的安全食用法则是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Chew thoroughly before swallowing so active suction cups do not stick inside your throat",
+          "textKo": "빨판이 목구멍이나 입천장에 달라붙지 않도록 완전히 꼭꼭 씹어 삼킨다",
+          "textEs": "Masticar muy a fondo antes de tragar para que las ventosas activas no se adhieran a la garganta",
+          "textRu": "Тщательно и долго пережевывать, чтобы присоски не прилипли к горлу или нёбу",
+          "textZh": "在吞咽前必须极度充分地用力咀嚼，防止具有活性的吸盘吸附在食道或咽喉壁上造成窒息"
+        },
+        {
+          "id": "B",
+          "text": "Swallow it whole in one gulp without chewing",
+          "textKo": "씹지 않고 꿀꺽 한 번에 삼켜야 복이 온다",
+          "textEs": "Tragarlo entero de un golpe sin masticar",
+          "textRu": "Глотать целиком не жуя на удачу",
+          "textZh": "绝不咀嚼直接整只吞下肚"
+        },
+        {
+          "id": "C",
+          "text": "Cook it over a lighter flame for 10 seconds",
+          "textKo": "라이터 불로 10초간 구워 먹는다",
+          "textEs": "Asarlo con un mechero 10 segundos",
+          "textRu": "Поджечь зажигалкой на 10 секунд",
+          "textZh": "用打火机先烤10秒"
+        },
+        {
+          "id": "D",
+          "text": "Drop it in orange soda before eating",
+          "textKo": "오렌지 탄산음료에 3분간 담갔다 먹는다",
+          "textEs": "Meterlo en refresco de naranja antes",
+          "textRu": "Замочить в апельсиновой газировке",
+          "textZh": "放进橙味汽水里浸泡"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Even after being chopped, the nerve endings in octopus tentacles keep firing, meaning suction cups can cling to mucous membranes. Thorough chewing eliminates suction and releases its sweet, nutty flavor.",
+      "explanationKo": "낙지는 신경계 구조상 잘린 후에도 신경이 살아있어 빨판이 입천장이나 기도를 막을 위험이 있으므로, 참기름장에 듬뿍 찍어 잘게 씹어 넘겨야 안전합니다.",
+      "explanationEs": "Las ventosas siguen activas por reflejos nerviosos. Masticar a fondo desactiva las ventosas y permite saborear su textura crujiente y toque de sésamo.",
+      "explanationRu": "Нервные окончания щупалец продолжают двигаться. Тщательное пережевывание обезвреживает присоски и раскрывает сладковатый морской вкус.",
+      "explanationZh": "章鱼神经分布于触手机构，被斩断后吸盘仍会发生神经反射性吸附，必须蘸足香油彻底嚼烂嚼碎再咽，既能体验Q弹脆嫩，又能保证安全！",
+      "funFact": "Coating Sannakji in plenty of toasted sesame oil helps lubricate the suction cups and prevents sticking!",
+      "funFactKo": "고소한 참기름을 듬뿍 두르면 맛도 훌륭해질 뿐 아니라 빨판의 접착력을 미끄럽게 약화시키는 과학적 효과도 있습니다!"
+    },
+    {
+      "id": 23,
+      "level": 1,
+      "question": "What beloved category of piping hot, restorative Korean soups—such as Bean Sprout soup or Ox Bone soup—is dedicated to curing alcohol hangovers?",
+      "questionKo": "전날 밤 소주를 진하게 마신 뒤 쓰린 속을 달래고 숙취를 풀기 위해 한국인이 아침에 찾는 대표적인 국물 요리 장르는?",
+      "questionEs": "¿Qué querido tipo de sopas calientes y reconstituyentes coreanas—como la de brotes de soja o rabo de buey—está dedicada a curar la resaca?",
+      "questionRu": "Какая категория горячих целебных корейских супов с ростками сои или говяжьим бульоном специально предназначена для снятия похмелья?",
+      "questionZh": "前一晚狂欢痛饮烧酒后，第二天清晨韩国人必去打卡喝上一大碗、用以缓解胃痛和醒酒回血的代表性汤料理统称为？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Miyeok-guk (Birthday Seaweed soup)",
+          "textKo": "생일 미역국",
+          "textEs": "Miyeok-guk (Sopa de cumpleaños)",
+          "textRu": "Миёккук (Именинный суп)",
+          "textZh": "生日海带汤"
+        },
+        {
+          "id": "B",
+          "text": "Patjuk (Sweet red bean porridge)",
+          "textKo": "달콤한 팥죽",
+          "textEs": "Patjuk (Gachas dulces de judías)",
+          "textRu": "Пхатчук (Сладкая фасолевая каша)",
+          "textZh": "甜红豆粥"
+        },
+        {
+          "id": "C",
+          "text": "Haejangguk (해장국 / Hangover Cure Soup)",
+          "textKo": "해장국 (Haejang-guk)",
+          "textEs": "Haejangguk (Sopa para la resaca)",
+          "textRu": "Хэджангкук (Суп от похмелья)",
+          "textZh": "醒酒汤 (Haejangguk / 豆芽解酒汤·血肠醒酒汤)"
+        },
+        {
+          "id": "D",
+          "text": "Naengmyeon (Icy Cold noodles)",
+          "textKo": "살얼음 동동 물냉면",
+          "textEs": "Naengmyeon (Fideos fríos con hielo)",
+          "textRu": "Нэнмён (Ледяная лапша)",
+          "textZh": "冷面带冰碴"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "'Haejangguk' literally translates to 'soup to overcome a hangover.' Variations packed with asparagine-rich bean sprouts (Kongnamul), dried pollack (Bugeo), or tender cabbage relieve liver strain and restore stamina.",
+      "explanationKo": "'해장(解酲)'은 술기운을 푼다는 뜻으로, 아스파라긴산이 풍부한 콩나물국밥이나 시원한 북엇국, 뼈다귀 해장국 등은 한국인의 영혼을 달래주는 국민 해장 음식입니다.",
+      "explanationEs": "'Haejangguk' significa literalmente 'sopa para superar la resaca'. Los brotes de soja ricos en asparagina y los caldos profundos restauran el hígado.",
+      "explanationRu": "Хэджангкук буквально означает «суп, разгоняющий хмель». Бульон с ростками сои богат аспарагином, который быстро восстанавливает организм.",
+      "explanationZh": "“解酲（해장）”意为解宿醉。富含天冬氨酸的豆芽汤饭、明太鱼干汤或浓郁的牛骨醒酒汤，滚烫下肚大汗淋漓，瞬间唤醒沉睡疲惫的灵魂！",
+      "funFact": "Many Haejangguk diners in Seoul are open 24 hours so you can sober up before ever going home!",
+      "funFactKo": "한국의 수많은 해장국집은 24시간 영업하여 새벽 귀갓길 청춘들의 든든한 쉼터가 되어줍니다!"
+    },
+    {
+      "id": 24,
+      "level": 1,
+      "question": "What surprisingly sweet coating is generously dusted over freshly fried Korean mozzarella cheese corn dogs before condiments are added?",
+      "questionKo": "갓 튀겨낸 바삭한 K-핫도그(명랑핫도그 등) 겉면에 케첩과 머스터드를 뿌리기 직전 골고루 굴려 묻히는 달콤한 마법의 가루는?",
+      "questionEs": "¿Qué cobertura sorprendentemente dulce se espolvorea generosamente sobre los perritos calientes de maíz coreanos antes de añadir las salsas?",
+      "questionRu": "В какую неожиданно сладкую посыпку обваливают свежеобжаренные корейские корн-доги с моцареллой перед добавлением соусов?",
+      "questionZh": "刚出炉金黄酥脆的韩式芝士拉丝热狗棒（K-Corn Dog），在淋番茄酱和蜂蜜芥末酱之前，必须在托盘里滚上一层的甜味魔法颗粒是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Black ground pepper",
+          "textKo": "굵은 흑후추",
+          "textEs": "Pimienta negra molida",
+          "textRu": "Черный молотый перец",
+          "textZh": "粗粒黑胡椒粉"
+        },
+        {
+          "id": "B",
+          "text": "Granulated white sugar (설탕)",
+          "textKo": "하얀 설탕 (Sugar)",
+          "textEs": "Azúcar blanco granulado (설탕)",
+          "textRu": "Белый сахарный песок (설탕)",
+          "textZh": "细白砂糖粒 (설탕)"
+        },
+        {
+          "id": "C",
+          "text": "Curry powder",
+          "textKo": "매운 카레가루",
+          "textEs": "Polvo de curry",
+          "textRu": "Порошок карри",
+          "textZh": "纯咖喱粉"
+        },
+        {
+          "id": "D",
+          "text": "Cocoa powder",
+          "textKo": "씁쓸한 코코아 가루",
+          "textEs": "Cacao en polvo",
+          "textRu": "Какао-порошок",
+          "textZh": "无糖可可粉"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Rolling a piping hot, savory corn dog in white sugar creates the addictive Korean 'Dan-Jjan' (sweet and salty) harmony. Adding ketchup and honey mustard on top completes the world-famous street bite!",
+      "explanationKo": "기름에서 갓 건져낸 뜨거운 핫도그를 설탕에 굴리면 '단짠단짠'의 정석이 완성되며, 그 위에 케첩과 체다치즈, 머스터드를 격자로 뿌려 먹는 것이 K-스트리트 푸드의 표준입니다.",
+      "explanationEs": "Rebozar el perrito caliente recién frito en azúcar blanco crea la adictiva combinación agridulce y salada coreana ('Dan-Jjan'). ¡Luego se añade kétchup y mostaza!",
+      "explanationRu": "Обваливание горячего корн-дога в сахаре создает культовый корейский баланс «Дан-ччан» (сладко-соленый вкус). Сверху поливают кетчупом и горчицей.",
+      "explanationZh": "刚出油锅的热狗裹上一层白砂糖，与里面的咸香芝士香肠形成韩国人最痴迷的“甜咸暴击（단짠단짠）”，再淋上番茄酱和芥末酱，口感层次拉满！",
+      "funFact": "When the vendor asks 'Seol-tang mudeuryeoyo?' (Want sugar on it?), true locals always answer 'Yes, plenty!'",
+      "funFactKo": "핫도그 사장님이 '설탕 묻혀드릴까요?'라고 물어보실 때 '듬뿍 묻혀주세요!'라고 외치는 것이 진정한 먹잘알입니다!"
+    },
+    {
+      "id": 25,
+      "level": 2,
+      "question": "How was Korea's beloved spicy Army Stew (Budae Jjigae)—filled with Spam, sausages, baked beans, kimchi, and ramen—originally created?",
+      "questionKo": "스팸, 소시지, 베이크드 빈스, 라면 사리, 김치가 어우러진 대표 퓨전 요리 '부대찌개'의 역사적 탄생 배경은?",
+      "questionEs": "¿Cómo se creó originalmente el querido guiso militar picante (Budae Jjigae) de Corea, lleno de Spam, salchichas, judías y ramen?",
+      "questionRu": "Как исторически возник легендарный острый армейский суп (Пудэ-ччигэ), в котором смешаны спам, сосиски, бобы, кимчи и рамён?",
+      "questionZh": "将午餐肉罐头（Spam）、热狗香肠、烘焙茄汁豆、泡菜与泡面汇聚一锅的韩国融合名菜“部队火锅（Budae Jjigae）”，其历史起源是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Created by Joseon royalty for royal hunting camps",
+          "textKo": "조선 왕실에서 사냥 나갈 때 먹던 궁중 요리",
+          "textEs": "Creado por la realeza Joseon para la caza",
+          "textRu": "Создан королями Чосона во время охоты",
+          "textZh": "朝鲜王朝王室狩猎时的宫廷秘方"
+        },
+        {
+          "id": "B",
+          "text": "Invented on a fisherman's boat in Jeju Island",
+          "textKo": "제주도 해녀들이 개발한 해산물 요리",
+          "textEs": "Inventado en un barco pesquero en la isla de Jeju",
+          "textRu": "Придуман рыбаками на острове Чеджу",
+          "textZh": "济州岛海女捕鱼时发明的料理"
+        },
+        {
+          "id": "C",
+          "text": "Developed in a Parisian French bakery contest",
+          "textKo": "프랑스 파리 요리대회 출품작",
+          "textEs": "Desarrollado en un concurso de repostería en París",
+          "textRu": "Разработан на кулинарном конкурсе в Париже",
+          "textZh": "巴黎烘焙大赛得奖作品"
+        },
+        {
+          "id": "D",
+          "text": "Created during post-war food shortages around U.S. military bases using surplus canned rations",
+          "textKo": "한국전쟁 직후 미군 부대 근처에서 흘러나온 통조림 햄과 소시지에 김치와 고추장을 넣어 끓여 먹던 생존 요리",
+          "textEs": "Creado durante la escasez de posguerra cerca de bases militares estadounidenses utilizando raciones de comida enlatada",
+          "textRu": "Создан после Корейской войны рядом с американскими военными базами из излишков консервированных пайков",
+          "textZh": "在抗美援朝战争后物资匮乏时期，周边居民将美军基地流出的午餐肉火腿罐头与韩国传统泡菜、辣椒酱煮成一锅的温饱创意"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "'Budae' means military unit. During the 1950s after the Korean War, resourceful locals near bases like Uijeongbu boiled surplus American processed meats with kimchi, gochujang, and stock to create this hearty, comforting masterpiece.",
+      "explanationKo": "부대(部隊)찌개는 의정부나 송탄 등 미군 기지 인근에서 조달한 햄과 통조림 콩에 칼칼한 고추장과 묵은지를 더해 끓여낸 애환과 지혜가 담긴 음식으로, 오늘날 세계인의 사랑을 받는 소울푸드가 되었습니다.",
+      "explanationEs": "'Budae' significa unidad militar. En los años 50 tras la Guerra de Corea, los lugareños combinaron carnes procesadas de bases estadounidenses con kimchi e ingredientes locales.",
+      "explanationRu": "«Пудэ» означает военная база. В послевоенные годы жители Уйджонбу смешивали американские мясные консервы с корейским кимчи и острым бульоном.",
+      "explanationZh": "“部队（Budae）”指美军驻韩部队。20世纪50年代战后议政府等地的韩国百姓用美军午餐肉罐头搭配传统泡菜和清汤熬煮，从苦难中的果腹美食演变为了如今红遍全球的浓郁温暖经典！",
+      "funFact": "Adding a slice of yellow American processed cheese over the boiling ramen noodles on top is essential for that rich creamy broth!",
+      "funFactKo": "보글보글 끓는 라면 사리 위에 노란 체다 슬라이스 치즈 한 장을 얹어 녹여 먹는 것이 국물의 고소함을 극대화하는 비법입니다!"
+    },
+    {
+      "id": 26,
+      "level": 2,
+      "question": "What is the absolute golden rule for picking the right Kimchi to brew a rich, mouthwatering Kimchi Jjigae (Kimchi Stew)?",
+      "questionKo": "깊고 감칠맛 폭발하는 제대로 된 김치찌개를 끓이기 위해 반드시 사용해야 하는 김치는?",
+      "questionEs": "¿Cuál es la regla de oro absoluta al elegir el Kimchi para cocinar un Kimchi Jjigae (guiso de kimchi) profundo y delicioso?",
+      "questionRu": "Какое главное золотое правило при выборе кимчи для приготовления насыщенного и вкусного супа Кимчи-ччигэ?",
+      "questionZh": "要想煮出一锅酸辣浓郁、汤头醇厚无比的绝赞泡菜汤（Kimchi Jjigae），挑选泡菜时绝对不可违背的黄金法则是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "You must use well-aged, sour fermented kimchi (Mugeonji / Sin-kimchi), never freshly made kimchi",
+          "textKo": "새로 담근 겉절이가 아닌, 푹 익은 신김치나 묵은지를 사용해야 한다",
+          "textEs": "Debes usar kimchi muy fermentado y ácido (Mugeonji / Sin-kimchi), nunca kimchi recién hecho",
+          "textRu": "Нужно использовать хорошо выдержанное, кислое ферментированное кимчи (Мугынджи / Син-кимчи), а не свежее",
+          "textZh": "必须使用充分深度发酵、发酵泛酸的老陈泡菜（묵은지 / 신김치），绝不能用刚做好的新鲜脆白菜（겉절이）"
+        },
+        {
+          "id": "B",
+          "text": "Wash all the red chili paste away with dish soap first",
+          "textKo": "주방 세제로 고춧가루를 씻어낸 김치",
+          "textEs": "Lavar el chile con jabón para platos",
+          "textRu": "Промыть кимчи с мылом",
+          "textZh": "用洗洁精把红辣椒粉洗掉"
+        },
+        {
+          "id": "C",
+          "text": "Kimchi that has been frozen into an ice pop for 10 years",
+          "textKo": "10년간 냉동실에 꽁꽁 얼려둔 김치",
+          "textEs": "Kimchi congelado durante 10 años",
+          "textRu": "Кимчи, замороженное на 10 лет",
+          "textZh": "在冰箱冷冻10年的泡菜冰棍"
+        },
+        {
+          "id": "D",
+          "text": "Kimchi sweetened with strawberry chocolate",
+          "textKo": "딸기 초콜릿을 버무린 김치",
+          "textEs": "Kimchi con chocolate de fresa",
+          "textRu": "Кимчи с клубничным шоколадом",
+          "textZh": "拌了草莓巧克力的甜泡菜"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Freshly made kimchi (Geotjeori) lacks organic lactic acid. Deeply aged kimchi (Mugeonji) possesses complex natural acids and umami that breakdown fatty pork during simmering, yielding legendary soup depth.",
+      "explanationKo": "갓 담근 배추김치는 끓이면 배추국처럼 맹맹해지지만, 푹 익은 묵은지의 젖산과 발효 유기산은 돼지고기의 기름과 만나 환상적인 깊은 감칠맛을 만들어냅니다.",
+      "explanationEs": "El kimchi fresco no tiene la acidez necesaria. El kimchi añejo (Mugeonji) aporta ácidos lácticos y umami que equilibran la grasa del cerdo a fuego lento.",
+      "explanationRu": "Свежее кимчи делает суп водянистым. Только хорошо созревшее кислое кимчи (Мугынджи) дает молочную кислоту и умами, превращающие бульон в шедевр.",
+      "explanationZh": "刚做好的浅腌泡菜煮汤只有生白菜味；只有经过数月甚至数年沉淀的老泡菜（Mugeonji），其丰富的乳酸与发酵氨基酸与五花肉油脂交融，才能炖出灵魂浓汤！",
+      "funFact": "If your kimchi is a bit too sour, adding half a spoon of granulated sugar balances the acidity perfectly!",
+      "funFactKo": "김치가 너무 시어서 찌개가 시큼할 때는 설탕 반 스푼을 넣어주면 마법처럼 산미가 둥글어지고 감칠맛이 살아납니다!"
+    },
+    {
+      "id": 27,
+      "level": 1,
+      "question": "After conquering an intense spicy challenge, what shaved milk dessert crowned with injeolmi rice cakes or sweet mango is Korea's ultimate sweet antidote?",
+      "questionKo": "화끈하게 매운 음식을 땀 뻘뻘 흘리며 정복한 후, 혓바닥을 차갑게 식혀주러 달려가는 국민 디저트는?",
+      "questionEs": "Tras conquistar un reto ultra picante, ¿qué postre de leche rallada coronado con pasteles de arroz injeolmi o mango es el antídoto dulce definitivo?",
+      "questionRu": "Каким популярным десертом из ледяной молочной стружки с рисовыми клецками инджольми или манго корейцы тушат пожар во рту после острого?",
+      "questionZh": "在大汗淋漓地挑战完地狱辣餐后，韩国人最爱冲进甜品店用来冰镇口腔、灭火解暑的国民级雪花牛奶冰甜品是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hot cinnamon churros",
+          "textKo": "뜨거운 시나몬 츄러스",
+          "textEs": "Churros calientes con canela",
+          "textRu": "Горячие чуррос с корицей",
+          "textZh": "滚烫的肉桂吉事果"
+        },
+        {
+          "id": "B",
+          "text": "Boiled salted radishes",
+          "textKo": "삶은 소금 무",
+          "textEs": "Rábanos hervidos salados",
+          "textRu": "Вареная соленая редька",
+          "textZh": "水煮盐渍萝卜块"
+        },
+        {
+          "id": "C",
+          "text": "Snowflake Milk Bingsu (눈꽃빙수 / 설빙 Sulbing Patbingsu)",
+          "textKo": "부드러운 우유 눈꽃빙수 (설빙 인절미·망고 빙수)",
+          "textEs": "Bingsu de copos de nieve de leche (눈꽃빙수 / Sulbing)",
+          "textRu": "Молочный снежный Бингсу (눈꽃빙수 / Сульбин)",
+          "textZh": "雪花牛奶刨冰 (Bingsu / 比如雪冰Sulbing的黄豆粉年糕或芒果冰)"
+        },
+        {
+          "id": "D",
+          "text": "Cup of pure tabasco sauce",
+          "textKo": "핫 타바스코 소스 한 잔",
+          "textEs": "Vaso de salsa tabasco puro",
+          "textRu": "Стакан соуса табаско",
+          "textZh": "一杯特浓塔巴斯科辣酱"
+        }
+      ],
+      "correctAnswer": "C",
+      "explanation": "Shaved ice transformed in Korea from coarse chipped ice into fine micro-snow made of frozen milk. Its chilled dairy fat instantly cools mouth tissues and resets taste buds.",
+      "explanationKo": "한국의 '눈꽃빙수'는 물 대신 우유를 곱게 갈아 눈처럼 부드러운 식감을 내며, 매운 음식을 먹은 직후 인절미 콩가루나 연유를 듬뿍 얹어 먹으면 입안의 불길을 완벽히 꺼줍니다.",
+      "explanationEs": "El Bingsu moderno coreano consiste en finísima nieve de leche congelada. Los lácteos fríos y la leche condensada neutralizan cualquier rastro de picor.",
+      "explanationRu": "Корейский бингсу делают из тончайшей снежной стружки замороженного молока. Холодный молочный десерт с кунжутной пудрой моментально снимает ожог от перца.",
+      "explanationZh": "韩国的现代“雪花冰”将纯牛奶直接急冻制成如初雪般细腻融化的绵绵冰霜，浇上炼乳、撒满黄豆粉年糕粒（Injeolmi），冰爽醇甜瞬间抚平舌尖所有灼痛！",
+      "funFact": "Injeolmi Bingsu coated in golden roasted soybean powder is famous for making people cough if they inhale too quickly before chewing!",
+      "funFactKo": "인절미 설빙을 먹을 때 숨을 들이마시며 콩가루를 먹으면 사레들려 기침 폭탄이 터지는 경험은 누구나 한 번쯤 겪어본 국룰입니다!"
+    },
+    {
+      "id": 28,
+      "level": 2,
+      "question": "At Seoul's historic Tongin Market, what unique traditional tteokbokki is stir-fried in fragrant chili oil in a flat iron pan rather than swimming in red soup?",
+      "questionKo": "서울 통인시장의 명물로, 국물 없이 무쇠 솥뚜껑 철판에 고추기름과 간장 양념으로 노릇하게 볶아내는 이색 떡볶이는?",
+      "questionEs": "¿Qué tteokbokki tradicional único del histórico mercado Tongin de Seúl se saltea en aceite picante en una sartén plana de hierro en lugar de tener caldo?",
+      "questionRu": "Какой уникальный традиционный токпокки с исторического рынка Тхонин в Сеуле жарят в ароматном масле на плоской сковороде без бульона?",
+      "questionZh": "首尔著名的通仁市场招牌招牌小吃：不带大盆红汤、而是在平底铁板上用热香辣油和酱油滋滋干炒出焦香脆皮的特色年糕是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pink Rosé cream tteokbokki",
+          "textKo": "로제 떡볶이",
+          "textEs": "Tteokbokki rosé con nata",
+          "textRu": "Розе токпокки со сливками",
+          "textZh": "粉红奶油罗勒炒年糕"
+        },
+        {
+          "id": "B",
+          "text": "Gireum Tteokbokki (기름떡볶이 / Oil Stir-Fried Pan Tteokbokki)",
+          "textKo": "원조 기름떡볶이 (Gireum Tteokbokki)",
+          "textEs": "Gireum Tteokbokki (Tteokbokki salteado en aceite)",
+          "textRu": "Кирым токпокки (Жареный в масле токпокки)",
+          "textZh": "油炒年糕 (Gireum Tteokbokki / 通仁市场传统油炒年糕)"
+        },
+        {
+          "id": "C",
+          "text": "Green Wasabi tteokbokki",
+          "textKo": "생와사비 떡볶이",
+          "textEs": "Tteokbokki de wasabi",
+          "textRu": "Васаби токпокки",
+          "textZh": "青芥末炒年糕"
+        },
+        {
+          "id": "D",
+          "text": "Chocolate marshmallow tteokbokki",
+          "textKo": "초콜릿 마시멜로 떡볶이",
+          "textEs": "Tteokbokki con malvaviscos de chocolate",
+          "textRu": "Шоколадный токпокки с маршмеллоу",
+          "textZh": "巧克力棉花糖炒年糕"
+        }
+      ],
+      "correctAnswer": "B",
+      "explanation": "Pre-dating modern soupy tteokbokki, Gireum Tteokbokki is crisped in aromatic sesame and chili oils on cast-iron griddles, yielding a chewy inside with a blistered, crunchy exterior.",
+      "explanationKo": "기름떡볶이는 1950년대부터 내려오는 방식으로, 국물 없이 고춧가루와 기름만으로 볶아내어 겉은 바삭하고 속은 쫄깃하며 은은한 불향이 살아있는 별미입니다.",
+      "explanationEs": "El Gireum Tteokbokki se saltea en aceite aromatizado sobre hierro fundido, logrando un exterior crujiente y tostado con un interior tierno y elástico.",
+      "explanationRu": "Кирым токпокки обжаривают в масле с перцем на раскаленной поверхности: снаружи образуется хрустящая аппетитная корочка, а внутри сохраняется упругость.",
+      "explanationZh": "油炒年糕（Gireum Tteokbokki）保留了20世纪50年代的古早做法，不加汤水，仅靠辣椒面、香油在大铁盘上慢煎，外皮焦香起泡、内里软糯拉丝！",
+      "funFact": "At Tongin Market, you can buy traditional brass coins (Yeopjeon) in a lunchbox to sample street food stall-by-stall!",
+      "funFactKo": "통인시장에서는 옛날 엽전을 구입해 도시락 카페를 돌며 먹고 싶은 반찬을 직접 골라 담는 이색 체험을 할 수 있습니다!"
+    },
+    {
+      "id": 29,
+      "level": 2,
+      "question": "When finishing a feast of grilled Korean BBQ pork belly or marinated galbi, what refreshing cold dish do locals famously wrap directly around hot grilled meat?",
+      "questionKo": "고깃집에서 삼겹살이나 양념갈비를 든든히 구워 먹은 후, 남은 고기 한 점을 차가운 면발에 싸서 먹는 '육쌈' 환상 조합은?",
+      "questionEs": "Al terminar una barbacoa de panceta de cerdo o galbi, ¿qué refrescante plato frío envuelven los coreanos directamente alrededor de la carne caliente?",
+      "questionRu": "Какое холодное освежающее блюдо корейцы заказывают в конце барбекю, чтобы обернуть лапшу вокруг горячего кусочка мяса?",
+      "questionZh": "吃完滋滋流油的五花肉或调味牛排骨烤肉后，韩国老饕最爱把最后几块热腾腾的烤肉包裹在什么冰爽爽口的面条上一起暴风吸入？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hot oatmeal porridge",
+          "textKo": "뜨거운 오트밀 죽",
+          "textEs": "Gachas calientes de avena",
+          "textRu": "Горячая овсяная каша",
+          "textZh": "滚烫的燕麦麦片粥"
+        },
+        {
+          "id": "B",
+          "text": "Boiled lasagna pasta",
+          "textKo": "치즈 라자냐",
+          "textEs": "Lasaña de queso",
+          "textRu": "Лазанья",
+          "textZh": "芝士千层面"
+        },
+        {
+          "id": "C",
+          "text": "Steamed corn cobs",
+          "textKo": "삶은 옥수수 한 자루",
+          "textEs": "Mazorcas de maíz hervidas",
+          "textRu": "Вареная кукуруза",
+          "textZh": "整根水煮甜玉米"
+        },
+        {
+          "id": "D",
+          "text": "Icy Naengmyeon noodles (Mul-naengmyeon or spicy Bibim-naengmyeon)",
+          "textKo": "살얼음 동동 물냉면 또는 매콤달콤 비빔냉면 (육쌈냉면 조합)",
+          "textEs": "Fideos fríos Naengmyeon con caldo helado o salsa picante (Mul/Bibim)",
+          "textRu": "Ледяная лапша Нэнмён (водная Муль или острая Пибим)",
+          "textZh": "带碎冰的清爽冷面（水冷面 Mul-naengmyeon 或拌冷面 Bibim-naengmyeon，即肉包冷面吃法）"
+        }
+      ],
+      "correctAnswer": "D",
+      "explanation": "'Yukssam Naengmyeon' (wrapping hot grilled meat with chewy, ice-cold buckwheat noodles) creates the ultimate temperature and texture contrast, cutting through pork richness instantly.",
+      "explanationKo": "뜨겁고 기름진 고기와 얼음장처럼 차갑고 쫄깃한 냉면 면발을 함께 싸 먹는 '육쌈'은 온도와 식감의 조화가 완벽하여 고깃집 마무리의 절대강자로 꼽힙니다.",
+      "explanationEs": "El 'Yukssam Naengmyeon' combina carne caliente a la brasa con fideos de alforfón helados y elásticos, cortando la grasa de inmediato.",
+      "explanationRu": "Сочетание горячего сочного мяса и ледяной упругой лапши («Юксам Нэнмён») — национальная кулинарная гармония текстур и температур.",
+      "explanationZh": "“烤肉裹冷面（Yukssam Naengmyeon）”将焦香滚烫的烤肉与冰爽筋道的荞麦面条一口送入，冰火交融，瞬间化解所有油腻感，是韩式烤肉终局神仙吃法！",
+      "funFact": "Vinegar and hot yellow mustard are provided at your table so you can season the cold broth exactly to your liking!",
+      "funFactKo": "물냉면 국물에는 기호에 맞게 식초 두 바퀴와 겨자 한 바퀴를 둘러 먹는 것이 황금 조미법입니다!"
+    },
+    {
+      "id": 30,
+      "level": 3,
+      "question": "What humorous modern Korean slang term describes someone's boastful pride in their high tolerance for intensely fiery spicy food?",
+      "questionKo": "'나 불닭볶음면 국물까지 원샷해!'처럼 매운 음식을 남들보다 잘 먹는다는 자신감과 자부심을 뜻하는 신조어는?",
+      "questionEs": "¿Qué término coloquial coreano moderno describe el orgullo de alguien por su gran tolerancia a la comida ultra picante?",
+      "questionRu": "Какое современное корейское сленговое слово означает гордость своей способностью легко есть сверх-острую еду?",
+      "questionZh": "形容一个人“不仅不怕辣、还能面不改色吃完地狱辣”并以此为荣的幽默韩国流行语是？",
+      "options": [
+        {
+          "id": "A",
+          "text": "Mapbu-shim (맵부심 / Spicy Pride & Heat Bravado)",
+          "textKo": "맵부심 (Mapbu-shim)",
+          "textEs": "Mapbu-shim (Orgullo Picante)",
+          "textRu": "Мэппусим (Mapbu-shim / Огненная гордость)",
+          "textZh": "吃辣自尊心 / 辣骨气 (Mapbu-shim / 맵부심)"
+        },
+        {
+          "id": "B",
+          "text": "Aegyo (애교)",
+          "textKo": "애교 (Aegyo)",
+          "textEs": "Aegyo (Ternura actuada)",
+          "textRu": "Эгё (Милое поведение)",
+          "textZh": "撒娇卖萌 (Aegyo)"
+        },
+        {
+          "id": "C",
+          "text": "Daebak (대박)",
+          "textKo": "대박 (Daebak)",
+          "textEs": "Daebak (Genial / Increíble)",
+          "textRu": "Тэбак (Супер / Обалдеть)",
+          "textZh": "太绝了大发 (Daebak)"
+        },
+        {
+          "id": "D",
+          "text": "Maknae (막내)",
+          "textKo": "막내 (Maknae)",
+          "textEs": "Maknae (El más joven)",
+          "textRu": "Макнэ (Младший)",
+          "textZh": "老幺忙内 (Maknae)"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "A portmanteau of 'Maepta' (spicy) and 'Jabu-shim' (pride), 'Mapbu-shim' jokingly characterizes foodies who order level 5 spicy dishes to show off their bravery to friends.",
+      "explanationKo": "'맵다'와 '자부심'의 합성어인 '맵부심'은 매운 음식을 남보다 잘 먹는 것을 훈장처럼 자랑하는 귀여운 심리를 뜻하며, 챌린지와 먹방 문화의 중심 키워드입니다.",
+      "explanationEs": "Fusión de 'Maepta' (picante) y 'Jabu-shim' (orgullo), 'Mapbu-shim' describe a quienes presumen de tolerar el nivel más picante del menú sin pestañear.",
+      "explanationRu": "Слово образовано от «Мэпта» (острый) и «Чабусим» (гордость). Обозначает смельчаков, заказывающих максимальный уровень остроты ради признания друзей.",
+      "explanationZh": "由“辣（Maepta）”与“自尊心（Jabu-shim）”合成的新造词“Mapbu-shim”，用来形容那些在朋友面前非要点最高辣度彰显吃辣硬实力的可爱虚荣心！",
+      "funFact": "People with zero spicy tolerance in Korea are affectionately nicknamed 'Map-jjil-i' (맵찔이 - spicy weaklings)!",
+      "funFactKo": "반대로 진라면 순한맛에도 땀을 뻘뻘 흘리는 매운맛 초보자는 '맵찔이'라고 귀엽게 놀림을 받습니다!"
     }
   ],
   "scoreTiers": [
     {
-      "minScore": 5,
-      "maxScore": 5,
+      "minScore": 27,
+      "maxScore": 30,
       "title": "Grand K-Food Guru & Spicy Master",
       "titleKo": "천하무적 맵부심 & 한식 미식 대가",
       "titleEs": "Maestro Supremo del Picante y K-Food",
@@ -223,11 +1569,11 @@
       "badgeEs": "🌶️ Rey del Picante Coreano",
       "badgeRu": "🌶️ Король корейского огня",
       "badgeZh": "🌶️ 满分韩食王者徽章",
-      "description": "Unbelievable! You understand every nuance of street pairings, Buldak heat, and Hangang ramen culture. Your stomach is made of titanium!",
-      "descriptionKo": "경이롭습니다! 떡순튀 궁합부터 핵불닭까지 한국 음식의 진수를 완전히 꿰뚫고 계시네요. 위장에 티타늄 코팅이 되어 있으신 분입니다!",
-      "descriptionEs": "¡Increíble! Dominas la comida callejera, el picante Buldak y el ramen del río Han.",
-      "descriptionRu": "Потрясающе! Вы разбираетесь во всех тонкостях уличной кухни Кореи и не боитесь даже самого жгучего перца.",
-      "descriptionZh": "太令人佩服了！你对年糕炸物米肠组合、火鸡面段位以及汉江泡面文化了如指掌，是当之无愧的铁胃美食家！",
+      "description": "Unbelievable! You scored nearly 100%! You understand every nuance of street food pairings, Buldak heat, secret K-BBQ rules, and Hangang ramen culture. Your stomach is coated in titanium!",
+      "descriptionKo": "경이롭습니다! 30문항 만점 가까운 대기록! 떡순튀 궁합부터 핵불닭, 마크정식, 고깃집 육쌈 국룰까지 완벽히 마스터하셨습니다. 위장에 티타늄 코팅이 되어 있으신 진정한 먹신입니다!",
+      "descriptionEs": "¡Increíble! Dominas la comida callejera, el picante Buldak, el ramen del río Han y las reglas secretas del K-BBQ. ¡Tu estómago es de titanio!",
+      "descriptionRu": "Потрясающе! Вы разбираетесь во всех тонкостях уличной кухни Кореи, соусах и секретах барбекю. Вы настоящий король остроты!",
+      "descriptionZh": "太令人佩服了！你对年糕炸物米肠组合、火鸡面段位、马克定食到烤肉包冷面国规了如指掌，是当之无愧的满级铁胃美食家！",
       "funQuote": "You eat 2x Spicy Buldak for breakfast with a smile!",
       "funQuoteKo": "아침 식사로 핵불닭볶음면을 미소 지으며 드실 수 있는 진정한 맵고수!",
       "funQuoteEs": "¡Desayunas Buldak doble picante con una sonrisa!",
@@ -235,8 +1581,8 @@
       "funQuoteZh": "你甚至可以微笑着把双倍辣火鸡面当早餐吃！"
     },
     {
-      "minScore": 3,
-      "maxScore": 4,
+      "minScore": 20,
+      "maxScore": 26,
       "title": "Seasoned Street Food Gourmet",
       "titleKo": "베테랑 길거리 미식가",
       "titleEs": "Gourmet de Comida Callejera",
@@ -247,11 +1593,11 @@
       "badgeEs": "🥟 Experto en Snacks Coreanos",
       "badgeRu": "🥟 Знаток стритфуда",
       "badgeZh": "🥟 资深韩味小吃达人",
-      "description": "Great taste! You know why Chikin-Mu matters and how Coolpis saves lives. You're completely ready to explore Gwangjang Market or Myeongdong street stalls!",
-      "descriptionKo": "훌륭합니다! 쿨피스의 위력과 치킨무의 소중함을 완벽히 아시는 분입니다. 지금 당장 광장시장이나 명동 길거리 포장마차로 떠나셔도 손색없습니다!",
-      "descriptionEs": "¡Buen conocimiento! Sabes cómo combinar fritos y tteokbokki a la perfección.",
-      "descriptionRu": "Отличные знания! Вы точно знаете, зачем нужен Кулпис и белый дайкон к курочке.",
-      "descriptionZh": "非常地道！你深知解辣妙招和炸鸡萝卜的黄金搭配，去广藏市场或明洞小吃街绝对能吃得最尽兴！",
+      "description": "Great taste! You know why Chikin-Mu matters, how Coolpis saves lives, and why fried rice is the true Korean dessert. You're completely ready to conquer Gwangjang Market and Hongdae street stalls!",
+      "descriptionKo": "훌륭합니다! 쿨피스의 위력과 치킨무의 소중함, 볶음밥이 찐 디저트라는 국룰까지 꿰뚫고 계시네요. 지금 당장 광장시장이나 홍대 야식 골목으로 떠나셔도 손색없습니다!",
+      "descriptionEs": "¡Gran conocimiento! Sabes cómo combinar fritos, tteokbokki y barbacoa a la perfección.",
+      "descriptionRu": "Отличные знания! Вы точно знаете, зачем нужен Кулпис, дайкон к курочке и жареный рис на десерт.",
+      "descriptionZh": "非常地道！你深知解辣妙招、炸鸡白萝卜与铁板炒饭的黄金收尾，去广藏市场或弘大夜市绝对能吃得最尽兴！",
       "funQuote": "Always remember to dip the Twigim in the red sauce!",
       "funQuoteKo": "튀김은 언제나 매콤한 떡볶이 국물에 푹 찍어 먹는 거 잊지 마세요!",
       "funQuoteEs": "Recuerda siempre mojar los fritos en la salsa roja.",
@@ -259,8 +1605,32 @@
       "funQuoteZh": "切记：油炸小吃一定要蘸着炒年糕汤汁吃才是王道！"
     },
     {
+      "minScore": 12,
+      "maxScore": 19,
+      "title": "Spicy Street Food Explorer",
+      "titleKo": "열정 가득 K-푸드 모험가",
+      "titleEs": "Explorador del Picante Callejero",
+      "titleRu": "Любознательный исследователь стритфуда",
+      "titleZh": "热血街头风味探索者",
+      "badge": "🍜 K-Food Adventurer",
+      "badgeKo": "🍜 패기 넘치는 K-푸드 탐험가",
+      "badgeEs": "🍜 Aventurero Gastronómico",
+      "badgeRu": "🍜 Кулинарный авантюрист",
+      "badgeZh": "🍜 进阶美食冒险家",
+      "description": "Solid effort! You enjoy Korean street food and know the popular favorites. With a bit more practice on Buldak heat and local pocha secrets, you'll reach master status!",
+      "descriptionKo": "좋은 출발입니다! 대중적인 길거리 분식과 대표 라면을 잘 알고 계시네요. 편의점 꿀조합과 포장마차의 깊은 룰을 조금만 더 익히면 최상위 미식가가 되실 수 있습니다!",
+      "descriptionEs": "¡Buen intento! Disfrutas de la comida callejera coreana y conoces los clásicos. Con un poco más de práctica serás un experto.",
+      "descriptionRu": "Хороший результат! Вы любите корейский стритфуд и знаете классику. Еще немного практики — и вы станете мастером.",
+      "descriptionZh": "表现不错！你喜爱韩国街头小吃也熟知大众经典，再稍加探索便利店隐藏吃法和大排档秘籍，就能晋升为顶级食神！",
+      "funQuote": "Keep a carton of milk handy just in case!",
+      "funQuoteKo": "매운 음식을 먹을 땐 항상 옆에 흰 우유나 쿨피스를 대기시켜 두세요!",
+      "funQuoteEs": "¡Ten siempre un cartón de leche a mano por si acaso!",
+      "funQuoteRu": "Держите пакет молока наготове на всякий случай!",
+      "funQuoteZh": "吃辣时身旁常备一盒牛奶，有备无患！"
+    },
+    {
       "minScore": 0,
-      "maxScore": 2,
+      "maxScore": 11,
       "title": "Mild Broth Enthusiast",
       "titleKo": "순한맛을 사랑하는 음식 여행자",
       "titleEs": "Amante del Sabor Suave",
@@ -273,7 +1643,7 @@
       "badgeZh": "🌱 养生原味小白",
       "description": "Keep exploring! Korean cuisine has incredible mild dishes too, from rich beef bone soup (Seolleongtang) to sweet bulgogi and savory crispy pajeon.",
       "descriptionKo": "매운맛이 부담스러워도 걱정 마세요! 구수한 설렁탕, 달콤 짭조름한 불고기, 바삭한 해물파전 등 부드럽고 환상적인 한식이 무궁무진합니다.",
-      "descriptionEs": "¡No te preocupes! La gastronomía coreana también tiene deliciosos platos no picantes como el Bulgogi.",
+      "descriptionEs": "¡No te preocupes! La gastronomía coreana también tiene deliciosos platos no picantes como el Bulgogi o el Seolleongtang.",
       "descriptionRu": "Не переживайте! В Корее полно потрясающих неострых блюд вроде супа Соллонтан или сладковатого Пулькоги.",
       "descriptionZh": "别担心！除了火辣，韩国还有鲜美的雪浓汤、香甜烤牛肉和酥脆海鲜葱饼等无数温润可口的美食等你发现！",
       "funQuote": "Grab a cup of warm barley tea and take it slow!",
