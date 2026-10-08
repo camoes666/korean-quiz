@@ -9,8 +9,10 @@ import strayKidsStayTrivia from './stray-kids-stay-trivia.json';
 import whichStrayKidsMemberAreYou from './which-stray-kids-member-are-you.json';
 import whichBtsMemberAreYou from './which-bts-member-are-you.json';
 import whichBlackpinkMemberAreYou from './which-blackpink-member-are-you.json';
+import whichKoreanFoodAreYou from './which-korean-food-are-you.json';
 
 export const quizzes: Quiz[] = [
+  whichKoreanFoodAreYou as unknown as Quiz,
   whichBtsMemberAreYou as unknown as Quiz,
   whichStrayKidsMemberAreYou as unknown as Quiz,
   whichBlackpinkMemberAreYou as unknown as Quiz,

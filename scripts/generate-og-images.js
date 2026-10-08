@@ -102,6 +102,15 @@ const THEMES = {
     pillText: '#ffffff',
     tag: 'PERSONALITY TEST · BLACKPINK 🔮💖',
   },
+  'which-korean-food-are-you': {
+    bgStart: '#1c0704',
+    bgMid: '#7c2d12',
+    bgEnd: '#ea580c',
+    accent: '#fb923c',
+    pillBg: '#ea580c',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · K-FOOD 🔮🍜',
+  },
 };
 
 const files = fs.readdirSync(QUIZZES_DIR).filter((f) => f.endsWith('.json'));

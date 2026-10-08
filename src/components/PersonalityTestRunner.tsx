@@ -113,6 +113,8 @@ export default function PersonalityTestRunner({
         ? 'BTS,BTSARMY,KPulse'
         : quiz.tag === 'BLACKPINK'
         ? 'BLACKPINK,BLINK,KPulse'
+        : quiz.category === 'Food' || quiz.tag === 'K-Food'
+        ? 'KFood,KoreanFood,KCulture,KPulse'
         : 'StrayKids,SKZ,STAY,KPulse';
 
     const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
@@ -440,6 +442,11 @@ export default function PersonalityTestRunner({
             bingeTitle = lang === 'ko' ? '블랙핑크 50문제 블링크 지식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío BLINK de 50 Preguntas?' : 'Ready for the 50-Question BLINK Trivia?';
             bingeDesc = lang === 'ko' ? '휘파람, 뚜두뚜두부터 코첼라 헤드라이너까지, 당신의 블링크 지식을 테스트하세요!' : lang === 'es' ? '¡Desde Whistle hasta Coachella! ¡Pon a prueba cuánto sabes de BLACKPINK!' : 'From Whistle to headlining Coachella, put your BLINK knowledge to the test!';
             bingeBtn = lang === 'ko' ? '50문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 50 Preguntas' : 'Play 50-Question Trivia';
+          } else if (quiz.category === 'Food' || quiz.tag === 'K-Food') {
+            bingeHref = '/quiz/korean-spicy-food';
+            bingeTitle = lang === 'ko' ? '한국 매운 음식 & 길거리 음식 챌린지도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Reto de Comida Picante Coreana?' : 'Ready for the Spicy Food & Street Food Challenge?';
+            bingeDesc = lang === 'ko' ? '불닭볶음면부터 길거리 포장마차 꿀조합까지, 당신의 진정한 K-푸드 레벨을 테스트해보세요!' : lang === 'es' ? '¡Desde Buldak ramen hasta comida callejera! ¡Demuestra tu nivel foodie coreano!' : 'From Buldak challenges to street food lore, test your true Korean foodie IQ!';
+            bingeBtn = lang === 'ko' ? '푸드 챌린지 풀러 가기' : lang === 'es' ? 'Jugar Reto Foodie' : 'Play Food Challenge';
           }
 
           return (
