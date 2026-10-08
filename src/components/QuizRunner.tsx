@@ -648,7 +648,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             >
               <span className="text-lg">💡</span>
               <span className="text-xs font-bold text-slate-700">
-                {lang === 'ko' ? '50:50 찬스' : lang === 'es' ? '50:50 Probabilidad' : '50:50 Chance'}
+                {lang === 'ko' ? '50:50 찬스' : lang === 'es' ? 'Comodín 50:50' : '50:50 Chance'}
               </span>
               <span className="text-[10px] text-purple-600 font-extrabold">
                 {lang === 'ko'

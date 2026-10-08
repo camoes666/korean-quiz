@@ -35,7 +35,7 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
           <div className="flex items-center gap-2 flex-wrap mb-3">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 text-purple-900 text-xs font-black shadow-xs">
               <img src="/images/hobi04.webp" alt="Fire Hobi" className="w-4 h-4 object-contain inline-block -my-0.5" />
-              {lang === 'ko' ? '오늘의 데일리 챌린지' : lang === 'es' ? 'Misión Diaria de Hoy' : "Today's Daily Quest"}
+              {lang === 'ko' ? '오늘의 데일리 챌린지' : lang === 'es' ? 'Misión del Día' : "Today's Daily Quest"}
             </span>
 
             <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-400 text-emerald-950 text-xs font-black shadow-xs">
@@ -45,7 +45,7 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
 
             <span className="inline-flex items-center gap-1 text-[11px] text-white/90 font-bold bg-black/20 backdrop-blur-md px-2.5 py-0.5 rounded-full">
               <Clock className="w-3 h-3" />
-              {lang === 'ko' ? '자정에 초기화' : lang === 'es' ? 'Se reinicia a medianoche' : 'Resets at midnight'}
+              {lang === 'ko' ? '자정에 초기화' : lang === 'es' ? 'Reinicio a medianoche' : 'Resets at midnight'}
             </span>
           </div>
 
@@ -53,7 +53,7 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
             {lang === 'ko'
               ? '매일 1개 퀴즈 풀고 출석 스트릭(🔥)을 유지하세요!'
               : lang === 'es'
-              ? '¡Completa 1 quiz diario para mantener tu racha (🔥)!'
+              ? '¡Completa 1 quiz diario para mantener tu racha activa 🔥!'
               : 'Complete 1 daily quiz to keep your fire streak alive!'}
           </h2>
 

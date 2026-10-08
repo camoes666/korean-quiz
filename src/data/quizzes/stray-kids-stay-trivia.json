@@ -34,7 +34,11 @@
       "description": "You're just discovering Stray Kids! Time to binge God's Menu and SKZ CODE!",
       "descriptionKo": "이제 막 스키즈의 매력에 빠진 루키! '神메뉴'와 '스키즈 코드' 정주행을 추천합니다!",
       "funQuote": "Welcome to the Hellevator ride! Next stop: District 9!",
-      "funQuoteKo": "지옥에서 꼭대기로, 헬리베이터를 타고 스키즈의 세계로!"
+      "funQuoteKo": "지옥에서 꼭대기로, 헬리베이터를 타고 스키즈의 세계로!",
+      "titleEs": "STAY Novato 🌱",
+      "badgeEs": "🌱 Novato",
+      "descriptionEs": "¡Acabas de descubrir a Stray Kids! ¡Es hora de hacer maratón de God's Menu y SKZ CODE!",
+      "funQuoteEs": "¡Bienvenido a Hellevator! Próxima parada: ¡District 9!"
     },
     {
       "minScore": 2,
@@ -46,7 +50,11 @@
       "description": "Great job! You know your 3RACHA and SKZOO lore well!",
       "descriptionKo": "멋져요! 3RACHA의 자작곡과 SKZOO 캐릭터를 꿰뚫고 있는 진정한 팬입니다!",
       "funQuote": "Cooking up hot tracks with 3RACHA in the studio!",
-      "funQuoteKo": "쓰리라차와 함께 스튜디오에서 뜨거운 트랙을 굽는 중!"
+      "funQuoteKo": "쓰리라차와 함께 스튜디오에서 뜨거운 트랙을 굽는 중!",
+      "titleEs": "STAY Activo ⭐",
+      "badgeEs": "⭐ STAY Activo",
+      "descriptionEs": "¡Gran trabajo! ¡Conoces muy bien la música de 3RACHA y los personajes de SKZOO!",
+      "funQuoteEs": "¡Cocinando temas ardientes en el estudio con 3RACHA!"
     },
     {
       "minScore": 4,
@@ -58,7 +66,11 @@
       "description": "Incredible! Almost perfect mastery of Stray Kids history and inside jokes!",
       "descriptionKo": "대단합니다! 스키즈의 역사와 숨겨진 밈까지 완벽에 가깝게 마스터하셨네요!",
       "funQuote": "You've survived Kingdom and know every SKZOO secret handshake.",
-      "funQuoteKo": "킹덤의 전설을 지켜보고 스키주의 모든 비밀을 아는 당신!"
+      "funQuoteKo": "킹덤의 전설을 지켜보고 스키주의 모든 비밀을 아는 당신!",
+      "titleEs": "STAY Élite 🏆",
+      "badgeEs": "🏆 STAY Élite",
+      "descriptionEs": "¡Increíble! ¡Dominio casi perfecto de la historia, récords y bromas internas de Stray Kids!",
+      "funQuoteEs": "Sobreviviste a Kingdom y te sabes todos los secretos de SKZOO."
     },
     {
       "minScore": 5,
@@ -70,7 +82,11 @@
       "description": "100% PERFECT! You are a true 5-Star Michelin STAY recognized by Stray Kids themselves!",
       "descriptionKo": "100점 만점 퍼펙트! 스키즈 멤버들도 인정할 5성급 미슐랭 성골 스테이입니다!",
       "funQuote": "Stray Kids everywhere all around the world! You make Stray Kids STAY!",
-      "funQuoteKo": "Stray Kids everywhere all around the world! You make Stray Kids STAY!"
+      "funQuoteKo": "Stray Kids everywhere all around the world! You make Stray Kids STAY!",
+      "titleEs": "STAY 5 Estrellas Michelin 👑",
+      "badgeEs": "👑 STAY 5 Estrellas",
+      "descriptionEs": "¡100% PERFECTO! ¡Eres un verdadero STAY 5 Estrellas Michelin reconocido por el mismo Stray Kids!",
+      "funQuoteEs": "Stray Kids everywhere all around the world! ¡Tú haces que Stray Kids se quede!"
     }
   ],
   "affiliateSuggestion": {
@@ -86,7 +102,13 @@
     "buttonTextKo": "스키즈 공식 상품 보러가기 →",
     "targetUrl": "https://www.yesstyle.com",
     "badgeText": "100% Official",
-    "badgeTextKo": "공식 정품"
+    "badgeTextKo": "공식 정품",
+    "tagEs": "Merch Oficial",
+    "titleEs": "Álbum Oficial 'ATE' y Lightstick Nachimbong Ver.2 de Stray Kids",
+    "productNameEs": "Álbumes Oficiales de Stray Kids y Nachimbong 2",
+    "descriptionEs": "Completa tu colección STAY con los álbumes #1 de Billboard y la mercancía oficial de Stray Kids.",
+    "buttonTextEs": "Ver Ofertas Oficiales de SKZ →",
+    "badgeTextEs": "100% Oficial"
   },
   "questions": [
     {
@@ -98,29 +120,36 @@
         {
           "id": "A",
           "text": "March 25, 2018",
-          "textKo": "2018년 3월 25일"
+          "textKo": "2018년 3월 25일",
+          "textEs": "25 de marzo de 2018"
         },
         {
           "id": "B",
           "text": "October 6, 2017",
-          "textKo": "2017년 10월 6일"
+          "textKo": "2017년 10월 6일",
+          "textEs": "6 de octubre de 2017"
         },
         {
           "id": "C",
           "text": "August 1, 2018",
-          "textKo": "2018년 8월 1일"
+          "textKo": "2018년 8월 1일",
+          "textEs": "1 de agosto de 2018"
         },
         {
           "id": "D",
           "text": "April 4, 2019",
-          "textKo": "2019년 4월 4일"
+          "textKo": "2019년 4월 4일",
+          "textEs": "4 de abril de 2019"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Stray Kids officially debuted on March 25, 2018 with their first mini album 'I am NOT' and title track 'District 9'.",
       "explanationKo": "스트레이 키즈는 2018년 3월 25일 데뷔 앨범 'I am NOT'과 타이틀곡 'District 9'을 발표하며 공식 데뷔했습니다.",
       "funFact": "October 6, 2017 was the release date of their pre-debut survival mixtape single 'Hellevator'!",
-      "funFactKo": "2017년 10월 6일은 프리 데뷔 서바이벌 곡인 'Hellevator' 음원이 공개된 날입니다!"
+      "funFactKo": "2017년 10월 6일은 프리 데뷔 서바이벌 곡인 'Hellevator' 음원이 공개된 날입니다!",
+      "questionEs": "¿Cuál es la fecha oficial de debut de Stray Kids con su canción principal 'District 9'?",
+      "explanationEs": "Stray Kids debutó oficialmente el 25 de marzo de 2018 con su primer mini álbum 'I am NOT' y el tema principal 'District 9'.",
+      "funFactEs": "¡El 6 de octubre de 2017 fue la fecha de estreno de su mixtape pre-debut 'Hellevator'!"
     },
     {
       "id": 2,
@@ -131,29 +160,36 @@
         {
           "id": "A",
           "text": "STAY",
-          "textKo": "STAY (스테이)"
+          "textKo": "STAY (스테이)",
+          "textEs": "STAY"
         },
         {
           "id": "B",
           "text": "STAR",
-          "textKo": "STAR (스타)"
+          "textKo": "STAR (스타)",
+          "textEs": "STAR"
         },
         {
           "id": "C",
           "text": "ATINY",
-          "textKo": "ATINY (에이티니)"
+          "textKo": "ATINY (에이티니)",
+          "textEs": "ATINY"
         },
         {
           "id": "D",
           "text": "TREASURE",
-          "textKo": "TREASURE (트레저)"
+          "textKo": "TREASURE (트레저)",
+          "textEs": "TREASURE"
         }
       ],
       "correctAnswer": "A",
       "explanation": "The fandom name 'STAY' means 'Where Stray Kids STAY'. By dropping the letter 'R' from 'STRAY', you find 'STAY'—their reason to exist.",
       "explanationKo": "팬덤명 'STAY'는 'Where Stray Kids STAY'라는 뜻으로, 'STRAY'에서 'R(Reason)'을 찾으면 'STAY'가 된다는 아름다운 의미를 담고 있습니다.",
       "funFact": "The fandom name was announced on August 1, 2018, which is celebrated as STAY Day every year!",
-      "funFactKo": "2018년 8월 1일에 팬덤명이 공개되어 매년 8월 1일은 '스테이 생일'로 축하합니다!"
+      "funFactKo": "2018년 8월 1일에 팬덤명이 공개되어 매년 8월 1일은 '스테이 생일'로 축하합니다!",
+      "questionEs": "¿Cuál es el nombre oficial del fandom de Stray Kids?",
+      "explanationEs": "El nombre oficial del fandom es STAY (estrenado el 1 de agosto de 2018), que significa que Stray Kids hace que los fans permanezcan a su lado.",
+      "funFactEs": "El lema del fandom es: 'Where Stray Kids STAY, there is a reason' (Donde Stray Kids se queda, hay una razón)."
     },
     {
       "id": 3,
@@ -164,29 +200,36 @@
         {
           "id": "A",
           "text": "Bang Chan",
-          "textKo": "방찬 (Bang Chan)"
+          "textKo": "방찬 (Bang Chan)",
+          "textEs": "Bang Chan"
         },
         {
           "id": "B",
           "text": "Lee Know",
-          "textKo": "리노 (Lee Know)"
+          "textKo": "리노 (Lee Know)",
+          "textEs": "Lee Know"
         },
         {
           "id": "C",
           "text": "Changbin",
-          "textKo": "창빈 (Changbin)"
+          "textKo": "창빈 (Changbin)",
+          "textEs": "Changbin"
         },
         {
           "id": "D",
           "text": "Seungmin",
-          "textKo": "승민 (Seungmin)"
+          "textKo": "승민 (Seungmin)",
+          "textEs": "Seungmin"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Bang Chan personally selected and assembled all the members of Stray Kids during trainee days, serving as leader and producer.",
       "explanationKo": "방찬은 연습생 시절 직접 멤버들을 모아 스트레이 키즈 팀을 결성한 든든한 리더이자 핵심 프로듀서입니다.",
       "funFact": "Bang Chan trained at JYP for 7 years before debuting in 2018!",
-      "funFactKo": "방찬은 2011년에 입사해 무려 7년간의 연습생 생활을 거쳐 데뷔했습니다!"
+      "funFactKo": "방찬은 2011년에 입사해 무려 7년간의 연습생 생활을 거쳐 데뷔했습니다!",
+      "questionEs": "¿Quién es el líder y miembro de mayor edad de Stray Kids?",
+      "explanationEs": "Bang Chan (nacido en octubre de 1997) es el líder, productor principal y miembro mayor del grupo.",
+      "funFactEs": "Bang Chan entrenó durante 7 años en JYP Entertainment antes de seleccionar personalmente a los miembros del grupo."
     },
     {
       "id": 4,
@@ -197,29 +240,36 @@
         {
           "id": "A",
           "text": "I.N",
-          "textKo": "아이엔 (I.N)"
+          "textKo": "아이엔 (I.N)",
+          "textEs": "I.N"
         },
         {
           "id": "B",
           "text": "Felix",
-          "textKo": "필릭스 (Felix)"
+          "textKo": "필릭스 (Felix)",
+          "textEs": "Felix"
         },
         {
           "id": "C",
           "text": "Seungmin",
-          "textKo": "승민 (Seungmin)"
+          "textKo": "승민 (Seungmin)",
+          "textEs": "Seungmin"
         },
         {
           "id": "D",
           "text": "Han",
-          "textKo": "한 (Han)"
+          "textKo": "한 (Han)",
+          "textEs": "Han"
         }
       ],
       "correctAnswer": "A",
       "explanation": "I.N (Yang Jeong-in) was born on February 8, 2001, making him the beloved youngest member nicknamed 'Maknae on Top'.",
       "explanationKo": "아이엔(양정인)은 2001년 2월 8일생으로 스트레이 키즈의 막내이며, 형들의 사랑을 듬뿍 받는 '막내온탑'입니다.",
       "funFact": "I.N released a self-composed track called 'Maknae on Top' featuring Bang Chan and Changbin!",
-      "funFactKo": "아이엔은 방찬, 창빈과 함께 자작곡 '막내온탑 (Maknae On Top)'을 발표하기도 했습니다!"
+      "funFactKo": "아이엔은 방찬, 창빈과 함께 자작곡 '막내온탑 (Maknae On Top)'을 발표하기도 했습니다!",
+      "questionEs": "¿Quién es el miembro más joven (Maknae) de Stray Kids?",
+      "explanationEs": "I.N (Yang Jeong-in, nacido en febrero de 2001) es el querido 'Maknae on Top' de Stray Kids.",
+      "funFactEs": "Los integrantes compusieron una canción especial titulada 'Maknae on Top' para celebrar el estatus mimado de I.N."
     },
     {
       "id": 5,
@@ -230,29 +280,36 @@
         {
           "id": "A",
           "text": "God's Menu (神메뉴)",
-          "textKo": "神메뉴 (God's Menu)"
+          "textKo": "神메뉴 (God's Menu)",
+          "textEs": "God's Menu (神메뉴)"
         },
         {
           "id": "B",
           "text": "Back Door",
-          "textKo": "Back Door"
+          "textKo": "Back Door",
+          "textEs": "Back Door"
         },
         {
           "id": "C",
           "text": "Thunderous (소리꾼)",
-          "textKo": "소리꾼 (Thunderous)"
+          "textKo": "소리꾼 (Thunderous)",
+          "textEs": "Thunderous (소리꾼)"
         },
         {
           "id": "D",
           "text": "MANIAC",
-          "textKo": "MANIAC"
+          "textKo": "MANIAC",
+          "textEs": "MANIAC"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'God's Menu' (June 2020) from the album 'GO LIVE' defined their unique 'Mala-taste' musical identity with iconic choreography.",
       "explanationKo": "2020년 정규 1집 타이틀곡 '神메뉴'는 중독성 넘치는 비트와 독창적인 칼군무로 스키즈만의 '마라맛 장르'를 완성했습니다.",
       "funFact": "Felix's line 'Cooking like a chef I'm a 5 star Michelin' became a massive global sensation!",
-      "funFactKo": "필릭스의 'Cooking like a chef I'm a 5 star Michelin' 파트는 틱톡과 쇼츠에서 폭발적인 바이럴을 기록했습니다!"
+      "funFactKo": "필릭스의 'Cooking like a chef I'm a 5 star Michelin' 파트는 틱톡과 쇼츠에서 폭발적인 바이럴을 기록했습니다!",
+      "questionEs": "¿Qué canción con concepto culinario catapultó a Stray Kids al estrellato mundial en 2020?",
+      "explanationEs": "'God's Menu' (del álbum GO LIVE) definió el género pionero 'Mala Taste' del grupo con su concepto de chefs y percusión electrizante.",
+      "funFactEs": "Felix se volvió viral internacionalmente por su verso con voz ultra profunda: 'Cookin' like a chef, I'm a 5-star Michelin'."
     },
     {
       "id": 6,
@@ -263,29 +320,36 @@
         {
           "id": "A",
           "text": "3RACHA (쓰리라차)",
-          "textKo": "3RACHA (쓰리라차)"
+          "textKo": "3RACHA (쓰리라차)",
+          "textEs": "3RACHA (쓰리라차)"
         },
         {
           "id": "B",
           "text": "DanceRacha",
-          "textKo": "DanceRacha (댄스라차)"
+          "textKo": "DanceRacha (댄스라차)",
+          "textEs": "DanceRacha"
         },
         {
           "id": "C",
           "text": "VocalRacha",
-          "textKo": "VocalRacha (보컬라차)"
+          "textKo": "VocalRacha (보컬라차)",
+          "textEs": "VocalRacha"
         },
         {
           "id": "D",
           "text": "Trilogy",
-          "textKo": "Trilogy (트릴로지)"
+          "textKo": "Trilogy (트릴로지)",
+          "textEs": "Trilogy"
         }
       ],
       "correctAnswer": "A",
       "explanation": "3RACHA (Bang Chan, Changbin, Han) write, compose, and arrange virtually all of Stray Kids' music.",
       "explanationKo": "3RACHA(쓰리라차)는 방찬, 창빈, 한 3인으로 이루어진 유닛으로, 스키즈의 거의 모든 음악을 직접 만듭니다.",
       "funFact": "All three members of 3RACHA are official full members of the Korea Music Copyright Association (KOMCA)!",
-      "funFactKo": "3RACHA 멤버 3명 모두 한국음악저작권협회(KOMCA) 정회원으로 등록되어 있습니다!"
+      "funFactKo": "3RACHA 멤버 3명 모두 한국음악저작권협회(KOMCA) 정회원으로 등록되어 있습니다!",
+      "questionEs": "¿Cómo se llama el trío de producción interna de Stray Kids formado por Bang Chan, Changbin y Han?",
+      "explanationEs": "3RACHA es la aclamada unidad de producción y rap que compone y produce prácticamente toda la discografía de Stray Kids.",
+      "funFactEs": "Los tres miembros de 3RACHA son miembros regulares de pleno derecho de la Asociación de Derechos de Autor de Música de Corea (KOMCA)."
     },
     {
       "id": 7,
@@ -296,29 +360,36 @@
         {
           "id": "A",
           "text": "Felix",
-          "textKo": "필릭스 (Felix)"
+          "textKo": "필릭스 (Felix)",
+          "textEs": "Felix"
         },
         {
           "id": "B",
           "text": "Hyunjin",
-          "textKo": "현진 (Hyunjin)"
+          "textKo": "현진 (Hyunjin)",
+          "textEs": "Hyunjin"
         },
         {
           "id": "C",
           "text": "Lee Know",
-          "textKo": "리노 (Lee Know)"
+          "textKo": "리노 (Lee Know)",
+          "textEs": "Lee Know"
         },
         {
           "id": "D",
           "text": "Changbin",
-          "textKo": "창빈 (Changbin)"
+          "textKo": "창빈 (Changbin)",
+          "textEs": "Changbin"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Felix (Lee Yong-bok) is world-renowned for his contrast between boyish fairy-like visuals and a subterranean low bass tone.",
       "explanationKo": "필릭스(이용복)는 요정 같은 비주얼과 대비되는 독보적인 초저음 동굴 목소리로 전 세계적인 사랑을 받고 있습니다.",
       "funFact": "Felix frequently bakes homemade cookies and brownies for members, staff, and other idols!",
-      "funFactKo": "필릭스는 멤버들과 스태프, 동료 아이돌을 위해 직접 브라우니와 쿠키를 구워 선물하는 취미가 있습니다!"
+      "funFactKo": "필릭스는 멤버들과 스태프, 동료 아이돌을 위해 직접 브라우니와 쿠키를 구워 선물하는 취미가 있습니다!",
+      "questionEs": "¿Qué miembro es famoso por su voz de caverna ultra profunda, pecas angelicales y deliciosos brownies?",
+      "explanationEs": "Felix es mundialmente conocido por su impactante voz grave de bajo, sus icónicas pecas y su dulce costumbre de hornear brownies para el personal.",
+      "funFactEs": "El nombre coreano de Felix es Lee Yong-bok (이용복), un nombre tradicional que los fans y miembros adoran con cariño."
     },
     {
       "id": 8,
@@ -329,29 +400,36 @@
         {
           "id": "A",
           "text": "A compass that spins freely",
-          "textKo": "360도 회전하는 나침반"
+          "textKo": "360도 회전하는 나침반",
+          "textEs": "Una brújula que gira libremente"
         },
         {
           "id": "B",
           "text": "A tiger claw",
-          "textKo": "호랑이 발톱"
+          "textKo": "호랑이 발톱",
+          "textEs": "Una garra de tigre"
         },
         {
           "id": "C",
           "text": "A microphone crown",
-          "textKo": "마이크 왕관"
+          "textKo": "마이크 왕관",
+          "textEs": "Una corona con micrófono"
         },
         {
           "id": "D",
           "text": "An astronaut helmet",
-          "textKo": "우주비행사 헬멧"
+          "textKo": "우주비행사 헬멧",
+          "textEs": "Un casco de astronauta"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Nachimbong features a freely rotating compass, symbolizing that STAY and Stray Kids can find their way together no matter where they wander.",
       "explanationKo": "나침봉은 360도 회전하는 나침반 형태로, '어디로 가든 방황하지 않고 스테이와 함께 길을 찾아 나아간다'는 의미를 담고 있습니다.",
       "funFact": "Nachimbong Ver.2 features a custom animated OLED screen on the compass face!",
-      "funFactKo": "나침봉 버전 2는 중앙에 애니메이션 OLED 스크린이 탑재되어 큰 호평을 받았습니다!"
+      "funFactKo": "나침봉 버전 2는 중앙에 애니메이션 OLED 스크린이 탑재되어 큰 호평을 받았습니다!",
+      "questionEs": "¿Cuál es el motivo de diseño oficial del lightstick de Stray Kids, 'Nachimbong'?",
+      "explanationEs": "El Nachimbong (나침봉) cuenta con una brújula giratoria que simboliza que los chicos y STAY nunca perderán su rumbo juntos.",
+      "funFactEs": "El Nachimbong Ver.2 incluye una pantalla OLED personalizable con animaciones digitales de los miembros."
     },
     {
       "id": 9,
@@ -362,29 +440,36 @@
         {
           "id": "A",
           "text": "8 members",
-          "textKo": "8명"
+          "textKo": "8명",
+          "textEs": "8 miembros"
         },
         {
           "id": "B",
           "text": "7 members",
-          "textKo": "7명"
+          "textKo": "7명",
+          "textEs": "7 miembros"
         },
         {
           "id": "C",
           "text": "9 members",
-          "textKo": "9명"
+          "textKo": "9명",
+          "textEs": "9 miembros"
         },
         {
           "id": "D",
           "text": "10 members",
-          "textKo": "10명"
+          "textKo": "10명",
+          "textEs": "10 miembros"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Stray Kids consists of 8 members: Bang Chan, Lee Know, Changbin, Hyunjin, Han, Felix, Seungmin, and I.N.",
       "explanationKo": "스트레이 키즈는 방찬, 리노, 창빈, 현진, 한, 필릭스, 승민, 아이엔 총 8명으로 구성되어 있습니다.",
       "funFact": "In July 2024, all 8 members renewed their exclusive contracts with JYP Entertainment early!",
-      "funFactKo": "2024년 7월 멤버 8명 전원이 JYP엔터테인먼트와 조기 전원 재계약을 체결했습니다!"
+      "funFactKo": "2024년 7월 멤버 8명 전원이 JYP엔터테인먼트와 조기 전원 재계약을 체결했습니다!",
+      "questionEs": "¿Cuántos miembros componen actualmente el grupo Stray Kids?",
+      "explanationEs": "Stray Kids está compuesto por 8 miembros: Bang Chan, Lee Know, Changbin, Hyunjin, Han, Felix, Seungmin e I.N.",
+      "funFactEs": "En julio de 2024, los 8 miembros renovaron anticipadamente sus contratos con JYP Entertainment de forma unánime."
     },
     {
       "id": 10,
@@ -395,29 +480,36 @@
         {
           "id": "A",
           "text": "Kingdom: Legendary War",
-          "textKo": "킹덤: 레전더리 워"
+          "textKo": "킹덤: 레전더리 워",
+          "textEs": "Kingdom: Legendary War"
         },
         {
           "id": "B",
           "text": "Road to Kingdom",
-          "textKo": "로드 투 킹덤"
+          "textKo": "로드 투 킹덤",
+          "textEs": "Road to Kingdom"
         },
         {
           "id": "C",
           "text": "Queendom",
-          "textKo": "퀸덤"
+          "textKo": "퀸덤",
+          "textEs": "Queendom"
         },
         {
           "id": "D",
           "text": "Show Me The Money",
-          "textKo": "쇼미더머니"
+          "textKo": "쇼미더머니",
+          "textEs": "Show Me The Money"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Stray Kids triumphed on Mnet's 'Kingdom: Legendary War' in June 2021 after delivering showstopping performances like 'WOLFGANG'.",
       "explanationKo": "2021년 엠넷 '킹덤: 레전더리 워'에서 매 라운드 역대급 무대를 선보이며 당당히 최종 우승을 차지했습니다.",
       "funFact": "Their performance mashup with Deadpool themes drew praise directly from Hollywood star Ryan Reynolds!",
-      "funFactKo": "데드풀 컨셉 무대를 계기로 할리우드 배우 라이언 레이놀즈와 특별한 인연이 시작되었습니다!"
+      "funFactKo": "데드풀 컨셉 무대를 계기로 할리우드 배우 라이언 레이놀즈와 특별한 인연이 시작되었습니다!",
+      "questionEs": "¿Qué programa de supervivencia televisiva ganó Stray Kids en primer lugar en 2021?",
+      "explanationEs": "Stray Kids se coronó campeón absoluto del programa de competición de Mnet 'Kingdom: Legendary War' en 2021 tras actuaciones memorables.",
+      "funFactEs": "Su legendaria actuación de 'God's DDU-DU DDU-DU' combinó 'God's Menu' con el éxito de BLACKPINK y escenas inspiradas en Deadpool."
     },
     {
       "id": 11,
@@ -428,29 +520,36 @@
         {
           "id": "A",
           "text": "Bang Chan & Felix",
-          "textKo": "방찬 & 필릭스"
+          "textKo": "방찬 & 필릭스",
+          "textEs": "Bang Chan y Felix"
         },
         {
           "id": "B",
           "text": "Han & Seungmin",
-          "textKo": "한 & 승민"
+          "textKo": "한 & 승민",
+          "textEs": "Han y Seungmin"
         },
         {
           "id": "C",
           "text": "Lee Know & Hyunjin",
-          "textKo": "리노 & 현진"
+          "textKo": "리노 & 현진",
+          "textEs": "Lee Know y Hyunjin"
         },
         {
           "id": "D",
           "text": "Changbin & I.N",
-          "textKo": "창빈 & 아이엔"
+          "textKo": "창빈 & 아이엔",
+          "textEs": "Changbin e I.N"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Bang Chan and Felix both grew up in Sydney, Australia, and share authentic Aussie accents and deep brotherly chemistry.",
       "explanationKo": "방찬과 필릭스는 둘 다 호주 시드니 출신으로, 특유의 호주 악센트와 끈끈한 케미를 자랑합니다.",
       "funFact": "Bang Chan's English name is Christopher Bang, and Felix's Korean name is Lee Yong-bok!",
-      "funFactKo": "방찬의 영어 이름은 크리스토퍼(Christopher), 필릭스의 한국 이름은 이용복입니다!"
+      "funFactKo": "방찬의 영어 이름은 크리스토퍼(Christopher), 필릭스의 한국 이름은 이용복입니다!",
+      "questionEs": "¿Qué dos miembros forman la famosa 'Aussie Line' (Línea Australiana) de Stray Kids?",
+      "explanationEs": "Bang Chan (crecido en Sídney) y Felix (nacido en Sídney) son los dos miembros australianos célebres por su acento 'Aussie'.",
+      "funFactEs": "A menudo cambian a la jerga australiana diciendo frases como 'G'day mate' o 'No worries' en sus transmisiones."
     },
     {
       "id": 12,
@@ -461,29 +560,36 @@
         {
           "id": "A",
           "text": "MANIAC (ODDINARY)",
-          "textKo": "MANIAC (ODDINARY 앨범)"
+          "textKo": "MANIAC (ODDINARY 앨범)",
+          "textEs": "MANIAC (ODDINARY)"
         },
         {
           "id": "B",
           "text": "District 9",
-          "textKo": "District 9"
+          "textKo": "District 9",
+          "textEs": "District 9"
         },
         {
           "id": "C",
           "text": "Miroh",
-          "textKo": "Miroh"
+          "textKo": "Miroh",
+          "textEs": "Miroh"
         },
         {
           "id": "D",
           "text": "Levanter",
-          "textKo": "바람 (Levanter)"
+          "textKo": "바람 (Levanter)",
+          "textEs": "Levanter"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'ODDINARY' with title track 'MANIAC' debuted at #1 on Billboard 200 in March 2022, starting an unprecedented streak of consecutive #1 albums.",
       "explanationKo": "2022년 3월 발매된 미니 앨범 'ODDINARY'와 타이틀곡 'MANIAC'으로 빌보드 200 1위에 오르며 역사의 시작을 알렸습니다.",
       "funFact": "Stray Kids became only the third K-pop group in history to top Billboard 200, after BTS and SuperM!",
-      "funFactKo": "방탄소년단과 슈퍼엠에 이어 빌보드 200 1위에 오른 역대 3번째 K-Pop 그룹이 되었습니다!"
+      "funFactKo": "방탄소년단과 슈퍼엠에 이어 빌보드 200 1위에 오른 역대 3번째 K-Pop 그룹이 되었습니다!",
+      "questionEs": "¿Qué tema le dio a Stray Kids su primer debut en el #1 del Billboard 200 de EE.UU. en 2022?",
+      "explanationEs": "El mini álbum 'ODDINARY' con el tema principal 'MANIAC' debutó en el #1 del Billboard 200 en marzo de 2022.",
+      "funFactEs": "Stray Kids fue apenas el tercer artista de K-pop en la historia en encabezar la lista Billboard 200."
     },
     {
       "id": 13,
@@ -494,29 +600,36 @@
         {
           "id": "A",
           "text": "DANCERACHA",
-          "textKo": "DANCERACHA (댄스라차)"
+          "textKo": "DANCERACHA (댄스라차)",
+          "textEs": "DANCERACHA"
         },
         {
           "id": "B",
           "text": "3RACHA",
-          "textKo": "3RACHA"
+          "textKo": "3RACHA",
+          "textEs": "3RACHA"
         },
         {
           "id": "C",
           "text": "VOCALRACHA",
-          "textKo": "VOCALRACHA"
+          "textKo": "VOCALRACHA",
+          "textEs": "VOCALRACHA"
         },
         {
           "id": "D",
           "text": "Step Out",
-          "textKo": "Step Out"
+          "textKo": "Step Out",
+          "textEs": "Step Out"
         }
       ],
       "correctAnswer": "A",
       "explanation": "DANCERACHA features the group's three main performance powerhouses: Lee Know, Hyunjin, and Felix.",
       "explanationKo": "댄스라차(DANCERACHA)는 팀의 화려한 퍼포먼스를 이끄는 리노, 현진, 필릭스로 구성되어 있습니다.",
       "funFact": "Their unit track 'Taste' from the MAXIDENT album became a massive global fan-favorite!",
-      "funFactKo": "MAXIDENT 앨범 수록곡인 댄스라차 유닛곡 'Taste'는 매혹적인 안무로 폭발적인 인기를 얻었습니다!"
+      "funFactKo": "MAXIDENT 앨범 수록곡인 댄스라차 유닛곡 'Taste'는 매혹적인 안무로 폭발적인 인기를 얻었습니다!",
+      "questionEs": "¿Cómo se llama la subunidad de baile dentro de Stray Kids formada por Lee Know, Hyunjin y Felix?",
+      "explanationEs": "DANCERACHA (Lee Know, Hyunjin y Felix) es la unidad responsable de la potencia y creatividad en las coreografías del grupo.",
+      "funFactEs": "Lee Know es el líder de baile y con frecuencia ayuda a supervisar y pulir la sincronización de todo el equipo."
     },
     {
       "id": 14,
@@ -527,29 +640,36 @@
         {
           "id": "A",
           "text": "BTS",
-          "textKo": "방탄소년단 (BTS)"
+          "textKo": "방탄소년단 (BTS)",
+          "textEs": "BTS"
         },
         {
           "id": "B",
           "text": "EXO",
-          "textKo": "엑소 (EXO)"
+          "textKo": "엑소 (EXO)",
+          "textEs": "EXO"
         },
         {
           "id": "C",
           "text": "BIGBANG",
-          "textKo": "빅뱅 (BIGBANG)"
+          "textKo": "빅뱅 (BIGBANG)",
+          "textEs": "BIGBANG"
         },
         {
           "id": "D",
           "text": "SHINee",
-          "textKo": "샤이니 (SHINee)"
+          "textKo": "샤이니 (SHINee)",
+          "textEs": "SHINee"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Lee Know was a professional backup dancer for BTS during their 'Wings' world tour and music videos.",
       "explanationKo": "리노는 데뷔 전 방탄소년단의 'Wings' 월드 투어 등 다수의 무대에서 백업 댄서로 활약한 실력파 댄서 출신입니다.",
       "funFact": "J-Hope warmly recognized and cheered on Lee Know during a backstage music show encounter after his debut!",
-      "funFactKo": "데뷔 후 방송국 복도에서 마주친 방탄소년단 제이홉이 리노를 먼저 알아보고 따뜻하게 격려해 주었습니다!"
+      "funFactKo": "데뷔 후 방송국 복도에서 마주친 방탄소년단 제이홉이 리노를 먼저 알아보고 따뜻하게 격려해 주었습니다!",
+      "questionEs": "Antes de debutar, ¿de qué legendario grupo de K-pop fue bailarín de respaldo Lee Know?",
+      "explanationEs": "Lee Know fue bailarín de respaldo de BTS durante temas como 'Fire', 'Blood Sweat & Tears' y 'Not Today', acompañándolos en giras internacionales.",
+      "funFactEs": "J-Hope de BTS lo reconoció en los pasillos de un programa musical tras su debut y lo felicitó afectuosamente."
     },
     {
       "id": 15,
@@ -560,29 +680,36 @@
         {
           "id": "A",
           "text": "Step Out! We are Stray Kids!",
-          "textKo": "Step Out! 안녕하세요, 스트레이 키즈입니다!"
+          "textKo": "Step Out! 안녕하세요, 스트레이 키즈입니다!",
+          "textEs": "Step Out! We are Stray Kids!"
         },
         {
           "id": "B",
           "text": "To the World! Stray Kids!",
-          "textKo": "To the World! 스트레이 키즈입니다!"
+          "textKo": "To the World! 스트레이 키즈입니다!",
+          "textEs": "To the World! Stray Kids!"
         },
         {
           "id": "C",
           "text": "Show Time! Stray Kids!",
-          "textKo": "Show Time! 스트레이 키즈!"
+          "textKo": "Show Time! 스트레이 키즈!",
+          "textEs": "Show Time! Stray Kids!"
         },
         {
           "id": "D",
           "text": "All in Your Area! Stray Kids!",
-          "textKo": "All in Your Area! 스트레이 키즈!"
+          "textKo": "All in Your Area! 스트레이 키즈!",
+          "textEs": "All in Your Area! Stray Kids!"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'Step Out!' reflects their core identity of stepping outside established boundaries, conventions, and conformity.",
       "explanationKo": "'Step Out!'은 기존의 틀과 정형화된 기준에서 벗어나 스스로 새로운 길을 개척하겠다는 포부를 담은 시그니처 구호입니다.",
       "funFact": "They make a hand gesture forming an 'S' and stepping out forward!",
-      "funFactKo": "인사할 때 손동작으로 'S'를 만들며 앞으로 내미는 독특한 제스처를 취합니다!"
+      "funFactKo": "인사할 때 손동작으로 'S'를 만들며 앞으로 내미는 독특한 제스처를 취합니다!",
+      "questionEs": "¿Cuál es el lema oficial de saludo en equipo de Stray Kids?",
+      "explanationEs": "'Step Out!' simboliza romper con las normas impuestas y abrir nuevos caminos fuera de los marcos convencionales.",
+      "funFactEs": "Al inicio de cada año, publican un video especial titulado 'STEP OUT' donde revelan sus proyectos anuales a STAY."
     },
     {
       "id": 16,
@@ -593,29 +720,36 @@
         {
           "id": "A",
           "text": "Deadpool & Wolverine",
-          "textKo": "데드풀과 울버린 (Deadpool & Wolverine)"
+          "textKo": "데드풀과 울버린 (Deadpool & Wolverine)",
+          "textEs": "Deadpool & Wolverine"
         },
         {
           "id": "B",
           "text": "Spider-Man: Beyond the Spider-Verse",
-          "textKo": "스파이더맨"
+          "textKo": "스파이더맨",
+          "textEs": "Spider-Man: Beyond the Spider-Verse"
         },
         {
           "id": "C",
           "text": "Avengers: Secret Wars",
-          "textKo": "어벤져스"
+          "textKo": "어벤져스",
+          "textEs": "Avengers: Secret Wars"
         },
         {
           "id": "D",
           "text": "Captain America",
-          "textKo": "캡틴 아메리카"
+          "textKo": "캡틴 아메리카",
+          "textEs": "Captain America"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Stray Kids released 'SLASH' for 'Deadpool & Wolverine', and stars Ryan Reynolds and Hugh Jackman appeared in their 'Chk Chk Boom' MV!",
       "explanationKo": "마블 대작 '데드풀과 울버린'의 공식 OST로 'SLASH'를 발표했으며, 주연 배우 라이언 레이놀즈와 휴 잭맨이 'Chk Chk Boom' 뮤직비디오에 깜짝 카메오로 출연했습니다.",
       "funFact": "Ryan Reynolds declared himself an official STAY on social media!",
-      "funFactKo": "라이언 레이놀즈는 SNS에서 스스로를 '열혈 스테이'라고 공인했습니다!"
+      "funFactKo": "라이언 레이놀즈는 SNS에서 스스로를 '열혈 스테이'라고 공인했습니다!",
+      "questionEs": "¿Qué taquillera película de Marvel incluyó la canción original 'SLASH' de Stray Kids en su banda sonora en 2024?",
+      "explanationEs": "'SLASH' fue creada exclusivamente para la banda sonora oficial de 'Deadpool & Wolverine' (2024).",
+      "funFactEs": "Ryan Reynolds y Hugh Jackman protagonizaron un cameo especial en el video musical de 'Chk Chk Boom' de Stray Kids."
     },
     {
       "id": 17,
@@ -626,29 +760,36 @@
         {
           "id": "A",
           "text": "Seungmin & I.N",
-          "textKo": "승민 & 아이엔"
+          "textKo": "승민 & 아이엔",
+          "textEs": "Seungmin e I.N"
         },
         {
           "id": "B",
           "text": "Bang Chan & Han",
-          "textKo": "방찬 & 한"
+          "textKo": "방찬 & 한",
+          "textEs": "Bang Chan y Han"
         },
         {
           "id": "C",
           "text": "Lee Know & Felix",
-          "textKo": "리노 & 필릭스"
+          "textKo": "리노 & 필릭스",
+          "textEs": "Lee Know y Felix"
         },
         {
           "id": "D",
           "text": "Changbin & Hyunjin",
-          "textKo": "창빈 & 현진"
+          "textKo": "창빈 & 현진",
+          "textEs": "Changbin y Hyunjin"
         }
       ],
       "correctAnswer": "A",
       "explanation": "VOCALRACHA consists of Seungmin and I.N, delivering rich, emotional harmonies and crystalline vocal colors.",
       "explanationKo": "보컬라차(VOCALRACHA)는 승민과 아이엔으로 구성되어 섬세하고 호소력 짙은 보컬을 담당합니다.",
       "funFact": "Their unit song 'Can't Stop' (피어난다) showcases their bright, pure romantic vocal synergy!",
-      "funFactKo": "유닛곡 '피어난다'는 두 사람의 청량하고 맑은 보컬 시너지를 제대로 보여줍니다!"
+      "funFactKo": "유닛곡 '피어난다'는 두 사람의 청량하고 맑은 보컬 시너지를 제대로 보여줍니다!",
+      "questionEs": "¿Qué dos miembros integran la subunidad vocal 'VOCALRACHA'?",
+      "explanationEs": "VOCALRACHA está compuesta por Seungmin e I.N, reconocidos por sus voces conmovedoras y técnica vocal distintiva.",
+      "funFactEs": "Ambos han lanzado exitosas baladas en solitario y bandas sonoras (OST) para populares K-Dramas."
     },
     {
       "id": 18,
@@ -659,29 +800,36 @@
         {
           "id": "A",
           "text": "The Met Gala",
-          "textKo": "멧 갈라 (Met Gala)"
+          "textKo": "멧 갈라 (Met Gala)",
+          "textEs": "La Met Gala"
         },
         {
           "id": "B",
           "text": "Paris Fashion Week",
-          "textKo": "파리 패션위크"
+          "textKo": "파리 패션위크",
+          "textEs": "Semana de la Moda de París"
         },
         {
           "id": "C",
           "text": "Cannes Film Festival",
-          "textKo": "칸 영화제"
+          "textKo": "칸 영화제",
+          "textEs": "Festival de Cine de Cannes"
         },
         {
           "id": "D",
           "text": "Grammy Red Carpet",
-          "textKo": "그래미 레드카펫"
+          "textKo": "그래미 레드카펫",
+          "textEs": "Alfombra Roja de los Grammy"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Stray Kids attended the prestigious 2024 Met Gala as guests of designer Tommy Hilfiger, wearing bespoke red, white, and blue suits.",
       "explanationKo": "스트레이 키즈는 타미 힐피거의 초청으로 K-Pop 그룹 역사상 최초로 8명 멤버 전원이 '2024 멧 갈라' 레드카펫에 올랐습니다.",
       "funFact": "Their red carpet appearance generated massive global buzz and topped fashion trend lists!",
-      "funFactKo": "외투를 벗어 던지며 수트를 드러내는 드라마틱한 퍼포먼스로 전 세계 패션지의 톱뉴스를 장식했습니다!"
+      "funFactKo": "외투를 벗어 던지며 수트를 드러내는 드라마틱한 퍼포먼스로 전 세계 패션지의 톱뉴스를 장식했습니다!",
+      "questionEs": "En mayo de 2024, ¿a qué icónico evento de alta moda asistió Stray Kids haciendo historia como el primer grupo completo de K-pop?",
+      "explanationEs": "Stray Kids asistió a la prestigiosa Met Gala 2024 en Nueva York vestidos con trajes a medida diseñados por Tommy Hilfiger.",
+      "funFactEs": "Fueron el primer grupo completo de K-pop masculino en la historia en subir juntos las famosas escaleras del Museo Metropolitano."
     },
     {
       "id": 19,
@@ -692,29 +840,36 @@
         {
           "id": "A",
           "text": "Lollapalooza Paris",
-          "textKo": "롤라팔루자 파리 (Lollapalooza Paris)"
+          "textKo": "롤라팔루자 파리 (Lollapalooza Paris)",
+          "textEs": "Lollapalooza Paris"
         },
         {
           "id": "B",
           "text": "Glastonbury",
-          "textKo": "글래스턴베리 (Glastonbury)"
+          "textKo": "글래스턴베리 (Glastonbury)",
+          "textEs": "Glastonbury"
         },
         {
           "id": "C",
           "text": "Coachella",
-          "textKo": "코첼라 (Coachella)"
+          "textKo": "코첼라 (Coachella)",
+          "textEs": "Coachella"
         },
         {
           "id": "D",
           "text": "Tomorrowland",
-          "textKo": "투모로우랜드 (Tomorrowland)"
+          "textKo": "투모로우랜드 (Tomorrowland)",
+          "textEs": "Tomorrowland"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Stray Kids headlined Lollapalooza Paris in July 2023, performing to a crowd of over 60,000 roaring fans in the French capital.",
       "explanationKo": "2023년 7월 '롤라팔루자 파리'에 헤드라이너로 출격하여 6만 명이 넘는 관객을 열광시켰습니다.",
       "funFact": "They went on to headline Lollapalooza Chicago in August 2024 as well!",
-      "funFactKo": "2024년 8월에는 미국 '롤라팔루자 시카고'의 헤드라이너로도 올라 거대한 떼창을 이끌어냈습니다!"
+      "funFactKo": "2024년 8월에는 미국 '롤라팔루자 시카고'의 헤드라이너로도 올라 거대한 떼창을 이끌어냈습니다!",
+      "questionEs": "¿En qué importante festival de música europeo en París (2023) fue Stray Kids el primer grupo de K-pop en ser cabeza de cartel (headliner)?",
+      "explanationEs": "Stray Kids encabezó Lollapalooza París en julio de 2023 ante una multitud multitudinaria de más de 60,000 personas.",
+      "funFactEs": "Más adelante en 2024 también encabezaron I-Days en Milán, BST Hyde Park en Londres y Lollapalooza Chicago."
     },
     {
       "id": 20,
@@ -725,29 +880,36 @@
         {
           "id": "A",
           "text": "SKZOO",
-          "textKo": "SKZOO (스키주)"
+          "textKo": "SKZOO (스키주)",
+          "textEs": "SKZOO"
         },
         {
           "id": "B",
           "text": "BT21",
-          "textKo": "BT21"
+          "textKo": "BT21",
+          "textEs": "BT21"
         },
         {
           "id": "C",
           "text": "TRUZ",
-          "textKo": "TRUZ"
+          "textKo": "TRUZ",
+          "textEs": "TRUZ"
         },
         {
           "id": "D",
           "text": "ZOOTOPIA",
-          "textKo": "ZOOTOPIA"
+          "textKo": "ZOOTOPIA",
+          "textEs": "ZOOTOPIA"
         }
       ],
       "correctAnswer": "A",
       "explanation": "SKZOO is Stray Kids' official animal character collection, featuring Wolf Chan, Leebit, Dwaekki, Jiniret, HAN QUOKKA, BbokAri, PuppyM, and FoxI.Ny.",
       "explanationKo": "SKZOO(스키주)는 멤버들의 외모와 성격을 동물 캐릭터화한 공식 브랜드로, 울프찬, 리빗, 돼끼, 지니렛, 한쿼카, 뽁아리, 퍼피엠, 폭시니로 구성됩니다.",
       "funFact": "The SKZOO characters starred in full-length music videos like 'God's Menu' (SKZOO Ver.)!",
-      "funFactKo": "스키주 인형탈을 쓰고 촬영한 '神메뉴' SKZOO 버전 뮤직비디오는 전 세계 팬들의 폭발적인 사랑을 받았습니다!"
+      "funFactKo": "스키주 인형탈을 쓰고 촬영한 '神메뉴' SKZOO 버전 뮤직비디오는 전 세계 팬들의 폭발적인 사랑을 받았습니다!",
+      "questionEs": "¿Cómo se llama la línea oficial de personajes animados de animales de Stray Kids?",
+      "explanationEs": "SKZOO es el universo de personajes animales donde cada integrante tiene su avatar animado oficial.",
+      "funFactEs": "Los muñecos de peluche de SKZOO son de los artículos más codiciados del K-pop y se agotan en minutos en cada lanzamiento."
     },
     {
       "id": 21,
@@ -758,29 +920,36 @@
         {
           "id": "A",
           "text": "CB97, SPEARB, J.ONE",
-          "textKo": "CB97, SPEARB, J.ONE"
+          "textKo": "CB97, SPEARB, J.ONE",
+          "textEs": "CB97, SPEARB, J.ONE"
         },
         {
           "id": "B",
           "text": "B-Chan, Binnie, Peter",
-          "textKo": "B-Chan, Binnie, Peter"
+          "textKo": "B-Chan, Binnie, Peter",
+          "textEs": "B-Chan, Binnie, Peter"
         },
         {
           "id": "C",
           "text": "Chris, Spear, Hani",
-          "textKo": "Chris, Spear, Hani"
+          "textKo": "Chris, Spear, Hani",
+          "textEs": "Chris, Spear, Hani"
         },
         {
           "id": "D",
           "text": "Alpha, Bravo, Charlie",
-          "textKo": "Alpha, Bravo, Charlie"
+          "textKo": "Alpha, Bravo, Charlie",
+          "textEs": "Alpha, Bravo, Charlie"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Bang Chan uses CB97 (Chan Bang 1997), Changbin uses SPEARB (Spear + B), and Han uses J.ONE (Ji-sung One).",
       "explanationKo": "방찬은 CB97(Chan Bang 97년생), 창빈은 SPEARB(창 창+빈), 한은 J.ONE(지성 원)이라는 멋진 프로듀서 예명을 씁니다.",
       "funFact": "They uploaded original mixtapes to SoundCloud under these names before Stray Kids' official debut!",
-      "funFactKo": "데뷔 전 사운드클라우드에 믹스테이프를 올릴 때부터 이 예명들을 사용했습니다!"
+      "funFactKo": "데뷔 전 사운드클라우드에 믹스테이프를 올릴 때부터 이 예명들을 사용했습니다!",
+      "questionEs": "¿Cuáles son los nombres artísticos de productores de 3RACHA: Bang Chan, Changbin y Han?",
+      "explanationEs": "CB97 (Chan Bang 1997), SPEARB (Changbin = Spear B) y J.ONE (Han Ji-sung = J.ONE) son sus alias de productores desde sus mixtapes underground.",
+      "funFactEs": "Subieron sus primeros temas a SoundCloud a principios de 2017 antes de que el grupo debutara oficialmente."
     },
     {
       "id": 22,
@@ -791,29 +960,36 @@
         {
           "id": "A",
           "text": "April 4, 2019 on M Countdown with 'MIROH'",
-          "textKo": "2019년 4월 4일 엠카운트다운 'MIROH'"
+          "textKo": "2019년 4월 4일 엠카운트다운 'MIROH'",
+          "textEs": "4 de abril de 2019 en M Countdown con 'MIROH'"
         },
         {
           "id": "B",
           "text": "March 25, 2018 on Music Bank with 'District 9'",
-          "textKo": "2018년 3월 25일 뮤직뱅크 'District 9'"
+          "textKo": "2018년 3월 25일 뮤직뱅크 'District 9'",
+          "textEs": "25 de marzo de 2018 en Music Bank con 'District 9'"
         },
         {
           "id": "C",
           "text": "June 20, 2020 on Inkigayo with 'God\\'s Menu'",
-          "textKo": "2020년 6월 20일 인기가요 '神메뉴'"
+          "textKo": "2020년 6월 20일 인기가요 '神메뉴'",
+          "textEs": "20 de junio de 2020 en Inkigayo con 'God's Menu'"
         },
         {
           "id": "D",
           "text": "September 1, 2021 on Show Champion with 'Thunderous'",
-          "textKo": "2021년 9월 1일 쇼챔피언 '소리꾼'"
+          "textKo": "2021년 9월 1일 쇼챔피언 '소리꾼'",
+          "textEs": "1 de septiembre de 2021 en Show Champion con 'Thunderous'"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Stray Kids won their first music show trophy on M Countdown on April 4, 2019 with 'MIROH', sparking tears of joy.",
       "explanationKo": "2019년 4월 4일 엠카운트다운에서 'MIROH'로 데뷔 첫 1위 트로피를 안고 멤버 전원이 눈물을 쏟았습니다.",
       "funFact": "Bang Chan's speech thanking STAY and JYP was one of the most emotional moments in K-pop history!",
-      "funFactKo": "방찬의 눈물 어린 수상 소감과 멤버들의 포옹은 지금도 스테이들이 꼽는 명장면입니다!"
+      "funFactKo": "방찬의 눈물 어린 수상 소감과 멤버들의 포옹은 지금도 스테이들이 꼽는 명장면입니다!",
+      "questionEs": "¿En qué programa musical y fecha consiguió Stray Kids su emotivo primer premio (1st Win)?",
+      "explanationEs": "Stray Kids ganó su primer trofeo musical en Mnet M Countdown el 4 de abril de 2019 con 'MIROH', justo un año después de debutar.",
+      "funFactEs": "Los integrantes rompieron en llanto en el escenario mientras se abrazaban en un momento inolvidable para STAY."
     },
     {
       "id": 23,
@@ -824,29 +1000,36 @@
         {
           "id": "A",
           "text": "Pig + Rabbit (돼지 + 토끼)",
-          "textKo": "돼지 + 토끼 (Pig + Rabbit)"
+          "textKo": "돼지 + 토끼 (Pig + Rabbit)",
+          "textEs": "Cerdo + Conejo (돼지 + 토끼)"
         },
         {
           "id": "B",
           "text": "Bear + Dog (곰 + 강아지)",
-          "textKo": "곰 + 강아지 (Bear + Dog)"
+          "textKo": "곰 + 강아지 (Bear + Dog)",
+          "textEs": "Oso + Perro (곰 + 강아지)"
         },
         {
           "id": "C",
           "text": "Cat + Tiger (고양이 + 호랑이)",
-          "textKo": "고양이 + 호랑이 (Cat + Tiger)"
+          "textKo": "고양이 + 호랑이 (Cat + Tiger)",
+          "textEs": "Gato + Tigre (고양이 + 호랑이)"
         },
         {
           "id": "D",
           "text": "Hamster + Fox (햄스터 + 여우)",
-          "textKo": "햄스터 + 여우 (Hamster + Fox)"
+          "textKo": "햄스터 + 여우 (Hamster + Fox)",
+          "textEs": "Hámster + Zorro (햄스터 + 여우)"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'Dwaekki' comes from combining 'Dwaeji' (pig) and 'Tokki' (rabbit), reflecting Changbin's muscular build yet adorable charm.",
       "explanationKo": "'돼끼'는 돼지(Dwaeji)와 토끼(Tokki)의 합성어로, 근육질 피지컬과 귀여운 토끼 매력을 겸비한 창빈을 상징합니다.",
       "funFact": "Changbin once sculpted a clay clay Dwaekki on video that became an instant meme!",
-      "funFactKo": "창빈이 직접 찰흙으로 빚은 돼끼 인형이 공식 캐릭터의 모티브가 되었습니다!"
+      "funFactKo": "창빈이 직접 찰흙으로 빚은 돼끼 인형이 공식 캐릭터의 모티브가 되었습니다!",
+      "questionEs": "¿Qué singular criatura híbrida es el personaje oficial de SKZOO de Changbin, 'Dwaekki'?",
+      "explanationEs": "Dwaekki (돼끼) combina 'Dwaeji' (cerdo en coreano) y 'Tokki' (conejo), reflejando su musculoso pero tierno aspecto.",
+      "funFactEs": "Changbin hizo una escultura de arcilla de Dwaekki en un reality show que inspiró el diseño oficial final."
     },
     {
       "id": 24,
@@ -857,29 +1040,36 @@
         {
           "id": "A",
           "text": "Sooni, Doongi, Dori",
-          "textKo": "순이, 둥이, 도리 (Sooni, Doongi, Dori)"
+          "textKo": "순이, 둥이, 도리 (Sooni, Doongi, Dori)",
+          "textEs": "Sooni, Doongi, Dori"
         },
         {
           "id": "B",
           "text": "Kkami, Choco, Berry",
-          "textKo": "까미, 초코, 베리"
+          "textKo": "까미, 초코, 베리",
+          "textEs": "Kkami, Choco, Berry"
         },
         {
           "id": "C",
           "text": "Nabi, Yangi, Kiki",
-          "textKo": "나비, 양이, 키키"
+          "textKo": "나비, 양이, 키키",
+          "textEs": "Nabi, Yangi, Kiki"
         },
         {
           "id": "D",
           "text": "Milo, Leo, Simba",
-          "textKo": "마일로, 레오, 심바"
+          "textKo": "마일로, 레오, 심바",
+          "textEs": "Milo, Leo, Simba"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Lee Know is a proud cat dad to three rescue cats: Sooni, Doongi, and Dori.",
       "explanationKo": "리노는 유기묘 출신인 순이, 둥이, 도리 세 마리의 고양이를 지극정성으로 돌보는 유명한 집사입니다.",
       "funFact": "He frequently wears pins and donates to animal welfare shelters supporting rescue animals!",
-      "funFactKo": "유기동물 후원 뱃지를 차거나 유기동물 보호소에 따뜻한 선행을 베푸는 것으로 유명합니다!"
+      "funFactKo": "유기동물 후원 뱃지를 차거나 유기동물 보호소에 따뜻한 선행을 베푸는 것으로 유명합니다!",
+      "questionEs": "¿Cuáles son los nombres de los tres queridos gatos rescatados y adoptados por Lee Know?",
+      "explanationEs": "Sooni (adoptado de un refugio veterinario), Doongi (de un amigo) y Dori (rescatado de un sitio abandonado) son sus adoradas mascotas.",
+      "funFactEs": "Lee Know frecuentemente viste ropa con fotos de sus gatos y dona a causas de protección animal."
     },
     {
       "id": 25,
@@ -890,29 +1080,36 @@
         {
           "id": "A",
           "text": "Hyunjin",
-          "textKo": "현진 (Hyunjin)"
+          "textKo": "현진 (Hyunjin)",
+          "textEs": "Hyunjin"
         },
         {
           "id": "B",
           "text": "Lee Know",
-          "textKo": "리노 (Lee Know)"
+          "textKo": "리노 (Lee Know)",
+          "textEs": "Lee Know"
         },
         {
           "id": "C",
           "text": "Han",
-          "textKo": "한 (Han)"
+          "textKo": "한 (Han)",
+          "textEs": "Han"
         },
         {
           "id": "D",
           "text": "Felix",
-          "textKo": "필릭스 (Felix)"
+          "textKo": "필릭스 (Felix)",
+          "textEs": "Felix"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Jiniret represents Hyunjin, inspired by his nickname as an elegant ferret with a stylish mole under his eye.",
       "explanationKo": "지니렛은 매력적인 눈물점을 가진 현진을 족제비로 캐릭터화한 SKZOO 캐릭터입니다.",
       "funFact": "Hyunjin is also a gifted painter who has shared his museum-worthy art canvas paintings with STAY!",
-      "funFactKo": "현진은 화가 수준의 뛰어난 유화 및 아크릴 페인팅 그림 실력으로도 유명합니다!"
+      "funFactKo": "현진은 화가 수준의 뛰어난 유화 및 아크릴 페인팅 그림 실력으로도 유명합니다!",
+      "questionEs": "¿Qué miembro corresponde al personaje de SKZOO 'Jiniret' (un elegante hurón blanco)?",
+      "explanationEs": "Jiniret representa a Hyunjin, conocido por sus rasgos refinados y elegantes que recuerdan a un hurón.",
+      "funFactEs": "Hyunjin también tiene un perro de mascota muy querido por el fandom llamado Kkami."
     },
     {
       "id": 26,
@@ -923,29 +1120,36 @@
         {
           "id": "A",
           "text": "Quokka (쿼카)",
-          "textKo": "쿼카 (Quokka)"
+          "textKo": "쿼카 (Quokka)",
+          "textEs": "Quokka (쿼카)"
         },
         {
           "id": "B",
           "text": "Hamster (햄스터)",
-          "textKo": "햄스터 (Hamster)"
+          "textKo": "햄스터 (Hamster)",
+          "textEs": "Hámster (햄스터)"
         },
         {
           "id": "C",
           "text": "Squirrel (다람쥐)",
-          "textKo": "다람쥐 (Squirrel)"
+          "textKo": "다람쥐 (Squirrel)",
+          "textEs": "Ardilla (다람쥐)"
         },
         {
           "id": "D",
           "text": "Otter (수달)",
-          "textKo": "수달 (Otter)"
+          "textKo": "수달 (Otter)",
+          "textEs": "Nutria (수달)"
         }
       ],
       "correctAnswer": "A",
       "explanation": "HAN QUOKKA is modeled after a happy Australian quokka, matching Han's adorable chubby cheeks when eating.",
       "explanationKo": "호주의 세상에서 가장 행복한 동물인 쿼카를 닮은 통통한 볼살과 미소에서 착안했습니다.",
       "funFact": "When Han stuffs food in his cheeks, he looks 100% identical to a quokka!",
-      "funFactKo": "음식을 먹을 때 양 볼 가득 채우는 모습이 쿼카와 싱크로율 100%를 자랑합니다!"
+      "funFactKo": "음식을 먹을 때 양 볼 가득 채우는 모습이 쿼카와 싱크로율 100%를 자랑합니다!",
+      "questionEs": "¿En qué animal está basado el personaje oficial de SKZOO de Han, 'HAN QUOKKA'?",
+      "explanationEs": "HAN QUOKKA está basado en el sonriente marsupial australiano quokka, famoso por sus mejillas adorables idénticas a las de Han.",
+      "funFactEs": "El quokka es conocido como 'el animal más feliz del mundo', igual que la energía alegre de Han en el escenario."
     },
     {
       "id": 27,
@@ -956,29 +1160,36 @@
         {
           "id": "A",
           "text": "BbokAri",
-          "textKo": "뽁아리 (BbokAri)"
+          "textKo": "뽁아리 (BbokAri)",
+          "textEs": "BbokAri"
         },
         {
           "id": "B",
           "text": "PuppyM",
-          "textKo": "퍼피엠 (PuppyM)"
+          "textKo": "퍼피엠 (PuppyM)",
+          "textEs": "PuppyM"
         },
         {
           "id": "C",
           "text": "Wolf Chan",
-          "textKo": "울프찬 (Wolf Chan)"
+          "textKo": "울프찬 (Wolf Chan)",
+          "textEs": "Wolf Chan"
         },
         {
           "id": "D",
           "text": "Leebit",
-          "textKo": "리빗 (Leebit)"
+          "textKo": "리빗 (Leebit)",
+          "textEs": "Leebit"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'BbokAri' is a combination of Felix's Korean name 'Yongbok' (Bbok) and 'Byungari' (chick in Korean).",
       "explanationKo": "필릭스의 한국 이름 이용복의 '복(뽁)'과 병아리의 '아리'가 합쳐져 '뽁아리'라는 사랑스러운 이름이 탄생했습니다.",
       "funFact": "BbokAri plushies sell out almost instantly at every world tour pop-up store!",
-      "funFactKo": "월드 투어 팝업스토어에서 뽁아리 인형은 매번 최단 시간 품절을 기록합니다!"
+      "funFactKo": "월드 투어 팝업스토어에서 뽁아리 인형은 매번 최단 시간 품절을 기록합니다!",
+      "questionEs": "¿Cómo se llama el personaje de SKZOO de Felix, el tierno pollito con pecas?",
+      "explanationEs": "BbokAri (뽀 Ari) combina su apodo 'Yongbok' y 'Byeongari' (pollito en coreano), con pecas bordadas en las mejillas.",
+      "funFactEs": "El peluche de BbokAri a menudo agota inventario primero en las tiendas oficiales de JYP Shop."
     },
     {
       "id": 28,
@@ -989,29 +1200,36 @@
         {
           "id": "A",
           "text": "Seungmin",
-          "textKo": "승민 (Seungmin)"
+          "textKo": "승민 (Seungmin)",
+          "textEs": "Seungmin"
         },
         {
           "id": "B",
           "text": "I.N",
-          "textKo": "아이엔 (I.N)"
+          "textKo": "아이엔 (I.N)",
+          "textEs": "I.N"
         },
         {
           "id": "C",
           "text": "Lee Know",
-          "textKo": "리노 (Lee Know)"
+          "textKo": "리노 (Lee Know)",
+          "textEs": "Lee Know"
         },
         {
           "id": "D",
           "text": "Bang Chan",
-          "textKo": "방찬 (Bang Chan)"
+          "textKo": "방찬 (Bang Chan)",
+          "textEs": "Bang Chan"
         }
       ],
       "correctAnswer": "A",
       "explanation": "PuppyM represents Seungmin, perfectly capturing his beloved loyal puppy-dog eyes and warm personality.",
       "explanationKo": "퍼피엠은 댕댕이 그 자체인 승민의 순수한 강아지 눈망울과 매력을 그대로 담아냈습니다.",
       "funFact": "Despite his angelic puppy looks, Seungmin is famous for his hilariously savage witty humor!",
-      "funFactKo": "천사 같은 강아지 외모와 달리 형들을 당황하게 만드는 매콤한 예능 입담을 자랑합니다!"
+      "funFactKo": "천사 같은 강아지 외모와 달리 형들을 당황하게 만드는 매콤한 예능 입담을 자랑합니다!",
+      "questionEs": "¿Qué miembro está representado por el personaje de SKZOO en forma de cachorrito 'PuppyM'?",
+      "explanationEs": "PuppyM representa a Seungmin, apodado el cachorrito del grupo por su carácter leal y su tierna sonrisa canina.",
+      "funFactEs": "Seungmin suele imitar ladridos de perro en conciertos para saludar a los fans."
     },
     {
       "id": 29,
@@ -1022,29 +1240,36 @@
         {
           "id": "A",
           "text": "Fennec Fox (Desert Fox)",
-          "textKo": "사막여우 (Fennec Fox)"
+          "textKo": "사막여우 (Fennec Fox)",
+          "textEs": "Zorro Fénec (Zorro del desierto)"
         },
         {
           "id": "B",
           "text": "Red Fox",
-          "textKo": "붉은 여우"
+          "textKo": "붉은 여우",
+          "textEs": "Zorro Rojo"
         },
         {
           "id": "C",
           "text": "Snow Leopard",
-          "textKo": "눈표범"
+          "textKo": "눈표범",
+          "textEs": "Leopardo de las nieves"
         },
         {
           "id": "D",
           "text": "Deer",
-          "textKo": "사슴"
+          "textKo": "사슴",
+          "textEs": "Ciervo"
         }
       ],
       "correctAnswer": "A",
       "explanation": "FoxI.Ny is a fennec fox, capturing I.N's signature feline-fox eye shape and charming dimples.",
       "explanationKo": "폭시니는 아이엔의 매력 포인트인 사막여우 눈매와 보조개를 쏙 빼닮은 캐릭터입니다.",
       "funFact": "I.N is often called 'Yang-Fox' (양사막여우) by members and STAY!",
-      "funFactKo": "아이엔은 팬들과 멤버들 사이에서 '양사막여우'라는 애칭으로 자주 불립니다!"
+      "funFactKo": "아이엔은 팬들과 멤버들 사이에서 '양사막여우'라는 애칭으로 자주 불립니다!",
+      "questionEs": "¿En qué animal está basado el personaje de SKZOO de I.N, 'FoxI.Ny'?",
+      "explanationEs": "FoxI.Ny está inspirado en un zorro del desierto (fénec), reflejando los ojos felinos y encantadores de I.N.",
+      "funFactEs": "El apodo de I.N entre los miembros es 'Desert Fox' (사막여우)."
     },
     {
       "id": 30,
@@ -1055,29 +1280,36 @@
         {
           "id": "A",
           "text": "Changbin",
-          "textKo": "창빈 (Changbin)"
+          "textKo": "창빈 (Changbin)",
+          "textEs": "Changbin"
         },
         {
           "id": "B",
           "text": "Bang Chan",
-          "textKo": "방찬 (Bang Chan)"
+          "textKo": "방찬 (Bang Chan)",
+          "textEs": "Bang Chan"
         },
         {
           "id": "C",
           "text": "Lee Know",
-          "textKo": "리노 (Lee Know)"
+          "textKo": "리노 (Lee Know)",
+          "textEs": "Lee Know"
         },
         {
           "id": "D",
           "text": "Han",
-          "textKo": "한 (Han)"
+          "textKo": "한 (Han)",
+          "textEs": "Han"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Changbin's quote 'I like people with Jutdae (strong personal conviction)' went mega-viral, landing him a solo Samsung Galaxy commercial!",
       "explanationKo": "창빈의 '난 줏대 있는 사람이 좋아' 발언이 전 국민적 밈으로 대유행하며 삼성 갤럭시 단독 광고 모델로 발탁되었습니다.",
       "funFact": "He even made an official song called 'Fly High' for Samsung Galaxy!",
-      "funFactKo": "삼성 갤럭시 캠페인 송 'Fly High'를 직접 만들어 부르기도 했습니다!"
+      "funFactKo": "삼성 갤럭시 캠페인 송 'Fly High'를 직접 만들어 부르기도 했습니다!",
+      "questionEs": "¿El lema de qué miembro se volvió un meme viral: '¿Tienes jutdae (principios)?' llevándolo a protagonizar un comercial de Samsung Galaxy?",
+      "explanationEs": "Changbin pronunció en un vlog: 'Lo importante es tener tus propios principios (jutdae)', lo que se convirtió en una sensación nacional y un anuncio oficial de Samsung.",
+      "funFactEs": "La frase 'Jutdae' fue votada como una de las palabras del año de moda en la juventud coreana en 2021."
     },
     {
       "id": 31,
@@ -1088,29 +1320,36 @@
         {
           "id": "A",
           "text": "Kkwaenggwari, Buk, and Taepyeongso",
-          "textKo": "꽹과리, 북, 태평소 등 사물놀이 악기"
+          "textKo": "꽹과리, 북, 태평소 등 사물놀이 악기",
+          "textEs": "Kkwaenggwari, Buk y Taepyeongso"
         },
         {
           "id": "B",
           "text": "Gayageum solo only",
-          "textKo": "가야금 독주"
+          "textKo": "가야금 독주",
+          "textEs": "Solo de Gayageum únicamente"
         },
         {
           "id": "C",
           "text": "Geomungo and Haegeum only",
-          "textKo": "거문고와 해금"
+          "textKo": "거문고와 해금",
+          "textEs": "Solo Geomungo y Haegeum"
         },
         {
           "id": "D",
           "text": "Piri only",
-          "textKo": "피리 단독"
+          "textKo": "피리 단독",
+          "textEs": "Solo Piri"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'Thunderous' brilliantly fuses fierce hip-hop basslines with traditional Korean brass and brass instruments like kkwaenggwari and taepyeongso.",
       "explanationKo": "'소리꾼'은 꽹과리, 태평소 등 한국 전통 국악기 소리와 강렬한 트랩 비트를 결합하여 전 세계적인 찬사를 받았습니다.",
       "funFact": "The word 'Sorikkun' traditionally means a Korean pansori singer, transformed by SKZ into 'loud noise-makers'!",
-      "funFactKo": "전통 판소리 소리꾼을 '자신만의 목소리를 당당하게 내는 자'로 재해석한 곡입니다!"
+      "funFactKo": "전통 판소리 소리꾼을 '자신만의 목소리를 당당하게 내는 자'로 재해석한 곡입니다!",
+      "questionEs": "¿Qué instrumentos tradicionales coreanos se destacan prominentemente en el tema 'Thunderous' (소리꾼)?",
+      "explanationEs": "'Thunderous' fusiona el hip-hop moderno con música folclórica coreana (Pungmul / Gugak), usando el gong kkwaenggwari, tambor buk y el viento taepyeongso.",
+      "funFactEs": "La palabra 'Sorikkun' (소리꾼) hace referencia a los narradores y cantantes tradicionales de pansori coreano."
     },
     {
       "id": 32,
@@ -1121,29 +1360,36 @@
         {
           "id": "A",
           "text": "The most unique and brightest star among stars",
-          "textKo": "별들 중에서 가장 별난, 특별하고 빛나는 존재"
+          "textKo": "별들 중에서 가장 별난, 특별하고 빛나는 존재",
+          "textEs": "La estrella más singular y brillante entre todas las estrellas"
         },
         {
           "id": "B",
           "text": "First class airplane travel",
-          "textKo": "일등석 비행기 여행"
+          "textKo": "일등석 비행기 여행",
+          "textEs": "Viajes en primera clase de avión"
         },
         {
           "id": "C",
           "text": "Secret agent ranking",
-          "textKo": "비밀 요원 등급"
+          "textKo": "비밀 요원 등급",
+          "textEs": "Rango de agente secreto"
         },
         {
           "id": "D",
           "text": "Super speed training",
-          "textKo": "초고속 스피드 훈련"
+          "textKo": "초고속 스피드 훈련",
+          "textEs": "Entrenamiento de súper velocidad"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'S-Class' plays on the word 'Teuk' (unique/special), emphasizing that Stray Kids are the most eccentric and sparkling star in the galaxy.",
       "explanationKo": "'특이한 자들 중 가장 별나고, 특별한 자들 중 가장 빛난다'는 의미로 스키즈만의 독보적인 정체성을 노래했습니다.",
       "funFact": "The Han River patrol boat dance scene in the music video blew away fans worldwide!",
-      "funFactKo": "한강 위 바지선에서 드론 불꽃쇼와 함께 펼친 군무 씬은 레전드로 꼽힙니다!"
+      "funFactKo": "한강 위 바지선에서 드론 불꽃쇼와 함께 펼친 군무 씬은 레전드로 꼽힙니다!",
+      "questionEs": "¿Qué significa el título 'S-Class' (특) del exitoso álbum '5-STAR'?",
+      "explanationEs": "El carácter '특' (Teuk) significa especial y único: 'el más excéntrico entre los especiales, y el más brillante entre las estrellas'.",
+      "funFactEs": "El video musical de 'S-Class' contó con un gigantesco monstruo marino filmado en el emblemático río Han de Seúl."
     },
     {
       "id": 33,
@@ -1154,29 +1400,36 @@
         {
           "id": "A",
           "text": "I (1) Love (4) You (3)",
-          "textKo": "I(1글자) Love(4글자) You(3글자)"
+          "textKo": "I(1글자) Love(4글자) You(3글자)",
+          "textEs": "I (1) Love (4) You (3)"
         },
         {
           "id": "B",
           "text": "143 days until comeback",
-          "textKo": "컴백까지 남은 143일"
+          "textKo": "컴백까지 남은 143일",
+          "textEs": "143 días hasta el comeback"
         },
         {
           "id": "C",
           "text": "Room 143 in their dorm",
-          "textKo": "숙소 143호"
+          "textKo": "숙소 143호",
+          "textEs": "Habitación 143 en su dormitorio"
         },
         {
           "id": "D",
           "text": "143 million Spotify streams",
-          "textKo": "1억 4300만 스트리밍"
+          "textKo": "1억 4300만 스트리밍",
+          "textEs": "143 millones de reproducciones en Spotify"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'143' is code for 'I Love You', representing the letter count of each word: I (1), Love (4), You (3).",
       "explanationKo": "143은 각 단어의 글자 수를 뜻하는 암호(I = 1글자, Love = 4글자, You = 3글자)로, '사랑'이라는 사건에 휘말린 감정을 위트 있게 표현했습니다.",
       "funFact": "It marked Stray Kids' first ever title track focusing on love!",
-      "funFactKo": "스트레이 키즈가 타이틀곡으로 '사랑'을 전면에 내세운 첫 번째 곡이었습니다!"
+      "funFactKo": "스트레이 키즈가 타이틀곡으로 '사랑'을 전면에 내세운 첫 번째 곡이었습니다!",
+      "questionEs": "¿Cuál es el significado secreto detrás de los números en el tema principal 'CASE 143'?",
+      "explanationEs": "143 es el código numérico clásico donde el número de letras en cada palabra forma: I (1) Love (4) You (3).",
+      "funFactEs": "Fue la primera canción principal de Stray Kids en tener como tema central directo el sentimiento del amor."
     },
     {
       "id": 34,
@@ -1187,29 +1440,36 @@
         {
           "id": "A",
           "text": "NOISY (noisy) + NO EASY (not easy)",
-          "textKo": "NOISY(시끄러운) + NO EASY(쉽지 않은)"
+          "textKo": "NOISY(시끄러운) + NO EASY(쉽지 않은)",
+          "textEs": "NOISY (ruidoso) + NO EASY (nada fácil)"
         },
         {
           "id": "B",
           "text": "No Rest + Easy Going",
-          "textKo": "No Rest + Easy Going"
+          "textKo": "No Rest + Easy Going",
+          "textEs": "Sin descanso + Relajado"
         },
         {
           "id": "C",
           "text": "Never Over + Always Easy",
-          "textKo": "Never Over + Always Easy"
+          "textKo": "Never Over + Always Easy",
+          "textEs": "Nunca terminado + Siempre fácil"
         },
         {
           "id": "D",
           "text": "New Era + Easy Song",
-          "textKo": "New Era + Easy Song"
+          "textKo": "New Era + Easy Song",
+          "textEs": "Nueva era + Canción fácil"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'NOEASY' combines 'NOISY' (referencing critics calling their music noisy) and 'NO EASY' (their journey isn't easy, but they conquer it).",
       "explanationKo": "시끄럽다고 지적하는 이들에게 '시끄러운(NOISY)' 소리꾼으로 답하며, '쉽지 않은(NO EASY)' 길을 돌파하겠다는 통쾌한 언어유희입니다.",
       "funFact": "The album officially made Stray Kids their agency's first 'Million Seller' group!",
-      "funFactKo": "이 앨범으로 JYP 최초의 단일 앨범 밀리언셀러에 등극했습니다!"
+      "funFactKo": "이 앨범으로 JYP 최초의 단일 앨범 밀리언셀러에 등극했습니다!",
+      "questionEs": "¿Cuál es el ingenioso doble significado detrás del título de su segundo álbum de estudio 'NOEASY'?",
+      "explanationEs": "Convierte las críticas sobre hacer 'música ruidosa' (noisy) en un juego de palabras que afirma que su camino 'no es fácil' (no easy).",
+      "funFactEs": "'NOEASY' se convirtió en el primer álbum de Stray Kids en superar el millón de copias vendidas."
     },
     {
       "id": 35,
@@ -1220,29 +1480,36 @@
         {
           "id": "A",
           "text": "ATE",
-          "textKo": "ATE"
+          "textKo": "ATE",
+          "textEs": "ATE"
         },
         {
           "id": "B",
           "text": "ROCK-STAR",
-          "textKo": "ROCK-STAR"
+          "textKo": "ROCK-STAR",
+          "textEs": "ROCK-STAR"
         },
         {
           "id": "C",
           "text": "5-STAR",
-          "textKo": "5-STAR"
+          "textKo": "5-STAR",
+          "textEs": "5-STAR"
         },
         {
           "id": "D",
           "text": "MAXIDENT",
-          "textKo": "MAXIDENT"
+          "textKo": "MAXIDENT",
+          "textEs": "MAXIDENT"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'ATE' debuted at #1 on the Billboard 200, making Stray Kids the first musical act in the world to debut their first 5 consecutive chart entries at #1.",
       "explanationKo": "미니 앨범 'ATE'는 빌보드 200 1위로 직행하며, 전 세계 음악 역사상 최초로 5개 앨범 연속 빌보드 200 1위 진입 대기록을 썼습니다.",
       "funFact": "The phrase 'They ATE' is popular slang meaning they delivered a flawless performance!",
-      "funFactKo": "'ATE'는 해외에서 '무대를 완벽하게 찢었다(They ATE)'라는 유행어 의미도 담고 있습니다!"
+      "funFactKo": "'ATE'는 해외에서 '무대를 완벽하게 찢었다(They ATE)'라는 유행어 의미도 담고 있습니다!",
+      "questionEs": "¿Qué mini álbum lanzado en julio de 2024 presenta el tema con ritmos latinos 'Chk Chk Boom'?",
+      "explanationEs": "El mini álbum 'ATE' presentó 'Chk Chk Boom', mezclando hip-hop con reguetón latino y versos en español.",
+      "funFactEs": "En la letra de 'Chk Chk Boom', cantan frases en español como 'vamos, aprieta' y 'la vida loca'."
     },
     {
       "id": 36,
@@ -1253,29 +1520,36 @@
         {
           "id": "A",
           "text": "Malaysia",
-          "textKo": "말레이시아 (Malaysia)"
+          "textKo": "말레이시아 (Malaysia)",
+          "textEs": "Malasia"
         },
         {
           "id": "B",
           "text": "New Zealand",
-          "textKo": "뉴질랜드"
+          "textKo": "뉴질랜드",
+          "textEs": "Nueva Zelanda"
         },
         {
           "id": "C",
           "text": "Canada",
-          "textKo": "캐나다"
+          "textKo": "캐나다",
+          "textEs": "Canadá"
         },
         {
           "id": "D",
           "text": "Philippines",
-          "textKo": "필리핀"
+          "textKo": "필리핀",
+          "textEs": "Filipinas"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Han lived in Malaysia with his family during his school years before returning to Korea to audition for JYP.",
       "explanationKo": "한은 학창 시절 말레이시아에서 거주했으며, 가수의 꿈을 이루기 위해 한국으로 돌아와 오디션에 합격했습니다.",
       "funFact": "He shared a hilarious story about encountering a giant monitor lizard while living in Malaysia!",
-      "funFactKo": "말레이시아 정글 인근에서 거대한 도마뱀과 마주쳤던 일화를 유쾌하게 풀어내 화제가 되었습니다!"
+      "funFactKo": "말레이시아 정글 인근에서 거대한 도마뱀과 마주쳤던 일화를 유쾌하게 풀어내 화제가 되었습니다!",
+      "questionEs": "Antes de convertirse en aprendiz, ¿en qué país vivió el miembro Han durante varios años?",
+      "explanationEs": "Han vivió y estudió en Malasia durante su infancia antes de regresar a Corea para perseguir su sueño de ser rapero.",
+      "funFactEs": "Hizo una promesa con sus padres de que si no entraba a una agencia en un año, regresaría a Malasia a estudiar."
     },
     {
       "id": 37,
@@ -1286,29 +1560,36 @@
         {
           "id": "A",
           "text": "DAY6",
-          "textKo": "DAY6 (데이식스)"
+          "textKo": "DAY6 (데이식스)",
+          "textEs": "DAY6"
         },
         {
           "id": "B",
           "text": "2PM",
-          "textKo": "2PM"
+          "textKo": "2PM",
+          "textEs": "2PM"
         },
         {
           "id": "C",
           "text": "CNBLUE",
-          "textKo": "씨엔블루"
+          "textKo": "씨엔블루",
+          "textEs": "CNBLUE"
         },
         {
           "id": "D",
           "text": "FTISLAND",
-          "textKo": "FT아일랜드"
+          "textKo": "FT아일랜드",
+          "textEs": "FTISLAND"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Seungmin is widely known as the president of DAY6's fandom 'My Day', frequently singing their songs and attending concerts.",
       "explanationKo": "승민은 DAY6의 찐팬인 '마이데이 회장님'으로 불리며, 데이식스의 모든 노래를 꿰차고 있습니다.",
       "funFact": "Day6's Young K and Wonpil have frequently praised Seungmin's incredible vocal tone and passion!",
-      "funFactKo": "데이식스 영케이와 원필도 승민의 보컬 실력과 남다른 팬심을 방송에서 자주 칭찬했습니다!"
+      "funFactKo": "데이식스 영케이와 원필도 승민의 보컬 실력과 남다른 팬심을 방송에서 자주 칭찬했습니다!",
+      "questionEs": "Seungmin es reconocido en la comunidad de K-pop como el fanático #1 de qué banda de JYP?",
+      "explanationEs": "Seungmin es un 'My Day' (fan de DAY6) devoto, asistiendo a sus conciertos, cantando sus temas y compartiendo covers con frecuencia.",
+      "funFactEs": "Fue presentador especial del programa de radio 'Kiss the Radio' de Young K de DAY6."
     },
     {
       "id": 38,
@@ -1319,29 +1600,36 @@
         {
           "id": "A",
           "text": "LALALALA (락 樂)",
-          "textKo": "락 (樂 - LALALALA)"
+          "textKo": "락 (樂 - LALALALA)",
+          "textEs": "LALALALA (락 樂)"
         },
         {
           "id": "B",
           "text": "MEGAVERSE",
-          "textKo": "MEGAVERSE"
+          "textKo": "MEGAVERSE",
+          "textEs": "MEGAVERSE"
         },
         {
           "id": "C",
           "text": "Social Path",
-          "textKo": "Social Path"
+          "textKo": "Social Path",
+          "textEs": "Social Path"
         },
         {
           "id": "D",
           "text": "TOPLINE",
-          "textKo": "TOPLINE"
+          "textKo": "TOPLINE",
+          "textEs": "TOPLINE"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'LALALALA' debuted on the Billboard Hot 100 at #90 in November 2023, making them only the second K-pop boy group ever to chart there.",
       "explanationKo": "'락 (樂)'은 2023년 11월 빌보드 핫 100 차트 90위로 진입하며 방탄소년단에 이어 K-Pop 보이그룹 사상 두 번째 쾌거를 달성했습니다.",
       "funFact": "The rock version performed at award shows featured live electric guitar shredding!",
-      "funFactKo": "시상식에서 일렉 기타 사운드와 함께 선보인 록 버전 라이브 무대는 엄청난 전율을 안겼습니다!"
+      "funFactKo": "시상식에서 일렉 기타 사운드와 함께 선보인 록 버전 라이브 무대는 엄청난 전율을 안겼습니다!",
+      "questionEs": "¿Qué enérgico himno de rock del álbum 'ROCK-STAR' fue el primer tema de Stray Kids en entrar al Billboard Hot 100?",
+      "explanationEs": "'LALALALA' (락) debutó en el Billboard Hot 100 en noviembre de 2023, convirtiéndolos en el segundo grupo masculino de K-pop en la historia en ingresar a la lista.",
+      "funFactEs": "El título coreano '락' (Rak) juega con el significado de música rock y alegría (樂)."
     },
     {
       "id": 39,
@@ -1352,29 +1640,36 @@
         {
           "id": "A",
           "text": "Tiger JK",
-          "textKo": "타이거 JK (Tiger JK)"
+          "textKo": "타이거 JK (Tiger JK)",
+          "textEs": "Tiger JK"
         },
         {
           "id": "B",
           "text": "Dynamic Duo",
-          "textKo": "다이나믹 듀오"
+          "textKo": "다이나믹 듀오",
+          "textEs": "Dynamic Duo"
         },
         {
           "id": "C",
           "text": "Epik High",
-          "textKo": "에픽하이"
+          "textKo": "에픽하이",
+          "textEs": "Epik High"
         },
         {
           "id": "D",
           "text": "Zico",
-          "textKo": "지코"
+          "textKo": "지코",
+          "textEs": "Zico"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Korean hip-hop pioneer Tiger JK featured on 'TOPLINE' and performed alongside Stray Kids at the MAMA Awards.",
       "explanationKo": "한국 힙합의 대부 타이거 JK가 피처링에 참여했으며, MAMA 시상식에서 레전드 합동 무대를 펼쳤습니다.",
       "funFact": "Tiger JK praised 3RACHA's raw songwriting passion and called them true hip-hop innovators!",
-      "funFactKo": "타이거 JK는 3RACHA의 작업 열정과 작사 능력을 극찬하며 진정한 힙합퍼라고 치켜세웠습니다!"
+      "funFactKo": "타이거 JK는 3RACHA의 작업 열정과 작사 능력을 극찬하며 진정한 힙합퍼라고 치켜세웠습니다!",
+      "questionEs": "¿Qué legendario pionero del hip-hop coreano colaboró en el tema 'TOPLINE' del álbum 5-STAR?",
+      "explanationEs": "Tiger JK (leyenda de Drunken Tiger) participó con un verso histórico elogiando a 3RACHA por su autenticidad y energía.",
+      "funFactEs": "3RACHA ya había colaborado previamente con Tiger JK en Mnet Asian Music Awards (MAMA)."
     },
     {
       "id": 40,
@@ -1385,29 +1680,36 @@
         {
           "id": "A",
           "text": "SKZ CODE",
-          "textKo": "SKZ CODE (스키즈 코드)"
+          "textKo": "SKZ CODE (스키즈 코드)",
+          "textEs": "SKZ CODE"
         },
         {
           "id": "B",
           "text": "Going Stray",
-          "textKo": "Going Stray"
+          "textKo": "Going Stray",
+          "textEs": "Going Stray"
         },
         {
           "id": "C",
           "text": "Run SKZ",
-          "textKo": "Run SKZ"
+          "textKo": "Run SKZ",
+          "textEs": "Run SKZ"
         },
         {
           "id": "D",
           "text": "Real SKZ",
-          "textKo": "Real SKZ"
+          "textKo": "Real SKZ",
+          "textEs": "Real SKZ"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'SKZ CODE' is their official weekly variety series on YouTube, showcasing their hilarious chemistry in games and vacations.",
       "explanationKo": "'SKZ CODE(스키즈 코드)'는 공식 유튜브 자체 리얼 버라이어티로, 멤버들의 날것 그대로의 꿀잼 케미를 담아냅니다.",
       "funFact": "Episodes often trend worldwide immediately upon release on Thursday evenings!",
-      "funFactKo": "목요일 저녁에 업로드될 때마다 글로벌 트위터 실시간 트렌드를 장악합니다!"
+      "funFactKo": "목요일 저녁에 업로드될 때마다 글로벌 트위터 실시간 트렌드를 장악합니다!",
+      "questionEs": "¿Cómo se llama la serie semanal de variedades en YouTube de Stray Kids amada por su caos espontáneo?",
+      "explanationEs": "'SKZ CODE' (스키즈 코드) es su emblemático programa de entretenimiento propio donde realizan juegos, campamentos y dinámicas cómicas.",
+      "funFactEs": "Varios episodios han superado decenas de millones de visualizaciones debido a las hilarantes ocurrencias de los chicos."
     },
     {
       "id": 41,
@@ -1418,29 +1720,36 @@
         {
           "id": "A",
           "text": "School Life",
-          "textKo": "School Life"
+          "textKo": "School Life",
+          "textEs": "School Life"
         },
         {
           "id": "B",
           "text": "GLOW",
-          "textKo": "GLOW"
+          "textKo": "GLOW",
+          "textEs": "GLOW"
         },
         {
           "id": "C",
           "text": "4419",
-          "textKo": "4419"
+          "textKo": "4419",
+          "textEs": "4419"
         },
         {
           "id": "D",
           "text": "YAYAYA",
-          "textKo": "YAYAYA"
+          "textKo": "YAYAYA",
+          "textEs": "YAYAYA"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'School Life' was composed by 3RACHA expressing the suffocating daily repetition of school and subway commutes.",
       "explanationKo": "'School Life'는 매일 반복되는 학교생활과 지하철 통학길의 답답함을 유쾌하고 재치 있게 풀어낸 3RACHA의 명곡입니다.",
       "funFact": "The song featured choreo personally conceived by the members during the survival rounds!",
-      "funFactKo": "서바이벌 미션 당시 멤버들이 안무 창작까지 도맡아 박진영 프로듀서의 호평을 받았습니다!"
+      "funFactKo": "서바이벌 미션 당시 멤버들이 안무 창작까지 도맡아 박진영 프로듀서의 호평을 받았습니다!",
+      "questionEs": "Durante el show de supervivencia de 2017, ¿qué canción escribieron 3RACHA inspirada en su viaje en metro hacia la sala de ensayos?",
+      "explanationEs": "'4419' lleva el número de la línea de autobús y rutas de metro que Bang Chan y sus compañeros tomaban a diario de regreso a casa tras entrenar de noche.",
+      "funFactEs": "La letra expresa nostalgia y gratitud por los amigos con los que compartió los duros años de entrenamiento."
     },
     {
       "id": 42,
@@ -1451,29 +1760,36 @@
         {
           "id": "A",
           "text": "Chan's Room (찬이의 '방')",
-          "textKo": "찬이의 '방' (Chan's Room)"
+          "textKo": "찬이의 '방' (Chan's Room)",
+          "textEs": "Chan's Room (찬이의 '방')"
         },
         {
           "id": "B",
           "text": "Chan's Studio",
-          "textKo": "Chan's Studio"
+          "textKo": "Chan's Studio",
+          "textEs": "Chan's Studio"
         },
         {
           "id": "C",
           "text": "Leader's Lounge",
-          "textKo": "Leader's Lounge"
+          "textKo": "Leader's Lounge",
+          "textEs": "Leader's Lounge"
         },
         {
           "id": "D",
           "text": "Midnight with Chris",
-          "textKo": "Midnight with Chris"
+          "textKo": "Midnight with Chris",
+          "textEs": "Midnight with Chris"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'Chan's Room' (찬이의 '방') was Bang Chan's iconic weekly livestream where he connected deeply with global fans.",
       "explanationKo": "'찬이의 '방''은 방찬이 작업실에서 주말마다 팬들과 음악을 나누며 진솔한 위로를 전하던 레전드 라이브 방송입니다.",
       "funFact": "Bang Chan always ended every episode by giving his viewers a warm 'big hug' towards the screen!",
-      "funFactKo": "방송을 마칠 때마다 화면을 향해 두 팔을 벌려 'Big Hug(포옹)'를 선물하는 것이 시그니처였습니다!"
+      "funFactKo": "방송을 마칠 때마다 화면을 향해 두 팔을 벌려 'Big Hug(포옹)'를 선물하는 것이 시그니처였습니다!",
+      "questionEs": "¿Cómo se llamaba la querida transmisión en vivo semanal en solitario de Bang Chan donde charló y dio consejos durante más de 200 episodios?",
+      "explanationEs": "'Chan's Room' (찬이의 '방') fue un espacio semanal íntimo donde Bang Chan escuchaba música de otros artistas y reconfortaba a STAY.",
+      "funFactEs": "Finalizaba cada episodio con un emotivo y reconfortante 'Big Hug' virtual para los fans de todo el mundo."
     },
     {
       "id": 33,
@@ -1484,29 +1800,36 @@
         {
           "id": "A",
           "text": "Versace (베르사체)",
-          "textKo": "베르사체 (Versace)"
+          "textKo": "베르사체 (Versace)",
+          "textEs": "I (1) Love (4) You (3)"
         },
         {
           "id": "B",
           "text": "Gucci",
-          "textKo": "구찌 (Gucci)"
+          "textKo": "구찌 (Gucci)",
+          "textEs": "143 días hasta el comeback"
         },
         {
           "id": "C",
           "text": "Prada",
-          "textKo": "프라다 (Prada)"
+          "textKo": "프라다 (Prada)",
+          "textEs": "Habitación 143 en su dormitorio"
         },
         {
           "id": "D",
           "text": "Fendi",
-          "textKo": "펜디 (Fendi)"
+          "textKo": "펜디 (Fendi)",
+          "textEs": "143 millones de reproducciones en Spotify"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Donatella Versace personally welcomed Hyunjin as Versace's first Korean Global Brand Ambassador, praising his fearless artistic confidence.",
       "explanationKo": "도나텔라 베르사체가 직접 현진을 지목하며 한국인 최초 글로벌 앰버서더로 임명했습니다.",
       "funFact": "Hyunjin starred in Versace's worldwide Holiday campaign shot in Europe!",
-      "funFactKo": "베르사체의 글로벌 홀리데이 캠페인 메인 모델로 전 세계 매장 전면에 걸렸습니다!"
+      "funFactKo": "베르사체의 글로벌 홀리데이 캠페인 메인 모델로 전 세계 매장 전면에 걸렸습니다!",
+      "questionEs": "¿Cuál es el significado secreto detrás de los números en el tema principal 'CASE 143'?",
+      "explanationEs": "143 es el código numérico clásico donde el número de letras en cada palabra forma: I (1) Love (4) You (3).",
+      "funFactEs": "Fue la primera canción principal de Stray Kids en tener como tema central directo el sentimiento del amor."
     },
     {
       "id": 44,
@@ -1517,29 +1840,36 @@
         {
           "id": "A",
           "text": "Louis Vuitton",
-          "textKo": "루이 비통 (Louis Vuitton)"
+          "textKo": "루이 비통 (Louis Vuitton)",
+          "textEs": "Louis Vuitton"
         },
         {
           "id": "B",
           "text": "Dior",
-          "textKo": "디올 (Dior)"
+          "textKo": "디올 (Dior)",
+          "textEs": "Dior"
         },
         {
           "id": "C",
           "text": "Saint Laurent",
-          "textKo": "생 로랑 (Saint Laurent)"
+          "textKo": "생 로랑 (Saint Laurent)",
+          "textEs": "Saint Laurent"
         },
         {
           "id": "D",
           "text": "Balenciaga",
-          "textKo": "발렌시아가 (Balenciaga)"
+          "textKo": "발렌시아가 (Balenciaga)",
+          "textEs": "Balenciaga"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Felix walked the runway at Louis Vuitton's Fall/Winter 2024 women's collection show in Paris, hand-picked by artistic director Nicolas Ghesquière.",
       "explanationKo": "필릭스는 루이 비통 여성복 아티스틱 디렉터 니콜라 제스키에르의 선택을 받아 파리 루브르 박물관 런웨이를 직접 걸었습니다.",
       "funFact": "He walked the finale alongside model Jung Ho-yeon!",
-      "funFactKo": "배우 정호연과 함께 피날레 런웨이를 장식하며 전 세계 패션계를 뜨겁게 달궜습니다!"
+      "funFactKo": "배우 정호연과 함께 피날레 런웨이를 장식하며 전 세계 패션계를 뜨겁게 달궜습니다!",
+      "questionEs": "En marzo de 2024, ¿para qué legendaria casa de lujo francesa debutó Felix como modelo de pasarela en la Semana de la Moda de París?",
+      "explanationEs": "Felix desfiló en la pasarela de otoño-invierno 2024 de Louis Vuitton en París por invitación del director artístico Nicolas Ghesquière.",
+      "funFactEs": "Caminó de la mano con la actriz de Squid Game Jung Ho-yeon en el cierre del desfile en el Museo del Louvre."
     },
     {
       "id": 45,
@@ -1550,29 +1880,36 @@
         {
           "id": "A",
           "text": "Air fryer at 180 degrees (에어프라이어 180도)",
-          "textKo": "에어프라이어 180도 (Air fryer at 180°C)"
+          "textKo": "에어프라이어 180도 (Air fryer at 180°C)",
+          "textEs": "Freidora de aire a 180 grados (에어프라이어 180도)"
         },
         {
           "id": "B",
           "text": "Microwave for 3 minutes",
-          "textKo": "전자레인지 3분"
+          "textKo": "전자레인지 3분",
+          "textEs": "Microondas por 3 minutos"
         },
         {
           "id": "C",
           "text": "Freezer at -20 degrees",
-          "textKo": "냉동실 영하 20도"
+          "textKo": "냉동실 영하 20도",
+          "textEs": "Congelador a -20 grados"
         },
         {
           "id": "D",
           "text": "Toaster on high",
-          "textKo": "토스터기 강불"
+          "textKo": "토스터기 강불",
+          "textEs": "Tostadora a máxima potencia"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Lee Know's trademark gag: 'If you keep talking back, I will put you in the air fryer at 180 degrees!'",
       "explanationKo": "리노의 유명한 시그니처 멘트인 \"자꾸 까불면 에어프라이어 180도에 돌려버린다!\"는 팬들의 대표적인 웃음벨입니다.",
       "funFact": "Fans even brought mini toy air fryers to fan sign events!",
-      "funFactKo": "팬사인회에 장난감 에어프라이어를 들고 오는 팬들이 있을 정도로 유명한 밈입니다!"
+      "funFactKo": "팬사인회에 장난감 에어프라이어를 들고 오는 팬들이 있을 정도로 유명한 밈입니다!",
+      "questionEs": "¿A qué temperatura y en qué electrodoméstico bromea Lee Know con meter a los miembros que no se portan bien?",
+      "explanationEs": "La famosa amenaza cómica de Lee Know es: 'Te voy a meter a la freidora de aire a 180 grados' (에어프라이어에 180도로 돌려버린다).",
+      "funFactEs": "Es uno de los memes más queridos del fandom y los propios miembros suelen reírse cada vez que lo menciona."
     },
     {
       "id": 46,
@@ -1583,29 +1920,36 @@
         {
           "id": "A",
           "text": "Lee Know & Felix",
-          "textKo": "리노 & 필릭스 (Lee Know & Felix)"
+          "textKo": "리노 & 필릭스 (Lee Know & Felix)",
+          "textEs": "Lee Know y Felix"
         },
         {
           "id": "B",
           "text": "Hyunjin & Han",
-          "textKo": "현진 & 한"
+          "textKo": "현진 & 한",
+          "textEs": "Hyunjin y Han"
         },
         {
           "id": "C",
           "text": "Seungmin & I.N",
-          "textKo": "승민 & 아이엔"
+          "textKo": "승민 & 아이엔",
+          "textEs": "Seungmin e I.N"
         },
         {
           "id": "D",
           "text": "Changbin & Bang Chan",
-          "textKo": "창빈 & 방찬"
+          "textKo": "창빈 & 방찬",
+          "textEs": "Changbin y Bang Chan"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Lee Know was eliminated in Episode 4 and Felix in Episode 8, but Park Jin-young gave them a second chance in the live finale.",
       "explanationKo": "리노와 필릭스가 탈락했으나, 9명이 함께할 때 가장 완벽하다는 팬들과 멤버들의 염원으로 생방송에서 전원 데뷔가 확정되었습니다.",
       "funFact": "The emotional embrace when Felix was called back is etched in every STAY's memory!",
-      "funFactKo": "방찬과 탈락했던 멤버들이 다시 얼싸안고 눈물을 흘리던 장면은 역대급 명장면입니다!"
+      "funFactKo": "방찬과 탈락했던 멤버들이 다시 얼싸안고 눈물을 흘리던 장면은 역대급 명장면입니다!",
+      "questionEs": "Durante el show de supervivencia de 2017, ¿qué dos miembros fueron eliminados inicialmente pero reincorporados para la final?",
+      "explanationEs": "Lee Know y Felix fueron eliminados en episodios intermedios, pero J.Y. Park les dio una segunda oportunidad en la emisión final en vivo.",
+      "funFactEs": "El 96% de la audiencia en vivo votó a favor de que el grupo debutara como alineación completa de 9 integrantes."
     },
     {
       "id": 47,
@@ -1616,29 +1960,36 @@
         {
           "id": "A",
           "text": "Baseball (야구)",
-          "textKo": "야구 (Baseball)"
+          "textKo": "야구 (Baseball)",
+          "textEs": "Béisbol (야구)"
         },
         {
           "id": "B",
           "text": "Soccer (축구)",
-          "textKo": "축구 (Soccer)"
+          "textKo": "축구 (Soccer)",
+          "textEs": "Fútbol (축구)"
         },
         {
           "id": "C",
           "text": "Swimming (수영)",
-          "textKo": "수영 (Swimming)"
+          "textKo": "수영 (Swimming)",
+          "textEs": "Natación (수영)"
         },
         {
           "id": "D",
           "text": "Basketball (농구)",
-          "textKo": "농구 (Basketball)"
+          "textKo": "농구 (Basketball)",
+          "textEs": "Baloncesto (농구)"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Seungmin was a skilled baseball player and pitched, but had to give it up after an arm injury, leading him to pursue singing.",
       "explanationKo": "승민은 초등학교 시절 야구선수를 꿈꾸며 투수로 활약했으나, 부상 이후 음악에 전념하게 되었습니다.",
       "funFact": "He threw an impressive ceremonial first pitch for the Lotte Giants at Sajik Baseball Stadium in 2023!",
-      "funFactKo": "2023년 사직야구장에서 롯데 자이언츠 시구자로 나서 완벽한 와인드업 폼을 선보였습니다!"
+      "funFactKo": "2023년 사직야구장에서 롯데 자이언츠 시구자로 나서 완벽한 와인드업 폼을 선보였습니다!",
+      "questionEs": "¿Qué deporte practicaba Seungmin apasionadamente en su niñez soñando con ser lanzador antes de dedicarse a la música?",
+      "explanationEs": "Seungmin fue un talentoso lanzador de béisbol en la escuela primaria e incluso realizó el primer lanzamiento ceremonial en partidos profesionales de la KBO.",
+      "funFactEs": "Lanzó un strike perfecto en el estadio Gocheok Sky Dome vistiendo el uniforme de los Lotte Giants."
     },
     {
       "id": 48,
@@ -1649,29 +2000,36 @@
         {
           "id": "A",
           "text": "Red Lights (강박)",
-          "textKo": "강박 (Red Lights)"
+          "textKo": "강박 (Red Lights)",
+          "textEs": "Red Lights (강박)"
         },
         {
           "id": "B",
           "text": "Drive",
-          "textKo": "Drive"
+          "textKo": "Drive",
+          "textEs": "Drive"
         },
         {
           "id": "C",
           "text": "Taste",
-          "textKo": "Taste"
+          "textKo": "Taste",
+          "textEs": "Taste"
         },
         {
           "id": "D",
           "text": "Surfin'",
-          "textKo": "Surfin'"
+          "textKo": "Surfin'",
+          "textEs": "Surfin'"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'Red Lights' (강박) was composed by Bang Chan and Hyunjin, exploring the psychological obsession with perfection.",
       "explanationKo": "'강박 (Red Lights)'은 완벽을 향한 집착과 고뇌를 끈 퍼포먼스로 예술적으로 승화시킨 방찬과 현진의 유닛곡입니다.",
       "funFact": "Its music video surpassed 100 million views on YouTube!",
-      "funFactKo": "뮤직비디오가 유튜브 조회수 1억 뷰를 돌파할 정도로 큰 화제를 모았습니다!"
+      "funFactKo": "뮤직비디오가 유튜브 조회수 1억 뷰를 돌파할 정도로 큰 화제를 모았습니다!",
+      "questionEs": "¿Cuál es el título del sensual dueto dramático compuesto e interpretado por Bang Chan y Hyunjin en el álbum NOEASY?",
+      "explanationEs": "'Red Lights' (título coreano '강박' / Compulsión) aborda la obsesión artística y el perfeccionismo que no te deja dormir.",
+      "funFactEs": "El video musical y las coreografías en concierto se convirtieron en una de las presentaciones más icónicas y comentadas de Stray Kids."
     },
     {
       "id": 49,
@@ -1682,29 +2040,36 @@
         {
           "id": "A",
           "text": "Easy",
-          "textKo": "Easy"
+          "textKo": "Easy",
+          "textEs": "Easy"
         },
         {
           "id": "B",
           "text": "Pacemaker",
-          "textKo": "Pacemaker"
+          "textKo": "Pacemaker",
+          "textEs": "Pacemaker"
         },
         {
           "id": "C",
           "text": "TA",
-          "textKo": "타 (TA)"
+          "textKo": "타 (TA)",
+          "textEs": "TA"
         },
         {
           "id": "D",
           "text": "Phobia",
-          "textKo": "Phobia"
+          "textKo": "Phobia",
+          "textEs": "Phobia"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'Easy' was set as the title track until 3RACHA wrote 'God's Menu' at the last minute and convinced J.Y. Park to switch tracks.",
       "explanationKo": "원래는 'Easy'가 타이틀곡이었으나, 3RACHA가 작업실에서 '神메뉴'를 완성한 후 박진영 PD를 설득해 컴백 직전 타이틀곡을 교체했습니다.",
       "funFact": "This bold decision completely changed the trajectory of Stray Kids' career!",
-      "funFactKo": "이 과감한 결정 덕분에 스키즈의 전설적인 '마라맛 장르'가 세상에 나올 수 있었습니다!"
+      "funFactKo": "이 과감한 결정 덕분에 스키즈의 전설적인 '마라맛 장르'가 세상에 나올 수 있었습니다!",
+      "questionEs": "Antes de que 3RACHA compusiera 'God's Menu', ¿qué otra canción estaba prevista originalmente para ser el tema principal de GO LIVE?",
+      "explanationEs": "'Easy' estaba programada como la canción principal original, pero cuando 3RACHA compuso 'God's Menu', convencieron a la directiva de cambiarla.",
+      "funFactEs": "Cambiar el tema principal a última hora retrasó el comeback, pero resultó ser la mejor decisión en la historia del grupo."
     },
     {
       "id": 50,
@@ -1715,29 +2080,36 @@
         {
           "id": "A",
           "text": "WOLFGANG",
-          "textKo": "WOLFGANG (울프강)"
+          "textKo": "WOLFGANG (울프강)",
+          "textEs": "WOLFGANG"
         },
         {
           "id": "B",
           "text": "Victory Song",
-          "textKo": "승전가 (Victory Song)"
+          "textKo": "승전가 (Victory Song)",
+          "textEs": "Victory Song"
         },
         {
           "id": "C",
           "text": "Double Knot",
-          "textKo": "Double Knot"
+          "textKo": "Double Knot",
+          "textEs": "Double Knot"
         },
         {
           "id": "D",
           "text": "Boxer",
-          "textKo": "Boxer"
+          "textKo": "Boxer",
+          "textEs": "Boxer"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'WOLFGANG' compared Stray Kids to a relentless wolf pack hunting together, referencing Wolfgang Amadeus Mozart.",
       "explanationKo": "'WOLFGANG'은 음악의 거장 볼프강 아마데우스 모차르트와 무리를 지어 사냥하는 늑대 떼를 결합한 압도적 피날레 곡입니다.",
       "funFact": "The intense pack choreography secured their landslide 1st place victory!",
-      "funFactKo": "이 무대의 압도적인 점수로 킹덤의 최종 우승 트로피를 거머쥐었습니다!"
+      "funFactKo": "이 무대의 압도적인 점수로 킹덤의 최종 우승 트로피를 거머쥐었습니다!",
+      "questionEs": "¿Cuál es el concepto y título del apoteósico tema con el que Stray Kids cerró y ganó 'Kingdom: Legendary War'?",
+      "explanationEs": "'WOLFGANG' recrea una manada de lobos salvajes inspirada en Wolfgang Amadeus Mozart, mostrando su ferocidad y liderazgo musical.",
+      "funFactEs": "La canción alcanzó altos puestos en las listas globales de iTunes inmediatamente después de la transmisión en vivo."
     },
     {
       "id": 51,
@@ -1748,29 +2120,36 @@
         {
           "id": "A",
           "text": "Trot (트로트)",
-          "textKo": "트로트 (Trot)"
+          "textKo": "트로트 (Trot)",
+          "textEs": "Trot (트로트)"
         },
         {
           "id": "B",
           "text": "Pansori",
-          "textKo": "판소리"
+          "textKo": "판소리",
+          "textEs": "Pansori"
         },
         {
           "id": "C",
           "text": "Opera",
-          "textKo": "오페라"
+          "textKo": "오페라",
+          "textEs": "Ópera"
         },
         {
           "id": "D",
           "text": "Jazz",
-          "textKo": "재즈"
+          "textKo": "재즈",
+          "textEs": "Jazz"
         }
       ],
       "correctAnswer": "A",
       "explanation": "I.N loved singing trot music growing up in Busan, earning praise for his soulful vocal vibrato.",
       "explanationKo": "아이엔은 어린 시절부터 트로트를 맛깔나게 불러 어르신들의 사랑을 독차지했던 숨은 트로트 실력자입니다.",
       "funFact": "He famously performed trot songs on variety shows like 'Favorite Entertainment'!",
-      "funFactKo": "MBC 예능 '최애 엔터테인먼트'에 출연해 뛰어난 트로트 가창력을 뽐내기도 했습니다!"
+      "funFactKo": "MBC 예능 '최애 엔터테인먼트'에 출연해 뛰어난 트로트 가창력을 뽐내기도 했습니다!",
+      "questionEs": "Antes de entrenar en JYP, ¿qué género vocal tradicional coreano cantaba apasionadamente I.N de niño en Busan?",
+      "explanationEs": "I.N era conocido en Busan como el 'niño prodigio del trot', cantando temas folclóricos y clásicos ante los ancianos con gran carisma.",
+      "funFactEs": "Participó en el programa 'Favorite Entertainment' de MBC demostrando sus impecables habilidades para el trot."
     },
     {
       "id": 52,
@@ -1781,29 +2160,36 @@
         {
           "id": "A",
           "text": "The Maori Haka (하카)",
-          "textKo": "마오리족의 하카 (Haka)"
+          "textKo": "마오리족의 하카 (Haka)",
+          "textEs": "El Haka maorí (하카)"
         },
         {
           "id": "B",
           "text": "Flamenco",
-          "textKo": "플라멩코"
+          "textKo": "플라멩코",
+          "textEs": "Flamenco"
         },
         {
           "id": "C",
           "text": "Capoeira",
-          "textKo": "카포에이라"
+          "textKo": "카포에이라",
+          "textEs": "Capoeira"
         },
         {
           "id": "D",
           "text": "Samba",
-          "textKo": "삼바"
+          "textKo": "삼바",
+          "textEs": "Samba"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'MIROH' incorporates elements of the New Zealand Māori Haka war dance, projecting unity, strength, and raw intimidation.",
       "explanationKo": "'MIROH'의 안무는 뉴질랜드 마오리족의 전통 전사 춤인 '하카(Haka)'의 용맹한 기백을 오마주했습니다.",
       "funFact": "The roaring fanchant of MIROH is considered one of the most electrifying in concert history!",
-      "funFactKo": "콘서트장에서 펼쳐지는 'MIROH'의 떼창과 점프는 관객석을 통째로 흔들 정도로 장관입니다!"
+      "funFactKo": "콘서트장에서 펼쳐지는 'MIROH'의 떼창과 점프는 관객석을 통째로 흔들 정도로 장관입니다!",
+      "questionEs": "¿La enérgica coreografía del himno de 2019 'MIROH' estuvo inspirada en qué famosa danza guerrera cultural?",
+      "explanationEs": "La coreografía de 'MIROH' incorpora los movimientos de pisadas firmes, golpes de pecho y cantos tribales del Haka tradicional de Nueva Zelanda.",
+      "funFactEs": "'MIROH' significa laberinto (미로) en coreano, representando su valentía para conquistar la jungla del mundo moderno."
     },
     {
       "id": 53,
@@ -1814,29 +2200,36 @@
         {
           "id": "A",
           "text": "Newtown High School of the Performing Arts",
-          "textKo": "뉴타운 공연예술고등학교 (Newtown High School)"
+          "textKo": "뉴타운 공연예술고등학교 (Newtown High School)",
+          "textEs": "Newtown High School of the Performing Arts"
         },
         {
           "id": "B",
           "text": "Sydney Grammar School",
-          "textKo": "시드니 그래머 스쿨"
+          "textKo": "시드니 그래머 스쿨",
+          "textEs": "Sydney Grammar School"
         },
         {
           "id": "C",
           "text": "Melbourne High School",
-          "textKo": "멜버른 고등학교"
+          "textKo": "멜버른 고등학교",
+          "textEs": "Melbourne High School"
         },
         {
           "id": "D",
           "text": "Brisbane State High",
-          "textKo": "브리즈번 고등학교"
+          "textKo": "브리즈번 고등학교",
+          "textEs": "Brisbane State High"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Bang Chan attended the prestigious Newtown High School of the Performing Arts in Sydney before passing JYP's Australia audition.",
       "explanationKo": "방찬은 호주 명문 뉴타운 공연예술고등학교를 다니다가 JYP 글로벌 오디션에 합격하여 한국으로 왔습니다.",
       "funFact": "He was also a competitive swimmer in school with many medals!",
-      "funFactKo": "학창 시절 수영 대회에서도 다수의 메달을 땄을 정도로 만능 스포츠맨이었습니다!"
+      "funFactKo": "학창 시절 수영 대회에서도 다수의 메달을 땄을 정도로 만능 스포츠맨이었습니다!",
+      "questionEs": "¿A qué escuela secundaria de artes asistió Bang Chan en Sídney antes de mudarse a Corea para entrenar en JYP?",
+      "explanationEs": "Bang Chan asistió a la prestigiosa Newtown High School of the Performing Arts en Sídney, famosa por formar a talentos artísticos australianos.",
+      "funFactEs": "Pasó las audiciones globales de JYP en Australia en 2010 entre más de 800 aspirantes."
     },
     {
       "id": 54,
@@ -1847,29 +2240,36 @@
         {
           "id": "A",
           "text": "Alien (외계인)",
-          "textKo": "외계인 (Alien)"
+          "textKo": "외계인 (Alien)",
+          "textEs": "Alien (외계인)"
         },
         {
           "id": "B",
           "text": "Close",
-          "textKo": "Close"
+          "textKo": "Close",
+          "textEs": "Close"
         },
         {
           "id": "C",
           "text": "Wish You Back",
-          "textKo": "Wish You Back"
+          "textKo": "Wish You Back",
+          "textEs": "Wish You Back"
         },
         {
           "id": "D",
           "text": "HaPpy",
-          "textKo": "HaPpy"
+          "textKo": "HaPpy",
+          "textEs": "HaPpy"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Han wrote 'Alien' about his struggles with social anxiety, touching millions of fans who felt like outsiders.",
       "explanationKo": "'외계인 (Alien)'은 한이 불안과 외로움을 겪는 이들에게 '너는 혼자가 아니야'라는 따뜻한 연대를 건네는 자작곡입니다.",
       "funFact": "Han wrote the lyrics after gazing at the night sky from his room!",
-      "funFactKo": "작업실에서 밤하늘을 바라보며 떠오른 감정을 단숨에 가사로 옮겨 적었다고 합니다!"
+      "funFactKo": "작업실에서 밤하늘을 바라보며 떠오른 감정을 단숨에 가사로 옮겨 적었다고 합니다!",
+      "questionEs": "¿Cómo se llama la profunda canción en solitario de Han donde comparó sentirse incomprendido y diferente con un 'extraterrestre'?",
+      "explanationEs": "'Alien' (외계인) es una pieza de SKZ-RECORD donde Han reflexiona sobre la soledad y la ansiedad, reconfortando a muchos oyentes que se sienten fuera de lugar.",
+      "funFactEs": "Muchos fans han calificado a 'Alien' como una de las letras más sanadoras y poéticas del rap coreano."
     },
     {
       "id": 55,
@@ -1880,29 +2280,36 @@
         {
           "id": "A",
           "text": "Here Always",
-          "textKo": "Here Always"
+          "textKo": "Here Always",
+          "textEs": "Hometown Cha-Cha-Cha (갯마을 차차차)"
         },
         {
           "id": "B",
           "text": "Close to You",
-          "textKo": "Close to You"
+          "textKo": "Close to You",
+          "textEs": "Crash Landing on You"
         },
         {
           "id": "C",
           "text": "Phobia",
-          "textKo": "Phobia"
+          "textKo": "Phobia",
+          "textEs": "Start-Up"
         },
         {
           "id": "D",
           "text": "My Universe",
-          "textKo": "My Universe"
+          "textKo": "My Universe",
+          "textEs": "Our Blues"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Seungmin's OST 'Here Always' for 'Hometown Cha-Cha-Cha' charted globally and showcased his vocal delicacy.",
       "explanationKo": "드라마 '갯마을 차차차'의 OST 'Here Always'는 승민의 따뜻하고 감미로운 미성으로 전 세계 음원 차트를 휩쓸었습니다.",
       "funFact": "The song debuted at #8 on Billboard's World Digital Song Sales chart!",
-      "funFactKo": "빌보드 월드 디지털 송 세일즈 차트 8위로 데뷔하는 저력을 보였습니다!"
+      "funFactKo": "빌보드 월드 디지털 송 세일즈 차트 8위로 데뷔하는 저력을 보였습니다!",
+      "questionEs": "Seungmin conmovió al público con su banda sonora en solitario 'Here Always' para qué exitoso drama de tvN protagonizado por Kim Seon-ho y Shin Min-a?",
+      "explanationEs": "'Here Always' fue la emotiva balada romántica principal del drama 'Hometown Cha-Cha-Cha', posicionando a Seungmin como vocalista de élite de OST.",
+      "funFactEs": "La canción debutó en el #1 de iTunes en decenas de países y acumuló millones de reproducciones globales."
     },
     {
       "id": 56,
@@ -1913,29 +2320,36 @@
         {
           "id": "A",
           "text": "Jun Yong-jun (전용준 캐스터)",
-          "textKo": "전용준 캐스터 (Jun Yong-jun)"
+          "textKo": "전용준 캐스터 (Jun Yong-jun)",
+          "textEs": "Jun Yong-jun (전용준 캐스터)"
         },
         {
           "id": "B",
           "text": "Bae Sung-jae",
-          "textKo": "배성재 아나운서"
+          "textKo": "배성재 아나운서",
+          "textEs": "Bae Sung-jae"
         },
         {
           "id": "C",
           "text": "Sung Seung-heon",
-          "textKo": "성승헌 캐스터"
+          "textKo": "성승헌 캐스터",
+          "textEs": "Sung Seung-heon"
         },
         {
           "id": "D",
           "text": "Kim Dong-jun",
-          "textKo": "김동준 해설위원"
+          "textKo": "김동준 해설위원",
+          "textEs": "Kim Dong-jun"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Legendary League of Legends shoutcaster Jun Yong-jun lent his iconic booming voice to open the 'MEGAVERSE' video with epic hype.",
       "explanationKo": "'롤(LoL)' 전설의 캐스터 전용준이 'MEGAVERSE'의 시작을 알리는 강렬한 내레이션 카메오로 출연했습니다.",
       "funFact": "Gamers and K-pop fans united in amazement over the unexpected crossover!",
-      "funFactKo": "e스포츠 팬들과 K-Pop 팬들 모두 경악하며 환호했던 세기의 콜라보였습니다!"
+      "funFactKo": "e스포츠 팬들과 K-Pop 팬들 모두 경악하며 환호했던 세기의 콜라보였습니다!",
+      "questionEs": "¿Qué legendario comentarista coreano de deportes electrónicos (esports) tuvo un electrizante cameo en la intro del video de 'MEGAVERSE'?",
+      "explanationEs": "El emblemático comentarista Jun Yong-jun, famoso por gritar con máxima pasión en las finales de League of Legends (LCK), abrió el video cinematográfico.",
+      "funFactEs": "Su voz inconfundible y enérgica le dio al video musical una atmósfera épica de torneo intergaláctico."
     },
     {
       "id": 57,
@@ -1946,29 +2360,36 @@
         {
           "id": "A",
           "text": "Matryoshka",
-          "textKo": "Matryoshka (마트료시카)"
+          "textKo": "Matryoshka (마트료시카)",
+          "textEs": "Matryoshka"
         },
         {
           "id": "B",
           "text": "Runner's High",
-          "textKo": "Runner's High"
+          "textKo": "Runner's High",
+          "textEs": "Runner's High"
         },
         {
           "id": "C",
           "text": "Zone",
-          "textKo": "Zone"
+          "textKo": "Zone",
+          "textEs": "Zone"
         },
         {
           "id": "D",
           "text": "Subway",
-          "textKo": "Subway"
+          "textKo": "Subway",
+          "textEs": "Subway"
         }
       ],
       "correctAnswer": "A",
       "explanation": "3RACHA's rapid-fire performance of 'Matryoshka' became legendary for its relentless rhyme schemes and breathless speed.",
       "explanationKo": "창빈과 한의 숨 쉴 틈 없는 속사포 랩 배틀 곡인 'Matryoshka'는 지금까지도 회자되는 레전드 무대입니다.",
       "funFact": "Changbin's explosive opening line shocked both JYP and YG staff!",
-      "funFactKo": "창빈의 첫 랩 소절이 터지자마자 상대 기획사 스태프들까지 감탄을 금치 못했습니다!"
+      "funFactKo": "창빈의 첫 랩 소절이 터지자마자 상대 기획사 스태프들까지 감탄을 금치 못했습니다!",
+      "questionEs": "¿Qué canción pre-debut de 3RACHA fue presentada en la recordada batalla de aprendices contra los trainees de YG Entertainment en Mnet?",
+      "explanationEs": "'Matryoshka' fue interpretada por Changbin y Han en una memorable batalla de rap que dejó atónito al fundador de YG Yang Hyun-suk.",
+      "funFactEs": "El video de esa batalla de aprendices supera los 50 millones de reproducciones en YouTube."
     },
     {
       "id": 58,
@@ -1979,29 +2400,36 @@
         {
           "id": "A",
           "text": "CIRCUS",
-          "textKo": "CIRCUS (서커스)"
+          "textKo": "CIRCUS (서커스)",
+          "textEs": "CIRCUS"
         },
         {
           "id": "B",
           "text": "ALL IN",
-          "textKo": "ALL IN"
+          "textKo": "ALL IN",
+          "textEs": "ALL IN"
         },
         {
           "id": "C",
           "text": "FAM",
-          "textKo": "FAM"
+          "textKo": "FAM",
+          "textEs": "FAM"
         },
         {
           "id": "D",
           "text": "Scars",
-          "textKo": "Scars"
+          "textKo": "Scars",
+          "textEs": "Scars"
         }
       ],
       "correctAnswer": "A",
       "explanation": "'CIRCUS' was written and composed by 3RACHA, capturing the dizzying thrills of a circus ringmaster.",
       "explanationKo": "'CIRCUS'는 3RACHA가 직접 곡을 썼으며, 멤버들이 링마스터와 어릿광대로 분해 유쾌하고 화려한 무대를 선보였습니다.",
       "funFact": "Its catchy bridge and dizzying clock hand choreo went viral on Japanese TV!",
-      "funFactKo": "시곗바늘을 형상화한 포인트 안무가 일본 틱톡과 방송에서 큰 유행을 탔습니다!"
+      "funFactKo": "시곗바늘을 형상화한 포인트 안무가 일본 틱톡과 방송에서 큰 유행을 탔습니다!",
+      "questionEs": "¿Cuál es el título del tema principal japonés lanzado en 2022 con un dinámico concepto de carpa de circo y coreografía mágica?",
+      "explanationEs": "'CIRCUS' capturó al público japonés e internacional con su puesta en escena circense, trucos de magia y percusión deslumbrante.",
+      "funFactEs": "El álbum 'CIRCUS' fue certificado Platino en Japón por la RIAJ tras vender cientos de miles de copias."
     },
     {
       "id": 59,
@@ -2012,29 +2440,36 @@
         {
           "id": "A",
           "text": "Changbin",
-          "textKo": "창빈 (Changbin)"
+          "textKo": "창빈 (Changbin)",
+          "textEs": "Changbin"
         },
         {
           "id": "B",
           "text": "Han",
-          "textKo": "한 (Han)"
+          "textKo": "한 (Han)",
+          "textEs": "Han"
         },
         {
           "id": "C",
           "text": "Hyunjin",
-          "textKo": "현진 (Hyunjin)"
+          "textKo": "현진 (Hyunjin)",
+          "textEs": "Hyunjin"
         },
         {
           "id": "D",
           "text": "Bang Chan",
-          "textKo": "방찬 (Bang Chan)"
+          "textKo": "방찬 (Bang Chan)",
+          "textEs": "Bang Chan"
         }
       ],
       "correctAnswer": "A",
       "explanation": "Changbin auditioned for Show Me The Money 9, earning a pass from producer Justhis with his booming vocal projection.",
       "explanationKo": "창빈은 '쇼미더머니 9' 1차 예선에서 프로듀서 저스디스 앞에서 마이크 없이 발성을 뿜어내며 당당히 합격 목걸이를 받았습니다.",
       "funFact": "His unamplified vocal power stunned all the underground underground rappers in the hall!",
-      "funFactKo": "체육관 전체를 울리는 성량과 날카로운 딕션으로 현장 참가자들을 압도했습니다!"
+      "funFactKo": "체육관 전체를 울리는 성량과 날카로운 딕션으로 현장 참가자들을 압도했습니다!",
+      "questionEs": "¿Qué integrante de Stray Kids participó como concursante en 'Show Me The Money 9' de Mnet en 2020 para poner a prueba sus habilidades de rap crudo?",
+      "explanationEs": "Changbin participó audazmente en SMTM9 recibiendo grandes elogios de los productores por su poderosa dicción, tono potente y ritmo implacable.",
+      "funFactEs": "Superó la ronda clasificatoria preliminar con el productor JUSTHIS entregándole personalmente la cadena del programa."
     },
     {
       "id": 60,
@@ -2045,29 +2480,36 @@
         {
           "id": "A",
           "text": "Debuting 5 consecutive albums at #1 on the Billboard 200",
-          "textKo": "차트에 진입한 5개 앨범을 연속으로 모두 1위로 직행 데뷔시킨 최초의 아티스트"
+          "textKo": "차트에 진입한 5개 앨범을 연속으로 모두 1위로 직행 데뷔시킨 최초의 아티스트",
+          "textEs": "Debutar 5 álbumes consecutivos en el #1 del Billboard 200"
         },
         {
           "id": "B",
           "text": "Staying at #1 for 100 straight weeks",
-          "textKo": "100주 연속 1위 유지"
+          "textKo": "100주 연속 1위 유지",
+          "textEs": "Mantenerse en el #1 durante 100 semanas seguidas"
         },
         {
           "id": "C",
           "text": "Selling 10 million US CDs in one single week",
-          "textKo": "단 1주일 만에 1,000만 장 판매"
+          "textKo": "단 1주일 만에 1,000만 장 판매",
+          "textEs": "Vender 10 millones de discos en EE.UU. en una sola semana"
         },
         {
           "id": "D",
           "text": "Releasing 10 albums in one calendar month",
-          "textKo": "한 달에 앨범 10장 발매"
+          "textKo": "한 달에 앨범 10장 발매",
+          "textEs": "Lanzar 10 álbumes en un solo mes calendario"
         }
       ],
       "correctAnswer": "A",
       "explanation": "With ODDINARY, MAXIDENT, 5-STAR, ROCK-STAR, and ATE, Stray Kids became the first artist in global history whose first 5 Billboard 200 charting albums ALL debuted at #1.",
       "explanationKo": "ODDINARY부터 MAXIDENT, 5-STAR, 樂-STAR, ATE까지 진입한 5개 앨범 모두를 연속으로 빌보드 200 1위에 직행시킨 세계 음악사 최초의 대기록입니다.",
       "funFact": "This historic feat cemented Stray Kids' status as an untouchable global stadium titan!",
-      "funFactKo": "이 역사적인 기록으로 스트레이 키즈는 대체 불가능한 글로벌 스타디움 톱 아티스트로 우뚝 섰습니다!"
+      "funFactKo": "이 역사적인 기록으로 스트레이 키즈는 대체 불가능한 글로벌 스타디움 톱 아티스트로 우뚝 섰습니다!",
+      "questionEs": "Stray Kids hizo historia en la lista Billboard 200 al convertirse en el PRIMER artista musical del mundo en lograr qué hito?",
+      "explanationEs": "Stray Kids es el primer artista en toda la historia de Billboard mundial en debutar sus primeros 5 álbumes que ingresaron al chart directamente en el puesto #1 (ODDINARY, MAXIDENT, 5-STAR, ROCK-STAR y ATE).",
+      "funFactEs": "Este récord histórico superó marcas de grandes leyendas de la música global en los más de 65 años de historia de Billboard."
     }
   ]
 }
