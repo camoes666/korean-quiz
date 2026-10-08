@@ -7,7 +7,7 @@ import { Zap, Flame, Trophy } from 'lucide-react';
 export default function PlayerLevelCard() {
   const { lang } = useLanguage();
   const { xp, streak, currentLevel, progressPercent, xpToNextLevel } = useGame();
-  const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
+  const levelTitle = lang === 'en' || lang === 'es' ? currentLevel.title : currentLevel.titleKo;
 
   return (
     <div className="rounded-2xl border-2 border-purple-100 bg-white p-6 shadow-lg shadow-purple-500/5">
@@ -45,17 +45,19 @@ export default function PlayerLevelCard() {
       <div className="mt-4">
         <div className="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-1.5">
           <span>
-            {lang === 'ko'
-              ? '다음 레벨까지'
+            {lang === 'en'
+              ? 'Progress to next level'
               : lang === 'es'
               ? 'Para el siguiente nivel'
-              : 'Progress to next level'}
+              : '다음 레벨까지'}
           </span>
           <span className="font-extrabold text-purple-600">
             {xpToNextLevel > 0
-              ? lang === 'es'
+              ? lang === 'en'
+                ? `${xpToNextLevel} XP needed`
+                : lang === 'es'
                 ? `${xpToNextLevel} XP necesarios`
-                : `${xpToNextLevel} XP needed`
+                : `${xpToNextLevel} XP 필요`
               : 'MAX LEVEL'}
           </span>
         </div>
@@ -73,21 +75,21 @@ export default function PlayerLevelCard() {
           <Flame className="w-3.5 h-3.5 text-rose-500 fill-current animate-pulse" />
           <span className="font-bold text-slate-700">
             {streak}{' '}
-            {lang === 'ko'
-              ? '일 연속 출석'
+            {lang === 'en'
+              ? 'day streak'
               : lang === 'es'
               ? 'días de racha'
-              : 'day streak'}
+              : '일 연속 출석'}
           </span>
         </span>
         <span className="flex items-center gap-1 text-purple-600 font-black bg-purple-50 px-2.5 py-0.5 rounded-full">
           <Trophy className="w-3.5 h-3.5" />
           <span>
-            {lang === 'ko'
-              ? '상위 12% 랭커'
+            {lang === 'en'
+              ? 'Top 12% Challenger'
               : lang === 'es'
               ? 'Top 12% Retador'
-              : 'Top 12% Challenger'}
+              : '상위 12% 랭커'}
           </span>
         </span>
       </div>

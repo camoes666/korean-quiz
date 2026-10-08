@@ -69,7 +69,7 @@ export default function Navbar() {
             <Flame className="w-4 h-4 fill-current animate-pulse text-rose-500" />
             <span className="tabular-nums font-extrabold">{streak}</span>
             <span className="hidden md:inline font-bold text-[11px]">
-              {lang === 'ko' ? '일 연속' : lang === 'es' ? 'días de racha' : lang === 'ru' ? 'дн. подряд' : lang === 'zh' ? '天连续' : 'd streak'}
+              {lang === 'en' ? 'd streak' : lang === 'es' ? 'días de racha' : lang === 'ko' ? '일 연속' : lang === 'ru' ? 'дн. подряд' : lang === 'zh' ? '天连续' : 'd streak'}
             </span>
           </div>
 

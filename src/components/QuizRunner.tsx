@@ -301,7 +301,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                 </div>
               </div>
               <div className="inline-block px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md text-xs font-bold text-white/95 mb-3 shadow-xs">
-                {lang === 'ko' ? mascot.greetingKo : lang === 'es' ? mascot.greetingEs : mascot.greetingEn}
+                {lang === 'en' ? mascot.greetingEn : lang === 'es' ? mascot.greetingEs : mascot.greetingKo}
               </div>
               <h1 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight max-w-2xl mx-auto">
                 {quizTitle}

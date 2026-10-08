@@ -1,4 +1,4 @@
-export type Language = 'ko' | 'en' | 'es' | 'ru' | 'zh';
+export type Language = 'en' | 'es' | 'ko' | 'ru' | 'zh';
 
 export interface TranslationDictionary {
   siteTitle: string;

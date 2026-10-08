@@ -71,7 +71,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black text-[11px] whitespace-nowrap shadow-sm shadow-purple-500/25 border border-white">
-                  {lang === 'ko' ? '마스코트 호비 🐯' : lang === 'es' ? 'Mascota Hobi 🐯' : 'Mascot Hobi 🐯'}
+                  {lang === 'en' ? 'Mascot Hobi 🐯' : lang === 'es' ? 'Mascota Hobi 🐯' : '마스코트 호비 🐯'}
                 </div>
               </div>
 

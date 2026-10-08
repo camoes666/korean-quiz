@@ -43,14 +43,14 @@ export default function ShareButtons({
     ? ' #KoreanCulture #LearnKorean'
     : ' #KPop';
 
-  // High-converting viral copy according to user score
+  // High-converting viral copy according to user score (Order: English -> Spanish -> Korean)
   let viralHeadline = '';
-  if (lang === 'ko') {
+  if (lang === 'en') {
     viralHeadline = isPerfect
-      ? `🏆 100점 만점 퍼펙트! K-Pulse "${quizTitle}"에서 [${badgeTitle}] 칭호를 획득했습니다! 👑 나를 꺾을 수 있는 사람? ⚔️`
+      ? `🏆 100% PERFECT SCORE! I just mastered "${quizTitle}" on K-Pulse and earned the [${badgeTitle}] title! 👑 Can anyone beat me? ⚔️`
       : isHigh
-      ? `🔥 K-Pulse "${quizTitle}"에서 ${pct}점 [${badgeTitle}] 달성! 나보다 K-컬처 잘 아는 사람 도전해보세요! ⚔️`
-      : `🐯 K-Pulse "${quizTitle}" 퀴즈 도전 완료! 내 점수는 ${pct}점([${badgeTitle}]). 나보다 잘 맞힐 수 있나요? 👀`;
+      ? `🔥 I scored ${pct}% (${badgeTitle}) on "${quizTitle}" at K-Pulse! Think you know K-Culture better? Prove it! ⚔️`
+      : `🐯 I just completed "${quizTitle}" on K-Pulse with ${pct}% (${badgeTitle})! Can you beat my score? 👀`;
   } else if (lang === 'es') {
     viralHeadline = isPerfect
       ? `🏆 ¡100% PUNTUACIÓN PERFECTA! ¡Dominé "${quizTitle}" en K-Pulse con el título [${badgeTitle}]! 👑 ¿Alguien puede vencerme? ⚔️`
@@ -58,12 +58,12 @@ export default function ShareButtons({
       ? `🔥 ¡Obtuve ${pct}% (${badgeTitle}) en "${quizTitle}" en K-Pulse! ¿Crees que sabes más? ¡Demuéstralo! ⚔️`
       : `🐯 ¡Acabo de completar "${quizTitle}" en K-Pulse con ${pct}% ([${badgeTitle}])! ¿Puedes superarme? 👀`;
   } else {
-    // English default
+    // Korean (ko)
     viralHeadline = isPerfect
-      ? `🏆 100% PERFECT SCORE! I just mastered "${quizTitle}" on K-Pulse and earned the [${badgeTitle}] title! 👑 Can anyone beat me? ⚔️`
+      ? `🏆 100점 만점 퍼펙트! K-Pulse "${quizTitle}"에서 [${badgeTitle}] 칭호를 획득했습니다! 👑 나를 꺾을 수 있는 사람? ⚔️`
       : isHigh
-      ? `🔥 I scored ${pct}% (${badgeTitle}) on "${quizTitle}" at K-Pulse! Think you know K-Culture better? Prove it! ⚔️`
-      : `🐯 I just completed "${quizTitle}" on K-Pulse with ${pct}% (${badgeTitle})! Can you beat my score? 👀`;
+      ? `🔥 K-Pulse "${quizTitle}"에서 ${pct}점 [${badgeTitle}] 달성! 나보다 K-컬처 잘 아는 사람 도전해보세요! ⚔️`
+      : `🐯 K-Pulse "${quizTitle}" 퀴즈 도전 완료! 내 점수는 ${pct}점([${badgeTitle}]). 나보다 잘 맞힐 수 있나요? 👀`;
   }
 
   const twitterPostText = `${viralHeadline}${specificTag} #KPulse`;

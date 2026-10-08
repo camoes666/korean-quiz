@@ -496,11 +496,11 @@ export default function PersonalityTestRunner({
       <div className="mb-6">
         <div className="flex items-center justify-between text-xs font-black text-slate-400 mb-2">
           <span>
-            {lang === 'ko'
-              ? `질문 ${currentIndex + 1} / ${questions.length}`
+            {lang === 'en'
+              ? `Question ${currentIndex + 1} of ${questions.length}`
               : lang === 'es'
               ? `Pregunta ${currentIndex + 1} de ${questions.length}`
-              : `Question ${currentIndex + 1} of ${questions.length}`}
+              : `질문 ${currentIndex + 1} / ${questions.length}`}
           </span>
           <span className="text-purple-600 font-extrabold">{progressPercent}%</span>
         </div>
@@ -519,11 +519,11 @@ export default function PersonalityTestRunner({
           {currentQ.emoji || '✨'}
         </div>
         <h2 className="text-xl sm:text-2xl font-black text-slate-900 text-center tracking-tight leading-snug mb-8">
-          {lang === 'ko'
-            ? currentQ.questionKo
+          {lang === 'en'
+            ? currentQ.question
             : lang === 'es'
-            ? currentQ.questionEs
-            : currentQ.question}
+            ? (currentQ.questionEs || currentQ.question)
+            : (currentQ.questionKo || currentQ.question)}
         </h2>
 
         {/* 4 Options */}
@@ -531,7 +531,7 @@ export default function PersonalityTestRunner({
           {currentQ.options.map((opt) => {
             const isSelected = selectedOptionId === opt.id;
             const text =
-              lang === 'ko' ? opt.textKo : lang === 'es' ? opt.textEs : opt.text;
+              lang === 'en' ? opt.text : lang === 'es' ? (opt.textEs || opt.text) : (opt.textKo || opt.text);
 
             return (
               <button

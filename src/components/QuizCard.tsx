@@ -36,7 +36,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <div className="flex items-center gap-1.5 flex-wrap">
             {quiz.quizType === 'personality' ? (
               <span className="px-2.5 py-1 bg-amber-300 text-amber-950 font-black rounded-full text-xs tracking-wider uppercase shadow-xs">
-                🔮 {lang === 'ko' ? '소울메이트 테스트' : lang === 'es' ? 'Test de Personalidad' : 'Personality Test'}
+                🔮 {lang === 'en' ? 'Personality Test' : lang === 'es' ? 'Test de Personalidad' : '소울메이트 테스트'}
               </span>
             ) : (
               <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md rounded-full text-xs font-black text-purple-700 tracking-wider uppercase shadow-xs">
@@ -112,7 +112,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             <span className="flex items-center gap-1 text-purple-600 font-bold">
               <Users className="w-3.5 h-3.5 text-purple-500" />
               {quiz.totalPlays}{' '}
-              {lang === 'ko' ? '도전자' : lang === 'es' ? 'Jugadores' : 'Players'}
+              {lang === 'en' ? 'Players' : lang === 'es' ? 'Jugadores' : '도전자'}
             </span>
           </div>
 
@@ -123,11 +123,11 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           >
             <span>
               {quiz.quizType === 'personality'
-                ? lang === 'ko'
-                  ? '나의 멤버 찾기'
+                ? lang === 'en'
+                  ? 'Find Your Soulmate'
                   : lang === 'es'
                   ? 'Descubrir Mi Miembro'
-                  : 'Find Your Soulmate'
+                  : '나의 멤버 찾기'
                 : t.startChallenge}
             </span>
             <ArrowRight className="w-4 h-4" />

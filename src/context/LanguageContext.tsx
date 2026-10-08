@@ -42,13 +42,13 @@ function resolveInitialLanguage(): Language {
       return saved;
     }
 
-    // 3. Browser Language Auto-Detection (첫 방문자 브라우저 언어 자동 감지)
+    // 3. Browser Language Auto-Detection (영어 -> 스페인어 -> 한국어 순)
     const browserLangs = navigator.languages || [navigator.language || ''];
     for (const bLang of browserLangs) {
       const lower = (bLang || '').toLowerCase();
+      if (lower.startsWith('en')) return 'en';
       if (lower.startsWith('es')) return 'es';
       if (lower.startsWith('ko')) return 'ko';
-      if (lower.startsWith('en')) return 'en';
     }
   } catch {
     // Fallback safe
