@@ -5,6 +5,8 @@ import { Quiz, getLocalizedText } from '@/types/quiz';
 import { Clock, HelpCircle, Users, ArrowRight, Heart } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
+import { getQuizThemeGroup } from '@/lib/theme';
+import { getQuizMascot } from '@/lib/mascot';
 
 interface QuizCardProps {
   quiz: Quiz;
@@ -13,6 +15,8 @@ interface QuizCardProps {
 export default function QuizCard({ quiz }: QuizCardProps) {
   const { lang, t } = useLanguage();
   const [liked, setLiked] = useState(false);
+  const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
+  const mascot = getQuizMascot(quiz.slug, quiz.tag);
 
   const title = getLocalizedText(quiz, 'title', lang);
   const description = getLocalizedText(quiz, 'description', lang);
@@ -20,7 +24,10 @@ export default function QuizCard({ quiz }: QuizCardProps) {
   const tagLabel = quiz.tag ? t.tags[quiz.tag] || quiz.tag : null;
 
   return (
-    <div className="bg-white rounded-2xl border-2 border-purple-100 shadow-lg shadow-purple-500/5 overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/10 active:scale-[0.99] flex flex-col justify-between mb-4">
+    <div
+      data-group={themeGroup}
+      className="qz-card bg-white rounded-2xl border-2 border-purple-100 shadow-lg shadow-purple-500/5 overflow-hidden transition-all duration-200 hover:-translate-y-1 hover:shadow-xl hover:shadow-purple-500/10 active:scale-[0.99] flex flex-col justify-between mb-4 group"
+    >
       {/* 카드 헤더 비주얼 썸네일 */}
       <div
         className={`h-28 bg-gradient-to-r ${quiz.gradient} p-4 relative flex flex-col justify-between overflow-hidden`}
@@ -55,23 +62,30 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             ★ 4.9 ({quiz.totalPlays})
           </span>
           <span className="px-2 py-0.5 bg-white/20 backdrop-blur-md rounded-md text-[11px] font-bold text-white">
-            ✨ {lang === 'ko' ? '덕력 마스터 뱃지' : lang === 'es' ? 'Insignia Maestra' : 'Master Badge'}
+            ✨ {mascot.badgeTitle}
           </span>
         </div>
 
-        {/* 배경 데코 하트 & 이모지 */}
-        <div className="absolute -right-2 -bottom-6 text-white/20 text-8xl font-black pointer-events-none select-none">
+        {/* 배경 데코 이모지 & 마스코트 */}
+        <div className="absolute right-14 -bottom-4 text-white/20 text-6xl font-black pointer-events-none select-none">
           {quiz.coverEmoji}
+        </div>
+        <div className="absolute right-1 -bottom-2 w-20 h-20 opacity-95 pointer-events-none select-none drop-shadow-md transition-transform group-hover:scale-110">
+          <img
+            src={mascot.avatarUrl}
+            alt={mascot.name}
+            className="w-full h-full object-contain filter"
+          />
         </div>
       </div>
 
       {/* 카드 바디 */}
       <div className="p-5 flex flex-col flex-1 justify-between">
         <div>
-          <h3 className="text-lg font-black text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-1 hover:text-purple-600 transition-colors">
+          <h3 className="qz-card-title text-lg font-black text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-1 hover:text-purple-600 transition-colors">
             {title}
           </h3>
-          <p className="text-xs text-slate-500 font-medium line-clamp-2 mb-4 leading-relaxed">
+          <p className="qz-card-muted text-xs text-slate-500 font-medium line-clamp-2 mb-4 leading-relaxed">
             {description}
           </p>
         </div>
@@ -96,7 +110,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           {/* 풀사이즈 CTA 젤리 버튼 */}
           <Link
             href={`/quiz/${quiz.slug}`}
-            className="w-full py-3.5 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-xl shadow-md shadow-purple-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+            className="qz-btn-primary w-full py-3.5 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-xl shadow-md shadow-purple-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
           >
             <span>{t.startChallenge}</span>
             <ArrowRight className="w-4 h-4" />

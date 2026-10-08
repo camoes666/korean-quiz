@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getQuizBySlug, getRelatedQuizzes, getAllQuizzes } from '@/data/quizzes';
 import QuizRunner from '@/components/QuizRunner';
+import { getQuizThemeGroup } from '@/lib/theme';
 
 interface QuizPageProps {
   params: Promise<{ slug: string }>;
@@ -62,9 +63,10 @@ export default async function QuizPage({ params }: QuizPageProps) {
   }
 
   const relatedQuizzes = getRelatedQuizzes(quiz.slug, 4);
+  const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
 
   return (
-    <main className="min-h-screen pb-16">
+    <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
       <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
     </main>
   );

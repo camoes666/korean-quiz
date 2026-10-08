@@ -1,0 +1,261 @@
+/* =============================================================
+   K-pop Quiz Theme Palette (Accessible WCAG AA Compliant)
+   -------------------------------------------------------------
+   BTS: Purple (Light Theme)
+   BLACKPINK: Pink + Black (Dark Theme)
+   Stray Kids: Red + Black (Light Theme)
+   ============================================================= */
+
+/* ---------- 기본 테마 (Default / Fallback) ---------- */
+:root {
+  --qz-bg: #F6F6F7;
+  --qz-surface: #FFFFFF;
+  --qz-surface-2: #EFEFF2;
+  --qz-text: #18181B;
+  --qz-text-muted: #55555E;
+  --qz-accent: #7C3AED;
+  --qz-accent-hover: #6D28D9;
+  --qz-on-accent: #FFFFFF;
+  --qz-accent-text: #7C3AED;
+  --qz-accent-soft: #EDE9FE;
+  --qz-control-border: #CBD5E1;
+  --qz-border: #E2E8F0;
+  --qz-focus: #7C3AED;
+  --qz-correct: #16A34A;
+  --qz-correct-soft: #DCFCE7;
+  --qz-wrong: #DC2626;
+  --qz-wrong-soft: #FEE2E2;
+  --qz-hero-bg: #1E1B4B;
+  --qz-hero-text: #FFFFFF;
+  --qz-hero-accent: #C4B5FD;
+}
+
+/* ---------- BTS : 보라 (밝은 테마) ---------- */
+[data-group="bts"] {
+  --qz-bg: #FAF7FE;
+  --qz-surface: #FFFFFF;
+  --qz-surface-2: #F2EBFC;
+  --qz-text: #1D1330;
+  --qz-text-muted: #5C5072;
+  --qz-accent: #7B3FD6;
+  --qz-accent-hover: #6930C2;
+  --qz-on-accent: #FFFFFF;
+  --qz-accent-text: #6930C2;
+  --qz-accent-soft: #ECE2FB;
+  --qz-control-border: #8B76B0;
+  --qz-border: #E5DCF3;
+  --qz-focus: #7B3FD6;
+  --qz-correct: #11693F;
+  --qz-correct-soft: #E2F3E9;
+  --qz-wrong: #B3261E;
+  --qz-wrong-soft: #FBE6E4;
+  --qz-hero-bg: #2B1554;
+  --qz-hero-text: #FFFFFF;
+  --qz-hero-accent: #C9A7FF;
+  color-scheme: light;
+}
+
+/* ---------- BLACKPINK : 핑크 + 블랙 (어두운 테마) ---------- */
+[data-group="blackpink"] {
+  --qz-bg: #09090B;
+  --qz-surface: #141216;
+  --qz-surface-2: #211E24;
+  --qz-text: #F7F2F5;
+  --qz-text-muted: #B7AEB5;
+  --qz-accent: #FF8FB8;
+  --qz-accent-hover: #FFA8CA;
+  --qz-on-accent: #000000;       /* 핑크 버튼 위 글자는 검정 */
+  --qz-accent-text: #FF9EC3;
+  --qz-accent-soft: #3A1C2B;
+  --qz-control-border: #524B57;
+  --qz-border: #2C282F;
+  --qz-focus: #FF8FB8;
+  --qz-correct: #4ADE80;
+  --qz-correct-soft: #0E2E1D;
+  --qz-wrong: #FB7185;
+  --qz-wrong-soft: #3D141D;
+  --qz-hero-bg: #180812;
+  --qz-hero-text: #FFFFFF;
+  --qz-hero-accent: #FF8FB8;
+  color-scheme: dark;
+}
+
+/* ---------- Stray Kids : 빨강 + 블랙 (밝은 테마) ---------- */
+[data-group="skz"] {
+  --qz-bg: #FAFAF8;
+  --qz-surface: #FFFFFF;
+  --qz-surface-2: #F0EFEC;
+  --qz-text: #111111;
+  --qz-text-muted: #55534F;
+  --qz-accent: #D4112B;
+  --qz-accent-hover: #B80D24;
+  --qz-on-accent: #FFFFFF;
+  --qz-accent-text: #B80D24;
+  --qz-accent-soft: #EEECE8;
+  --qz-control-border: #85827D;
+  --qz-border: #E4E2DE;
+  --qz-focus: #D4112B;
+  --qz-correct: #11693F;
+  --qz-correct-soft: #E2F3E9;
+  --qz-wrong: #A11D1D;
+  --qz-wrong-soft: #FBE3E3;
+  --qz-hero-bg: #0C0A09;
+  --qz-hero-text: #FFFFFF;
+  --qz-hero-accent: #FF4D5E;
+  color-scheme: light;
+}
+
+/* ---------- 테마 컨테이너 기본 스타일 ---------- */
+[data-group] {
+  background-color: var(--qz-bg);
+  color: var(--qz-text);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* ---------- 커스텀 유틸리티 클래스 ---------- */
+.qz-theme-container {
+  background-color: var(--qz-bg);
+  color: var(--qz-text);
+}
+
+.qz-theme-card {
+  background-color: var(--qz-surface);
+  border-color: var(--qz-border);
+  color: var(--qz-text);
+}
+
+.qz-theme-surface-2 {
+  background-color: var(--qz-surface-2);
+  border-color: var(--qz-control-border);
+  color: var(--qz-text);
+}
+
+.qz-theme-hero {
+  background-color: var(--qz-hero-bg);
+  color: var(--qz-hero-text);
+}
+
+.qz-theme-btn {
+  background-color: var(--qz-accent);
+  color: var(--qz-on-accent);
+}
+
+.qz-theme-btn:hover {
+  background-color: var(--qz-accent-hover);
+}
+
+/* 그룹별 자동 적용 클래스 */
+[data-group="bts"] .qz-card,
+[data-group="blackpink"] .qz-card,
+[data-group="skz"] .qz-card {
+  background-color: var(--qz-surface) !important;
+  border-color: var(--qz-border) !important;
+  color: var(--qz-text) !important;
+}
+
+[data-group="bts"] .qz-card-title,
+[data-group="blackpink"] .qz-card-title,
+[data-group="skz"] .qz-card-title {
+  color: var(--qz-text) !important;
+}
+
+[data-group="bts"] .qz-card-muted,
+[data-group="blackpink"] .qz-card-muted,
+[data-group="skz"] .qz-card-muted {
+  color: var(--qz-text-muted) !important;
+}
+
+[data-group="bts"] .qz-stat-box,
+[data-group="blackpink"] .qz-stat-box,
+[data-group="skz"] .qz-stat-box {
+  background-color: var(--qz-surface-2) !important;
+  border-color: var(--qz-border) !important;
+}
+
+[data-group="bts"] .qz-stat-box div,
+[data-group="blackpink"] .qz-stat-box div,
+[data-group="skz"] .qz-stat-box div {
+  color: var(--qz-text) !important;
+}
+
+[data-group="bts"] .qz-stat-box .qz-stat-label,
+[data-group="blackpink"] .qz-stat-box .qz-stat-label,
+[data-group="skz"] .qz-stat-box .qz-stat-label {
+  color: var(--qz-text-muted) !important;
+}
+
+[data-group="bts"] .qz-btn-primary,
+[data-group="blackpink"] .qz-btn-primary,
+[data-group="skz"] .qz-btn-primary {
+  background-color: var(--qz-accent) !important;
+  color: var(--qz-on-accent) !important;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25) !important;
+}
+
+[data-group="bts"] .qz-btn-primary:hover,
+[data-group="blackpink"] .qz-btn-primary:hover,
+[data-group="skz"] .qz-btn-primary:hover {
+  background-color: var(--qz-accent-hover) !important;
+}
+
+[data-group="bts"] .qz-option-default,
+[data-group="blackpink"] .qz-option-default,
+[data-group="skz"] .qz-option-default {
+  background-color: var(--qz-surface-2) !important;
+  border-color: var(--qz-control-border) !important;
+  color: var(--qz-text) !important;
+}
+
+[data-group="bts"] .qz-option-default:hover,
+[data-group="blackpink"] .qz-option-default:hover,
+[data-group="skz"] .qz-option-default:hover {
+  border-color: var(--qz-accent) !important;
+  background-color: var(--qz-accent-soft) !important;
+}
+
+[data-group="bts"] .qz-option-default .qz-opt-num,
+[data-group="blackpink"] .qz-option-default .qz-opt-num,
+[data-group="skz"] .qz-option-default .qz-opt-num {
+  background-color: var(--qz-surface) !important;
+  color: var(--qz-text-muted) !important;
+}
+
+[data-group="bts"] .qz-option-default .qz-opt-text,
+[data-group="blackpink"] .qz-option-default .qz-opt-text,
+[data-group="skz"] .qz-option-default .qz-opt-text {
+  color: var(--qz-text) !important;
+}
+
+[data-group="bts"] .qz-option-selected,
+[data-group="blackpink"] .qz-option-selected,
+[data-group="skz"] .qz-option-selected {
+  background-color: var(--qz-accent-soft) !important;
+  border-color: var(--qz-accent) !important;
+}
+
+[data-group="bts"] .qz-option-selected .qz-opt-num,
+[data-group="blackpink"] .qz-option-selected .qz-opt-num,
+[data-group="skz"] .qz-option-selected .qz-opt-num {
+  background-color: var(--qz-accent) !important;
+  color: var(--qz-on-accent) !important;
+}
+
+[data-group="bts"] .qz-option-selected .qz-opt-text,
+[data-group="blackpink"] .qz-option-selected .qz-opt-text,
+[data-group="skz"] .qz-option-selected .qz-opt-text {
+  color: var(--qz-text) !important;
+}
+
+[data-group="bts"] .qz-progress-track,
+[data-group="blackpink"] .qz-progress-track,
+[data-group="skz"] .qz-progress-track {
+  background-color: var(--qz-accent-soft) !important;
+  border-color: var(--qz-border) !important;
+}
+
+[data-group="bts"] .qz-progress-bar,
+[data-group="blackpink"] .qz-progress-bar,
+[data-group="skz"] .qz-progress-bar {
+  background: var(--qz-accent) !important;
+}
+

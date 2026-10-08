@@ -179,18 +179,30 @@ async function generateAll() {
 
     const outputPath = path.join(OUTPUT_DIR, `${quiz.slug}.png`);
 
-    // If Hobi mascot exists, resize and composite onto right side of image
-    if (fs.existsSync(HOBI_PATH)) {
-      const hobiBuffer = await sharp(HOBI_PATH)
-        .resize(320, 320, { fit: 'inside' })
+    let mascotFile = HOBI_PATH;
+    if (quiz.slug === 'blackpink-blink-trivia') {
+      const bpMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'bomi-blackpink.png');
+      if (fs.existsSync(bpMascot)) mascotFile = bpMascot;
+    } else if (quiz.slug === 'bts-army-trivia') {
+      const btsMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-bts.png');
+      if (fs.existsSync(btsMascot)) mascotFile = btsMascot;
+    } else if (quiz.slug === 'stray-kids-stay-trivia') {
+      const skzMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-skz.png');
+      if (fs.existsSync(skzMascot)) mascotFile = skzMascot;
+    }
+
+    // If mascot exists, resize and composite onto right side of image
+    if (fs.existsSync(mascotFile)) {
+      const mascotBuffer = await sharp(mascotFile)
+        .resize(360, 360, { fit: 'inside' })
         .toBuffer();
 
       await sharp(Buffer.from(svg))
         .composite([
           {
-            input: hobiBuffer,
-            top: 155,
-            left: 800,
+            input: mascotBuffer,
+            top: 135,
+            left: 780,
           },
         ])
         .png({ quality: 90 })
