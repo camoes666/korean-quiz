@@ -94,21 +94,47 @@
 
 ---
 
-### 2.4. [실전 치트키 2] 트위터 투표(Poll) 바이럴 & 링크 타래
-트위터 알고리즘은 **투표(Poll)** 컨텐츠를 유저들의 'For You(추천)' 피드에 매우 강력하게 추천합니다.
+### 2.5. [핵심 기술 전략] 글로벌 다국어 랜딩 링크 전략 (Language Targeting)
 
-1. **Poll 기간(Length)**: **2 Days(2일)** 또는 **3 Days(3일)** 설정 (미국, 유럽, 남미 시차를 모두 커버하며 며칠간 추천 피드 유지)
-2. **질문 & 보기 템플릿**:
-   - **Question**: `What is the spiciest Korean food you can actually handle? 🌶️🍜`
-   - **Choice 1**: `Mild (Shin Ramyun)`
-   - **Choice 2**: `Medium (Buldak Carbonara)`
-   - **Choice 3**: `Danger (Buldak 2x/3x)`
-   - **Choice 4**: `I die from Kimchi 🥛`
-3. **핵심 프로토콜**:
-   - 투표 글을 발행하자마자 **내 투표 글 바로 밑에 말풍선(💬)으로 첫 답글(타래)**을 작성합니다:
+K-Pulse는 **URL 쿼리 파라미터(`?lang=es`, `?lang=ko`)와 브라우저 언어 자동 감지**를 지원합니다. 남미/스페인어권 프로모션 시 영문 기본 링크를 걸면 이탈률이 급증하므로, **타깃 채널에 맞춰 링크 끝에 언어 파라미터를 반드시 부착**합니다.
+
+#### 1. 타깃 국가별 권장 링크 규격:
+- **남미/스페인어권 (LATAM, 멕시코, 아르헨티나, 스페인 등)**:
+  - 메인 홈: `https://kpulsequiz.com/?lang=es`
+  - BTS 퀴즈: `https://kpulsequiz.com/quiz/bts-army-trivia?lang=es`
+  - Stray Kids 퀴즈: `https://kpulsequiz.com/quiz/stray-kids-stay-trivia?lang=es`
+  - BLACKPINK 퀴즈: `https://kpulsequiz.com/quiz/blackpink-blink-trivia?lang=es`
+  > **효과**: 링크 클릭 즉시 100% 스페인어 모드로 시작되며, `localStorage`에 자동 영구 저장되어 이후 모든 페이지가 스페인어로 유지됩니다.
+- **한국어권 (국내 팬덤 커뮤니티, 트위터 RT 이벤트)**:
+  - `https://kpulsequiz.com/quiz/bts-army-trivia?lang=ko`
+- **영미권 및 글로벌 기본 (US, Global)**:
+  - `https://kpulsequiz.com/quiz/bts-army-trivia` (기본값)
+- **첫 방문자 자동 감지**:
+  - 파라미터가 없더라도 방문자의 브라우저 언어가 스페인어(`es-ES`, `es-419`, `es-MX` 등)이면 시스템이 자동으로 스페인어 화면을 제공합니다.
+
+#### 2. [실전 검증] 스페인어권 전용 답글 침투 템플릿 (LATAM 팬덤용):
+
+1. **Stray Kids 남미 STAY 계정 답글용**:
    ```text
-   Test your actual Scoville spice tier on our 10-question challenge: 
-   👉 https://kpulsequiz.com/quiz/korean-spicy-food
+   ¡Stray Kids haciendo historia en Billboard! 🐺🔥 ¿Qué tan STAY eres realmente? ¡Ponte a prueba con este trivia de 60 preguntas en español!
+   
+   ¿Puedes sacar puntuación perfecta? 👇
+   👉 https://kpulsequiz.com/quiz/stray-kids-stay-trivia?lang=es
+   ```
+
+2. **BTS 라틴아메리카 ARMY 계정 답글용**:
+   ```text
+   ¡No puedo superar esta era! 😭💜 Siempre recordando los mejores momentos de BTS. ¿Quién más se sabe todos los detalles?
+   
+   Demuestra tu nivel ARMY aquí:
+   👉 https://kpulsequiz.com/quiz/bts-army-trivia?lang=es
+   ```
+
+3. **BLACKPINK 스페인어권 팬덤 답글용**:
+   ```text
+   ¡Reinas absolutas! ✨🖤💖 ¿Te sabes toda la historia desde su debut hasta Coachella? ¡Demuestra que eres BLINK de corazón!
+   
+   👉 https://kpulsequiz.com/quiz/blackpink-blink-trivia?lang=es
    ```
 
 ---
