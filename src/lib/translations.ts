@@ -69,10 +69,36 @@ export interface TranslationDictionary {
     correct: string;
     incorrect: string;
     funLore: string;
+    earnedPoints: string;
+  };
+  challenge: {
+    bannerTitle: string;
+    bannerError: string;
+    defaultFriend: string;
+    startBattle: string;
+    ahead: string;
+    behind: string;
+    tied: string;
+    vsTitle: string;
+    win: string;
+    lose: string;
+    draw: string;
+    counterChallenge: string;
+    rematchNormal: string;
+    nicknameLabel: string;
+    nicknamePlaceholder: string;
+    copyChallengeBtn: string;
+    copiedNotice: string;
+    round: string;
+    challenger: string;
+    you: string;
+    totalScore: string;
   };
   resultView: {
     officialResult: string;
     tier: string;
+    scoreOutOf: string;
+    correctCount: string;
     shareTitle: string;
     share: string;
     postX: string;
@@ -209,10 +235,36 @@ export const translations: Record<Language, TranslationDictionary> = {
       correct: '정답입니다! 🎉',
       incorrect: '아쉽네요! 오답입니다 😅',
       funLore: '알아두면 재미있는 상식:',
+      earnedPoints: '+{pts}점',
+    },
+    challenge: {
+      bannerTitle: '⚔️ {name}님이 도전장을 보냈어요! 점수: {score}점. 이길 수 있나요?',
+      bannerError: '도전장이 만료됐거나 잘못된 링크예요. 일반 모드로 시작합니다.',
+      defaultFriend: '친구',
+      startBattle: '도전 수락하고 대결 시작 ⚔️',
+      ahead: '+{diff} 앞섬',
+      behind: '-{diff} 뒤짐',
+      tied: '동점',
+      vsTitle: '⚔️ 1:1 대결 결과',
+      win: '승리! 🏆',
+      lose: '패배... 💔',
+      draw: '무승부 🤝',
+      counterChallenge: '되받아치기 도전장 보내기 ⚔️',
+      rematchNormal: '일반 모드로 다시 하기 🔄',
+      nicknameLabel: '도전장에 표시할 내 닉네임',
+      nicknamePlaceholder: '닉네임 입력 (최대 12자)',
+      copyChallengeBtn: '친구에게 도전장 복사 ⚔️',
+      copiedNotice: '✓ 도전장 링크 복사 완료!',
+      round: '문제',
+      challenger: '도전자',
+      you: '나',
+      totalScore: '총점',
     },
     resultView: {
       officialResult: '공식 퀴즈 결과서',
       tier: '등급',
+      scoreOutOf: '{score} / {max}점',
+      correctCount: '{total}문제 중 {correct}개 정답 ({pct}%)',
       shareTitle: '결과를 공유하고 친구들에게 도전해보세요!',
       share: '공유하기',
       postX: 'X(트위터)에 포스팅',
@@ -348,10 +400,36 @@ export const translations: Record<Language, TranslationDictionary> = {
       correct: 'Correct Answer! 🎉',
       incorrect: 'Incorrect 😅',
       funLore: 'Fun Lore:',
+      earnedPoints: '+{pts} pts',
+    },
+    challenge: {
+      bannerTitle: '⚔️ {name} challenged you! Score: {score} pts. Can you beat them?',
+      bannerError: 'The challenge link is invalid or expired. Starting normal mode.',
+      defaultFriend: 'A friend',
+      startBattle: 'Accept Challenge & Start ⚔️',
+      ahead: '+{diff} ahead',
+      behind: '-{diff} behind',
+      tied: 'Tied',
+      vsTitle: '⚔️ 1:1 Challenge Result',
+      win: 'VICTORY! 🏆',
+      lose: 'DEFEAT... 💔',
+      draw: 'DRAW 🤝',
+      counterChallenge: 'Send Counter Challenge ⚔️',
+      rematchNormal: 'Play Again in Normal Mode 🔄',
+      nicknameLabel: 'Your Challenge Nickname',
+      nicknamePlaceholder: 'Enter nickname (max 12 chars)',
+      copyChallengeBtn: 'Copy Challenge for Friends ⚔️',
+      copiedNotice: '✓ Challenge link copied!',
+      round: 'Q',
+      challenger: 'Challenger',
+      you: 'You',
+      totalScore: 'Total Score',
     },
     resultView: {
       officialResult: 'Official Quiz Result',
       tier: 'Tier',
+      scoreOutOf: '{score} / {max} pts',
+      correctCount: '{correct} of {total} correct ({pct}%)',
       shareTitle: 'Share Your Result & Challenge Friends',
       share: 'Share',
       postX: 'Post on X',
@@ -487,10 +565,36 @@ export const translations: Record<Language, TranslationDictionary> = {
       correct: '¡Respuesta Correcta! 🎉',
       incorrect: '¡Incorrecto! 😅',
       funLore: 'Dato Curioso:',
+      earnedPoints: '+{pts} pts',
+    },
+    challenge: {
+      bannerTitle: '⚔️ ¡{name} te ha desafiado! Puntuación: {score} pts. ¿Puedes vencerle?',
+      bannerError: 'El enlace de desafío no es válido o ha expirado. Iniciando en modo normal.',
+      defaultFriend: 'Un amigo',
+      startBattle: 'Aceptar desafío y comenzar ⚔️',
+      ahead: '+{diff} adelante',
+      behind: '-{diff} detrás',
+      tied: 'Empate',
+      vsTitle: '⚔️ Resultado del Duelo 1:1',
+      win: '¡VICTORIA! 🏆',
+      lose: 'DERROTA... 💔',
+      draw: 'EMPATE 🤝',
+      counterChallenge: 'Enviar contra-desafío ⚔️',
+      rematchNormal: 'Jugar de nuevo en modo normal 🔄',
+      nicknameLabel: 'Tu apodo para el desafío',
+      nicknamePlaceholder: 'Ingresa tu apodo (máx 12 caracteres)',
+      copyChallengeBtn: 'Copiar desafío para amigos ⚔️',
+      copiedNotice: '✓ ¡Enlace de desafío copiado!',
+      round: 'P',
+      challenger: 'Retador',
+      you: 'Tú',
+      totalScore: 'Puntuación Total',
     },
     resultView: {
       officialResult: 'Resultado Oficial del Quiz',
       tier: 'Nivel',
+      scoreOutOf: '{score} / {max} pts',
+      correctCount: '{correct} de {total} correctas ({pct}%)',
       shareTitle: '¡Comparte tu resultado y desafía a tus amigos!',
       share: 'Compartir',
       postX: 'Publicar en X',
@@ -625,10 +729,36 @@ export const translations: Record<Language, TranslationDictionary> = {
       correct: 'Правильно! 🎉',
       incorrect: 'Неверно! 😅',
       funLore: 'Интересный факт:',
+      earnedPoints: '+{pts} очков',
+    },
+    challenge: {
+      bannerTitle: '⚔️ {name} бросил вам вызов! Счёт: {score} очков. Сможете победить?',
+      bannerError: 'Ссылка на вызов недействительна или устарела. Запуск обычного режима.',
+      defaultFriend: 'Друг',
+      startBattle: 'Принять вызов и начать ⚔️',
+      ahead: '+{diff} впереди',
+      behind: '-{diff} отставание',
+      tied: 'Ничья',
+      vsTitle: '⚔️ Результат дуэли 1 на 1',
+      win: 'ПОБЕДА! 🏆',
+      lose: 'ПОРАЖЕНИЕ... 💔',
+      draw: 'НИЧЬЯ 🤝',
+      counterChallenge: 'Отправить ответный вызов ⚔️',
+      rematchNormal: 'Сыграть снова в обычном режиме 🔄',
+      nicknameLabel: 'Ваш никнейм для вызова',
+      nicknamePlaceholder: 'Введите никнейм (до 12 символов)',
+      copyChallengeBtn: 'Скопировать вызов для друзей ⚔️',
+      copiedNotice: '✓ Ссылка на вызов скопирована!',
+      round: 'Вопрос',
+      challenger: 'Соперник',
+      you: 'Вы',
+      totalScore: 'Итоговый счёт',
     },
     resultView: {
       officialResult: 'Официальный результат викторины',
       tier: 'Ранг',
+      scoreOutOf: '{score} / {max} очков',
+      correctCount: '{correct} из {total} правильно ({pct}%)',
       shareTitle: 'Поделитесь результатом и бросьте вызов друзьям!',
       share: 'Поделиться',
       postX: 'Твитнуть в X',
@@ -763,10 +893,36 @@ export const translations: Record<Language, TranslationDictionary> = {
       correct: '回答正确！🎉',
       incorrect: '很遗憾回答错误 😅',
       funLore: '趣味冷知识：',
+      earnedPoints: '+{pts}分',
+    },
+    challenge: {
+      bannerTitle: '⚔️ {name} 向你发起了挑战！得分：{score}分。你能赢吗？',
+      bannerError: '挑战链接无效或已过期。正在进入普通模式。',
+      defaultFriend: '朋友',
+      startBattle: '接受挑战并开始 ⚔️',
+      ahead: '+{diff}分 领先',
+      behind: '-{diff}分 落后',
+      tied: '平局',
+      vsTitle: '⚔️ 1对1 对战结果',
+      win: '胜利！ 🏆',
+      lose: '遗憾落败... 💔',
+      draw: '平局 🤝',
+      counterChallenge: '发起反击挑战 ⚔️',
+      rematchNormal: '返回普通模式重玩 🔄',
+      nicknameLabel: '挑战中显示的昵称',
+      nicknamePlaceholder: '输入昵称（最多12字）',
+      copyChallengeBtn: '复制挑战卡给好友 ⚔️',
+      copiedNotice: '✓ 挑战链接已复制！',
+      round: '第{n}题',
+      challenger: '挑战者',
+      you: '我',
+      totalScore: '总分',
     },
     resultView: {
       officialResult: '官方测验成绩单',
       tier: '等级头衔',
+      scoreOutOf: '{score} / {max}分',
+      correctCount: '共{total}题答对{correct}题 ({pct}%)',
       shareTitle: '分享你的成绩，邀请好友一起挑战！',
       share: '分享成绩',
       postX: '分享到 X (Twitter)',

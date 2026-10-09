@@ -1,35 +1,77 @@
 'use client';
 
 import { useState } from 'react';
-import { Share2, Check, Copy, Swords } from 'lucide-react';
+import { Share2, Check, Copy, Swords, User } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { encodeChallenge } from '@/lib/challenge';
 
 interface ShareButtonsProps {
   quizTitle: string;
+  slug?: string;
   score: number;
   totalQuestions: number;
+  totalPoints?: number;
+  questionIds?: number[];
+  questionScores?: number[];
   badgeTitle: string;
   badgeEmoji?: string;
   url?: string;
+  userNickname?: string;
+  onNicknameChange?: (nickname: string) => void;
 }
 
 export default function ShareButtons({
   quizTitle,
+  slug,
   score,
   totalQuestions,
+  totalPoints,
+  questionIds,
+  questionScores,
   badgeTitle,
   badgeEmoji = '🏆',
   url,
+  userNickname: initialNickname,
+  onNicknameChange,
 }: ShareButtonsProps) {
   const { lang, t } = useLanguage();
   const [copiedChallenge, setCopiedChallenge] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [nickname, setNickname] = useState(() => {
+    if (initialNickname) return initialNickname;
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('kpulse_nickname') || '';
+    }
+    return '';
+  });
+
+  const handleNicknameChange = (val: string) => {
+    const trimmedVal = val.slice(0, 12);
+    setNickname(trimmedVal);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('kpulse_nickname', trimmedVal);
+    }
+    if (onNicknameChange) {
+      onNicknameChange(trimmedVal);
+    }
+  };
 
   const pct = Math.max(0, Math.min(100, Math.round((score / Math.max(1, totalQuestions)) * 100)));
   const isPerfect = pct === 100;
   const isHigh = pct >= 70;
+  const displayedPoints = totalPoints ?? score * 1000;
 
-  const shareUrl = typeof window !== 'undefined' ? (url || window.location.href) : 'https://kpulsequiz.com';
+  // Determine final share URL
+  let shareUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com');
+  if (slug && questionIds && questionScores && questionIds.length === 5 && questionScores.length === 5) {
+    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
+    const payload = encodeChallenge(slug, {
+      q: questionIds,
+      p: questionScores,
+      n: nickname.trim(),
+    });
+    shareUrl = `${origin}/quiz/${slug}?c=${payload}`;
+  }
 
   // Dynamic quiz-specific hashtag
   const lowerTitle = quizTitle.toLowerCase();
@@ -43,27 +85,30 @@ export default function ShareButtons({
     ? ' #KoreanCulture #LearnKorean'
     : ' #KPop';
 
-  // High-converting viral copy according to user score (Order: English -> Spanish -> Korean)
+  // High-converting viral copy according to user points and score (Order: English -> Spanish -> Korean)
+  const senderName = nickname.trim() ? `${nickname.trim()}` : '';
+  const senderPrefix = senderName ? `[${senderName}] ` : '';
+
   let viralHeadline = '';
   if (lang === 'en') {
     viralHeadline = isPerfect
-      ? `🏆 100% PERFECT SCORE! I just mastered "${quizTitle}" on K-Pulse and earned the [${badgeTitle}] title! 👑 Can anyone beat me? ⚔️`
+      ? `🏆 ${senderPrefix}5,000 PERFECT POINTS! I just mastered "${quizTitle}" on K-Pulse with the [${badgeTitle}] title! 👑 Can anyone beat me? ⚔️`
       : isHigh
-      ? `🔥 I scored ${pct}% (${badgeTitle}) on "${quizTitle}" at K-Pulse! Think you know K-Culture better? Prove it! ⚔️`
-      : `🐯 I just completed "${quizTitle}" on K-Pulse with ${pct}% (${badgeTitle})! Can you beat my score? 👀`;
+      ? `🔥 ${senderPrefix}I scored ${displayedPoints.toLocaleString()} pts (${score}/${totalQuestions} correct) on "${quizTitle}"! Can you beat my time? ⚔️`
+      : `🐯 ${senderPrefix}I just completed "${quizTitle}" on K-Pulse with ${displayedPoints.toLocaleString()} pts! Can you beat my score? 👀`;
   } else if (lang === 'es') {
     viralHeadline = isPerfect
-      ? `🏆 ¡100% PUNTUACIÓN PERFECTA! ¡Dominé "${quizTitle}" en K-Pulse con el título [${badgeTitle}]! 👑 ¿Alguien puede vencerme? ⚔️`
+      ? `🏆 ${senderPrefix}¡5,000 PUNTOS PERFECTOS! ¡Dominé "${quizTitle}" en K-Pulse con el título [${badgeTitle}]! 👑 ¿Alguien puede vencerme? ⚔️`
       : isHigh
-      ? `🔥 ¡Obtuve ${pct}% (${badgeTitle}) en "${quizTitle}" en K-Pulse! ¿Crees que sabes más? ¡Demuéstralo! ⚔️`
-      : `🐯 ¡Acabo de completar "${quizTitle}" en K-Pulse con ${pct}% ([${badgeTitle}])! ¿Puedes superarme? 👀`;
+      ? `🔥 ${senderPrefix}¡Obtuve ${displayedPoints.toLocaleString()} pts (${score}/${totalQuestions} correctas) en "${quizTitle}"! ¿Puedes superarme? ⚔️`
+      : `🐯 ${senderPrefix}¡Acabo de completar "${quizTitle}" en K-Pulse con ${displayedPoints.toLocaleString()} pts! ¿Crees que sabes más? 👀`;
   } else {
     // Korean (ko)
     viralHeadline = isPerfect
-      ? `🏆 100점 만점 퍼펙트! K-Pulse "${quizTitle}"에서 [${badgeTitle}] 칭호를 획득했습니다! 👑 나를 꺾을 수 있는 사람? ⚔️`
+      ? `🏆 ${senderPrefix}5,000점 만점 퍼펙트! K-Pulse "${quizTitle}"에서 [${badgeTitle}] 칭호를 획득했습니다! 👑 나를 꺾을 수 있는 사람? ⚔️`
       : isHigh
-      ? `🔥 K-Pulse "${quizTitle}"에서 ${pct}점 [${badgeTitle}] 달성! 나보다 K-컬처 잘 아는 사람 도전해보세요! ⚔️`
-      : `🐯 K-Pulse "${quizTitle}" 퀴즈 도전 완료! 내 점수는 ${pct}점([${badgeTitle}]). 나보다 잘 맞힐 수 있나요? 👀`;
+      ? `🔥 ${senderPrefix}K-Pulse "${quizTitle}"에서 ${displayedPoints.toLocaleString()}점(${totalQuestions}문제 중 ${score}개 정답) 달성! 나보다 빠른 번개손 도전해보세요! ⚔️`
+      : `🐯 ${senderPrefix}K-Pulse "${quizTitle}" 퀴즈 도전 완료! 내 점수는 ${displayedPoints.toLocaleString()}점([${badgeTitle}]). 이길 수 있나요? 👀`;
   }
 
   const twitterPostText = `${viralHeadline}${specificTag} #KPulse`;
@@ -93,12 +138,12 @@ export default function ShareButtons({
     }
   };
 
-  // 3. Native Web Share API (Mobile OS Share sheet)
+  // 3. Native Web Share API
   const handleNativeShare = async () => {
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
-          title: `${quizTitle} - K-Pulse`,
+          title: `${quizTitle} - K-Pulse Challenge`,
           text: viralHeadline,
           url: shareUrl,
         });
@@ -116,10 +161,28 @@ export default function ShareButtons({
 
   const redditShareUrl = `https://www.reddit.com/submit?url=${encodeURIComponent(
     shareUrl
-  )}&title=${encodeURIComponent(`[Quiz] ${quizTitle} - I scored ${pct}% (${badgeTitle})!`)}`;
+  )}&title=${encodeURIComponent(`[Quiz Challenge] ${quizTitle} - I scored ${displayedPoints.toLocaleString()} pts!`)}`;
 
   return (
     <div className="w-full mt-4">
+      {/* Nickname Input Field */}
+      <div className="rounded-2xl border-2 border-purple-200/90 bg-white p-4 mb-3.5 text-left shadow-xs">
+        <label htmlFor="kpulse-nick-input" className="block text-xs font-black text-purple-900 uppercase tracking-wider mb-1.5 flex items-center gap-1.5">
+          <User className="w-3.5 h-3.5 text-purple-600" />
+          <span>{t.challenge.nicknameLabel}</span>
+          <span className="text-[10px] text-slate-400 font-normal">({nickname.length}/12)</span>
+        </label>
+        <input
+          id="kpulse-nick-input"
+          type="text"
+          value={nickname}
+          onChange={(e) => handleNicknameChange(e.target.value)}
+          placeholder={t.challenge.nicknamePlaceholder}
+          maxLength={12}
+          className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 focus:border-purple-500 focus:ring-2 focus:ring-purple-200 text-xs sm:text-sm font-bold text-slate-900 placeholder:text-slate-400 outline-none transition-all"
+        />
+      </div>
+
       {/* Viral Challenge Quote Box Preview */}
       <div className="rounded-2xl border-2 border-purple-200/80 bg-gradient-to-br from-purple-50/80 via-white to-pink-50/80 p-4 mb-4 text-left shadow-xs">
         <div className="flex items-center gap-2 mb-1.5">
@@ -166,24 +229,12 @@ export default function ShareButtons({
           {copiedChallenge ? (
             <>
               <Check className="w-4 h-4 text-emerald-300" />
-              <span>
-                {lang === 'ko'
-                  ? '✓ 도전장 복사 완료! (붙여넣기 하세요)'
-                  : lang === 'es'
-                  ? '✓ ¡Desafío copiado!'
-                  : '✓ Challenge Copied to Clipboard!'}
-              </span>
+              <span>{t.challenge.copiedNotice}</span>
             </>
           ) : (
             <>
               <Swords className="w-4 h-4" />
-              <span>
-                {lang === 'ko'
-                  ? '친구에게 도전장 복사 ⚔️'
-                  : lang === 'es'
-                  ? 'Copiar desafío para amigos ⚔️'
-                  : 'Copy Challenge Message ⚔️'}
-              </span>
+              <span>{t.challenge.copyChallengeBtn}</span>
             </>
           )}
         </button>

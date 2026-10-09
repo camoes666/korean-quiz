@@ -1,15 +1,20 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef, useMemo } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import confetti from 'canvas-confetti';
 import { Quiz, Question, ScoreTier, QuestionLevel, getLocalizedText } from '@/types/quiz';
 import AdPlaceholder from './AdPlaceholder';
 import AffiliateBox from './AffiliateBox';
 import QuizCard from './QuizCard';
 import ShareButtons from './ShareButtons';
+import ChallengeBanner from './ChallengeBanner';
+import ChallengeResult from './ChallengeResult';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
+import { decodeChallenge, resolveChallengeQuestions } from '@/lib/challenge';
+import { calcQuestionPoints, calcTotalPoints, QUESTION_TIME_SEC, MAX_TOTAL_POINTS } from '@/lib/scoring';
 import {
   CheckCircle2,
   XCircle,
@@ -26,6 +31,7 @@ import {
   Shuffle,
   Home,
   BookOpen,
+  Swords,
 } from 'lucide-react';
 import { getQuizThemeGroup } from '@/lib/theme';
 import { getQuizMascot } from '@/lib/mascot';
@@ -50,19 +56,53 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
   const mascot = getQuizMascot(quiz.slug, quiz.tag);
 
+  const searchParams = useSearchParams();
+  const challengeParam = searchParams.get('c');
+
   const [selectedLevel, setSelectedLevel] = useState<QuestionLevel | 'all'>('all');
   const [activeQuestions, setActiveQuestions] = useState<Question[]>(quiz.questions);
   const [gameState, setGameState] = useState<'intro' | 'playing' | 'result'>('intro');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [isAnswerSubmitted, setIsAnswerSubmitted] = useState(false);
-  const [userAnswers, setUserAnswers] = useState<{ [questionId: number]: string }>({});
   const [score, setScore] = useState(0);
   const [earnedXPInSession, setEarnedXPInSession] = useState(0);
 
+  // Speed scoring state & refs
+  const [questionScores, setQuestionScores] = useState<number[]>([]);
+  const [lastEarnedPoints, setLastEarnedPoints] = useState<number>(0);
+  const questionStartTimeRef = useRef<number>(0);
+  const usedAssistOnCurrentRef = useRef<boolean>(false);
+  const timeExtensionSecOnCurrentRef = useRef<number>(0);
+
+  // Challenge Mode State derived declaratively
+  const [challengeExited, setChallengeExited] = useState(false);
+  const [dismissedError, setDismissedError] = useState(false);
+  const decodedChallenge = useMemo(() => {
+    if (!challengeParam) return null;
+    return decodeChallenge(quiz.slug, challengeParam);
+  }, [quiz.slug, challengeParam]);
+
+  const resolvedChallengeQuestions = useMemo(() => {
+    if (!decodedChallenge) return null;
+    return resolveChallengeQuestions(quiz, decodedChallenge.questionIds);
+  }, [quiz, decodedChallenge]);
+
+  const isChallengeMode = Boolean(!challengeExited && decodedChallenge && resolvedChallengeQuestions);
+  const challengeData = isChallengeMode ? decodedChallenge : null;
+  const challengeQuestions = isChallengeMode ? resolvedChallengeQuestions : null;
+  const challengeError = Boolean(!dismissedError && !challengeExited && challengeParam && (!decodedChallenge || !resolvedChallengeQuestions));
+
+  const [userNickname, setUserNickname] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('kpulse_nickname') || '';
+    }
+    return '';
+  });
+
   // Dynamic Timer (15s per question)
   const [timeLeft, setTimeLeft] = useState(15);
-  const [quizStartTime, setQuizStartTime] = useState<number>(() => Date.now());
+  const [quizStartTime, setQuizStartTime] = useState<number>(0);
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
 
   // Power-Up Items 3종 State
@@ -98,23 +138,30 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   }, [gameState, isAnswerSubmitted, currentIndex]);
 
   const startQuiz = (levelChoice: QuestionLevel | 'all' = selectedLevel) => {
-    let pool = quiz.questions;
-    if (levelChoice !== 'all') {
-      const filtered = quiz.questions.filter((q) => q.level === levelChoice);
-      if (filtered.length > 0) {
-        pool = filtered;
+    let sessionQuestions: Question[];
+    if (isChallengeMode && challengeQuestions && challengeQuestions.length === 5) {
+      sessionQuestions = challengeQuestions;
+    } else {
+      let pool = quiz.questions;
+      if (levelChoice !== 'all') {
+        const filtered = quiz.questions.filter((q) => q.level === levelChoice);
+        if (filtered.length > 0) {
+          pool = filtered;
+        }
       }
+      const shuffled = shuffleArray(pool);
+      // Pick 5 questions for a focused replayable session
+      sessionQuestions = shuffled.length > 5 ? shuffled.slice(0, 5) : shuffled;
     }
-    const shuffled = shuffleArray(pool);
-    // Question Bank: pick 5 questions for a focused replayable session
-    const sessionQuestions = shuffled.length > 5 ? shuffled.slice(0, 5) : shuffled;
+
     setActiveQuestions(sessionQuestions);
     setGameState('playing');
     setCurrentIndex(0);
     setSelectedOptionId(null);
     setIsAnswerSubmitted(false);
-    setUserAnswers({});
     setScore(0);
+    setQuestionScores([]);
+    setLastEarnedPoints(0);
     setEarnedXPInSession(0);
     setTimeLeft(15);
     setFiftyFiftyRemaining(1);
@@ -122,6 +169,9 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     setTimeExtensionsRemaining(2);
     setIsHintActive(false);
     setQuizStartTime(Date.now());
+    questionStartTimeRef.current = Date.now();
+    usedAssistOnCurrentRef.current = false;
+    timeExtensionSecOnCurrentRef.current = 0;
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -134,6 +184,19 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     if (!selectedOptionId || !currentQuestion || isAnswerSubmitted) return;
 
     const isCorrect = selectedOptionId === currentQuestion.correctAnswer;
+    const elapsedMs = Date.now() - questionStartTimeRef.current;
+    const totalAllowedSec = QUESTION_TIME_SEC + timeExtensionSecOnCurrentRef.current;
+    const remainingSec = Math.max(0, Math.round((totalAllowedSec - elapsedMs / 1000) * 10) / 10);
+
+    const pts = calcQuestionPoints({
+      correct: isCorrect,
+      remainingSec,
+      usedAssist: usedAssistOnCurrentRef.current,
+    });
+
+    setQuestionScores((prev) => [...prev, pts]);
+    setLastEarnedPoints(pts);
+
     if (isCorrect) {
       setScore((prev) => prev + 1);
       // Award 20 XP on correct answer!
@@ -141,10 +204,6 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       setEarnedXPInSession((prev) => prev + 20);
     }
 
-    setUserAnswers((prev) => ({
-      ...prev,
-      [currentQuestion.id]: selectedOptionId,
-    }));
     setIsAnswerSubmitted(true);
   };
 
@@ -156,6 +215,10 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       setTimeLeft(15);
       setEliminatedOptions([]);
       setIsHintActive(false);
+      questionStartTimeRef.current = Date.now();
+      usedAssistOnCurrentRef.current = false;
+      timeExtensionSecOnCurrentRef.current = 0;
+      setLastEarnedPoints(0);
       window.scrollTo({ top: 120, behavior: 'smooth' });
     } else {
       // Quiz Finished! Award completion bonus 30 XP and check daily quest
@@ -169,9 +232,18 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     }
   };
 
+  const handleRetakeNormal = () => {
+    if (typeof window !== 'undefined') {
+      window.history.replaceState({}, '', window.location.pathname);
+    }
+    setChallengeExited(true);
+    startQuiz(selectedLevel);
+  };
+
   // Power-Up 1: 50:50 Chance
   const handleUseFiftyFifty = () => {
     if (!currentQuestion || fiftyFiftyRemaining <= 0 || isAnswerSubmitted || eliminatedOptions.length > 0) return;
+    usedAssistOnCurrentRef.current = true;
     const wrongOptions = currentQuestion.options.filter((opt) => opt.id !== currentQuestion.correctAnswer);
     const shuffledWrong = shuffleArray(wrongOptions);
     const toEliminate = shuffledWrong.slice(0, 2).map((o) => o.id);
@@ -182,6 +254,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   // Power-Up 2: +10s Time Extension
   const handleUseTimeExtension = () => {
     if (timeExtensionsRemaining <= 0 || isAnswerSubmitted) return;
+    timeExtensionSecOnCurrentRef.current += 10;
     setTimeLeft((prev) => prev + 10);
     setTimeExtensionsRemaining((prev) => prev - 1);
   };
@@ -189,6 +262,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   // Power-Up 3: Fandom Chance (Hint)
   const handleUseHint = () => {
     if (isHintActive || isAnswerSubmitted) return;
+    usedAssistOnCurrentRef.current = true;
     setIsHintActive(true);
   };
 
@@ -261,6 +335,22 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   if (gameState === 'intro') {
     return (
       <div data-group={themeGroup} className="max-w-3xl mx-auto px-4 py-8 sm:py-12 transition-colors duration-300">
+        {challengeError && (
+          <ChallengeBanner
+            mode="error"
+            onDismissError={() => setDismissedError(true)}
+          />
+        )}
+
+        {isChallengeMode && challengeData && (
+          <ChallengeBanner
+            mode="intro"
+            challengerName={challengeData.nickname}
+            challengerScore={challengeData.totalScore}
+            onStart={() => startQuiz()}
+          />
+        )}
+
         <div className="qz-card overflow-hidden rounded-3xl border-2 border-purple-100 bg-white shadow-xl shadow-purple-500/5">
           {/* Header Banner */}
           <div
@@ -323,7 +413,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <div className="qz-stat-box p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
                 <div className="qz-stat-label text-xs text-slate-400 font-bold">{t.quizIntro.questions}</div>
                 <div className="qz-stat-val text-xl font-black text-slate-900">
-                  {totalQuestions}
+                  5 <span className="text-[11px] font-bold text-slate-400">/ {quiz.questions.length}</span>
                 </div>
               </div>
               <div className="qz-stat-box p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
@@ -340,94 +430,113 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               </div>
             </div>
 
-            {/* Question Bank & Difficulty Selector */}
-            <div className="mb-8 rounded-3xl bg-slate-50 p-5 border-2 border-purple-100">
-              <div className="flex items-center justify-between mb-3.5">
-                <div className="flex items-center gap-2">
-                  <SlidersHorizontal className="w-4 h-4 text-purple-600" />
-                  <span className="text-xs font-black uppercase tracking-wider text-slate-800">
-                    {t.levels.selectTitle}
+            {/* Question Bank & Difficulty Selector (Hidden in Challenge Mode) */}
+            {isChallengeMode ? (
+              <div className="mb-8 rounded-3xl bg-gradient-to-r from-purple-50 via-pink-50 to-indigo-50 p-6 border-2 border-purple-200 text-center">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-black mb-2">
+                  <Swords className="w-3.5 h-3.5 text-pink-600" />
+                  <span>1:1 CHALLENGE MATCH</span>
+                </div>
+                <h4 className="text-sm font-black text-slate-800 mb-1">
+                  ⚔️ {challengeData?.nickname || t.challenge.defaultFriend}님과의 비동기 대결
+                </h4>
+                <p className="text-xs text-slate-600 font-medium max-w-md mx-auto">
+                  도전자와 동일한 5문제, 동일한 출제 순서로 진행됩니다. 빠른 번개손으로 최고 점수에 도전하세요!
+                </p>
+              </div>
+            ) : (
+              <div className="mb-8 rounded-3xl bg-slate-50 p-5 border-2 border-purple-100">
+                <div className="flex items-center justify-between mb-3.5">
+                  <div className="flex items-center gap-2">
+                    <SlidersHorizontal className="w-4 h-4 text-purple-600" />
+                    <span className="text-xs font-black uppercase tracking-wider text-slate-800">
+                      {t.levels.selectTitle}
+                    </span>
+                  </div>
+                  <span className="text-[11px] font-bold text-purple-700 bg-purple-100 px-2.5 py-0.5 rounded-full">
+                    {quiz.questions.length} Questions in Bank
                   </span>
                 </div>
-                <span className="text-[11px] font-bold text-purple-700 bg-purple-100 px-2.5 py-0.5 rounded-full">
-                  {quiz.questions.length} Questions in Bank
-                </span>
+
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  {/* All Levels */}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedLevel('all')}
+                    className={`p-3 rounded-2xl border-2 text-left transition-all ${
+                      selectedLevel === 'all'
+                        ? 'border-purple-600 bg-purple-50 shadow-xs ring-2 ring-purple-400/20 translate-y-[-2px]'
+                        : 'border-slate-200 bg-white hover:border-purple-200'
+                    }`}
+                  >
+                    <div className="text-base mb-1">🎲</div>
+                    <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.allLevels}</div>
+                    <div className="text-[10px] text-slate-400 font-bold mt-0.5">{quiz.questions.length} Qs</div>
+                  </button>
+
+                  {/* Lv 1 */}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedLevel(1)}
+                    className={`p-3 rounded-2xl border-2 text-left transition-all ${
+                      selectedLevel === 1
+                        ? 'border-emerald-500 bg-emerald-50 shadow-xs ring-2 ring-emerald-400/20 translate-y-[-2px]'
+                        : 'border-slate-200 bg-white hover:border-purple-200'
+                    }`}
+                  >
+                    <div className="text-base mb-1">🌱</div>
+                    <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl1}</div>
+                    <div className="text-[10px] text-emerald-600 font-bold mt-0.5">
+                      {quiz.questions.filter((q) => q.level === 1).length} Qs
+                    </div>
+                  </button>
+
+                  {/* Lv 2 */}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedLevel(2)}
+                    className={`p-3 rounded-2xl border-2 text-left transition-all ${
+                      selectedLevel === 2
+                        ? 'border-amber-500 bg-amber-50 shadow-xs ring-2 ring-amber-400/20 translate-y-[-2px]'
+                        : 'border-slate-200 bg-white hover:border-purple-200'
+                    }`}
+                  >
+                    <div className="text-base mb-1">⭐</div>
+                    <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl2}</div>
+                    <div className="text-[10px] text-amber-600 font-bold mt-0.5">
+                      {quiz.questions.filter((q) => q.level === 2).length} Qs
+                    </div>
+                  </button>
+
+                  {/* Lv 3 */}
+                  <button
+                    type="button"
+                    onClick={() => setSelectedLevel(3)}
+                    className={`p-3 rounded-2xl border-2 text-left transition-all ${
+                      selectedLevel === 3
+                        ? 'border-rose-500 bg-rose-50 shadow-xs ring-2 ring-rose-400/20 translate-y-[-2px]'
+                        : 'border-slate-200 bg-white hover:border-purple-200'
+                    }`}
+                  >
+                    <div className="text-base mb-1">🔥</div>
+                    <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl3}</div>
+                    <div className="text-[10px] text-rose-600 font-bold mt-0.5">
+                      {quiz.questions.filter((q) => q.level === 3).length} Qs
+                    </div>
+                  </button>
+                </div>
               </div>
-
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
-                {/* All Levels */}
-                <button
-                  type="button"
-                  onClick={() => setSelectedLevel('all')}
-                  className={`p-3 rounded-2xl border-2 text-left transition-all ${
-                    selectedLevel === 'all'
-                      ? 'border-purple-600 bg-purple-50 shadow-xs ring-2 ring-purple-400/20 translate-y-[-2px]'
-                      : 'border-slate-200 bg-white hover:border-purple-200'
-                  }`}
-                >
-                  <div className="text-base mb-1">🎲</div>
-                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.allLevels}</div>
-                  <div className="text-[10px] text-slate-400 font-bold mt-0.5">{quiz.questions.length} Qs</div>
-                </button>
-
-                {/* Lv 1 */}
-                <button
-                  type="button"
-                  onClick={() => setSelectedLevel(1)}
-                  className={`p-3 rounded-2xl border-2 text-left transition-all ${
-                    selectedLevel === 1
-                      ? 'border-emerald-500 bg-emerald-50 shadow-xs ring-2 ring-emerald-400/20 translate-y-[-2px]'
-                      : 'border-slate-200 bg-white hover:border-purple-200'
-                  }`}
-                >
-                  <div className="text-base mb-1">🌱</div>
-                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl1}</div>
-                  <div className="text-[10px] text-emerald-600 font-bold mt-0.5">
-                    {quiz.questions.filter((q) => q.level === 1).length} Qs
-                  </div>
-                </button>
-
-                {/* Lv 2 */}
-                <button
-                  type="button"
-                  onClick={() => setSelectedLevel(2)}
-                  className={`p-3 rounded-2xl border-2 text-left transition-all ${
-                    selectedLevel === 2
-                      ? 'border-amber-500 bg-amber-50 shadow-xs ring-2 ring-amber-400/20 translate-y-[-2px]'
-                      : 'border-slate-200 bg-white hover:border-purple-200'
-                  }`}
-                >
-                  <div className="text-base mb-1">⭐</div>
-                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl2}</div>
-                  <div className="text-[10px] text-amber-600 font-bold mt-0.5">
-                    {quiz.questions.filter((q) => q.level === 2).length} Qs
-                  </div>
-                </button>
-
-                {/* Lv 3 */}
-                <button
-                  type="button"
-                  onClick={() => setSelectedLevel(3)}
-                  className={`p-3 rounded-2xl border-2 text-left transition-all ${
-                    selectedLevel === 3
-                      ? 'border-rose-500 bg-rose-50 shadow-xs ring-2 ring-rose-400/20 translate-y-[-2px]'
-                      : 'border-slate-200 bg-white hover:border-purple-200'
-                  }`}
-                >
-                  <div className="text-base mb-1">🔥</div>
-                  <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl3}</div>
-                  <div className="text-[10px] text-rose-600 font-bold mt-0.5">
-                    {quiz.questions.filter((q) => q.level === 3).length} Qs
-                  </div>
-                </button>
-              </div>
-            </div>
+            )}
 
             <button
               onClick={() => startQuiz(selectedLevel)}
-              className="qz-btn-primary flex items-center justify-center gap-2 w-full max-w-md mx-auto rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-4 px-8 text-base font-black shadow-lg shadow-purple-500/25 transition-all active:scale-95"
+              className="qz-btn-primary flex items-center justify-center gap-2 w-full max-w-md mx-auto rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-4 px-8 text-base font-black shadow-lg shadow-purple-500/25 transition-all active:scale-95 cursor-pointer"
             >
-              <span>{t.quizIntro.startNow}</span>
+              <span>
+                {isChallengeMode
+                  ? t.challenge.startBattle
+                  : `${t.quizIntro.startNow} (5 Qs)`}
+              </span>
               <ArrowRight className="w-5 h-5" />
             </button>
 
@@ -468,6 +577,19 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
     return (
       <div data-group={themeGroup} className="max-w-3xl mx-auto px-4 py-6 sm:py-10 transition-colors duration-300">
+        {/* Challenge In-Game Score Comparison Banner */}
+        {isChallengeMode && challengeData && (
+          <ChallengeBanner
+            mode="in-game"
+            challengerName={challengeData.nickname}
+            userCumulativeScore={questionScores.reduce((a, b) => a + b, 0)}
+            challengerCumulativeScore={challengeData.scores
+              .slice(0, currentIndex + (isAnswerSubmitted ? 1 : 0))
+              .reduce((a, b) => a + b, 0)}
+            currentQuestionIndex={currentIndex}
+          />
+        )}
+
         {/* Top HUD (Q.07/15 Progress + 12s Dynamic Timer Chip) */}
         <div className="mb-6">
           <div className="flex items-center justify-between text-xs font-black text-slate-600 mb-2.5">
@@ -760,23 +882,38 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             <div className="mt-6 rounded-2xl border-2 border-purple-100 bg-purple-50/50 p-5 animate-fadeIn">
               {isAnswerSubmitted ? (
                 <>
-                  <div className="flex items-center gap-2 mb-2">
-                    {isCorrect ? (
-                      <span className="flex items-center gap-1.5 text-xs font-black text-emerald-600">
-                        <img src="/images/hobi02.webp" alt="Correct" className="w-5 h-5 object-contain" />
-                        <CheckCircle2 className="w-4 h-4" /> {t.quizRunner.correct} (+20 XP!)
-                      </span>
-                    ) : (
-                      <span className="flex items-center gap-1.5 text-xs font-black text-rose-600">
-                        <img src="/images/hobi03.webp" alt="Cheer" className="w-5 h-5 object-contain" />
-                        <XCircle className="w-4 h-4" /> {t.quizRunner.incorrect}{' '}
-                        {lang === 'ko'
-                          ? '(호비가 응원해요!)'
-                          : lang === 'es'
-                          ? '(¡Hobi te anima!)'
-                          : '(Hobi is cheering for you!)'}
-                      </span>
-                    )}
+                  <div className="flex items-center justify-between flex-wrap gap-2 mb-2">
+                    <div className="flex items-center gap-2">
+                      {isCorrect ? (
+                        <span className="flex items-center gap-1.5 text-xs font-black text-emerald-600">
+                          <img src="/images/hobi02.webp" alt="Correct" className="w-5 h-5 object-contain" />
+                          <CheckCircle2 className="w-4 h-4" /> {t.quizRunner.correct} (+20 XP!)
+                        </span>
+                      ) : (
+                        <span className="flex items-center gap-1.5 text-xs font-black text-rose-600">
+                          <img src="/images/hobi03.webp" alt="Cheer" className="w-5 h-5 object-contain" />
+                          <XCircle className="w-4 h-4" /> {t.quizRunner.incorrect}{' '}
+                          {lang === 'ko'
+                            ? '(호비가 응원해요!)'
+                            : lang === 'es'
+                            ? '(¡Hobi te anima!)'
+                            : '(Hobi is cheering for you!)'}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Speed Points Badge */}
+                    <div className="flex items-center gap-1">
+                      {lastEarnedPoints > 0 ? (
+                        <span className="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 font-black text-xs border border-emerald-300 shadow-2xs animate-bounce">
+                          +{lastEarnedPoints} {t.quizRunner.pts}
+                        </span>
+                      ) : (
+                        <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-500 font-black text-xs border border-slate-200">
+                          +0 {t.quizRunner.pts}
+                        </span>
+                      )}
+                    </div>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-700 leading-relaxed mb-3 font-medium">
                     {explanationText}
@@ -815,6 +952,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   }
 
   // 3. RESULT VIEW (Snippet 3)
+  const totalPoints = calcTotalPoints(questionScores);
   const minutesSpent = Math.floor(elapsedSeconds / 60);
   const secondsSpent = elapsedSeconds % 60;
   const timeFormatted = `${minutesSpent > 0 ? (lang === 'ko' ? `${minutesSpent}분 ` : `${minutesSpent}m `) : ''}${secondsSpent}${lang === 'ko' ? '초' : 's'}`;
@@ -879,14 +1017,22 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           {tierTitle} ({tierBadge})
         </div>
 
-        {/* 대형 스코어 */}
-        <div className="flex items-baseline justify-center gap-1 mb-2">
-          <span className="text-6xl font-black text-emerald-600 tracking-tighter">
-            {Math.round((score / totalQuestions) * 100)}
-          </span>
-          <span className="text-2xl font-black text-slate-300">
-            {lang === 'ko' ? '/ 100점' : '/ 100 pts'}
-          </span>
+        {/* 대형 스코어 (총점 & 정답 개수) */}
+        <div className="flex flex-col items-center justify-center mb-4">
+          <div className="flex items-baseline justify-center gap-1.5">
+            <span className="text-5xl sm:text-7xl font-black text-emerald-600 tracking-tighter">
+              {totalPoints.toLocaleString()}
+            </span>
+            <span className="text-xl sm:text-2xl font-black text-slate-300">
+              / {MAX_TOTAL_POINTS.toLocaleString()} {t.quizRunner.pts}
+            </span>
+          </div>
+          <div className="text-xs sm:text-sm font-bold text-slate-500 mt-1">
+            {t.resultView.correctCount
+              .replace('{total}', String(totalQuestions))
+              .replace('{correct}', String(score))
+              .replace('{pct}', String(Math.round((score / totalQuestions) * 100)))}
+          </div>
         </div>
 
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600 mb-6">
@@ -940,6 +1086,24 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           )}
         </div>
 
+        {/* 1:1 대결 모드 결과 카드 */}
+        {isChallengeMode && challengeData && (
+          <div className="mb-5">
+            <ChallengeResult
+              slug={quiz.slug}
+              quizTitle={quizTitle}
+              challengerName={challengeData.nickname}
+              challengerScores={challengeData.scores}
+              challengerTotalScore={challengeData.totalScore}
+              userScores={questionScores}
+              userTotalScore={totalPoints}
+              questionIds={activeQuestions.map((q) => q.id)}
+              userNickname={userNickname}
+              onRetakeNormal={handleRetakeNormal}
+            />
+          </div>
+        )}
+
         {/* ⚡ High-Impact Primary CTA: Next Recommended Quiz */}
         {relatedQuizzes.length > 0 && (
           <div className="mb-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-purple-600 via-pink-600 to-indigo-700 text-white text-left shadow-lg shadow-purple-500/25 relative overflow-hidden group">
@@ -974,10 +1138,16 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         <div className="mb-5">
           <ShareButtons
             quizTitle={quizTitle}
+            slug={quiz.slug}
             score={score}
             totalQuestions={totalQuestions}
+            totalPoints={totalPoints}
+            questionIds={activeQuestions.map((q) => q.id)}
+            questionScores={questionScores}
             badgeTitle={tierTitle}
             badgeEmoji={tierBadge}
+            userNickname={userNickname}
+            onNicknameChange={setUserNickname}
           />
         </div>
 
@@ -1002,7 +1172,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         {/* Action Buttons: 다시 풀기 & 난이도 변경 & 홈으로 */}
         <div className="flex flex-wrap gap-2 justify-center pt-3 border-t border-slate-100">
           <button
-            onClick={() => startQuiz(selectedLevel)}
+            onClick={() => (isChallengeMode ? handleRetakeNormal() : startQuiz(selectedLevel))}
             className="flex-1 min-w-[120px] py-2.5 px-3 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5 active:scale-95"
           >
             <RotateCcw className="w-3.5 h-3.5" />

@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getQuizBySlug, getRelatedQuizzes, getAllQuizzes } from '@/data/quizzes';
@@ -31,7 +32,7 @@ export async function generateMetadata({
   const isPersonality = quiz.quizType === 'personality';
   const ogTitle = isPersonality
     ? `${quiz.title} - Personality Match | K-Pulse`
-    : `${quiz.title} - Can You Score 10/10? | K-Pulse`;
+    : `${quiz.title} - High Score Challenge | K-Pulse`;
 
   return {
     title: `${quiz.title} | K-Pulse`,
@@ -81,7 +82,15 @@ export default async function QuizPage({ params }: QuizPageProps) {
 
   return (
     <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
-      <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
+      <Suspense
+        fallback={
+          <div className="max-w-3xl mx-auto px-4 py-12 text-center animate-pulse">
+            <div className="h-64 rounded-3xl bg-slate-100" />
+          </div>
+        }
+      >
+        <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
+      </Suspense>
     </main>
   );
 }
