@@ -62,19 +62,23 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   // URL 쿼리 파라미터 변경 감지 및 동기화
   React.useEffect(() => {
-    try {
-      const params = new URLSearchParams(window.location.search);
-      const urlLang = params.get('lang')?.toLowerCase() as Language;
-      if (urlLang && translations[urlLang] && urlLang !== lang) {
-        setLangState(urlLang);
-        localStorage.setItem('kpulse_lang', urlLang);
+    const handlePopState = () => {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const urlLang = params.get('lang')?.toLowerCase() as Language;
+        if (urlLang && translations[urlLang]) {
+          setLangState(urlLang);
+          localStorage.setItem('kpulse_lang', urlLang);
+        }
+      } catch {
+        // safe
       }
-      if (typeof document !== 'undefined') {
-        document.documentElement.lang = lang;
-      }
-    } catch {
-      // safe
+    };
+    window.addEventListener('popstate', handlePopState);
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = lang;
     }
+    return () => window.removeEventListener('popstate', handlePopState);
   }, [lang]);
 
   const setLang = (newLang: Language) => {
