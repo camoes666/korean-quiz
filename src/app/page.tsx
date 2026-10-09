@@ -9,7 +9,7 @@ import AdPlaceholder from '@/components/AdPlaceholder';
 import DailyQuestCard from '@/components/DailyQuestCard';
 import PlayerLevelCard from '@/components/PlayerLevelCard';
 import LeaderboardCard from '@/components/LeaderboardCard';
-import { Sparkles, Trophy, Globe, Flame, Heart, ArrowRight, Tag } from 'lucide-react';
+import { Sparkles, Trophy, Globe, Flame, Heart, ArrowRight, Tag, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
@@ -196,6 +196,60 @@ export default function HomePage() {
             </button>
           </div>
         )}
+      </section>
+
+      {/* 2.5 KNOWLEDGE & LORE GUIDES PROGRAMMATIC SEO SECTION */}
+      <section className="border-t-2 border-purple-100 bg-gradient-to-r from-purple-50 via-pink-50/50 to-indigo-50 py-12">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-white p-6 sm:p-8 rounded-3xl border-2 border-purple-100 shadow-md shadow-purple-500/5">
+            <div className="flex items-start gap-4">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-purple-100 flex items-center justify-center shrink-0 text-3xl">
+                📚
+              </div>
+              <div>
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 font-black text-[11px] mb-2">
+                  <Sparkles className="w-3 h-3 text-pink-500" />
+                  <span>
+                    {lang === 'en'
+                      ? '230+ Verified Facts & Explanations'
+                      : lang === 'es'
+                      ? '230+ Hechos y Respuestas Verificadas'
+                      : '230+개 팩트체크 & 해설 수록'}
+                  </span>
+                </div>
+                <h3 className="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+                  {lang === 'en'
+                    ? 'K-Culture & K-Pop Fan Knowledge Guides'
+                    : lang === 'es'
+                    ? 'Guías de Lore y Conocimiento K-Pop'
+                    : 'K-컬처 & K-Pop 팬 지식 가이드 백과'}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1 max-w-xl">
+                  {lang === 'en'
+                    ? 'Explore verified answers, debut histories, cultural etiquette, and insider fun facts before taking the quizzes.'
+                    : lang === 'es'
+                    ? 'Descubre las respuestas y explicaciones detrás de cada pregunta sobre BTS, SKZ, BLACKPINK y comida coreana.'
+                    : 'BTS, Stray Kids, 블랙핑크, 한국 매운맛 순위, 문화 IQ까지 모든 퀴즈의 정답과 심층 해설을 무료로 정독하세요.'}
+                </p>
+              </div>
+            </div>
+
+            <Link
+              href="/guide"
+              className="w-full md:w-auto shrink-0 flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-xs sm:text-sm shadow-md shadow-purple-500/20 transition-all hover:scale-105 active:scale-95"
+            >
+              <BookOpen className="w-4 h-4" />
+              <span>
+                {lang === 'en'
+                  ? 'Explore All Lore Guides'
+                  : lang === 'es'
+                  ? 'Explorar Guías de Lore'
+                  : '전체 지식 가이드 둘러보기'}
+              </span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* 3. SEO / AD-APPROVAL VALUE SECTION */}

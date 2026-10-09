@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Quiz, getLocalizedText } from '@/types/quiz';
-import { Clock, HelpCircle, Users, ArrowRight, Heart } from 'lucide-react';
+import { Clock, HelpCircle, Users, ArrowRight, Heart, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
 import { getQuizThemeGroup } from '@/lib/theme';
@@ -116,22 +116,34 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             </span>
           </div>
 
-          {/* 풀사이즈 CTA 젤리 버튼 */}
-          <Link
-            href={`/quiz/${quiz.slug}`}
-            className="qz-btn-primary w-full py-3.5 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-xl shadow-md shadow-purple-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
-          >
-            <span>
-              {quiz.quizType === 'personality'
-                ? lang === 'en'
-                  ? 'Find Your Soulmate'
-                  : lang === 'es'
-                  ? 'Descubrir Mi Miembro'
-                  : '나의 멤버 찾기'
-                : t.startChallenge}
-            </span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          {/* CTA Button Row */}
+          <div className="flex items-center gap-2">
+            <Link
+              href={`/quiz/${quiz.slug}`}
+              className="qz-btn-primary flex-1 py-3.5 px-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm rounded-xl shadow-md shadow-purple-500/25 flex items-center justify-center gap-2 transition-all active:scale-[0.98]"
+            >
+              <span>
+                {quiz.quizType === 'personality'
+                  ? lang === 'en'
+                    ? 'Find Your Soulmate'
+                    : lang === 'es'
+                    ? 'Descubrir Mi Miembro'
+                    : '나의 멤버 찾기'
+                  : t.startChallenge}
+              </span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+
+            {quiz.quizType !== 'personality' && (
+              <Link
+                href={`/guide/${quiz.slug}`}
+                className="py-3 px-3 rounded-xl border-2 border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-purple-700 font-extrabold text-xs flex items-center justify-center transition-all shadow-2xs"
+                title={lang === 'ko' ? '지식 가이드 & 족보 보기' : lang === 'es' ? 'Ver Guía de Lore' : 'Read Lore Guide'}
+              >
+                <BookOpen className="w-4 h-4" />
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     </div>

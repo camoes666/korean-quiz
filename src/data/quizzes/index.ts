@@ -45,3 +45,20 @@ export function getQuizzesByCategory(category: Category): Quiz[] {
 export function getRelatedQuizzes(currentSlug: string, limit = 2): Quiz[] {
   return quizzes.filter((q) => q.slug !== currentSlug).slice(0, limit);
 }
+
+export function getTriviaQuizzes(): Quiz[] {
+  return quizzes.filter((q) => q.quizType !== 'personality' && q.questions && q.questions.length > 0);
+}
+
+export function getTriviaQuizBySlug(slug: string): Quiz | undefined {
+  return getTriviaQuizzes().find((q) => q.slug === slug);
+}
+
+export function getTotalTriviaQuestionCount(): number {
+  return getTriviaQuizzes().reduce((total, q) => total + (q.questions?.length || 0), 0);
+}
+
+export function getRelatedTriviaQuizzes(currentSlug: string, limit = 3): Quiz[] {
+  return getTriviaQuizzes().filter((q) => q.slug !== currentSlug).slice(0, limit);
+}
+

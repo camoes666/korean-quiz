@@ -25,6 +25,7 @@ import {
   Clock,
   Shuffle,
   Home,
+  BookOpen,
 } from 'lucide-react';
 import { getQuizThemeGroup } from '@/lib/theme';
 import { getQuizMascot } from '@/lib/mascot';
@@ -429,6 +430,24 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <span>{t.quizIntro.startNow}</span>
               <ArrowRight className="w-5 h-5" />
             </button>
+
+            {/* Study Guide Link */}
+            <div className="mt-4 text-center">
+              <Link
+                href={`/guide/${quiz.slug}`}
+                className="inline-flex items-center gap-1.5 text-xs font-black text-purple-600 hover:text-purple-700 hover:underline transition-colors"
+              >
+                <BookOpen className="w-3.5 h-3.5" />
+                <span>
+                  {lang === 'ko'
+                    ? `📖 시험 전 족보! ${quizTitle} 해설 & 로어 가이드 미리보기`
+                    : lang === 'es'
+                    ? `📖 ¿Quieres estudiar primero? Ver guía y datos de ${quizTitle}`
+                    : `📖 Want to study first? Read the ${quizTitle} Lore Guide`}
+                </span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
           </div>
         </div>
 
@@ -960,6 +979,24 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             badgeTitle={tierTitle}
             badgeEmoji={tierBadge}
           />
+        </div>
+
+        {/* Full Guide & Lore Review Link */}
+        <div className="mb-4">
+          <Link
+            href={`/guide/${quiz.slug}`}
+            className="w-full py-3 px-4 rounded-2xl bg-purple-50/80 hover:bg-purple-100/90 border border-purple-200 text-purple-800 text-xs font-black transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
+          >
+            <BookOpen className="w-4 h-4 text-purple-600" />
+            <span>
+              {lang === 'ko'
+                ? `전체 ${totalQuestions}개 문답 해설 & 꿀팁 족보 가이드 보기 📖`
+                : lang === 'es'
+                ? `Repasar todas las explicaciones y curiosidades en la Guía 📖`
+                : `Review All Explanations & Insider Lore in Study Guide 📖`}
+            </span>
+            <ArrowRight className="w-3.5 h-3.5 text-purple-600" />
+          </Link>
         </div>
 
         {/* Action Buttons: 다시 풀기 & 난이도 변경 & 홈으로 */}

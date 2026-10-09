@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Sparkles, Flame, Zap, ChevronDown, Check, Trophy } from 'lucide-react';
+import { Sparkles, Flame, Zap, ChevronDown, Check, Trophy, BookOpen } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { quizzes } from '@/data/quizzes';
 import { useLanguage } from '@/context/LanguageContext';
@@ -134,6 +134,28 @@ export default function Navbar() {
               </div>
             )}
           </div>
+
+          {/* Knowledge Guides Navigation Link */}
+          <Link
+            href="/guide"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-purple-200 bg-purple-50/70 hover:bg-purple-100 text-purple-700 font-extrabold text-xs transition-all shadow-2xs hover:scale-105 shrink-0"
+            title={lang === 'ko' ? 'K-컬처 & K-Pop 지식 가이드' : lang === 'es' ? 'Guías de Lore' : 'Knowledge & Lore Guides'}
+          >
+            <BookOpen className="w-3.5 h-3.5 text-purple-600" />
+            <span>
+              {lang === 'en'
+                ? 'Guides'
+                : lang === 'es'
+                ? 'Guías'
+                : lang === 'ko'
+                ? '지식 가이드'
+                : lang === 'ru'
+                ? 'Гайды'
+                : lang === 'zh'
+                ? '指南'
+                : 'Guides'}
+            </span>
+          </Link>
 
           {/* Surprise Me 3D Action Button */}
           <button
