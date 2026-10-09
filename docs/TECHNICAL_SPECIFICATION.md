@@ -1,7 +1,7 @@
 # K-Pulse 엔지니어링 & 기술 명세서 (Technical Specification)
 
 > **문서 상태**: 살아있는 문서 (Living Document)  
-> **최종 업데이트**: 2026-10-06  
+> **최종 업데이트**: 2026-10-09  
 > **프로덕션 서비스 URL**: [https://kpulsequiz.com](https://kpulsequiz.com)  
 > **깃허브 저장소**: [https://github.com/camoes666/korean-quiz](https://github.com/camoes666/korean-quiz)  
 > **배포 플랫폼**: Cloudflare Pages (Git 연동 무중단 자동 배포)
@@ -15,7 +15,9 @@
 
 ### 핵심 시스템 특징
 - **완전 정적 빌드(SSG / Static Export)**: Next.js의 `output: 'export'` 설정을 활용하여 완전한 HTML/CSS/JS 번들로 빌드되어 서버 부하 없이 무제한 트래픽을 처리합니다.
-- **게이미피케이션 엔진**: 레벨 시스템(Trainee ➔ Debut Stage ➔ Rising Star ➔ Hallyu Icon ➔ Global Legend), 콤보 스트릭, 파워업 3종(50:50, 힌트, 스킵), 동적 타이머, Web Audio API 사운드 효과, 파티클 폭죽(Confetti) 내장.
+- **5문제 집중형 세션 & 번개손 스피드 점수 (NEW)**: 문제당 15초 제한, 빠른 제출 시간(0.1초 단위)에 비례한 점수 산출(문제당 최대 1,000점 / 5문제 세션당 최대 5,000점 만점).
+- **P2P 비동기 1:1 친구 도전장 (NEW)**: DB 없이 URL 쿼리 파라미터(`?c=...`)로 5문제 ID, 점수, 닉네임, FNV-1a 무결성 해시를 인코딩하여 친구와 동일한 5문제로 실시간 점수차 비교 및 되받아치기 대결 지원.
+- **게이미피케이션 엔진**: 레벨 시스템(Trainee ➔ Debut Stage ➔ Rising Star ➔ Hallyu Icon ➔ Global Legend), 콤보 스트릭, 파워업 3종(50:50, 힌트, +10초 연장), Web Audio API 사운드 효과, 파티클 폭죽(Confetti) 내장.
 - **다국어(i18n) 시스템**: 글로벌 타깃을 위해 **영어(en, 기본 fallback 1순위) ➔ 스페인어(es, 2순위) ➔ 한국어(ko, 3순위)** 계층 구조를 구현.
 - **최적화된 소셜 메타데이터**: 트위터(X), 페이스북, 디스코드, 카카오톡 등에 최적화된 1200x630 규격의 Open Graph 및 `summary_large_image` 트위터 카드 파이프라인 탑재.
 
@@ -41,6 +43,7 @@
 | **프레임워크** | Next.js 16.3.5 (App Router) | 최신 정적 빌드 최적화 및 메타데이터 동적 생성 지원 |
 | **라이브러리** | React 19.2.8 | 최신 React 동시성 및 최적화된 렌더링 파이프라인 |
 | **언어** | TypeScript 5 | 엄격한 타입 체킹으로 퀴즈 JSON 스키마 및 런타임 오류 방지 |
+| **테스트** | Vitest 5.0.3 | 0.1초 스피드 점수 공식 및 FNV-1a 해시 무결성 단위 테스트 (22개 테스트) |
 | **스타일링** | Tailwind CSS v4, `@tailwindcss/postcss` | 초경량 CSS 유틸리티 및 반응형 모바일 퍼스트 UI 구성 |
 | **아이콘** | Lucide React 1.46.0 | 깔끔하고 통일된 SVG 모던 UI 아이콘 |
 | **이펙트** | Canvas-Confetti 1.9.4 | 퀴즈 완주 및 고득점 시 파티클 폭죽 시각 효과 |
@@ -52,56 +55,46 @@
 
 ```
 c:\Users\USER\code\quiz_site/
-├── docs/                             # [Living Docs] 프로젝트 명세 및 마케팅 플레이북
+├── docs/                             # [Living Docs] 프로젝트 명세 및 운영 문서
 │   ├── TECHNICAL_SPECIFICATION.md    # 엔지니어링 및 개발 가이드 (본 문서)
-│   └── MARKETING_PLAYBOOK.md         # 소셜 미디어, 바이럴, 운영 전략 가이드
+│   ├── FRIEND_CHALLENGE_SPECIFICATION.md # [상세] 친구 도전장 & 빠른 답 점수 시스템 명세서
+│   ├── MARKETING_PLAYBOOK.md         # 소셜 미디어, 바이럴, 운영 전략 가이드
+│   └── GROWTH_PLAN_2026Q4.md         # 3개월 성장 캠페인 계획
 ├── public/                           # 정적 에셋 (CDN 직접 서빙)
 │   ├── images/
-│   │   ├── og-banner.png             # 1200x630 공식 오픈그래프 배너 (PNG)
-│   │   ├── og-banner.jpg             # 1200x630 공식 오픈그래프 배너 (JPG)
-│   │   ├── hobi01 ~ 05.png / webp    # 마스코트 '호비(Hobi)' 감정별 표정 이미지
-│   │   └── hobby01 ~ 05.png / webp   # 마스코트 고해상도 원본 에셋
+│   │   ├── og/                       # 퀴즈별 1200x630 동적 생성 OG 썸네일
+│   │   ├── hobi01 ~ 05.webp          # 호비(Hobi) 마스코트 표정별 에셋
+│   │   └── mascot/                   # Hobi(BTS/SKZ), Bomi(블랙핑크) 에셋
 │   └── favicon.ico
 ├── src/
 │   ├── app/                          # Next.js App Router 디렉토리
 │   │   ├── layout.tsx                # 전역 루트 레이아웃 (OG 메타데이터, 폰트, Provider)
 │   │   ├── page.tsx                  # 메인 홈 화면 (퀴즈 목록, 카테고리 필터, 퀘스트/리더보드)
-│   │   ├── sitemap.ts                # 검색엔진용 sitemap.xml 자동 생성기 (Next.js MetadataRoute)
+│   │   ├── sitemap.ts                # 검색엔진용 sitemap.xml 자동 생성기
 │   │   ├── robots.ts                 # 검색엔진 크롤러 지침 robots.txt 생성기
-│   │   ├── globals.css               # 전역 Tailwind CSS v4 지시어
 │   │   └── quiz/
 │   │       └── [slug]/
-│   │           └── page.tsx          # 퀴즈 상세 페이지 (SSG 정적 파라미터 생성 & 동적 메타데이터)
+│   │           └── page.tsx          # 퀴즈 상세 페이지 (Suspense 래핑 & 정적 메타데이터)
 │   ├── components/                   # UI 및 기능 컴포넌트
-│   │   ├── QuizRunner.tsx            # [핵심] 게임 엔진 (타이머, 파워업, 점수계산, 사운드, 공유)
+│   │   ├── QuizRunner.tsx            # [핵심] 5문제 게임 엔진 (타이머, 스피드점수, HUD, 결과)
+│   │   ├── ChallengeBanner.tsx       # [신규] 대결 시작 배너, 실시간 누적 격차 뱃지, 오류 배너
+│   │   ├── ChallengeResult.tsx       # [신규] A vs B 승/패/무 카드, 1~5R 점수 비교표, 되받아치기
+│   │   ├── ShareButtons.tsx          # 닉네임 입력, 5,000점 만점 문구, 1:1 도전장 링크 복사
 │   │   ├── Navbar.tsx                # 상단 헤더 네비게이션 및 다국어 언어 변경 드롭다운
-│   │   ├── Footer.tsx                # 하단 푸터 (저작권, 브랜드 설명)
-│   │   ├── QuizCard.tsx              # 홈 화면 퀴즈 썸네일 카드
-│   │   ├── DailyQuestCard.tsx        # 일일 퀘스트 및 스트릭 보상 카드
-│   │   ├── LeaderboardCard.tsx       # 글로벌 명예의 전당 / 모의 랭킹 카드
-│   │   ├── PlayerLevelCard.tsx       # 유저 현재 레벨 및 누적 XP 바
-│   │   ├── ShareButtons.tsx          # X, 페이스북, 카카오톡, 링크 복사 공유 컴포넌트
-│   │   ├── AffiliateBox.tsx          # 퀴즈 결과 하단 관련 상품/제휴 마케팅 추천 박스
-│   │   └── AdPlaceholder.tsx         # 구글 애드센스 등 광고 배너 사전 배치 슬롯
+│   │   └── QuizCard.tsx              # 홈 화면 퀴즈 썸네일 카드
 │   ├── context/                      # 전역 상태 관리 (React Context API)
 │   │   ├── GameContext.tsx           # 유저 XP, 레벨(1~5), 일일 퀘스트, 연속 출석일 관리
-│   │   └── LanguageContext.tsx       # 언어 상태('en', 'es', 'ko') 및 사전 로더
-│   ├── data/
-│   │   └── quizzes/                  # 퀴즈 데이터 저장소 (JSON)
-│   │       ├── index.ts              # 퀴즈 데이터 로더 & 슬러그 검색 유틸리티 함수
-│   │       ├── bts-army-trivia.json  # BTS 아미 퀴즈 (35문제 은행)
-│   │       ├── blackpink-blink-trivia.json # BLACKPINK 블링크 퀴즈 (50문제 대형 문제은행)
-│   │       ├── korean-spicy-food.json# 한국 매운맛 음식 챌린지 퀴즈
-│   │       ├── korean-culture-iq.json# 한국 문화 IQ 테스트
-│   │       ├── kpop-fandom-trivia.json# K-Pop 팬덤 퀴즈
-│   │       └── kdrama-trope-trivia.json# K-드라마 클리셰 퀴즈
+│   │   └── LanguageContext.tsx       # 언어 상태('en', 'es', 'ko') 및 브라우저/쿼리 감지기
 │   ├── lib/
-│   │   └── translations.ts           # UI 다국어 사전 (en, es, ko)
+│   │   ├── scoring.ts                # [신규] 0.1초 단위 스피드 점수 계산 (최대 1,000점/문제)
+│   │   ├── challenge.ts              # [신규] FNV-1a 해시 무결성 검증 & Base64 URL-safe 직렬화
+│   │   ├── translations.ts           # 5개 국어 사전 (en, es, ko, ru, zh)
+│   │   └── __tests__/                # 단위 테스트 스위트 (scoring.test.ts, challenge.test.ts)
 │   └── types/
-│       └── quiz.ts                   # 퀴즈, 문제, 옵션, 점수티어 인터페이스 & 언어 유틸
+│       └── quiz.ts                   # 퀴즈, 문제, 옵션, 점수티어 인터페이스
+├── .npmrc                            # Cloudflare Pages legacy-peer-deps 설정
 ├── next.config.ts                    # Next.js 설정 (`output: 'export'`)
-├── package.json                      # 패키지 의존성 및 실행 스크립트
-└── tsconfig.json                     # TypeScript 컴파일 설정
+└── package.json                      # 패키지 의존성 및 vitest 실행 스크립트
 ```
 
 ---
@@ -203,6 +196,13 @@ export const metadata: Metadata = {
 ### 5.3. 검색엔진 색인 및 크롤러 제어 (`sitemap.ts`, `robots.ts`)
 - `https://kpulsequiz.com/sitemap.xml`: 전체 퀴즈 및 루트 경로 자동 동기화 (`priority: 0.8`, `weekly`).
 - `https://kpulsequiz.com/robots.txt`: 모든 검색엔진 크롤러에 접근 허용(`Allow: /`) 및 sitemap 경로 제공.
+
+### 5.4. 친구 도전장 & 빠른 답 스피드 점수 시스템 (P2P Friend Challenge Engine)
+상세 명세는 [docs/FRIEND_CHALLENGE_SPECIFICATION.md](./FRIEND_CHALLENGE_SPECIFICATION.md)를 참조하십시오.
+- **5문제 세션 & 스피드 점수 (`src/lib/scoring.ts`)**: 문제당 15초 제한, 정답 시 $500 + 500 \times (\min(\text{남은초}, 15) / 15)$ 공식에 따른 최대 1,000점 (세션 5,000점 만점). 파워업 사용 시 50% 감점.
+- **URL 기반 대결 페이로드 & 무결성 해시 (`src/lib/challenge.ts`)**: DB 없이 URL 쿼리 파라미터(`?c=...`)로 5문제 ID, 점수, 닉네임, FNV-1a 32비트 검증 해시를 UTF-8 안전 Base64로 전달.
+- **UI 컴포넌트**: `ChallengeBanner.tsx`(대결 시작, 실시간 점수차 HUD, 에러 안내), `ChallengeResult.tsx`(A vs B 승/패/무 대형 엠블럼, 1~5R 점수 비교표, 되받아치기).
+- **단위 테스트**: `vitest` 기반 22개 단위 테스트(`npm test`)로 점수 공식 및 위변조 방지 무결성 보장.
 
 ---
 
