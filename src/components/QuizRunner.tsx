@@ -35,6 +35,8 @@ import {
 } from 'lucide-react';
 import { getQuizThemeGroup } from '@/lib/theme';
 import { getQuizMascot } from '@/lib/mascot';
+import { shuffleQuestionOptions } from '@/lib/shuffleOptions';
+import { RECORD_MESSAGE, RECORD_TIMER_SEC, RECORD_TIMING } from '@/lib/recordMode';
 
 interface QuizRunnerProps {
   quiz: Quiz;
@@ -58,6 +60,11 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
   const searchParams = useSearchParams();
   const challengeParam = searchParams.get('c');
+  // Record mode: /record/[slug] embeds this page in an iframe and auto-plays the given
+  // question ids so short-form videos show the real quiz screen.
+  const recordParam = searchParams.get('record');
+  const isRecordMode = Boolean(recordParam);
+  const questionTimeSec = isRecordMode ? RECORD_TIMER_SEC : 15;
 
   const [selectedLevel, setSelectedLevel] = useState<QuestionLevel | 'all'>('all');
   const [activeQuestions, setActiveQuestions] = useState<Question[]>(quiz.questions);
@@ -139,7 +146,12 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
   const startQuiz = (levelChoice: QuestionLevel | 'all' = selectedLevel) => {
     let sessionQuestions: Question[];
-    if (isChallengeMode && challengeQuestions && challengeQuestions.length === 5) {
+    if (isRecordMode) {
+      sessionQuestions = (recordParam ?? '')
+        .split(',')
+        .map((id) => quiz.questions.find((q) => String(q.id) === id))
+        .filter((q): q is Question => Boolean(q));
+    } else if (isChallengeMode && challengeQuestions && challengeQuestions.length === 5) {
       sessionQuestions = challengeQuestions;
     } else {
       let pool = quiz.questions;
@@ -154,7 +166,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       sessionQuestions = shuffled.length > 5 ? shuffled.slice(0, 5) : shuffled;
     }
 
-    setActiveQuestions(sessionQuestions);
+    setActiveQuestions(sessionQuestions.map((q) => shuffleQuestionOptions(q)));
     setGameState('playing');
     setCurrentIndex(0);
     setSelectedOptionId(null);
@@ -163,7 +175,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     setQuestionScores([]);
     setLastEarnedPoints(0);
     setEarnedXPInSession(0);
-    setTimeLeft(15);
+    setTimeLeft(questionTimeSec);
     setFiftyFiftyRemaining(1);
     setEliminatedOptions([]);
     setTimeExtensionsRemaining(2);
@@ -172,7 +184,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     questionStartTimeRef.current = Date.now();
     usedAssistOnCurrentRef.current = false;
     timeExtensionSecOnCurrentRef.current = 0;
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: isRecordMode ? 'instant' : 'smooth' });
   };
 
   const handleSelectOption = (optionId: string) => {
@@ -180,10 +192,10 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     setSelectedOptionId(optionId);
   };
 
-  const handleSubmitAnswer = () => {
-    if (!selectedOptionId || !currentQuestion || isAnswerSubmitted) return;
+  const handleSubmitAnswer = (optionId: string | null = selectedOptionId) => {
+    if (!optionId || !currentQuestion || isAnswerSubmitted) return;
 
-    const isCorrect = selectedOptionId === currentQuestion.correctAnswer;
+    const isCorrect = optionId === currentQuestion.correctAnswer;
     const elapsedMs = Date.now() - questionStartTimeRef.current;
     const totalAllowedSec = QUESTION_TIME_SEC + timeExtensionSecOnCurrentRef.current;
     const remainingSec = Math.max(0, Math.round((totalAllowedSec - elapsedMs / 1000) * 10) / 10);
@@ -199,8 +211,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
     if (isCorrect) {
       setScore((prev) => prev + 1);
-      // Award 20 XP on correct answer!
-      addXP(20);
+      // Award 20 XP on correct answer! (not for record-mode autoplay)
+      if (!isRecordMode) addXP(20);
       setEarnedXPInSession((prev) => prev + 20);
     }
 
@@ -212,14 +224,17 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       setCurrentIndex((prev) => prev + 1);
       setSelectedOptionId(null);
       setIsAnswerSubmitted(false);
-      setTimeLeft(15);
+      setTimeLeft(questionTimeSec);
       setEliminatedOptions([]);
       setIsHintActive(false);
       questionStartTimeRef.current = Date.now();
       usedAssistOnCurrentRef.current = false;
       timeExtensionSecOnCurrentRef.current = 0;
       setLastEarnedPoints(0);
-      window.scrollTo({ top: 120, behavior: 'smooth' });
+      // Record mode keeps the header in frame.
+      if (!isRecordMode) window.scrollTo({ top: 120, behavior: 'smooth' });
+    } else if (isRecordMode) {
+      window.parent.postMessage({ type: RECORD_MESSAGE.done }, window.location.origin);
     } else {
       // Quiz Finished! Award completion bonus 30 XP and check daily quest
       const totalElapsed = Math.max(15, Math.floor((Date.now() - quizStartTime) / 1000));
@@ -231,6 +246,34 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
+
+  // Record mode: tell the embedding page we're ready, start on its signal, then answer
+  // correctly when the timer runs out and move on after a short reveal.
+  useEffect(() => {
+    if (!isRecordMode) return;
+    const onMessage = (e: MessageEvent) => {
+      if (e.origin === window.location.origin && e.data?.type === RECORD_MESSAGE.start) startQuiz();
+    };
+    window.addEventListener('message', onMessage);
+    window.parent.postMessage({ type: RECORD_MESSAGE.ready }, window.location.origin);
+    return () => window.removeEventListener('message', onMessage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isRecordMode]);
+
+  useEffect(() => {
+    if (!isRecordMode || gameState !== 'playing' || !currentQuestion) return;
+    if (!isAnswerSubmitted) {
+      window.parent.postMessage({ type: RECORD_MESSAGE.question, index: currentIndex }, window.location.origin);
+      const id = setTimeout(() => {
+        setSelectedOptionId(currentQuestion.correctAnswer);
+        handleSubmitAnswer(currentQuestion.correctAnswer);
+      }, questionTimeSec * 1000);
+      return () => clearTimeout(id);
+    }
+    const id = setTimeout(handleNextQuestion, RECORD_TIMING.revealMs);
+    return () => clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isRecordMode, gameState, currentIndex, isAnswerSubmitted]);
 
   const handleRetakeNormal = () => {
     if (typeof window !== 'undefined') {
@@ -651,7 +694,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           </h2>
 
           {/* 4지선다 선택지 컨테이너 (Snippet 2) */}
-          <div className="space-y-3 my-6">
+          <div data-record-options className="space-y-3 my-6">
             {currentQuestion.options.map((option) => {
               const isSelected = selectedOptionId === option.id;
               const isOptionCorrect = option.id === currentQuestion.correctAnswer;
@@ -855,7 +898,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
             {!isAnswerSubmitted ? (
               <button
-                onClick={handleSubmitAnswer}
+                onClick={() => handleSubmitAnswer()}
                 disabled={!selectedOptionId}
                 className="qz-btn-primary w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 disabled:opacity-40 disabled:cursor-not-allowed text-white py-3.5 px-8 text-sm font-black transition-all shadow-md shadow-purple-500/25 active:scale-95"
               >

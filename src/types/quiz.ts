@@ -18,6 +18,7 @@ export interface QuizOption {
   textEs?: string;
   textRu?: string;
   textZh?: string;
+  textPt?: string;
 }
 
 export interface Question {
@@ -28,6 +29,7 @@ export interface Question {
   questionEs?: string;
   questionRu?: string;
   questionZh?: string;
+  questionPt?: string;
   options: QuizOption[];
   correctAnswer: string; // 'A' | 'B' | 'C' | 'D'
   explanation: string;
