@@ -1189,6 +1189,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             questionScores={questionScores}
             badgeTitle={tierTitle}
             badgeEmoji={tierBadge}
+            timeFormatted={timeFormatted}
             userNickname={userNickname}
             onNicknameChange={setUserNickname}
           />

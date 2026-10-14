@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Share2, Check, Copy, Swords, User } from 'lucide-react';
+import { Share2, Check, Copy, Swords, User, Camera, Loader2 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { encodeChallenge } from '@/lib/challenge';
+import { downloadResultCard } from '@/lib/renderResultCard';
 
 interface ShareButtonsProps {
   quizTitle: string;
@@ -15,6 +16,7 @@ interface ShareButtonsProps {
   questionScores?: number[];
   badgeTitle: string;
   badgeEmoji?: string;
+  timeFormatted?: string;
   url?: string;
   userNickname?: string;
   onNicknameChange?: (nickname: string) => void;
@@ -30,6 +32,7 @@ export default function ShareButtons({
   questionScores,
   badgeTitle,
   badgeEmoji = '🏆',
+  timeFormatted,
   url,
   userNickname: initialNickname,
   onNicknameChange,
@@ -37,6 +40,8 @@ export default function ShareButtons({
   const { lang, t } = useLanguage();
   const [copiedChallenge, setCopiedChallenge] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
+  const [isGeneratingCard, setIsGeneratingCard] = useState(false);
+  const [cardDownloaded, setCardDownloaded] = useState(false);
   const [nickname, setNickname] = useState(() => {
     if (initialNickname) return initialNickname;
     if (typeof window !== 'undefined') {
@@ -155,6 +160,32 @@ export default function ShareButtons({
     }
   };
 
+  // 4. Download / Share High-Res Result Card PNG
+  const handleDownloadCard = async () => {
+    try {
+      setIsGeneratingCard(true);
+      await downloadResultCard({
+        type: 'trivia',
+        quizTitle,
+        slug,
+        lang: lang as 'en' | 'es' | 'ko',
+        score,
+        totalQuestions,
+        totalPoints: displayedPoints,
+        badgeTitle,
+        badgeEmoji,
+        userNickname: nickname,
+        timeFormatted,
+      }, `${slug || 'kpulse'}-result`);
+      setCardDownloaded(true);
+      setTimeout(() => setCardDownloaded(false), 3500);
+    } catch (err) {
+      console.error('Failed to generate result card:', err);
+    } finally {
+      setIsGeneratingCard(false);
+    }
+  };
+
   const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     twitterPostText
   )}&url=${encodeURIComponent(shareUrl)}`;
@@ -184,7 +215,7 @@ export default function ShareButtons({
       </div>
 
       {/* Viral Challenge Quote Box Preview */}
-      <div className="rounded-2xl border-2 border-purple-200/80 bg-gradient-to-br from-purple-50/80 via-white to-pink-50/80 p-4 mb-4 text-left shadow-xs">
+      <div className="rounded-2xl border-2 border-purple-200/80 bg-gradient-to-br from-purple-50/80 via-white to-pink-50/80 p-4 mb-3.5 text-left shadow-xs">
         <div className="flex items-center gap-2 mb-1.5">
           <span className="text-base">{badgeEmoji}</span>
           <span className="text-[11px] font-black uppercase tracking-wider text-purple-700">
@@ -199,6 +230,48 @@ export default function ShareButtons({
           &ldquo;{viralHeadline}&rdquo;
         </p>
       </div>
+
+      {/* 📸 Instant Result Card Image Download */}
+      <button
+        onClick={handleDownloadCard}
+        disabled={isGeneratingCard}
+        className="w-full flex items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-rose-500 hover:from-amber-400 hover:to-rose-400 text-white py-3.5 px-4 text-xs sm:text-sm font-black shadow-lg shadow-orange-500/25 active:scale-95 transition-all mb-3 group"
+      >
+        {isGeneratingCard ? (
+          <>
+            <Loader2 className="w-4 h-4 animate-spin" />
+            <span>
+              {lang === 'ko'
+                ? '결과 카드 이미지 생성 중... 📸'
+                : lang === 'es'
+                ? 'Generando tarjeta de imagen... 📸'
+                : 'Generating Result Card Image... 📸'}
+            </span>
+          </>
+        ) : cardDownloaded ? (
+          <>
+            <Check className="w-4 h-4 text-emerald-200" />
+            <span>
+              {lang === 'ko'
+                ? '결과 카드 저장 완료! 인스타·X에 자랑해보세요 ✨'
+                : lang === 'es'
+                ? '¡Tarjeta guardada! ¡Compártela en Instagram y X! ✨'
+                : 'Card Saved! Share on Instagram & X! ✨'}
+            </span>
+          </>
+        ) : (
+          <>
+            <Camera className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+            <span>
+              {lang === 'ko'
+                ? '📸 결과 카드 이미지 저장 (인스타·X 자랑용)'
+                : lang === 'es'
+                ? '📸 Guardar Tarjeta de Resultado (PNG)'
+                : '📸 Save Result Card Image (PNG for Instagram & X)'}
+            </span>
+          </>
+        )}
+      </button>
 
       {/* Primary Action Buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-2.5">

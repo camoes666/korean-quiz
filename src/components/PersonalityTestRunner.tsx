@@ -5,9 +5,10 @@ import Link from 'next/link';
 import { Quiz, PersonalityQuestion, PersonalityMemberResult, getLocalizedText } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
-import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Heart, Trophy, Compass } from 'lucide-react';
+import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Heart, Trophy, Compass, Camera, Loader2 } from 'lucide-react';
 import QuizCard from './QuizCard';
 import { getQuizMascot } from '@/lib/mascot';
+import { downloadResultCard } from '@/lib/renderResultCard';
 
 interface PersonalityTestRunnerProps {
   quiz: Quiz;
@@ -39,6 +40,8 @@ export default function PersonalityTestRunner({
   const [scores, setScores] = useState<Record<string, number>>(() => getInitialScores());
   const [matchedResult, setMatchedResult] = useState<PersonalityMemberResult | null>(null);
   const [copied, setCopied] = useState(false);
+  const [isGeneratingCard, setIsGeneratingCard] = useState(false);
+  const [cardDownloaded, setCardDownloaded] = useState(false);
 
   const currentQ = questions[currentIndex];
   const progressPercent = Math.round(((currentIndex) / questions.length) * 100);
@@ -88,6 +91,40 @@ export default function PersonalityTestRunner({
         }, 1200);
       }
     }, 350);
+  };
+
+  const handleDownloadCard = async () => {
+    if (!matchedResult) return;
+    try {
+      setIsGeneratingCard(true);
+      const memberName = lang === 'ko' ? matchedResult.nameKo : matchedResult.name;
+      const memberTitle = lang === 'ko' ? matchedResult.titleKo : matchedResult.title;
+      const memberSubtitle = lang === 'ko' ? matchedResult.subtitleKo : matchedResult.subtitle;
+      const traits = lang === 'ko' ? matchedResult.traitsKo : matchedResult.traits;
+      const bestMatchName = lang === 'ko' ? matchedResult.bestMatchNameKo : matchedResult.bestMatchName;
+
+      await downloadResultCard(
+        {
+          type: 'personality',
+          quizTitle: getLocalizedText(quiz, 'title', lang),
+          slug: quiz.slug,
+          lang: lang as 'en' | 'es' | 'ko',
+          memberName,
+          memberTitle,
+          memberSubtitle,
+          memberEmoji: matchedResult.emoji,
+          traits,
+          bestMatchName,
+        },
+        `${quiz.slug}-${matchedResult.id}`
+      );
+      setCardDownloaded(true);
+      setTimeout(() => setCardDownloaded(false), 3500);
+    } catch (err) {
+      console.error('Failed to download personality card:', err);
+    } finally {
+      setIsGeneratingCard(false);
+    }
   };
 
   const handleCopyLink = () => {
@@ -397,30 +434,74 @@ export default function PersonalityTestRunner({
             </div>
 
             {/* Action Buttons (Share & Retake) */}
-            <div className="pt-4 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-3">
+            <div className="pt-4 border-t border-slate-100 space-y-3">
+              {/* 📸 Download Soulmate Result Card Button */}
               <button
-                onClick={handleShareTwitter}
-                className="w-full sm:flex-1 py-3 px-4 bg-slate-900 hover:bg-black text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-slate-900/10"
+                onClick={handleDownloadCard}
+                disabled={isGeneratingCard}
+                className="w-full py-3.5 px-5 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-400 hover:to-indigo-500 text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-purple-500/25 group"
               >
-                <Share2 className="w-4 h-4" />
-                <span>{lang === 'ko' ? 'X (트위터)에 결과 공유' : lang === 'es' ? 'Compartir en X (Twitter)' : 'Share Result on X'}</span>
+                {isGeneratingCard ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>
+                      {lang === 'ko'
+                        ? '카드 이미지 생성 중... 📸'
+                        : lang === 'es'
+                        ? 'Generando tarjeta de imagen... 📸'
+                        : 'Generating Card Image... 📸'}
+                    </span>
+                  </>
+                ) : cardDownloaded ? (
+                  <>
+                    <Check className="w-4 h-4 text-emerald-200" />
+                    <span>
+                      {lang === 'ko'
+                        ? '소울메이트 카드 저장 완료! 인스타·X에 자랑해보세요 ✨'
+                        : lang === 'es'
+                        ? '¡Tarjeta guardada! ¡Compártela en Instagram y X! ✨'
+                        : 'Card Saved! Share on Instagram & X! ✨'}
+                    </span>
+                  </>
+                ) : (
+                  <>
+                    <Camera className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                    <span>
+                      {lang === 'ko'
+                        ? '📸 내 소울메이트 카드 이미지 저장 (인스타·X 자랑용)'
+                        : lang === 'es'
+                        ? '📸 Guardar Tarjeta de Soulmate (PNG)'
+                        : '📸 Save Soulmate Card Image (PNG for Instagram & X)'}
+                    </span>
+                  </>
+                )}
               </button>
 
-              <button
-                onClick={handleCopyLink}
-                className="w-full sm:w-auto py-3 px-5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
-              >
-                {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                <span>{copied ? (lang === 'ko' ? '복사 완료!' : '¡Copiado!') : (lang === 'ko' ? '링크 복사' : 'Copiar Enlace')}</span>
-              </button>
+              <div className="flex flex-col sm:flex-row items-center gap-3">
+                <button
+                  onClick={handleShareTwitter}
+                  className="w-full sm:flex-1 py-3 px-4 bg-slate-900 hover:bg-black text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-slate-900/10"
+                >
+                  <Share2 className="w-4 h-4" />
+                  <span>{lang === 'ko' ? 'X (트위터)에 결과 공유' : lang === 'es' ? 'Compartir en X (Twitter)' : 'Share Result on X'}</span>
+                </button>
 
-              <button
-                onClick={startTest}
-                className="w-full sm:w-auto py-3 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
-              >
-                <RotateCcw className="w-4 h-4" />
-                <span>{lang === 'ko' ? '다시 하기' : lang === 'es' ? 'Repetir' : 'Retake'}</span>
-              </button>
+                <button
+                  onClick={handleCopyLink}
+                  className="w-full sm:w-auto py-3 px-5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
+                >
+                  {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
+                  <span>{copied ? (lang === 'ko' ? '복사 완료!' : '¡Copiado!') : (lang === 'ko' ? '링크 복사' : 'Copiar Enlace')}</span>
+                </button>
+
+                <button
+                  onClick={startTest}
+                  className="w-full sm:w-auto py-3 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                  <span>{lang === 'ko' ? '다시 하기' : lang === 'es' ? 'Repetir' : 'Retake'}</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
