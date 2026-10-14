@@ -5,6 +5,7 @@ import { getQuizBySlug, getRelatedQuizzes, getAllQuizzes } from '@/data/quizzes'
 import QuizRunner from '@/components/QuizRunner';
 import PersonalityTestRunner from '@/components/PersonalityTestRunner';
 import { getQuizThemeGroup } from '@/lib/theme';
+import { getQuizSeoData, generateQuizJsonLd } from '@/lib/seo';
 
 interface QuizPageProps {
   params: Promise<{ slug: string }>;
@@ -29,17 +30,18 @@ export async function generateMetadata({
     };
   }
 
-  const isPersonality = quiz.quizType === 'personality';
-  const ogTitle = isPersonality
-    ? `${quiz.title} - Personality Match | K-Pulse`
-    : `${quiz.title} - High Score Challenge | K-Pulse`;
+  const seo = getQuizSeoData(quiz);
 
   return {
-    title: `${quiz.title} | K-Pulse`,
-    description: quiz.description,
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    alternates: {
+      canonical: `https://kpulsequiz.com/quiz/${quiz.slug}`,
+    },
     openGraph: {
-      title: ogTitle,
-      description: quiz.description,
+      title: seo.ogTitle,
+      description: seo.description,
       url: `https://kpulsequiz.com/quiz/${quiz.slug}`,
       siteName: 'K-Pulse',
       type: 'website',
@@ -54,8 +56,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: ogTitle,
-      description: quiz.description,
+      title: seo.ogTitle,
+      description: seo.description,
       images: [`/images/og/${quiz.slug}.png`],
     },
   };
@@ -71,26 +73,34 @@ export default async function QuizPage({ params }: QuizPageProps) {
 
   const relatedQuizzes = getRelatedQuizzes(quiz.slug, 4);
   const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
-
-  if (quiz.quizType === 'personality') {
-    return (
-      <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
-        <PersonalityTestRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
-      </main>
-    );
-  }
+  const jsonLdSchemas = generateQuizJsonLd(quiz);
 
   return (
-    <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
-      <Suspense
-        fallback={
-          <div className="max-w-3xl mx-auto px-4 py-12 text-center animate-pulse">
-            <div className="h-64 rounded-3xl bg-slate-100" />
-          </div>
-        }
-      >
-        <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
-      </Suspense>
-    </main>
+    <>
+      {jsonLdSchemas.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
+      {quiz.quizType === 'personality' ? (
+        <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
+          <PersonalityTestRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
+        </main>
+      ) : (
+        <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
+          <Suspense
+            fallback={
+              <div className="max-w-3xl mx-auto px-4 py-12 text-center animate-pulse">
+                <div className="h-64 rounded-3xl bg-slate-100" />
+              </div>
+            }
+          >
+            <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
+          </Suspense>
+        </main>
+      )}
+    </>
   );
 }

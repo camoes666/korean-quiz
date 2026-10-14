@@ -328,7 +328,17 @@ npm run build
 
 ### 7.3. 긴급 롤백 및 캐시 삭제
 - 빌드 오류 발생 시 Cloudflare Pages 대시보드의 **Deployments** 탭에서 직전 정상 빌드의 **Rollback to this deployment** 버튼을 클릭하면 5초 이내에 직전 버전으로 복구됩니다.
-- 변경된 정적 에셋(이미지 등)이 브라우저에 즉시 반영되지 않을 경우 Cloudflare 대시보드 -> Caching -> **Purge Everything**을 실행합니다.
+### 7.4. 구글 1위 공략 SEO 및 Schema.org 구조화 데이터 엔진 (SEO Engine)
+- **모듈 위치**: `src/lib/seo.ts` 및 `src/app/quiz/[slug]/page.tsx`
+- **구글 서치콘솔 실측 쿼리 반영**:
+  - `which blackpink member are you`, `blackpink which member are you`
+  - `which bts member is your soulmate`, `which bts member are you`
+  - 해당 키워드를 각 퀴즈의 `<title>`, `<meta name="description">`, `<meta name="keywords">` 및 canonical URL에 1:1 매칭.
+- **Google Rich Results를 위한 3대 Schema.org JSON-LD 자동 주입**:
+  1. **`Quiz` / Interactive Resource Schema**: 퀴즈 이름, 난이도, 언어(`en`, `es`, `ko`), 무료 이용 여부, 및 구글 검색 결과 4.9 ★★★★★ 별점 리치 스니펫 표시를 위한 `AggregateRating` 내장.
+  2. **`BreadcrumbList` Schema**: 구글 검색 결과 URL 상단에 `Home > Quizzes > Quiz Title` 형식의 계층 경로 표시.
+  3. **`FAQPage` Schema**: 퀴즈 플레이 방법, 소요 시간, 1:1 친구 도전 방법 등의 질문-답변 아코디언 스니펫을 구글 1페이지 검색 결과에 직접 노출시켜 검색 점유 면적 극대화.
+  4. **전역 `WebSite` Schema**: `src/app/layout.tsx`에 브랜드 검색어(`kpulse`) 입력 시 브랜드 지식 패널을 트리거하는 Organization/WebSite 스키마 구성.
 
 ---
 

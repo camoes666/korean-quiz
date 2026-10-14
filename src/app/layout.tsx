@@ -60,6 +60,22 @@ export const metadata: Metadata = {
   },
 };
 
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'K-Pulse',
+  alternateName: ['KPulse', 'K-Pulse Quiz'],
+  url: 'https://kpulsequiz.com',
+  description: 'Gamified K-Culture, K-Pop & Korean Language Trivia Quiz Hub',
+  inLanguage: ['en', 'es', 'ko'],
+  publisher: {
+    '@type': 'Organization',
+    name: 'K-Pulse',
+    url: 'https://kpulsequiz.com',
+    logo: 'https://kpulsequiz.com/images/og-banner.png',
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -71,6 +87,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
       <body className="min-h-full flex flex-col bg-[#F9FAFB] text-slate-900 font-sans selection:bg-purple-500 selection:text-white antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <LanguageProvider>
           <GameProvider>
             <Navbar />
