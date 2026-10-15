@@ -2,11 +2,12 @@
 
 import Link from 'next/link';
 import { Quiz, getLocalizedText } from '@/types/quiz';
-import { Clock, HelpCircle, Users, ArrowRight, Heart, BookOpen } from 'lucide-react';
+import { Clock, HelpCircle, Layers, ArrowRight, Heart, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useState } from 'react';
 import { getQuizThemeGroup } from '@/lib/theme';
 import { getQuizMascot } from '@/lib/mascot';
+import { isNewQuiz } from '@/lib/quizBadges';
 
 interface QuizCardProps {
   quiz: Quiz;
@@ -22,6 +23,14 @@ export default function QuizCard({ quiz }: QuizCardProps) {
   const description = getLocalizedText(quiz, 'description', lang);
   const categoryLabel = t.categories[quiz.category] || quiz.category;
   const tagLabel = quiz.tag ? t.tags[quiz.tag] || quiz.tag : null;
+  const isPersonality = quiz.quizType === 'personality';
+  // Real facts from the quiz data (no rating or play count until plays are actually tracked).
+  const depthCount = isPersonality
+    ? Object.keys(quiz.personalityResults || {}).length
+    : new Set(quiz.questions.map((q) => q.level).filter(Boolean)).size;
+  const depthLabel = isPersonality
+    ? lang === 'en' ? 'Results' : lang === 'es' ? 'Resultados' : '가지 결과'
+    : lang === 'en' ? 'Levels' : lang === 'es' ? 'Niveles' : '단계';
 
   return (
     <div
@@ -64,9 +73,11 @@ export default function QuizCard({ quiz }: QuizCardProps) {
         </div>
 
         <div className="flex items-center gap-2 z-10">
-          <span className="px-2 py-0.5 bg-black/40 backdrop-blur-md rounded-md text-[11px] font-bold text-amber-300">
-            ★ 4.9 ({quiz.totalPlays})
-          </span>
+          {isNewQuiz(quiz) && (
+            <span className="px-2 py-0.5 bg-black/40 backdrop-blur-md rounded-md text-[11px] font-bold text-amber-300">
+              ✨ {lang === 'en' ? 'New' : lang === 'es' ? 'Nuevo' : '신규'}
+            </span>
+          )}
           <span className="px-2 py-0.5 bg-white/20 backdrop-blur-md rounded-md text-[11px] font-bold text-white">
             ✨ {mascot.badgeTitle}
           </span>
@@ -109,11 +120,14 @@ export default function QuizCard({ quiz }: QuizCardProps) {
               <Clock className="w-3.5 h-3.5 text-slate-400" />
               ~{quiz.estimatedMinutes} {t.mins}
             </span>
-            <span className="flex items-center gap-1 text-purple-600 font-bold">
-              <Users className="w-3.5 h-3.5 text-purple-500" />
-              {quiz.totalPlays}{' '}
-              {lang === 'en' ? 'Players' : lang === 'es' ? 'Jugadores' : '도전자'}
-            </span>
+            {depthCount > 0 && (
+              <span className="flex items-center gap-1 text-purple-600 font-bold">
+                <Layers className="w-3.5 h-3.5 text-purple-500" />
+                {depthCount}
+                {lang === 'ko' ? '' : ' '}
+                {depthLabel}
+              </span>
+            )}
           </div>
 
           {/* CTA Button Row */}

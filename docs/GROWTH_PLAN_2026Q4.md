@@ -137,5 +137,5 @@
 - [ ] 1~2주 뒤 확인: 검색어 탭에 `bts quiz`, `how well do you know bts` 등 트리비아 검색어가 나타나는지
 
 ### 5.4. 남은 결정 사항
-- [ ] 퀴즈 카드(`QuizCard.tsx`)의 `★ 4.9 (142.8K)` 표시: 실제 데이터가 아니므로 제거하거나 "New"/"Trending" 등으로 교체 필요 (Phase 1 "가짜 요소 0건" 기준 미충족)
+- [x] 퀴즈 카드(`QuizCard.tsx`)의 가짜 `★ 4.9 (142.8K)`와 `142.8K Players` 제거 (2026-10-15). 대신 추가 후 14일 이내 퀴즈에 `✨ New`(`src/lib/quizBadges.ts`, 퀴즈 JSON의 `addedAt`), 트리비아는 `3 Levels`, 성격 테스트는 `7 Results`처럼 실제 정보 표시. 실제 플레이 수는 Phase 4(D1 집계) 이후에 표시.
 - [ ] 다음 확장 후보: `which twice / newjeans / seventeen member are you` 성격 테스트 (현재 유일하게 검색 반응이 오는 형식)

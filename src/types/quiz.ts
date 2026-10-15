@@ -156,6 +156,7 @@ export interface PersonalityQuestion {
 
 export interface Quiz {
   slug: string;
+  addedAt?: string; // YYYY-MM-DD the quiz went live; drives the "New" badge
   quizType?: QuizType;
   title: string;
   titleKo?: string;
