@@ -9,6 +9,21 @@ import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Heart, Trophy, Co
 import QuizCard from './QuizCard';
 import { getQuizMascot } from '@/lib/mascot';
 import { downloadResultCard } from '@/lib/renderResultCard';
+import { getQuizThemeGroup } from '@/lib/theme';
+import {
+  PERSONALITY_RUNNER_MS,
+  PERSONALITY_TIMING,
+  PersonalityStep,
+  RECORD_MESSAGE,
+} from '@/lib/recordMode';
+
+// Result-screen labels per group (the data's `skzoo` field holds each group's character twin).
+const RESULT_LABELS: Record<string, { soulmate: [string, string, string]; twin: string }> = {
+  skz: { soulmate: ['Your Stray Kids Soulmate', 'Tu Alma Gemela de Stray Kids', '나의 스트레이 키즈 소울메이트'], twin: 'SKZOO Twin' },
+  bts: { soulmate: ['Your BTS Soulmate', 'Tu Alma Gemela de BTS', '나의 방탄소년단 소울메이트'], twin: 'BT21 Twin' },
+  blackpink: { soulmate: ['Your BLACKPINK Soulmate', 'Tu Alma Gemela de BLACKPINK', '나의 블랙핑크 소울메이트'], twin: 'Character Twin' },
+  default: { soulmate: ['Your Korean Food Soulmate', 'Tu Comida Coreana Gemela', '나의 한국 음식 소울메이트'], twin: 'Food Spirit' },
+};
 
 interface PersonalityTestRunnerProps {
   quiz: Quiz;
@@ -23,8 +38,18 @@ export default function PersonalityTestRunner({
   const { addXP } = useGame();
   const mascot = getQuizMascot(quiz.slug, quiz.tag);
 
-  const questions: PersonalityQuestion[] = quiz.personalityQuestions || [];
+  const allQuestions: PersonalityQuestion[] = quiz.personalityQuestions || [];
   const resultsMap: Record<string, PersonalityMemberResult> = quiz.personalityResults || {};
+  const resultLabels = RESULT_LABELS[getQuizThemeGroup(quiz.slug, quiz.tag)] || RESULT_LABELS.default;
+
+  // Record mode: /record/[slug] embeds this page and sends a plan of answers in its start
+  // message (not the URL, so the page keeps its static intro HTML for search engines).
+  const [recordPlan, setRecordPlan] = useState<PersonalityStep[] | null>(null);
+  const questions: PersonalityQuestion[] = recordPlan
+    ? recordPlan
+        .map((step) => allQuestions.find((q) => q.id === step.questionId))
+        .filter((q): q is PersonalityQuestion => Boolean(q))
+    : allQuestions;
 
   const getInitialScores = () => {
     const initial: Record<string, number> = {};
@@ -51,8 +76,26 @@ export default function PersonalityTestRunner({
     setCurrentIndex(0);
     setSelectedOptionId(null);
     setScores(getInitialScores());
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: recordPlan ? 'instant' : 'smooth' });
   };
+
+  useEffect(() => {
+    if (window.parent === window) return;
+    const onMessage = (e: MessageEvent) => {
+      if (e.origin !== window.location.origin || e.data?.type !== RECORD_MESSAGE.start) return;
+      if (!Array.isArray(e.data.plan)) return;
+      setRecordPlan(e.data.plan);
+      setTestState('answering');
+      setCurrentIndex(0);
+      setSelectedOptionId(null);
+      setScores(getInitialScores());
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    };
+    window.addEventListener('message', onMessage);
+    window.parent.postMessage({ type: RECORD_MESSAGE.ready }, window.location.origin);
+    return () => window.removeEventListener('message', onMessage);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const handleSelectOption = (option: typeof currentQ.options[0]) => {
     if (selectedOptionId) return; // Prevent double click
@@ -65,7 +108,7 @@ export default function PersonalityTestRunner({
     });
     setScores(updatedScores);
 
-    // Auto advance after 350ms
+    // Auto advance after a short beat
     setTimeout(() => {
       if (currentIndex + 1 < questions.length) {
         setCurrentIndex((prev) => prev + 1);
@@ -86,12 +129,34 @@ export default function PersonalityTestRunner({
           const winner = resultsMap[topMemberId] || Object.values(resultsMap)[0];
           setMatchedResult(winner);
           setTestState('result');
-          addXP(50); // Award 50 XP for completing personality test
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }, 1200);
+          if (!recordPlan) addXP(50); // Award 50 XP for completing personality test
+          window.scrollTo({ top: 0, behavior: recordPlan ? 'instant' : 'smooth' });
+        }, PERSONALITY_RUNNER_MS.calculating);
       }
-    }, 350);
+    }, PERSONALITY_RUNNER_MS.advance);
   };
+
+  // Record mode: pick the planned answer after a pause, then hold the result and report done.
+  useEffect(() => {
+    if (!recordPlan) return;
+    if (testState === 'answering' && currentQ && !selectedOptionId) {
+      window.parent.postMessage({ type: RECORD_MESSAGE.question, index: currentIndex }, window.location.origin);
+      const step = recordPlan[currentIndex];
+      const option = currentQ.options.find((o) => o.id === step?.optionId);
+      if (!option) return;
+      const id = setTimeout(() => handleSelectOption(option), PERSONALITY_TIMING.readMs);
+      return () => clearTimeout(id);
+    }
+    if (testState === 'result') {
+      window.parent.postMessage({ type: RECORD_MESSAGE.question, index: -1 }, window.location.origin);
+      const id = setTimeout(
+        () => window.parent.postMessage({ type: RECORD_MESSAGE.done }, window.location.origin),
+        PERSONALITY_TIMING.resultMs
+      );
+      return () => clearTimeout(id);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [recordPlan, testState, currentIndex]);
 
   const handleDownloadCard = async () => {
     if (!matchedResult) return;
@@ -357,10 +422,10 @@ export default function PersonalityTestRunner({
               <span>{matchedResult.emoji}</span>
               <span>
                 {lang === 'ko'
-                  ? '나의 스트레이 키즈 소울메이트'
+                  ? resultLabels.soulmate[2]
                   : lang === 'es'
-                  ? 'Tu Alma Gemela de Stray Kids'
-                  : 'Your Stray Kids Soulmate'}
+                  ? resultLabels.soulmate[1]
+                  : resultLabels.soulmate[0]}
               </span>
             </div>
 
@@ -376,7 +441,7 @@ export default function PersonalityTestRunner({
             </p>
 
             <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md text-xs font-bold text-white border border-white/20">
-              <span>SKZOO Twin:</span>
+              <span>{resultLabels.twin}:</span>
               <span className="text-amber-300 font-black">{skzooName}</span>
             </div>
           </div>
@@ -608,7 +673,7 @@ export default function PersonalityTestRunner({
         </h2>
 
         {/* 4 Options */}
-        <div className="space-y-3">
+        <div data-record-options className="space-y-3">
           {currentQ.options.map((opt) => {
             const isSelected = selectedOptionId === opt.id;
             const text =

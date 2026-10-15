@@ -15,7 +15,7 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
   const faq = getQuizFaq(quiz);
 
   return (
-    <section className="max-w-3xl mx-auto px-4 mt-4 space-y-6">
+    <section data-seo-content className="max-w-3xl mx-auto px-4 mt-4 space-y-6">
       <div className="qz-card rounded-3xl border-2 border-purple-100 bg-white p-6">
         <h2 className="qz-card-title text-xl font-black">About this {isPersonality ? 'test' : 'quiz'}</h2>
         <p className="qz-card-muted mt-3 leading-relaxed">{quiz.description}</p>

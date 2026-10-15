@@ -7,6 +7,8 @@ import { getQuizMascot } from '@/lib/mascot';
 import {
   createSeededRandom,
   getAvailableRecordLangs,
+  getPersonalityDurationMs,
+  getPersonalitySubject,
   getRecordAudience,
   getRecordDurationMs,
   getRecordText,
@@ -14,6 +16,9 @@ import {
   isRecordLang,
   isRecordQuestionCount,
   pickRecordQuestions,
+  planPersonalityRun,
+  PERSONALITY_COPY,
+  PersonalityStep,
   RECORD_COPY,
   RECORD_LANGS,
   RECORD_MESSAGE,
@@ -31,8 +36,10 @@ const SAFE_AREA = 0.78;
 // Extra height (unscaled px) the options grow by when the correct-answer badge appears.
 const REVEAL_GROWTH = 64;
 
-// Dev-only: keep Next's on-screen indicator out of the recording.
-const IFRAME_STYLE = 'nextjs-portal{display:none!important}html{scrollbar-width:none}';
+// Keep things out of the recording: Next's dev indicator, scrollbars, and the search-engine
+// text below the quiz (it would show under short screens like "calculating").
+const IFRAME_STYLE =
+  'nextjs-portal,[data-seo-content]{display:none!important}html{scrollbar-width:none}';
 
 type PlayState = 'setup' | 'hook' | 'quiz' | 'outro';
 
@@ -50,7 +57,14 @@ interface RecordModeRunnerProps {
 
 export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: RecordModeRunnerProps) {
   const searchParams = useSearchParams();
-  const availableLangs = useMemo(() => getAvailableRecordLangs(quiz.questions), [quiz.questions]);
+  const isPersonality = quiz.quizType === 'personality';
+  const personalityQuestions = useMemo(() => quiz.personalityQuestions || [], [quiz.personalityQuestions]);
+  const results = quiz.personalityResults || {};
+  const resultIds = Object.keys(results);
+  const availableLangs = useMemo(
+    () => getAvailableRecordLangs(isPersonality ? personalityQuestions : quiz.questions),
+    [isPersonality, personalityQuestions, quiz.questions]
+  );
 
   const [count, setCountState] = useState<RecordQuestionCount>(() => {
     const n = Number(searchParams.get('n'));
@@ -63,7 +77,19 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
   // The first pick is seeded so server and client render the same questions (a mismatch
   // would reload the embedded quiz mid-stream); reshuffles after that are truly random.
   const [picked, setPicked] = useState<Question[]>(() =>
-    pickRecordQuestions(getTranslatedQuestions(quiz.questions, lang), count, createSeededRandom(count))
+    isPersonality
+      ? []
+      : pickRecordQuestions(getTranslatedQuestions(quiz.questions, lang), count, createSeededRandom(count))
+  );
+  // Personality tests: which member the video ends on ('random' picks one per shuffle).
+  const [target, setTargetState] = useState<string>('random');
+  const makePlan = (l: RecordLang, n: number, t: string, random: () => number) => {
+    const member = t === 'random' ? resultIds[Math.floor(random() * resultIds.length)] : t;
+    const steps = planPersonalityRun(getTranslatedQuestions(personalityQuestions, l), resultIds, member, n, random);
+    return { member, steps: steps ?? [] };
+  };
+  const [plan, setPlan] = useState<{ member: string; steps: PersonalityStep[] }>(() =>
+    isPersonality ? makePlan(lang, count, 'random', createSeededRandom(count)) : { member: '', steps: [] }
   );
   const [play, setPlay] = useState<PlayState>('setup');
   const [ready, setReady] = useState(false);
@@ -74,11 +100,21 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const timersRef = useRef<number[]>([]);
 
-  const shuffle = (nextLang: RecordLang, nextCount: RecordQuestionCount) => {
+  const shuffle = (nextLang: RecordLang, nextCount: RecordQuestionCount, nextTarget = target) => {
+    if (isPersonality) {
+      // The plan travels in the start message, so the embedded page only reloads on a language change.
+      if (nextLang !== lang) setReady(false);
+      setPlan(makePlan(nextLang, nextCount, nextTarget, Math.random));
+      return;
+    }
     setReady(false);
     setPicked(pickRecordQuestions(getTranslatedQuestions(quiz.questions, nextLang), nextCount));
   };
   const reshuffle = () => shuffle(lang, count);
+  const setTarget = (t: string) => {
+    setTargetState(t);
+    shuffle(lang, count, t);
+  };
   const setCount = (n: RecordQuestionCount) => {
     setCountState(n);
     shuffle(lang, n);
@@ -88,7 +124,10 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
     shuffle(l, count);
   };
 
-  const iframeSrc = `/quiz/${quiz.slug}?record=${picked.map((q) => q.id).join(',')}&lang=${lang}`;
+  const iframeSrc = isPersonality
+    ? `/quiz/${quiz.slug}?lang=${lang}`
+    : `/quiz/${quiz.slug}?record=${picked.map((q) => q.id).join(',')}&lang=${lang}`;
+  const planReady = isPersonality ? plan.steps.length === count : picked.length === count;
 
   // Fill the stage width with the phone-sized page, shrinking when a long question would
   // push the options into the bottom safe zone.
@@ -133,12 +172,15 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
   };
 
   const start = () => {
-    if (!ready || picked.length !== count) return;
+    if (!ready || !planReady) return;
     setPlay('hook');
     timersRef.current.push(
       window.setTimeout(() => {
         setPlay('quiz');
-        iframeRef.current?.contentWindow?.postMessage({ type: RECORD_MESSAGE.start }, window.location.origin);
+        iframeRef.current?.contentWindow?.postMessage(
+          { type: RECORD_MESSAGE.start, plan: isPersonality ? plan.steps : undefined },
+          window.location.origin
+        );
       }, RECORD_TIMING.hookMs)
     );
   };
@@ -173,7 +215,23 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
 
   const mascot = getQuizMascot(quiz.slug, quiz.tag);
   const copy = RECORD_COPY[lang];
-  const audience = getRecordAudience(themeGroup, quiz.category, lang);
+  const hook = isPersonality
+    ? PERSONALITY_COPY[lang].hook(getPersonalitySubject(themeGroup, quiz.category, lang))
+    : copy.hook(getRecordAudience(themeGroup, quiz.category, lang), count);
+  const outroQuestion = isPersonality ? PERSONALITY_COPY[lang].outroQuestion : copy.outroQuestion;
+  const outroCta = isPersonality ? PERSONALITY_COPY[lang].outroCta : copy.outroCta(quiz.questions.length);
+
+  const preview = isPersonality
+    ? plan.steps.map((step) => {
+        const q = personalityQuestions.find((x) => x.id === step.questionId);
+        const option = q?.options.find((o) => o.id === step.optionId);
+        return {
+          key: String(step.questionId),
+          label: q ? getRecordText(q, 'question', lang) : '',
+          detail: option ? `→ ${getRecordText(option, 'text', lang)}` : '',
+        };
+      })
+    : picked.map((q) => ({ key: String(q.id), label: `Lv${q.level ?? '?'} · ${getRecordText(q, 'question', lang)}`, detail: '' }));
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black">
@@ -204,7 +262,7 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={mascot.avatarUrl} alt="" className="w-[45%] drop-shadow-xl" />
               <p className="text-[clamp(1.6rem,7.5cqh,3.6rem)] font-black leading-tight" style={{ color: 'var(--qz-accent-text)' }}>
-                {copy.hook(audience, count)}
+                {hook}
               </p>
             </div>
           </div>
@@ -213,14 +271,14 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
         {play === 'outro' && (
           <div data-group={themeGroup} className="absolute inset-0">
             <div className="flex h-[78%] flex-col items-center justify-center gap-[5%] px-[6%] text-center">
-              <p className="text-[clamp(1.4rem,6cqh,3rem)] font-black leading-tight">{copy.outroQuestion}</p>
+              <p className="text-[clamp(1.4rem,6cqh,3rem)] font-black leading-tight">{outroQuestion}</p>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img src={mascot.avatarUrl} alt="" className="w-[38%] drop-shadow-xl" />
               <p
                 className="rounded-2xl px-5 py-3 text-[clamp(1.1rem,4.5cqh,2.2rem)] font-extrabold leading-tight"
                 style={{ background: 'var(--qz-accent)', color: 'var(--qz-on-accent)' }}
               >
-                {copy.outroCta(quiz.questions.length)}
+                {outroCta}
               </p>
               <p className="text-[clamp(0.9rem,3cqh,1.4rem)] font-bold" style={{ color: 'var(--qz-text-muted)' }}>
                 kpulsequiz.com
@@ -243,7 +301,19 @@ export default function RecordModeRunner({ quiz, themeGroup, quizOptions }: Reco
             lang={lang}
             setLang={setLang}
             availableLangs={availableLangs}
-            picked={picked}
+            preview={preview}
+            durationMs={isPersonality ? getPersonalityDurationMs : getRecordDurationMs}
+            resultPicker={
+              isPersonality
+                ? {
+                    value: target,
+                    current: results[plan.member]?.name ?? '',
+                    options: resultIds.map((id) => ({ id, label: `${results[id].emoji} ${results[id].name}` })),
+                    onChange: setTarget,
+                  }
+                : undefined
+            }
+            canStart={planReady}
             ready={ready}
             onShuffle={reshuffle}
             onStart={start}
@@ -262,7 +332,15 @@ interface SetupPanelProps {
   lang: RecordLang;
   setLang: (l: RecordLang) => void;
   availableLangs: RecordLang[];
-  picked: Question[];
+  preview: { key: string; label: string; detail: string }[];
+  durationMs: (count: number) => number;
+  resultPicker?: {
+    value: string;
+    current: string;
+    options: { id: string; label: string }[];
+    onChange: (id: string) => void;
+  };
+  canStart: boolean;
   ready: boolean;
   onShuffle: () => void;
   onStart: () => void;
@@ -276,7 +354,10 @@ function SetupPanel({
   lang,
   setLang,
   availableLangs,
-  picked,
+  preview,
+  durationMs,
+  resultPicker,
+  canStart,
   ready,
   onShuffle,
   onStart,
@@ -315,7 +396,7 @@ function SetupPanel({
         <div className="mt-2 flex gap-2">
           {RECORD_QUESTION_COUNTS.map((n) => (
             <button key={n} type="button" className={chip(count === n)} onClick={() => setCount(n)}>
-              {n}문제 · {getRecordDurationMs(n) / 1000}초
+              {n}문제 · {Math.round(durationMs(n) / 1000)}초
             </button>
           ))}
         </div>
@@ -343,18 +424,42 @@ function SetupPanel({
         </div>
       </section>
 
+      {resultPicker && (
+        <section className="mt-5">
+          <h2 className="text-sm font-bold text-slate-300">마지막에 나올 결과</h2>
+          <select
+            value={resultPicker.value}
+            onChange={(e) => resultPicker.onChange(e.target.value)}
+            className="mt-2 w-full rounded-xl border border-slate-600 bg-slate-900 px-3 py-3 text-base font-bold text-slate-100"
+          >
+            <option value="random">🎲 무작위</option>
+            {resultPicker.options.map((o) => (
+              <option key={o.id} value={o.id}>
+                {o.label}
+              </option>
+            ))}
+          </select>
+          {resultPicker.value === 'random' && resultPicker.current && (
+            <p className="mt-1 text-xs text-slate-400">이번에 나올 결과: {resultPicker.current}</p>
+          )}
+        </section>
+      )}
+
       <section className="mt-5">
         <div className="flex items-center justify-between">
-          <h2 className="text-sm font-bold text-slate-300">이번 영상 문제 (쉬움 → 어려움)</h2>
+          <h2 className="text-sm font-bold text-slate-300">
+            {resultPicker ? '이번 영상 질문 → 고를 답' : '이번 영상 문제 (쉬움 → 어려움)'}
+          </h2>
           <button type="button" onClick={onShuffle} className="text-xs font-bold text-slate-300 underline">
             🔀 다시 뽑기
           </button>
         </div>
         <ol className="mt-2 space-y-2 text-sm">
-          {picked.map((q, i) => (
-            <li key={q.id} className="rounded-lg bg-slate-900 px-3 py-2">
-              <span className="text-slate-500">{i + 1}. Lv{q.level ?? '?'} · </span>
-              {getRecordText(q, 'question', lang)}
+          {preview.map((item, i) => (
+            <li key={item.key} className="rounded-lg bg-slate-900 px-3 py-2">
+              <span className="text-slate-500">{i + 1}. </span>
+              {item.label}
+              {item.detail && <span className="block text-xs text-slate-400">{item.detail}</span>}
             </li>
           ))}
         </ol>
@@ -363,7 +468,7 @@ function SetupPanel({
       <button
         type="button"
         onClick={onStart}
-        disabled={!ready || picked.length !== count}
+        disabled={!ready || !canStart}
         className="mt-6 w-full rounded-2xl bg-white py-4 text-lg font-extrabold text-black disabled:opacity-40"
       >
         {ready ? '▶ 재생 시작' : '퀴즈 화면 불러오는 중…'}

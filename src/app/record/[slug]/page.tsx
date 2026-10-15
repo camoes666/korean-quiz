@@ -1,7 +1,7 @@
 import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getTriviaQuizBySlug, getTriviaQuizzes } from '@/data/quizzes';
+import { getAllQuizzes, getQuizBySlug } from '@/data/quizzes';
 import RecordModeRunner from '@/components/RecordModeRunner';
 import { getQuizThemeGroup } from '@/lib/theme';
 
@@ -10,7 +10,7 @@ interface RecordPageProps {
 }
 
 export async function generateStaticParams() {
-  return getTriviaQuizzes().map((quiz) => ({ slug: quiz.slug }));
+  return getAllQuizzes().map((quiz) => ({ slug: quiz.slug }));
 }
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 
 export default async function RecordPage({ params }: RecordPageProps) {
   const { slug } = await params;
-  const quiz = getTriviaQuizBySlug(slug);
+  const quiz = getQuizBySlug(slug);
 
   if (!quiz) {
     notFound();
@@ -32,7 +32,7 @@ export default async function RecordPage({ params }: RecordPageProps) {
         key={quiz.slug}
         quiz={quiz}
         themeGroup={getQuizThemeGroup(quiz.slug, quiz.tag)}
-        quizOptions={getTriviaQuizzes().map(({ slug, title, coverEmoji }) => ({ slug, title, coverEmoji }))}
+        quizOptions={getAllQuizzes().map(({ slug, title, coverEmoji }) => ({ slug, title, coverEmoji }))}
       />
     </Suspense>
   );

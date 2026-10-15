@@ -177,6 +177,14 @@ TikTok·Reels·Shorts용 퀴즈 영상을 화면 녹화로 만들기 위한 운�
 - **안전 영역**: 하단 22%는 앱 UI(캡션·버튼)에 가려지므로, 보기 영역이 정답 공개 시점까지 상단 78% 안에 들어오도록 문제마다 배율을 조정합니다.
 - **훅 문구**: 그룹 퀴즈는 팬덤명(ARMY / BLINKs / STAYs), 그 외는 카테고리별 대상(K-food lovers, K-drama fans, Korea lovers 등)으로 자동 생성합니다. 언어: 영어·스페인어, 포르투갈어는 문제 번역(`questionPt`/`textPt`)과 사이트 `translations.ts`에 `pt`가 추가되면 활성화됩니다.
 - **주의**: 첫 문제 선택은 시드 고정(`createSeededRandom`)입니다. 무작위로 뽑으면 개발 서버에서 SSR/CSR 결과가 달라져 iframe이 중간에 다시 로드됩니다.
+- **녹화 화면에서 숨기는 것**: Next 개발 표시, 스크롤바, 퀴즈 아래 검색용 본문(`[data-seo-content]`). iframe 로드 시 스타일을 주입합니다.
+
+#### 성격 테스트 녹화 (2026-10-15)
+- **흐름**: 훅 2초("Which BTS member are you? 👀") → 질문 3개/5개(질문당 3초 노출 후 답 자동 선택) → 실제 분석 화면 1.2초 → 실제 결과 화면 4초 → 마무리 3초("Which one did you get? Comment ⬇️" / "Find yours → link in bio"). 3문제 약 20초, 5문제 약 27초.
+- **결과 멤버 지정**: 설정 화면에서 결과 멤버를 고르면 `planPersonalityRun()`이 그 멤버가 이기는 질문·답 조합을 계산합니다(가능한 조합을 모두 확인해 점수 차가 가장 큰 것을 선택). `무작위`를 고르면 멤버도 무작위입니다. 테스트에서 4개 성격 테스트의 모든 멤버(27명) × 3/5문제 조합이 실제로 이기는 것을 검증합니다.
+- **전달 방식**: 답 계획은 URL이 아니라 `start` 메시지에 담아 보냅니다. `PersonalityTestRunner`는 Suspense 없이 정적 HTML로 소개 글을 내보내는데, `useSearchParams`를 쓰면 그 HTML이 사라지기 때문입니다.
+- **결과 판정 규칙 공유**: `getPersonalityWinner()`는 `PersonalityTestRunner`와 같은 규칙(결과 순서상 최고점을 먼저 받은 멤버)을 쓰고, 화면 내부 지연(`PERSONALITY_RUNNER_MS`)도 같은 상수를 씁니다.
+- **함께 고친 버그**: 결과 화면 상단 문구가 모든 테스트에서 "Your Stray Kids Soulmate" / "SKZOO Twin"으로 고정돼 있던 것을 그룹별(BTS → BT21 Twin, BLACKPINK → Character Twin, 한국 음식 → Food Spirit)로 수정했습니다.
 
 ---
 
