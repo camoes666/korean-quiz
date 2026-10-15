@@ -122,6 +122,9 @@ c:\Users\USER\code\quiz_site/
    - **X (트위터) 포스팅**: 해시태그(`#KPulse #BTS #BTSARMY` 등 퀴즈 맞춤형) 및 OG 카드 링크 자동 첨부.
    - **친구 도전장 복사**: 디스코드, 왓츠앱, 카카오톡 등에 붙여넣기 할 수 있는 바이럴 도전 텍스트 + 링크 동시 복사.
    - **모바일 네이티브 공유 (`navigator.share`)**: 모바일 OS 공유 시트를 통한 인스타그램 스토리, 메신저 즉시 공유 지원.
+7. **보기 순서 섞기 (`src/lib/shuffleOptions.ts`)**:
+   - 문제은행 JSON은 정답이 대부분 A에 몰려 있습니다(Stray Kids 60/60, BTS 33/35, BLACKPINK 39/50). 그대로 내보내면 "A만 누르면 만점"이 되므로, 세션을 시작할 때(일반·친구 도전·녹화 모드 모두) 문제마다 보기를 섞고 위에서부터 A~D로 다시 라벨링하며 `correctAnswer`도 함께 옮깁니다.
+   - 친구 도전 링크는 문제 ID만 담으므로 보기 순서가 달라도 점수 비교에 영향이 없습니다.
 
 ### 4.2. 게이미피케이션 상태: `src/context/GameContext.tsx`
 유저의 세션 및 로컬 플레이 진행 상태를 브라우저 `localStorage`에 영구 보존합니다.
@@ -162,6 +165,18 @@ export function getLocalizedText<T extends Record<string, any>>(
   return '';
 }
 ```
+
+### 4.4. 숏폼 영상 녹화 모드: `/record`, `/record/[slug]`
+TikTok·Reels·Shorts용 퀴즈 영상을 화면 녹화로 만들기 위한 운영자 전용 페이지입니다. (`noindex`, 사이트맵 제외)
+
+- **구성 파일**: `src/app/record/page.tsx`(퀴즈 목록), `src/app/record/[slug]/page.tsx`, `src/components/RecordModeRunner.tsx`, `src/lib/recordMode.ts`
+- **실제 화면을 그대로 사용**: 복제 UI 대신 실제 퀴즈 페이지(`/quiz/[slug]?record=<문제ID들>&lang=<언어>`)를 412px 폭 iframe으로 띄우고 9:16 스테이지에 맞춰 축소합니다. 사이트 디자인을 바꾸면 영상에도 자동 반영됩니다.
+- **자동 플레이 (`QuizRunner`의 record 모드)**: 타이머 4초(문제 1초 + 카운트다운 3초) → 정답 자동 선택·공개 1초 → 다음 문제. 녹화 중에는 XP·일일 퀘스트가 실제로 적립되지 않습니다.
+- **타임라인 고정**: 훅 2초 + 문제당 5초 + 마무리 3초 (5문제 30초 / 3문제 20초). CapCut 효과음 템플릿을 한 번 만들어 재사용할 수 있습니다.
+- **통신**: 부모 페이지와 iframe은 `postMessage`(`RECORD_MESSAGE`: ready / start / question / done)로 동기화합니다.
+- **안전 영역**: 하단 22%는 앱 UI(캡션·버튼)에 가려지므로, 보기 영역이 정답 공개 시점까지 상단 78% 안에 들어오도록 문제마다 배율을 조정합니다.
+- **훅 문구**: 그룹 퀴즈는 팬덤명(ARMY / BLINKs / STAYs), 그 외는 카테고리별 대상(K-food lovers, K-drama fans, Korea lovers 등)으로 자동 생성합니다. 언어: 영어·스페인어, 포르투갈어는 문제 번역(`questionPt`/`textPt`)과 사이트 `translations.ts`에 `pt`가 추가되면 활성화됩니다.
+- **주의**: 첫 문제 선택은 시드 고정(`createSeededRandom`)입니다. 무작위로 뽑으면 개발 서버에서 SSR/CSR 결과가 달라져 iframe이 중간에 다시 로드됩니다.
 
 ---
 
@@ -334,11 +349,21 @@ npm run build
   - `which blackpink member are you`, `blackpink which member are you`
   - `which bts member is your soulmate`, `which bts member are you`
   - 해당 키워드를 각 퀴즈의 `<title>`, `<meta name="description">`, `<meta name="keywords">` 및 canonical URL에 1:1 매칭.
-- **Google Rich Results를 위한 3대 Schema.org JSON-LD 자동 주입**:
-  1. **`Quiz` / Interactive Resource Schema**: 퀴즈 이름, 난이도, 언어(`en`, `es`, `ko`), 무료 이용 여부, 및 구글 검색 결과 4.9 ★★★★★ 별점 리치 스니펫 표시를 위한 `AggregateRating` 내장.
-  2. **`BreadcrumbList` Schema**: 구글 검색 결과 URL 상단에 `Home > Quizzes > Quiz Title` 형식의 계층 경로 표시.
-  3. **`FAQPage` Schema**: 퀴즈 플레이 방법, 소요 시간, 1:1 친구 도전 방법 등의 질문-답변 아코디언 스니펫을 구글 1페이지 검색 결과에 직접 노출시켜 검색 점유 면적 극대화.
-  4. **전역 `WebSite` Schema**: `src/app/layout.tsx`에 브랜드 검색어(`kpulse`) 입력 시 브랜드 지식 패널을 트리거하는 Organization/WebSite 스키마 구성.
+- **트리비아 퀴즈 제목을 실제 검색어 형태로 변경 (2026-10-15)**:
+  - 예: `BTS Quiz: How Well Do You Know BTS? (35 Questions) | K-Pulse`
+  - `bts quiz`, `how well do you know bts` 같은 검색어가 제목 앞부분에 오도록 구성. 한국 문화·한국 음식 퀴즈에도 전용 제목/설명/키워드 추가.
+  - 제목의 `{n}`은 문제 수로 자동 치환되어, 문제를 추가해도 숫자가 틀리지 않습니다.
+- **검색용 본문 (`src/components/QuizSeoContent.tsx`, 2026-10-15)**:
+  - 퀴즈 화면은 클라이언트에서 그려져 정적 HTML에 글이 거의 없었습니다(트리비아 약 75단어, 성격 테스트 약 125단어). 퀴즈 아래에 서버 렌더링되는 본문을 추가해 약 450~600단어로 늘렸습니다.
+  - 트리비아: 소개 + 레벨별 샘플 문제 3개(`getSampleQuestions`, 정답은 `<details>`로 접힘) + FAQ
+  - 성격 테스트: 소개 + 나올 수 있는 결과 전체(멤버별 설명) + FAQ
+  - 영어 전용(영어 검색 대상). 테마 색을 그대로 상속해 다크 테마(BLACKPINK)에서도 대비 확보.
+- **Schema.org JSON-LD**:
+  1. **`Quiz` Schema**: 퀴즈 이름, 난이도, 언어, 무료 여부. ⚠️ **`AggregateRating`은 넣지 않습니다.** 실제 리뷰가 없는 별점 마크업은 구글 구조화 데이터 정책 위반(수동 조치 위험)이라 2026-10-15에 제거했습니다.
+  2. **`BreadcrumbList` Schema**: 검색 결과에 `Home > Quizzes > Quiz Title` 경로 표시.
+  3. **`FAQPage` Schema**: `getQuizFaq()` 하나에서 화면의 FAQ와 구조화 데이터를 함께 생성합니다. 구글은 FAQ 마크업이 페이지에 실제로 보이는 내용과 같을 것을 요구합니다.
+  4. **전역 `WebSite` Schema**: `src/app/layout.tsx`에 브랜드 검색어(`kpulse`)용 Organization/WebSite 스키마 구성.
+- **테스트**: `src/lib/__tests__/seo.test.ts` (제목 치환, 평점 마크업 없음, FAQ 화면·스키마 일치, 샘플 문제 레벨)
 
 ---
 

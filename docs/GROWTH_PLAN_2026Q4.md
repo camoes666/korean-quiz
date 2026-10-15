@@ -108,3 +108,34 @@
 | **Phase 2** | 2~3주차 | 구글 서치 콘솔 색인 페이지 100+ 달성, 애드센스 1차 심사 통과 |
 | **Phase 3** | 4주차 | 인스타 스토리/트위터 결과 카드 공유율 15% 이상 달성 |
 | **Phase 4** | 5주차 이후 | 일일 활성 방문자(DAU) 1,000+ 및 일일 퀘스트 완수율 30% |
+
+---
+
+## 5. Search Console 진단 및 조치 기록
+
+### 5.1. 2026-10-15 진단 (오픈 약 8일 차, 최근 3개월 기준)
+| 지표 | 값 | 해석 |
+| :--- | :--- | :--- |
+| 노출 | 38 | 색인 초기 단계로 정상 범위 |
+| 클릭 | 0 | 노출이 적고 평균 순위가 2페이지라 아직 클릭 없음 |
+| 평균 순위 | 14.1 | 1페이지(10위 이내) 진입이 다음 목표 |
+
+- **노출 검색어는 모두 성격 테스트**: `which blackpink member are you`, `which bts member is your soulmate`, `which bts member are you`, 브랜드 검색어 `kpulse`.
+- **트리비아 퀴즈 노출 0**: 제목(`BTS ARMY Trivia Quiz: 3-Level Hardcore Fan Test`)이 실제 검색어(`bts quiz`, `how well do you know bts`)와 달랐고, 정적 HTML의 본문이 약 75단어뿐이었음.
+- **가이드 페이지 노출 0**: 본문 약 3,500단어인데도 노출이 없어 아직 색인 전으로 추정.
+
+### 5.2. 2026-10-15 조치 (배포 완료)
+- [x] 트리비아 퀴즈 7개 제목을 검색어 형태로 변경 (예: `BTS Quiz: How Well Do You Know BTS? (35 Questions)`)
+- [x] 모든 퀴즈 페이지 하단에 서버 렌더링 본문 추가 (소개, 샘플 문제 3개, 성격 테스트 결과 목록, FAQ). 정적 HTML 약 450~600단어.
+- [x] 근거 없는 `AggregateRating`(평점 4.9) 구조화 데이터 제거. 구글 정책 위반으로 수동 조치를 받을 위험이 있었음.
+- [x] FAQ 구조화 데이터를 화면에 보이는 FAQ와 같은 데이터로 생성
+
+### 5.3. 색인 생성 요청 (하루 한도 약 10개, 이틀에 나눠 진행)
+- [ ] **1일차**: 성격 테스트 4개 (`which-bts-member-are-you`, `which-blackpink-member-are-you`, `which-stray-kids-member-are-you`, `which-korean-food-are-you`) + 트리비아 6개 (`bts-army-trivia`, `blackpink-blink-trivia`, `stray-kids-stay-trivia`, `korean-culture-iq`, `korean-spicy-food`, `kpop-fandom-trivia`)
+- [ ] **2일차**: `kdrama-trope-trivia`, `/guide` 및 가이드 7개, 홈 `/`
+- [ ] Sitemaps 메뉴에서 `sitemap.xml` 다시 제출
+- [ ] 1~2주 뒤 확인: 검색어 탭에 `bts quiz`, `how well do you know bts` 등 트리비아 검색어가 나타나는지
+
+### 5.4. 남은 결정 사항
+- [ ] 퀴즈 카드(`QuizCard.tsx`)의 `★ 4.9 (142.8K)` 표시: 실제 데이터가 아니므로 제거하거나 "New"/"Trending" 등으로 교체 필요 (Phase 1 "가짜 요소 0건" 기준 미충족)
+- [ ] 다음 확장 후보: `which twice / newjeans / seventeen member are you` 성격 테스트 (현재 유일하게 검색 반응이 오는 형식)

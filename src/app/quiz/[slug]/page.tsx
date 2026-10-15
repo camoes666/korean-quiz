@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getQuizBySlug, getRelatedQuizzes, getAllQuizzes } from '@/data/quizzes';
 import QuizRunner from '@/components/QuizRunner';
 import PersonalityTestRunner from '@/components/PersonalityTestRunner';
+import QuizSeoContent from '@/components/QuizSeoContent';
 import { getQuizThemeGroup } from '@/lib/theme';
 import { getQuizSeoData, generateQuizJsonLd } from '@/lib/seo';
 
@@ -87,6 +88,7 @@ export default async function QuizPage({ params }: QuizPageProps) {
       {quiz.quizType === 'personality' ? (
         <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
           <PersonalityTestRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
+          <QuizSeoContent quiz={quiz} />
         </main>
       ) : (
         <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
@@ -99,6 +101,7 @@ export default async function QuizPage({ params }: QuizPageProps) {
           >
             <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
           </Suspense>
+          <QuizSeoContent quiz={quiz} />
         </main>
       )}
     </>

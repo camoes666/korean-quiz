@@ -1,4 +1,4 @@
-import { Quiz } from '@/types/quiz';
+import { Question, Quiz } from '@/types/quiz';
 
 export interface QuizSeoData {
   title: string;
@@ -7,6 +7,9 @@ export interface QuizSeoData {
   ogTitle: string;
 }
 
+// `{n}` in a title is replaced with the quiz's question count, so titles stay accurate
+// as question banks grow. Trivia titles lead with the phrases people actually search
+// ("bts quiz", "how well do you know bts").
 const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
   'which-blackpink-member-are-you': {
     title: 'Which BLACKPINK Member Are You? (Personality & Vibe Test) | K-Pulse',
@@ -46,12 +49,13 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     ],
   },
   'blackpink-blink-trivia': {
-    title: 'BLACKPINK Trivia Quiz: Ultimate 50-Question BLINK Challenge | K-Pulse',
+    title: 'BLACKPINK Quiz: How Well Do You Know BLACKPINK? ({n} Questions) | K-Pulse',
     ogTitle: 'BLACKPINK Trivia Quiz: 50 Questions from Debut to Solo Hits | K-Pulse',
     description:
       'Test your BLINK knowledge with 50 questions across 3 levels: debut era, Coachella, world tour records, and solo hits (APT., Mantra, Rockstar). Play free!',
     keywords: [
       'blackpink quiz',
+      'how well do you know blackpink',
       'blackpink trivia',
       'blink trivia quiz',
       'blackpink trivia test',
@@ -65,12 +69,13 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     ],
   },
   'bts-army-trivia': {
-    title: 'BTS ARMY Trivia Quiz: 3-Level Hardcore Fan Test | K-Pulse',
+    title: 'BTS Quiz: How Well Do You Know BTS? ({n} Questions) | K-Pulse',
     ogTitle: 'BTS ARMY Trivia: Can You Score 10/10 on Hardcore Mode? | K-Pulse',
     description:
       'Are you a true ARMY? Test your BTS knowledge across 3 difficulty levels with a 15-second countdown timer, combo streaks, and rank badges! Free trivia game.',
     keywords: [
       'bts quiz',
+      'how well do you know bts',
       'bts army quiz',
       'bts trivia',
       'bts trivia test',
@@ -81,12 +86,13 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     ],
   },
   'stray-kids-stay-trivia': {
-    title: 'Stray Kids STAY Trivia Quiz: 3-Level Hardcore Fan Test | K-Pulse',
+    title: 'Stray Kids Quiz: How Well Do You Know SKZ? ({n} Questions) | K-Pulse',
     ogTitle: 'Stray Kids Trivia: Are You a Real STAY? | K-Pulse',
     description:
       'Test your Stray Kids STAY knowledge! 3 difficulty levels covering 3RACHA, SKZOO, God’s Menu, MANIAC, and billboard milestones. Free K-Pop quiz.',
     keywords: [
       'stray kids quiz',
+      'how well do you know stray kids',
       'stray kids trivia',
       'stay trivia quiz',
       'skz quiz',
@@ -112,7 +118,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     ],
   },
   'kpop-fandom-trivia': {
-    title: 'The Ultimate K-Pop Stan Quiz: Fandom Lore & 1st-4th Gen Hits | K-Pulse',
+    title: 'K-Pop Quiz: How Well Do You Know K-Pop? ({n} Questions) | K-Pulse',
     ogTitle: 'Ultimate K-Pop Stan Quiz: How High is Your K-Pop IQ? | K-Pulse',
     description:
       'How high is your K-Pop IQ? Test your knowledge across 3 difficulty levels covering BTS, BLACKPINK, Stray Kids, TWICE, EXO, NewJeans, and K-Pop history!',
@@ -127,7 +133,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     ],
   },
   'kdrama-trope-trivia': {
-    title: 'Ultimate K-Drama Addict Quiz: Tropes, OSTs & Squid Game | K-Pulse',
+    title: 'K-Drama Quiz: Tropes, OSTs & Squid Game ({n} Questions) | K-Pulse',
     ogTitle: 'K-Drama Addict Test: How Many Iconic Scenes Do You Know? | K-Pulse',
     description:
       'Are you a true K-Drama binge-watcher? Test your knowledge on Squid Game, Crash Landing on You, Goblin, Queen of Tears, and legendary Korean drama tropes!',
@@ -138,6 +144,34 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'squid game quiz',
       'korean drama test',
       'kdrama addict test',
+    ],
+  },
+  'korean-culture-iq': {
+    title: 'Korean Culture Quiz: Etiquette & Customs Test ({n} Questions) | K-Pulse',
+    ogTitle: 'Korean Culture Quiz: Would You Survive Dinner in Korea? | K-Pulse',
+    description:
+      'How well do you know Korean culture? Test yourself on dining etiquette, age and honorifics, holidays, and taboos. Free Korean culture quiz with answers explained.',
+    keywords: [
+      'korean culture quiz',
+      'korean etiquette quiz',
+      'korea quiz',
+      'korean customs test',
+      'how well do you know korea',
+      'korean culture trivia',
+    ],
+  },
+  'korean-spicy-food': {
+    title: 'Korean Food Quiz: Spicy Food & Street Snacks ({n} Questions) | K-Pulse',
+    ogTitle: 'Korean Food Quiz: How Spicy Can You Go? | K-Pulse',
+    description:
+      'How well do you know Korean food? Test yourself on tteokbokki, buldak, kimchi, and street snacks across 3 levels. Free K-food quiz with answers explained.',
+    keywords: [
+      'korean food quiz',
+      'k-food quiz',
+      'korean spicy food quiz',
+      'buldak quiz',
+      'korean street food trivia',
+      'how well do you know korean food',
     ],
   },
 };
@@ -158,8 +192,10 @@ export function getQuizSeoData(quiz: Quiz): QuizSeoData {
 
   const override = SEO_OVERRIDES[quiz.slug];
 
+  const questionCount = String(quiz.questions?.length || 0);
+
   return {
-    title: override?.title || `${quiz.title} | K-Pulse`,
+    title: (override?.title || `${quiz.title} | K-Pulse`).replace('{n}', questionCount),
     ogTitle: override?.ogTitle || defaultOgTitle,
     description: override?.description || quiz.description,
     keywords: override?.keywords || fallbackKeywords,
@@ -199,10 +235,6 @@ export function generateQuizJsonLd(quiz: Quiz) {
   };
 
   // 2. Quiz / Interactive Resource Schema
-  const estimatedPlays = quiz.totalPlays
-    ? parseInt(quiz.totalPlays.replace(/[^0-9]/g, '')) * 10 || 1840
-    : 1840;
-
   const quizSchema = {
     '@context': 'https://schema.org',
     '@type': 'Quiz',
@@ -222,57 +254,81 @@ export function generateQuizJsonLd(quiz: Quiz) {
       name: 'K-Pulse',
       url: baseUrl,
     },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: String(estimatedPlays),
-      bestRating: '5',
-      worstRating: '1',
-    },
   };
 
-  // 3. FAQ Schema for Rich Snippets
+  // 3. FAQ Schema: mirrors the FAQ rendered on the page (Google requires it to be visible)
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: isPersonality
-      ? [
-          {
-            '@type': 'Question',
-            name: `How does the "${quiz.title}" test work?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Answer 10 scenario-based questions about your lifestyle, fashion taste, music style, and stage presence to discover your exact member match and chemistry percentage.',
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Is this K-Pop test completely free to play?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes, 100% free with no sign-up or app download required. Supported in English, Spanish, and Korean.',
-            },
-          },
-        ]
-      : [
-          {
-            '@type': 'Question',
-            name: `How many questions are in the ${quiz.title}?`,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: `This quiz features ${quiz.questions?.length || 10} questions across 3 difficulty tiers: Level 1 (Rookie), Level 2 (Fan), and Level 3 (Hardcore Stan).`,
-            },
-          },
-          {
-            '@type': 'Question',
-            name: 'Can I challenge my friends with my score?',
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: 'Yes! After completing the quiz, you receive a custom challenge link to share on X, Reddit, WhatsApp, or Pinterest to see if your friends can beat your speed and score.',
-            },
-          },
-        ],
+    mainEntity: getQuizFaq(quiz).map(({ question, answer }) => ({
+      '@type': 'Question',
+      name: question,
+      acceptedAnswer: { '@type': 'Answer', text: answer },
+    })),
   };
 
   return [breadcrumbSchema, quizSchema, faqSchema];
+}
+
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+/** FAQ shown on the quiz page and emitted as FAQPage structured data. */
+export function getQuizFaq(quiz: Quiz): FaqItem[] {
+  const free: FaqItem = {
+    question: quiz.quizType === 'personality' ? 'Is this test free?' : 'Is this quiz free?',
+    answer: 'Yes. It is 100% free with no sign-up or app download, and it works in English, Spanish, and Korean.',
+  };
+
+  if (quiz.quizType === 'personality') {
+    const results = Object.values(quiz.personalityResults || {}).map((r) => r.name);
+    const questionCount = quiz.personalityQuestions?.length || 10;
+    const faq: FaqItem[] = [
+      {
+        question: `How does the "${quiz.title}" test work?`,
+        answer: `Answer ${questionCount} scenario-based questions about your lifestyle, taste, and personality. Each answer adds points toward a member, and the highest score is your match.`,
+      },
+    ];
+    if (results.length > 0) {
+      faq.push({
+        question: 'What results can I get?',
+        answer: `You can match with ${results.join(', ')}. Each result explains your shared traits and your best-match member.`,
+      });
+    }
+    return [...faq, free];
+  }
+
+  const total = quiz.questions?.length || 0;
+  return [
+    {
+      question: `How many questions are in the ${quiz.title}?`,
+      answer: `The question bank has ${total} questions across 3 difficulty levels: Level 1 (Rookie), Level 2 (Fan), and Level 3 (Hardcore). Each round picks 5 random questions, so every play is different.`,
+    },
+    {
+      question: 'Do I get the answers explained?',
+      answer: 'Yes. After each question you see the correct answer with a short explanation and a fun fact.',
+    },
+    {
+      question: 'Can I challenge my friends?',
+      answer: 'Yes. When you finish, you get a challenge link with your score to share so friends can try to beat it.',
+    },
+    free,
+  ];
+}
+
+/** One easy, one medium and one hard question, shown on the page as crawlable sample content. */
+export function getSampleQuestions(quiz: Quiz): Question[] {
+  const questions = quiz.questions || [];
+  const samples: Question[] = [];
+  for (const level of [1, 2, 3]) {
+    const q = questions.find((x) => x.level === level);
+    if (q) samples.push(q);
+  }
+  for (const q of questions) {
+    if (samples.length >= 3) break;
+    if (!samples.includes(q)) samples.push(q);
+  }
+  return samples;
 }
