@@ -22,6 +22,19 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
         <p className="qz-card-muted mt-2 leading-relaxed">{quiz.subtitle}</p>
       </div>
 
+      {quiz.titleEs && quiz.descriptionEs && (
+        <div className="qz-card rounded-3xl border-2 border-pink-100 bg-white p-6">
+          <div className="flex items-center gap-2 mb-2">
+            <span className="text-xs font-black px-2.5 py-0.5 rounded-full bg-pink-100 text-pink-700 tracking-wide uppercase">
+              Español
+            </span>
+            <h2 className="qz-card-title text-xl font-black">{quiz.titleEs}</h2>
+          </div>
+          <p className="qz-card-muted mt-2 leading-relaxed">{quiz.descriptionEs}</p>
+          {quiz.subtitleEs && <p className="qz-card-muted mt-1 leading-relaxed text-sm font-medium">{quiz.subtitleEs}</p>}
+        </div>
+      )}
+
       {samples.length > 0 && (
         <div className="qz-card rounded-3xl border-2 border-purple-100 bg-white p-6">
           <h2 className="qz-card-title text-xl font-black">Sample questions</h2>
@@ -36,11 +49,16 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
                   <p className="font-bold">
                     {i + 1}. {q.question}
                   </p>
+                  {q.questionEs && (
+                    <p className="text-xs text-slate-500 italic mt-0.5">
+                      (ES: {q.questionEs})
+                    </p>
+                  )}
                   {q.level && <p className="qz-card-muted text-xs font-bold mt-1">{LEVEL_LABEL[q.level]}</p>}
                   <ul className="mt-2 grid gap-1 text-sm sm:grid-cols-2">
                     {q.options.map((o) => (
                       <li key={o.id}>
-                        {o.id}. {o.text}
+                        {o.id}. {o.text} {o.textEs ? <span className="text-xs text-slate-400 font-normal">({o.textEs})</span> : null}
                       </li>
                     ))}
                   </ul>
@@ -49,6 +67,11 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
                     <p className="mt-1">
                       <strong>{answer?.text}</strong>: {q.explanation}
                     </p>
+                    {q.explanationEs && (
+                      <p className="mt-1 text-xs text-slate-500 italic">
+                        {q.explanationEs}
+                      </p>
+                    )}
                   </details>
                 </li>
               );
@@ -66,8 +89,18 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
                 <h3 className="font-black">
                   {r.emoji} {r.name}: {r.title}
                 </h3>
+                {r.titleEs && (
+                  <p className="text-xs font-bold text-pink-600 mt-0.5">
+                    ES: {r.nameEs || r.name} - {r.titleEs}
+                  </p>
+                )}
                 <p className="qz-card-muted text-xs font-bold mt-1">{r.subtitle}</p>
                 <p className="mt-1 text-sm leading-relaxed">{r.description}</p>
+                {r.descriptionEs && (
+                  <p className="mt-1 text-xs text-slate-500 italic leading-relaxed">
+                    {r.descriptionEs}
+                  </p>
+                )}
               </li>
             ))}
           </ul>
@@ -75,12 +108,12 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
       )}
 
       <div className="qz-card rounded-3xl border-2 border-purple-100 bg-white p-6">
-        <h2 className="qz-card-title text-xl font-black">FAQ</h2>
+        <h2 className="qz-card-title text-xl font-black">Frequently Asked Questions (FAQ)</h2>
         <dl className="mt-4 space-y-4">
           {faq.map((item) => (
             <div key={item.question}>
-              <dt className="font-bold">{item.question}</dt>
-              <dd className="mt-1 text-sm leading-relaxed">{item.answer}</dd>
+              <dt className="font-bold text-slate-900">{item.question}</dt>
+              <dd className="mt-1 text-sm text-slate-600 leading-relaxed">{item.answer}</dd>
             </div>
           ))}
         </dl>

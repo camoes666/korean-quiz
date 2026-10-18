@@ -366,11 +366,13 @@ npm run build
   - 트리비아: 소개 + 레벨별 샘플 문제 3개(`getSampleQuestions`, 정답은 `<details>`로 접힘) + FAQ
   - 성격 테스트: 소개 + 나올 수 있는 결과 전체(멤버별 설명) + FAQ
   - 영어 전용(영어 검색 대상). 테마 색을 그대로 상속해 다크 테마(BLACKPINK)에서도 대비 확보.
-- **Schema.org JSON-LD**:
-  1. **`Quiz` Schema**: 퀴즈 이름, 난이도, 언어, 무료 여부. ⚠️ **`AggregateRating`은 넣지 않습니다.** 실제 리뷰가 없는 별점 마크업은 구글 구조화 데이터 정책 위반(수동 조치 위험)이라 2026-10-15에 제거했습니다.
-  2. **`BreadcrumbList` Schema**: 검색 결과에 `Home > Quizzes > Quiz Title` 경로 표시.
-  3. **`FAQPage` Schema**: `getQuizFaq()` 하나에서 화면의 FAQ와 구조화 데이터를 함께 생성합니다. 구글은 FAQ 마크업이 페이지에 실제로 보이는 내용과 같을 것을 요구합니다.
-  4. **전역 `WebSite` Schema**: `src/app/layout.tsx`에 브랜드 검색어(`kpulse`)용 Organization/WebSite 스키마 구성.
+- **스페인어권(LATAM / Spain) 타깃 SEO 강화 (2026-10-18)**:
+  - 구글 서치콘솔 실측 쿼리 `que miembro de blackpink eres` 발견에 따라 스페인어 검색 유입 최적화.
+  - `src/lib/seo.ts`: 퀴즈별 스페인어 검색 키워드 대거 추가(`que miembro de blackpink eres`, `test que miembro de bts eres`, `quiz blackpink espanol`, `trivia bts espanol` 등).
+  - `src/lib/seo.ts`의 `getQuizFaq()`: 영어와 스페인어 질문-답변(FAQ)을 동시에 생성하여 `FAQPage` 스키마 및 화면에 이중 언어로 노출.
+  - `src/components/QuizSeoContent.tsx`: 정적 서버 렌더링 영역에 스페인어 카드(`quiz.titleEs`, `quiz.descriptionEs`), 스페인어 결과 설명, 스페인어 샘플 문제 번역을 표시하여 구글 스페인어 크롤러 인덱싱 극대화.
+  - `src/app/quiz/[slug]/page.tsx`: `alternates.languages` (hreflang `en`, `es`, `ko`, `x-default`) 및 OpenGraph `alternateLocale` (`es_ES`, `es_MX`, `es_LA`, `ko_KR`) 지정.
+  - `src/app/sitemap.ts`: `sitemap.xml`의 각 퀴즈 URL마다 `alternates.languages` (`?lang=en`, `?lang=es`, `?lang=ko`) XML 링크 포함.
 - **테스트**: `src/lib/__tests__/seo.test.ts` (제목 치환, 평점 마크업 없음, FAQ 화면·스키마 일치, 샘플 문제 레벨)
 
 ---

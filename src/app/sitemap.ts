@@ -13,6 +13,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.8,
+    alternates: {
+      languages: {
+        en: `${baseUrl}/quiz/${quiz.slug}?lang=en`,
+        es: `${baseUrl}/quiz/${quiz.slug}?lang=es`,
+        ko: `${baseUrl}/quiz/${quiz.slug}?lang=ko`,
+      },
+    },
   }));
 
   const guideHubUrl: MetadataRoute.Sitemap = [

@@ -28,6 +28,17 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'lisa',
       'blink personality quiz',
       'kpop quiz',
+      // Spanish keywords (LATAM & Spain)
+      'que miembro de blackpink eres',
+      'que integrante de blackpink eres',
+      'test que miembro de blackpink eres',
+      'test de personalidad blackpink',
+      'quiz blackpink espanol',
+      'quien eres de blackpink',
+      'test blackpink espanol',
+      'blackpink test alma gemela',
+      'con que miembro de blackpink eres compatible',
+      'blackpink test espanol',
     ],
   },
   'which-bts-member-are-you': {
@@ -46,6 +57,17 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'bts soulmate test',
       'kpop personality test',
       'kpop quiz',
+      // Spanish keywords (LATAM & Spain)
+      'que miembro de bts eres',
+      'que integrante de bts es tu alma gemela',
+      'bts test alma gemela',
+      'test de personalidad bts',
+      'quien eres de bts',
+      'test bts espanol',
+      'bts quiz espanol',
+      'miembro de bts segun tu personalidad',
+      'con quien de bts eres compatible',
+      'alma gemela bts test',
     ],
   },
   'blackpink-blink-trivia': {
@@ -66,6 +88,13 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'jisoo flower',
       'kpop trivia',
       'kpop quiz',
+      // Spanish keywords (LATAM & Spain)
+      'quiz de blackpink en espanol',
+      'preguntas de blackpink',
+      'cuanto sabes de blackpink',
+      'trivia blackpink espanol',
+      'test blink espanol',
+      'quiz blackpink preguntas',
     ],
   },
   'bts-army-trivia': {
@@ -83,6 +112,13 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'bts army challenge',
       'bts 2013 debut trivia',
       'kpop quiz',
+      // Spanish keywords (LATAM & Spain)
+      'quiz de bts en espanol',
+      'cuanto sabes de bts',
+      'preguntas de bts',
+      'trivia bts espanol',
+      'test army espanol',
+      'quiz bts preguntas',
     ],
   },
   'stray-kids-stay-trivia': {
@@ -98,6 +134,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'skz quiz',
       'skz trivia',
       'kpop quiz',
+      // Spanish keywords
+      'quiz stray kids espanol',
+      'cuanto sabes de stray kids',
+      'preguntas de stray kids',
+      'test stay espanol',
     ],
   },
   'which-stray-kids-member-are-you': {
@@ -115,6 +156,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'hyunjin',
       'bang chan',
       'kpop quiz',
+      // Spanish keywords
+      'que miembro de stray kids eres',
+      'test stray kids espanol',
+      'quien eres de stray kids',
+      'stray kids alma gemela test',
     ],
   },
   'kpop-fandom-trivia': {
@@ -130,6 +176,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'kpop fandom quiz',
       'kpop trivia game',
       'korean pop quiz',
+      // Spanish keywords
+      'quiz kpop espanol',
+      'test de kpop en espanol',
+      'cuanto sabes de kpop',
+      'preguntas de kpop espanol',
     ],
   },
   'kdrama-trope-trivia': {
@@ -144,6 +195,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'squid game quiz',
       'korean drama test',
       'kdrama addict test',
+      // Spanish keywords
+      'quiz kdrama espanol',
+      'test dramas coreanos espanol',
+      'cuanto sabes de doramas',
+      'quiz series coreanas',
     ],
   },
   'korean-culture-iq': {
@@ -158,6 +214,10 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'korean customs test',
       'how well do you know korea',
       'korean culture trivia',
+      // Spanish keywords
+      'quiz cultura coreana',
+      'test cultura de corea del sur',
+      'costumbres coreanas quiz',
     ],
   },
   'korean-spicy-food': {
@@ -172,6 +232,10 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'buldak quiz',
       'korean street food trivia',
       'how well do you know korean food',
+      // Spanish keywords
+      'quiz comida coreana',
+      'test comida coreana espanol',
+      'cuanto sabes de comida coreana',
     ],
   },
 };
@@ -275,20 +339,32 @@ export interface FaqItem {
   answer: string;
 }
 
-/** FAQ shown on the quiz page and emitted as FAQPage structured data. */
+/** FAQ shown on the quiz page and emitted as FAQPage structured data (bilingual English + Spanish). */
 export function getQuizFaq(quiz: Quiz): FaqItem[] {
-  const free: FaqItem = {
-    question: quiz.quizType === 'personality' ? 'Is this test free?' : 'Is this quiz free?',
-    answer: 'Yes. It is 100% free with no sign-up or app download, and it works in English, Spanish, and Korean.',
+  const isPersonality = quiz.quizType === 'personality';
+  const freeEn: FaqItem = {
+    question: isPersonality ? 'Is this test free to play?' : 'Is this quiz free to play?',
+    answer: 'Yes. It is 100% free with no sign-up or app download required. Available in English, Spanish, and Korean.',
+  };
+  const freeEs: FaqItem = {
+    question: isPersonality ? '¿Este test de K-Pop es gratis?' : '¿Este quiz de K-Pop es gratis?',
+    answer: 'Sí. Es 100% gratis, sin registro ni descargas. Totalmente interactivo en español, inglés y coreano.',
   };
 
-  if (quiz.quizType === 'personality') {
+  if (isPersonality) {
     const results = Object.values(quiz.personalityResults || {}).map((r) => r.name);
+    const resultsEs = Object.values(quiz.personalityResults || {}).map((r) => r.nameEs || r.name);
     const questionCount = quiz.personalityQuestions?.length || 10;
+    const titleEs = quiz.titleEs || quiz.title;
+
     const faq: FaqItem[] = [
       {
         question: `How does the "${quiz.title}" test work?`,
         answer: `Answer ${questionCount} scenario-based questions about your lifestyle, taste, and personality. Each answer adds points toward a member, and the highest score is your match.`,
+      },
+      {
+        question: `¿Cómo funciona el test "${titleEs}"?`,
+        answer: `Responde ${questionCount} preguntas sobre tu personalidad, estilo y gustos. Cada opción suma puntos hacia un integrante y el puntaje más alto revelará tu alma gemela.`,
       },
     ];
     if (results.length > 0) {
@@ -296,25 +372,43 @@ export function getQuizFaq(quiz: Quiz): FaqItem[] {
         question: 'What results can I get?',
         answer: `You can match with ${results.join(', ')}. Each result explains your shared traits and your best-match member.`,
       });
+      faq.push({
+        question: '¿Qué integrantes pueden salir como resultado?',
+        answer: `Puedes obtener como resultado a ${resultsEs.join(', ')}. Cada resultado detalla tus rasgos de personalidad y tu química con el grupo.`,
+      });
     }
-    return [...faq, free];
+    return [...faq, freeEn, freeEs];
   }
 
   const total = quiz.questions?.length || 0;
+  const titleEs = quiz.titleEs || quiz.title;
   return [
     {
       question: `How many questions are in the ${quiz.title}?`,
       answer: `The question bank has ${total} questions across 3 difficulty levels: Level 1 (Rookie), Level 2 (Fan), and Level 3 (Hardcore). Each round picks 5 random questions, so every play is different.`,
     },
     {
+      question: `¿Cuántas preguntas tiene el quiz "${titleEs}"?`,
+      answer: `Cuenta con un banco de ${total} preguntas en 3 niveles de dificultad: Nivel 1 (Principiante), Nivel 2 (Fan) y Nivel 3 (Hardcore). Cada ronda selecciona 5 preguntas al azar con temporizador de 15 segundos.`,
+    },
+    {
       question: 'Do I get the answers explained?',
       answer: 'Yes. After each question you see the correct answer with a short explanation and a fun fact.',
+    },
+    {
+      question: '¿Las respuestas tienen explicación en español?',
+      answer: 'Sí. Al responder cada pregunta verás la respuesta correcta junto con su explicación y curiosidades.',
     },
     {
       question: 'Can I challenge my friends?',
       answer: 'Yes. When you finish, you get a challenge link with your score to share so friends can try to beat it.',
     },
-    free,
+    {
+      question: '¿Puedo retar a mis amigos?',
+      answer: '¡Sí! Al terminar obtendrás un enlace de desafío con tu puntuación para compartir en WhatsApp, X o Instagram.',
+    },
+    freeEn,
+    freeEs,
   ];
 }
 
