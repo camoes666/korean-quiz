@@ -36,7 +36,7 @@ export default function GuideHubClient({
   personalityQuizzes,
   totalQuestionCount,
 }: GuideHubClientProps) {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -72,11 +72,11 @@ export default function GuideHubClient({
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3">
           <nav className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold">
             <Link href="/" className="hover:text-purple-600 transition-colors">
-              {lang === 'ko' ? '홈' : lang === 'es' ? 'Inicio' : 'Home'}
+              {lang === 'ko' ? '홈' : lang === 'es' ? 'Inicio' : lang === 'pt' ? 'Início' : 'Home'}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             <span className="text-slate-900 font-bold">
-              {lang === 'ko' ? '지식 & 로어 가이드' : lang === 'es' ? 'Guías de Lore' : 'Knowledge & Lore Guides'}
+              {lang === 'ko' ? '지식 & 로어 가이드' : lang === 'es' ? 'Guías de Lore' : lang === 'pt' ? 'Guias de Lore' : 'Knowledge & Lore Guides'}
             </span>
           </nav>
         </div>
@@ -107,6 +107,8 @@ export default function GuideHubClient({
                   ? '230+개 검증된 팩트 & 꿀팁 해설 총망라'
                   : lang === 'es'
                   ? '230+ Datos y Explicaciones Verificadas'
+                  : lang === 'pt'
+                  ? '230+ Fatos e Explicações Verificadas'
                   : '230+ Verified Facts & Detailed Lore'}
               </span>
             </div>
@@ -129,6 +131,14 @@ export default function GuideHubClient({
                 </span>{' '}
                 📖
               </>
+            ) : lang === 'pt' ? (
+              <>
+                Guias de Conhecimento <br className="hidden sm:inline" />
+                <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent">
+                  K-Pop e Cultura Coreana
+                </span>{' '}
+                📖
+              </>
             ) : (
               <>
                 K-Culture & K-Pop <br className="hidden sm:inline" />
@@ -145,6 +155,8 @@ export default function GuideHubClient({
               ? 'BTS, Stray Kids, 블랙핑크의 데뷔 역사와 비하인드부터 한국 매운맛 스코빌 지수, 식사 예절, K-드라마 클리셰까지! 퀴즈 전 정독하고 만점을 노려보세요.'
               : lang === 'es'
               ? 'Desde los orígenes y récords de BTS, Stray Kids y BLACKPINK, hasta la escala de picante coreano y costumbres tradicionales. ¡Léelas y domina los quizzes!'
+              : lang === 'pt'
+              ? 'Das origens e recordes do BTS, Stray Kids e BLACKPINK até a escala de pimenta coreana e costumes tradicionais. Leia e domine os quizzes!'
               : 'Explore deep fandom lore, Billboard histories, spicy food Scoville ranks, and dining etiquette. Read the verified explanations, then test your skills in the quizzes!'}
           </p>
 
@@ -155,7 +167,7 @@ export default function GuideHubClient({
                 {guides.length}
               </div>
               <div className="text-[11px] font-bold text-slate-600">
-                {lang === 'ko' ? '분야별 가이드' : lang === 'es' ? 'Guías Temáticas' : 'Topic Guides'}
+                {lang === 'ko' ? '분야별 가이드' : lang === 'es' ? 'Guías Temáticas' : lang === 'pt' ? 'Guias Temáticos' : 'Topic Guides'}
               </div>
             </div>
 
@@ -164,16 +176,16 @@ export default function GuideHubClient({
                 {totalQuestionCount}+
               </div>
               <div className="text-[11px] font-bold text-slate-600">
-                {lang === 'ko' ? '검증된 해설 & 팩트' : lang === 'es' ? 'Datos y Respuestas' : 'Verified Q&A Facts'}
+                {lang === 'ko' ? '검증된 해설 & 팩트' : lang === 'es' ? 'Datos y Respuestas' : lang === 'pt' ? 'Fatos e Respostas' : 'Verified Q&A Facts'}
               </div>
             </div>
 
             <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/70 text-center">
               <div className="text-xl sm:text-2xl font-black text-indigo-600">
-                5
+                3+
               </div>
               <div className="text-[11px] font-bold text-slate-600">
-                {lang === 'ko' ? '지원 언어' : lang === 'es' ? 'Idiomas' : 'Global Languages'}
+                {lang === 'ko' ? '지원 언어' : lang === 'es' || lang === 'pt' ? 'Idiomas' : 'Global Languages'}
               </div>
             </div>
 
@@ -182,7 +194,7 @@ export default function GuideHubClient({
                 100%
               </div>
               <div className="text-[11px] font-bold text-slate-600">
-                {lang === 'ko' ? '무료 & 퀴즈 연동' : lang === 'es' ? 'Gratis y Conectado' : 'Free & Connected'}
+                {lang === 'ko' ? '무료 & 퀴즈 연동' : lang === 'es' ? 'Gratis y Conectado' : lang === 'pt' ? 'Grátis e Conectado' : 'Free & Connected'}
               </div>
             </div>
           </div>
@@ -206,9 +218,7 @@ export default function GuideHubClient({
                       : 'bg-white text-slate-600 hover:bg-purple-50 border border-purple-100'
                   }`}
                 >
-                  {cat === 'All'
-                    ? lang === 'ko' ? '전체' : lang === 'es' ? 'Todos' : 'All'
-                    : cat}
+                  {t.categories[cat] || cat}
                 </button>
               );
             })}
@@ -226,6 +236,8 @@ export default function GuideHubClient({
                   ? '가이드 제목 또는 키워드 검색...'
                   : lang === 'es'
                   ? 'Buscar guías o palabras clave...'
+                  : lang === 'pt'
+                  ? 'Buscar guias ou palavras-chave...'
                   : 'Search guide topics or keywords...'
               }
               className="w-full pl-9 pr-4 py-2 rounded-xl border border-slate-200 bg-white focus:border-purple-500 focus:outline-hidden text-xs sm:text-sm font-medium shadow-2xs"
@@ -255,11 +267,11 @@ export default function GuideHubClient({
                     </span>
                     <div className="flex items-center gap-1.5">
                       <span className="px-2.5 py-1 rounded-full text-[11px] font-black bg-purple-100 text-purple-700">
-                        {guide.category}
+                        {t.categories[guide.category] || guide.category}
                       </span>
                       {guide.tag && (
                         <span className="px-2.5 py-1 rounded-full text-[11px] font-black bg-pink-100 text-pink-700">
-                          #{guide.tag}
+                          #{t.tags[guide.tag] || guide.tag}
                         </span>
                       )}
                     </div>
@@ -278,14 +290,14 @@ export default function GuideHubClient({
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700">
                       <Layers className="w-3 h-3 text-purple-600" />
                       {guide.questions.length}{' '}
-                      {lang === 'ko' ? '개 문답' : lang === 'es' ? 'Hechos' : 'Key Facts'}
+                      {lang === 'ko' ? '개 문답' : lang === 'es' ? 'Hechos' : lang === 'pt' ? 'Fatos' : 'Key Facts'}
                     </span>
                     <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700">
                       <Clock className="w-3 h-3 text-slate-500" />
-                      ~{readTime} {lang === 'ko' ? '분' : 'min'}
+                      ~{readTime} {t.mins}
                     </span>
                     <span className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-600">
-                      {guide.difficulty}
+                      {t.difficulties[guide.difficulty] || guide.difficulty}
                     </span>
                   </div>
                 </div>
@@ -298,7 +310,7 @@ export default function GuideHubClient({
                   >
                     <BookOpen className="w-3.5 h-3.5" />
                     <span>
-                      {lang === 'ko' ? '가이드 정독' : lang === 'es' ? 'Leer Guía' : 'Read Guide'}
+                      {lang === 'ko' ? '가이드 정독' : lang === 'es' ? 'Leer Guía' : lang === 'pt' ? 'Ler Guia' : 'Read Guide'}
                     </span>
                     <ArrowRight className="w-3 h-3" />
                   </Link>
@@ -306,7 +318,7 @@ export default function GuideHubClient({
                   <Link
                     href={`/quiz/${guide.slug}`}
                     className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-purple-200 hover:bg-purple-50 text-purple-700 font-black text-xs transition-colors"
-                    title={lang === 'ko' ? '퀴즈 바로 풀기' : 'Play Quiz'}
+                    title={lang === 'ko' ? '퀴즈 바로 풀기' : lang === 'es' ? 'Jugar Quiz' : lang === 'pt' ? 'Jogar Quiz' : 'Play Quiz'}
                   >
                     <Gamepad2 className="w-3.5 h-3.5" />
                     <span>{lang === 'ko' ? '퀴즈' : 'Quiz'}</span>
@@ -321,10 +333,22 @@ export default function GuideHubClient({
           <div className="bg-white rounded-3xl p-12 text-center border-2 border-dashed border-slate-200">
             <BookOpen className="w-12 h-12 text-slate-300 mx-auto mb-3" />
             <h4 className="font-bold text-slate-800 text-sm mb-1">
-              {lang === 'ko' ? '일치하는 가이드가 없습니다' : 'No matching guides found'}
+              {lang === 'ko'
+                ? '일치하는 가이드가 없습니다'
+                : lang === 'es'
+                ? 'No se encontraron guías coincidentes'
+                : lang === 'pt'
+                ? 'Nenhum guia correspondente encontrado'
+                : 'No matching guides found'}
             </h4>
             <p className="text-xs text-slate-500 mb-4">
-              {lang === 'ko' ? '다른 검색어를 입력해보세요.' : 'Try a different search keyword.'}
+              {lang === 'ko'
+                ? '다른 검색어를 입력해보세요.'
+                : lang === 'es'
+                ? 'Prueba con otra palabra clave.'
+                : lang === 'pt'
+                ? 'Tente outra palavra-chave.'
+                : 'Try a different search keyword.'}
             </p>
             <button
               onClick={() => {
@@ -333,7 +357,7 @@ export default function GuideHubClient({
               }}
               className="px-4 py-2 rounded-xl bg-purple-600 text-white text-xs font-bold"
             >
-              {lang === 'ko' ? '초기화' : 'Reset'}
+              {t.resetFilters}
             </button>
           </div>
         )}
@@ -344,13 +368,21 @@ export default function GuideHubClient({
         <div className="rounded-3xl bg-white border border-purple-100 p-8 sm:p-10 shadow-xs">
           <div className="max-w-3xl">
             <span className="text-[11px] font-black uppercase tracking-wider text-purple-600 mb-2 block">
-              Programmatic Knowledge Base
+              {lang === 'ko'
+                ? '체계적인 K-컬처 지식 백과'
+                : lang === 'es'
+                ? 'Base de Conocimiento Verificada'
+                : lang === 'pt'
+                ? 'Base de Conhecimento Verificada'
+                : 'Programmatic Knowledge Base'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
               {lang === 'ko'
                 ? '왜 K-Pulse 지식 가이드인가요?'
                 : lang === 'es'
                 ? '¿Por qué estudiar con las guías de K-Pulse?'
+                : lang === 'pt'
+                ? 'Por que estudar com os guias do K-Pulse?'
                 : 'Why Study With K-Pulse Lore Guides?'}
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium mb-6">
@@ -358,6 +390,8 @@ export default function GuideHubClient({
                 ? '인터넷에 흩어져 있는 K-Pop 정보와 한국 문화 상식을 철저하게 팩트체크하여 체계적인 질문-답변 및 심층 비하인드로 정리했습니다. 글로벌 팬들이 가장 궁금해하는 공식 기록부터 식사 에티켓까지 한 곳에서 마스터하세요.'
                 : lang === 'es'
                 ? 'Reunimos información verificada de K-Pop y cultura coreana en un formato claro de preguntas y respuestas con explicaciones y curiosidades. ¡Todo lo que necesitas saber antes de viajar a Corea o unirte a un fandom!'
+                : lang === 'pt'
+                ? 'Reunimos informações verificadas sobre K-Pop e cultura coreana em um formato claro de perguntas e respostas com explicações e curiosidades.'
                 : 'We compiled verified facts, debut histories, culinary science, and everyday etiquette into structured Q&A knowledge bases with cultural context. Master the lore before testing yourself in the quizzes!'}
             </p>
           </div>
@@ -366,11 +400,21 @@ export default function GuideHubClient({
             <div className="p-4 rounded-2xl bg-purple-50/60 border border-purple-100">
               <CheckCircle2 className="w-5 h-5 text-purple-600 mb-2" />
               <h4 className="font-extrabold text-xs sm:text-sm text-slate-900 mb-1">
-                {lang === 'ko' ? '100% 검증된 팩트체크' : '100% Fact-Checked'}
+                {lang === 'ko'
+                  ? '100% 검증된 팩트체크'
+                  : lang === 'es'
+                  ? '100% Datos Verificados'
+                  : lang === 'pt'
+                  ? '100% Fatos Verificados'
+                  : '100% Fact-Checked'}
               </h4>
               <p className="text-[11px] text-slate-600 leading-relaxed">
                 {lang === 'ko'
                   ? '공식 앨범 기록, 공신력 있는 기관 자료, 공식 인터뷰를 기반으로 작성되었습니다.'
+                  : lang === 'es'
+                  ? 'Basado en récords musicales oficiales, declaraciones de agencias e historia cultural auténtica.'
+                  : lang === 'pt'
+                  ? 'Baseado em recordes musicais oficiais, declarações de agências e história cultural autêntica.'
                   : 'Based on official music records, verified agency statements, and authentic cultural history.'}
               </p>
             </div>
@@ -378,11 +422,21 @@ export default function GuideHubClient({
             <div className="p-4 rounded-2xl bg-pink-50/60 border border-pink-100">
               <Sparkles className="w-5 h-5 text-pink-600 mb-2" />
               <h4 className="font-extrabold text-xs sm:text-sm text-slate-900 mb-1">
-                {lang === 'ko' ? '팬덤 비하인드 & 꿀팁' : 'Fandom Lore & Inside Jokes'}
+                {lang === 'ko'
+                  ? '팬덤 비하인드 & 꿀팁'
+                  : lang === 'es'
+                  ? 'Lore y Curiosidades del Fandom'
+                  : lang === 'pt'
+                  ? 'Lore e Curiosidades do Fandom'
+                  : 'Fandom Lore & Inside Jokes'}
               </h4>
               <p className="text-[11px] text-slate-600 leading-relaxed">
                 {lang === 'ko'
                   ? '단순 정답뿐 아니라 팬들 사이에서 사랑받는 명대사와 비하인드 스토리를 담았습니다.'
+                  : lang === 'es'
+                  ? 'Más allá de los datos básicos, descubre bromas internas, memes e historias detrás de cámaras.'
+                  : lang === 'pt'
+                  ? 'Além dos fatos básicos, descubra piadas internas icônicas, memes e histórias de bastidores.'
                   : 'Beyond standard facts, discover iconic inside jokes, memes, and backstage stories.'}
               </p>
             </div>
@@ -390,11 +444,21 @@ export default function GuideHubClient({
             <div className="p-4 rounded-2xl bg-indigo-50/60 border border-indigo-100">
               <Award className="w-5 h-5 text-indigo-600 mb-2" />
               <h4 className="font-extrabold text-xs sm:text-sm text-slate-900 mb-1">
-                {lang === 'ko' ? '퀴즈 100점 지름길' : 'Fast-Track to 100% Score'}
+                {lang === 'ko'
+                  ? '퀴즈 100점 지름길'
+                  : lang === 'es'
+                  ? 'Camino Rápido al 100%'
+                  : lang === 'pt'
+                  ? 'Caminho Rápido para 100%'
+                  : 'Fast-Track to 100% Score'}
               </h4>
               <p className="text-[11px] text-slate-600 leading-relaxed">
                 {lang === 'ko'
                   ? '가이드를 1회 완독하면 해당 주제의 퀴즈에서 최고 등급 티어를 획득할 수 있습니다.'
+                  : lang === 'es'
+                  ? 'Repasa las guías de lore para dominar el desafío de trivia y desbloquear el rango más alto.'
+                  : lang === 'pt'
+                  ? 'Revise os guias de lore para dominar o desafio de trivia e desbloquear o nível mais alto.'
                   : 'Review the lore guides to ace the trivia challenge and unlock the top player tier.'}
               </p>
             </div>
@@ -409,11 +473,21 @@ export default function GuideHubClient({
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-6">
               <div>
                 <span className="text-[11px] font-black uppercase tracking-wider text-purple-700">
-                  {lang === 'ko' ? '성향 분석 챌린지' : 'Personality Match Tests'}
+                  {lang === 'ko'
+                    ? '성향 분석 챌린지'
+                    : lang === 'es'
+                    ? 'Tests de Personalidad'
+                    : lang === 'pt'
+                    ? 'Testes de Personalidade'
+                    : 'Personality Match Tests'}
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-slate-900 mt-1">
                   {lang === 'ko'
                     ? '지식도 쌓고, 나와 찰떡인 최애 멤버도 찾아보세요!'
+                    : lang === 'es'
+                    ? '¡Descubre tu alma gemela de K-Pop y Comida Coreana!'
+                    : lang === 'pt'
+                    ? 'Descubra sua alma gêmea de K-Pop e Comida Coreana!'
                     : 'Discover Your K-Pop & K-Food Twin!'}
                 </h3>
               </div>
@@ -421,7 +495,15 @@ export default function GuideHubClient({
                 href="/"
                 className="text-xs font-black text-purple-700 hover:text-purple-800 flex items-center gap-1 shrink-0"
               >
-                <span>{lang === 'ko' ? '전체 테스트 보기' : 'Explore All Tests'}</span>
+                <span>
+                  {lang === 'ko'
+                    ? '전체 테스트 보기'
+                    : lang === 'es'
+                    ? 'Explorar Todos los Tests'
+                    : lang === 'pt'
+                    ? 'Explorar Todos os Testes'
+                    : 'Explore All Tests'}
+                </span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
@@ -440,7 +522,7 @@ export default function GuideHubClient({
                     </span>
                     <div className="min-w-0">
                       <div className="text-[10px] font-black text-pink-600 uppercase">
-                        {quiz.tag || quiz.category}
+                        {quiz.tag ? (t.tags[quiz.tag] || quiz.tag) : (t.categories[quiz.category] || quiz.category)}
                       </div>
                       <div className="text-xs font-black text-slate-900 group-hover:text-purple-600 transition-colors truncate">
                         {pTitle}

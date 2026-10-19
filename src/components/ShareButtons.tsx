@@ -5,6 +5,7 @@ import { Share2, Check, Copy, Swords, User, Camera, Loader2 } from 'lucide-react
 import { useLanguage } from '@/context/LanguageContext';
 import { encodeChallenge } from '@/lib/challenge';
 import { downloadResultCard } from '@/lib/renderResultCard';
+import { trackShare, trackCardDownload } from '@/lib/analytics';
 
 interface ShareButtonsProps {
   quizTitle: string;
@@ -66,16 +67,21 @@ export default function ShareButtons({
   const isHigh = pct >= 70;
   const displayedPoints = totalPoints ?? score * 1000;
 
-  // Determine final share URL
+  // Determine final share URL (preserve sender's language when non-English)
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
+  const langQuery = lang !== 'en' ? `lang=${lang}` : '';
   let shareUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com');
   if (slug && questionIds && questionScores && questionIds.length === 5 && questionScores.length === 5) {
-    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
     const payload = encodeChallenge(slug, {
       q: questionIds,
       p: questionScores,
       n: nickname.trim(),
     });
-    shareUrl = `${origin}/quiz/${slug}?c=${payload}`;
+    shareUrl = `${origin}/quiz/${slug}?c=${payload}${langQuery ? `&${langQuery}` : ''}`;
+  } else if (slug) {
+    shareUrl = `${origin}/quiz/${slug}${langQuery ? `?${langQuery}` : ''}`;
+  } else if (langQuery && !shareUrl.includes('lang=')) {
+    shareUrl += `${shareUrl.includes('?') ? '&' : '?'}${langQuery}`;
   }
 
   // Dynamic quiz-specific hashtag
@@ -107,6 +113,12 @@ export default function ShareButtons({
       : isHigh
       ? `🔥 ${senderPrefix}¡Obtuve ${displayedPoints.toLocaleString()} pts (${score}/${totalQuestions} correctas) en "${quizTitle}"! ¿Puedes superarme? ⚔️`
       : `🐯 ${senderPrefix}¡Acabo de completar "${quizTitle}" en K-Pulse con ${displayedPoints.toLocaleString()} pts! ¿Crees que sabes más? 👀`;
+  } else if (lang === 'pt') {
+    viralHeadline = isPerfect
+      ? `🏆 ${senderPrefix}5.000 PONTOS PERFEITOS! Dominei "${quizTitle}" no K-Pulse com o título [${badgeTitle}]! 👑 Alguém consegue me vencer? ⚔️`
+      : isHigh
+      ? `🔥 ${senderPrefix}Fiz ${displayedPoints.toLocaleString()} pts (${score}/${totalQuestions} corretas) em "${quizTitle}"! Consegue me superar? ⚔️`
+      : `🐯 ${senderPrefix}Acabei de completar "${quizTitle}" no K-Pulse com ${displayedPoints.toLocaleString()} pts! Consegue bater minha pontuação? 👀`;
   } else {
     // Korean (ko)
     viralHeadline = isPerfect
@@ -121,6 +133,7 @@ export default function ShareButtons({
 
   // 1. Copy Challenge Message (Text + Link)
   const handleCopyChallenge = async () => {
+    trackShare({ slug, method: 'challenge_copy', lang });
     try {
       await navigator.clipboard.writeText(challengeMessage);
       setCopiedChallenge(true);
@@ -133,6 +146,7 @@ export default function ShareButtons({
 
   // 2. Copy Pure Link
   const handleCopyLink = async () => {
+    trackShare({ slug, method: 'link_copy', lang });
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopiedLink(true);
@@ -145,6 +159,7 @@ export default function ShareButtons({
 
   // 3. Native Web Share API
   const handleNativeShare = async () => {
+    trackShare({ slug, method: 'native_share', lang });
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
@@ -162,13 +177,16 @@ export default function ShareButtons({
 
   // 4. Download / Share High-Res Result Card PNG
   const handleDownloadCard = async () => {
+    if (slug) {
+      trackCardDownload({ slug, cardType: 'trivia', lang });
+    }
     try {
       setIsGeneratingCard(true);
       await downloadResultCard({
         type: 'trivia',
         quizTitle,
         slug,
-        lang: lang as 'en' | 'es' | 'ko',
+        lang,
         score,
         totalQuestions,
         totalPoints: displayedPoints,
@@ -223,6 +241,8 @@ export default function ShareButtons({
               ? '내 바이럴 도전 카드 미리보기'
               : lang === 'es'
               ? 'Vista previa de desafío viral'
+              : lang === 'pt'
+              ? 'Prévia do Desafio Viral'
               : 'Viral Challenge Preview'}
           </span>
         </div>
@@ -245,6 +265,8 @@ export default function ShareButtons({
                 ? '결과 카드 이미지 생성 중... 📸'
                 : lang === 'es'
                 ? 'Generando tarjeta de imagen... 📸'
+                : lang === 'pt'
+                ? 'Gerando cartão de imagem... 📸'
                 : 'Generating Result Card Image... 📸'}
             </span>
           </>
@@ -256,6 +278,8 @@ export default function ShareButtons({
                 ? '결과 카드 저장 완료! 인스타·X에 자랑해보세요 ✨'
                 : lang === 'es'
                 ? '¡Tarjeta guardada! ¡Compártela en Instagram y X! ✨'
+                : lang === 'pt'
+                ? 'Cartão salvo! Compartilhe no Instagram e X! ✨'
                 : 'Card Saved! Share on Instagram & X! ✨'}
             </span>
           </>
@@ -267,6 +291,8 @@ export default function ShareButtons({
                 ? '📸 결과 카드 이미지 저장 (인스타·X 자랑용)'
                 : lang === 'es'
                 ? '📸 Guardar Tarjeta de Resultado (PNG)'
+                : lang === 'pt'
+                ? '📸 Salvar Cartão de Resultado (PNG)'
                 : '📸 Save Result Card Image (PNG for Instagram & X)'}
             </span>
           </>
@@ -280,6 +306,7 @@ export default function ShareButtons({
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackShare({ slug, method: 'twitter', lang })}
           className="flex items-center justify-center gap-2.5 rounded-2xl bg-zinc-950 hover:bg-black text-white py-3.5 px-4 text-xs sm:text-sm font-black shadow-lg shadow-zinc-950/20 active:scale-95 transition-all group"
         >
           <svg className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
@@ -290,6 +317,8 @@ export default function ShareButtons({
               ? 'X (트위터)에 점수 자랑하기'
               : lang === 'es'
               ? 'Publicar puntuación en X'
+              : lang === 'pt'
+              ? 'Publicar pontuação no X'
               : 'Post Score to X (Twitter)'}
           </span>
         </a>

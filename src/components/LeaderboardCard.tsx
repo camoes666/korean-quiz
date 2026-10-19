@@ -21,7 +21,7 @@ const TOP_USERS: LeaderboardUser[] = [
 ];
 
 export default function LeaderboardCard() {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const { xp } = useGame();
 
   return (
@@ -37,6 +37,8 @@ export default function LeaderboardCard() {
                 ? '글로벌 명예의 전당'
                 : lang === 'es'
                 ? 'Salón de la Fama Global'
+                : lang === 'pt'
+                ? 'Hall da Fama Global'
                 : 'Global Hall of Fame'}
             </h3>
             <p className="text-[11px] text-slate-400 font-medium">
@@ -44,6 +46,8 @@ export default function LeaderboardCard() {
                 ? '시즌 1 명예의 전당 TOP 5 (시즌 2 오픈 예정)'
                 : lang === 'es'
                 ? 'Top 5 Temporada 1 (Temporada 2 Próximamente)'
+                : lang === 'pt'
+                ? 'Top 5 Temporada 1 (Temporada 2 em Breve)'
                 : 'Season 1 Top Challengers (Season 2 Coming Soon)'}
             </p>
           </div>
@@ -51,7 +55,13 @@ export default function LeaderboardCard() {
 
         <span className="flex items-center gap-1.5 text-[11px] font-black px-2.5 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200">
           <span>🏆</span>
-          <span>{lang === 'ko' ? '시즌 1' : lang === 'es' ? 'Temporada 1' : 'Season 1'}</span>
+          <span>
+            {lang === 'ko'
+              ? '시즌 1'
+              : lang === 'es' || lang === 'pt'
+              ? 'Temporada 1'
+              : 'Season 1'}
+          </span>
         </span>
       </div>
 
@@ -125,13 +135,13 @@ export default function LeaderboardCard() {
       {/* Your Rank Bar (Snackbar) */}
       <div className="rounded-xl border border-purple-200 bg-purple-50/80 p-3 flex items-center justify-between shadow-xs">
         <div className="flex items-center gap-2">
-          <span className="px-2 py-0.5 rounded-full bg-purple-600 text-white text-[10px] font-black tracking-wide">
-            YOU
+          <span className="px-2 py-0.5 rounded-full bg-purple-600 text-white text-[10px] font-black tracking-wide uppercase">
+            {t.challenge.you}
           </span>
           <span className="text-xs font-black text-purple-900">
             {lang === 'ko'
               ? '내 현재 순위: #42'
-              : lang === 'es'
+              : lang === 'es' || lang === 'pt'
               ? 'Tu Rango: #42'
               : 'Your Rank: #42'}
           </span>

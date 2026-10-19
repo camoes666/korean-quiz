@@ -1,18 +1,22 @@
-export type Language = 'en' | 'es' | 'ko' | 'ru' | 'zh';
+export type Language = 'en' | 'es' | 'ko' | 'pt' | 'ru' | 'zh';
 
 export interface TranslationDictionary {
   siteTitle: string;
   siteSubtitle: string;
   trending: string;
   surpriseMe: string;
+  selectLanguage: string;
   categories: Record<string, string>;
   tags: Record<string, string>;
+  difficulties: Record<string, string>;
   heroBadge: string;
   heroTitlePre: string;
   heroTitleHighlight: string;
   heroSubtitle: string;
   exploreQuizzes: string;
   playFeatured: string;
+  noQuizzesFound: string;
+  resetFilters: string;
   stats: {
     solved: string;
     countries: string;
@@ -47,6 +51,8 @@ export interface TranslationDictionary {
     lvl3Desc: string;
     allLevels: string;
     allLevelsDesc: string;
+    questionsInBank: string;
+    qsUnit: string;
   };
   quizIntro: {
     challenge: string;
@@ -93,6 +99,13 @@ export interface TranslationDictionary {
     challenger: string;
     you: string;
     totalScore: string;
+    resultCol: string;
+    roundWin: string;
+    roundLose: string;
+    roundTie: string;
+    friendChallengeBadge: string;
+    asyncMatchTitle: string;
+    asyncMatchDesc: string;
   };
   resultView: {
     officialResult: string;
@@ -125,6 +138,9 @@ export interface TranslationDictionary {
     desc: string;
     home: string;
     allQuizzes: string;
+    aboutUs: string;
+    privacyPolicy: string;
+    terms: string;
     rights: string;
     disclaimer: string;
   };
@@ -136,6 +152,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     siteSubtitle: '글로벌 K-컬처 & 상식 퀴즈',
     trending: '인기 급상승',
     surpriseMe: '랜덤 퀴즈',
+    selectLanguage: '언어 선택',
     categories: {
       All: '전체',
       Culture: '한국 문화',
@@ -160,6 +177,11 @@ export const translations: Record<Language, TranslationDictionary> = {
       Slang: 'MZ 신조어',
       'All Fandoms': 'K-Pop 올팬덤',
     },
+    difficulties: {
+      Easy: '쉬움',
+      Medium: '보통',
+      Hard: '어려움',
+    },
     heroBadge: '전 세계인을 위한 글로벌 K-컬처 & 상식 허브',
     heroTitlePre: '당신은 한국을',
     heroTitleHighlight: '얼마나 잘 알고 있나요?',
@@ -167,6 +189,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       '식사 예절과 일상 풍습부터 K-Pop 팬덤 역사, K-드라마의 명장면 클리셰, 한강 라면 라이프스타일까지! 퀴즈를 풀고 내 랭킹 뱃지를 확인해보세요.',
     exploreQuizzes: '퀴즈 둘러보기',
     playFeatured: '추천 퀴즈 풀기',
+    noQuizzesFound: '조건에 맞는 퀴즈가 없습니다.',
+    resetFilters: '필터 초기화',
     stats: {
       solved: '누적 250,000+ 회 풀이',
       countries: '전 세계 140개국 유입',
@@ -213,6 +237,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       lvl3Desc: '성골 덕후만 아는 심층 비하인드',
       allLevels: '🎲 랜덤 믹스 (전체)',
       allLevelsDesc: '모든 난이도 무작위 출제',
+      questionsInBank: '문제 은행 총 {count}문항',
+      qsUnit: '문항',
     },
     quizIntro: {
       challenge: '도전 과제',
@@ -259,6 +285,13 @@ export const translations: Record<Language, TranslationDictionary> = {
       challenger: '도전자',
       you: '나',
       totalScore: '총점',
+      resultCol: '결과',
+      roundWin: '승',
+      roundLose: '패',
+      roundTie: '무',
+      friendChallengeBadge: '1:1 친구 대결',
+      asyncMatchTitle: '⚔️ {name}님과의 1:1 비동기 대결',
+      asyncMatchDesc: '도전자와 동일한 5문제, 동일한 출제 순서로 진행됩니다. 빠른 번개손으로 최고 점수에 도전하세요!',
     },
     resultView: {
       officialResult: '공식 퀴즈 결과서',
@@ -291,6 +324,9 @@ export const translations: Record<Language, TranslationDictionary> = {
       desc: '전 세계 한류 팬과 한국 문화 애호가를 위한 인터랙티브 퀴즈 플랫폼입니다.',
       home: '홈',
       allQuizzes: '전체 퀴즈',
+      aboutUs: '소개',
+      privacyPolicy: '개인정보처리방침',
+      terms: '이용약관',
       rights: '모든 권리 보유.',
       disclaimer: '알림: 본 사이트는 문화 상식 팬 플랫폼이며 특정 연예 기획사와 제휴되어 있지 않습니다.',
     },
@@ -301,6 +337,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     siteSubtitle: 'Global K-Culture & Trivia',
     trending: 'Trending',
     surpriseMe: 'Surprise Me',
+    selectLanguage: 'Select Language',
     categories: {
       All: 'All',
       Culture: 'Culture',
@@ -325,6 +362,11 @@ export const translations: Record<Language, TranslationDictionary> = {
       Slang: 'Slang & Memes',
       'All Fandoms': 'All Fandoms',
     },
+    difficulties: {
+      Easy: 'Easy',
+      Medium: 'Medium',
+      Hard: 'Hard',
+    },
     heroBadge: 'The #1 Global Hub for K-Culture & Trivia',
     heroTitlePre: 'How Well Do You',
     heroTitleHighlight: 'Really Know Korea?',
@@ -332,6 +374,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       'Test your knowledge on Korean dining etiquette, iconic K-Pop lore, secret K-Drama tropes, and Seoul street culture. Complete tests, get your rank badge, and challenge your friends!',
     exploreQuizzes: 'Explore Quizzes',
     playFeatured: 'Play Featured Quiz',
+    noQuizzesFound: 'No quizzes found for this filter.',
+    resetFilters: 'Reset Filters',
     stats: {
       solved: '250,000+ Quizzes Solved',
       countries: '140+ Countries',
@@ -378,6 +422,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       lvl3Desc: 'Deep lore & insider trivia',
       allLevels: '🎲 Mixed (All Tiers)',
       allLevelsDesc: 'Random pool across all difficulty tiers',
+      questionsInBank: '{count} Questions in Bank',
+      qsUnit: 'Qs',
     },
     quizIntro: {
       challenge: 'Challenge',
@@ -424,6 +470,13 @@ export const translations: Record<Language, TranslationDictionary> = {
       challenger: 'Challenger',
       you: 'You',
       totalScore: 'Total Score',
+      resultCol: 'Result',
+      roundWin: 'WIN',
+      roundLose: 'LOSE',
+      roundTie: 'TIE',
+      friendChallengeBadge: '1:1 FRIEND CHALLENGE',
+      asyncMatchTitle: '⚔️ 1:1 Match vs {name}',
+      asyncMatchDesc: 'You will play the exact same 5 questions in the same order as the challenger. Answer fast to beat their score!',
     },
     resultView: {
       officialResult: 'Official Quiz Result',
@@ -456,6 +509,9 @@ export const translations: Record<Language, TranslationDictionary> = {
       desc: 'A fan-crafted interactive knowledge platform celebrating Korean culture, entertainment, cuisine, and language for worldwide fans.',
       home: 'Home',
       allQuizzes: 'All Quizzes',
+      aboutUs: 'About Us',
+      privacyPolicy: 'Privacy Policy',
+      terms: 'Terms',
       rights: 'All rights reserved.',
       disclaimer: 'Disclaimer: Fan-made cultural trivia platform. Not endorsed or affiliated with any entertainment agency.',
     },
@@ -466,6 +522,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     siteSubtitle: 'Cultura Coreana y Trivia Global',
     trending: 'Tendencias',
     surpriseMe: 'Quiz Aleatorio',
+    selectLanguage: 'Seleccionar Idioma',
     categories: {
       All: 'Todos',
       Culture: 'Cultura',
@@ -490,6 +547,11 @@ export const translations: Record<Language, TranslationDictionary> = {
       Slang: 'Jerga y Memes',
       'All Fandoms': 'Todos los Fandoms',
     },
+    difficulties: {
+      Easy: 'Fácil',
+      Medium: 'Medio',
+      Hard: 'Difícil',
+    },
     heroBadge: 'El Centro Global #1 de Cultura Coreana y Trivia',
     heroTitlePre: '¿Qué tan bien conoces',
     heroTitleHighlight: 'realmente a Corea?',
@@ -497,6 +559,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       'Pon a prueba tus conocimientos sobre etiqueta en la mesa, historia del K-Pop, tropos de K-Dramas y la vida en Seúl. ¡Obtén tu insignia y reta a tus amigos!',
     exploreQuizzes: 'Explorar Quizzes',
     playFeatured: 'Quiz Destacado',
+    noQuizzesFound: 'No se encontraron quizzes para este filtro.',
+    resetFilters: 'Restablecer Filtros',
     stats: {
       solved: 'Más de 250,000+ quizzes resueltos',
       countries: '140+ países participantes',
@@ -511,7 +575,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     estTime: 'Tiempo Est.',
     plays: 'jugados',
     mins: 'min',
-    hotBadge: 'HOT',
+    hotBadge: 'TOP',
     startChallenge: 'Comenzar Quiz',
     whySectionTitle: '¿Por qué aprender cultura coreana con quizzes?',
     whySectionDesc: 'Profundiza tu aprecio cultural con historias y datos reales más allá de los dramas.',
@@ -543,6 +607,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       lvl3Desc: 'Trivia avanzada e historia profunda',
       allLevels: '🎲 Mezcla (Todos)',
       allLevelsDesc: 'Preguntas aleatorias de todos los niveles',
+      questionsInBank: '{count} Preguntas en el Banco',
+      qsUnit: 'Pregs.',
     },
     quizIntro: {
       challenge: 'Reto',
@@ -589,6 +655,13 @@ export const translations: Record<Language, TranslationDictionary> = {
       challenger: 'Retador',
       you: 'Tú',
       totalScore: 'Puntuación Total',
+      resultCol: 'Resultado',
+      roundWin: 'GANASTE',
+      roundLose: 'PERDISTE',
+      roundTie: 'EMPATE',
+      friendChallengeBadge: 'DESAFÍO 1:1 DE AMIGOS',
+      asyncMatchTitle: '⚔️ Duelo 1:1 contra {name}',
+      asyncMatchDesc: 'Jugarás exactamente las mismas 5 preguntas y en el mismo orden que tu retador. ¡Responde rápido para superar su récord!',
     },
     resultView: {
       officialResult: 'Resultado Oficial del Quiz',
@@ -621,8 +694,196 @@ export const translations: Record<Language, TranslationDictionary> = {
       desc: 'Plataforma interactiva hecha por fans para admiradores de la cultura, música y gastronomía coreana en todo el mundo.',
       home: 'Inicio',
       allQuizzes: 'Todos los Quizzes',
+      aboutUs: 'Sobre Nosotros',
+      privacyPolicy: 'Política de Privacidad',
+      terms: 'Términos',
       rights: 'Todos los derechos reservados.',
       disclaimer: 'Aviso: Plataforma fan-made de trivia cultural. No afiliada a ninguna agencia de entretenimiento.',
+    },
+  },
+
+  pt: {
+    siteTitle: 'K-Pulse',
+    siteSubtitle: 'Cultura Coreana e Quiz Global',
+    trending: 'Em Alta',
+    surpriseMe: 'Quiz Aleatório',
+    selectLanguage: 'Selecionar Idioma',
+    categories: {
+      All: 'Todos',
+      Culture: 'Cultura',
+      'K-Pop': 'K-Pop',
+      'K-Drama': 'K-Dramas',
+      Food: 'Gastronomia K-Food',
+      Language: 'Coreano Real',
+      Lifestyle: 'Estilo de Vida',
+    },
+    tags: {
+      All: 'Todos',
+      BTS: 'BTS',
+      BLACKPINK: 'BLACKPINK',
+      NewJeans: 'NewJeans',
+      'Stray Kids': 'Stray Kids',
+      SEVENTEEN: 'SEVENTEEN',
+      'Squid Game': 'Round 6',
+      'Queen of Tears': 'Rainha das Lágrimas',
+      'Street Food': 'Comida de Rua',
+      'Spicy Level': 'Nível de Pimenta',
+      Etiquette: 'Etiqueta',
+      Slang: 'Gírias e Memes',
+      'All Fandoms': 'Todos os Fandoms',
+    },
+    difficulties: {
+      Easy: 'Fácil',
+      Medium: 'Médio',
+      Hard: 'Difícil',
+    },
+    heroBadge: 'O Hub Global #1 de Cultura Coreana e Quizzes',
+    heroTitlePre: 'O quanto você realmente',
+    heroTitleHighlight: 'conhece a Coreia?',
+    heroSubtitle:
+      'Teste seus conhecimentos sobre etiqueta à mesa, história do K-Pop, clichês de K-Dramas e a vida em Seul. Conquiste sua insígnia e desafie seus amigos!',
+    exploreQuizzes: 'Explorar Quizzes',
+    playFeatured: 'Quiz em Destaque',
+    noQuizzesFound: 'Nenhum quiz encontrado para este filtro.',
+    resetFilters: 'Limpar Filtros',
+    stats: {
+      solved: 'Mais de 250.000+ quizzes resolvidos',
+      countries: '140+ países participantes',
+      free: '100% Grátis Sempre',
+    },
+    trendingTitle: 'Quizzes Populares 🔥',
+    trendingDesc: 'Escolha uma categoria, grupo ou dorama para começar seu desafio',
+    filterByTag: 'Filtrar por tema:',
+    allTags: 'Ver Tudo',
+    difficulty: 'Dificuldade',
+    questionsCount: 'Perguntas',
+    estTime: 'Tempo Est.',
+    plays: 'jogados',
+    mins: 'min',
+    hotBadge: 'TOP',
+    startChallenge: 'Começar Quiz',
+    whySectionTitle: 'Por que aprender cultura coreana com quizzes?',
+    whySectionDesc: 'Aprofunde sua apreciação cultural com histórias e fatos reais além dos doramas.',
+    whyCards: [
+      {
+        emoji: '🥢',
+        title: 'Autêntica Etiqueta à Mesa',
+        desc: 'Descubra por que nunca se espetam os hashis verticalmente no arroz e como brindar com respeito aos mais velhos.',
+      },
+      {
+        emoji: '💜',
+        title: 'História e Fandoms do K-Pop',
+        desc: 'Conheça os significados secretos dos lightsticks, piadas internas de fandom e recordes históricos mundiais.',
+      },
+      {
+        emoji: '🍜',
+        title: 'Estilo de Vida em Seul',
+        desc: 'Das máquinas de lámen às margens do Rio Han ao acolhedor conceito coreano de "Jeong" (정).',
+      },
+    ],
+    levels: {
+      selectTitle: 'Selecione o Nível de Dificuldade',
+      selectDesc: 'Escolha seu nível de perguntas (Banco de Perguntas)',
+      lvl1: '🌱 Lv.1 Iniciante (Fácil)',
+      lvl1Desc: 'Conhecimentos essenciais e populares',
+      lvl2: '⭐ Lv.2 Fã (Médio)',
+      lvl2Desc: 'Detalhes que todo fã verdadeiro sabe',
+      lvl3: '🔥 Lv.3 Especialista (Difícil)',
+      lvl3Desc: 'Curiosidades avançadas e história profunda',
+      allLevels: '🎲 Mistura (Todos)',
+      allLevelsDesc: 'Perguntas aleatórias de todos os níveis',
+      questionsInBank: '{count} Perguntas no Banco',
+      qsUnit: 'Pergs.',
+    },
+    quizIntro: {
+      challenge: 'Desafio',
+      questions: 'Perguntas',
+      estTime: 'Tempo',
+      difficulty: 'Dificuldade',
+      startNow: 'Começar neste Nível',
+    },
+    quizRunner: {
+      question: 'Pergunta',
+      of: 'de',
+      score: 'Pontos',
+      pts: 'pts',
+      selectPrompt: 'Selecione uma opção para continuar',
+      readyPrompt: 'Clique em "Verificar" ou pressione Enter',
+      continuePrompt: 'Pressione "Continuar" ou Enter para a próxima pergunta',
+      checkAnswer: 'Verificar Resposta',
+      continue: 'Continuar',
+      viewMyScore: 'Ver Minha Pontuação',
+      correct: 'Resposta Correta! 🎉',
+      incorrect: 'Incorreto! 😅',
+      funLore: 'Curiosidade:',
+      earnedPoints: '+{pts} pts',
+    },
+    challenge: {
+      bannerTitle: '⚔️ {name} desafiou você! Pontuação: {score} pts. Consegue vencer?',
+      bannerError: 'O link do desafio é inválido ou expirou. Iniciando no modo normal.',
+      defaultFriend: 'Um amigo',
+      startBattle: 'Aceitar desafio e começar ⚔️',
+      ahead: '+{diff} à frente',
+      behind: '-{diff} atrás',
+      tied: 'Empate',
+      vsTitle: '⚔️ Resultado do Duelo 1:1',
+      win: 'VITÓRIA! 🏆',
+      lose: 'DERROTA... 💔',
+      draw: 'EMPATE 🤝',
+      counterChallenge: 'Enviar contra-desafio ⚔️',
+      rematchNormal: 'Jogar novamente no modo normal 🔄',
+      nicknameLabel: 'Seu apelido para o desafio',
+      nicknamePlaceholder: 'Digite seu apelido (máx 12 caracteres)',
+      copyChallengeBtn: 'Copiar desafio para amigos ⚔️',
+      copiedNotice: '✓ Link de desafio copiado!',
+      round: 'P',
+      challenger: 'Desafiante',
+      you: 'Você',
+      totalScore: 'Pontuação Total',
+      resultCol: 'Resultado',
+      roundWin: 'VITÓRIA',
+      roundLose: 'DERROTA',
+      roundTie: 'EMPATE',
+      friendChallengeBadge: 'DESAFIO 1:1 DE AMIGOS',
+      asyncMatchTitle: '⚔️ Duelo 1:1 contra {name}',
+      asyncMatchDesc: 'Você jogará exatamente as mesmas 5 perguntas e na mesma ordem do desafiante. Responda rápido para bater o recorde!',
+    },
+    resultView: {
+      officialResult: 'Resultado Oficial do Quiz',
+      tier: 'Nível',
+      scoreOutOf: '{score} / {max} pts',
+      correctCount: '{correct} de {total} corretas ({pct}%)',
+      shareTitle: 'Compartilhe seu resultado e desafie seus amigos!',
+      share: 'Compartilhar',
+      postX: 'Postar no X',
+      reddit: 'Compartilhar no Reddit',
+      copyLink: 'Copiar Link',
+      copied: 'Copiado!',
+      retake: 'Repetir este quiz',
+      keepPlaying: 'Próximo Desafio Recomendado 🔥',
+      nextChallengeBadge: 'PRÓXIMO DESAFIO (+30 XP BÔNUS)',
+      streakKeep: 'Mantenha a ofensiva viva! 🔥',
+      playNextQuiz: 'Jogar Próximo Quiz Agora',
+      randomQuiz: 'Quiz Surpresa 🎲',
+      backToHome: 'Voltar ao Início',
+      levelUpNudge: 'Apenas {xp} XP para subir de nível! Jogue mais 1!',
+    },
+    ads: {
+      sponsored: 'Anúncio Patrocinado',
+      adSenseSlot: 'Espaço Google AdSense',
+      placeholderLeaderboard: 'Banner / Leaderboard responsivo',
+      placeholderRectangle: 'Retângulo 300x250',
+    },
+    footer: {
+      tagline: '| Descubra a Coreia através de Quizzes',
+      desc: 'Plataforma interativa feita por fãs para admiradores da cultura, música e gastronomia coreana em todo o mundo.',
+      home: 'Início',
+      allQuizzes: 'Todos os Quizzes',
+      aboutUs: 'Sobre Nós',
+      privacyPolicy: 'Política de Privacidade',
+      terms: 'Termos',
+      rights: 'Todos os direitos reservados.',
+      disclaimer: 'Aviso: Plataforma fan-made de curiosidades culturais. Não afiliada a nenhuma agência de entretenimento.',
     },
   },
 
@@ -631,6 +892,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     siteSubtitle: 'Глобальная викторина о Корее и K-Culture',
     trending: 'В тренде',
     surpriseMe: 'Случайный тест',
+    selectLanguage: 'Выбрать язык',
     categories: {
       All: 'Все',
       Culture: 'Культура',
@@ -653,6 +915,12 @@ export const translations: Record<Language, TranslationDictionary> = {
       'Spicy Level': 'Острота',
       Etiquette: 'Этикет',
       Slang: 'Сленг и мемы',
+      'All Fandoms': 'Все фандомы',
+    },
+    difficulties: {
+      Easy: 'Легко',
+      Medium: 'Средне',
+      Hard: 'Сложно',
     },
     heroBadge: 'Главный мировой хаб викторин о Корее и K-Pop',
     heroTitlePre: 'Насколько хорошо вы',
@@ -661,6 +929,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       'Проверьте свои знания столового этикета, истории K-Pop айдолов, романтических клише дорам и жизни в Сеуле. Получите значок и поделитесь с друзьями!',
     exploreQuizzes: 'Все викторины',
     playFeatured: 'Рекомендуемый тест',
+    noQuizzesFound: 'Тесты по этому фильтру не найдены.',
+    resetFilters: 'Сбросить фильтры',
     stats: {
       solved: 'Более 250,000+ прохождений',
       countries: 'Участники из 140+ стран',
@@ -707,6 +977,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       lvl3Desc: 'Глубокая история и редкие детали',
       allLevels: '🎲 Микс (Все уровни)',
       allLevelsDesc: 'Случайные вопросы всех сложностей',
+      questionsInBank: '{count} вопросов в банке',
+      qsUnit: 'вопр.',
     },
     quizIntro: {
       challenge: 'Испытание',
@@ -753,6 +1025,13 @@ export const translations: Record<Language, TranslationDictionary> = {
       challenger: 'Соперник',
       you: 'Вы',
       totalScore: 'Итоговый счёт',
+      resultCol: 'Итог',
+      roundWin: 'ПОБЕДА',
+      roundLose: 'ПОРАЖ.',
+      roundTie: 'НИЧЬЯ',
+      friendChallengeBadge: 'ДУЭЛЬ 1 НА 1',
+      asyncMatchTitle: '⚔️ Дуэль 1 на 1 против {name}',
+      asyncMatchDesc: 'Вы ответите на те же 5 вопросов в том же порядке, что и соперник. Отвечайте быстро, чтобы победить!',
     },
     resultView: {
       officialResult: 'Официальный результат викторины',
@@ -785,6 +1064,9 @@ export const translations: Record<Language, TranslationDictionary> = {
       desc: 'Интерактивная платформа для поклонников корейской культуры, музыки и дорам со всего мира.',
       home: 'Главная',
       allQuizzes: 'Все тесты',
+      aboutUs: 'О нас',
+      privacyPolicy: 'Конфиденциальность',
+      terms: 'Условия',
       rights: 'Все права защищены.',
       disclaimer: 'Дисклеймер: Фанатская платформа. Не связана ни с какими развлекательными агентствами.',
     },
@@ -795,6 +1077,7 @@ export const translations: Record<Language, TranslationDictionary> = {
     siteSubtitle: '全球韩国文化与K-Pop趣味测验',
     trending: '热门推荐',
     surpriseMe: '随机测验',
+    selectLanguage: '选择语言',
     categories: {
       All: '全部',
       Culture: '韩国文化',
@@ -817,6 +1100,12 @@ export const translations: Record<Language, TranslationDictionary> = {
       'Spicy Level': '吃辣挑战',
       Etiquette: '餐桌礼仪',
       Slang: '流行网络用语',
+      'All Fandoms': '全部粉丝圈',
+    },
+    difficulties: {
+      Easy: '简单',
+      Medium: '中等',
+      Hard: '困难',
     },
     heroBadge: '全球首选韩国文化与流行趣味测验平台',
     heroTitlePre: '你对韩国的了解',
@@ -825,6 +1114,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       '从餐桌礼仪与日常生活风俗，到K-Pop偶像幕后历史、韩剧心动套路与汉江泡面文化！立即测验，领取你的专属成就徽章，向好友发起挑战！',
     exploreQuizzes: '浏览全部测验',
     playFeatured: '体验精选测验',
+    noQuizzesFound: '未找到符合该筛选条件的测验。',
+    resetFilters: '重置筛选',
     stats: {
       solved: '累计解答 250,000+ 次',
       countries: '全球 140+ 国家用户参与',
@@ -871,6 +1162,8 @@ export const translations: Record<Language, TranslationDictionary> = {
       lvl3Desc: '资深老粉才懂的幕后冷知识',
       allLevels: '🎲 全难度随机混搭',
       allLevelsDesc: '全难度题库无规则随机出题',
+      questionsInBank: '题库共 {count} 题',
+      qsUnit: '题',
     },
     quizIntro: {
       challenge: '挑战项目',
@@ -917,6 +1210,13 @@ export const translations: Record<Language, TranslationDictionary> = {
       challenger: '挑战者',
       you: '我',
       totalScore: '总分',
+      resultCol: '结果',
+      roundWin: '胜',
+      roundLose: '负',
+      roundTie: '平',
+      friendChallengeBadge: '1对1 好友挑战',
+      asyncMatchTitle: '⚔️ 与 {name} 的 1对1 对决',
+      asyncMatchDesc: '你将以相同的顺序挑战完全相同的 5 道题。快速作答以超越对手的分数吧！',
     },
     resultView: {
       officialResult: '官方测验成绩单',
@@ -949,6 +1249,9 @@ export const translations: Record<Language, TranslationDictionary> = {
       desc: '专为全球韩流粉丝与文化爱好者打造的互动式知识测验平台。',
       home: '首页',
       allQuizzes: '全部测验',
+      aboutUs: '关于我们',
+      privacyPolicy: '隐私政策',
+      terms: '服务条款',
       rights: '版权所有。',
       disclaimer: '声明：本平台为粉丝文化知识分享网站，与任何特定娱乐经纪公司均无隶属关系。',
     },

@@ -6,17 +6,19 @@ export interface LevelInfo {
   level: number;
   title: string;
   titleKo: string;
+  titleEs: string;
+  titlePt?: string;
   minXP: number;
   nextXP: number;
   badgeEmoji: string;
 }
 
 export const LEVELS: LevelInfo[] = [
-  { level: 1, title: 'Trainee', titleKo: '루키 연습생', minXP: 0, nextXP: 100, badgeEmoji: '🌱' },
-  { level: 2, title: 'Debut Stage', titleKo: '데뷔 무대', minXP: 100, nextXP: 250, badgeEmoji: '🎤' },
-  { level: 3, title: 'Rising Star', titleKo: '라이징 스타', minXP: 250, nextXP: 500, badgeEmoji: '⭐' },
-  { level: 4, title: 'Hallyu Icon', titleKo: '한류 아이콘', minXP: 500, nextXP: 1000, badgeEmoji: '🔥' },
-  { level: 5, title: 'Global Legend', titleKo: '월드 레전드', minXP: 1000, nextXP: 2000, badgeEmoji: '👑' },
+  { level: 1, title: 'Trainee', titleKo: '루키 연습생', titleEs: 'Aprendiz (Trainee)', titlePt: 'Trainee', minXP: 0, nextXP: 100, badgeEmoji: '🌱' },
+  { level: 2, title: 'Debut Stage', titleKo: '데뷔 무대', titleEs: 'Escenario Debut', titlePt: 'Palco de Debut', minXP: 100, nextXP: 250, badgeEmoji: '🎤' },
+  { level: 3, title: 'Rising Star', titleKo: '라이징 스타', titleEs: 'Estrella en Ascenso', titlePt: 'Estrela em Ascensão', minXP: 250, nextXP: 500, badgeEmoji: '⭐' },
+  { level: 4, title: 'Hallyu Icon', titleKo: '한류 아이콘', titleEs: 'Icono Hallyu', titlePt: 'Ícone Hallyu', minXP: 500, nextXP: 1000, badgeEmoji: '🔥' },
+  { level: 5, title: 'Global Legend', titleKo: '월드 레전드', titleEs: 'Leyenda Global', titlePt: 'Lenda Global', minXP: 1000, nextXP: 2000, badgeEmoji: '👑' },
 ];
 
 interface GameContextType {

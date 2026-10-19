@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState } from 'react';
 import { Language, translations, TranslationDictionary } from '@/lib/translations';
+import { trackLanguageChange } from '@/lib/analytics';
 
 export interface LanguageOption {
   code: Language;
@@ -13,7 +14,11 @@ export const LANGUAGE_OPTIONS: LanguageOption[] = [
   { code: 'en', label: 'English', flag: '🇺🇸' },
   { code: 'es', label: 'Español', flag: '🇪🇸' },
   { code: 'ko', label: '한국어', flag: '🇰🇷' },
+  // To enable Portuguese in the language switcher once quiz JSON *Pt fields are populated, uncomment:
+  // { code: 'pt', label: 'Português', flag: '🇧🇷' },
 ];
+
+const ACTIVE_LANGUAGE_CODES = new Set<Language>(LANGUAGE_OPTIONS.map((opt) => opt.code));
 
 interface LanguageContextType {
   lang: Language;
@@ -28,7 +33,7 @@ function resolveInitialLanguage(): Language {
   if (typeof window === 'undefined') return 'en';
 
   try {
-    // 1. URL Query Param: ?lang=es / ?lang=ko / ?lang=en (최우선)
+    // 1. URL Query Param: ?lang=es / ?lang=ko / ?lang=en / ?lang=pt (최우선)
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang')?.toLowerCase() as Language;
     if (urlLang && translations[urlLang]) {
@@ -42,13 +47,13 @@ function resolveInitialLanguage(): Language {
       return saved;
     }
 
-    // 3. Browser Language Auto-Detection (영어 -> 스페인어 -> 한국어 순)
+    // 3. Browser Language Auto-Detection against active LANGUAGE_OPTIONS
     const browserLangs = navigator.languages || [navigator.language || ''];
     for (const bLang of browserLangs) {
-      const lower = (bLang || '').toLowerCase();
-      if (lower.startsWith('en')) return 'en';
-      if (lower.startsWith('es')) return 'es';
-      if (lower.startsWith('ko')) return 'ko';
+      const prefix = (bLang || '').toLowerCase().split('-')[0] as Language;
+      if (ACTIVE_LANGUAGE_CODES.has(prefix) && translations[prefix]) {
+        return prefix;
+      }
     }
   } catch {
     // Fallback safe
@@ -82,11 +87,25 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, [lang]);
 
   const setLang = (newLang: Language) => {
+    if (newLang !== lang) {
+      trackLanguageChange({ from: lang, to: newLang });
+    }
     setLangState(newLang);
     try {
       localStorage.setItem('kpulse_lang', newLang);
       if (typeof document !== 'undefined') {
         document.documentElement.lang = newLang;
+      }
+      if (typeof window !== 'undefined') {
+        const url = new URL(window.location.href);
+        if (url.searchParams.has('lang')) {
+          if (newLang === 'en') {
+            url.searchParams.delete('lang');
+          } else {
+            url.searchParams.set('lang', newLang);
+          }
+          window.history.replaceState({}, '', url.toString());
+        }
       }
     } catch {
       // safe

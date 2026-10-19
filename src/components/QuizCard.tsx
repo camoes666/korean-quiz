@@ -29,8 +29,8 @@ export default function QuizCard({ quiz }: QuizCardProps) {
     ? Object.keys(quiz.personalityResults || {}).length
     : new Set(quiz.questions.map((q) => q.level).filter(Boolean)).size;
   const depthLabel = isPersonality
-    ? lang === 'en' ? 'Results' : lang === 'es' ? 'Resultados' : '가지 결과'
-    : lang === 'en' ? 'Levels' : lang === 'es' ? 'Niveles' : '단계';
+    ? lang === 'en' ? 'Results' : lang === 'es' || lang === 'pt' ? 'Resultados' : '가지 결과'
+    : lang === 'en' ? 'Levels' : lang === 'es' ? 'Niveles' : lang === 'pt' ? 'Níveis' : '단계';
 
   return (
     <div
@@ -45,7 +45,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <div className="flex items-center gap-1.5 flex-wrap">
             {quiz.quizType === 'personality' ? (
               <span className="px-2.5 py-1 bg-amber-300 text-amber-950 font-black rounded-full text-xs tracking-wider uppercase shadow-xs">
-                🔮 {lang === 'en' ? 'Personality Test' : lang === 'es' ? 'Test de Personalidad' : '소울메이트 테스트'}
+                🔮 {lang === 'en' ? 'Personality Test' : lang === 'es' ? 'Test de Personalidad' : lang === 'pt' ? 'Teste de Personalidade' : '소울메이트 테스트'}
               </span>
             ) : (
               <span className="px-2.5 py-1 bg-white/95 backdrop-blur-md rounded-full text-xs font-black text-purple-700 tracking-wider uppercase shadow-xs">
@@ -75,11 +75,11 @@ export default function QuizCard({ quiz }: QuizCardProps) {
         <div className="flex items-center gap-2 z-10">
           {isNewQuiz(quiz) && (
             <span className="px-2 py-0.5 bg-black/40 backdrop-blur-md rounded-md text-[11px] font-bold text-amber-300">
-              ✨ {lang === 'en' ? 'New' : lang === 'es' ? 'Nuevo' : '신규'}
+              ✨ {lang === 'en' ? 'New' : lang === 'es' ? 'Nuevo' : lang === 'pt' ? 'Novo' : '신규'}
             </span>
           )}
           <span className="px-2 py-0.5 bg-white/20 backdrop-blur-md rounded-md text-[11px] font-bold text-white">
-            ✨ {mascot.badgeTitle}
+            ✨ {getLocalizedText(mascot, 'badgeTitle', lang)}
           </span>
         </div>
 
@@ -90,7 +90,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
         <div className="absolute right-1 -bottom-2 w-20 h-20 opacity-95 pointer-events-none select-none drop-shadow-md transition-transform group-hover:scale-110">
           <img
             src={mascot.avatarUrl}
-            alt={mascot.name}
+            alt={getLocalizedText(mascot, 'name', lang)}
             className="w-full h-full object-contain filter"
           />
         </div>
@@ -142,6 +142,8 @@ export default function QuizCard({ quiz }: QuizCardProps) {
                     ? 'Find Your Soulmate'
                     : lang === 'es'
                     ? 'Descubrir Mi Miembro'
+                    : lang === 'pt'
+                    ? 'Descobrir Meu Membro'
                     : '나의 멤버 찾기'
                   : t.startChallenge}
               </span>
@@ -152,7 +154,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
               <Link
                 href={`/guide/${quiz.slug}`}
                 className="py-3 px-3 rounded-xl border-2 border-purple-100 hover:border-purple-300 hover:bg-purple-50 text-purple-700 font-extrabold text-xs flex items-center justify-center transition-all shadow-2xs"
-                title={lang === 'ko' ? '지식 가이드 & 족보 보기' : lang === 'es' ? 'Ver Guía de Lore' : 'Read Lore Guide'}
+                title={lang === 'ko' ? '지식 가이드 & 족보 보기' : lang === 'es' ? 'Ver Guía de Lore' : lang === 'pt' ? 'Ver Guia de Lore' : 'Read Lore Guide'}
               >
                 <BookOpen className="w-4 h-4" />
               </Link>

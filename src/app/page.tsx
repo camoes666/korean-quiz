@@ -71,7 +71,7 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white font-black text-[11px] whitespace-nowrap shadow-sm shadow-purple-500/25 border border-white">
-                  {lang === 'en' ? 'Mascot Hobi 🐯' : lang === 'es' ? 'Mascota Hobi 🐯' : '마스코트 호비 🐯'}
+                  {lang === 'en' ? 'Mascot Hobi 🐯' : lang === 'es' ? 'Mascota Hobi 🐯' : lang === 'pt' ? 'Mascote Hobi 🐯' : '마스코트 호비 🐯'}
                 </div>
               </div>
 
@@ -184,7 +184,7 @@ export default function HomePage() {
 
         {filteredQuizzes.length === 0 && (
           <div className="text-center py-16 text-zinc-400">
-            <p className="text-base font-bold">No quizzes found for this filter.</p>
+            <p className="text-base font-bold">{t.noQuizzesFound}</p>
             <button
               onClick={() => {
                 setSelectedCategory('All');
@@ -192,7 +192,7 @@ export default function HomePage() {
               }}
               className="mt-3 text-xs text-violet-600 font-bold hover:underline"
             >
-              Reset Filters
+              {t.resetFilters}
             </button>
           </div>
         )}
@@ -214,6 +214,8 @@ export default function HomePage() {
                       ? '230+ Verified Facts & Explanations'
                       : lang === 'es'
                       ? '230+ Hechos y Respuestas Verificadas'
+                      : lang === 'pt'
+                      ? '230+ Fatos e Respostas Verificadas'
                       : '230+개 팩트체크 & 해설 수록'}
                   </span>
                 </div>
@@ -222,6 +224,8 @@ export default function HomePage() {
                     ? 'K-Culture & K-Pop Fan Knowledge Guides'
                     : lang === 'es'
                     ? 'Guías de Lore y Conocimiento K-Pop'
+                    : lang === 'pt'
+                    ? 'Guias de Lore e Conhecimento K-Pop'
                     : 'K-컬처 & K-Pop 팬 지식 가이드 백과'}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1 max-w-xl">
@@ -229,6 +233,8 @@ export default function HomePage() {
                     ? 'Explore verified answers, debut histories, cultural etiquette, and insider fun facts before taking the quizzes.'
                     : lang === 'es'
                     ? 'Descubre las respuestas y explicaciones detrás de cada pregunta sobre BTS, SKZ, BLACKPINK y comida coreana.'
+                    : lang === 'pt'
+                    ? 'Descubra as respostas verificadas, histórias de debut e curiosidades sobre BTS, SKZ, BLACKPINK e comida coreana.'
                     : 'BTS, Stray Kids, 블랙핑크, 한국 매운맛 순위, 문화 IQ까지 모든 퀴즈의 정답과 심층 해설을 무료로 정독하세요.'}
                 </p>
               </div>
@@ -244,6 +250,8 @@ export default function HomePage() {
                   ? 'Explore All Lore Guides'
                   : lang === 'es'
                   ? 'Explorar Guías de Lore'
+                  : lang === 'pt'
+                  ? 'Explorar Guias de Lore'
                   : '전체 지식 가이드 둘러보기'}
               </span>
               <ArrowRight className="w-4 h-4" />

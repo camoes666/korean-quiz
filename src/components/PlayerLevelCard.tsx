@@ -2,12 +2,19 @@
 
 import { useGame } from '@/context/GameContext';
 import { useLanguage } from '@/context/LanguageContext';
+import { getLocalizedText } from '@/types/quiz';
 import { Zap, Flame, Trophy } from 'lucide-react';
 
 export default function PlayerLevelCard() {
   const { lang } = useLanguage();
   const { xp, streak, currentLevel, progressPercent, xpToNextLevel } = useGame();
-  const levelTitle = lang === 'en' || lang === 'es' ? currentLevel.title : currentLevel.titleKo;
+  const levelTitle = getLocalizedText(currentLevel, 'title', lang);
+  const levelLabel =
+    lang === 'es' || lang === 'pt'
+      ? `Nivel ${currentLevel.level}`
+      : lang === 'ko'
+      ? `레벨 ${currentLevel.level}`
+      : `Level ${currentLevel.level}`;
 
   return (
     <div className="rounded-2xl border-2 border-purple-100 bg-white p-6 shadow-lg shadow-purple-500/5">
@@ -23,7 +30,7 @@ export default function PlayerLevelCard() {
           <div>
             <div className="flex items-center gap-1.5">
               <span className="text-xs font-black text-purple-600 uppercase tracking-wider">
-                Level {currentLevel.level}
+                {levelLabel}
               </span>
             </div>
             <h3 className="text-base sm:text-lg font-black text-slate-900 leading-tight">
@@ -45,19 +52,29 @@ export default function PlayerLevelCard() {
       <div className="mt-4">
         <div className="flex items-center justify-between text-[11px] font-bold text-slate-500 mb-1.5">
           <span>
-            {lang === 'en'
-              ? 'Progress to next level'
-              : lang === 'es'
-              ? 'Para el siguiente nivel'
-              : '다음 레벨까지'}
+            {lang === 'es'
+              ? 'Progreso al siguiente nivel'
+              : lang === 'pt'
+              ? 'Progresso para o próximo nível'
+              : lang === 'ko'
+              ? '다음 레벨까지'
+              : 'Progress to next level'}
           </span>
           <span className="font-extrabold text-purple-600">
             {xpToNextLevel > 0
-              ? lang === 'en'
-                ? `${xpToNextLevel} XP needed`
-                : lang === 'es'
-                ? `${xpToNextLevel} XP necesarios`
-                : `${xpToNextLevel} XP 필요`
+              ? lang === 'es'
+                ? `Faltan ${xpToNextLevel} XP`
+                : lang === 'pt'
+                ? `Faltam ${xpToNextLevel} XP`
+                : lang === 'ko'
+                ? `${xpToNextLevel} XP 필요`
+                : `${xpToNextLevel} XP needed`
+              : lang === 'es'
+              ? 'NIVEL MÁXIMO'
+              : lang === 'pt'
+              ? 'NÍVEL MÁXIMO'
+              : lang === 'ko'
+              ? '최고 레벨 달성'
               : 'MAX LEVEL'}
           </span>
         </div>
@@ -75,21 +92,25 @@ export default function PlayerLevelCard() {
           <Flame className="w-3.5 h-3.5 text-rose-500 fill-current animate-pulse" />
           <span className="font-bold text-slate-700">
             {streak}{' '}
-            {lang === 'en'
-              ? 'day streak'
-              : lang === 'es'
+            {lang === 'es'
               ? 'días de racha'
-              : '일 연속 출석'}
+              : lang === 'pt'
+              ? 'dias seguidos'
+              : lang === 'ko'
+              ? '일 연속 출석'
+              : 'day streak'}
           </span>
         </span>
         <span className="flex items-center gap-1 text-purple-600 font-black bg-purple-50 px-2.5 py-0.5 rounded-full">
           <Trophy className="w-3.5 h-3.5" />
           <span>
-            {lang === 'en'
-              ? 'Top 12% Challenger'
-              : lang === 'es'
+            {lang === 'es'
               ? 'Top 12% Retador'
-              : '상위 12% 랭커'}
+              : lang === 'pt'
+              ? 'Top 12% Desafiante'
+              : lang === 'ko'
+              ? '상위 12% 랭커'
+              : 'Top 12% Challenger'}
           </span>
         </span>
       </div>

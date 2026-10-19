@@ -37,11 +37,13 @@ export interface Question {
   explanationEs?: string;
   explanationRu?: string;
   explanationZh?: string;
+  explanationPt?: string;
   funFact?: string;
   funFactKo?: string;
   funFactEs?: string;
   funFactRu?: string;
   funFactZh?: string;
+  funFactPt?: string;
 }
 
 export interface ScoreTier {
@@ -52,21 +54,25 @@ export interface ScoreTier {
   titleEs?: string;
   titleRu?: string;
   titleZh?: string;
+  titlePt?: string;
   badge: string;
   badgeKo?: string;
   badgeEs?: string;
   badgeRu?: string;
   badgeZh?: string;
+  badgePt?: string;
   description: string;
   descriptionKo?: string;
   descriptionEs?: string;
   descriptionRu?: string;
   descriptionZh?: string;
+  descriptionPt?: string;
   funQuote: string;
   funQuoteKo?: string;
   funQuoteEs?: string;
   funQuoteRu?: string;
   funQuoteZh?: string;
+  funQuotePt?: string;
 }
 
 export interface AffiliateSuggestion {
@@ -75,32 +81,38 @@ export interface AffiliateSuggestion {
   tagEs?: string;
   tagRu?: string;
   tagZh?: string;
+  tagPt?: string;
   title: string;
   titleKo?: string;
   titleEs?: string;
   titleRu?: string;
   titleZh?: string;
+  titlePt?: string;
   productName: string;
   productNameKo?: string;
   productNameEs?: string;
   productNameRu?: string;
   productNameZh?: string;
+  productNamePt?: string;
   description: string;
   descriptionKo?: string;
   descriptionEs?: string;
   descriptionRu?: string;
   descriptionZh?: string;
+  descriptionPt?: string;
   buttonText: string;
   buttonTextKo?: string;
   buttonTextEs?: string;
   buttonTextRu?: string;
   buttonTextZh?: string;
+  buttonTextPt?: string;
   targetUrl: string;
   badgeText?: string;
   badgeTextKo?: string;
   badgeTextEs?: string;
   badgeTextRu?: string;
   badgeTextZh?: string;
+  badgeTextPt?: string;
 }
 
 export type QuizType = 'trivia' | 'personality';
@@ -110,29 +122,37 @@ export interface PersonalityMemberResult {
   name: string;
   nameKo: string;
   nameEs: string;
+  namePt?: string;
   title: string;
   titleKo: string;
   titleEs: string;
+  titlePt?: string;
   subtitle: string;
   subtitleKo: string;
   subtitleEs: string;
+  subtitlePt?: string;
   skzoo: string;
   skzooKo: string;
   skzooEs: string;
+  skzooPt?: string;
   emoji: string;
   traits: string[];
   traitsKo: string[];
   traitsEs: string[];
+  traitsPt?: string[];
   description: string;
   descriptionKo: string;
   descriptionEs: string;
+  descriptionPt?: string;
   bestMatchId: string;
   bestMatchName: string;
   bestMatchNameKo: string;
   bestMatchNameEs: string;
+  bestMatchNamePt?: string;
   bestMatchReason: string;
   bestMatchReasonKo: string;
   bestMatchReasonEs: string;
+  bestMatchReasonPt?: string;
   colorHex: string;
   bgGradient: string;
 }
@@ -142,6 +162,7 @@ export interface PersonalityOption {
   text: string;
   textKo?: string;
   textEs?: string;
+  textPt?: string;
   scores: Record<string, number | undefined>;
 }
 
@@ -150,6 +171,7 @@ export interface PersonalityQuestion {
   question: string;
   questionKo?: string;
   questionEs?: string;
+  questionPt?: string;
   emoji?: string;
   options: PersonalityOption[];
 }
@@ -163,16 +185,19 @@ export interface Quiz {
   titleEs?: string;
   titleRu?: string;
   titleZh?: string;
+  titlePt?: string;
   subtitle: string;
   subtitleKo?: string;
   subtitleEs?: string;
   subtitleRu?: string;
   subtitleZh?: string;
+  subtitlePt?: string;
   description: string;
   descriptionKo?: string;
   descriptionEs?: string;
   descriptionRu?: string;
   descriptionZh?: string;
+  descriptionPt?: string;
   category: Exclude<Category, 'All'>;
   tag?: string; // e.g. "BTS", "BLACKPINK", "Squid Game", "Spicy Level"
   coverEmoji: string;
@@ -218,4 +243,35 @@ export function getLocalizedText<T extends object>(
   }
 
   return '';
+}
+
+// Universal localized string array resolver helper (e.g. traits / traitsEs / traitsKo / traitsPt)
+export function getLocalizedArray<T extends object>(
+  item: T,
+  prop: string,
+  lang: Language
+): string[] {
+  if (!item) return [];
+
+  const record = item as Record<string, unknown>;
+  const langKey =
+    lang === 'en'
+      ? prop
+      : `${prop}${lang.charAt(0).toUpperCase() + lang.slice(1)}`;
+
+  if (Array.isArray(record[langKey]) && (record[langKey] as string[]).length > 0) {
+    return record[langKey] as string[];
+  }
+
+  if (Array.isArray(record[prop])) {
+    return record[prop] as string[];
+  }
+  if (Array.isArray(record[`${prop}Es`])) {
+    return record[`${prop}Es`] as string[];
+  }
+  if (Array.isArray(record[`${prop}Ko`])) {
+    return record[`${prop}Ko`] as string[];
+  }
+
+  return [];
 }

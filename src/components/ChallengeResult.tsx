@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { Swords, Trophy, Frown, Handshake, Check, Share2, RotateCcw } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { encodeChallenge } from '@/lib/challenge';
+import { trackShare } from '@/lib/analytics';
 
 export interface ChallengeResultProps {
   slug: string;
@@ -40,14 +41,14 @@ export default function ChallengeResult({
   const isLose = userTotalScore < challengerTotalScore;
   const isDraw = userTotalScore === challengerTotalScore;
 
-  // Generate counter challenge URL
+  // Generate counter challenge URL (preserve sender's language when non-English)
   const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
   const counterPayload = encodeChallenge(slug, {
     q: questionIds,
     p: userScores,
     n: userNickname.trim(),
   });
-  const counterUrl = `${origin}/quiz/${slug}?c=${counterPayload}`;
+  const counterUrl = `${origin}/quiz/${slug}?c=${counterPayload}${lang !== 'en' ? `&lang=${lang}` : ''}`;
 
   const diff = Math.abs(userTotalScore - challengerTotalScore);
 
@@ -64,6 +65,12 @@ export default function ChallengeResult({
       : isDraw
       ? `🤝 ¡Empate 1:1 con ${opponentName} a ${userTotalScore.toLocaleString()} puntos!`
       : `🔥 ¡Obtuve ${userTotalScore.toLocaleString()} pts contra ${opponentName}! ¿Alguien acepta el contra-desafío? ⚔️`;
+  } else if (lang === 'pt') {
+    viralHeadline = isWin
+      ? `⚔️ Venci o duelo 1:1 contra ${opponentName} com ${userTotalScore.toLocaleString()} pts! (+${diff.toLocaleString()} pts de vantagem)`
+      : isDraw
+      ? `🤝 Empate 1:1 com ${opponentName} em ${userTotalScore.toLocaleString()} pontos!`
+      : `🔥 Fiz ${userTotalScore.toLocaleString()} pts contra ${opponentName}! Alguém aceita o contra-desafio? ⚔️`;
   } else {
     viralHeadline = isWin
       ? `⚔️ I just defeated ${opponentName} in a 1:1 quiz challenge with ${userTotalScore.toLocaleString()} pts! (+${diff.toLocaleString()} lead)`
@@ -73,6 +80,7 @@ export default function ChallengeResult({
   }
 
   const handleCopyCounterChallenge = async () => {
+    trackShare({ slug, method: 'counter_challenge', lang });
     const copyText = `${viralHeadline}\n👉 ${counterUrl}`;
     try {
       await navigator.clipboard.writeText(copyText);
@@ -85,6 +93,7 @@ export default function ChallengeResult({
   };
 
   const handleNativeShareCounter = async () => {
+    trackShare({ slug, method: 'counter_challenge', lang });
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
@@ -178,7 +187,7 @@ export default function ChallengeResult({
               <th className="py-2.5 px-3">{t.challenge.round}</th>
               <th className="py-2.5 px-3 text-emerald-300">{myName}</th>
               <th className="py-2.5 px-3 text-pink-300">{opponentName}</th>
-              <th className="py-2.5 px-3 text-right">Result</th>
+              <th className="py-2.5 px-3 text-right">{t.challenge.resultCol}</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-white/5 font-bold">
@@ -202,15 +211,15 @@ export default function ChallengeResult({
                   <td className="py-2.5 px-3 text-right">
                     {roundWin ? (
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
-                        WIN
+                        {t.challenge.roundWin}
                       </span>
                     ) : roundLose ? (
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40">
-                        LOSE
+                        {t.challenge.roundLose}
                       </span>
                     ) : (
                       <span className="text-[10px] px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40">
-                        TIE
+                        {t.challenge.roundTie}
                       </span>
                     )}
                   </td>

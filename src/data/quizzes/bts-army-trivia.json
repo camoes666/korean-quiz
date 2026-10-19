@@ -34,10 +34,38 @@
       "questionRu": "Какова официальная дата дебюта BTS с треком 'No More Dream'?",
       "questionZh": "防弹少年团凭借出道曲《No More Dream》正式出道的日期是？",
       "options": [
-        { "id": "A", "text": "June 13, 2013", "textKo": "2013년 6월 13일", "textEs": "13 de junio de 2013", "textRu": "13 июня 2013 г.", "textZh": "2013年6月13日" },
-        { "id": "B", "text": "July 9, 2013", "textKo": "2013년 7월 9일", "textEs": "9 de julio de 2013", "textRu": "9 июля 2013 г.", "textZh": "2013年7月9日" },
-        { "id": "C", "text": "May 5, 2015", "textKo": "2015년 5월 5일", "textEs": "5 de mayo de 2015", "textRu": "5 мая 2015 г.", "textZh": "2015年5月5日" },
-        { "id": "D", "text": "October 24, 2014", "textKo": "2014년 10월 24일", "textEs": "24 de octubre de 2014", "textRu": "24 октября 2014 г.", "textZh": "2014年10月24日" }
+        {
+          "id": "A",
+          "text": "June 13, 2013",
+          "textKo": "2013년 6월 13일",
+          "textEs": "13 de junio de 2013",
+          "textRu": "13 июня 2013 г.",
+          "textZh": "2013年6月13日"
+        },
+        {
+          "id": "B",
+          "text": "July 9, 2013",
+          "textKo": "2013년 7월 9일",
+          "textEs": "9 de julio de 2013",
+          "textRu": "9 июля 2013 г.",
+          "textZh": "2013年7月9日"
+        },
+        {
+          "id": "C",
+          "text": "May 5, 2015",
+          "textKo": "2015년 5월 5일",
+          "textEs": "5 de mayo de 2015",
+          "textRu": "5 мая 2015 г.",
+          "textZh": "2015年5月5日"
+        },
+        {
+          "id": "D",
+          "text": "October 24, 2014",
+          "textKo": "2014년 10월 24일",
+          "textEs": "24 de octubre de 2014",
+          "textRu": "24 октября 2014 г.",
+          "textZh": "2014年10月24日"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "BTS debuted on June 13, 2013 with their single album '2 Cool 4 Skool' and title track 'No More Dream'. ARMY celebrates June 13 every year as BTS Festa!",
@@ -46,7 +74,8 @@
       "explanationRu": "BTS дебютировали 13 июня 2013 года с синглом 'No More Dream'. Ежегодно этот день отмечается как BTS Festa!",
       "explanationZh": "防弹少年团于2013年6月13日携出道专辑正式出道，每年6月13日也是全球粉丝狂欢的BTS Festa！",
       "funFact": "July 9, 2013 is when the fandom name 'ARMY' was officially chosen!",
-      "funFactKo": "7월 9일은 팬덤명 '아미(ARMY)'가 공식 발표된 날(아미의 생일)입니다!"
+      "funFactKo": "7월 9일은 팬덤명 '아미(ARMY)'가 공식 발표된 날(아미의 생일)입니다!",
+      "funFactEs": "¡El 9 de julio de 2013 fue cuando se eligió oficialmente el nombre del fandom \"ARMY\"!"
     },
     {
       "id": 2,
@@ -57,10 +86,38 @@
       "questionRu": "Какая песня BTS получила прозвище «Королева чартов» за рекордные 7+ лет подряд в Melon Top 100?",
       "questionZh": "哪首BTS经典名曲因在韩国Melon榜单连续上榜超7年而被誉为“音源女王/音源僵尸”？",
       "options": [
-        { "id": "A", "text": "Dynamite", "textKo": "Dynamite", "textEs": "Dynamite", "textRu": "Dynamite", "textZh": "Dynamite" },
-        { "id": "B", "text": "Spring Day (봄날)", "textKo": "봄날 (Spring Day)", "textEs": "Spring Day (봄날)", "textRu": "Spring Day (봄날)", "textZh": "春日 (Spring Day)" },
-        { "id": "C", "text": "Boy With Luv", "textKo": "작은 것들을 위한 시 (Boy With Luv)", "textEs": "Boy With Luv", "textRu": "Boy With Luv", "textZh": "Boy With Luv" },
-        { "id": "D", "text": "Butter", "textKo": "Butter", "textEs": "Butter", "textRu": "Butter", "textZh": "Butter" }
+        {
+          "id": "A",
+          "text": "Dynamite",
+          "textKo": "Dynamite",
+          "textEs": "Dynamite",
+          "textRu": "Dynamite",
+          "textZh": "Dynamite"
+        },
+        {
+          "id": "B",
+          "text": "Spring Day (봄날)",
+          "textKo": "봄날 (Spring Day)",
+          "textEs": "Spring Day (봄날)",
+          "textRu": "Spring Day (봄날)",
+          "textZh": "春日 (Spring Day)"
+        },
+        {
+          "id": "C",
+          "text": "Boy With Luv",
+          "textKo": "작은 것들을 위한 시 (Boy With Luv)",
+          "textEs": "Boy With Luv",
+          "textRu": "Boy With Luv",
+          "textZh": "Boy With Luv"
+        },
+        {
+          "id": "D",
+          "text": "Butter",
+          "textKo": "Butter",
+          "textEs": "Butter",
+          "textRu": "Butter",
+          "textZh": "Butter"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "'Spring Day' released in February 2017 has never left Melon's weekly chart since its release, breaking all streaming longevity records in K-Pop history.",
@@ -69,7 +126,8 @@
       "explanationRu": "'Spring Day', вышедшая в 2017 году, никогда не покидала топ Melon, став абсолютным рекордсменом долговечности.",
       "explanationZh": "2017年2月发行的《春日》从未离开过Melon周榜，创下韩国流媒体历史上无与伦比的长寿纪录。",
       "funFact": "The opening line 'Bogo sipda' (I miss you) voiced by RM is one of the most recognizable intros in pop music.",
-      "funFactKo": "RM의 '보고 싶다'로 시작하는 애틋한 도입부는 전 세계 수많은 이들의 심금을 울렸습니다."
+      "funFactKo": "RM의 '보고 싶다'로 시작하는 애틋한 도입부는 전 세계 수많은 이들의 심금을 울렸습니다.",
+      "funFactEs": "La línea inicial \"Bogo sipda\" (Te extraño) interpretada por RM es una de las introducciones más reconocibles de la música pop."
     },
     {
       "id": 3,
@@ -80,10 +138,38 @@
       "questionRu": "Какое сольное альтер-эго использует Шуга (Suga) для своих микстейпов и мирового турне?",
       "questionZh": "SUGA（闵玧其）在发行个人Mixtape及举办世界巡演时使用的Solo艺名是？",
       "options": [
-        { "id": "A", "text": "Agust D", "textKo": "Agust D", "textEs": "Agust D", "textRu": "Agust D", "textZh": "Agust D" },
-        { "id": "B", "text": "Gloss", "textKo": "Gloss", "textEs": "Gloss", "textRu": "Gloss", "textZh": "Gloss" },
-        { "id": "C", "text": "Minstradamus", "textKo": "민스트라다무스", "textEs": "Minstradamus", "textRu": "Minstradamus", "textZh": "Minstradamus" },
-        { "id": "D", "text": "D-Town", "textKo": "D-Town", "textEs": "D-Town", "textRu": "D-Town", "textZh": "D-Town" }
+        {
+          "id": "A",
+          "text": "Agust D",
+          "textKo": "Agust D",
+          "textEs": "Agust D",
+          "textRu": "Agust D",
+          "textZh": "Agust D"
+        },
+        {
+          "id": "B",
+          "text": "Gloss",
+          "textKo": "Gloss",
+          "textEs": "Gloss",
+          "textRu": "Gloss",
+          "textZh": "Gloss"
+        },
+        {
+          "id": "C",
+          "text": "Minstradamus",
+          "textKo": "민스트라다무스",
+          "textEs": "Minstradamus",
+          "textRu": "Minstradamus",
+          "textZh": "Minstradamus"
+        },
+        {
+          "id": "D",
+          "text": "D-Town",
+          "textKo": "D-Town",
+          "textEs": "D-Town",
+          "textRu": "D-Town",
+          "textZh": "D-Town"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "'Agust D' is 'SUGA' spelled backwards with 'D T' added, which stands for 'Daegu Town' (his beloved hometown in South Korea).",
@@ -92,7 +178,8 @@
       "explanationRu": "'Agust D' — это 'SUGA' задом наперед + 'DT' (Daegu Town, его родной город Тэгу).",
       "explanationZh": "“Agust D”是把SUGA倒过来拼写并加上DT（代表他的家乡大邱 Daegu Town）。",
       "funFact": "His 2023 D-DAY Tour was the first solo world tour by a BTS member, selling out arenas worldwide!",
-      "funFactKo": "슈가의 2023년 D-DAY 투어는 BTS 멤버 최초의 단독 월드투어로 전 세계 아레나를 전석 매진시켰습니다!"
+      "funFactKo": "슈가의 2023년 D-DAY 투어는 BTS 멤버 최초의 단독 월드투어로 전 세계 아레나를 전석 매진시켰습니다!",
+      "funFactEs": "¡Su gira D-DAY Tour de 2023 fue la primera gira mundial en solitario de un miembro de BTS, agotando estadios en todo el mundo!"
     },
     {
       "id": 4,
@@ -103,10 +190,38 @@
       "questionRu": "С каким историческим посланием BTS выступили на Генеральной Ассамблее ООН в сентябре 2018 года?",
       "questionZh": "2018年9月，BTS在联合国大会上发表了载入历史的著名全球青年演讲，其核心口号是？",
       "options": [
-        { "id": "A", "text": "'Speak Yourself'", "textKo": "'Speak Yourself' (당신의 목소리를 내세요)", "textEs": "'Speak Yourself'", "textRu": "'Speak Yourself'", "textZh": "'Speak Yourself (为自己发声)'" },
-        { "id": "B", "text": "'Dance for the World'", "textKo": "'Dance for the World'", "textEs": "'Dance for the World'", "textRu": "'Dance for the World'", "textZh": "'Dance for the World'" },
-        { "id": "C", "text": "'Music has No Boundaries'", "textKo": "'Music has No Boundaries'", "textEs": "'Music has No Boundaries'", "textRu": "'Music has No Boundaries'", "textZh": "'Music has No Boundaries'" },
-        { "id": "D", "text": "'Never Give Up'", "textKo": "'Never Give Up'", "textEs": "'Never Give Up'", "textRu": "'Never Give Up'", "textZh": "'Never Give Up'" }
+        {
+          "id": "A",
+          "text": "'Speak Yourself'",
+          "textKo": "'Speak Yourself' (당신의 목소리를 내세요)",
+          "textEs": "'Speak Yourself'",
+          "textRu": "'Speak Yourself'",
+          "textZh": "'Speak Yourself (为自己发声)'"
+        },
+        {
+          "id": "B",
+          "text": "'Dance for the World'",
+          "textKo": "'Dance for the World'",
+          "textEs": "'Dance for the World'",
+          "textRu": "'Dance for the World'",
+          "textZh": "'Dance for the World'"
+        },
+        {
+          "id": "C",
+          "text": "'Music has No Boundaries'",
+          "textKo": "'Music has No Boundaries'",
+          "textEs": "'Music has No Boundaries'",
+          "textRu": "'Music has No Boundaries'",
+          "textZh": "'Music has No Boundaries'"
+        },
+        {
+          "id": "D",
+          "text": "'Never Give Up'",
+          "textKo": "'Never Give Up'",
+          "textEs": "'Never Give Up'",
+          "textRu": "'Never Give Up'",
+          "textZh": "'Never Give Up'"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Leader RM delivered a passionate speech for UNICEF's Generation Unlimited, asking youth: 'No matter who you are, where you're from, your skin colour, gender identity: speak yourself.'",
@@ -115,7 +230,8 @@
       "explanationRu": "Лидер RM выступил с вдохновляющей речью в ЮНИСЕФ, призвав молодёжь: 'Speak Yourself — заявите о себе'.",
       "explanationZh": "队长RM在联合国儿童基金会发起的活动中发表了感动全球的演讲：“无论你是谁、来自哪里，请为自己发声（Speak Yourself）。”",
       "funFact": "The speech was so well-crafted that it became study material in high schools and universities worldwide.",
-      "funFactKo": "이 연설문은 전 세계 여러 초·중·고등학교와 대학교의 영어 수업 교재로 채택되기도 했습니다."
+      "funFactKo": "이 연설문은 전 세계 여러 초·중·고등학교와 대학교의 영어 수업 교재로 채택되기도 했습니다.",
+      "funFactEs": "El discurso estuvo tan bien elaborado que se convirtió en material de estudio en escuelas secundarias y universidades de todo el mundo."
     },
     {
       "id": 5,
@@ -126,10 +242,38 @@
       "questionRu": "Какая песня принесла BTS их ПЕРВОЕ место №1 в американском чарте Billboard Hot 100 в августе 2020 года?",
       "questionZh": "2020年8月，哪首全英文单曲让BTS创造历史，首次登顶美国公告牌单曲榜（Billboard Hot 100）冠军？",
       "options": [
-        { "id": "A", "text": "DNA", "textKo": "DNA", "textEs": "DNA", "textRu": "DNA", "textZh": "DNA" },
-        { "id": "B", "text": "Dynamite", "textKo": "Dynamite", "textEs": "Dynamite", "textRu": "Dynamite", "textZh": "Dynamite" },
-        { "id": "C", "text": "Fake Love", "textKo": "FAKE LOVE", "textEs": "Fake Love", "textRu": "Fake Love", "textZh": "Fake Love" },
-        { "id": "D", "text": "IDOL", "textKo": "IDOL", "textEs": "IDOL", "textRu": "IDOL", "textZh": "IDOL" }
+        {
+          "id": "A",
+          "text": "DNA",
+          "textKo": "DNA",
+          "textEs": "DNA",
+          "textRu": "DNA",
+          "textZh": "DNA"
+        },
+        {
+          "id": "B",
+          "text": "Dynamite",
+          "textKo": "Dynamite",
+          "textEs": "Dynamite",
+          "textRu": "Dynamite",
+          "textZh": "Dynamite"
+        },
+        {
+          "id": "C",
+          "text": "Fake Love",
+          "textKo": "FAKE LOVE",
+          "textEs": "Fake Love",
+          "textRu": "Fake Love",
+          "textZh": "Fake Love"
+        },
+        {
+          "id": "D",
+          "text": "IDOL",
+          "textKo": "IDOL",
+          "textEs": "IDOL",
+          "textRu": "IDOL",
+          "textZh": "IDOL"
+        }
       ],
       "correctAnswer": "B",
       "explanation": "Released during the global pandemic to bring joy and healing, the disco-pop anthem 'Dynamite' debuted straight at #1 on the Billboard Hot 100.",
@@ -138,7 +282,8 @@
       "explanationRu": "Диско-поп гимн 'Dynamite' дебютировал на 1 месте в Billboard Hot 100, подарив радость миллионам людей в разгар пандемии.",
       "explanationZh": "在疫情期间发布的复古迪斯科神曲《Dynamite》空降公告牌百强单曲榜冠军，书写了亚洲流行音乐的新篇章。",
       "funFact": "Dynamite also earned BTS their first-ever Grammy Award nomination!",
-      "funFactKo": "이 곡을 통해 한국 대중가수 최초로 그래미 어워드(Grammy Awards) 후보에 오르기도 했습니다!"
+      "funFactKo": "이 곡을 통해 한국 대중가수 최초로 그래미 어워드(Grammy Awards) 후보에 오르기도 했습니다!",
+      "funFactEs": "¡\"Dynamite\" también le valió a BTS su primera nominación a los Premios Grammy!"
     },
     {
       "id": 6,
@@ -149,10 +294,38 @@
       "questionRu": "Какой фирменный цвет символизирует BTS и ARMY благодаря крылатой фразе Ви 'Borahae' (I Purple You)?",
       "questionZh": "由成员V创造的著名爱意暗号“紫爱你 (Borahae)”，让哪个颜色成为了BTS与ARMY之间的应援标志色？",
       "options": [
-        { "id": "A", "text": "Purple", "textKo": "보라색 (Purple)", "textEs": "Morado (Púrpura)", "textRu": "Фиолетовый", "textZh": "紫色 (Purple)" },
-        { "id": "B", "text": "Neon Yellow", "textKo": "형광 노랑", "textEs": "Amarillo Neón", "textRu": "Неоновый жёлтый", "textZh": "荧光黄" },
-        { "id": "C", "text": "Sky Blue", "textKo": "하늘색", "textEs": "Azul Cielo", "textRu": "Небесно-голубой", "textZh": "天蓝色" },
-        { "id": "D", "text": "Rose Red", "textKo": "장미빛 빨강", "textEs": "Rojo Rosa", "textRu": "Розово-красный", "textZh": "玫瑰红" }
+        {
+          "id": "A",
+          "text": "Purple",
+          "textKo": "보라색 (Purple)",
+          "textEs": "Morado (Púrpura)",
+          "textRu": "Фиолетовый",
+          "textZh": "紫色 (Purple)"
+        },
+        {
+          "id": "B",
+          "text": "Neon Yellow",
+          "textKo": "형광 노랑",
+          "textEs": "Amarillo Neón",
+          "textRu": "Неоновый жёлтый",
+          "textZh": "荧光黄"
+        },
+        {
+          "id": "C",
+          "text": "Sky Blue",
+          "textKo": "하늘색",
+          "textEs": "Azul Cielo",
+          "textRu": "Небесно-голубой",
+          "textZh": "天蓝色"
+        },
+        {
+          "id": "D",
+          "text": "Rose Red",
+          "textKo": "장미빛 빨강",
+          "textEs": "Rojo Rosa",
+          "textRu": "Розово-красный",
+          "textZh": "玫瑰红"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "At the 2016 BTS 3rd Muster fan meeting, V noticed the purple lightstick ocean and defined 'Borahae' (보라해): 'Purple is the last color of the rainbow, meaning I will trust and love you for a long time.'",
@@ -161,7 +334,8 @@
       "explanationRu": "В 2016 году Ви объяснил, что фиолетовый — последний цвет радуги, означающий любовь и доверие навсегда.",
       "explanationZh": "在2016年粉丝见面会上，V将彩虹最后的紫色赋予了“长长久久相互信任与相爱”的美好涵义，从此“紫爱你”享誉全球。",
       "funFact": "Landmarks from the Empire State Building to the Seoul Namsan Tower illuminate purple for BTS events!",
-      "funFactKo": "엠파이어 스테이트 빌딩과 서울 남산타워 등 전 세계 주요 랜드마크가 BTS를 위해 보라색 조명을 밝혔습니다."
+      "funFactKo": "엠파이어 스테이트 빌딩과 서울 남산타워 등 전 세계 주요 랜드마크가 BTS를 위해 보라색 조명을 밝혔습니다.",
+      "funFactEs": "¡Monumentos desde el Empire State Building hasta la Torre Namsan de Seúl se iluminan de púrpura para los eventos de BTS!"
     },
     {
       "id": 7,
@@ -172,10 +346,38 @@
       "questionRu": "Как расшифровывается официальное название фандома 'A.R.M.Y'?",
       "questionZh": "防弹少年团官方粉丝名“A.R.M.Y”的正式英文全称缩写代表什么？",
       "options": [
-        { "id": "A", "text": "Adorable Representative M.C. for Youth", "textKo": "Adorable Representative M.C. for Youth", "textEs": "Adorable Representative M.C. for Youth", "textRu": "Adorable Representative M.C. for Youth", "textZh": "Adorable Representative M.C. for Youth" },
-        { "id": "B", "text": "All Real Music for Youth", "textKo": "All Real Music for Youth", "textEs": "All Real Music for Youth", "textRu": "All Real Music for Youth", "textZh": "All Real Music for Youth" },
-        { "id": "C", "text": "Always Resilient Musical Youth", "textKo": "Always Resilient Musical Youth", "textEs": "Always Resilient Musical Youth", "textRu": "Always Resilient Musical Youth", "textZh": "Always Resilient Musical Youth" },
-        { "id": "D", "text": "Asian Rhythm & Melody Youth", "textKo": "Asian Rhythm & Melody Youth", "textEs": "Asian Rhythm & Melody Youth", "textRu": "Asian Rhythm & Melody Youth", "textZh": "Asian Rhythm & Melody Youth" }
+        {
+          "id": "A",
+          "text": "Adorable Representative M.C. for Youth",
+          "textKo": "Adorable Representative M.C. for Youth",
+          "textEs": "Adorable Representative M.C. for Youth",
+          "textRu": "Adorable Representative M.C. for Youth",
+          "textZh": "Adorable Representative M.C. for Youth"
+        },
+        {
+          "id": "B",
+          "text": "All Real Music for Youth",
+          "textKo": "All Real Music for Youth",
+          "textEs": "All Real Music for Youth",
+          "textRu": "All Real Music for Youth",
+          "textZh": "All Real Music for Youth"
+        },
+        {
+          "id": "C",
+          "text": "Always Resilient Musical Youth",
+          "textKo": "Always Resilient Musical Youth",
+          "textEs": "Always Resilient Musical Youth",
+          "textRu": "Always Resilient Musical Youth",
+          "textZh": "Always Resilient Musical Youth"
+        },
+        {
+          "id": "D",
+          "text": "Asian Rhythm & Melody Youth",
+          "textKo": "Asian Rhythm & Melody Youth",
+          "textEs": "Asian Rhythm & Melody Youth",
+          "textRu": "Asian Rhythm & Melody Youth",
+          "textZh": "Asian Rhythm & Melody Youth"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Announced on July 9, 2013, ARMY stands for 'Adorable Representative M.C. for Youth', symbolizing that fans and BTS will always protect and voice each other's stories like body armor.",
@@ -184,7 +386,8 @@
       "explanationRu": "ARMY означает 'Adorable Representative M.C. for Youth' — прелестные представители молодежи, поддерживающие друг друга.",
       "explanationZh": "ARMY全称为“Adorable Representative M.C. for Youth（值得爱戴的青少年代表）”，象征着与防弹防弹衣般形影不离的守护。",
       "funFact": "ARMY members celebrate their official fandom birthday every year on July 9th.",
-      "funFactKo": "아미들은 매년 7월 9일을 '아미의 생일'로 부르며 전 세계적인 기부와 축하를 펼칩니다."
+      "funFactKo": "아미들은 매년 7월 9일을 '아미의 생일'로 부르며 전 세계적인 기부와 축하를 펼칩니다.",
+      "funFactEs": "Los miembros de ARMY celebran el cumpleaños oficial de su fandom cada año el 9 de julio."
     },
     {
       "id": 8,
@@ -195,10 +398,38 @@
       "questionRu": "Какой участник стал самым первым стажёром в Big Hit, вдохновив продюсера Бан Ши Хёка создать BTS вокруг него?",
       "questionZh": "哪位成员是第一个加入Big Hit的元老练习生，让房时爀决定以此人为核心组建防弹少年团？",
       "options": [
-        { "id": "A", "text": "RM (Kim Namjoon)", "textKo": "RM (김남준)", "textEs": "RM (Kim Namjoon)", "textRu": "RM (Ким Намджун)", "textZh": "RM (金南俊)" },
-        { "id": "B", "text": "Suga (Min Yoongi)", "textKo": "슈가 (민윤기)", "textEs": "Suga (Min Yoongi)", "textRu": "Шуга (Мин Юнги)", "textZh": "SUGA (闵玧其)" },
-        { "id": "C", "text": "Jin (Kim Seokjin)", "textKo": "진 (김석진)", "textEs": "Jin (Kim Seokjin)", "textRu": "Джин (Ким Сокджин)", "textZh": "Jin (金硕珍)" },
-        { "id": "D", "text": "J-Hope (Jung Hoseok)", "textKo": "제이홉 (정호석)", "textEs": "J-Hope (Jung Hoseok)", "textRu": "Джей-Хоуп (Чон Хосок)", "textZh": "J-Hope (郑号锡)" }
+        {
+          "id": "A",
+          "text": "RM (Kim Namjoon)",
+          "textKo": "RM (김남준)",
+          "textEs": "RM (Kim Namjoon)",
+          "textRu": "RM (Ким Намджун)",
+          "textZh": "RM (金南俊)"
+        },
+        {
+          "id": "B",
+          "text": "Suga (Min Yoongi)",
+          "textKo": "슈가 (민윤기)",
+          "textEs": "Suga (Min Yoongi)",
+          "textRu": "Шуга (Мин Юнги)",
+          "textZh": "SUGA (闵玧其)"
+        },
+        {
+          "id": "C",
+          "text": "Jin (Kim Seokjin)",
+          "textKo": "진 (김석진)",
+          "textEs": "Jin (Kim Seokjin)",
+          "textRu": "Джин (Ким Сокджин)",
+          "textZh": "Jin (金硕珍)"
+        },
+        {
+          "id": "D",
+          "text": "J-Hope (Jung Hoseok)",
+          "textKo": "제이홉 (정호석)",
+          "textEs": "J-Hope (Jung Hoseok)",
+          "textRu": "Джей-Хоуп (Чон Хосок)",
+          "textZh": "J-Hope (郑号锡)"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "Bang Si-hyuk was so deeply impressed by high schooler Kim Namjoon's underground rap prowess (under the moniker Runch Randa) in 2010 that he decided: 'A hip-hop idol group must be created around this young man.'",
@@ -207,7 +438,8 @@
       "explanationRu": "Бан Ши Хёк был поражён рэпом 17-летнего Намджуна в 2010 году и решил сформировать группу именно вокруг него.",
       "explanationZh": "2010年，制作人房时爀听了当时作为地下Rapper活跃的17岁金南俊的说唱后大为震撼，当即决定以此为核心创立组合。",
       "funFact": "Suga joined shortly after winning 2nd place in Big Hit's nationwide rap audition 'Hit It'!",
-      "funFactKo": "슈가는 이후 빅히트의 전국 랩 오디션 'Hit It'에서 2등을 차지하며 두 번째 래퍼로 합류했습니다."
+      "funFactKo": "슈가는 이후 빅히트의 전국 랩 오디션 'Hit It'에서 2등을 차지하며 두 번째 래퍼로 합류했습니다.",
+      "funFactEs": "¡Suga se unió poco después de obtener el 2.º lugar en la audición nacional de rap de Big Hit llamada \"Hit It\"!"
     },
     {
       "id": 9,
@@ -218,10 +450,38 @@
       "questionRu": "В 41-м эпизоде Run BTS!, какое легендарное несуразное слово выкрикнул Чимин, не разобрав слово 'Карбонара' по губам Джина?",
       "questionZh": "在《Run BTS!》（走吧防弹）第41期经典戴耳机传话游戏中，Jimin把Jin说的“卡邦尼意面 (Carbonara)”误听并大喊出的传奇搞笑词是？",
       "options": [
-        { "id": "A", "text": "Lachimolala", "textKo": "라지몰라라 (Lachimolala)", "textEs": "Lachimolala", "textRu": "Lachimolala (Лачимолала)", "textZh": "Lachimolala" },
-        { "id": "B", "text": "Tony Montana", "textKo": "토니 몬타나", "textEs": "Tony Montana", "textRu": "Tony Montana", "textZh": "Tony Montana" },
-        { "id": "C", "text": "Bora Magic", "textKo": "보라 매직", "textEs": "Bora Magic", "textRu": "Bora Magic", "textZh": "Bora Magic" },
-        { "id": "D", "text": "Gimbap Nara", "textKo": "김밥나라", "textEs": "Gimbap Nara", "textRu": "Gimbap Nara", "textZh": "紫菜包饭天国" }
+        {
+          "id": "A",
+          "text": "Lachimolala",
+          "textKo": "라지몰라라 (Lachimolala)",
+          "textEs": "Lachimolala",
+          "textRu": "Lachimolala (Лачимолала)",
+          "textZh": "Lachimolala"
+        },
+        {
+          "id": "B",
+          "text": "Tony Montana",
+          "textKo": "토니 몬타나",
+          "textEs": "Tony Montana",
+          "textRu": "Tony Montana",
+          "textZh": "Tony Montana"
+        },
+        {
+          "id": "C",
+          "text": "Bora Magic",
+          "textKo": "보라 매직",
+          "textEs": "Bora Magic",
+          "textRu": "Bora Magic",
+          "textZh": "Bora Magic"
+        },
+        {
+          "id": "D",
+          "text": "Gimbap Nara",
+          "textKo": "김밥나라",
+          "textEs": "Gimbap Nara",
+          "textRu": "Gimbap Nara",
+          "textZh": "紫菜包饭天国"
+        }
       ],
       "correctAnswer": "A",
       "explanation": "In one of the most famous variety moments in K-Pop history, Jin mouthed 'Carbonara', Jimin shouted 'Lachimolala?!', and miraculously, Suga guessed 'Carbonara!' correctly anyway!",
@@ -230,7 +490,8 @@
       "explanationRu": "Джин сказал 'Карбонара', Чимин передал как 'Лачимолала?!', но Шуга чудом догадался и ответил правильно!",
       "explanationZh": "Jin对着戴耳机的Jimin大喊“Carbonara”，Jimin却空耳大喊出“Lachimolala”，最神的是下一棒SUGA竟然瞬间心有灵犀猜中正确答案！",
       "funFact": "Lachimolala trended #1 worldwide on Twitter immediately after the episode aired.",
-      "funFactKo": "'라지몰라라'는 방송 직후 트위터(X) 전 세계 실시간 트렌드 1위를 기록했습니다."
+      "funFactKo": "'라지몰라라'는 방송 직후 트위터(X) 전 세계 실시간 트렌드 1위를 기록했습니다.",
+      "funFactEs": "\"Lachimolala\" fue tendencia #1 mundial en Twitter inmediatamente después de que se emitiera el episodio."
     },
     {
       "id": 10,
@@ -281,7 +542,8 @@
       "explanationRu": "Официальный лайтстик BTS называется 'ARMY Bomb', в честь фандома 'ARMY', и выполнен в форме круглой бомбы.",
       "explanationZh": "防弹少年团的官方应援棒名为“ARMY Bomb”（阿米棒），得名于官方粉丝名“ARMY”，外观采用炸弹造型设计。",
       "funFact": "The ARMY Bomb can sync via wireless Bluetooth control at concerts to change colors in unison with the music performance.",
-      "funFactKo": "아미밤은 콘서트 현장에서 무선 중앙 제어로 색상이 연동되어 곡의 분위기에 맞추어 화려한 빛의 물결을 만들어냅니다."
+      "funFactKo": "아미밤은 콘서트 현장에서 무선 중앙 제어로 색상이 연동되어 곡의 분위기에 맞추어 화려한 빛의 물결을 만들어냅니다.",
+      "funFactEs": "El ARMY Bomb puede sincronizarse mediante control Bluetooth inalámbrico en los conciertos para cambiar de color al unísono con el espectáculo."
     },
     {
       "id": 11,
@@ -332,7 +594,8 @@
       "explanationRu": "На красной дорожке BBMAs 2017 года Джин привлек внимание зрителей по всему миру как 'третий парень слева', что привело к его культовому прозвищу 'Worldwide Handsome'.",
       "explanationZh": "在2017年BBMAs红毯上，Jin作为“左边第三个男生”引发全球网友热议，随后他自称“Worldwide Handsome”（世界弹级帅哥），该绰号因此响彻全球。",
       "funFact": "Jin introduced himself as 'Worldwide Handsome' during press interviews after the event, and it became his signature self-introduction slogan worldwide.",
-      "funFactKo": "시상식 이후 진은 해외 기자간담회에서 자신을 'Worldwide Handsome'이라고 자신 있게 소개하여 큰 웃음과 사랑을 받았습니다."
+      "funFactKo": "시상식 이후 진은 해외 기자간담회에서 자신을 'Worldwide Handsome'이라고 자신 있게 소개하여 큰 웃음과 사랑을 받았습니다.",
+      "funFactEs": "Jin se presentó como \"Worldwide Handsome\" durante las entrevistas de prensa tras el evento, y se convirtió en su lema característico en todo el mundo."
     },
     {
       "id": 12,
@@ -383,7 +646,8 @@
       "explanationRu": "В апреле 2023 года заглавный трек Чимина 'Like Crazy' из его сольного альбома 'FACE' дебютировал на 1-м месте в Billboard Hot 100, сделав его первым корейским сольным артистом в истории, возглавившим этот чарт.",
       "explanationZh": "2023年4月，智旻首张个人专辑《FACE》的主打歌《Like Crazy》空降美国告示牌Hot 100榜单冠军，使他成为韩国音乐史上首位斩获该榜单冠军的个人歌手。",
       "funFact": "Jimin contributed directly as a songwriter and producer to the album 'FACE', expressing his honest emotions and growth.",
-      "funFactKo": "지민은 솔로 앨범 'FACE'의 작사 및 작곡에 직접 참여하여 아티스트로서의 진솔한 감정과 음악적 역량을 펼쳐보였습니다."
+      "funFactKo": "지민은 솔로 앨범 'FACE'의 작사 및 작곡에 직접 참여하여 아티스트로서의 진솔한 감정과 음악적 역량을 펼쳐보였습니다.",
+      "funFactEs": "Jimin participó directamente como compositor y productor en el álbum \"FACE\", expresando sus emociones honestas y su crecimiento artístico."
     },
     {
       "id": 13,
@@ -434,7 +698,8 @@
       "explanationRu": "Альбом BTS 2016 года 'Wings' вобрал в себя темы юности, искушения и взросления из романа Германа Гессе 'Демиан', включая знаменитые цитаты, зачитанные RM в короткометражных фильмах.",
       "explanationZh": "防弹少年团2016年的专辑《Wings》深刻融合了赫尔曼·黑塞小说《德米安》中关于青春、诱惑与破壳成长的哲学主题，RM还在概念短片中亲声朗诵了书中的经典名句。",
       "funFact": "After the release of 'Wings', 'Demian' experienced a massive surge in sales, becoming a bestseller again in South Korea thanks to BTS fans.",
-      "funFactKo": "'Wings' 앨범 발매 이후 팬들의 뜨거운 관심 속에 소설 '데미안'이 국내 주요 서점 베스트셀러 순위에 다시 오르는 기현상을 보이기도 했습니다."
+      "funFactKo": "'Wings' 앨범 발매 이후 팬들의 뜨거운 관심 속에 소설 '데미안'이 국내 주요 서점 베스트셀러 순위에 다시 오르는 기현상을 보이기도 했습니다.",
+      "funFactEs": "Tras el lanzamiento de \"Wings\", la novela \"Demian\" experimentó un enorme aumento en ventas, convirtiéndose nuevamente en un éxito de librería en Corea del Sur gracias a los fans de BTS."
     },
     {
       "id": 14,
@@ -485,7 +750,8 @@
       "explanationRu": "В июле 2022 года j-hope возглавил главную сцену фестиваля Lollapalooza в Чикаго, выступив с сольным концертом перед более чем 100 000 зрителей, за что фестиваль получил прозвище 'Hobipalooza'.",
       "explanationZh": "2022年7月，j-hope受邀担任美国芝加哥Lollapalooza音乐节最后一天主舞台的压轴嘉宾，全场吸引了超10万名观众，现场被歌迷盛赞为“Hobipalooza”。",
       "funFact": "Lollapalooza organizers officially acknowledged the term 'Hobipalooza' on social media and stated that j-hope sold the highest ticket volume in the festival's history.",
-      "funFactKo": "롤라팔루자 주최 측은 공식 SNS에서도 'Hobipalooza'라는 단어를 사용하며 제이홉이 음악제 역사상 단일 티켓 판매 최고 기록을 경신했다고 공식 인정했습니다."
+      "funFactKo": "롤라팔루자 주최 측은 공식 SNS에서도 'Hobipalooza'라는 단어를 사용하며 제이홉이 음악제 역사상 단일 티켓 판매 최고 기록을 경신했다고 공식 인정했습니다.",
+      "funFactEs": "Los organizadores de Lollapalooza reconocieron oficialmente el término \"Hobipalooza\" en redes sociales y afirmaron que j-hope vendió el mayor volumen de entradas en la historia del festival."
     },
     {
       "id": 15,
@@ -536,7 +802,8 @@
       "explanationRu": "BTS были приглашены в Белый дом в последний день Месяца наследия американцев азиатского происхождения, гавайцев и жителей тихоокеанских островов, чтобы обсудить с президентом Джо Байденом проблему преступлений на почве ненависти к азиатам, дискриминации и важности разнообразия.",
       "explanationZh": "在“亚裔美国人、夏威夷原住民和太平洋岛民（AANHPI）传统月”的最后一天，防弹少年团受邀拜访白宫，与拜登总统就应对近期频发的反亚裔仇恨犯罪、种族歧视以及倡导包容与多元化进行了深入交流。",
       "funFact": "Before meeting President Biden in the Oval Office, BTS spoke at the White House press briefing room, conveying messages of respect and equality in both English and Korean.",
-      "funFactKo": "집무실 면담에 앞서 방탄소년단은 백악관 브리핑룸 연단에 서서 한국어와 영어로 서로의 차이를 인정하고 서로를 존중하자는 따뜻한 메시지를 전 세계에 전했습니다."
+      "funFactKo": "집무실 면담에 앞서 방탄소년단은 백악관 브리핑룸 연단에 서서 한국어와 영어로 서로의 차이를 인정하고 서로를 존중하자는 따뜻한 메시지를 전 세계에 전했습니다.",
+      "funFactEs": "Antes de reunirse con el presidente Biden en el Despacho Oval, BTS habló en la sala de prensa de la Casa Blanca transmitiendo mensajes de respeto e igualdad en inglés y coreano."
     },
     {
       "id": 16,
@@ -587,7 +854,8 @@
       "explanationRu": "Выпущенный в июле 2023 года сольный сингл Чонгука 'Seven (feat. Latto)' дебютировал на 1-м месте в Billboard Hot 100 и набрал 1 миллиард прослушиваний на Spotify всего за 108 дней, побив мировой рекорд Гиннесса.",
       "explanationZh": "2023年7月发行的柾国首张个人单曲《Seven (feat. Latto)》空降告示牌Hot 100冠军，并仅用108天就在Spotify突破10亿次播放，刷新了吉尼斯世界纪录。",
       "funFact": "Jungkook became the fastest artist in global music history to cross the 1 billion Spotify streaming milestone with a single track.",
-      "funFactKo": "정국은 전 세계 음악 역사상 단일 트랙으로 가장 빠르게 스포티파이 10억 스트리밍 고지를 밟은 아티스트가 되었습니다."
+      "funFactKo": "정국은 전 세계 음악 역사상 단일 트랙으로 가장 빠르게 스포티파이 10억 스트리밍 고지를 밟은 아티스트가 되었습니다.",
+      "funFactEs": "Jungkook se convirtió en el artista más rápido en la historia de la música global en superar los mil millones de reproducciones en Spotify con una sola canción."
     },
     {
       "id": 17,
@@ -638,7 +906,8 @@
       "explanationRu": "Померанский шпиц Ви по кличке 'Ентан' (Тани) украшает физическую и цифровую обложки его сольного альбома 2023 года 'Layover'.",
       "explanationZh": "V的博美犬“Yeontan”（煤炭/炭炭）作为主要形象印制在他2023年首张个人专辑《Layover》的实体和数字封面包装上。",
       "funFact": "Yeontan even joined V on stage during a live music show debut performance, delighting fans around the world.",
-      "funFactKo": "연탄이는 뷔의 음악방송 솔로 데뷔 무대에 함께 깜짝 등장하여 전 세계 팬들에게 큰 기쁨을 선사했습니다."
+      "funFactKo": "연탄이는 뷔의 음악방송 솔로 데뷔 무대에 함께 깜짝 등장하여 전 세계 팬들에게 큰 기쁨을 선사했습니다.",
+      "funFactEs": "Yeontan incluso acompañó a V en el escenario durante una presentación debut en un programa musical en vivo, encantando a los fans de todo el mundo."
     },
     {
       "id": 18,
@@ -689,7 +958,8 @@
       "explanationRu": "Название шоу 'Suchwita' — это аббревиатура от фразы 'Время наклюкаться с СУГОЙ' на корейском языке, перекликающаяся с его сольной песней 'Daechwita'.",
       "explanationZh": "节目名《Suchwita》（SUGA取醉打）是韩语“与SUGA共醉的时光”的缩写，巧妙借用了他个人名曲《大吹打》（Daechwita）的谐音。",
       "funFact": "Suchwita hosted a wide array of high-profile guests including Taeyang, Lee Sung-kyung, Seventeen's Hoshi, and all six other BTS members.",
-      "funFactKo": "슈취타에는 방탄소년단 멤버 전원은 물론 태양, 이성경, 세븐틴 호시 등 각계각층의 화려한 게스트들이 출연하여 화제를 모았습니다."
+      "funFactKo": "슈취타에는 방탄소년단 멤버 전원은 물론 태양, 이성경, 세븐틴 호시 등 각계각층의 화려한 게스트들이 출연하여 화제를 모았습니다.",
+      "funFactEs": "Suchwita recibió a una gran variedad de invitados de alto perfil, incluidos Taeyang, Lee Sung-kyung, Hoshi de Seventeen y los otros seis miembros de BTS."
     },
     {
       "id": 19,
@@ -740,7 +1010,8 @@
       "explanationRu": "Coldplay стали соавторами песни 'The Astronaut', созданной в подарок Джину перед его уходом в армию. Джин прилетел в Буэнос-Айрес (Аргентина), чтобы исполнить песню на концерте Coldplay.",
       "explanationZh": "Coldplay（酷玩乐队）在Jin入伍前与他共同创作了《The Astronaut》作为献给粉丝的礼物，Jin还远赴阿根廷布宜诺斯艾利斯，在酷玩乐队的世界巡演舞台上完成了首演。",
       "funFact": "Chris Martin gifted his personal favorite guitar to Jin as a token of deep friendship during their collaboration.",
-      "funFactKo": "콜드플레이의 리드보컬 크리스 마틴은 진에게 애지중지하던 자신의 기타를 직접 선물하며 남다른 우정을 과시했습니다."
+      "funFactKo": "콜드플레이의 리드보컬 크리스 마틴은 진에게 애지중지하던 자신의 기타를 직접 선물하며 남다른 우정을 과시했습니다.",
+      "funFactEs": "Chris Martin le regaló su guitarra favorita personal a Jin como muestra de su profunda amistad durante su colaboración."
     },
     {
       "id": 20,
@@ -791,7 +1062,8 @@
       "explanationRu": "Сольный альбом RM 2022 года 'Indigo' открывается треком 'Yun (with Erykah Badu)', содержащим фрагменты философских высказываний Юн Хёнгына, что подчеркивает любовь RM к изобразительному искусству.",
       "explanationZh": "热爱艺术的RM在2022年发行的个人专辑《Indigo》首支曲目《Yun (with Erykah Badu)》中引用了云亨根画家的原声与艺术哲学，表达了对其高洁人格的致敬。",
       "funFact": "The album artwork of 'Indigo' actually features Yun Hyong-keun's original painting 'Blue' hanging on the wall behind RM.",
-      "funFactKo": "'Indigo' 앨범 재킷 사진 속 RM의 뒤편 벽면에는 윤형근 화백의 실제 작품 '청색(Blue)'이 걸려 있습니다."
+      "funFactKo": "'Indigo' 앨범 재킷 사진 속 RM의 뒤편 벽면에는 윤형근 화백의 실제 작품 '청색(Blue)'이 걸려 있습니다.",
+      "funFactEs": "La portada del álbum \"Indigo\" muestra en realidad la pintura original \"Blue\" de Yun Hyong-keun colgada en la pared detrás de RM."
     },
     {
       "id": 21,
@@ -842,7 +1114,8 @@
       "explanationRu": "Чимин поступил в Среднюю школу искусств Пусана как лучший студент на отделение современного танца, что заложило основу для его уникальной плавности и экспрессивности на сцене.",
       "explanationZh": "智旻是以全校首席（第一名）的优异成绩考入釜山艺术高中现代舞系的，这为他日后行云流水、细腻优美的独特舞蹈风格打下了坚实基础。",
       "funFact": "Jimin's modern dance teacher at the time strongly encouraged him to audition for BigHit Entertainment after recognizing his extraordinary idol potential.",
-      "funFactKo": "당시 지민의 현대무용 스승은 지민의 남다른 재능과 가능성을 알아보고 오디션을 적극 권유했던 것으로 잘 알려져 있습니다."
+      "funFactKo": "당시 지민의 현대무용 스승은 지민의 남다른 재능과 가능성을 알아보고 오디션을 적극 권유했던 것으로 잘 알려져 있습니다.",
+      "funFactEs": "El profesor de danza contemporánea de Jimin en aquel entonces lo animó encarecidamente a audicionar para BigHit Entertainment tras reconocer su extraordinario potencial como idol."
     },
     {
       "id": 22,
@@ -893,7 +1166,8 @@
       "explanationRu": "СУГА провел сольный тур Agust D TOUR 'D-DAY' по Северной Америке и Азии в 2023 году, сыграв 28 аншлаговых концертов для более чем 290 000 поклонников.",
       "explanationZh": "SUGA于2023年以Agust D的名义举办了《D-DAY》全球巡演，横跨北美及亚洲多个城市，28场演出全数售罄，共吸引超过29万名观众到场。",
       "funFact": "During the final concert in Seoul, fellow members Jin, j-hope, and RM made surprise guest appearances on stage to support him.",
-      "funFactKo": "서울 앙코르 콘서트 최종일에는 군 복무 중 휴가를 나온 진과 제이홉, 그리고 RM이 깜짝 등장하여 열광적인 축하를 건넸습니다."
+      "funFactKo": "서울 앙코르 콘서트 최종일에는 군 복무 중 휴가를 나온 진과 제이홉, 그리고 RM이 깜짝 등장하여 열광적인 축하를 건넸습니다.",
+      "funFactEs": "Durante el concierto final en Seúl, sus compañeros Jin, j-hope y RM hicieron apariciones sorpresa en el escenario para apoyarlo."
     },
     {
       "id": 23,
@@ -944,7 +1218,8 @@
       "explanationRu": "'Yoongi, marry me' (Юнги, выходи за меня) стала культовой шуткой в фандоме ARMY, появляясь в комментариях даже тогда, когда самого СУГИ нет на трансляции.",
       "explanationZh": "“Yoongi, marry me”（闵玧其和我结婚吧）是阿米（ARMY）圈内红极一时的梗，不仅在SUGA本人直播时刷屏，甚至在其他成员直播或演唱会灯牌上也频繁出现。",
       "funFact": "Other BTS members often tease SUGA by reading 'Yoongi, marry me' out loud whenever they see it scrolling past on live stream chats.",
-      "funFactKo": "멤버들 역시 라이브 방송 도중 댓글 창에서 이 문구를 발견하면 슈가를 향해 직접 읽어주며 놀리는 모습을 자주 보였습니다."
+      "funFactKo": "멤버들 역시 라이브 방송 도중 댓글 창에서 이 문구를 발견하면 슈가를 향해 직접 읽어주며 놀리는 모습을 자주 보였습니다.",
+      "funFactEs": "Los demás miembros de BTS suelen bromear con SUGA leyendo \"Yoongi, marry me\" en voz alta cada vez que lo ven pasar en el chat de las transmisiones en vivo."
     },
     {
       "id": 24,
@@ -995,7 +1270,8 @@
       "explanationRu": "Чонгук выпустил песню 'Dreamers' совместно с катарским певцом Фахадом Аль-Кубаиси и выступил на стадионе Эль-Байт на церемонии открытия ЧМ-2022.",
       "explanationZh": "柾国与卡塔尔知名歌手Fahad Al Kubaisi合作演唱了世界杯官方主题曲《Dreamers》，并在海湾体育场开幕式上展现了无与伦比的现场舞台。",
       "funFact": "The music video for 'Dreamers' was filmed entirely in Qatar and reached millions of views within hours of its official release.",
-      "funFactKo": "'Dreamers' 뮤직비디오는 카타르 현지에서 로케이션으로 촬영되었으며, 공개 직후 전 세계 차트를 휩쓸며 폭발적인 인기를 얻었습니다."
+      "funFactKo": "'Dreamers' 뮤직비디오는 카타르 현지에서 로케이션으로 촬영되었으며, 공개 직후 전 세계 차트를 휩쓸며 폭발적인 인기를 얻었습니다.",
+      "funFactEs": "El video musical de \"Dreamers\" fue filmado íntegramente en Catar y alcanzó millones de vistas a pocas horas de su lanzamiento oficial."
     },
     {
       "id": 25,
@@ -1046,7 +1322,8 @@
       "explanationRu": "Ви (под своим настоящим именем Ким Тэхён) сыграл роль Хансона в дораме 2016 года 'Хваран', получив похвалу за эмоциональную игру, а также записал саундтрек 'It's Definitely You' вместе с Джином.",
       "explanationZh": "V（以本名金泰亨参演）在2016年电视剧《花郎》中出演天真烂漫的末位花郎“翰星”，演技备受好评，并与Jin合唱了该剧热门插曲《非你不可》（It's Definitely You）。",
       "funFact": "V formed a close lifelong friendship with his fellow 'Hwarang' co-stars Park Seo-joon and Park Hyung-sik, leading to the creation of the famous 'Wooga Squad'.",
-      "funFactKo": "뷔는 이 작품을 계기로 함께 출연한 배우 박서준, 박형식 등과 깊은 친분을 쌓게 되었으며, 이는 유명한 '우가패밀리(Wooga Squad)'의 시작이 되었습니다."
+      "funFactKo": "뷔는 이 작품을 계기로 함께 출연한 배우 박서준, 박형식 등과 깊은 친분을 쌓게 되었으며, 이는 유명한 '우가패밀리(Wooga Squad)'의 시작이 되었습니다.",
+      "funFactEs": "V formó una estrecha amistad de por vida con sus compañeros de reparto de \"Hwarang\", Park Seo-joon y Park Hyung-sik, dando origen al famoso \"Wooga Squad\"."
     },
     {
       "id": 26,
@@ -1097,7 +1374,8 @@
       "explanationRu": "Джин выпустил 'Super Tuna' в качестве веселого подарка поклонникам на свой день рождения, вдохновившись любовью к рыбалке. Зажигательный танец стал супервирусным во всем мире.",
       "explanationZh": "Jin出于对钓鱼的喜爱，创作了《Super Tuna》（超级金枪鱼）作为送给粉丝的生日礼物。简单洗脑的动作和旋律引发了全球欢快的舞蹈挑战。",
       "funFact": "Jin playfully asked fans on live stream to stop making the dance challenge so famous because he felt embarrassed, which only made fans do it even more!",
-      "funFactKo": "진은 챌린지 열풍이 너무 커지자 창피하다며 팬들에게 챌린지를 그만해달라고 유쾌한 당부를 남겨 오히려 더 큰 인기를 끌었습니다."
+      "funFactKo": "진은 챌린지 열풍이 너무 커지자 창피하다며 팬들에게 챌린지를 그만해달라고 유쾌한 당부를 남겨 오히려 더 큰 인기를 끌었습니다.",
+      "funFactEs": "¡Jin pidió en broma a los fans en una transmisión en vivo que dejaran de hacer tan famoso el reto de baile porque le daba vergüenza, lo que hizo que los fans lo bailaran aún más!"
     },
     {
       "id": 27,
@@ -1148,7 +1426,8 @@
       "explanationRu": "BTS FESTA — это ежегодный фестиваль, проводимый в начале июня вплоть до 13 июня, на котором BTS выпускают семейные фото, песни и видео для поклонников.",
       "explanationZh": "BTS FESTA是每年6月初至6月13日期间举办的年度盛典，期间防弹少年团会公开家族照、未发布歌曲、舞蹈练习室影片等丰富的免费内容。",
       "funFact": "Many iconic solo songs, including Jin's 'Tonight' and Jungkook's 'Still With You', were first released for free during BTS FESTA.",
-      "funFactKo": "진의 '이 밤', 정국의 'Still With You' 등 명곡 자작곡들이 BTS FESTA를 통해 팬들에게 최초로 무료 공개되었습니다."
+      "funFactKo": "진의 '이 밤', 정국의 'Still With You' 등 명곡 자작곡들이 BTS FESTA를 통해 팬들에게 최초로 무료 공개되었습니다.",
+      "funFactEs": "Muchas canciones solistas icónicas, incluidas \"Tonight\" de Jin y \"Still With You\" de Jungkook, se lanzaron inicialmente de forma gratuita durante el BTS FESTA."
     },
     {
       "id": 28,
@@ -1199,7 +1478,8 @@
       "explanationRu": "j-hope засэмплировал классический трек 'Chicken Noodle Soup', создав триязычный оммаж с узнаваемым танцевальным челленджем.",
       "explanationZh": "j-hope重释了幼年学舞时听过的经典曲目《Chicken Noodle Soup》，融合了韩语、英语和西班牙语，以特色的“鸡翅舞”风靡TikTok。",
       "funFact": "The music video brought together dancers from over 50 different countries to showcase unity and diverse street dance styles.",
-      "funFactKo": "뮤직비디오에는 50여 개국 출신의 스트리트 댄서들이 대거 출연하여 다채로운 문화와 춤의 화합을 그려냈습니다."
+      "funFactKo": "뮤직비디오에는 50여 개국 출신의 스트리트 댄서들이 대거 출연하여 다채로운 문화와 춤의 화합을 그려냈습니다.",
+      "funFactEs": "El video musical reunió a bailarines de más de 50 países diferentes para mostrar la unión y la diversidad de estilos de baile urbano."
     },
     {
       "id": 29,
@@ -1250,7 +1530,8 @@
       "explanationRu": "Выпущенная в марте 2020 года акустическая песня Ви 'Sweet Night' заняла 1-е место в iTunes в 119 регионах, продемонстрировав его грандиозный успех.",
       "explanationZh": "2020年3月发行的V自作曲《Sweet Night》是一首温情不失感性的不插电歌曲，在全球119个国家及地区iTunes榜登顶，展现了极高的全球影响力。",
       "funFact": "V participated in OST for 'Itaewon Class' to show warm personal support for his close friend, lead actor Park Seo-joon.",
-      "funFactKo": "뷔는 드라마의 주연이자 평소 친한 형인 배우 박서준과의 돈독한 우정을 응원하기 위해 이 OST 작업에 흔쾌히 참여했습니다."
+      "funFactKo": "뷔는 드라마의 주연이자 평소 친한 형인 배우 박서준과의 돈독한 우정을 응원하기 위해 이 OST 작업에 흔쾌히 참여했습니다.",
+      "funFactEs": "V participó en la banda sonora de \"Itaewon Class\" para mostrar su cálido apoyo personal a su gran amigo, el actor principal Park Seo-joon."
     },
     {
       "id": 30,
@@ -1301,7 +1582,8 @@
       "explanationRu": "СУГА изначально планировал только продюсировать трек, но PSY убедил его спеть партии и сняться в клипе с зажигательными танцами.",
       "explanationZh": "SUGA最初计划只负责作词作曲，但在PSY的“忽悠”与步步邀请下，最终不仅参与了合唱，还穿上牛仔服在MV中和PSY一起热舞。",
       "funFact": "The 'That That' music video crossed 100 million views on YouTube in less than a week after release.",
-      "funFactKo": "'That That' 뮤직비디오는 공개 일주일도 채 되지 않아 유튜브 조회수 1억 뷰를 돌파하는 기염을 토했습니다."
+      "funFactKo": "'That That' 뮤직비디오는 공개 일주일도 채 되지 않아 유튜브 조회수 1억 뷰를 돌파하는 기염을 토했습니다.",
+      "funFactEs": "El video musical de \"That That\" superó las 100 millones de vistas en YouTube en menos de una semana tras su lanzamiento."
     },
     {
       "id": 31,
@@ -1352,7 +1634,8 @@
       "explanationRu": "BTS записали выступление 'IDOL' перед залом Кынчжончжон в дворце Кёнбоккун, продемонстрировав традиционную корейскую красоту миллионам зрителей.",
       "explanationZh": "防弹少年团在韩国国宝级建筑景福宫勤政殿前，身穿揉合传统与现代风格的韩服表演《IDOL》，向全球观众展现了韩国传统文化的独特魅力。",
       "funFact": "They also performed 'Mikrokosmos' at Gyeongbokgung's Gyeonghoeru Pavilion during the same NBC 'BTS Week' special.",
-      "funFactKo": "같은 주간 방송에서 경복궁 경회루를 배경으로 선보인 '소우주 (Mikrokosmos)' 무대 역시 환상적인 밤풍경으로 큰 찬사를 받았습니다."
+      "funFactKo": "같은 주간 방송에서 경복궁 경회루를 배경으로 선보인 '소우주 (Mikrokosmos)' 무대 역시 환상적인 밤풍경으로 큰 찬사를 받았습니다.",
+      "funFactEs": "También interpretaron \"Mikrokosmos\" en el Pabellón Gyeonghoeru del Palacio Gyeongbokgung durante el mismo especial \"BTS Week\" de NBC."
     },
     {
       "id": 32,
@@ -1403,7 +1686,8 @@
       "explanationRu": "Акустическая баллада Чимина 'Promise' набрала 8,5 миллионов прослушиваний за 24 часа на SoundCloud, побив все рекордные показатели платформы.",
       "explanationZh": "智旻的温情暖心曲《약속》（Promise）在SoundCloud发布24小时内即斩获850万次播放，一举成为该平台史上24小时单曲播放冠军及累计播放量最高的歌曲。",
       "funFact": "Jimin co-wrote the lyrics alongside RM, reflecting on making an honest promise to love oneself through difficult times.",
-      "funFactKo": "지민은 RM과 함께 가사를 작업하며 힘든 순간에도 자기 자신을 아끼고 솔직해지자는 다짐을 이 곡에 따뜻하게 담아냈습니다."
+      "funFactKo": "지민은 RM과 함께 가사를 작업하며 힘든 순간에도 자기 자신을 아끼고 솔직해지자는 다짐을 이 곡에 따뜻하게 담아냈습니다.",
+      "funFactEs": "Jimin coescribió la letra junto a RM, reflexionando sobre hacerse una promesa honesta de amarse a uno mismo en los momentos difíciles."
     },
     {
       "id": 33,
@@ -1454,7 +1738,8 @@
       "explanationRu": "'BU' означает 'BTS Universe' — переплетенная история с особым логотипом, в центре которой находятся темы юности, дружбы и путешествий во времени.",
       "explanationZh": "“BU”代表“BTS Universe”（防弹少年团世界观），是一套融合了MV、网漫《花样年华 Pt.0 <SAVE ME>》及衍生小说等跨媒体的青春成长主题宏大长篇叙事体系。",
       "funFact": "Music videos belonging to the official storylines carry a explicit 'BU Content Certified' certification mark in their descriptions.",
-      "funFactKo": "BU 세계관에 포함된 정식 뮤직비디오와 콘텐츠 하단에는 빅히트 엔터테인먼트의 'BU content certified' 인증 마크가 표시되어 있습니다."
+      "funFactKo": "BU 세계관에 포함된 정식 뮤직비디오와 콘텐츠 하단에는 빅히트 엔터테인먼트의 'BU content certified' 인증 마크가 표시되어 있습니다.",
+      "funFactEs": "Los videos musicales que pertenecen a la historia oficial llevan una marca explícita de certificación \"BU Content Certified\" en sus descripciones."
     },
     {
       "id": 34,
@@ -1505,7 +1790,8 @@
       "explanationRu": "Ви сел рядом с Оливией Родриго в зале, шепнул ей что-то на ухо и извлек золотую карточку агента, запустив шпионский танец.",
       "explanationZh": "V坐在观众席的Olivia Rodrigo身旁，附耳低语后巧妙变出一张金色特工卡片，以此开启了宛如大片般精密的谍战风《Butter》舞蹈。",
       "funFact": "Billboard named BTS's 'Butter' performance as the #1 best performance of the entire 64th Grammy Awards ceremony.",
-      "funFactKo": "미국 빌보드 매거진은 이 무대를 2022년 제64회 그래미 어워즈 전체 공연 중 최고(No. 1)의 무대로 선정했습니다."
+      "funFactKo": "미국 빌보드 매거진은 이 무대를 2022년 제64회 그래미 어워즈 전체 공연 중 최고(No. 1)의 무대로 선정했습니다.",
+      "funFactEs": "Billboard nombró la presentación de \"Butter\" de BTS como la mejor actuación (#1) de toda la 64.ª ceremonia de los Premios Grammy."
     },
     {
       "id": 35,
@@ -1556,7 +1842,8 @@
       "explanationRu": "BTS выступили с речью на сессии ООН 'SDG Moment', рассказав о жизненном опыте молодежи в период пандемии и назвав их 'добро пожаловать, поколение'.",
       "explanationZh": "防弹少年团在联合国“SDG Moment”（可持续发展目标）开幕环节登台演讲，分享了全球年轻一代在疫情期间的真实经历与积极信念，称年轻人并非“失落的一代”而是“欢迎的一代”。",
       "funFact": "They filmed the 'Permission to Dance' performance moving inside the UN General Assembly Hall and out onto the lawns along the East River in New York.",
-      "funFactKo": "유엔 총회 회의장 내부에서 시작해 뉴욕 이스트강변 야외 정원까지 연결되는 'Permission to Dance' 퍼포먼스 영상은 전 세계의 뜨거운 관심을 받았습니다."
+      "funFactKo": "유엔 총회 회의장 내부에서 시작해 뉴욕 이스트강변 야외 정원까지 연결되는 'Permission to Dance' 퍼포먼스 영상은 전 세계의 뜨거운 관심을 받았습니다.",
+      "funFactEs": "Filmaron la interpretación de \"Permission to Dance\" recorriendo el Salón de la Asamblea General de la ONU y saliendo hacia los jardines junto al East River en Nueva York."
     }
   ],
   "scoreTiers": [

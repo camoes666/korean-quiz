@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Sparkles, Flame, Zap, ChevronDown, Check, Trophy, BookOpen } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { quizzes } from '@/data/quizzes';
+import { getLocalizedText } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 
@@ -16,7 +17,8 @@ export default function Navbar() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const currentLang = languages.find((l) => l.code === lang) || languages[0];
-  const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
+  const levelTitle = getLocalizedText(currentLevel, 'title', lang);
+  const levelPrefix = lang === 'es' || lang === 'pt' ? 'Nv.' : 'Lv.';
 
   const handleRandomQuiz = () => {
     if (!quizzes.length) return;
@@ -64,35 +66,53 @@ export default function Navbar() {
           {/* Daily Streak Pill */}
           <div
             className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 border border-rose-200 text-rose-600 font-black text-xs shadow-xs cursor-default"
-            title={`${streak} Day Streak!`}
+            title={
+              lang === 'es'
+                ? `¡${streak} días de racha!`
+                : lang === 'pt'
+                ? `${streak} dias de ofensiva!`
+                : lang === 'ko'
+                ? `${streak}일 연속 출석!`
+                : `${streak} Day Streak!`
+            }
           >
             <Flame className="w-4 h-4 fill-current animate-pulse text-rose-500" />
             <span className="tabular-nums font-extrabold">{streak}</span>
             <span className="hidden md:inline font-bold text-[11px]">
-              {lang === 'en' ? 'd streak' : lang === 'es' ? 'días de racha' : lang === 'ko' ? '일 연속' : lang === 'ru' ? 'дн. подряд' : lang === 'zh' ? '天连续' : 'd streak'}
+              {lang === 'es'
+                ? 'días de racha'
+                : lang === 'pt'
+                ? 'dias seguidos'
+                : lang === 'ko'
+                ? '일 연속'
+                : lang === 'ru'
+                ? 'дн. подряд'
+                : lang === 'zh'
+                ? '天连续'
+                : 'd streak'}
             </span>
           </div>
 
           {/* XP & Level Pill */}
           <div
             className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 font-black text-xs shadow-xs cursor-default"
-            title={`Level ${currentLevel.level}: ${levelTitle}`}
+            title={`${levelPrefix}${currentLevel.level}: ${levelTitle}`}
           >
             <Zap className="w-4 h-4 fill-current text-emerald-500" />
             <span className="tabular-nums font-extrabold">{xp}</span>
             <span className="text-[10px] font-bold text-emerald-600">XP</span>
             <span className="hidden lg:inline-flex items-center gap-1 text-[11px] font-bold border-l border-emerald-200 pl-2 ml-1 text-slate-600">
               <span>{currentLevel.badgeEmoji}</span>
-              <span>Lv.{currentLevel.level}</span>
+              <span>{levelPrefix}{currentLevel.level}</span>
             </span>
           </div>
 
-          {/* 5-Language Dropdown Switcher */}
+          {/* Language Dropdown Switcher */}
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen((prev) => !prev)}
               className="flex items-center gap-1.5 rounded-full border border-purple-100 bg-white hover:bg-purple-50/50 px-3 py-1.5 text-xs font-bold text-slate-800 transition-all shadow-xs active:scale-95"
-              aria-label="Select language"
+              aria-label={t.selectLanguage}
             >
               <span className="text-sm">{currentLang.flag}</span>
               <span className="hidden sm:inline font-extrabold">{currentLang.label}</span>
@@ -106,7 +126,7 @@ export default function Navbar() {
             {dropdownOpen && (
               <div className="absolute right-0 mt-2 w-44 rounded-2xl border-2 border-purple-100 bg-white p-1.5 shadow-xl shadow-purple-500/10 z-50 animate-fadeIn">
                 <div className="text-[10px] font-black uppercase tracking-wider text-slate-400 px-2.5 py-1 mb-1 border-b border-slate-100">
-                  Select Language
+                  {t.selectLanguage}
                 </div>
                 {languages.map((l) => {
                   const isSelected = l.code === lang;
@@ -139,14 +159,22 @@ export default function Navbar() {
           <Link
             href="/guide"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-purple-200 bg-purple-50/70 hover:bg-purple-100 text-purple-700 font-extrabold text-xs transition-all shadow-2xs hover:scale-105 shrink-0"
-            title={lang === 'ko' ? 'K-컬처 & K-Pop 지식 가이드' : lang === 'es' ? 'Guías de Lore' : 'Knowledge & Lore Guides'}
+            title={
+              lang === 'ko'
+                ? 'K-컬처 & K-Pop 지식 가이드'
+                : lang === 'es'
+                ? 'Guías de Lore'
+                : lang === 'pt'
+                ? 'Guias de Lore'
+                : 'Knowledge & Lore Guides'
+            }
           >
             <BookOpen className="w-3.5 h-3.5 text-purple-600" />
             <span>
-              {lang === 'en'
-                ? 'Guides'
-                : lang === 'es'
+              {lang === 'es'
                 ? 'Guías'
+                : lang === 'pt'
+                ? 'Guias'
                 : lang === 'ko'
                 ? '지식 가이드'
                 : lang === 'ru'
