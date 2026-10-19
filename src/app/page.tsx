@@ -76,11 +76,11 @@ const QUICK_FANDOM_CHIPS: QuickFandomChip[] = [
 ];
 
 const LIVE_SOULMATE_TICKER = [
-  { emoji: '💜', name: 'Jungkook (BTS)', match: '99%', color: 'text-purple-200 bg-purple-500/30 border-purple-400/40' },
-  { emoji: '🖤💖', name: 'Lisa (BLACKPINK)', match: '98%', color: 'text-pink-200 bg-pink-500/30 border-pink-400/40' },
-  { emoji: '🧭', name: 'Felix (Stray Kids)', match: '99%', color: 'text-amber-200 bg-amber-500/25 border-amber-400/40' },
-  { emoji: '💜', name: 'V · Taehyung (BTS)', match: '97%', color: 'text-purple-200 bg-purple-500/30 border-purple-400/40' },
-  { emoji: '🖤💖', name: 'Jennie (BLACKPINK)', match: '98%', color: 'text-pink-200 bg-pink-500/30 border-pink-400/40' },
+  { emoji: '💜', member: 'Jungkook', group: 'BTS', match: '99%', color: 'text-purple-100 bg-purple-500/30 border-purple-400/40' },
+  { emoji: '💖', member: 'Lisa', group: 'BLACKPINK', match: '98%', color: 'text-pink-100 bg-pink-500/30 border-pink-400/40' },
+  { emoji: '🧭', member: 'Felix', group: 'Stray Kids', match: '99%', color: 'text-amber-100 bg-amber-500/25 border-amber-400/40' },
+  { emoji: '💜', member: 'V · Taehyung', group: 'BTS', match: '97%', color: 'text-purple-100 bg-purple-500/30 border-purple-400/40' },
+  { emoji: '💖', member: 'Jennie', group: 'BLACKPINK', match: '98%', color: 'text-pink-100 bg-pink-500/30 border-pink-400/40' },
 ];
 
 export default function HomePage() {
@@ -409,20 +409,52 @@ export default function HomePage() {
                       : 'Which K-Pop Member Matches Your Soul?'}
                   </h2>
 
-                  {/* Live Cycling Soulmate Match Preview Pill */}
-                  <div className="mt-2.5 inline-flex items-center gap-2 rounded-xl bg-black/30 backdrop-blur-md border border-white/15 px-3 py-1.5 text-xs font-bold">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    <span className="text-purple-200/80 text-[11px]">
-                      {lang === 'ko' ? '실시간 매칭:' : lang === 'es' || lang === 'pt' ? 'Match en vivo:' : 'Live Match:'}
-                    </span>
-                    <span
+                  {/* Live Cycling Soulmate Match Preview Pill (Fixed 2-line height to prevent layout shift) */}
+                  <div className="mt-2.5 flex items-center justify-between gap-2.5 rounded-xl bg-black/30 backdrop-blur-md border border-white/15 px-3 py-1.5 h-[52px] w-full max-w-[270px]">
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                      <span className="text-purple-200/85 text-[11px] font-bold leading-tight">
+                        {lang === 'ko' ? (
+                          <>
+                            실시간
+                            <br />
+                            매칭:
+                          </>
+                        ) : lang === 'es' || lang === 'pt' ? (
+                          <>
+                            Match
+                            <br />
+                            en vivo:
+                          </>
+                        ) : (
+                          <>
+                            Live
+                            <br />
+                            Match:
+                          </>
+                        )}
+                      </span>
+                    </div>
+
+                    <div
                       key={tickerIndex}
-                      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md border text-[11px] font-black transition-all duration-300 ${currentTicker.color}`}
+                      className={`flex-1 flex items-center justify-between gap-2 px-2.5 py-1 rounded-lg border h-[38px] transition-all duration-300 ${currentTicker.color}`}
                     >
-                      <span>{currentTicker.emoji}</span>
-                      <span>{currentTicker.name}</span>
-                      <span className="tabular-nums">{currentTicker.match}</span>
-                    </span>
+                      <div className="flex items-center gap-1.5 min-w-0 leading-tight">
+                        <span className="text-xs shrink-0">{currentTicker.emoji}</span>
+                        <div className="min-w-0">
+                          <div className="text-[11px] font-black truncate leading-tight">
+                            {currentTicker.member}
+                          </div>
+                          <div className="text-[10px] font-bold opacity-80 truncate leading-tight">
+                            ({currentTicker.group})
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-xs font-black tabular-nums shrink-0">
+                        {currentTicker.match}
+                      </span>
+                    </div>
                   </div>
 
                   {/* Quick Direct Links to the 3 Idol Soulmate Tests */}
