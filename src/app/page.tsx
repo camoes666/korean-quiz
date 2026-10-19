@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getAllQuizzes } from '@/data/quizzes';
 import { Category, getLocalizedText } from '@/types/quiz';
@@ -20,6 +20,7 @@ import {
   Zap,
   Swords,
   CheckCircle2,
+  Timer,
 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
@@ -74,12 +75,30 @@ const QUICK_FANDOM_CHIPS: QuickFandomChip[] = [
   },
 ];
 
+const LIVE_SOULMATE_TICKER = [
+  { emoji: '💜', name: 'Jungkook (BTS)', match: '99%', color: 'text-purple-200 bg-purple-500/30 border-purple-400/40' },
+  { emoji: '🖤💖', name: 'Lisa (BLACKPINK)', match: '98%', color: 'text-pink-200 bg-pink-500/30 border-pink-400/40' },
+  { emoji: '🧭', name: 'Felix (Stray Kids)', match: '99%', color: 'text-amber-200 bg-amber-500/25 border-amber-400/40' },
+  { emoji: '💜', name: 'V · Taehyung (BTS)', match: '97%', color: 'text-purple-200 bg-purple-500/30 border-purple-400/40' },
+  { emoji: '🖤💖', name: 'Jennie (BLACKPINK)', match: '98%', color: 'text-pink-200 bg-pink-500/30 border-pink-400/40' },
+];
+
 export default function HomePage() {
   const { t, lang } = useLanguage();
   const { xp, streak, currentLevel, dailyQuestCompleted } = useGame();
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [selectedTag, setSelectedTag] = useState<string>('All');
   const [selectedMode, setSelectedMode] = useState<QuizModeFilter>('all');
+  const [tickerIndex, setTickerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTickerIndex((prev) => (prev + 1) % LIVE_SOULMATE_TICKER.length);
+    }, 2600);
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentTicker = LIVE_SOULMATE_TICKER[tickerIndex];
 
   const allQuizzes = getAllQuizzes();
   const triviaCount = allQuizzes.filter((q) => q.quizType !== 'personality').length;
@@ -137,14 +156,17 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-[#F9FAFB]">
-      {/* 1. ASYMMETRIC SPLIT HERO + BENTO SHOWCASE */}
-      <section className="relative overflow-hidden pt-4 pb-10 sm:pt-6 sm:pb-14 border-b border-purple-100/90 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-100/65 via-white to-[#F9FAFB]">
-        {/* Ambient background glow accents */}
-        <div className="pointer-events-none absolute -top-24 right-0 w-96 h-96 rounded-full bg-pink-200/30 blur-3xl" />
-        <div className="pointer-events-none absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-indigo-200/25 blur-3xl" />
+      {/* 1. ASYMMETRIC SPLIT HERO + BENTO SHOWCASE WITH MOTION GRAPHICS */}
+      <section className="relative overflow-hidden pt-4 pb-10 sm:pt-6 sm:pb-14 border-b border-purple-100/90 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-100/70 via-white to-[#F9FAFB]">
+        {/* Animated Aurora Mesh Background Blobs */}
+        <div className="pointer-events-none absolute -top-20 right-10 w-96 h-96 rounded-full bg-pink-300/30 blur-3xl animate-kpulse-blob" />
+        <div
+          className="pointer-events-none absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-purple-300/25 blur-3xl animate-kpulse-blob"
+          style={{ animationDelay: '-4s' }}
+        />
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-          {/* Top Compact Player Status Bar (Replaces bulky above-the-fold widgets) */}
+          {/* Top Compact Player Status Bar */}
           <div className="mb-6 sm:mb-8 flex flex-wrap items-center justify-between gap-2.5 rounded-2xl bg-white/85 backdrop-blur-md border border-purple-100/90 px-3.5 py-2 shadow-xs">
             <div className="flex items-center gap-2.5 flex-wrap">
               <div className="flex items-center gap-1.5 pr-2.5 border-r border-slate-200">
@@ -233,7 +255,10 @@ export default function HomePage() {
             {/* LEFT COLUMN (7 Cols): High-Impact Headline, Dual CTAs & Fandom Quick Chips */}
             <div className="lg:col-span-7 text-left">
               <div className="inline-flex items-center gap-2 rounded-full border border-purple-200/90 bg-white/95 px-3.5 py-1.5 text-xs font-black text-purple-800 shadow-xs mb-5">
-                <span className="w-2 h-2 rounded-full bg-pink-500 animate-ping" />
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-pink-500" />
+                </span>
                 <span>{t.heroBadge}</span>
                 <span className="text-slate-300">|</span>
                 <span className="text-pink-600 tabular-nums">
@@ -249,7 +274,7 @@ export default function HomePage() {
 
               <h1 className="text-4xl sm:text-5xl lg:text-[3.4rem] font-black tracking-tight text-slate-950 leading-[1.08] [text-wrap:balance]">
                 {t.heroTitlePre}{' '}
-                <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent animate-kpulse-shimmer-text">
                   {t.heroTitleHighlight}
                 </span>
               </h1>
@@ -258,14 +283,19 @@ export default function HomePage() {
                 {t.heroSubtitle}
               </p>
 
-              {/* Dual Primary Action Buttons */}
+              {/* Dual Primary Action Buttons with Shine Motion */}
               <div className="mt-7 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <button
                   type="button"
                   onClick={() => scrollToQuizzes({ mode: 'trivia' })}
-                  className="inline-flex items-center justify-center gap-2.5 rounded-2xl bg-slate-950 hover:bg-slate-800 text-white px-6 py-4 text-sm sm:text-base font-black shadow-lg shadow-slate-950/15 transition-all active:scale-[0.98] cursor-pointer"
+                  className="relative overflow-hidden inline-flex items-center justify-center gap-2.5 rounded-2xl bg-slate-950 hover:bg-slate-800 text-white px-6 py-4 text-sm sm:text-base font-black shadow-lg shadow-slate-950/15 transition-all hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer group"
                 >
-                  <Swords className="w-4 h-4 text-amber-400" />
+                  {/* Periodic Diagonal Light Shine */}
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-kpulse-shine"
+                  />
+                  <Swords className="w-4 h-4 text-amber-400 group-hover:rotate-12 transition-transform" />
                   <span>
                     {lang === 'ko'
                       ? '15초 스피드 퀴즈 & 1:1 대결'
@@ -275,15 +305,15 @@ export default function HomePage() {
                       ? 'Quiz Rápido 15s e Duelo 1:1'
                       : '15s Speed Quiz & 1:1 Duel'}
                   </span>
-                  <ArrowRight className="w-4 h-4 text-slate-400" />
+                  <ArrowRight className="w-4 h-4 text-slate-400 group-hover:translate-x-1 transition-transform" />
                 </button>
 
                 <button
                   type="button"
                   onClick={() => scrollToQuizzes({ mode: 'personality' })}
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white hover:bg-pink-50/60 text-slate-900 border-2 border-pink-200 hover:border-pink-400 px-6 py-4 text-sm sm:text-base font-black shadow-sm transition-all active:scale-[0.98] cursor-pointer"
+                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white hover:bg-pink-50/60 text-slate-900 border-2 border-pink-200 hover:border-pink-400 px-6 py-4 text-sm sm:text-base font-black shadow-sm transition-all hover:-translate-y-0.5 active:scale-[0.98] cursor-pointer group"
                 >
-                  <Heart className="w-4 h-4 text-pink-500 fill-current" />
+                  <Heart className="w-4 h-4 text-pink-500 fill-current group-hover:scale-110 transition-transform" />
                   <span>
                     {lang === 'ko'
                       ? '아이돌 소울메이트 테스트'
@@ -299,7 +329,7 @@ export default function HomePage() {
               {/* Fandom Quick-Jump Filter Bar */}
               <div className="mt-7 pt-5 border-t border-purple-100/90">
                 <div className="text-[11px] font-black uppercase tracking-wider text-slate-400 mb-2.5 flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-purple-500" />
+                  <Sparkles className="w-3.5 h-3.5 text-purple-500 animate-spin" style={{ animationDuration: '6s' }} />
                   <span>
                     {lang === 'ko'
                       ? '관심 팬덤 · 테마 바로가기'
@@ -322,7 +352,7 @@ export default function HomePage() {
                           tag: chip.tag,
                         })
                       }
-                      className={`inline-flex items-center gap-1.5 rounded-xl bg-white border px-3.5 py-2 text-xs font-black shadow-2xs transition-all active:scale-95 cursor-pointer ${chip.badgeClass}`}
+                      className={`inline-flex items-center gap-1.5 rounded-xl bg-white border px-3.5 py-2 text-xs font-black shadow-2xs transition-all hover:-translate-y-0.5 active:scale-95 cursor-pointer ${chip.badgeClass}`}
                     >
                       <span>{chip.emoji}</span>
                       <span>{t.tags[chip.label] || t.categories[chip.label] || chip.label}</span>
@@ -332,11 +362,21 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN (5 Cols): Bento Featured Game Showcase with Hobi & Bomi */}
+            {/* RIGHT COLUMN (5 Cols): Bento Featured Game Showcase with Live Motion Graphics */}
             <div className="lg:col-span-5 flex flex-col gap-4">
-              {/* Featured Card 1: Soulmate Match Showcase */}
+              {/* Featured Card 1: Soulmate Match Showcase with Levitating Bomi & Live Chemistry Ticker */}
               <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-950 via-indigo-950 to-fuchsia-950 text-white p-5 sm:p-6 shadow-xl shadow-purple-950/15 border border-white/15 group">
-                <div className="pointer-events-none absolute -right-6 -bottom-4 w-36 h-36 sm:w-40 sm:h-40 select-none z-10 transition-transform duration-300 group-hover:scale-105">
+                {/* Pulsing Lightstick Aura Glow behind Bomi */}
+                <div className="pointer-events-none absolute -right-4 -bottom-4 w-36 h-36 rounded-full bg-pink-500/35 blur-2xl animate-kpulse-aura" />
+
+                {/* Floating Sparkle Match Pill */}
+                <div className="pointer-events-none absolute top-3.5 right-3.5 z-30 hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[10px] font-black text-pink-200 animate-kpulse-badge">
+                  <span>✨</span>
+                  <span>99% SOUL MATCH</span>
+                </div>
+
+                {/* Levitating Bomi Mascot */}
+                <div className="pointer-events-none absolute -right-5 -bottom-3 w-36 h-36 sm:w-40 sm:h-40 select-none z-10 animate-kpulse-float">
                   <img
                     src="/images/mascot/bomi-blackpink-v2.webp"
                     alt="Mascot Bomi"
@@ -369,35 +409,41 @@ export default function HomePage() {
                       : 'Which K-Pop Member Matches Your Soul?'}
                   </h2>
 
-                  <p className="mt-1.5 text-xs text-purple-200/90 font-medium leading-relaxed">
-                    {lang === 'ko'
-                      ? '10가지 상황 질문으로 알아보는 내 성향과 환상의 케미 멤버 카드 발급!'
-                      : lang === 'es'
-                      ? 'Responde 10 preguntas y descarga tu tarjeta oficial de compatibilidad.'
-                      : lang === 'pt'
-                      ? 'Responda 10 perguntas e baixe seu cartão oficial de compatibilidade.'
-                      : '10 scenario questions + instant shareable chemistry result card.'}
-                  </p>
+                  {/* Live Cycling Soulmate Match Preview Pill */}
+                  <div className="mt-2.5 inline-flex items-center gap-2 rounded-xl bg-black/30 backdrop-blur-md border border-white/15 px-3 py-1.5 text-xs font-bold">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-purple-200/80 text-[11px]">
+                      {lang === 'ko' ? '실시간 매칭:' : lang === 'es' || lang === 'pt' ? 'Match en vivo:' : 'Live Match:'}
+                    </span>
+                    <span
+                      key={tickerIndex}
+                      className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-md border text-[11px] font-black transition-all duration-300 ${currentTicker.color}`}
+                    >
+                      <span>{currentTicker.emoji}</span>
+                      <span>{currentTicker.name}</span>
+                      <span className="tabular-nums">{currentTicker.match}</span>
+                    </span>
+                  </div>
 
                   {/* Quick Direct Links to the 3 Idol Soulmate Tests */}
                   <div className="mt-4 flex flex-wrap items-center gap-1.5">
                     <Link
                       href="/quiz/which-bts-member-are-you"
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white text-slate-950 hover:bg-purple-100 text-xs font-black shadow-xs transition-all active:scale-95"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white text-slate-950 hover:bg-purple-100 text-xs font-black shadow-xs transition-all hover:-translate-y-0.5 active:scale-95"
                     >
                       <span>💜 BTS</span>
                       <ArrowRight className="w-3 h-3" />
                     </Link>
                     <Link
                       href="/quiz/which-blackpink-member-are-you"
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-pink-500/90 hover:bg-pink-500 text-white text-xs font-black shadow-xs transition-all active:scale-95"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-pink-500/90 hover:bg-pink-500 text-white text-xs font-black shadow-xs transition-all hover:-translate-y-0.5 active:scale-95"
                     >
                       <span>🖤💖 BLACKPINK</span>
                       <ArrowRight className="w-3 h-3" />
                     </Link>
                     <Link
                       href="/quiz/which-stray-kids-member-are-you"
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/20 text-xs font-bold transition-all active:scale-95"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-white/15 hover:bg-white/25 text-white border border-white/20 text-xs font-bold transition-all hover:-translate-y-0.5 active:scale-95"
                     >
                       <span>🧭 SKZ</span>
                       <ArrowRight className="w-3 h-3" />
@@ -406,9 +452,25 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Featured Card 2: 15s Speed Trivia & 1:1 Friend Duel */}
+              {/* Featured Card 2: 15s Speed Trivia & 1:1 Friend Duel with Animated Timer Bar & Levitating Hobi */}
               <div className="relative overflow-hidden rounded-3xl bg-white border-2 border-purple-100 hover:border-purple-300 p-5 sm:p-6 shadow-lg shadow-purple-500/5 transition-all group">
-                <div className="pointer-events-none absolute -right-4 -bottom-4 w-32 h-32 sm:w-36 sm:h-36 select-none z-10 transition-transform duration-300 group-hover:scale-105">
+                {/* Pulsing ARMY Bomb Aura behind Hobi */}
+                <div
+                  className="pointer-events-none absolute -right-4 -bottom-4 w-32 h-32 rounded-full bg-purple-400/25 blur-2xl animate-kpulse-aura"
+                  style={{ animationDelay: '-1.5s' }}
+                />
+
+                {/* Floating Speed Bonus Badge */}
+                <div
+                  className="pointer-events-none absolute top-3.5 right-3.5 z-30 hidden sm:flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[10px] font-black text-emerald-700 shadow-2xs animate-kpulse-badge"
+                  style={{ animationDelay: '-1.2s' }}
+                >
+                  <Zap className="w-3 h-3 text-emerald-600 fill-current" />
+                  <span>+980 PTS COMBO!</span>
+                </div>
+
+                {/* Levitating Hobi Mascot */}
+                <div className="pointer-events-none absolute -right-4 -bottom-3 w-32 h-32 sm:w-36 sm:h-36 select-none z-10 animate-kpulse-float-reverse">
                   <img
                     src="/images/mascot/hobi-bts-v2.webp"
                     alt="Mascot Hobi"
@@ -446,20 +508,30 @@ export default function HomePage() {
                       : 'Beat the 15-Second Speed Trivia!'}
                   </h2>
 
-                  <p className="mt-1 text-xs text-slate-500 font-medium leading-relaxed">
-                    {lang === 'ko'
-                      ? '루키·팬·하드코어 난이도 선택 후 내 점수로 친구에게 도전장을 보내세요.'
-                      : lang === 'es'
-                      ? 'Elige tu nivel (Novato, Fan, Experto) y reta a tus amigos con tu enlace.'
-                      : lang === 'pt'
-                      ? 'Escolha seu nível (Novato, Fã, Experto) e desafie seus amigos com seu link.'
-                      : 'Pick your level (Rookie, Fan, Hardcore) and send a 1:1 challenge link to friends.'}
-                  </p>
+                  {/* Animated 15s Countdown Gauge Preview */}
+                  <div className="mt-2.5 mb-3 rounded-xl bg-slate-50 border border-slate-200/80 p-2.5">
+                    <div className="flex items-center justify-between text-[10px] font-black text-slate-600 mb-1.5">
+                      <span className="inline-flex items-center gap-1 text-purple-700">
+                        <Timer className="w-3 h-3 animate-spin" style={{ animationDuration: '4s' }} />
+                        <span>
+                          {lang === 'ko'
+                            ? '15초 스피드 보너스 타이머'
+                            : lang === 'es' || lang === 'pt'
+                            ? 'Temporizador Rápido 15s'
+                            : '15s Speed Bonus Timer'}
+                        </span>
+                      </span>
+                      <span className="text-rose-600 tabular-nums">Lv.1 · Lv.2 · Lv.3</span>
+                    </div>
+                    <div className="h-2 w-full rounded-full bg-slate-200/80 overflow-hidden">
+                      <div className="h-full w-full rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-amber-400 animate-kpulse-timer" />
+                    </div>
+                  </div>
 
-                  <div className="mt-3.5 flex flex-wrap items-center gap-2">
+                  <div className="mt-3 flex flex-wrap items-center gap-2">
                     <Link
                       href="/quiz/bts-army-trivia"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-black shadow-xs transition-all active:scale-95"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white text-xs font-black shadow-xs transition-all hover:-translate-y-0.5 active:scale-95"
                     >
                       <span>
                         {lang === 'ko'
@@ -474,7 +546,7 @@ export default function HomePage() {
                     </Link>
                     <Link
                       href="/quiz/blackpink-blink-trivia"
-                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-black transition-all active:scale-95"
+                      className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-black transition-all hover:-translate-y-0.5 active:scale-95"
                     >
                       <span>BLACKPINK</span>
                       <ArrowRight className="w-3 h-3" />

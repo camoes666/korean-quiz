@@ -25,3 +25,124 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@keyframes kpulseFloat {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -10px, 0) rotate(1.5deg);
+  }
+}
+
+@keyframes kpulseFloatReverse {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate3d(0, -8px, 0) rotate(-1.5deg);
+  }
+}
+
+@keyframes kpulseBadgeBob {
+  0%, 100% {
+    transform: translate3d(0, 0px, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -5px, 0) scale(1.04);
+  }
+}
+
+@keyframes kpulseGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes kpulseBtnShine {
+  0% {
+    transform: translateX(-140%) skewX(-20deg);
+  }
+  35%, 100% {
+    transform: translateX(260%) skewX(-20deg);
+  }
+}
+
+@keyframes kpulseTimerSweep {
+  0% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(0.18);
+  }
+  90%, 100% {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes kpulseAuraPulse {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.12);
+    opacity: 0.85;
+  }
+}
+
+@keyframes kpulseBlobDrift {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(18px, -16px, 0) scale(1.08);
+  }
+}
+
+.animate-kpulse-float {
+  animation: kpulseFloat 4.2s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-kpulse-float-reverse {
+  animation: kpulseFloatReverse 4.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-kpulse-badge {
+  animation: kpulseBadgeBob 3s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-kpulse-shimmer-text {
+  background-size: 220% auto;
+  animation: kpulseGradientShift 5s ease infinite;
+}
+
+.animate-kpulse-shine {
+  animation: kpulseBtnShine 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-kpulse-timer {
+  transform-origin: left center;
+  animation: kpulseTimerSweep 5.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform;
+}
+
+.animate-kpulse-aura {
+  animation: kpulseAuraPulse 3.2s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.animate-kpulse-blob {
+  animation: kpulseBlobDrift 9s ease-in-out infinite;
+  will-change: transform;
+}
+
