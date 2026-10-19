@@ -69,7 +69,7 @@ export function trackQuizComplete(params: {
 
 export function trackShare(params: {
   slug?: string;
-  method: 'challenge_copy' | 'link_copy' | 'native_share' | 'twitter' | 'counter_challenge';
+  method: 'challenge_copy' | 'link_copy' | 'native_share' | 'twitter' | 'whatsapp' | 'counter_challenge';
   lang: Language;
 }): void {
   trackEvent('share_click', {

@@ -113,6 +113,7 @@ export default function PersonalityTestRunner({
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [scores, setScores] = useState<Record<string, number>>(() => getInitialScores());
   const [matchedResult, setMatchedResult] = useState<PersonalityMemberResult | null>(null);
+  const [friendMatch, setFriendMatch] = useState<PersonalityMemberResult | null>(null);
   const [copied, setCopied] = useState(false);
   const [isGeneratingCard, setIsGeneratingCard] = useState(false);
   const [cardDownloaded, setCardDownloaded] = useState(false);
@@ -120,12 +121,22 @@ export default function PersonalityTestRunner({
   const currentQ = questions[currentIndex];
   const progressPercent = Math.round(((currentIndex) / questions.length) * 100);
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const params = new URLSearchParams(window.location.search);
+    const friendMemberId = params.get('m');
+    if (friendMemberId && resultsMap[friendMemberId]) {
+      setFriendMatch(resultsMap[friendMemberId]);
+    }
+  }, [resultsMap]);
+
   const startTest = () => {
     if (!recordPlan) {
       trackQuizStart({
         slug: quiz.slug,
         quizType: 'personality',
         lang,
+        isChallenge: Boolean(friendMatch),
       });
     }
     setTestState('answering');
@@ -262,9 +273,30 @@ export default function PersonalityTestRunner({
     }
   };
 
-  const getPersonalityShareUrl = () => {
-    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
-    return `${origin}/quiz/${quiz.slug}${lang !== 'en' ? `?lang=${lang}` : ''}`;
+  const getPersonalityShareUrl = (baseOrigin?: string) => {
+    const origin = baseOrigin || (typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com');
+    const queryParts: string[] = [];
+    if (matchedResult?.id) {
+      queryParts.push(`m=${encodeURIComponent(matchedResult.id)}`);
+    }
+    if (lang !== 'en') {
+      queryParts.push(`lang=${lang}`);
+    }
+    const queryString = queryParts.length > 0 ? `?${queryParts.join('&')}` : '';
+    return `${origin}/quiz/${quiz.slug}${queryString}`;
+  };
+
+  const getPersonalityShareText = () => {
+    if (!matchedResult) return '';
+    const memberName = getLocalizedText(matchedResult, 'name', lang);
+    const groupName = quiz.tag || 'K-Pop';
+    return lang === 'ko'
+      ? `나의 ${groupName} 소울메이트는 [${memberName} ${matchedResult.emoji}]! ✨ 나와 100% 일치하는 멤버를 지금 확인해보세요!`
+      : lang === 'es'
+      ? `¡Mi alma gemela de ${groupName} es [${memberName} ${matchedResult.emoji}]! ✨ ¿Con qué integrante haces match al 100%? ¡Haz el test aquí!`
+      : lang === 'pt'
+      ? `Minha alma gêmea de ${groupName} é [${memberName} ${matchedResult.emoji}]! ✨ Qual membro combina 100% com você? Descubra:`
+      : `My ${groupName} soulmate is [${memberName} ${matchedResult.emoji}]! ✨ Which member matches your vibe 100%? Take the test:`;
   };
 
   const handleCopyLink = () => {
@@ -275,19 +307,19 @@ export default function PersonalityTestRunner({
     setTimeout(() => setCopied(false), 2500);
   };
 
+  const handleShareWhatsApp = () => {
+    if (!matchedResult) return;
+    trackShare({ slug: quiz.slug, method: 'whatsapp', lang });
+    const text = getPersonalityShareText();
+    const targetUrl = getPersonalityShareUrl('https://kpulsequiz.com');
+    const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${text}\n👉 ${targetUrl}`)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  };
+
   const handleShareTwitter = () => {
     if (!matchedResult) return;
     trackShare({ slug: quiz.slug, method: 'twitter', lang });
-    const memberName = getLocalizedText(matchedResult, 'name', lang);
-    const groupName = quiz.tag || 'K-Pop';
-    const text =
-      lang === 'ko'
-        ? `나의 ${groupName} 소울메이트는 [${memberName}]! ✨ 나와 100% 일치하는 멤버를 지금 확인해보세요!`
-        : lang === 'es'
-        ? `¡Mi alma gemela de ${groupName} es [${memberName}]! ✨ ¿Quién es tu match perfecto? ¡Descúbrelo aquí!`
-        : lang === 'pt'
-        ? `Minha alma gêmea de ${groupName} é [${memberName}]! ✨ Qual membro combina 100% com você? Descubra:`
-        : `My ${groupName} soulmate is [${memberName}]! ✨ Which member matches your vibe? Take the test:`;
+    const text = getPersonalityShareText();
 
     const hashtags =
       quiz.tag === 'BTS'
@@ -298,7 +330,7 @@ export default function PersonalityTestRunner({
         ? 'KFood,KoreanFood,KCulture,KPulse'
         : 'StrayKids,SKZ,STAY,KPulse';
 
-    const targetUrl = `https://kpulsequiz.com/quiz/${quiz.slug}${lang !== 'en' ? `?lang=${lang}` : ''}`;
+    const targetUrl = getPersonalityShareUrl('https://kpulsequiz.com');
     const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
       text
     )}&url=${encodeURIComponent(targetUrl)}&hashtags=${hashtags}`;
@@ -309,8 +341,53 @@ export default function PersonalityTestRunner({
   // 1. INTRO SCREEN
   if (testState === 'intro') {
     const memberCount = Object.keys(resultsMap).length;
+    const friendName = friendMatch ? getLocalizedText(friendMatch, 'name', lang) : '';
+    const friendTitle = friendMatch ? getLocalizedText(friendMatch, 'title', lang) : '';
+
     return (
       <div className="max-w-3xl mx-auto px-4 py-8">
+        {friendMatch && (
+          <div className="mb-5 rounded-3xl bg-gradient-to-r from-fuchsia-600 via-purple-600 to-indigo-600 p-0.5 shadow-xl shadow-purple-500/20 animate-fade-in">
+            <div className="bg-slate-950/90 backdrop-blur-xl rounded-[22px] px-5 py-4 sm:px-6 sm:py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-3xl shrink-0 shadow-inner">
+                {friendMatch.emoji}
+              </div>
+              <div className="flex-1">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-pink-500/20 border border-pink-400/30 text-pink-300 text-[11px] font-black uppercase tracking-wider mb-1">
+                  <span>💌</span>
+                  <span>
+                    {lang === 'ko'
+                      ? '친구의 소울메이트 초대장'
+                      : lang === 'es'
+                      ? '¡Desafío de Alma Gemela de tu Amigo/a!'
+                      : lang === 'pt'
+                      ? 'Desafio de Alma Gêmea de um Amigo!'
+                      : "Friend's Soulmate Match"}
+                  </span>
+                </div>
+                <p className="text-white font-black text-sm sm:text-base leading-snug">
+                  {lang === 'ko'
+                    ? `친구의 소울메이트는 [${friendName}] (${friendTitle}) 입니다!`
+                    : lang === 'es'
+                    ? `¡El alma gemela de tu amigo/a es [${friendName}] (${friendTitle})!`
+                    : lang === 'pt'
+                    ? `A alma gêmea do seu amigo(a) é [${friendName}] (${friendTitle})!`
+                    : `Your friend matched with [${friendName}] (${friendTitle})!`}
+                </p>
+                <p className="text-purple-200/90 text-xs sm:text-sm font-medium mt-0.5">
+                  {lang === 'ko'
+                    ? '과연 나의 소울메이트는 누구일까요? 지금 테스트하고 친구와의 궁합을 확인해보세요! ✨'
+                    : lang === 'es'
+                    ? '¿Quién será tu alma gemela? ¡Haz el test de 10 preguntas y compara vuestra compatibilidad! ✨'
+                    : lang === 'pt'
+                    ? 'Quem será a sua alma gêmea? Faça o teste de 10 perguntas e compare a compatibilidade! ✨'
+                    : 'Who is your true soulmate? Take the 10-question test to compare your compatibility! ✨'}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         <div className="bg-white rounded-3xl border-2 border-purple-100 shadow-xl shadow-purple-500/10 overflow-hidden">
           {/* Hero Header */}
           <div className="bg-gradient-to-r from-rose-600 via-purple-700 to-indigo-800 p-8 sm:p-12 text-white text-center relative overflow-hidden">
@@ -554,6 +631,73 @@ export default function PersonalityTestRunner({
               </div>
             </div>
 
+            {/* Friend Soulmate Comparison Card (when opened via ?m=...) */}
+            {friendMatch && (
+              <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                <div className="flex items-center gap-2 shrink-0">
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
+                    {friendMatch.emoji}
+                  </div>
+                  <span className="text-purple-400 font-black text-lg">×</span>
+                  <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
+                    {matchedResult.emoji}
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <span className="text-[11px] font-black uppercase tracking-wider text-purple-600 block mb-0.5">
+                    {matchedResult.id === friendMatch.id
+                      ? lang === 'ko'
+                        ? '🎉 100% 쌍둥이 소울메이트 매치!'
+                        : lang === 'es'
+                        ? '🎉 ¡100% GEMELOS DE ALMA!'
+                        : lang === 'pt'
+                        ? '🎉 100% GÊMEOS DE ALMA!'
+                        : '🎉 100% TWIN SOULMATE MATCH!'
+                      : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
+                      ? lang === 'ko'
+                        ? '🔥 운명의 1위 찰떡 케미 듀오!'
+                        : lang === 'es'
+                        ? '🔥 ¡DÚO DESTINADO CON QUÍMICA #1!'
+                        : lang === 'pt'
+                        ? '🔥 DUPLA DESTINADA COM QUÍMICA #1!'
+                        : '🔥 DESTINED #1 CHEMISTRY DUO!'
+                      : lang === 'ko'
+                      ? '✨ 친구와의 소울메이트 케미 결과'
+                      : lang === 'es'
+                      ? '✨ Resultado de Compatibilidad con tu Amigo/a'
+                      : lang === 'pt'
+                      ? '✨ Resultado de Compatibilidade com seu Amigo(a)'
+                      : '✨ Friend Soulmate Compatibility'}
+                  </span>
+                  <p className="text-xs sm:text-sm font-bold text-slate-800 leading-relaxed">
+                    {matchedResult.id === friendMatch.id
+                      ? lang === 'ko'
+                        ? `소름! 친구와 똑같이 [${memberName}] 소울메이트가 나왔어요! 지금 결과를 공유해 보세요!`
+                        : lang === 'es'
+                        ? `¡Increíble! Tú y tu amigo/a obtuvieron exactamente a [${memberName}]. ¡Envíale tu resultado!`
+                        : lang === 'pt'
+                        ? `Incrível! Você e seu amigo(a) tiraram exatamente [${memberName}]! Envie seu resultado!`
+                        : `Incredible! You and your friend both matched with [${memberName}]! Send them your result!`
+                      : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
+                      ? lang === 'ko'
+                        ? `친구의 [${getLocalizedText(friendMatch, 'name', lang)}] & 나의 [${memberName}] 조합은 그룹 내 최고 궁합 듀오입니다!`
+                        : lang === 'es'
+                        ? `¡[${getLocalizedText(friendMatch, 'name', lang)}] (tu amigo/a) y [${memberName}] (tú) son el mejor dúo del grupo!`
+                        : lang === 'pt'
+                        ? `[${getLocalizedText(friendMatch, 'name', lang)}] (seu amigo) e [${memberName}] (você) formam a melhor dupla do grupo!`
+                        : `Your friend's [${getLocalizedText(friendMatch, 'name', lang)}] & your [${memberName}] are each other's #1 Best Chemistry Match!`
+                      : lang === 'ko'
+                      ? `친구는 [${getLocalizedText(friendMatch, 'name', lang)}], 나는 [${memberName}]! 친구에게 내 결과를 답장으로 보내보세요!`
+                      : lang === 'es'
+                      ? `Tu amigo/a obtuvo a [${getLocalizedText(friendMatch, 'name', lang)}] y tú a [${memberName}]. ¡Respóndele con tu resultado en WhatsApp!`
+                      : lang === 'pt'
+                      ? `Seu amigo(a) tirou [${getLocalizedText(friendMatch, 'name', lang)}] e você [${memberName}]. Responda com seu resultado no WhatsApp!`
+                      : `Your friend got [${getLocalizedText(friendMatch, 'name', lang)}] and you got [${memberName}]! Send your result back to them!`}
+                  </p>
+                </div>
+              </div>
+            )}
+
             {/* Action Buttons (Share & Retake) */}
             <div className="pt-4 border-t border-slate-100 space-y-3">
               {/* 📸 Download Soulmate Result Card Button */}
@@ -604,10 +748,28 @@ export default function PersonalityTestRunner({
                 )}
               </button>
 
-              <div className="flex flex-col sm:flex-row items-center gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  onClick={handleShareWhatsApp}
+                  className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-[#25D366]/25"
+                >
+                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.556 4.119 1.528 5.847l-1.528 5.581 5.713-1.499c1.678.9 3.593 1.413 5.629 1.413 6.627 0 12-5.373 12-12s-5.373-12-12-12z" />
+                  </svg>
+                  <span>
+                    {lang === 'ko'
+                      ? 'WhatsApp으로 친구와 궁합 보기'
+                      : lang === 'es'
+                      ? 'Compartir en WhatsApp'
+                      : lang === 'pt'
+                      ? 'Compartilhar no WhatsApp'
+                      : 'Share on WhatsApp'}
+                  </span>
+                </button>
+
                 <button
                   onClick={handleShareTwitter}
-                  className="w-full sm:flex-1 py-3 px-4 bg-slate-900 hover:bg-black text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-slate-900/10"
+                  className="w-full py-3.5 px-4 bg-slate-900 hover:bg-black text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-slate-900/10"
                 >
                   <Share2 className="w-4 h-4" />
                   <span>
@@ -620,13 +782,25 @@ export default function PersonalityTestRunner({
                       : 'Share Result on X'}
                   </span>
                 </button>
+              </div>
 
+              <div className="flex flex-col sm:flex-row items-center gap-3">
                 <button
                   onClick={handleCopyLink}
-                  className="w-full sm:w-auto py-3 px-5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
+                  className="w-full sm:flex-1 py-3 px-5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
                 >
                   {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                  <span>{copied ? t.resultView.copied : t.resultView.copyLink}</span>
+                  <span>
+                    {copied
+                      ? t.resultView.copied
+                      : lang === 'ko'
+                      ? '내 소울메이트 초대 링크 복사'
+                      : lang === 'es'
+                      ? 'Copiar Enlace de Desafío'
+                      : lang === 'pt'
+                      ? 'Copiar Link de Desafio'
+                      : 'Copy Soulmate Challenge Link'}
+                  </span>
                 </button>
 
                 <button
