@@ -1,6 +1,6 @@
 import type { Language } from './translations';
 
-export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+export const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-D8KRGWM01F';
 
 type GtagParams = Record<string, string | number | boolean | undefined>;
 
