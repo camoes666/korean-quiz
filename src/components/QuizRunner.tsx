@@ -15,6 +15,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { decodeChallenge, resolveChallengeQuestions } from '@/lib/challenge';
 import { calcQuestionPoints, calcTotalPoints, QUESTION_TIME_SEC, MAX_TOTAL_POINTS } from '@/lib/scoring';
+import { trackQuizStart, trackQuizComplete } from '@/lib/analytics';
 import {
   CheckCircle2,
   XCircle,
@@ -184,6 +185,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     questionStartTimeRef.current = Date.now();
     usedAssistOnCurrentRef.current = false;
     timeExtensionSecOnCurrentRef.current = 0;
+    if (!isRecordMode) {
+      trackQuizStart({
+        slug: quiz.slug,
+        quizType: 'trivia',
+        level: levelChoice === 'all' ? 0 : levelChoice,
+        lang,
+        isChallenge: isChallengeMode,
+      });
+    }
     window.scrollTo({ top: 0, behavior: isRecordMode ? 'instant' : 'smooth' });
   };
 
@@ -242,6 +252,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       addXP(30);
       setEarnedXPInSession((prev) => prev + 30);
       completeDailyQuest();
+      trackQuizComplete({
+        slug: quiz.slug,
+        quizType: 'trivia',
+        score,
+        totalQuestions,
+        totalPoints: calcTotalPoints(questionScores),
+        lang,
+        isChallenge: isChallengeMode,
+      });
       setGameState('result');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -422,12 +441,12 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                   <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/25 backdrop-blur-md p-1 border-2 border-white/60 shadow-lg shadow-black/10 flex items-center justify-center overflow-hidden">
                     <img
                       src={mascot.avatarUrl}
-                      alt={mascot.name}
+                      alt={getLocalizedText(mascot, 'name', lang)}
                       className="w-full h-full object-contain filter drop-shadow hover:scale-110 transition-transform"
                     />
                   </div>
                   <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-black text-white whitespace-nowrap border border-white/30 shadow-xs">
-                    {mascot.badgeTitle}
+                    {getLocalizedText(mascot, 'badgeTitle', lang)}
                   </span>
                 </div>
                 <div className="text-5xl sm:text-6xl animate-bounce">
@@ -435,7 +454,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                 </div>
               </div>
               <div className="inline-block px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md text-xs font-bold text-white/95 mb-3 shadow-xs">
-                {lang === 'en' ? mascot.greetingEn : lang === 'es' ? mascot.greetingEs : mascot.greetingKo}
+                {getLocalizedText(mascot, 'greeting', lang)}
               </div>
               <h1 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight max-w-2xl mx-auto">
                 {quizTitle}
@@ -468,7 +487,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <div className="qz-stat-box p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
                 <div className="qz-stat-label text-xs text-slate-400 font-bold">{t.quizIntro.difficulty}</div>
                 <div className="qz-stat-val text-xl font-black text-slate-900">
-                  {quiz.difficulty}
+                  {t.difficulties[quiz.difficulty] || quiz.difficulty}
                 </div>
               </div>
             </div>
@@ -478,13 +497,13 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <div className="mb-8 rounded-3xl bg-gradient-to-r from-purple-50 via-pink-50 to-indigo-50 p-6 border-2 border-purple-200 text-center">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-black mb-2">
                   <Swords className="w-3.5 h-3.5 text-pink-600" />
-                  <span>1:1 CHALLENGE MATCH</span>
+                  <span>{t.challenge.friendChallengeBadge}</span>
                 </div>
                 <h4 className="text-sm font-black text-slate-800 mb-1">
-                  ⚔️ {challengeData?.nickname || t.challenge.defaultFriend}님과의 비동기 대결
+                  {t.challenge.asyncMatchTitle.replace('{name}', challengeData?.nickname || t.challenge.defaultFriend)}
                 </h4>
                 <p className="text-xs text-slate-600 font-medium max-w-md mx-auto">
-                  도전자와 동일한 5문제, 동일한 출제 순서로 진행됩니다. 빠른 번개손으로 최고 점수에 도전하세요!
+                  {t.challenge.asyncMatchDesc}
                 </p>
               </div>
             ) : (
@@ -497,7 +516,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                     </span>
                   </div>
                   <span className="text-[11px] font-bold text-purple-700 bg-purple-100 px-2.5 py-0.5 rounded-full">
-                    {quiz.questions.length} Questions in Bank
+                    {t.levels.questionsInBank.replace('{count}', String(quiz.questions.length))}
                   </span>
                 </div>
 
@@ -514,7 +533,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                   >
                     <div className="text-base mb-1">🎲</div>
                     <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.allLevels}</div>
-                    <div className="text-[10px] text-slate-400 font-bold mt-0.5">{quiz.questions.length} Qs</div>
+                    <div className="text-[10px] text-slate-400 font-bold mt-0.5">{quiz.questions.length} {t.levels.qsUnit}</div>
                   </button>
 
                   {/* Lv 1 */}
@@ -530,7 +549,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                     <div className="text-base mb-1">🌱</div>
                     <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl1}</div>
                     <div className="text-[10px] text-emerald-600 font-bold mt-0.5">
-                      {quiz.questions.filter((q) => q.level === 1).length} Qs
+                      {quiz.questions.filter((q) => q.level === 1).length} {t.levels.qsUnit}
                     </div>
                   </button>
 
@@ -547,7 +566,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                     <div className="text-base mb-1">⭐</div>
                     <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl2}</div>
                     <div className="text-[10px] text-amber-600 font-bold mt-0.5">
-                      {quiz.questions.filter((q) => q.level === 2).length} Qs
+                      {quiz.questions.filter((q) => q.level === 2).length} {t.levels.qsUnit}
                     </div>
                   </button>
 
@@ -564,7 +583,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                     <div className="text-base mb-1">🔥</div>
                     <div className="text-xs font-black text-slate-900 line-clamp-1">{t.levels.lvl3}</div>
                     <div className="text-[10px] text-rose-600 font-bold mt-0.5">
-                      {quiz.questions.filter((q) => q.level === 3).length} Qs
+                      {quiz.questions.filter((q) => q.level === 3).length} {t.levels.qsUnit}
                     </div>
                   </button>
                 </div>
@@ -578,7 +597,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <span>
                 {isChallengeMode
                   ? t.challenge.startBattle
-                  : `${t.quizIntro.startNow} (5 Qs)`}
+                  : `${t.quizIntro.startNow} (5 ${t.levels.qsUnit})`}
               </span>
               <ArrowRight className="w-5 h-5" />
             </button>
@@ -595,6 +614,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                     ? `📖 시험 전 족보! ${quizTitle} 해설 & 로어 가이드 미리보기`
                     : lang === 'es'
                     ? `📖 ¿Quieres estudiar primero? Ver guía y datos de ${quizTitle}`
+                    : lang === 'pt'
+                    ? `📖 Quer estudar antes? Ver guia e fatos de ${quizTitle}`
                     : `📖 Want to study first? Read the ${quizTitle} Lore Guide`}
                 </span>
                 <ArrowRight className="w-3 h-3" />
@@ -733,7 +754,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                           <span className="font-black text-emerald-950 text-[15px]">{optionText}</span>
                         </div>
                         <span className="px-2.5 py-1 bg-white text-emerald-600 border border-emerald-300 text-xs font-black rounded-full flex items-center gap-1 shadow-xs">
-                          {lang === 'ko' ? '✓ 정답! (+20 XP)' : lang === 'es' ? '✓ ¡Correcto! (+20 XP)' : '✓ Correct! (+20 XP)'}
+                          {lang === 'ko' ? '✓ 정답! (+20 XP)' : lang === 'es' ? '✓ ¡Correcto! (+20 XP)' : lang === 'pt' ? '✓ Correto! (+20 XP)' : '✓ Correct! (+20 XP)'}
                         </span>
                       </div>
                     </button>
@@ -752,7 +773,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                         <span className="font-black text-rose-950 text-[15px]">{optionText}</span>
                       </div>
                       <span className="px-2.5 py-1 bg-rose-100 text-rose-700 text-xs font-black rounded-full">
-                        {lang === 'ko' ? '✕ 오답' : lang === 'es' ? '✕ Incorrecto' : '✕ Incorrect'}
+                        {lang === 'ko' ? '✕ 오답' : lang === 'es' || lang === 'pt' ? '✕ Incorrecto' : '✕ Incorrect'}
                       </span>
                     </button>
                   );
@@ -790,7 +811,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                         <span className="qz-opt-text font-black text-slate-900 text-[15px]">{optionText}</span>
                       </div>
                       <span className="px-2.5 py-1 bg-white text-emerald-600 border border-emerald-300 text-xs font-black rounded-full flex items-center gap-1 shadow-xs">
-                        {lang === 'ko' ? '✓ 선택됨' : lang === 'es' ? '✓ Seleccionado' : '✓ Selected'}
+                        {lang === 'ko' ? '✓ 선택됨' : lang === 'es' || lang === 'pt' ? '✓ Seleccionado' : '✓ Selected'}
                       </span>
                     </div>
                     <div className="ml-11 text-xs font-bold text-emerald-700 flex items-center gap-1">
@@ -798,6 +819,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                         ? '✨ 정답 확신 92%의 팬덤 추천!'
                         : lang === 'es'
                         ? '✨ ¡92% de certeza según el fandom!'
+                        : lang === 'pt'
+                        ? '✨ 92% de certeza segundo o fandom!'
                         : '✨ 92% confidence fandom pick!'}
                     </div>
                   </button>
@@ -832,12 +855,12 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             >
               <span className="text-lg">💡</span>
               <span className="text-xs font-bold text-slate-700">
-                {lang === 'ko' ? '50:50 찬스' : lang === 'es' ? 'Comodín 50:50' : '50:50 Chance'}
+                {lang === 'ko' ? '50:50 찬스' : lang === 'es' || lang === 'pt' ? 'Comodín 50:50' : '50:50 Chance'}
               </span>
               <span className="text-[10px] text-purple-600 font-extrabold">
                 {lang === 'ko'
                   ? `${fiftyFiftyRemaining}회 남음`
-                  : lang === 'es'
+                  : lang === 'es' || lang === 'pt'
                   ? `${fiftyFiftyRemaining} restante${fiftyFiftyRemaining === 1 ? '' : 's'}`
                   : `${fiftyFiftyRemaining} left`}
               </span>
@@ -850,12 +873,12 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             >
               <span className="text-lg">⏱️</span>
               <span className="text-xs font-bold text-slate-700">
-                {lang === 'ko' ? '+10초 연장' : lang === 'es' ? '+10s Tiempo' : '+10s Timer'}
+                {lang === 'ko' ? '+10초 연장' : lang === 'es' || lang === 'pt' ? '+10s Tiempo' : '+10s Timer'}
               </span>
               <span className="text-[10px] text-rose-500 font-extrabold">
                 {lang === 'ko'
                   ? `${timeExtensionsRemaining}회 남음`
-                  : lang === 'es'
+                  : lang === 'es' || lang === 'pt'
                   ? `${timeExtensionsRemaining} restante${timeExtensionsRemaining === 1 ? '' : 's'}`
                   : `${timeExtensionsRemaining} left`}
               </span>
@@ -868,7 +891,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             >
               <span className="text-lg">🔮</span>
               <span className="text-xs font-bold text-slate-700">
-                {lang === 'ko' ? '팬덤 찬스' : lang === 'es' ? 'Ayuda Fandom' : 'Fandom Hint'}
+                {lang === 'ko' ? '팬덤 찬스' : lang === 'es' ? 'Ayuda Fandom' : lang === 'pt' ? 'Dica do Fandom' : 'Fandom Hint'}
               </span>
               <span className="text-[10px] text-emerald-600 font-extrabold">
                 {isHintActive
@@ -876,11 +899,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                     ? '힌트 공개'
                     : lang === 'es'
                     ? 'Pista Activa'
+                    : lang === 'pt'
+                    ? 'Dica Ativa'
                     : 'Hint Active'
                   : lang === 'ko'
                   ? '무료 힌트'
                   : lang === 'es'
                   ? 'Pista Gratis'
+                  : lang === 'pt'
+                  ? 'Dica Grátis'
                   : 'Free Hint'}
               </span>
             </button>
@@ -940,6 +967,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                             ? '(호비가 응원해요!)'
                             : lang === 'es'
                             ? '(¡Hobi te anima!)'
+                            : lang === 'pt'
+                            ? '(Hobi está torcendo por você!)'
                             : '(Hobi is cheering for you!)'}
                         </span>
                       )}
@@ -969,6 +998,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                       ? '🔮 팬덤 찬스 힌트가 도착했습니다!'
                       : lang === 'es'
                       ? '🔮 ¡Ha llegado la pista del fandom!'
+                      : lang === 'pt'
+                      ? '🔮 A dica do fandom chegou!'
                       : '🔮 Fandom hint has arrived!'}
                   </span>
                 </div>
@@ -1000,7 +1031,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const secondsSpent = elapsedSeconds % 60;
   const timeFormatted = `${minutesSpent > 0 ? (lang === 'ko' ? `${minutesSpent}분 ` : `${minutesSpent}m `) : ''}${secondsSpent}${lang === 'ko' ? '초' : 's'}`;
   const isPerfect = score === totalQuestions;
-  const rankLabel = isPerfect ? 'RANK S+ 💜' : score >= 4 ? 'RANK S 🏆' : score >= 3 ? 'RANK A ⭐' : 'RANK B 🌱';
+  const rankPrefix = lang === 'ko' ? '랭크' : lang === 'es' || lang === 'pt' ? 'RANGO' : 'RANK';
+  const rankLabel = isPerfect ? `${rankPrefix} S+ 💜` : score >= 4 ? `${rankPrefix} S 🏆` : score >= 3 ? `${rankPrefix} A ⭐` : `${rankPrefix} B 🌱`;
   const tierTitle = getLocalizedText(currentTier, 'title', lang);
   const tierBadge = getLocalizedText(currentTier, 'badge', lang);
 
@@ -1015,11 +1047,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               ? '🎉 ALL CLEAR! 퍼펙트 클리어 ✨'
               : lang === 'es'
               ? '🎉 ¡DESAFÍO PERFECTO! ✨'
+              : lang === 'pt'
+              ? '🎉 DESAFIO PERFEITO! ✨'
               : '🎉 ALL CLEAR! PERFECT SCORE! ✨'
             : lang === 'ko'
-            ? '🏆 CHALLENGE COMPLETED! 🏆'
+            ? '🏆 챌린지 완료! 🏆'
             : lang === 'es'
             ? '🏆 ¡DESAFÍO COMPLETADO! 🏆'
+            : lang === 'pt'
+            ? '🏆 DESAFIO CONCLUÍDO! 🏆'
             : '🏆 CHALLENGE COMPLETED! 🏆'}
         </div>
 
@@ -1028,7 +1064,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           <div className="relative w-full h-full animate-bounce" style={{ animationDuration: '2.5s' }}>
             <img
               src={mascot.avatarUrl}
-              alt={mascot.name}
+              alt={getLocalizedText(mascot, 'name', lang)}
               className="w-full h-full object-contain filter drop-shadow-lg"
             />
             <div
@@ -1039,16 +1075,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               }`}
             >
               {score >= 4
-                ? lang === 'ko'
-                  ? mascot.winCheerKo
-                  : lang === 'es'
-                  ? mascot.winCheerEs
-                  : mascot.winCheerEn
-                : lang === 'ko'
-                ? mascot.encourageKo
-                : lang === 'es'
-                ? mascot.encourageEs
-                : mascot.encourageEn}
+                ? getLocalizedText(mascot, 'winCheer', lang)
+                : getLocalizedText(mascot, 'encourage', lang)}
             </div>
           </div>
         </div>
@@ -1080,12 +1108,12 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
         <div className="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full text-xs font-bold text-slate-600 mb-6">
           <span>
-            ⏱️ {lang === 'ko' ? `${timeFormatted} 소요` : lang === 'es' ? `Tiempo: ${timeFormatted}` : `Time: ${timeFormatted}`}
+            ⏱️ {lang === 'ko' ? `${timeFormatted} 소요` : lang === 'es' || lang === 'pt' ? `Tiempo: ${timeFormatted}` : `Time: ${timeFormatted}`}
           </span>
           <span className="text-rose-500 font-black">
             {lang === 'ko'
               ? '• 전체 상위 1% 번개손'
-              : lang === 'es'
+              : lang === 'es' || lang === 'pt'
               ? '• Top 1% Global'
               : '• Top 1% Global Challenger'}
           </span>
@@ -1095,15 +1123,19 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         <div className="grid grid-cols-2 gap-2 text-left mb-5">
           <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
             <span className="text-[11px] font-bold text-slate-400 block mb-1">
-              {lang === 'ko' ? '기본 경험치' : lang === 'es' ? 'XP Base' : 'Base XP'}
+              {lang === 'ko' ? '기본 경험치' : lang === 'es' || lang === 'pt' ? 'XP Base' : 'Base XP'}
             </span>
             <span className="text-base font-black text-emerald-600">+{earnedXPInSession} XP</span>
           </div>
           <div className="p-3.5 bg-slate-50 rounded-2xl border border-slate-100">
             <span className="text-[11px] font-bold text-slate-400 block mb-1">
-              {lang === 'ko' ? '퍼펙트 보너스' : lang === 'es' ? 'Bono Perfecto' : 'Perfect Bonus'}
+              {lang === 'ko' ? '퍼펙트 보너스' : lang === 'es' ? 'Bono Perfecto' : lang === 'pt' ? 'Bônus Perfeito' : 'Perfect Bonus'}
             </span>
-            <span className="text-base font-black text-rose-500">{isPerfect ? '+50 BONUS' : '+0 BONUS'}</span>
+            <span className="text-base font-black text-rose-500">
+              {isPerfect
+                ? lang === 'es' ? '+50 BONO' : lang === 'pt' ? '+50 BÔNUS' : '+50 BONUS'
+                : lang === 'es' ? '+0 BONO' : lang === 'pt' ? '+0 BÔNUS' : '+0 BONUS'}
+            </span>
           </div>
         </div>
 
@@ -1111,9 +1143,11 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         <div className="rounded-2xl bg-purple-50/70 border border-purple-100 p-4 mb-5 text-left">
           <div className="flex items-center justify-between text-xs font-black mb-2">
             <span className="text-purple-900 font-black">
-              {currentLevel.badgeEmoji} Level {currentLevel.level}: {lang === 'ko' ? currentLevel.titleKo : currentLevel.title}
+              {currentLevel.badgeEmoji}{' '}
+              {lang === 'ko' ? `레벨 ${currentLevel.level}` : lang === 'es' ? `Nivel ${currentLevel.level}` : lang === 'pt' ? `Nível ${currentLevel.level}` : `Level ${currentLevel.level}`}:{' '}
+              {getLocalizedText(currentLevel, 'title', lang)}
             </span>
-            <span className="text-amber-600 font-bold">{xp} Total XP</span>
+            <span className="text-amber-600 font-bold">{xp} XP Total</span>
           </div>
           <div className="h-2 w-full rounded-full bg-slate-200 overflow-hidden mb-2">
             <div
@@ -1207,6 +1241,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                 ? `전체 ${totalQuestions}개 문답 해설 & 꿀팁 족보 가이드 보기 📖`
                 : lang === 'es'
                 ? `Repasar todas las explicaciones y curiosidades en la Guía 📖`
+                : lang === 'pt'
+                ? `Revisar todas as explicações e curiosidades no Guia 📖`
                 : `Review All Explanations & Insider Lore in Study Guide 📖`}
             </span>
             <ArrowRight className="w-3.5 h-3.5 text-purple-600" />
@@ -1270,7 +1306,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
       {/* Affiliate Suggestion Section */}
       {quiz.affiliateSuggestion && (
-        <AffiliateBox affiliate={quiz.affiliateSuggestion} />
+        <AffiliateBox affiliate={quiz.affiliateSuggestion} slug={quiz.slug} />
       )}
     </div>
   );

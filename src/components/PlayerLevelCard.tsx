@@ -2,12 +2,19 @@
 
 import { useGame } from '@/context/GameContext';
 import { useLanguage } from '@/context/LanguageContext';
+import { getLocalizedText } from '@/types/quiz';
 import { Zap, Flame, Trophy } from 'lucide-react';
 
 export default function PlayerLevelCard() {
   const { lang } = useLanguage();
   const { xp, streak, currentLevel, progressPercent, xpToNextLevel } = useGame();
-  const levelTitle = lang === 'en' || lang === 'es' ? currentLevel.title : currentLevel.titleKo;
+  const levelTitle = getLocalizedText(currentLevel, 'title', lang);
+  const levelLabel =
+    lang === 'es' || lang === 'pt'
+      ? `Nivel ${currentLevel.level}`
+      : lang === 'ko'
+      ? `레벨 ${currentLevel.level}`
+      : `Level ${currentLevel.level}`;
 
   return (
     <div className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-xs flex flex-col justify-between">
@@ -73,21 +80,25 @@ export default function PlayerLevelCard() {
           <Flame className="w-3.5 h-3.5 text-rose-500 fill-current" />
           <span className="font-bold text-slate-700">
             {streak}{' '}
-            {lang === 'en'
-              ? 'day streak'
-              : lang === 'es'
+            {lang === 'es'
               ? 'días de racha'
-              : '일 연속 출석'}
+              : lang === 'pt'
+              ? 'dias seguidos'
+              : lang === 'ko'
+              ? '일 연속 출석'
+              : 'day streak'}
           </span>
         </span>
         <span className="flex items-center gap-1 text-purple-700 font-bold bg-purple-50 px-2.5 py-1 rounded-full">
           <Trophy className="w-3.5 h-3.5" />
           <span>
-            {lang === 'en'
-              ? 'Top 12% Challenger'
-              : lang === 'es'
+            {lang === 'es'
               ? 'Top 12% Retador'
-              : '상위 12% 랭커'}
+              : lang === 'pt'
+              ? 'Top 12% Desafiante'
+              : lang === 'ko'
+              ? '상위 12% 랭커'
+              : 'Top 12% Challenger'}
           </span>
         </span>
       </div>

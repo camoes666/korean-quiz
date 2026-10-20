@@ -1,8 +1,10 @@
+import { Language } from './translations';
+
 export interface ResultCardData {
   type: 'trivia' | 'personality';
   quizTitle: string;
   slug?: string;
-  lang?: 'en' | 'es' | 'ko';
+  lang?: Language;
   // Trivia properties
   score?: number;
   totalQuestions?: number;
@@ -52,6 +54,8 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
   if (!ctx) {
     throw new Error('Canvas 2D context not available');
   }
+
+  const lang = data.lang || 'en';
 
   // 1. Background Gradient Selection
   const isBlackpink = data.slug?.includes('blackpink');
@@ -114,14 +118,23 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
   // 3. Top Header: Brand & Tag
   const brandPillY = pad + 60;
   ctx.fillStyle = accentColor;
-  drawRoundedRect(ctx, width / 2 - 170, brandPillY, 340, 52, 26);
+  drawRoundedRect(ctx, width / 2 - 200, brandPillY, 400, 52, 26);
   ctx.fill();
+
+  const headerPillText =
+    lang === 'ko'
+      ? '✨ K-PULSE 공식 결과 카드 ✨'
+      : lang === 'es'
+      ? '✨ RESULTADO OFICIAL K-PULSE ✨'
+      : lang === 'pt'
+      ? '✨ RESULTADO OFICIAL K-PULSE ✨'
+      : '✨ K-PULSE OFFICIAL RESULT ✨';
 
   ctx.fillStyle = '#ffffff';
   ctx.font = 'bold 22px system-ui, -apple-system, sans-serif';
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
-  ctx.fillText('✨ K-PULSE OFFICIAL RESULT ✨', width / 2, brandPillY + 27);
+  ctx.fillText(headerPillText, width / 2, brandPillY + 27);
 
   // Quiz Title
   ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
@@ -139,9 +152,17 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
     ctx.fillText(data.memberEmoji || '💖', width / 2, height * 0.38);
 
     // Subtitle Badge
+    const soulMatchLabel =
+      lang === 'ko'
+        ? '⭐ 나의 소울메이트 ⭐'
+        : lang === 'es'
+        ? '⭐ TU ALMA GEMELA ⭐'
+        : lang === 'pt'
+        ? '⭐ SUA ALMA GÊMEA ⭐'
+        : '⭐ YOUR SOUL MATCH ⭐';
     ctx.fillStyle = '#fef08a';
     ctx.font = 'bold 28px system-ui, -apple-system, sans-serif';
-    ctx.fillText('⭐ YOUR SOUL MATCH ⭐', width / 2, height * 0.46);
+    ctx.fillText(soulMatchLabel, width / 2, height * 0.46);
 
     // Member Name
     ctx.fillStyle = '#ffffff';
@@ -176,9 +197,17 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
 
     // Chemistry Match
     if (data.bestMatchName) {
+      const chemLabel =
+        lang === 'ko'
+          ? `💖 최고의 궁합: ${data.bestMatchName}`
+          : lang === 'es'
+          ? `💖 Mejor Dúo: ${data.bestMatchName}`
+          : lang === 'pt'
+          ? `💖 Melhor Dupla: ${data.bestMatchName}`
+          : `💖 Best Chemistry Match: ${data.bestMatchName}`;
       ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
       ctx.font = 'bold 26px system-ui, -apple-system, sans-serif';
-      ctx.fillText(`💖 Best Chemistry Match: ${data.bestMatchName}`, width / 2, height * 0.81);
+      ctx.fillText(chemLabel, width / 2, height * 0.81);
     }
   } else {
     // Trivia Quiz Card Content
@@ -187,22 +216,37 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
     ctx.fillText(data.badgeEmoji || '🏆', width / 2, height * 0.37);
 
     // Rank Badge Title
+    const defaultBadge =
+      lang === 'ko'
+        ? '글로벌 레전드'
+        : lang === 'es'
+        ? 'Leyenda Global'
+        : lang === 'pt'
+        ? 'Lenda Global'
+        : 'Global Legend';
     ctx.fillStyle = '#fef08a';
     ctx.font = 'bold 34px system-ui, -apple-system, sans-serif';
-    ctx.fillText(`[ ${data.badgeTitle || 'Global Legend'} ]`, width / 2, height * 0.45);
+    ctx.fillText(`[ ${data.badgeTitle || defaultBadge} ]`, width / 2, height * 0.45);
 
     // User Nickname if available
     if (data.userNickname?.trim()) {
+      const playerLabel =
+        lang === 'ko'
+          ? `도전자: ${data.userNickname.trim()}`
+          : lang === 'es' || lang === 'pt'
+          ? `Jugador: ${data.userNickname.trim()}`
+          : `Player: ${data.userNickname.trim()}`;
       ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
       ctx.font = 'bold 28px system-ui, -apple-system, sans-serif';
-      ctx.fillText(`Player: ${data.userNickname.trim()}`, width / 2, height * 0.51);
+      ctx.fillText(playerLabel, width / 2, height * 0.51);
     }
 
     // Huge Total Points
     const pts = data.totalPoints ?? (data.score ?? 0) * 1000;
+    const ptsUnit = lang === 'ko' ? '점' : 'PTS';
     ctx.fillStyle = '#ffffff';
     ctx.font = '900 84px system-ui, -apple-system, sans-serif';
-    ctx.fillText(`${pts.toLocaleString()} PTS`, width / 2, height * 0.60);
+    ctx.fillText(`${pts.toLocaleString()} ${ptsUnit}`, width / 2, height * 0.60);
 
     // Score / Correct Answers Box
     ctx.fillStyle = 'rgba(255, 255, 255, 0.12)';
@@ -211,23 +255,45 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.25)';
     ctx.stroke();
 
+    const scoreSummary =
+      lang === 'ko'
+        ? `정답 기록: ${data.totalQuestions ?? 5}문제 중 ${data.score ?? 0}개 정답`
+        : lang === 'es'
+        ? `Aciertos: ${data.score ?? 0} / ${data.totalQuestions ?? 5} Correctas`
+        : lang === 'pt'
+        ? `Acertos: ${data.score ?? 0} / ${data.totalQuestions ?? 5} Corretas`
+        : `Score: ${data.score ?? 0} / ${data.totalQuestions ?? 5} Correct`;
     ctx.fillStyle = '#ffffff';
     ctx.font = 'bold 36px system-ui, -apple-system, sans-serif';
-    ctx.fillText(
-      `Score: ${data.score ?? 0} / ${data.totalQuestions ?? 5} Correct`,
-      width / 2,
-      height * 0.66 + 45
-    );
+    ctx.fillText(scoreSummary, width / 2, height * 0.66 + 45);
 
     ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
     ctx.font = '500 24px system-ui, -apple-system, sans-serif';
-    const timeText = data.timeFormatted ? `⏱️ Time: ${data.timeFormatted}   •   ` : '';
-    ctx.fillText(`${timeText}⚡ 15s Lightning Speed Test`, width / 2, height * 0.66 + 85);
+    const timePrefix =
+      lang === 'ko' ? '소요 시간' : lang === 'es' || lang === 'pt' ? 'Tiempo' : 'Time';
+    const timeText = data.timeFormatted ? `⏱️ ${timePrefix}: ${data.timeFormatted}   •   ` : '';
+    const speedTag =
+      lang === 'ko'
+        ? '⚡ 15초 스피드 퀴즈'
+        : lang === 'es'
+        ? '⚡ Test Rápido de 15s'
+        : lang === 'pt'
+        ? '⚡ Quiz Rápido de 15s'
+        : '⚡ 15s Lightning Speed Test';
+    ctx.fillText(`${timeText}${speedTag}`, width / 2, height * 0.66 + 85);
 
     // Call to Action
+    const ctaText =
+      lang === 'ko'
+        ? '⚔️ 내 기록을 깰 수 있나요? ⚔️'
+        : lang === 'es'
+        ? '⚔️ ¿PUEDES SUPERAR MI RÉCORD? ⚔️'
+        : lang === 'pt'
+        ? '⚔️ CONSEGUE SUPERAR MEU RECORDE? ⚔️'
+        : '⚔️ CAN YOU BEAT MY SCORE? ⚔️';
     ctx.fillStyle = accentColor;
     ctx.font = 'bold 28px system-ui, -apple-system, sans-serif';
-    ctx.fillText('⚔️ CAN YOU BEAT MY SCORE? ⚔️', width / 2, height * 0.81);
+    ctx.fillText(ctaText, width / 2, height * 0.81);
   }
 
   // 5. Bottom Watermark & Verification
@@ -236,9 +302,18 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
   drawRoundedRect(ctx, width / 2 - 280, bottomBoxY, 560, 64, 32);
   ctx.fill();
 
+  const footerWatermark =
+    lang === 'ko'
+      ? 'KPULSEQUIZ.COM 무료 플레이 ➔'
+      : lang === 'es'
+      ? 'JUEGA GRATIS EN KPULSEQUIZ.COM ➔'
+      : lang === 'pt'
+      ? 'JOGUE GRÁTIS EM KPULSEQUIZ.COM ➔'
+      : 'PLAY FREE AT KPULSEQUIZ.COM ➔';
+
   ctx.fillStyle = '#0f172a';
   ctx.font = '900 24px system-ui, -apple-system, sans-serif';
-  ctx.fillText('PLAY FREE AT KPULSEQUIZ.COM ➔', width / 2, bottomBoxY + 34);
+  ctx.fillText(footerWatermark, width / 2, bottomBoxY + 34);
 
   return new Promise<Blob>((resolve, reject) => {
     canvas.toBlob((blob) => {
@@ -254,6 +329,7 @@ export async function generateResultCardBlob(data: ResultCardData): Promise<Blob
 export async function downloadResultCard(data: ResultCardData, fileNamePrefix = 'kpulse-result'): Promise<void> {
   const blob = await generateResultCardBlob(data);
   const fileName = `${fileNamePrefix}-${Date.now()}.png`;
+  const lang = data.lang || 'en';
 
   // Try native navigator.share with files first (iOS / Android Safari / Chrome)
   if (typeof navigator !== 'undefined' && 'canShare' in navigator) {
@@ -262,8 +338,22 @@ export async function downloadResultCard(data: ResultCardData, fileNamePrefix = 
       if (navigator.canShare({ files: [file] })) {
         await navigator.share({
           files: [file],
-          title: `My K-Pulse Result: ${data.quizTitle}`,
-          text: `Check out my score on K-Pulse! Can you beat me? https://kpulsequiz.com`,
+          title:
+            lang === 'ko'
+              ? `나의 K-Pulse 결과: ${data.quizTitle}`
+              : lang === 'es'
+              ? `Mi Resultado K-Pulse: ${data.quizTitle}`
+              : lang === 'pt'
+              ? `Meu Resultado K-Pulse: ${data.quizTitle}`
+              : `My K-Pulse Result: ${data.quizTitle}`,
+          text:
+            lang === 'ko'
+              ? `K-Pulse에서 내 기록을 확인해보세요! https://kpulsequiz.com`
+              : lang === 'es'
+              ? `¡Mira mi resultado en K-Pulse! ¿Puedes superarme? https://kpulsequiz.com`
+              : lang === 'pt'
+              ? `Veja meu resultado no K-Pulse! Consegue me superar? https://kpulsequiz.com`
+              : `Check out my score on K-Pulse! Can you beat me? https://kpulsequiz.com`,
         });
         return;
       }

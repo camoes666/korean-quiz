@@ -30,13 +30,13 @@ export default function Footer() {
               {t.footer.allQuizzes}
             </Link>
             <Link href="/about" className="hover:text-violet-600 transition-colors">
-              About Us
+              {t.footer.aboutUs}
             </Link>
             <Link href="/privacy" className="hover:text-violet-600 transition-colors">
-              Privacy Policy
+              {t.footer.privacyPolicy}
             </Link>
             <Link href="/terms" className="hover:text-violet-600 transition-colors">
-              Terms
+              {t.footer.terms}
             </Link>
             <a
               href="https://x.com/JIlmong"

@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { getAllQuizzes } from '@/data/quizzes';
-import { Category } from '@/types/quiz';
+import { Category, getLocalizedText } from '@/types/quiz';
 import QuizCard from '@/components/QuizCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import DailyQuestCard from '@/components/DailyQuestCard';
@@ -15,11 +15,78 @@ import { useGame } from '@/context/GameContext';
 
 const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
 
+type QuizModeFilter = 'all' | 'trivia' | 'personality';
+
+interface QuickFandomChip {
+  label: string;
+  emoji: string;
+  category: Category;
+  tag: string;
+  badgeClass: string;
+}
+
+const QUICK_FANDOM_CHIPS: QuickFandomChip[] = [
+  {
+    label: 'BTS',
+    emoji: '💜',
+    category: 'K-Pop',
+    tag: 'BTS',
+    badgeClass: 'hover:border-purple-400 hover:bg-purple-50/80 text-purple-900 border-purple-200/90',
+  },
+  {
+    label: 'BLACKPINK',
+    emoji: '💖',
+    category: 'K-Pop',
+    tag: 'BLACKPINK',
+    badgeClass: 'hover:border-pink-400 hover:bg-pink-50/80 text-pink-900 border-pink-200/90',
+  },
+  {
+    label: 'Stray Kids',
+    emoji: '🧭',
+    category: 'K-Pop',
+    tag: 'Stray Kids',
+    badgeClass: 'hover:border-rose-400 hover:bg-rose-50/80 text-rose-900 border-rose-200/90',
+  },
+  {
+    label: 'K-Drama',
+    emoji: '🎬',
+    category: 'K-Drama',
+    tag: 'All',
+    badgeClass: 'hover:border-indigo-400 hover:bg-indigo-50/80 text-indigo-900 border-indigo-200/90',
+  },
+  {
+    label: 'K-Food',
+    emoji: '🍜',
+    category: 'Food',
+    tag: 'All',
+    badgeClass: 'hover:border-amber-400 hover:bg-amber-50/80 text-amber-900 border-amber-200/90',
+  },
+];
+
+const LIVE_SOULMATE_TICKER = [
+  { emoji: '💜', member: 'Jungkook', group: 'BTS', match: '99%', color: 'text-purple-100 bg-purple-500/30 border-purple-400/40' },
+  { emoji: '💖', member: 'Lisa', group: 'BLACKPINK', match: '98%', color: 'text-pink-100 bg-pink-500/30 border-pink-400/40' },
+  { emoji: '🧭', member: 'Felix', group: 'Stray Kids', match: '99%', color: 'text-amber-100 bg-amber-500/25 border-amber-400/40' },
+  { emoji: '💜', member: 'V · Taehyung', group: 'BTS', match: '97%', color: 'text-purple-100 bg-purple-500/30 border-purple-400/40' },
+  { emoji: '💖', member: 'Jennie', group: 'BLACKPINK', match: '98%', color: 'text-pink-100 bg-pink-500/30 border-pink-400/40' },
+];
+
 export default function HomePage() {
   const { t, lang } = useLanguage();
   const { currentLevel, progressPercent, xpToNextLevel } = useGame();
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [selectedTag, setSelectedTag] = useState<string>('All');
+  const [selectedMode, setSelectedMode] = useState<QuizModeFilter>('all');
+  const [tickerIndex, setTickerIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTickerIndex((prev) => (prev + 1) % LIVE_SOULMATE_TICKER.length);
+    }, 2600);
+    return () => clearInterval(interval);
+  }, []);
+
+  const currentTicker = LIVE_SOULMATE_TICKER[tickerIndex];
 
   const allQuizzes = getAllQuizzes();
   const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
@@ -43,11 +110,16 @@ export default function HomePage() {
 
   // Filter quizzes
   const filteredQuizzes = allQuizzes.filter((quiz) => {
+    const isPersonality = quiz.quizType === 'personality';
+    const matchesMode =
+      selectedMode === 'all' ||
+      (selectedMode === 'personality' && isPersonality) ||
+      (selectedMode === 'trivia' && !isPersonality);
     const matchesCategory =
       selectedCategory === 'All' || quiz.category === selectedCategory;
     const matchesTag =
       selectedTag === 'All' || quiz.tag === selectedTag;
-    return matchesCategory && matchesTag;
+    return matchesMode && matchesCategory && matchesTag;
   });
 
   const handleCategoryChange = (category: Category) => {
@@ -254,6 +326,27 @@ export default function HomePage() {
             </div>
           </div>
 
+          {/* Category Chunky Filter Pills */}
+          <div className="flex flex-wrap items-center gap-2">
+            {CATEGORIES.map((category) => {
+              const isActive = selectedCategory === category;
+              const categoryLabel = t.categories[category] || category;
+              return (
+                <button
+                  key={category}
+                  onClick={() => handleCategoryChange(category)}
+                  className={`rounded-full px-5 py-2 text-xs sm:text-sm font-black transition-all active:scale-95 cursor-pointer ${
+                    isActive
+                      ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md shadow-purple-500/25'
+                      : 'bg-white border-2 border-purple-100 hover:border-purple-300 text-slate-700 shadow-xs'
+                  }`}
+                >
+                  {categoryLabel}
+                </button>
+              );
+            })}
+          </div>
+
           {/* Sub-tag Bar */}
           {availableTags.length > 1 && (
             <div className="flex items-center gap-1.5 flex-wrap pt-3 border-t border-slate-200/60">
@@ -291,15 +384,16 @@ export default function HomePage() {
 
         {filteredQuizzes.length === 0 && (
           <div className="text-center py-16 text-zinc-400">
-            <p className="text-base font-bold">No quizzes found for this filter.</p>
+            <p className="text-base font-bold">{t.noQuizzesFound}</p>
             <button
               onClick={() => {
+                setSelectedMode('all');
                 setSelectedCategory('All');
                 setSelectedTag('All');
               }}
               className="mt-3 text-xs text-violet-600 font-bold hover:underline"
             >
-              Reset Filters
+              {t.resetFilters}
             </button>
           </div>
         )}
@@ -353,6 +447,8 @@ export default function HomePage() {
                       ? '230+ Verified Facts & Explanations'
                       : lang === 'es'
                       ? '230+ Hechos y Respuestas Verificadas'
+                      : lang === 'pt'
+                      ? '230+ Fatos e Respostas Verificadas'
                       : '230+개 팩트체크 & 해설 수록'}
                   </span>
                 </div>
@@ -361,6 +457,8 @@ export default function HomePage() {
                     ? 'K-Culture & K-Pop Fan Knowledge Guides'
                     : lang === 'es'
                     ? 'Guías de Lore y Conocimiento K-Pop'
+                    : lang === 'pt'
+                    ? 'Guias de Lore e Conhecimento K-Pop'
                     : 'K-컬처 & K-Pop 팬 지식 가이드 백과'}
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1 max-w-xl">
@@ -368,6 +466,8 @@ export default function HomePage() {
                     ? 'Explore verified answers, debut histories, cultural etiquette, and insider fun facts before taking the quizzes.'
                     : lang === 'es'
                     ? 'Descubre las respuestas y explicaciones detrás de cada pregunta sobre BTS, SKZ, BLACKPINK y comida coreana.'
+                    : lang === 'pt'
+                    ? 'Descubra as respostas verificadas, histórias de debut e curiosidades sobre BTS, SKZ, BLACKPINK e comida coreana.'
                     : 'BTS, Stray Kids, 블랙핑크, 한국 매운맛 순위, 문화 IQ까지 모든 퀴즈의 정답과 심층 해설을 무료로 정독하세요.'}
                 </p>
               </div>
@@ -383,6 +483,8 @@ export default function HomePage() {
                   ? 'Explore All Lore Guides'
                   : lang === 'es'
                   ? 'Explorar Guías de Lore'
+                  : lang === 'pt'
+                  ? 'Explorar Guias de Lore'
                   : '전체 지식 가이드 둘러보기'}
               </span>
               <ArrowRight className="w-4 h-4" />

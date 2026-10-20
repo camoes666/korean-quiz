@@ -206,7 +206,8 @@
         {
           "id": "D",
           "text": "Singing the national anthem at midnight",
-          "textKo": "자정에 모여 애국가 제창하기"
+          "textKo": "자정에 모여 애국가 제창하기",
+          "textEs": "Cantar el himno nacional a medianoche"
         }
       ],
       "correctAnswer": "B",

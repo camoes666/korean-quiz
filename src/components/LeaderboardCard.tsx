@@ -21,7 +21,7 @@ const TOP_USERS: LeaderboardUser[] = [
 ];
 
 export default function LeaderboardCard() {
-  const { lang } = useLanguage();
+  const { lang, t } = useLanguage();
   const { xp } = useGame();
 
   return (
@@ -37,6 +37,8 @@ export default function LeaderboardCard() {
                 ? '글로벌 명예의 전당'
                 : lang === 'es'
                 ? 'Salón de la Fama Global'
+                : lang === 'pt'
+                ? 'Hall da Fama Global'
                 : 'Global Hall of Fame'}
             </h3>
             <p className="text-[11px] text-slate-400 font-medium">
@@ -51,7 +53,13 @@ export default function LeaderboardCard() {
 
         <span className="flex items-center gap-1 text-[11px] font-bold px-2.5 py-1 rounded-full bg-slate-100 text-slate-600">
           <span>🏆</span>
-          <span>{lang === 'ko' ? '시즌 1' : lang === 'es' ? 'Temporada 1' : 'Season 1'}</span>
+          <span>
+            {lang === 'ko'
+              ? '시즌 1'
+              : lang === 'es' || lang === 'pt'
+              ? 'Temporada 1'
+              : 'Season 1'}
+          </span>
         </span>
       </div>
 
@@ -88,7 +96,7 @@ export default function LeaderboardCard() {
           <span className="text-xs font-bold text-purple-950">
             {lang === 'ko'
               ? '내 현재 순위: #42'
-              : lang === 'es'
+              : lang === 'es' || lang === 'pt'
               ? 'Tu Rango: #42'
               : 'Your Rank: #42'}
           </span>

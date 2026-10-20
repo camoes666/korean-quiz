@@ -5,6 +5,7 @@ import { Share2, Check, Copy, Swords, User, Camera, Loader2 } from 'lucide-react
 import { useLanguage } from '@/context/LanguageContext';
 import { encodeChallenge } from '@/lib/challenge';
 import { downloadResultCard } from '@/lib/renderResultCard';
+import { trackShare, trackCardDownload } from '@/lib/analytics';
 
 interface ShareButtonsProps {
   quizTitle: string;
@@ -66,16 +67,21 @@ export default function ShareButtons({
   const isHigh = pct >= 70;
   const displayedPoints = totalPoints ?? score * 1000;
 
-  // Determine final share URL
+  // Determine final share URL (preserve sender's language when non-English)
+  const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
+  const langQuery = lang !== 'en' ? `lang=${lang}` : '';
   let shareUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com');
   if (slug && questionIds && questionScores && questionIds.length === 5 && questionScores.length === 5) {
-    const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
     const payload = encodeChallenge(slug, {
       q: questionIds,
       p: questionScores,
       n: nickname.trim(),
     });
-    shareUrl = `${origin}/quiz/${slug}?c=${payload}`;
+    shareUrl = `${origin}/quiz/${slug}?c=${payload}${langQuery ? `&${langQuery}` : ''}`;
+  } else if (slug) {
+    shareUrl = `${origin}/quiz/${slug}${langQuery ? `?${langQuery}` : ''}`;
+  } else if (langQuery && !shareUrl.includes('lang=')) {
+    shareUrl += `${shareUrl.includes('?') ? '&' : '?'}${langQuery}`;
   }
 
   // Dynamic quiz-specific hashtag
@@ -107,6 +113,12 @@ export default function ShareButtons({
       : isHigh
       ? `🔥 ${senderPrefix}¡Obtuve ${displayedPoints.toLocaleString()} pts (${score}/${totalQuestions} correctas) en "${quizTitle}"! ¿Puedes superarme? ⚔️`
       : `🐯 ${senderPrefix}¡Acabo de completar "${quizTitle}" en K-Pulse con ${displayedPoints.toLocaleString()} pts! ¿Crees que sabes más? 👀`;
+  } else if (lang === 'pt') {
+    viralHeadline = isPerfect
+      ? `🏆 ${senderPrefix}5.000 PONTOS PERFEITOS! Dominei "${quizTitle}" no K-Pulse com o título [${badgeTitle}]! 👑 Alguém consegue me vencer? ⚔️`
+      : isHigh
+      ? `🔥 ${senderPrefix}Fiz ${displayedPoints.toLocaleString()} pts (${score}/${totalQuestions} corretas) em "${quizTitle}"! Consegue me superar? ⚔️`
+      : `🐯 ${senderPrefix}Acabei de completar "${quizTitle}" no K-Pulse com ${displayedPoints.toLocaleString()} pts! Consegue bater minha pontuação? 👀`;
   } else {
     // Korean (ko)
     viralHeadline = isPerfect
@@ -121,6 +133,7 @@ export default function ShareButtons({
 
   // 1. Copy Challenge Message (Text + Link)
   const handleCopyChallenge = async () => {
+    trackShare({ slug, method: 'challenge_copy', lang });
     try {
       await navigator.clipboard.writeText(challengeMessage);
       setCopiedChallenge(true);
@@ -133,6 +146,7 @@ export default function ShareButtons({
 
   // 2. Copy Pure Link
   const handleCopyLink = async () => {
+    trackShare({ slug, method: 'link_copy', lang });
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopiedLink(true);
@@ -145,6 +159,7 @@ export default function ShareButtons({
 
   // 3. Native Web Share API
   const handleNativeShare = async () => {
+    trackShare({ slug, method: 'native_share', lang });
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
         await navigator.share({
@@ -162,13 +177,16 @@ export default function ShareButtons({
 
   // 4. Download / Share High-Res Result Card PNG
   const handleDownloadCard = async () => {
+    if (slug) {
+      trackCardDownload({ slug, cardType: 'trivia', lang });
+    }
     try {
       setIsGeneratingCard(true);
       await downloadResultCard({
         type: 'trivia',
         quizTitle,
         slug,
-        lang: lang as 'en' | 'es' | 'ko',
+        lang,
         score,
         totalQuestions,
         totalPoints: displayedPoints,
@@ -189,6 +207,10 @@ export default function ShareButtons({
   const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
     twitterPostText
   )}&url=${encodeURIComponent(shareUrl)}`;
+
+  const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
+    challengeMessage
+  )}`;
 
   const redditShareUrl = `https://www.reddit.com/submit?url=${encodeURIComponent(
     shareUrl
@@ -223,6 +245,8 @@ export default function ShareButtons({
               ? '내 바이럴 도전 카드 미리보기'
               : lang === 'es'
               ? 'Vista previa de desafío viral'
+              : lang === 'pt'
+              ? 'Prévia do Desafio Viral'
               : 'Viral Challenge Preview'}
           </span>
         </div>
@@ -245,6 +269,8 @@ export default function ShareButtons({
                 ? '결과 카드 이미지 생성 중... 📸'
                 : lang === 'es'
                 ? 'Generando tarjeta de imagen... 📸'
+                : lang === 'pt'
+                ? 'Gerando cartão de imagem... 📸'
                 : 'Generating Result Card Image... 📸'}
             </span>
           </>
@@ -256,6 +282,8 @@ export default function ShareButtons({
                 ? '결과 카드 저장 완료! 인스타·X에 자랑해보세요 ✨'
                 : lang === 'es'
                 ? '¡Tarjeta guardada! ¡Compártela en Instagram y X! ✨'
+                : lang === 'pt'
+                ? 'Cartão salvo! Compartilhe no Instagram e X! ✨'
                 : 'Card Saved! Share on Instagram & X! ✨'}
             </span>
           </>
@@ -267,6 +295,8 @@ export default function ShareButtons({
                 ? '📸 결과 카드 이미지 저장 (인스타·X 자랑용)'
                 : lang === 'es'
                 ? '📸 Guardar Tarjeta de Resultado (PNG)'
+                : lang === 'pt'
+                ? '📸 Salvar Cartão de Resultado (PNG)'
                 : '📸 Save Result Card Image (PNG for Instagram & X)'}
             </span>
           </>
@@ -275,11 +305,34 @@ export default function ShareButtons({
 
       {/* Primary Action Buttons */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-2.5">
+        {/* Share on WhatsApp */}
+        <a
+          href={whatsappShareUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => trackShare({ slug, method: 'whatsapp', lang })}
+          className="flex items-center justify-center gap-2.5 rounded-2xl bg-[#25D366] hover:bg-[#1ebe5d] text-white py-3.5 px-4 text-xs sm:text-sm font-black shadow-lg shadow-[#25D366]/25 active:scale-95 transition-all group"
+        >
+          <svg className="w-4 h-4 fill-current shrink-0 group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
+            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.556 4.119 1.528 5.847l-1.528 5.581 5.713-1.499c1.678.9 3.593 1.413 5.629 1.413 6.627 0 12-5.373 12-12s-5.373-12-12-12z" />
+          </svg>
+          <span>
+            {lang === 'ko'
+              ? 'WhatsApp으로 대결 보내기'
+              : lang === 'es'
+              ? 'Desafiar en WhatsApp'
+              : lang === 'pt'
+              ? 'Desafiar no WhatsApp'
+              : 'Challenge on WhatsApp'}
+          </span>
+        </a>
+
         {/* Post to X (Twitter) */}
         <a
           href={twitterShareUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => trackShare({ slug, method: 'twitter', lang })}
           className="flex items-center justify-center gap-2.5 rounded-2xl bg-zinc-950 hover:bg-black text-white py-3.5 px-4 text-xs sm:text-sm font-black shadow-lg shadow-zinc-950/20 active:scale-95 transition-all group"
         >
           <svg className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" viewBox="0 0 24 24">
@@ -290,28 +343,30 @@ export default function ShareButtons({
               ? 'X (트위터)에 점수 자랑하기'
               : lang === 'es'
               ? 'Publicar puntuación en X'
+              : lang === 'pt'
+              ? 'Publicar pontuação no X'
               : 'Post Score to X (Twitter)'}
           </span>
         </a>
-
-        {/* Copy Viral Challenge Message */}
-        <button
-          onClick={handleCopyChallenge}
-          className="flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 hover:from-purple-500 hover:to-rose-500 text-white py-3.5 px-4 text-xs sm:text-sm font-black shadow-lg shadow-pink-500/25 active:scale-95 transition-all"
-        >
-          {copiedChallenge ? (
-            <>
-              <Check className="w-4 h-4 text-emerald-300" />
-              <span>{t.challenge.copiedNotice}</span>
-            </>
-          ) : (
-            <>
-              <Swords className="w-4 h-4" />
-              <span>{t.challenge.copyChallengeBtn}</span>
-            </>
-          )}
-        </button>
       </div>
+
+      {/* Copy Viral Challenge Message */}
+      <button
+        onClick={handleCopyChallenge}
+        className="w-full flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-rose-600 hover:from-purple-500 hover:to-rose-500 text-white py-3.5 px-4 text-xs sm:text-sm font-black shadow-lg shadow-pink-500/25 active:scale-95 transition-all mb-2.5"
+      >
+        {copiedChallenge ? (
+          <>
+            <Check className="w-4 h-4 text-emerald-300" />
+            <span>{t.challenge.copiedNotice}</span>
+          </>
+        ) : (
+          <>
+            <Swords className="w-4 h-4" />
+            <span>{t.challenge.copyChallengeBtn}</span>
+          </>
+        )}
+      </button>
 
       {/* Secondary Row: Mobile Native Share, Reddit, Simple Link Copy */}
       <div className="grid grid-cols-3 gap-2">

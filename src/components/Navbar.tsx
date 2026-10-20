@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Sparkles, Flame, Zap, ChevronDown, Check, BookOpen } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { quizzes } from '@/data/quizzes';
+import { getLocalizedText } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 
@@ -16,7 +17,8 @@ export default function Navbar() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const currentLang = languages.find((l) => l.code === lang) || languages[0];
-  const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
+  const levelTitle = getLocalizedText(currentLevel, 'title', lang);
+  const levelPrefix = lang === 'es' || lang === 'pt' ? 'Nv.' : 'Lv.';
 
   const handleRandomQuiz = () => {
     if (!quizzes.length) return;
@@ -71,7 +73,7 @@ export default function Navbar() {
             </span>
             <span className="hidden md:inline-flex items-center gap-1 text-[11px] font-bold text-slate-500 border-l border-slate-200 pl-2">
               <span>{currentLevel.badgeEmoji}</span>
-              <span>Lv.{currentLevel.level}</span>
+              <span>{levelPrefix}{currentLevel.level}</span>
             </span>
           </div>
 
@@ -87,6 +89,8 @@ export default function Navbar() {
                 ? 'Guides'
                 : lang === 'es'
                 ? 'Guías'
+                : lang === 'pt'
+                ? 'Guias'
                 : lang === 'ko'
                 ? '지식 가이드'
                 : lang === 'ru'

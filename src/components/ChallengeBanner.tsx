@@ -64,7 +64,7 @@ export default function ChallengeBanner({
             </div>
             <div>
               <div className="inline-block px-2.5 py-0.5 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-black tracking-wider uppercase mb-1 text-pink-200">
-                1:1 FRIEND CHALLENGE
+                {t.challenge.friendChallengeBadge}
               </div>
               <h3 className="text-sm sm:text-base font-black leading-snug">
                 {bannerMsg}
