@@ -25,3 +25,145 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* =============================================================
+   Hero Motion Graphics: Headline Shimmer & Mascot Stage Float
+   ============================================================= */
+
+@keyframes heroTitleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    filter: blur(6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes liquidTextShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes heroHighlightFloat {
+  0%, 100% {
+    transform: translateY(0px);
+    filter: drop-shadow(0 4px 16px rgba(236, 72, 153, 0.22));
+  }
+  50% {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 8px 24px rgba(168, 85, 247, 0.38));
+  }
+}
+
+@keyframes underlineSweep {
+  0%, 100% {
+    transform: scaleX(0.85);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bomiStageFloat {
+  0%, 100% {
+    transform: translateY(0px) rotate(-1.5deg) scale(1);
+  }
+  50% {
+    transform: translateY(-9px) rotate(2deg) scale(1.04);
+  }
+}
+
+@keyframes bomiAuraPulse {
+  0%, 100% {
+    transform: scale(0.92);
+    opacity: 0.45;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+@keyframes bomiOrbitSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes particleFloatUp {
+  0% {
+    transform: translateY(8px) scale(0.7);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateY(-22px) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.animate-hero-reveal {
+  animation: heroTitleReveal 0.75s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-reveal-delay {
+  animation: heroTitleReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.animate-liquid-shimmer {
+  background-size: 250% auto;
+  animation:
+    liquidTextShimmer 4.5s ease-in-out infinite,
+    heroHighlightFloat 3.6s ease-in-out infinite;
+}
+
+.animate-underline-sweep {
+  transform-origin: left center;
+  animation: underlineSweep 3.6s ease-in-out infinite;
+}
+
+.animate-bomi-float {
+  animation: bomiStageFloat 3.4s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-bomi-aura {
+  animation: bomiAuraPulse 3.4s ease-in-out infinite;
+}
+
+.animate-bomi-orbit {
+  animation: bomiOrbitSpin 14s linear infinite;
+}
+
+.animate-particle-1 {
+  animation: particleFloatUp 2.8s ease-in-out infinite;
+}
+
+.animate-particle-2 {
+  animation: particleFloatUp 3.2s ease-in-out 1.1s infinite;
+}
+
+.animate-particle-3 {
+  animation: particleFloatUp 3s ease-in-out 2s infinite;
+}

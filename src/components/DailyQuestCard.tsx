@@ -1,10 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import { Flame, Zap, Trophy, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Zap, Sparkles, ArrowRight, CheckCircle2, Flame } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
-import { Quiz } from '@/types/quiz';
+import { Quiz, getLocalizedText } from '@/types/quiz';
+import { getQuizMascot } from '@/lib/mascot';
 
 interface DailyQuestCardProps {
   questQuiz: Quiz;
@@ -13,76 +14,161 @@ interface DailyQuestCardProps {
 export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
   const { lang } = useLanguage();
   const { dailyQuestCompleted, streak } = useGame();
+  const quizTitle = getLocalizedText(questQuiz, 'title', lang);
+  const quizDesc = getLocalizedText(questQuiz, 'description', lang);
+  const mascot = getQuizMascot(questQuiz.slug, questQuiz.tag);
+  const isPersonality = questQuiz.quizType === 'personality';
+  const questionCount = isPersonality
+    ? questQuiz.personalityQuestions?.length || 10
+    : questQuiz.questions.length;
+  const isBlackpinkMemberQuiz = questQuiz.slug === 'which-blackpink-member-are-you';
+
+  const members =
+    lang === 'ko'
+      ? [
+          { emoji: '🐰', name: '지수', role: '4D 무드메이커' },
+          { emoji: '🥟', name: '제니', role: '트렌드 아이콘' },
+          { emoji: '🐿️', name: '로제', role: '감성 보컬' },
+          { emoji: '🐤', name: '리사', role: '퍼포먼스 퀸' },
+        ]
+      : lang === 'es'
+      ? [
+          { emoji: '🐰', name: 'Jisoo', role: 'Carisma 4D' },
+          { emoji: '🥟', name: 'Jennie', role: 'Icono Trend' },
+          { emoji: '🐿️', name: 'Rosé', role: 'Alma Vocal' },
+          { emoji: '🐤', name: 'Lisa', role: 'Reina Dance' },
+        ]
+      : [
+          { emoji: '🐰', name: 'Jisoo', role: '4D Moodmaker' },
+          { emoji: '🥟', name: 'Jennie', role: 'Trend Icon' },
+          { emoji: '🐿️', name: 'Rosé', role: 'Soulful Vocal' },
+          { emoji: '🐤', name: 'Lisa', role: 'Dance Queen' },
+        ];
 
   return (
-    <div className="relative overflow-hidden rounded-3xl border-2 border-purple-200/50 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 p-6 sm:p-8 text-white shadow-xl shadow-purple-500/15">
-      {/* Background Decorative Circles */}
-      <div className="absolute top-0 right-0 -mr-10 -mt-10 w-48 h-48 rounded-full bg-white/15 blur-2xl pointer-events-none"></div>
-      <div className="absolute bottom-0 left-1/3 w-36 h-36 rounded-full bg-pink-400/25 blur-xl pointer-events-none"></div>
-      {/* Fiery Streak Hobi Mascot (Desktop Illustration) */}
-      <div className="hidden lg:flex items-center justify-center absolute right-48 -bottom-3 w-40 h-40 pointer-events-none select-none z-10">
-        <img
-          src="/images/hobi04.webp"
-          alt="Streak Fire Hobi"
-          className="w-full h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.35)] animate-pulse"
-          style={{ animationDuration: '3s' }}
-        />
-      </div>
+    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#160812] via-[#240d1d] to-[#12091a] p-6 sm:p-7 text-white shadow-2xl shadow-pink-950/25 border border-pink-500/30 flex flex-col justify-between h-full group">
+      {/* Stage Spotlight Glows */}
+      <div className="absolute -top-20 -right-16 w-64 h-64 rounded-full bg-pink-500/30 blur-3xl pointer-events-none" />
+      <div className="absolute bottom-6 right-6 w-40 h-40 rounded-full bg-rose-500/25 blur-2xl pointer-events-none" />
+      <div className="absolute -bottom-20 -left-16 w-56 h-56 rounded-full bg-purple-600/20 blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div className="max-w-lg">
-          {/* Top Badges */}
-          <div className="flex items-center gap-2 flex-wrap mb-3">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 text-purple-900 text-xs font-black shadow-xs">
-              <img src="/images/hobi04.webp" alt="Fire Hobi" className="w-4 h-4 object-contain inline-block -my-0.5" />
-              {lang === 'ko' ? '오늘의 데일리 챌린지' : lang === 'es' ? 'Misión del Día' : "Today's Daily Quest"}
-            </span>
-
-            <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-400 text-emerald-950 text-xs font-black shadow-xs">
-              <Zap className="w-3.5 h-3.5 text-emerald-950 fill-current" />
-              +100 BONUS XP
-            </span>
-
-            <span className="inline-flex items-center gap-1 text-[11px] text-white/90 font-bold bg-black/20 backdrop-blur-md px-2.5 py-0.5 rounded-full">
-              <Clock className="w-3 h-3" />
-              {lang === 'ko' ? '자정에 초기화' : lang === 'es' ? 'Reinicio a medianoche' : 'Resets at midnight'}
-            </span>
-          </div>
-
-          <h2 className="text-xl sm:text-2xl font-black tracking-tight leading-snug">
-            {lang === 'ko'
-              ? '매일 1개 퀴즈 풀고 출석 스트릭(🔥)을 유지하세요!'
+      <div className="relative z-10">
+        {/* Top Meta Badges */}
+        <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-200 text-xs font-extrabold backdrop-blur-md shadow-xs">
+            <Sparkles className="w-3.5 h-3.5 text-pink-400" />
+            {isPersonality
+              ? lang === 'ko'
+                ? '인기 메인 테스트 · BLACKPINK'
+                : lang === 'es'
+                ? 'Test Destacado · BLACKPINK'
+                : 'Featured Test · BLACKPINK'
+              : lang === 'ko'
+              ? '오늘의 데일리 퀘스트'
               : lang === 'es'
-              ? '¡Completa 1 quiz diario para mantener tu racha activa 🔥!'
-              : 'Complete 1 daily quiz to keep your fire streak alive!'}
+              ? 'Misión del Día'
+              : 'Daily Quest'}
+          </span>
+
+          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-400/15 border border-emerald-400/35 text-emerald-300 text-xs font-black">
+            <Zap className="w-3 h-3 fill-current" />
+            +100 XP
+          </span>
+        </div>
+
+        {/* Title & Subtitle */}
+        <div className="pr-24 sm:pr-32">
+          <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white leading-snug">
+            {quizTitle}
           </h2>
-
-          <p className="mt-2 text-xs sm:text-sm text-white/90 font-medium leading-relaxed">
-            {lang === 'ko'
-              ? `연속 출석 ${streak}일차 달성 중! 오늘의 보너스 XP를 획득하고 글로벌 랭킹을 올려보세요.`
-              : lang === 'es'
-              ? `¡Llevas una racha de ${streak} días! Reclama tu bono de +100 XP y sube en la clasificación.`
-              : `You are on a ${streak}-day streak! Claim your +100 XP bonus and climb the leaderboard.`}
+          <p className="mt-1.5 text-xs text-pink-100/75 font-medium leading-relaxed line-clamp-2">
+            {quizDesc}
           </p>
         </div>
 
-        {/* Action Button / Completed State */}
-        <div className="w-full md:w-auto shrink-0">
-          {dailyQuestCompleted ? (
-            <div className="flex items-center justify-center gap-2 rounded-full bg-emerald-400 text-emerald-950 font-black px-7 py-3.5 text-sm shadow-lg shadow-emerald-500/20">
-              <CheckCircle2 className="w-5 h-5" />
-              <span>{lang === 'ko' ? '오늘의 퀘스트 완료!' : lang === 'es' ? '¡Misión Completada!' : 'Completed Today!'}</span>
+        {/* Symmetrical 2x2 Member Grid + Large Mascot */}
+        <div className="relative mt-4 flex items-end justify-between gap-3">
+          {isBlackpinkMemberQuiz && (
+            <div className="grid grid-cols-2 gap-2 flex-1 max-w-[260px] z-10">
+              {members.map((m) => (
+                <div
+                  key={m.name}
+                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.12] border border-pink-300/15 backdrop-blur-md transition-colors"
+                >
+                  <span className="text-base leading-none">{m.emoji}</span>
+                  <div className="min-w-0">
+                    <div className="text-xs font-black text-white leading-tight truncate">
+                      {m.name}
+                    </div>
+                    <div className="text-[10px] font-semibold text-pink-200/70 truncate">
+                      {m.role}
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
-          ) : (
-            <Link
-              href={`/quiz/${questQuiz.slug}`}
-              className="flex items-center justify-center gap-2 w-full md:w-auto rounded-full bg-amber-300 hover:bg-amber-200 active:scale-95 text-amber-950 px-7 py-3.5 text-sm sm:text-base font-black shadow-lg shadow-amber-500/25 transition-all"
-            >
-              <span>{lang === 'ko' ? '퀘스트 도전하기' : lang === 'es' ? 'Comenzar Misión' : 'Start Daily Quest'}</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
           )}
+
+          {/* Hero-sized Mascot Bomi with Motion Graphics & Stage Aura */}
+          <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 -mt-10 sm:-mt-12 -mr-2 relative select-none pointer-events-none z-10">
+            {/* Pulsing Pink Stage Halo */}
+            <div className="absolute inset-1 rounded-full bg-gradient-to-tr from-pink-500/50 via-rose-400/35 to-purple-500/30 blur-xl animate-bomi-aura" />
+            {/* Rotating Dashed Stage Orbit Ring */}
+            <div className="absolute inset-1.5 rounded-full border border-dashed border-pink-400/40 animate-bomi-orbit" />
+            {/* Floating K-Pop Heart & Sparkle Particles */}
+            <span className="absolute -top-1 left-2 text-xs animate-particle-1">💖</span>
+            <span className="absolute top-3 -right-1 text-xs animate-particle-2">✨</span>
+            <span className="absolute bottom-4 -left-1 text-[11px] animate-particle-3">🌸</span>
+            {/* Floating Bomi Illustration */}
+            <img
+              src={mascot.avatarUrl}
+              alt={mascot.name}
+              className="relative w-full h-full object-contain drop-shadow-[0_12px_20px_rgba(236,72,153,0.45)] animate-bomi-float"
+            />
+          </div>
         </div>
+      </div>
+
+      {/* Bottom CTA Bar */}
+      <div className="relative z-10 mt-5 pt-4 border-t border-pink-200/10 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-xs text-pink-100/80 font-semibold">
+          <span className="inline-flex items-center gap-1 text-pink-300 font-bold">
+            <Flame className="w-3.5 h-3.5 fill-current text-pink-400" />
+            {lang === 'ko' ? `${streak}일 스트릭` : `${streak}d streak`}
+          </span>
+          <span className="text-white/25">·</span>
+          <span>
+            {questionCount} {lang === 'ko' ? '문항' : 'Qs'} (~{questQuiz.estimatedMinutes}
+            {lang === 'ko' ? '분' : 'm'})
+          </span>
+        </div>
+
+        {dailyQuestCompleted ? (
+          <div className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-black px-5 py-2.5 text-xs">
+            <CheckCircle2 className="w-4 h-4" />
+            <span>{lang === 'ko' ? '참여 완료' : lang === 'es' ? '¡Completado!' : 'Completed'}</span>
+          </div>
+        ) : (
+          <Link
+            href={`/quiz/${questQuiz.slug}`}
+            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-400 hover:to-rose-500 active:scale-95 text-white px-5 py-2.5 text-xs sm:text-sm font-black shadow-lg shadow-pink-500/30 transition-all shrink-0"
+          >
+            <span>
+              {isPersonality
+                ? lang === 'ko'
+                  ? '내 멤버 알아보러 가기'
+                  : lang === 'es'
+                  ? 'Descubrir Mi Miembro'
+                  : 'Find My Member'
+                : lang === 'ko'
+                ? '데일리 도전하기'
+                : lang === 'es'
+                ? 'Jugar Misión'
+                : 'Play Daily Quest'}
+            </span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        )}
       </div>
     </div>
   );
