@@ -1,9 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import { getAllQuizzes } from '@/data/quizzes';
-import { Category, getLocalizedText } from '@/types/quiz';
+import { Category } from '@/types/quiz';
 import QuizCard from '@/components/QuizCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import DailyQuestCard from '@/components/DailyQuestCard';
@@ -15,78 +15,11 @@ import { useGame } from '@/context/GameContext';
 
 const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
 
-type QuizModeFilter = 'all' | 'trivia' | 'personality';
-
-interface QuickFandomChip {
-  label: string;
-  emoji: string;
-  category: Category;
-  tag: string;
-  badgeClass: string;
-}
-
-const QUICK_FANDOM_CHIPS: QuickFandomChip[] = [
-  {
-    label: 'BTS',
-    emoji: '💜',
-    category: 'K-Pop',
-    tag: 'BTS',
-    badgeClass: 'hover:border-purple-400 hover:bg-purple-50/80 text-purple-900 border-purple-200/90',
-  },
-  {
-    label: 'BLACKPINK',
-    emoji: '💖',
-    category: 'K-Pop',
-    tag: 'BLACKPINK',
-    badgeClass: 'hover:border-pink-400 hover:bg-pink-50/80 text-pink-900 border-pink-200/90',
-  },
-  {
-    label: 'Stray Kids',
-    emoji: '🧭',
-    category: 'K-Pop',
-    tag: 'Stray Kids',
-    badgeClass: 'hover:border-rose-400 hover:bg-rose-50/80 text-rose-900 border-rose-200/90',
-  },
-  {
-    label: 'K-Drama',
-    emoji: '🎬',
-    category: 'K-Drama',
-    tag: 'All',
-    badgeClass: 'hover:border-indigo-400 hover:bg-indigo-50/80 text-indigo-900 border-indigo-200/90',
-  },
-  {
-    label: 'K-Food',
-    emoji: '🍜',
-    category: 'Food',
-    tag: 'All',
-    badgeClass: 'hover:border-amber-400 hover:bg-amber-50/80 text-amber-900 border-amber-200/90',
-  },
-];
-
-const LIVE_SOULMATE_TICKER = [
-  { emoji: '💜', member: 'Jungkook', group: 'BTS', match: '99%', color: 'text-purple-100 bg-purple-500/30 border-purple-400/40' },
-  { emoji: '💖', member: 'Lisa', group: 'BLACKPINK', match: '98%', color: 'text-pink-100 bg-pink-500/30 border-pink-400/40' },
-  { emoji: '🧭', member: 'Felix', group: 'Stray Kids', match: '99%', color: 'text-amber-100 bg-amber-500/25 border-amber-400/40' },
-  { emoji: '💜', member: 'V · Taehyung', group: 'BTS', match: '97%', color: 'text-purple-100 bg-purple-500/30 border-purple-400/40' },
-  { emoji: '💖', member: 'Jennie', group: 'BLACKPINK', match: '98%', color: 'text-pink-100 bg-pink-500/30 border-pink-400/40' },
-];
-
 export default function HomePage() {
   const { t, lang } = useLanguage();
   const { currentLevel, progressPercent, xpToNextLevel } = useGame();
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const [selectedTag, setSelectedTag] = useState<string>('All');
-  const [selectedMode, setSelectedMode] = useState<QuizModeFilter>('all');
-  const [tickerIndex, setTickerIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setTickerIndex((prev) => (prev + 1) % LIVE_SOULMATE_TICKER.length);
-    }, 2600);
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentTicker = LIVE_SOULMATE_TICKER[tickerIndex];
 
   const allQuizzes = getAllQuizzes();
   const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
@@ -110,16 +43,11 @@ export default function HomePage() {
 
   // Filter quizzes
   const filteredQuizzes = allQuizzes.filter((quiz) => {
-    const isPersonality = quiz.quizType === 'personality';
-    const matchesMode =
-      selectedMode === 'all' ||
-      (selectedMode === 'personality' && isPersonality) ||
-      (selectedMode === 'trivia' && !isPersonality);
     const matchesCategory =
       selectedCategory === 'All' || quiz.category === selectedCategory;
     const matchesTag =
       selectedTag === 'All' || quiz.tag === selectedTag;
-    return matchesMode && matchesCategory && matchesTag;
+    return matchesCategory && matchesTag;
   });
 
   const handleCategoryChange = (category: Category) => {
@@ -326,27 +254,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Category Chunky Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2">
-            {CATEGORIES.map((category) => {
-              const isActive = selectedCategory === category;
-              const categoryLabel = t.categories[category] || category;
-              return (
-                <button
-                  key={category}
-                  onClick={() => handleCategoryChange(category)}
-                  className={`rounded-full px-5 py-2 text-xs sm:text-sm font-black transition-all active:scale-95 cursor-pointer ${
-                    isActive
-                      ? 'bg-gradient-to-r from-purple-600 to-indigo-600 text-white shadow-md shadow-purple-500/25'
-                      : 'bg-white border-2 border-purple-100 hover:border-purple-300 text-slate-700 shadow-xs'
-                  }`}
-                >
-                  {categoryLabel}
-                </button>
-              );
-            })}
-          </div>
-
           {/* Sub-tag Bar */}
           {availableTags.length > 1 && (
             <div className="flex items-center gap-1.5 flex-wrap pt-3 border-t border-slate-200/60">
@@ -387,7 +294,6 @@ export default function HomePage() {
             <p className="text-base font-bold">{t.noQuizzesFound}</p>
             <button
               onClick={() => {
-                setSelectedMode('all');
                 setSelectedCategory('All');
                 setSelectedTag('All');
               }}
