@@ -72,6 +72,18 @@ export default function HomePage() {
       style: 'border-pink-200 bg-white/90 text-pink-700 hover:bg-pink-50 hover:border-pink-300',
     },
     {
+      label: '✨ aespa',
+      category: 'K-Pop' as Category,
+      tag: 'aespa',
+      style: 'border-cyan-200 bg-white/90 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-300',
+    },
+    {
+      label: '🔥 LE SSERAFIM',
+      category: 'K-Pop' as Category,
+      tag: 'LE SSERAFIM',
+      style: 'border-emerald-200 bg-white/90 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300',
+    },
+    {
       label: '💜 BTS',
       category: 'K-Pop' as Category,
       tag: 'BTS',

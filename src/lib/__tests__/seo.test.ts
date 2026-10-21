@@ -22,6 +22,18 @@ describe('seo', () => {
     expect(seo.keywords).toContain('which korean food are you');
   });
 
+  it('has tailored SEO metadata for aespa and le sserafim quizzes', () => {
+    const aespa = getQuizBySlug('which-aespa-member-are-you')!;
+    const aespaSeo = getQuizSeoData(aespa);
+    expect(aespaSeo.title).toContain('Which aespa Member Are You?');
+    expect(aespaSeo.keywords).toContain('which aespa member are you');
+
+    const leSserafim = getQuizBySlug('which-le-sserafim-member-are-you')!;
+    const lsfSeo = getQuizSeoData(leSserafim);
+    expect(lsfSeo.title).toContain('Which LE SSERAFIM Member Are You?');
+    expect(lsfSeo.keywords).toContain('which le sserafim member are you');
+  });
+
   it('emits no review ratings (there are no real reviews to mark up)', () => {
     for (const quiz of getAllQuizzes()) {
       expect(JSON.stringify(generateQuizJsonLd(quiz))).not.toContain('AggregateRating');

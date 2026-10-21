@@ -1,0 +1,683 @@
+{
+  "slug": "which-le-sserafim-member-are-you",
+  "addedAt": "2026-10-21",
+  "quizType": "personality",
+  "title": "Which LE SSERAFIM Member Are You?",
+  "titleKo": "나와 가장 잘 맞는 르세라핌(LE SSERAFIM) 멤버 찾기",
+  "titleEs": "¿Qué integrante de LE SSERAFIM eres?",
+  "subtitle": "Discover your FEARLESS archetype, stage aura, and unnie-maknae chemistry!",
+  "subtitleKo": "나의 피어리스 아키타입, 당당한 무대 아우라, 그리고 환상의 핌둥이 케미를 찾아보세요!",
+  "subtitleEs": "¡Descubre tu arquetipo FEARLESS, tu carisma en el escenario y tu química con LE SSERAFIM!",
+  "description": "Are you fierce leader Chaewon, resilient icon Sakura, passionate songwriter Yunjin, graceful ballerina Kazuha, or vitamin maknae Eunchae? Take the 10-question test!",
+  "descriptionKo": "야무진 카리스마 리더 채원, 단단한 내면의 지혜로운 맏언니 사쿠라, 뜨거운 열정의 싱어송라이터 윤진, 단아함 속 엉뚱한 매력의 카즈하, 온 세상의 사랑을 받는 막내 은채 중 나의 소울메이트는?",
+  "descriptionEs": "¿Eres la carismática líder Chaewon, la perseverante Sakura, la apasionada compositora Yunjin, la elegante bailarina Kazuha o la enérgica maknae Eunchae? ¡Haz el test de 10 preguntas!",
+  "category": "K-Pop",
+  "tag": "LE SSERAFIM",
+  "coverEmoji": "🔥",
+  "gradient": "from-zinc-950 via-slate-900 to-emerald-950",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "164.2K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "chaewon": {
+      "id": "chaewon",
+      "name": "Kim Chaewon",
+      "nameKo": "김채원",
+      "nameEs": "Kim Chaewon",
+      "title": "The Fierce Bob-Cut Captain & Sassy Cheetah",
+      "titleKo": "야무진 카리스마 쌈무 대장 & 반전 귀여움의 리더",
+      "titleEs": "La Líder Impecable y Chita Carismática",
+      "subtitle": "Magnetic Stage Presence · Sharp Wit · Reliable Center",
+      "subtitleKo": "독보적 무대 장악력 · 순발력 넘치는 센스 · 든든한 중심",
+      "subtitleEs": "Presencia Escénica Imponente · Gran Ingenio · Centro Confiable",
+      "skzoo": "Baby Cheetah (치타 🐯)",
+      "skzooKo": "아기 치타 🐯",
+      "skzooEs": "Bebé Guepardo 🐯",
+      "emoji": "🐯",
+      "traits": [
+        "Decisive Leadership",
+        "Magnetic Stage Presence",
+        "Quick Sassy Wit"
+      ],
+      "traitsKo": [
+        "결단력 있는 리더십",
+        "압도적 무대 장악력",
+        "센스 넘치는 유머"
+      ],
+      "traitsEs": [
+        "Liderazgo Decidido",
+        "Aura Magnética",
+        "Humor Ágil y Divertido"
+      ],
+      "description": "Like Chaewon, you possess rare magnetic charm, effortless stage authority, and a sharp, witty mind. You know how to take responsibility when it counts, yet your playful and warm energy makes everyone naturally gravitate around you.",
+      "descriptionKo": "채원처럼 결단력 있고 똑 부러지는 리더십과 거부할 수 없는 매력을 동시에 가진 사람! 맡은 일은 완벽하게 해내면서도, 특유의 센스와 사랑스러운 성격으로 주변 사람들에게 최고의 든든함을 줍니다.",
+      "descriptionEs": "Como Chaewon, tienes un carisma arrollador, gran sentido de la responsabilidad y un ingenio brillante. Sabes liderar con el ejemplo y tu calidez hace que todos quieran estar a tu lado.",
+      "bestMatchId": "sakura",
+      "bestMatchName": "Sakura",
+      "bestMatchNameKo": "사쿠라 (Sakura)",
+      "bestMatchNameEs": "Sakura",
+      "bestMatchReason": "The legendary SsamKkura chemistry! Sakura's veteran wisdom and Chaewon's decisive leadership create pure synergy.",
+      "bestMatchReasonKo": "전설의 쌈꾸라 케미! 사쿠라의 깊은 속마음과 채원의 든든한 실행력이 만나 세상에서 가장 믿음직한 파트너십을 완성합니다.",
+      "bestMatchReasonEs": "¡La legendaria dupla SsamKkura! La sabiduría de Sakura y la determinación de Chaewon forman un equipo inquebrantable.",
+      "colorHex": "#065f46",
+      "bgGradient": "from-emerald-700 via-teal-800 to-slate-950"
+    },
+    "sakura": {
+      "id": "sakura",
+      "name": "Miyawaki Sakura",
+      "nameKo": "미야와키 사쿠라",
+      "nameEs": "Miyawaki Sakura",
+      "title": "The Iron-Mindset Veteran Icon & Cozy Gaming Unnie",
+      "titleKo": "단단한 내면의 지혜로운 맏언니 & 뜨거운 열정의 프로",
+      "titleEs": "El Icono de Acero y Hermana Mayor Sabia",
+      "subtitle": "Unbreakable Resilience · Master of Self-Care · Cat & Gaming Lover",
+      "subtitleKo": "강철 멘탈 · 끊임없는 도전 · 고양이와 게임을 사랑하는 따뜻한 맏언니",
+      "subtitleEs": "Resiliencia de Acero · Dedicación Pura · Amante de los Gatos y Gaming",
+      "skzoo": "Kkura Cat (벚꽃 고양이 🌸)",
+      "skzooKo": "꾸라 냥이 🌸",
+      "skzooEs": "Gatita Kkura 🌸",
+      "emoji": "🌸",
+      "traits": [
+        "Unbreakable Resilience",
+        "Thoughtful Wisdom",
+        "Quiet Dedication"
+      ],
+      "traitsKo": [
+        "흔들리지 않는 멘탈",
+        "깊은 배려와 통찰",
+        "끝없는 자기 계발"
+      ],
+      "traitsEs": [
+        "Resiliencia Inquebrantable",
+        "Sabiduría Empática",
+        "Dedicación Total"
+      ],
+      "description": "Like Sakura, you have built incredible strength through perseverance and self-reflection. You rarely boast, preferring to show results through relentless practice, and you look out for your friends with mature, gentle encouragement.",
+      "descriptionKo": "사쿠라처럼 끊임없는 도전과 단단한 멘탈로 어떤 시련도 당당하게 극복해 내는 사람! 묵묵히 노력하며 사람들의 아픔을 깊이 보듬어줄 줄 아는 어른스럽고 따뜻한 내면의 소유자입니다.",
+      "descriptionEs": "Como Sakura, has forjado una fuerza interior extraordinaria a base de perseverancia y disciplina. Trabajas duro en silencio y siempre cuidas a tus amigos con consejos maduros y amor sincero.",
+      "bestMatchId": "chaewon",
+      "bestMatchName": "Chaewon",
+      "bestMatchNameKo": "김채원 (Chaewon)",
+      "bestMatchNameEs": "Chaewon",
+      "bestMatchReason": "Chaewon gives Sakura the courage to let loose and laugh, while Sakura provides Chaewon with an unshakable emotional anchor.",
+      "bestMatchReasonKo": "채원은 사쿠라가 마음껏 웃고 기댈 수 있는 버팀목이 되어주고, 사쿠라는 채원에게 흔들리지 않는 신뢰를 보냅니다.",
+      "bestMatchReasonEs": "Chaewon hace que Sakura se divierta y se relaje, mientras Sakura le da a Chaewon un apoyo emocional incondicional.",
+      "colorHex": "#db2777",
+      "bgGradient": "from-pink-600 via-rose-700 to-slate-950"
+    },
+    "yunjin": {
+      "id": "yunjin",
+      "name": "Huh Yunjin (Jennifer)",
+      "nameKo": "허윤진 (Jennifer)",
+      "nameEs": "Huh Yunjin (Jennifer)",
+      "title": "The Creative Songwriter & Passionate Hot Girl",
+      "titleKo": "자유분방한 뮤지컬 핫걸 & 작사·작곡하는 예술가",
+      "titleEs": "La Cantautora Apasionada y Chica de Gran Corazón",
+      "subtitle": "Unfiltered Honesty · Artistic Power · Theater Kid Energy",
+      "subtitleKo": "솔직 당당한 매력 · 풍부한 표현력 · 긍정 에너지 전파자",
+      "subtitleEs": "Sinceridad Total · Talento Artístico · Energía Alegre",
+      "skzoo": "Kirin / Giraffe (핫걸 기린 🦒)",
+      "skzooKo": "핫걸 기린 🦒",
+      "skzooEs": "Jirafa Hot Girl 🦒",
+      "emoji": "🦒",
+      "traits": [
+        "Creative Soul",
+        "Bold & Unapologetic",
+        "Empowering Energy"
+      ],
+      "traitsKo": [
+        "풍부한 창의력",
+        "당당하고 솔직한 태도",
+        "주변을 북돋우는 에너지"
+      ],
+      "traitsEs": [
+        "Creatividad Pura",
+        "Auténtica y Sin Filtros",
+        "Optimismo Empoderador"
+      ],
+      "description": "Like Yunjin, you are vibrant, deeply creative, and unapologetically yourself! You pour your heart into art, music, and deep thoughts, constantly inspiring everyone around you to embrace their true identities with pride.",
+      "descriptionKo": "윤진처럼 뜨거운 열정과 예술적 감수성, 그리고 솔직 당당한 자신감을 가진 사람! 편견을 깨고 나만의 개성을 세상에 당당히 드러내며, 긍정적인 메시지로 주변 사람들에게 용기를 불어넣어 줍니다.",
+      "descriptionEs": "Como Yunjin, eres vibrante, sumamente creativa y auténtica hasta la médula. Vuelcas tu pasión en el arte y la música, inspirando a quienes te rodean a amarse y valorarse sin miedos.",
+      "bestMatchId": "kazuha",
+      "bestMatchName": "Kazuha",
+      "bestMatchNameKo": "카즈하 (Kazuha)",
+      "bestMatchNameEs": "Kazuha",
+      "bestMatchReason": "Hot-girl Yunjin and calm-swan Kazuha create the most iconic, hilarious, and balanced best-friend chemistry.",
+      "bestMatchReasonKo": "핫걸 윤진의 파워풀한 에너지와 카즈하의 단아한 엉뚱함이 만나 웃음이 끊이지 않는 영혼의 단짝 조합입니다.",
+      "bestMatchReasonEs": "La energía radiante de Yunjin y la serenidad graciosa de Kazuha crean una amistad equilibrada y divertida.",
+      "colorHex": "#ea580c",
+      "bgGradient": "from-amber-600 via-orange-700 to-red-950"
+    },
+    "kazuha": {
+      "id": "kazuha",
+      "name": "Nakamura Kazuha",
+      "nameKo": "나카무라 카즈하",
+      "nameEs": "Nakamura Kazuha",
+      "title": "The Elegant Swan Ballerina & Dad Joke Queen",
+      "titleKo": "발레리나 출신의 단아한 피지컬 & 엉뚱 아재개그 장인",
+      "titleEs": "Bailarina Elegante y Reina de los Chistes Espontáneos",
+      "subtitle": "Poetic Grace · Fitness Dedication · Hilarious Low-Key Humor",
+      "subtitleKo": "우아한 기품 · 꾸준한 운동과 자기관리 · 반전 엉뚱 매력",
+      "subtitleEs": "Gracia Natural · Disciplina Física · Humor Inesperado",
+      "skzoo": "Zuha Swan (백조 즈하 🦢)",
+      "skzooKo": "백조 즈하 🦢",
+      "skzooEs": "Cisne Zuha 🦢",
+      "emoji": "🦢",
+      "traits": [
+        "Calm & Disciplined",
+        "Gentle Resilience",
+        "Quirky Sense of Humor"
+      ],
+      "traitsKo": [
+        "차분한 규율과 성실함",
+        "부드럽지만 강한 멘탈",
+        "엉뚱하고 순수한 유머"
+      ],
+      "traitsEs": [
+        "Disciplina y Calma",
+        "Fuerza Interior Serena",
+        "Humor Inocente y Divertido"
+      ],
+      "description": "Like Kazuha, you combine incredible physical grace with an unexpected, delightfully goofy sense of humor. You maintain steady discipline in your daily habits, and your pure-hearted laugh is contagious.",
+      "descriptionKo": "카즈하처럼 우아하고 차분한 외면 뒤에 순수하고 엉뚱한 반전 매력을 품은 사람! 흔들림 없이 성실하게 스스로를 단련하면서도, 툭 던지는 유쾌한 장난으로 사람들을 행복하게 만듭니다.",
+      "descriptionEs": "Como Kazuha, combinas una elegancia innata con un sentido del humor único y encantador. Eres constante y disciplinada en tus metas, y tu risa sincera alegra a cualquiera.",
+      "bestMatchId": "yunjin",
+      "bestMatchName": "Yunjin",
+      "bestMatchNameKo": "허윤진 (Yunjin)",
+      "bestMatchNameEs": "Yunjin",
+      "bestMatchReason": "Yunjin turns Kazuha's quiet humor into roaring laughter, while Kazuha brings peaceful balance to Yunjin.",
+      "bestMatchReasonKo": "카즈하의 엉뚱한 개그를 가장 크게 웃어주는 사람이 윤진이고, 윤진의 불같은 텐션을 차분하게 안아주는 사람이 카즈하입니다.",
+      "bestMatchReasonEs": "Yunjin celebra cada chiste de Kazuha con risas infinitas, mientras Kazuha le da paz y serenidad a Yunjin.",
+      "colorHex": "#475569",
+      "bgGradient": "from-slate-600 via-slate-800 to-zinc-950"
+    },
+    "eunchae": {
+      "id": "eunchae",
+      "name": "Hong Eunchae (Manchae)",
+      "nameKo": "홍은채 (만채)",
+      "nameEs": "Hong Eunchae (Manchae)",
+      "title": "The Fearless Smile Virus & Beloved Golden Maknae",
+      "titleKo": "온 세상의 사랑을 받는 막내 만채 & 무한 비타민 에너지",
+      "titleEs": "El Virus de la Sonrisa y Maknae Consentida",
+      "subtitle": "Limitless Sunshine · Fast Learner · Adored by 4 Big Sisters",
+      "subtitleKo": "사랑스러운 막내미 · 빠른 습득력 · 언니들의 무한 비타민",
+      "subtitleEs": "Energía Brillante · Aprendiz Veloz · Amada por Todas",
+      "skzoo": "Baby Chick / Manchae (만채 삐약이 🐣)",
+      "skzooKo": "만채 삐약이 🐣",
+      "skzooEs": "Pollito Manchae 🐣",
+      "emoji": "🐣",
+      "traits": [
+        "Infectious Sunshine",
+        "Quick Wit & Audacity",
+        "Pure Heart"
+      ],
+      "traitsKo": [
+        "비타민 같은 밝은 에너지",
+        "당돌하고 당찬 매력",
+        "솔직하고 맑은 성격"
+      ],
+      "traitsEs": [
+        "Alegría Contagiosa",
+        "Audacia y Espontaneidad",
+        "Corazón Cristalino"
+      ],
+      "description": "Like Eunchae, you radiate irresistible warmth and pure positive energy! You learn new things lightning-fast, speak up with refreshing boldness, and naturally become the beloved heart of any group you join.",
+      "descriptionKo": "은채처럼 존재만으로도 주변 사람들을 미소 짓게 만드는 인간 비타민! 두려움 없이 새로운 것에 도전하며, 맑고 투명한 솔직함으로 누구에게나 사랑받는 존재입니다.",
+      "descriptionEs": "Como Eunchae, tienes una energía tan radiante y positiva que es imposible no quererte. Aprendes todo a la velocidad de la luz, eres espontánea y te conviertes en la consentida de cualquier grupo.",
+      "bestMatchId": "chaewon",
+      "bestMatchName": "Chaewon",
+      "bestMatchNameKo": "김채원 (Chaewon)",
+      "bestMatchNameEs": "Chaewon",
+      "bestMatchReason": "The Chaewon & Eunchae leader-maknae bond! Chaewon dotes on Eunchae endlessly while Eunchae hypes up Chaewon.",
+      "bestMatchReasonKo": "은채를 세상에서 제일 귀여워하는 맏언니 채원과, 채원 언니를 가장 든든하게 따르는 막내 은채의 무적 케미!",
+      "bestMatchReasonEs": "El lazo indestructible entre la líder y la maknae: Chaewon la adora y Eunchae llena de alegría a Chaewon.",
+      "colorHex": "#f59e0b",
+      "bgGradient": "from-amber-500 via-yellow-600 to-orange-950"
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "question": "What is your go-to high-energy athleisure & street style?",
+      "questionKo": "편하면서도 시크하게 존재감을 드러내는 나만의 애슬레저 룩은?",
+      "questionEs": "¿Cuál es tu estilo athleisure favorito para lucir genial y cómoda?",
+      "emoji": "👟",
+      "options": [
+        {
+          "id": "A",
+          "text": "Fitted black athletic zip-up, structured micro-shorts, high socks, and clean designer trainers",
+          "textKo": "날렵한 핏의 블랙 집업 저지, 심플한 쇼츠와 롱삭스, 세련된 디자이너 스니커즈",
+          "textEs": "Chaqueta deportiva negra entallada, shorts estructurados y zapatillas limpias impecables",
+          "scores": { "chaewon": 3, "kazuha": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Oversized cozy knit over cycling shorts, cute beanie, and comfortable chunky walking shoes",
+          "textKo": "오버핏 니트에 편안한 바이커 쇼츠, 힙한 비니와 발이 편한 청키 스니커즈",
+          "textEs": "Suéter de punto oversize sobre mallas cortas, gorro adorable y calzado cómodo",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Bold graphic crop tee, low-slung parachute cargo pants, statement layered necklaces, and attitude",
+          "textKo": "과감한 그래픽 크롭탑, 와이드 파라슈트 카고 팬츠와 레이어드 목걸이의 핫걸 룩",
+          "textEs": "Top corto con gráficos llamativos, pantalones cargo fluidos y collares en capas con actitud",
+          "scores": { "yunjin": 3, "eunchae": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Sleek ballerina-core: monochrome wrap top, clean leggings, and minimalist elegance",
+          "textKo": "모노톤 랩 스타일 상의와 완벽한 라인의 레깅스, 미니멀하고 단아한 발레코어 무드",
+          "textEs": "Estilo ballet-core limpio: top cruzado monocromático, leggings y elegancia minimalista",
+          "scores": { "kazuha": 3, "chaewon": 1 }
+        },
+        {
+          "id": "E",
+          "text": "Bright, colorful streetwear: retro windbreaker, colorful sneakers, and cute hair clips",
+          "textKo": "톡톡 튀는 비비드 컬러의 바람막이 점퍼, 알록달록 스니커즈와 키치한 헤어핀 포인트",
+          "textEs": "Streetwear colorido y alegre: cortavientos retro, tenis vibrantes y broches divertidos",
+          "scores": { "eunchae": 3, "yunjin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "When facing an intimidating challenge, what is your mindset?",
+      "questionKo": "두렵고 버거운 큰 도전이나 무대를 마주했을 때, 나의 마음가짐은?",
+      "questionEs": "Frente a un reto intimidante, ¿cuál es tu mentalidad FEARLESS?",
+      "emoji": "🛡️",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Watch me do it.' Stand tall, lock in laser focus, and lead from the front with fiery pride",
+          "textKo": "'내가 해낼 수 있다는 걸 똑똑히 보여줄게.' 허리를 꼿꼿이 펴고 눈빛을 바꾸며 당당하게 돌진한다",
+          "textEs": "'Mírame hacerlo.' Me paro firme, me concentro al máximo y lidero con orgullo",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "'Practice until it becomes muscle memory.' Overcome anxiety through endless repetition and mental discipline",
+          "textKo": "'몸이 기억할 때까지 연습하면 반드시 된다.' 무한 반복과 묵묵한 노력으로 불안을 실력으로 바꾼다",
+          "textEs": "'La práctica lo vence todo.' Supero la ansiedad con repetición incansable y disciplina mental",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "'I am writing my own story.' Channel the fear into passionate creative expression and authentic truth",
+          "textKo": "'내 한계는 내가 정해.' 두려움을 뜨거운 예술적 에너지와 영감으로 승화시켜 온몸으로 부딪힌다",
+          "textEs": "'Yo escribo mi propia historia.' Convierto el miedo en arte, pasión y voz auténtica",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "'Stay calm, trust the process.' Take deep breaths, rely on steady daily discipline, and execute with poise",
+          "textKo": "'차분하게, 쌓아온 루틴을 믿자.' 심호흡을 하고 늘 해왔던 것처럼 우아하고 정확하게 해낸다",
+          "textEs": "'Calma, confía en el proceso.' Respiro hondo, confío en mi entrenamiento diario y actúo con serenidad",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "'Let's just enjoy the moment!' Shake off the pressure with a bright smile and go all out with pure energy",
+          "textKo": "'떨려도 어차피 해야 하잖아! 신나게 즐겨보자!' 활짝 웃으며 온몸으로 부딪혀 무대를 뒤집어놓는다",
+          "textEs": "'¡Vamos a disfrutarlo con todo!' Me sacudo los nervios con una gran sonrisa y lo doy todo",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What is your favorite way to stay fit and build healthy stamina?",
+      "questionKo": "내가 가장 즐기거나 꾸준히 하고 싶은 최고의 운동 루틴은?",
+      "questionEs": "¿Qué tipo de entrenamiento o actividad física prefieres para sentirte fuerte?",
+      "emoji": "💪",
+      "options": [
+        {
+          "id": "A",
+          "text": "High-intensity cardio or fierce dance practice that leaves your muscles burning and your mind clear",
+          "textKo": "땀이 비 오듯 쏟아지는 파워풀한 안무 연습이나 고강도 인터벌 유산소 운동",
+          "textEs": "Cardio de alta intensidad o baile intenso que despeja la mente y quema energía",
+          "scores": { "chaewon": 3, "eunchae": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Dedicated stretching, core planks, and home gym workouts on a soft mat while listening to podcasts",
+          "textKo": "매트 위에서 팟캐스트를 들으며 꾸준히 하는 코어 플랭크와 정갈한 홈트레이닝",
+          "textEs": "Planchas para el core, estiramientos y ejercicios en casa con música tranquila",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Powerlifting, dynamic kettlebell routines, or energetic outdoor running with hype music blasting",
+          "textKo": "신나는 팝송을 크게 틀어놓고 달리는 야외 러닝이나 묵직한 웨이트 트레이닝",
+          "textEs": "Levantamiento de pesas dinámico, correr al aire libre con música enérgica",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Precision ballet conditioning, Pilates, deep stretching, and rock-solid abdominal workouts",
+          "textKo": "완벽한 자세의 필라테스와 발레 스트레칭, 그리고 철벽 복근을 만드는 100회 복근 루틴",
+          "textEs": "Acondicionamiento de ballet, pilates impecable y rutinas intensas de abdomen",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "Energetic sports with friends: badminton, roller-skating, or jump rope challenges full of laughs",
+          "textKo": "친구들과 함께 웃고 떠들며 즐기는 배드민턴, 줄넘기 챌린지, 혹은 신나는 자전거 타기",
+          "textEs": "Deportes divertidos con amigos: bádminton, patinaje o juegos llenos de risas",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "When you make an embarrassing mistake in front of others, how do you recover?",
+      "questionKo": "사람들 앞에서 아찔한 실수를 저질렀을 때, 당신의 순간 대처법은?",
+      "questionEs": "Si cometes un error gracioso en público, ¿cómo sales del paso?",
+      "emoji": "🙈",
+      "options": [
+        {
+          "id": "A",
+          "text": "Pretend it was part of the plan with supreme confidence, give a sly wink, and carry on smoothly",
+          "textKo": "마치 원래 계획했던 연출인 것처럼 당당한 표정으로 윙크를 날리고 프로답게 넘어간다",
+          "textEs": "Actúo como si fuera parte del plan con total seguridad, guiño un ojo y sigo como una profesional",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Quietly acknowledge it with a gentle wry smile, make a mental note, and never repeat it",
+          "textKo": "조용히 씁쓸한 미소를 지으며 속으로 반성하고, 다음에는 완벽하게 해내겠다고 다짐한다",
+          "textEs": "Sonrío con resignación tierna, tomo nota mental y me aseguro de hacerlo perfecto la próxima",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Burst out laughing at myself: 'Yep, that just happened!' Turn it into comedy gold for everyone",
+          "textKo": "'방금 그거 보셨어요? 대박이죠!'라며 스스로 제일 크게 웃어버리고 유쾌한 개그 소재로 승화시킨다",
+          "textEs": "Me río a carcajadas de mí misma: '¡Sí, eso pasó!' y convierto el error en un momento memorable",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Smile innocently with big sparkling eyes, giggle softly, and gracefully bow it off",
+          "textKo": "눈을 동그랗게 뜨고 순진한 미소로 조용히 빵 터진 뒤, 사뿐사뿐 우아하게 수습한다",
+          "textEs": "Sonrío inocente con ojos brillantes, suelto una risita dulce y sigo con total gracia",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "Make a cute exaggerated gasp, look around at my unnies for help, and laugh hysterically",
+          "textKo": "입을 틀어막고 언니들을 보며 발을 동동 구르다가 배를 잡고 신나게 웃어버린다",
+          "textEs": "Hago una cara de sorpresa exagerada, busco miradas de auxilio y me río a más no poder",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "What is your role during a long road trip or team vacation?",
+      "questionKo": "친구들과 떠난 단체 여행에서 내가 자연스럽게 맡게 되는 포지션은?",
+      "questionEs": "En un viaje por carretera con amigos, ¿cuál es tu tarea indispensable?",
+      "emoji": "🚗",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Captain who drives, navigates, checks the schedule, and makes final restaurant calls",
+          "textKo": "네비게이션 확인, 시간 체크, 맛집 최종 결정까지 시원하게 지휘하는 든든한 운전자",
+          "textEs": "La capitana que revisa el mapa, cumple los horarios y decide el mejor restaurante",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "The thoughtful organizer who packed extra band-aids, snacks, power banks, and quiet comfort",
+          "textKo": "상비약, 보조배터리, 간식까지 꼼꼼히 챙겨와 뒤에서 친구들을 살뜰히 챙겨주는 안식처",
+          "textEs": "La previsora que empacó botiquín, baterías portátiles, snacks y calma para todos",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "The DJ & hype master who curates non-stop bangers, starts car karaoke, and sings every lyric",
+          "textKo": "창문 내리고 전주만 들어도 아는 떼창 명곡만 골라 틀어 분위기를 찢어놓는 카 노래방 DJ",
+          "textEs": "La DJ de la carretera que pone temazos a todo volumen y lidera el karaoke en el auto",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "The chill window passenger who enjoys the scenery, captures gorgeous candid photos, and cracks dad jokes",
+          "textKo": "조용히 창밖 풍경을 감상하며 인생샷을 찍어주고, 뜬금없는 아재개그로 빵 터뜨리는 힐링러",
+          "textEs": "La pasajera zen que disfruta el paisaje, saca fotos increíbles y cuenta chistes absurdos",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "The passenger princess in the backseat who demands snack stops, plays silly games, and keeps morale 100%",
+          "textKo": "휴게소 소떡소떡 필수! 온갖 퀴즈와 게임을 제안하며 차 안을 웃음바다로 만드는 비타민 막내",
+          "textEs": "La que pide paradas para comprar comida, inventa juegos locos y mantiene el ánimo al 100%",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "What is your late-night snack confession after a grueling day?",
+      "questionKo": "치열하고 고된 하루를 끝내고 나에게 주는 최고의 야식 보상은?",
+      "questionEs": "¿Qué comida es tu mayor debilidad después de un día agotador?",
+      "emoji": "🍕",
+      "options": [
+        {
+          "id": "A",
+          "text": "Crispy sweet honey Korean fried chicken with cold sparkling soda or a spicy bowl of ramen",
+          "textKo": "바삭하고 달콤한 치킨과 시원한 탄산음료, 혹은 얼큰한 틈새라면 한 그릇",
+          "textEs": "Pollo frito coreano crujiente con refresco helado o un plato de ramen picante",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Savory grilled pork belly samgyeopsal with garlic dip, or quiet convenience store ramen with an egg",
+          "textKo": "노릇하게 구운 삼겹살 쌈, 혹은 편의점 컵라면에 계란 하나 톡 얹은 소박한 행복",
+          "textEs": "Carne asada a la parrilla con ajo, o fideos de tienda con un huevo cocido caliente",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Loaded NY-style pepperoni pizza with extra cheese, iced sweet chai, and crunchy cookies",
+          "textKo": "치즈가 쭉 늘어나는 페퍼로니 피자, 시원한 아이스 라떼와 달콤한 초코 쿠키",
+          "textEs": "Pizza con extra de queso y pepperoni, té chai helado y galletas crujientes",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Fresh seasonal fruit, warm green tea, sweet dried sweet potato, and dried squid snacks",
+          "textKo": "신선한 과일과 따뜻한 차, 쫀득한 군고구마 말랭이나 말린 오징어 안주",
+          "textEs": "Fruta fresca de temporada, té verde caliente y snacks ligeros reconfortantes",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "Ultra-sweet ice cream pint, fluffy waffles with Nutella, and chewy bubble tea",
+          "textKo": "달콤한 초코 아이스크림 한 통, 생크림 듬뿍 얹은 와플과 타피오카 펄 버블티",
+          "textEs": "Un bote de helado de chocolate dulce, waffles esponjosos y té con perlas de tapioca",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "How do you show love and affection to your dearest friends?",
+      "questionKo": "내가 정말 아끼고 사랑하는 친구들에게 애정을 표현하는 방식은?",
+      "questionEs": "¿Cómo demuestras tu cariño sincero a tus mejores amigas?",
+      "emoji": "💌",
+      "options": [
+        {
+          "id": "A",
+          "text": "Teasing them constantly with cheeky jokes, while secretly remembering everything they ever wished for",
+          "textKo": "장난치고 놀리며 티격태격하지만, 속으로는 친구가 스치듯 말한 소원까지 다 기억하고 챙겨준다",
+          "textEs": "Bromeando y haciéndoles burla cariñosa, pero recordando en secreto cada detalle que les gusta",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Giving warm knitted handmade gifts, writing heartfelt letters, and offering a safe, quiet ear",
+          "textKo": "정성 가득한 손편지나 작은 선물, 그리고 힘들 때 언제든 찾아올 수 있는 조용한 안식처가 되어준다",
+          "textEs": "Regalando detalles hechos a mano, escribiendo cartas sinceras y escuchando con ternura",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Loud declarations of love! Big warm bear hugs, writing personal songs, and hyping them up on social media",
+          "textKo": "'너 진짜 최고야!'라며 격렬한 포옹과 사랑 고백, 친구의 모든 SNS 게시물에 댓글로 찬양 폭격",
+          "textEs": "Abrazos gigantes de oso, declarando mi amor a los cuatro vientos y aplaudiendo cada logro",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Silently bringing them water and snacks, standing close with a warm smile, and laughing at their stories",
+          "textKo": "말없이 옆에 다가와 간식을 챙겨주고, 친구가 하는 말에 누구보다 따뜻하고 크게 웃어준다",
+          "textEs": "Llevándoles agua y snacks en silencio, quedándome a su lado y sonriendo con ternura",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "Physical cuddles, resting my head on their shoulders, whining cutely, and demanding attention",
+          "textKo": "어깨에 머리를 기대고 팔짱 끼기, 귀여운 투정과 애교로 온몸으로 껌딱지처럼 달라붙기",
+          "textEs": "Apoyando mi cabeza en su hombro, abrazándolas por la espalda y llenándolas de mimos",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "What kind of creative hobby or downtime activity speaks to you?",
+      "questionKo": "주말에 시간 가는 줄 모르고 푹 빠져들 수 있는 나만의 취미는?",
+      "questionEs": "¿Qué pasatiempo te absorbe por completo durante horas?",
+      "emoji": "🎨",
+      "options": [
+        {
+          "id": "A",
+          "text": "Learning new choreography, watching viral dance battles, and styling trendy streetwear outfits",
+          "textKo": "핫한 챌린지 댄스 배우기, 스트리트 댄스 영상 찾아보기, 패션 룩북 스타일링",
+          "textEs": "Aprender coreografías virales, ver batallas de baile y armar outfits de moda",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Intense gaming sessions (RPG, FPS), knitting cute crafts, or reading thoughtful novels",
+          "textKo": "몰입도 높은 콘솔 게임이나 모바일 게임 랭킹전, 뜨개질로 인형 만들기, 소설책 읽기",
+          "textEs": "Horas jugando videojuegos favoritos, tejiendo manualidades lindas o leyendo novelas",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Writing poetry or lyrics, playing acoustic guitar or ukulele, painting bold colorful canvases",
+          "textKo": "일기장이나 메모장에 시와 가사 쓰기, 기타 연주하며 노래 부르기, 과감한 유화 그리기",
+          "textEs": "Escribir poemas o letras de canciones, tocar la guitarra o pintar lienzos expresivos",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Refining posture and flexibility, practicing yoga, walking scenic city trails with a camera",
+          "textKo": "유연성과 코어를 기르는 요가와 필라테스, 필름 카메라 들고 조용한 산책로 걷기",
+          "textEs": "Practicar yoga y estiramientos profundos, pasear por parques tranquilos con cámara",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "Watching hilarious YouTube variety shows, making funny TikToks, and shopping for cute phone cases",
+          "textKo": "재미있는 예능 정주행, 숏폼 챌린지 영상 찍어보기, 귀여운 키링과 폰케이스 쇼핑하기",
+          "textEs": "Ver programas de entretenimiento cómicos, grabar TikToks graciosos y comprar accesorios tiernos",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "When someone tries to bring you down with criticism or hate, what is your reaction?",
+      "questionKo": "누군가 나를 깎아내리거나 근거 없는 비난을 할 때, 당신의 당당한 태도는?",
+      "questionEs": "¿Cómo respondes ante las críticas malintencionadas o el odio?",
+      "emoji": "⚡",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Keep talking, I'll let my undeniable success speak for itself.' Level up and outshine them",
+          "textKo": "'마음껏 떠들어봐. 내 실력과 결과로 입 다물게 해줄 테니까.' 더 치열하게 성장해서 압도한다",
+          "textEs": "'Sigue hablando, mi éxito hablará por mí.' Me supero y brillo todavía más fuerte",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "'I have survived worse.' Smile quietly, ignore the noise, and stay focused on my true supporters",
+          "textKo": "'이 정도 파도에 흔들릴 내가 아니지.' 묵묵히 소음을 차단하고 나를 진심으로 믿어주는 사람들에게만 집중한다",
+          "textEs": "'He sobrevivido a peores tormentas.' Sonrío serena, ignoro el ruido y me enfoco en los míos",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "'I'm going to turn that pain into an explosive hit song.' Use the friction as creative fuel",
+          "textKo": "'그 비난조차 내 최고의 노래 가사로 만들어줄게.' 상처를 뜨거운 예술적 영감으로 불태운다",
+          "textEs": "'Convertiré ese veneno en una canción brutal.' Uso la rabia como combustible creativo",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "'Water off a swan's back.' Maintain inner peace, stay grounded in discipline, and don't flinch",
+          "textKo": "'백조의 깃털에 묻은 물방울처럼 털어내자.' 흔들리지 않는 평정심으로 나의 루틴을 굳건히 지킨다",
+          "textEs": "'Como gotas que resbalan de las plumas de un cisne.' Mantengo mi paz y mi disciplina intactas",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "'Whatever, I have my unnies and my people!' Bounce back instantly with laughter and love",
+          "textKo": "'흥, 어쩌라고! 나한테는 나를 사랑해 주는 언니들과 친구들이 있어!' 씩씩하게 웃으며 털어버린다",
+          "textEs": "'¡Qué me importa, tengo a mis amigas que me aman!' Me sacudo la mala vibra con risas y amor",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Which LE SSERAFIM anthem embodies your core life motto?",
+      "questionKo": "내 인생관과 가치관을 가장 잘 대변하는 르세라핌의 타이틀곡 앤섬은?",
+      "questionEs": "¿Qué himno de LE SSERAFIM representa mejor tu filosofía de vida?",
+      "emoji": "👑",
+      "options": [
+        {
+          "id": "A",
+          "text": "'FEARLESS': I have no fear of scars. The past is the past, and I step forward without hesitation",
+          "textKo": "'FEARLESS': 상처를 두려워하지 않아. 과거에 얽매이지 않고 가장 당당하게 내 길을 걷는다",
+          "textEs": "'FEARLESS': No le temo a las cicatrices; avanzo hacia el futuro sin dudar",
+          "scores": { "chaewon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "'ANTIFRAGILE': The more hardships hit me, the stronger, wiser, and more unyielding I become",
+          "textKo": "'ANTIFRAGILE': 시련이 몰아칠수록 나는 더 단단해지고 부러지지 않는 다이아몬드가 된다",
+          "textEs": "'ANTIFRAGILE': Mientras más golpes reciba, más fuerte y sabia me vuelvo",
+          "scores": { "sakura": 3 }
+        },
+        {
+          "id": "C",
+          "text": "'UNFORGIVEN': Even if the world calls me a rebel, I will burn boundaries and forge my own destiny",
+          "textKo": "'UNFORGIVEN': 세상이 정한 선을 넘어, 금기를 깨부수고 나만의 새로운 역사를 쓴다",
+          "textEs": "'UNFORGIVEN': Aunque me llamen rebelde, cruzaré las fronteras y forjaré mi destino",
+          "scores": { "yunjin": 3 }
+        },
+        {
+          "id": "D",
+          "text": "'EASY': Behind what looks effortless is blood, sweat, and tears. Make the impossible look easy",
+          "textKo": "'EASY': 쉬워 보이지만 그 뒤에는 치열한 피땀눈물이 있다. 불가능한 것도 가장 아름답고 수월하게 해낸다",
+          "textEs": "'EASY': Detrás de lo que parece fácil hay sudor y dedicación; hago que lo difícil parezca sencillo",
+          "scores": { "kazuha": 3 }
+        },
+        {
+          "id": "E",
+          "text": "'CRAZY': Life is too short to be boring! Throw away worries, turn up the music, and go completely wild",
+          "textKo": "'CRAZY': 한 번뿐인 인생, 지루하게 살 이유가 없어! 눈치 보지 말고 미친 듯이 즐기자!",
+          "textEs": "'CRAZY': ¡La vida es muy corta para ser aburrida! Tira las preocupaciones y disfruta como loca",
+          "scores": { "eunchae": 3 }
+        }
+      ]
+    }
+  ]
+}

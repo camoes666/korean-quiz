@@ -30,6 +30,73 @@ export function getQuizMascot(slug?: string, tag?: string): QuizMascot {
   const normalizedTag = (tag || '').toLowerCase();
   const normalizedSlug = (slug || '').toLowerCase();
 
+  // aespa -> Bomi in cyber-Y2K futuristic outfit (사이버 봄이 💙✨)
+  if (normalizedTag.includes('aespa') || normalizedSlug.includes('aespa')) {
+    return {
+      name: 'Bomi 💙',
+      nameKo: '봄이 💙',
+      nameEs: 'Bomi 💙',
+      namePt: 'Bomi 💙',
+      avatarUrl: '/images/mascot/bomi-aespa.webp',
+      gender: 'female',
+      badgeTitle: 'MY Bomi 💙✨',
+      badgeTitleKo: '마이 봄이 💙✨',
+      badgeTitleEs: 'MY Bomi 💙✨',
+      badgeTitlePt: 'MY Bomi 💙✨',
+      greeting: 'Bomi is ready for Kwangya with aespa! Supernova! 💙✨',
+      greetingKo: '광야로 떠나는 사이버 봄이와 함께 에스파 소울메이트 찾기! 💙✨',
+      greetingEn: 'Bomi is ready for Kwangya with aespa! Supernova! 💙✨',
+      greetingEs: '¡Bomi lista para viajar a Kwangya con aespa! ¡Supernova! 💙✨',
+      greetingPt: 'Bomi pronta para Kwangya com o aespa! Supernova! 💙✨',
+      winCheer: 'Supernova explosion! 100% MY sync rate certified! 💙✨',
+      winCheerKo: '대박! 수수수 슈퍼노바! 싱크로율 100% 찐 마이(MY) 인정! 💙✨',
+      winCheerEn: 'Supernova explosion! 100% MY sync rate certified! 💙✨',
+      winCheerEs: '¡Explosión Supernova! ¡Sincronización 100% con aespa! 💙✨',
+      winCheerPt: 'Explosão Supernova! Sincronização 100% com o aespa! 💙✨',
+      encourage: "Don't worry! Your inner avatar is shining bright! 💙",
+      encourageKo: '괜찮아! 당신 안의 슈퍼노바 에너지는 영원해! 💙',
+      encourageEn: "Don't worry! Your inner avatar is shining bright! 💙",
+      encourageEs: '¡Ánimo! ¡Tu avatar interior brilla con fuerza! 💙',
+      encouragePt: 'Ânimo! Seu avatar interior brilha com força! 💙',
+    };
+  }
+
+  // LE SSERAFIM -> Bomi in sporty fearless athleisure (피어리스 봄이 🔥👑)
+  if (
+    normalizedTag.includes('le sserafim') ||
+    normalizedTag.includes('lesserafim') ||
+    normalizedSlug.includes('le-sserafim') ||
+    normalizedSlug.includes('lesserafim')
+  ) {
+    return {
+      name: 'Bomi 🔥',
+      nameKo: '봄이 🔥',
+      nameEs: 'Bomi 🔥',
+      namePt: 'Bomi 🔥',
+      avatarUrl: '/images/mascot/bomi-lesserafim.webp',
+      gender: 'female',
+      badgeTitle: 'FEARNOT Bomi 🔥',
+      badgeTitleKo: '피어나 봄이 🔥',
+      badgeTitleEs: 'FEARNOT Bomi 🔥',
+      badgeTitlePt: 'FEARNOT Bomi 🔥',
+      greeting: 'Bomi is cheering with FEARNOTs! Make it look easy! 🔥',
+      greetingKo: '당당하고 피어리스한 봄이와 함께 르세라핌 소울메이트 찾기! 🔥',
+      greetingEn: 'Bomi is cheering with FEARNOTs! Make it look easy! 🔥',
+      greetingEs: '¡Bomi anima a los FEARNOTs! ¡Haz que parezca fácil! 🔥',
+      greetingPt: 'Bomi torcendo com os FEARNOTs! Faça parecer fácil! 🔥',
+      winCheer: 'Incredible! Fearless & Antifragile FEARNOT certified! 🔥👑',
+      winCheerKo: '완벽해! 부러지지 않는 안티프래자일 찐 피어나(FEARNOT) 인정! 🔥👑',
+      winCheerEn: 'Incredible! Fearless & Antifragile FEARNOT certified! 🔥👑',
+      winCheerEs: '¡Increíble! ¡FEARNOT Antifragile certificada! 🔥👑',
+      winCheerPt: 'Incrível! FEARNOT Antifrágil certificada! 🔥👑',
+      encourage: 'Never fear! Make the impossible look easy! 🔥',
+      encourageKo: '두려워하지 마! 불가능도 이지(EASY)하게 해낼 수 있어! 🔥',
+      encourageEn: 'Never fear! Make the impossible look easy! 🔥',
+      encourageEs: '¡Sin miedo! ¡Haz que lo imposible sea fácil! 🔥',
+      encouragePt: 'Sem medo! Faça o impossível parecer fácil! 🔥',
+    };
+  }
+
   // BLACKPINK -> Bomi (봄이 🌸)
   if (normalizedTag.includes('blackpink') || normalizedSlug.includes('blackpink')) {
     return {

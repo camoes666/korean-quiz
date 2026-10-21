@@ -10,8 +10,12 @@ import whichStrayKidsMemberAreYou from './which-stray-kids-member-are-you.json';
 import whichBtsMemberAreYou from './which-bts-member-are-you.json';
 import whichBlackpinkMemberAreYou from './which-blackpink-member-are-you.json';
 import whichKoreanFoodAreYou from './which-korean-food-are-you.json';
+import whichAespaMemberAreYou from './which-aespa-member-are-you.json';
+import whichLeSserafimMemberAreYou from './which-le-sserafim-member-are-you.json';
 
 export const quizzes: Quiz[] = [
+  whichAespaMemberAreYou as unknown as Quiz,
+  whichLeSserafimMemberAreYou as unknown as Quiz,
   whichKoreanFoodAreYou as unknown as Quiz,
   whichBtsMemberAreYou as unknown as Quiz,
   whichStrayKidsMemberAreYou as unknown as Quiz,
@@ -61,4 +65,3 @@ export function getTotalTriviaQuestionCount(): number {
 export function getRelatedTriviaQuizzes(currentSlug: string, limit = 3): Quiz[] {
   return getTriviaQuizzes().filter((q) => q.slug !== currentSlug).slice(0, limit);
 }
-
