@@ -6,7 +6,6 @@ import {
   getRelatedTriviaQuizzes,
 } from '@/data/quizzes';
 import GuideDetailClient from '@/components/guide/GuideDetailClient';
-import Script from 'next/script';
 
 interface GuidePageProps {
   params: Promise<{ slug: string }>;
@@ -39,6 +38,9 @@ export async function generateMetadata({
   return {
     title,
     description,
+    alternates: {
+      canonical: `https://kpulsequiz.com/guide/${quiz.slug}`,
+    },
     openGraph: {
       title,
       description,

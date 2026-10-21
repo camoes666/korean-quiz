@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: 'K-Culture & K-Pop Knowledge Guides | 230+ Curated Facts & Lore | K-Pulse',
   description:
     'Explore 230+ verified facts, deep fandom lore, and cultural insights across BTS, Stray Kids, BLACKPINK, Korean Spicy Food, Culture IQ, and KDrama.',
+  alternates: {
+    canonical: 'https://kpulsequiz.com/guide',
+  },
   openGraph: {
     title: 'K-Culture & K-Pop Knowledge & Lore Guides | K-Pulse',
     description:

@@ -1,5 +1,7 @@
 'use client';
 
+import Link from 'next/link';
+import { BookOpen, ArrowRight } from 'lucide-react';
 import { Quiz, getLocalizedText } from '@/types/quiz';
 import { getQuizFaq, getSampleQuestions } from '@/lib/seo';
 import { useLanguage } from '@/context/LanguageContext';
@@ -15,6 +17,7 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
   const samples = isPersonality ? [] : getSampleQuestions(quiz);
   const results = Object.values(quiz.personalityResults || {});
   const faq = getQuizFaq(quiz);
+  const localizedTitle = getLocalizedText(quiz, 'title', lang);
 
   const aboutHeading =
     lang === 'ko'
@@ -52,6 +55,22 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
       ? 'Ver resposta'
       : 'Show answer';
 
+  const guideCtaLabel = isPersonality
+    ? lang === 'ko'
+      ? '전체 K-컬처 & K-Pop 팬 지식 가이드 백과 보기'
+      : lang === 'es'
+      ? 'Explorar todas las Guías de Lore y Conocimiento K-Pop'
+      : lang === 'pt'
+      ? 'Explorar todos os Guias de Lore e Conhecimento K-Pop'
+      : 'Explore All K-Culture & K-Pop Knowledge Guides'
+    : lang === 'ko'
+    ? `${localizedTitle} 전체 ${quiz.questions.length}문제 정답 및 해설 가이드 보기`
+    : lang === 'es'
+    ? `Ver la Guía Completa de ${localizedTitle} (${quiz.questions.length} Preguntas y Respuestas)`
+    : lang === 'pt'
+    ? `Ver o Guia Completo de ${localizedTitle} (${quiz.questions.length} Perguntas e Respostas)`
+    : `Read the Complete ${quiz.title} Study Guide (All ${quiz.questions.length} Verified Q&As)`;
+
   const resultsHeading =
     lang === 'ko'
       ? '모든 결과 유형 한눈에 보기'
@@ -80,6 +99,17 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
         <p className="qz-card-muted mt-2 leading-relaxed">
           {getLocalizedText(quiz, 'subtitle', lang)}
         </p>
+
+        <div className="mt-4 pt-4 border-t border-purple-100/80">
+          <Link
+            href={isPersonality ? '/guide' : `/guide/${quiz.slug}`}
+            className="inline-flex items-center gap-2 text-sm font-extrabold text-purple-700 hover:text-purple-900 transition-colors"
+          >
+            <BookOpen className="w-4 h-4 shrink-0" />
+            <span className="underline underline-offset-4">{guideCtaLabel}</span>
+            <ArrowRight className="w-4 h-4 shrink-0" />
+          </Link>
+        </div>
       </div>
 
       {samples.length > 0 && (

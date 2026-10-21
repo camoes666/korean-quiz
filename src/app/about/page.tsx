@@ -3,6 +3,9 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About Us | K-Pulse',
+  alternates: {
+    canonical: 'https://kpulsequiz.com/about',
+  },
   description:
     'Learn about K-Pulse, our mission to bridge global fans through interactive gamified Korean culture, K-Pop, and language trivia quizzes.',
 };

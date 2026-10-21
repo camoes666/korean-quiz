@@ -3,6 +3,9 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | K-Pulse',
+  alternates: {
+    canonical: 'https://kpulsequiz.com/privacy',
+  },
   description:
     'Privacy Policy for K-Pulse. Learn how we handle your data, cookies, and privacy rights when you play Korean culture trivia quizzes.',
 };

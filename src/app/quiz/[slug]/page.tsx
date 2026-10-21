@@ -39,12 +39,6 @@ export async function generateMetadata({
     keywords: seo.keywords,
     alternates: {
       canonical: `https://kpulsequiz.com/quiz/${quiz.slug}`,
-      languages: {
-        'en': `https://kpulsequiz.com/quiz/${quiz.slug}?lang=en`,
-        'es': `https://kpulsequiz.com/quiz/${quiz.slug}?lang=es`,
-        'ko': `https://kpulsequiz.com/quiz/${quiz.slug}?lang=ko`,
-        'x-default': `https://kpulsequiz.com/quiz/${quiz.slug}`,
-      },
     },
     openGraph: {
       title: seo.ogTitle,
@@ -52,7 +46,7 @@ export async function generateMetadata({
       url: `https://kpulsequiz.com/quiz/${quiz.slug}`,
       siteName: 'K-Pulse',
       locale: 'en_US',
-      alternateLocale: ['es_ES', 'es_MX', 'es_LA', 'ko_KR'],
+      alternateLocale: ['es_ES', 'es_MX', 'es_LA', 'pt_BR', 'ko_KR'],
       type: 'website',
       images: [
         {

@@ -32,8 +32,14 @@ export const metadata: Metadata = {
     'K-Pulse',
   ],
   authors: [{ name: 'K-Pulse Team' }],
+  alternates: {
+    canonical: 'https://kpulsequiz.com',
+  },
   verification: {
     google: '5_kHZ_qOX7BeXe3ASq_I5sL5nEg7JBfryf-xdI-a6CI',
+    other: {
+      'msvalidate.01': '2E8E822334A1673278BB491BB72FAF20',
+    },
   },
   openGraph: {
     title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',

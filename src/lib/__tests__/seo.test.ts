@@ -5,12 +5,21 @@ import { generateQuizJsonLd, getQuizFaq, getQuizSeoData, getSampleQuestions } fr
 describe('seo', () => {
   it('fills the question count into titles and leaves no placeholder', () => {
     for (const quiz of getAllQuizzes()) {
-      expect(getQuizSeoData(quiz).title).not.toContain('{n}');
+      const seo = getQuizSeoData(quiz);
+      expect(seo.title).not.toContain('{n}');
+      expect(seo.keywords.length).toBeGreaterThanOrEqual(8);
     }
     const bts = getQuizBySlug('bts-army-trivia')!;
     expect(getQuizSeoData(bts).title).toBe(
       `BTS Quiz: How Well Do You Know BTS? (${bts.questions.length} Questions) | K-Pulse`
     );
+  });
+
+  it('has tailored SEO metadata for which-korean-food-are-you', () => {
+    const kfood = getQuizBySlug('which-korean-food-are-you')!;
+    const seo = getQuizSeoData(kfood);
+    expect(seo.title).toContain('Which Korean Food Are You?');
+    expect(seo.keywords).toContain('which korean food are you');
   });
 
   it('emits no review ratings (there are no real reviews to mark up)', () => {

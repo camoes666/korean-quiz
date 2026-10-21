@@ -12,14 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/quiz/${quiz.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
-    priority: 0.8,
-    alternates: {
-      languages: {
-        en: `${baseUrl}/quiz/${quiz.slug}?lang=en`,
-        es: `${baseUrl}/quiz/${quiz.slug}?lang=es`,
-        ko: `${baseUrl}/quiz/${quiz.slug}?lang=ko`,
-      },
-    },
+    priority: 0.9,
   }));
 
   const guideHubUrl: MetadataRoute.Sitemap = [
@@ -52,10 +45,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1.0,
     },
+    ...quizUrls,
     ...guideHubUrl,
     ...guideUrls,
-    ...quizUrls,
     ...staticPages,
   ];
 }
-

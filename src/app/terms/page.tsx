@@ -3,6 +3,9 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | K-Pulse',
+  alternates: {
+    canonical: 'https://kpulsequiz.com/terms',
+  },
   description:
     'Terms of Service for K-Pulse. Review the rules and guidelines for using our interactive Korean culture and trivia quiz website.',
 };

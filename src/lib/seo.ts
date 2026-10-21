@@ -45,7 +45,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     title: 'Which BTS Member Are You? BTS Soulmate & Personality Quiz | K-Pulse',
     ogTitle: 'Which BTS Member Is Your Soulmate? (10-Question Test) | K-Pulse',
     description:
-      'Which BTS member is your soulmate? Discover your Bangtan archetype & chemistry: RM, Jin, SUGA, J-Hope, Jimin, V, or Jungkook. Play free now!',
+      'Which BTS Member is your soulmate? Discover your Bangtan archetype & chemistry: RM, Jin, SUGA, J-Hope, Jimin, V, or Jungkook. Play free now!',
     keywords: [
       'which bts member are you',
       'which bts member is your soulmate',
@@ -238,6 +238,31 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'cuanto sabes de comida coreana',
     ],
   },
+  'which-korean-food-are-you': {
+    title: 'Which Korean Food Are You? (K-Food Soulmate & Personality Test) | K-Pulse',
+    ogTitle: 'Which Korean Food Matches Your Soul? (10-Question Test) | K-Pulse',
+    description:
+      'Find out which Korean food matches your personality! Are you fiery Spicy Tteokbokki, sizzling K-BBQ Samgyeopsal, comforting Kimchi Jjigae, Chimaek, or Bungeoppang? Free 10-question test.',
+    keywords: [
+      'which korean food are you',
+      'which korean food are you quiz',
+      'what korean food am i',
+      'korean food personality test',
+      'k-food soulmate quiz',
+      'korean street food personality quiz',
+      'tteokbokki',
+      'samgyeopsal',
+      'kimchi jjigae',
+      'chimaek',
+      'bungeoppang',
+      // Spanish keywords (LATAM & Spain)
+      'que comida coreana eres',
+      'que platillo coreano eres',
+      'test que comida coreana eres',
+      'test de personalidad comida coreana',
+      'quiz comida coreana alma gemela',
+    ],
+  },
 };
 
 export function getQuizSeoData(quiz: Quiz): QuizSeoData {
@@ -305,7 +330,7 @@ export function generateQuizJsonLd(quiz: Quiz) {
     name: seoData.title,
     description: seoData.description,
     url: quizUrl,
-    inLanguage: ['en', 'es', 'ko'],
+    inLanguage: ['en', 'es', 'pt', 'ko'],
     isAccessibleForFree: true,
     educationalLevel: quiz.difficulty || 'Intermediate',
     about: {
@@ -344,11 +369,11 @@ export function getQuizFaq(quiz: Quiz): FaqItem[] {
   const isPersonality = quiz.quizType === 'personality';
   const freeEn: FaqItem = {
     question: isPersonality ? 'Is this test free to play?' : 'Is this quiz free to play?',
-    answer: 'Yes. It is 100% free with no sign-up or app download required. Available in English, Spanish, and Korean.',
+    answer: 'Yes. It is 100% free with no sign-up or app download required. Available in English, Spanish, Portuguese, and Korean.',
   };
   const freeEs: FaqItem = {
     question: isPersonality ? '¿Este test de K-Pop es gratis?' : '¿Este quiz de K-Pop es gratis?',
-    answer: 'Sí. Es 100% gratis, sin registro ni descargas. Totalmente interactivo en español, inglés y coreano.',
+    answer: 'Sí. Es 100% gratis, sin registro ni descargas. Totalmente interactivo en español, inglés, portugués y coreano.',
   };
 
   if (isPersonality) {
@@ -360,21 +385,21 @@ export function getQuizFaq(quiz: Quiz): FaqItem[] {
     const faq: FaqItem[] = [
       {
         question: `How does the "${quiz.title}" test work?`,
-        answer: `Answer ${questionCount} scenario-based questions about your lifestyle, taste, and personality. Each answer adds points toward a member, and the highest score is your match.`,
+        answer: `Answer ${questionCount} scenario-based questions about your lifestyle, taste, and personality. Each answer adds points toward a match, and the highest score reveals your archetype.`,
       },
       {
         question: `¿Cómo funciona el test "${titleEs}"?`,
-        answer: `Responde ${questionCount} preguntas sobre tu personalidad, estilo y gustos. Cada opción suma puntos hacia un integrante y el puntaje más alto revelará tu alma gemela.`,
+        answer: `Responde ${questionCount} preguntas sobre tu personalidad, estilo y gustos. Cada opción suma puntos y el puntaje más alto revelará tu resultado ideal.`,
       },
     ];
     if (results.length > 0) {
       faq.push({
         question: 'What results can I get?',
-        answer: `You can match with ${results.join(', ')}. Each result explains your shared traits and your best-match member.`,
+        answer: `You can match with ${results.join(', ')}. Each result explains your shared traits and your best match.`,
       });
       faq.push({
-        question: '¿Qué integrantes pueden salir como resultado?',
-        answer: `Puedes obtener como resultado a ${resultsEs.join(', ')}. Cada resultado detalla tus rasgos de personalidad y tu química con el grupo.`,
+        question: '¿Qué resultados pueden salir?',
+        answer: `Puedes obtener como resultado a ${resultsEs.join(', ')}. Cada resultado detalla tus rasgos de personalidad y tu mejor combinación.`,
       });
     }
     return [...faq, freeEn, freeEs];
