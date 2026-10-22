@@ -398,12 +398,12 @@ export default function PersonalityTestRunner({
               <Sparkles className="w-3.5 h-3.5 text-amber-300" />
               <span>
                 {lang === 'ko'
-                  ? '공식 소울메이트 성격 테스트'
+                  ? '팬메이드 소울메이트 성격 테스트'
                   : lang === 'es'
-                  ? 'Test Oficial de Personalidad'
+                  ? 'Test de Personalidad Fan-Made'
                   : lang === 'pt'
-                  ? 'Teste Oficial de Personalidade'
-                  : `Official ${quiz.tag || 'K-Pop'} Personality Test`}
+                  ? 'Teste de Personalidade Fan-Made'
+                  : `Fan-Made ${quiz.tag || 'K-Pop'} Personality Test`}
               </span>
             </div>
 

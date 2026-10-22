@@ -388,7 +388,7 @@ export function generateQuizJsonLd(quiz: Quiz) {
     name: seoData.title,
     description: seoData.description,
     url: quizUrl,
-    inLanguage: ['en', 'es', 'pt', 'ko'],
+    inLanguage: 'en',
     isAccessibleForFree: true,
     educationalLevel: quiz.difficulty || 'Intermediate',
     about: {
@@ -422,32 +422,26 @@ export interface FaqItem {
   answer: string;
 }
 
-/** FAQ shown on the quiz page and emitted as FAQPage structured data (bilingual English + Spanish). */
+/**
+ * FAQ shown on the quiz page and emitted as FAQPage structured data. English only: the page
+ * URL is indexed as English, so mixing in other languages here dilutes it without ranking
+ * for those languages (that needs separate localized URLs).
+ */
 export function getQuizFaq(quiz: Quiz): FaqItem[] {
   const isPersonality = quiz.quizType === 'personality';
-  const freeEn: FaqItem = {
+  const free: FaqItem = {
     question: isPersonality ? 'Is this test free to play?' : 'Is this quiz free to play?',
-    answer: 'Yes. It is 100% free with no sign-up or app download required. Available in English, Spanish, Portuguese, and Korean.',
-  };
-  const freeEs: FaqItem = {
-    question: isPersonality ? '¿Este test de K-Pop es gratis?' : '¿Este quiz de K-Pop es gratis?',
-    answer: 'Sí. Es 100% gratis, sin registro ni descargas. Totalmente interactivo en español, inglés, portugués y coreano.',
+    answer: 'Yes. It is 100% free with no sign-up or app download required. You can also switch the site to Spanish or Korean.',
   };
 
   if (isPersonality) {
     const results = Object.values(quiz.personalityResults || {}).map((r) => r.name);
-    const resultsEs = Object.values(quiz.personalityResults || {}).map((r) => r.nameEs || r.name);
     const questionCount = quiz.personalityQuestions?.length || 10;
-    const titleEs = quiz.titleEs || quiz.title;
 
     const faq: FaqItem[] = [
       {
         question: `How does the "${quiz.title}" test work?`,
         answer: `Answer ${questionCount} scenario-based questions about your lifestyle, taste, and personality. Each answer adds points toward a match, and the highest score reveals your archetype.`,
-      },
-      {
-        question: `¿Cómo funciona el test "${titleEs}"?`,
-        answer: `Responde ${questionCount} preguntas sobre tu personalidad, estilo y gustos. Cada opción suma puntos y el puntaje más alto revelará tu resultado ideal.`,
       },
     ];
     if (results.length > 0) {
@@ -455,43 +449,25 @@ export function getQuizFaq(quiz: Quiz): FaqItem[] {
         question: 'What results can I get?',
         answer: `You can match with ${results.join(', ')}. Each result explains your shared traits and your best match.`,
       });
-      faq.push({
-        question: '¿Qué resultados pueden salir?',
-        answer: `Puedes obtener como resultado a ${resultsEs.join(', ')}. Cada resultado detalla tus rasgos de personalidad y tu mejor combinación.`,
-      });
     }
-    return [...faq, freeEn, freeEs];
+    return [...faq, free];
   }
 
   const total = quiz.questions?.length || 0;
-  const titleEs = quiz.titleEs || quiz.title;
   return [
     {
-      question: `How many questions are in the ${quiz.title}?`,
+      question: `How many questions are in "${quiz.title}"?`,
       answer: `The question bank has ${total} questions across 3 difficulty levels: Level 1 (Rookie), Level 2 (Fan), and Level 3 (Hardcore). Each round picks 5 random questions, so every play is different.`,
-    },
-    {
-      question: `¿Cuántas preguntas tiene el quiz "${titleEs}"?`,
-      answer: `Cuenta con un banco de ${total} preguntas en 3 niveles de dificultad: Nivel 1 (Principiante), Nivel 2 (Fan) y Nivel 3 (Hardcore). Cada ronda selecciona 5 preguntas al azar con temporizador de 15 segundos.`,
     },
     {
       question: 'Do I get the answers explained?',
       answer: 'Yes. After each question you see the correct answer with a short explanation and a fun fact.',
     },
     {
-      question: '¿Las respuestas tienen explicación en español?',
-      answer: 'Sí. Al responder cada pregunta verás la respuesta correcta junto con su explicación y curiosidades.',
-    },
-    {
       question: 'Can I challenge my friends?',
       answer: 'Yes. When you finish, you get a challenge link with your score to share so friends can try to beat it.',
     },
-    {
-      question: '¿Puedo retar a mis amigos?',
-      answer: '¡Sí! Al terminar obtendrás un enlace de desafío con tu puntuación para compartir en WhatsApp, X o Instagram.',
-    },
-    freeEn,
-    freeEs,
+    free,
   ];
 }
 

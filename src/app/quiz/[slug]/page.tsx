@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getQuizBySlug, getRelatedQuizzes, getAllQuizzes } from '@/data/quizzes';
@@ -46,7 +45,7 @@ export async function generateMetadata({
       url: `https://kpulsequiz.com/quiz/${quiz.slug}`,
       siteName: 'K-Pulse',
       locale: 'en_US',
-      alternateLocale: ['es_ES', 'es_MX', 'es_LA', 'pt_BR', 'ko_KR'],
+      alternateLocale: ['es_ES', 'es_MX', 'ko_KR'],
       type: 'website',
       images: [
         {
@@ -94,15 +93,7 @@ export default async function QuizPage({ params }: QuizPageProps) {
         </main>
       ) : (
         <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
-          <Suspense
-            fallback={
-              <div className="max-w-3xl mx-auto px-4 py-12 text-center animate-pulse">
-                <div className="h-64 rounded-3xl bg-slate-100" />
-              </div>
-            }
-          >
-            <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
-          </Suspense>
+          <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
           <QuizSeoContent quiz={quiz} />
         </main>
       )}

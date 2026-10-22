@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useRef, useMemo, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import confetti from 'canvas-confetti';
@@ -44,6 +44,14 @@ interface QuizRunnerProps {
   relatedQuizzes: Quiz[];
 }
 
+// Query params are read from window.location instead of useSearchParams: in a static export
+// useSearchParams makes the page prerender only its Suspense fallback, which dropped the intro
+// (and the page's H1) from the HTML search engines see. The server snapshot is empty, so the
+// prerendered markup is the plain intro and hydration matches it.
+const subscribeToNothing = () => () => {};
+const getClientSearch = () => window.location.search;
+const getServerSearch = () => '';
+
 function shuffleArray<T>(items: T[]): T[] {
   const array = [...items];
   for (let i = array.length - 1; i > 0; i--) {
@@ -59,7 +67,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
   const mascot = getQuizMascot(quiz.slug, quiz.tag);
 
-  const searchParams = useSearchParams();
+  const search = useSyncExternalStore(subscribeToNothing, getClientSearch, getServerSearch);
+  const searchParams = useMemo(() => new URLSearchParams(search), [search]);
   const challengeParam = searchParams.get('c');
   // Record mode: /record/[slug] embeds this page in an iframe and auto-plays the given
   // question ids so short-form videos show the real quiz screen.

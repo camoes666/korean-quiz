@@ -20,11 +20,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://kpulsequiz.com'),
-  title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
+  title: 'K-Pop Quizzes & Personality Tests: Which Member Are You? | K-Pulse',
   description:
-    'Play, compete, and level up your Korean culture IQ! Daily trivia challenges, global leaderboard, and iconic K-Pop lore.',
+    'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
   keywords: [
-    'Gamified Quiz App',
+    'Which Member Are You',
+    'K-Pop Personality Test',
     'K-Pop Quiz',
     'BTS Trivia',
     'Korean Culture Test',
@@ -42,9 +43,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
+    title: 'K-Pop Quizzes & Personality Tests: Which Member Are You? | K-Pulse',
     description:
-      'Play, compete, and level up your Korean culture IQ! Daily trivia challenges, global leaderboard, and iconic K-Pop lore.',
+      'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
     url: 'https://kpulsequiz.com',
     siteName: 'K-Pulse',
     locale: 'en_US',
@@ -55,15 +56,15 @@ export const metadata: Metadata = {
         url: '/images/og-banner.png',
         width: 1200,
         height: 630,
-        alt: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
+        alt: 'K-Pop Quizzes & Personality Tests: Which Member Are You? | K-Pulse',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'K-Pulse | Gamified K-Culture & Trivia Quiz Hub',
+    title: 'K-Pop Quizzes & Personality Tests: Which Member Are You? | K-Pulse',
     description:
-      'Play, compete, and level up your Korean culture IQ! Daily trivia challenges, global leaderboard, and iconic K-Pop lore.',
+      'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
     images: ['/images/og-banner.png'],
   },
 };
