@@ -10,7 +10,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "export:quizzes": "node scripts/export-quiz-reviews.js",
-    "generate:og": "node scripts/generate-og-images.js"
+    "generate:og": "node scripts/generate-og-images.js",
+    "generate:pins": "node scripts/generate-pinterest-pins.js"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
