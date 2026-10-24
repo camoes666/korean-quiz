@@ -124,49 +124,57 @@ export default function HomePage() {
         <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[420px] h-[420px] rounded-full bg-pink-400/20 blur-3xl pointer-events-none" />
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-            {/* Left Column: Brand Pitch + Fandom Quick-Jump Chips + Frosted Level Bar */}
-            <div className="lg:col-span-7 flex flex-col justify-between">
-              <div>
-                {/* Hero Top Badge */}
-                <div className="inline-flex items-center gap-1.5 rounded-full border border-purple-200/90 bg-white/90 backdrop-blur-md px-3.5 py-1.5 text-xs font-extrabold text-purple-700 shadow-2xs mb-4">
-                  <Sparkles className="w-3.5 h-3.5 text-pink-500" />
-                  <span>{t.heroBadge}</span>
-                </div>
+          {/* DOM order is headline → carousel → chips/level so phones see a clickable test in the
+              first screen; on lg the grid puts the carousel back in the right column. */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-x-8 lg:gap-y-5 items-stretch">
+            {/* Left Column (top): Brand Pitch */}
+            <div className="lg:col-span-7 lg:row-start-1">
+              {/* Hero Top Badge */}
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-purple-200/90 bg-white/90 backdrop-blur-md px-3.5 py-1.5 text-xs font-extrabold text-purple-700 shadow-2xs mb-4">
+                <Sparkles className="w-3.5 h-3.5 text-pink-500" />
+                <span>{t.heroBadge}</span>
+              </div>
 
-                {/* Main Headline with Kinetic Reveal & Liquid Aurora Shimmer */}
-                <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 leading-[1.14]">
-                  <span className="inline-block animate-hero-reveal">
-                    {t.heroTitlePre}
-                  </span>{' '}
-                  <span className="relative inline-block animate-hero-reveal-delay">
-                    <span className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent animate-liquid-shimmer">
-                      {t.heroTitleHighlight}
-                    </span>
-                    {/* Animated Neon Stage Underline */}
-                    <span className="absolute -bottom-1.5 left-0 h-1.5 w-full rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-rose-400 animate-underline-sweep" />
+              {/* Main Headline with Kinetic Reveal & Liquid Aurora Shimmer */}
+              <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 leading-[1.14]">
+                <span className="inline-block animate-hero-reveal">
+                  {t.heroTitlePre}
+                </span>{' '}
+                <span className="relative inline-block animate-hero-reveal-delay">
+                  <span className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent animate-liquid-shimmer">
+                    {t.heroTitleHighlight}
                   </span>
-                </h1>
+                  {/* Animated Neon Stage Underline */}
+                  <span className="absolute -bottom-1.5 left-0 h-1.5 w-full rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-rose-400 animate-underline-sweep" />
+                </span>
+              </h1>
 
-                <p className="mt-3.5 text-sm sm:text-base text-slate-600 max-w-xl font-medium leading-relaxed">
-                  {t.heroSubtitle}
-                </p>
+              <p className="mt-3.5 text-sm sm:text-base text-slate-600 max-w-xl font-medium leading-relaxed">
+                {t.heroSubtitle}
+              </p>
+            </div>
 
-                {/* Interactive Fandom Quick-Jump Chips */}
-                <div className="mt-5 flex items-center gap-2 flex-wrap">
-                  <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mr-1">
-                    {lang === 'ko' ? '인기 테마:' : lang === 'es' ? 'Popular:' : 'Hot Picks:'}
-                  </span>
-                  {quickFandomChips.map((chip) => (
-                    <button
-                      key={chip.label}
-                      onClick={() => handleQuickJump(chip.category, chip.tag)}
-                      className={`px-3 py-1.5 rounded-full border text-xs font-extrabold shadow-2xs backdrop-blur-md transition-all active:scale-95 ${chip.style}`}
-                    >
-                      {chip.label}
-                    </button>
-                  ))}
-                </div>
+            {/* Right Column: rotating spotlight of featured personality tests */}
+            <div className="lg:col-span-5 lg:col-start-8 lg:row-start-1 lg:row-span-2">
+              <HeroCarousel slides={heroSlides} />
+            </div>
+
+            {/* Left Column (bottom): Fandom Quick-Jump Chips + Frosted Level Bar */}
+            <div className="lg:col-span-7 lg:row-start-2 flex flex-col justify-end">
+              {/* Interactive Fandom Quick-Jump Chips */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mr-1">
+                  {lang === 'ko' ? '인기 테마:' : lang === 'es' ? 'Popular:' : 'Hot Picks:'}
+                </span>
+                {quickFandomChips.map((chip) => (
+                  <button
+                    key={chip.label}
+                    onClick={() => handleQuickJump(chip.category, chip.tag)}
+                    className={`px-3 py-1.5 rounded-full border text-xs font-extrabold shadow-2xs backdrop-blur-md transition-all active:scale-95 ${chip.style}`}
+                  >
+                    {chip.label}
+                  </button>
+                ))}
               </div>
 
               {/* Frosted Glass Player Progress Bar */}
@@ -219,11 +227,6 @@ export default function HomePage() {
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
-            </div>
-
-            {/* Right Column: rotating spotlight of featured personality tests */}
-            <div className="lg:col-span-5">
-              <HeroCarousel slides={heroSlides} />
             </div>
           </div>
         </div>
