@@ -70,6 +70,30 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'alma gemela bts test',
     ],
   },
+  'which-bts-member-is-your-soulmate': {
+    title: 'Which BTS Member Is Your Soulmate? (BTS Soulmate Quiz) | K-Pulse',
+    ogTitle: 'Which BTS Member Is Your Soulmate? Find Your BTS Best Friend | K-Pulse',
+    description:
+      'Which BTS member is your soulmate? Answer 10 questions about friendship and find out if RM, Jin, SUGA, J-Hope, Jimin, V, or Jungkook is your BTS best friend. Free!',
+    keywords: [
+      'which bts member is your soulmate',
+      'bts soulmate quiz',
+      'bts soulmate test',
+      'who is your bts soulmate',
+      'which bts member is your best friend',
+      'bts best friend quiz',
+      'bts friendship quiz',
+      'which bts member would be your best friend',
+      'kpop soulmate quiz',
+      'bts quiz',
+      // Spanish keywords (LATAM & Spain)
+      'que miembro de bts es tu alma gemela',
+      'bts test alma gemela',
+      'alma gemela bts test',
+      'que miembro de bts seria tu mejor amigo',
+      'test bts mejor amigo',
+    ],
+  },
   'blackpink-blink-trivia': {
     title: 'BLACKPINK Quiz: How Well Do You Know BLACKPINK? ({n} Questions) | K-Pulse',
     ogTitle: 'BLACKPINK Trivia Quiz: 50 Questions from Debut to Solo Hits | K-Pulse',

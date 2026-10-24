@@ -34,6 +34,14 @@ describe('seo', () => {
     expect(lsfSeo.keywords).toContain('which le sserafim member are you');
   });
 
+  it('targets soulmate searches with the dedicated BTS soulmate quiz', () => {
+    const soulmate = getQuizBySlug('which-bts-member-is-your-soulmate')!;
+    const seo = getQuizSeoData(soulmate);
+    expect(seo.title).toContain('Which BTS Member Is Your Soulmate?');
+    expect(seo.keywords).toContain('bts soulmate quiz');
+    expect(Object.keys(soulmate.personalityResults!)).toHaveLength(7);
+  });
+
   it('emits no review ratings (there are no real reviews to mark up)', () => {
     for (const quiz of getAllQuizzes()) {
       expect(JSON.stringify(generateQuizJsonLd(quiz))).not.toContain('AggregateRating');

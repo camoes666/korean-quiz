@@ -12,8 +12,10 @@ import whichBlackpinkMemberAreYou from './which-blackpink-member-are-you.json';
 import whichKoreanFoodAreYou from './which-korean-food-are-you.json';
 import whichAespaMemberAreYou from './which-aespa-member-are-you.json';
 import whichLeSserafimMemberAreYou from './which-le-sserafim-member-are-you.json';
+import whichBtsMemberIsYourSoulmate from './which-bts-member-is-your-soulmate.json';
 
 export const quizzes: Quiz[] = [
+  whichBtsMemberIsYourSoulmate as unknown as Quiz,
   whichAespaMemberAreYou as unknown as Quiz,
   whichLeSserafimMemberAreYou as unknown as Quiz,
   whichKoreanFoodAreYou as unknown as Quiz,
@@ -46,8 +48,13 @@ export function getQuizzesByCategory(category: Category): Quiz[] {
   return quizzes.filter((q) => q.category === category);
 }
 
+// Same-tag quizzes come first so e.g. the two BTS personality tests link to each other.
 export function getRelatedQuizzes(currentSlug: string, limit = 2): Quiz[] {
-  return quizzes.filter((q) => q.slug !== currentSlug).slice(0, limit);
+  const current = getQuizBySlug(currentSlug);
+  const others = quizzes.filter((q) => q.slug !== currentSlug);
+  const sameTag = others.filter((q) => current?.tag && q.tag === current.tag);
+  const rest = others.filter((q) => !sameTag.includes(q));
+  return [...sameTag, ...rest].slice(0, limit);
 }
 
 export function getTriviaQuizzes(): Quiz[] {

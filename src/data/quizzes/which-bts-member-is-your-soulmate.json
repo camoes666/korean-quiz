@@ -1,0 +1,699 @@
+{
+  "slug": "which-bts-member-is-your-soulmate",
+  "addedAt": "2026-10-24",
+  "quizType": "personality",
+  "title": "Which BTS Member Is Your Soulmate?",
+  "titleKo": "나의 BTS 소울메이트 절친은 누구? (소울메이트 테스트)",
+  "titleEs": "¿Qué miembro de BTS sería tu alma gemela? (Test de mejor amigo)",
+  "subtitle": "Find the BTS member who would be your ride-or-die best friend!",
+  "subtitleKo": "방탄소년단 멤버 중 나와 가장 친한 절친이 될 사람은 누구일까요?",
+  "subtitleEs": "¡Descubre qué miembro de BTS sería tu mejor amigo inseparable!",
+  "description": "Which BTS member is your soulmate? Answer 10 questions about how you love your friends, and find out whether RM, Jin, SUGA, J-Hope, Jimin, V, or Jungkook would be your ride-or-die best friend.",
+  "descriptionKo": "친구를 아끼는 나만의 방식을 알려주세요! 10개의 질문으로 RM, 진, 슈가, 제이홉, 지민, 뷔, 정국 중 나와 영혼까지 통하는 절친 멤버를 찾아드려요.",
+  "descriptionEs": "¿Qué miembro de BTS es tu alma gemela? Responde 10 preguntas sobre cómo cuidas a tus amigos y descubre si RM, Jin, SUGA, J-Hope, Jimin, V o Jungkook sería tu mejor amigo inseparable.",
+  "category": "K-Pop",
+  "tag": "BTS",
+  "coverEmoji": "💞",
+  "gradient": "from-fuchsia-950 via-purple-900 to-rose-800",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "12.4K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "rm": {
+      "id": "rm",
+      "name": "RM (Kim Namjoon)",
+      "nameKo": "RM (김남준)",
+      "nameEs": "RM (Kim Namjoon)",
+      "title": "Your Deep-Talk Soulmate",
+      "titleKo": "밤새 인생 얘기 나누는 사색 절친",
+      "titleEs": "Tu Alma Gemela de Charlas Profundas",
+      "subtitle": "Bookstore Dates · Han River Walks · 3AM Life Talks",
+      "subtitleKo": "서점 데이트 · 한강 산책 · 새벽 3시 인생 토크",
+      "subtitleEs": "Librerías · Paseos por el río Han · Charlas a las 3AM",
+      "skzoo": "KOYA (The Thoughtful Koala)",
+      "skzooKo": "코야 (KOYA - 사색적인 아기 코알라)",
+      "skzooEs": "KOYA (El Coala Pensativo)",
+      "emoji": "🐨",
+      "traits": [
+        "Endless Conversations",
+        "Growing Together",
+        "Calm Support"
+      ],
+      "traitsKo": [
+        "끝없는 대화",
+        "함께 성장하는 우정",
+        "차분한 버팀목"
+      ],
+      "traitsEs": [
+        "Charlas Infinitas",
+        "Crecer Juntos",
+        "Apoyo Sereno"
+      ],
+      "description": "You and Namjoon became best friends the moment you started talking and didn't notice it was sunrise. He sends you book photos with 'you'd love this', walks the Han River with you when life feels heavy, and always asks the question that helps you understand yourself.",
+      "descriptionKo": "당신은 남준과 가장 친한 절친이 되었어요! 이야기를 시작하면 해 뜨는 줄도 모르는 사이. '이 책 너 생각나서' 하며 사진을 보내주고, 마음이 무거운 날엔 한강을 함께 걸으며 스스로를 더 잘 이해하게 해주는 질문을 건네줘요.",
+      "descriptionEs": "Tú y Namjoon se hicieron mejores amigos en cuanto empezaron a hablar y no notaron que ya amanecía. Te manda fotos de libros con un 'esto te va a encantar', camina contigo por el río Han cuando la vida pesa y siempre hace la pregunta que te ayuda a entenderte.",
+      "bestMatchId": "jimin",
+      "bestMatchName": "Jimin",
+      "bestMatchNameKo": "지민 (Jimin)",
+      "bestMatchNameEs": "Jimin",
+      "bestMatchReason": "Jimin would complete your trio: you two bring the deep thoughts, he brings the warm hugs.",
+      "bestMatchReasonKo": "셋이 모이면 완벽한 조합! 둘이 깊은 생각을 나누면, 지민이 따뜻한 포옹으로 마무리해줘요.",
+      "bestMatchReasonEs": "Jimin completaría su trío: ustedes ponen las ideas profundas y él los abrazos cálidos.",
+      "colorHex": "#4f46e5",
+      "bgGradient": "from-indigo-600 via-blue-700 to-slate-900"
+    },
+    "jin": {
+      "id": "jin",
+      "name": "Jin (Kim Seokjin)",
+      "nameKo": "진 (김석진)",
+      "nameEs": "Jin (Kim Seokjin)",
+      "title": "Your Laugh-Until-You-Cry Soulmate",
+      "titleKo": "배꼽 빠지게 웃겨주는 먹방 절친",
+      "titleEs": "Tu Alma Gemela de Risas sin Fin",
+      "subtitle": "Dad Jokes · Home-Cooked Feasts · Zero Awkward Silence",
+      "subtitleKo": "아재개그 · 집밥 한 상 · 어색할 틈 제로",
+      "subtitleEs": "Chistes Malos · Banquetes Caseros · Cero Silencios Incómodos",
+      "skzoo": "RJ (The Fluffy Foodie Alpaca)",
+      "skzooKo": "알제이 (RJ - 미식가 알파카)",
+      "skzooEs": "RJ (La Alpaca Gourmet)",
+      "emoji": "🐹",
+      "traits": [
+        "Nonstop Laughter",
+        "Feeds You First",
+        "Quietly Protective"
+      ],
+      "traitsKo": [
+        "웃음이 끊이지 않음",
+        "밥부터 챙겨주는 정",
+        "몰래 지켜주는 든든함"
+      ],
+      "traitsEs": [
+        "Risas sin Parar",
+        "Te Alimenta Primero",
+        "Protector en Secreto"
+      ],
+      "description": "You and Seokjin became best friends over a terrible joke that made you laugh so hard you cried. He cooks for you when you're tired, roasts you lovingly in the group chat, and is the first one to show up, snacks in hand, when you're having a hard time.",
+      "descriptionKo": "당신은 석진과 가장 친한 절친이 되었어요! 썰렁한 아재개그 하나에 눈물 나게 웃다가 친해진 사이. 지친 날엔 직접 밥을 차려주고, 단톡방에선 애정 어린 놀림을 담당하고, 힘든 일이 생기면 간식을 잔뜩 들고 제일 먼저 달려와요.",
+      "descriptionEs": "Tú y Seokjin se hicieron mejores amigos gracias a un chiste malísimo que los hizo llorar de risa. Te cocina cuando estás cansado, te molesta con cariño en el chat grupal y es el primero en llegar con snacks cuando lo estás pasando mal.",
+      "bestMatchId": "suga",
+      "bestMatchName": "SUGA",
+      "bestMatchNameKo": "슈가 (SUGA)",
+      "bestMatchNameEs": "SUGA",
+      "bestMatchReason": "SUGA would join your squad as the one who pretends your jokes aren't funny, then laughs the hardest.",
+      "bestMatchReasonKo": "슈가가 합류하면 완벽! 안 웃긴 척하다가 결국 제일 크게 웃는 담당이에요.",
+      "bestMatchReasonEs": "SUGA se uniría al grupo fingiendo que tus chistes no tienen gracia, para luego reírse más que nadie.",
+      "colorHex": "#ec4899",
+      "bgGradient": "from-pink-600 via-rose-600 to-indigo-950"
+    },
+    "suga": {
+      "id": "suga",
+      "name": "SUGA (Min Yoongi)",
+      "nameKo": "슈가 (민윤기)",
+      "nameEs": "SUGA (Min Yoongi)",
+      "title": "Your Quiet Ride-or-Die Soulmate",
+      "titleKo": "말은 없어도 끝까지 내 편인 츤데레 절친",
+      "titleEs": "Tu Alma Gemela Leal y Silenciosa",
+      "subtitle": "Short Texts · Big Loyalty · Always Shows Up",
+      "subtitleKo": "답장은 짧게 · 의리는 길게 · 필요할 땐 늘 곁에",
+      "subtitleEs": "Mensajes Cortos · Lealtad Enorme · Siempre Aparece",
+      "skzoo": "SHOOKY (The Spicy Cookie)",
+      "skzooKo": "슈키 (SHOOKY - 당돌한 쿠키)",
+      "skzooEs": "SHOOKY (La Galleta Picante)",
+      "emoji": "🐱",
+      "traits": [
+        "Actions Over Words",
+        "Comfortable Silence",
+        "Unshakable Loyalty"
+      ],
+      "traitsKo": [
+        "말보다 행동",
+        "편안한 침묵",
+        "흔들림 없는 의리"
+      ],
+      "traitsEs": [
+        "Hechos, no Palabras",
+        "Silencio Cómodo",
+        "Lealtad Inquebrantable"
+      ],
+      "description": "You and Yoongi became best friends without either of you making a big deal of it. He replies 'ok.' to your long message, then quietly fixes the problem you mentioned. You can sit in the same room for hours without talking, and it still feels like the best day.",
+      "descriptionKo": "당신은 윤기와 가장 친한 절친이 되었어요! 요란하지 않게, 어느새 서로 없으면 안 되는 사이. 긴 메시지에 '응.' 한마디로 답하고는 말없이 문제를 해결해 놓는 친구예요. 몇 시간을 아무 말 없이 같이 있어도 그날이 최고의 하루가 돼요.",
+      "descriptionEs": "Tú y Yoongi se hicieron mejores amigos sin hacer un gran drama. Responde 'ok.' a tu mensaje largo y luego, en silencio, resuelve el problema que mencionaste. Pueden pasar horas en la misma habitación sin hablar y aun así sentir que es el mejor día.",
+      "bestMatchId": "jhope",
+      "bestMatchName": "J-Hope",
+      "bestMatchNameKo": "제이홉 (J-Hope)",
+      "bestMatchNameEs": "J-Hope",
+      "bestMatchReason": "J-Hope would join your duo and drag you both out of the house, which you'd secretly love.",
+      "bestMatchReasonKo": "제이홉이 합류하면 둘을 집 밖으로 끌고 나가요. 투덜대면서도 사실은 제일 즐거워할걸요?",
+      "bestMatchReasonEs": "J-Hope se uniría y los sacaría a los dos de casa, algo que en secreto les encantaría.",
+      "colorHex": "#0f766e",
+      "bgGradient": "from-teal-800 via-slate-900 to-indigo-950"
+    },
+    "jhope": {
+      "id": "jhope",
+      "name": "J-Hope (Jung Hoseok)",
+      "nameKo": "제이홉 (정호석)",
+      "nameEs": "J-Hope (Jung Hoseok)",
+      "title": "Your Sunshine Hype Soulmate",
+      "titleKo": "하루를 환하게 만드는 인간 비타민 절친",
+      "titleEs": "Tu Alma Gemela de Pura Energía",
+      "subtitle": "Kitchen Dance Parties · Surprise Plans · Loudest Cheerleader",
+      "subtitleKo": "주방 댄스파티 · 깜짝 이벤트 기획 · 제일 큰 응원 소리",
+      "subtitleEs": "Fiestas de Baile en la Cocina · Sorpresas · Tu Mayor Fan",
+      "skzoo": "MANG (The Dancing Pony)",
+      "skzooKo": "망 (MANG - 가면 벗은 댄싱 포니)",
+      "skzooEs": "MANG (El Pony Bailarín)",
+      "emoji": "🐿️",
+      "traits": [
+        "Contagious Energy",
+        "Thoughtful Planner",
+        "Biggest Cheerleader"
+      ],
+      "traitsKo": [
+        "전염되는 텐션",
+        "세심한 기획력",
+        "최강 응원단장"
+      ],
+      "traitsEs": [
+        "Energía Contagiosa",
+        "Planificador Atento",
+        "Tu Mayor Fan"
+      ],
+      "description": "You and Hoseok became best friends the day he turned your bad mood into a kitchen dance party. He plans your birthday down to the last detail, screams the loudest at your wins, and somehow always knows exactly when you need a pep talk.",
+      "descriptionKo": "당신은 호석과 가장 친한 절친이 되었어요! 우울했던 날을 주방 댄스파티로 바꿔준 그날부터 시작된 우정. 생일 이벤트는 디테일까지 완벽하게 준비하고, 좋은 일이 생기면 제일 크게 소리 질러주고, 힘이 필요한 순간을 귀신같이 알아채요.",
+      "descriptionEs": "Tú y Hoseok se hicieron mejores amigos el día que convirtió tu mal humor en una fiesta de baile en la cocina. Planea tu cumpleaños hasta el último detalle, celebra tus logros a gritos y siempre sabe cuándo necesitas ánimos.",
+      "bestMatchId": "suga",
+      "bestMatchName": "SUGA",
+      "bestMatchNameKo": "슈가 (SUGA)",
+      "bestMatchNameEs": "SUGA",
+      "bestMatchReason": "SUGA would join your squad as the calm one who keeps your plans grounded, and secretly enjoys every second.",
+      "bestMatchReasonKo": "슈가가 합류하면 들뜬 계획을 현실로 잡아주는 담당! 무심한 척해도 사실 제일 즐거워해요.",
+      "bestMatchReasonEs": "SUGA se uniría como el tranquilo que aterriza sus planes, disfrutando en secreto cada segundo.",
+      "colorHex": "#eab308",
+      "bgGradient": "from-amber-500 via-orange-600 to-purple-900"
+    },
+    "jimin": {
+      "id": "jimin",
+      "name": "Jimin (Park Jimin)",
+      "nameKo": "지민 (박지민)",
+      "nameEs": "Jimin (Park Jimin)",
+      "title": "Your Heart-to-Heart Soulmate",
+      "titleKo": "내 마음을 제일 먼저 알아주는 다정 절친",
+      "titleEs": "Tu Alma Gemela de Corazón a Corazón",
+      "subtitle": "2AM Phone Calls · Long Hugs · 'Did You Eat?'",
+      "subtitleKo": "새벽 2시 통화 · 긴 포옹 · '밥은 먹었어?'",
+      "subtitleEs": "Llamadas a las 2AM · Abrazos Largos · '¿Ya comiste?'",
+      "skzoo": "CHIMMY (The Passionate Puppy)",
+      "skzooKo": "치미 (CHIMMY - 열정 강아지)",
+      "skzooEs": "CHIMMY (El Perrito Apasionado)",
+      "emoji": "🐥",
+      "traits": [
+        "Feels Everything With You",
+        "Never Forgets a Detail",
+        "Hugs That Fix Things"
+      ],
+      "traitsKo": [
+        "함께 느끼는 공감",
+        "작은 것도 기억하는 다정함",
+        "모든 걸 녹이는 포옹"
+      ],
+      "traitsEs": [
+        "Siente Todo Contigo",
+        "Recuerda Cada Detalle",
+        "Abrazos que Curan"
+      ],
+      "description": "You and Jimin became best friends the night you called him crying and he stayed on the phone until you fell asleep. He remembers the little things you said weeks ago, texts 'did you eat?' every day, and hugs you like he means it, because he does.",
+      "descriptionKo": "당신은 지민과 가장 친한 절친이 되었어요! 울면서 전화한 그날 밤, 당신이 잠들 때까지 전화를 끊지 않았던 친구. 몇 주 전에 지나가듯 한 말도 기억하고, 매일 '밥은 먹었어?' 하고 물어보고, 진심을 꾹꾹 담아 안아줘요.",
+      "descriptionEs": "Tú y Jimin se hicieron mejores amigos la noche que lo llamaste llorando y se quedó en el teléfono hasta que te dormiste. Recuerda las pequeñas cosas que dijiste hace semanas, te escribe '¿ya comiste?' cada día y te abraza de verdad.",
+      "bestMatchId": "v",
+      "bestMatchName": "V",
+      "bestMatchNameKo": "뷔 (V)",
+      "bestMatchNameEs": "V",
+      "bestMatchReason": "V would make it a 95z-style trio: endless inside jokes, matching photos, and zero secrets.",
+      "bestMatchReasonKo": "뷔가 합류하면 구오즈 감성의 삼총사 완성! 우리끼리만 아는 농담, 커플 사진, 비밀 없는 사이가 돼요.",
+      "bestMatchReasonEs": "V formaría un trío al estilo 95z: bromas internas sin fin, fotos a juego y cero secretos.",
+      "colorHex": "#f59e0b",
+      "bgGradient": "from-amber-400 via-rose-500 to-indigo-900"
+    },
+    "v": {
+      "id": "v",
+      "name": "V (Kim Taehyung)",
+      "nameKo": "뷔 (김태형)",
+      "nameEs": "V (Kim Taehyung)",
+      "title": "Your Free-Spirited Adventure Soulmate",
+      "titleKo": "엉뚱하고 낭만 가득한 모험 절친",
+      "titleEs": "Tu Alma Gemela de Aventuras Libres",
+      "subtitle": "Film Cameras · No-Plan Trips · Weird Inside Jokes",
+      "subtitleKo": "필름 카메라 · 무계획 여행 · 우리만 아는 엉뚱한 농담",
+      "subtitleEs": "Cámaras Analógicas · Viajes sin Plan · Bromas Raras Internas",
+      "skzoo": "TATA (The Shapeshifting Prince)",
+      "skzooKo": "타타 (TATA - 사랑을 전하는 하트 왕자)",
+      "skzooEs": "TATA (El Príncipe del Amor)",
+      "emoji": "🐻",
+      "traits": [
+        "Gets Your Weird Side",
+        "Spontaneous Adventures",
+        "Romantic About Life"
+      ],
+      "traitsKo": [
+        "내 엉뚱함을 이해해줌",
+        "즉흥 모험",
+        "일상 속 낭만"
+      ],
+      "traitsEs": [
+        "Entiende tu Lado Raro",
+        "Aventuras Espontáneas",
+        "Romántico con la Vida"
+      ],
+      "description": "You and Taehyung became best friends the moment you realized you're both a little weird in the exact same way. He texts you 'let's go' with no destination, takes film photos of you when you're not looking, and turns ordinary afternoons into scenes from a movie.",
+      "descriptionKo": "당신은 태형과 가장 친한 절친이 되었어요! 둘 다 똑같은 방식으로 엉뚱하다는 걸 알게 된 순간부터 영혼의 단짝. 목적지도 없이 '가자'라고 연락하고, 모르는 사이에 필름 카메라로 당신을 찍어주고, 평범한 오후를 영화 속 한 장면으로 만들어요.",
+      "descriptionEs": "Tú y Taehyung se hicieron mejores amigos al darse cuenta de que ambos son raros exactamente de la misma manera. Te escribe 'vamos' sin destino, te toma fotos analógicas cuando no miras y convierte tardes normales en escenas de película.",
+      "bestMatchId": "jungkook",
+      "bestMatchName": "Jungkook",
+      "bestMatchNameKo": "정국 (Jungkook)",
+      "bestMatchNameEs": "Jungkook",
+      "bestMatchReason": "Jungkook would join your adventures and turn every spontaneous idea into a competition.",
+      "bestMatchReasonKo": "정국이 합류하면 모든 즉흥 모험이 승부욕 넘치는 대결로 변해요. 지루할 틈이 없어요!",
+      "bestMatchReasonEs": "Jungkook se uniría a sus aventuras y convertiría cada idea espontánea en una competencia.",
+      "colorHex": "#8b5cf6",
+      "bgGradient": "from-purple-600 via-violet-700 to-indigo-950"
+    },
+    "jungkook": {
+      "id": "jungkook",
+      "name": "Jungkook (Jeon Jungkook)",
+      "nameKo": "정국 (전정국)",
+      "nameEs": "Jungkook (Jeon Jungkook)",
+      "title": "Your Partner-in-Crime Soulmate",
+      "titleKo": "뭐든 같이 도전하는 승부욕 절친",
+      "titleEs": "Tu Alma Gemela Cómplice de Todo",
+      "subtitle": "Midnight Ramyeon Runs · Gym Buddy · Friendly Rivalry",
+      "subtitleKo": "야식 라면 번개 · 운동 메이트 · 선의의 라이벌",
+      "subtitleEs": "Ramyeon a Medianoche · Compañero de Gym · Rivalidad Amistosa",
+      "skzoo": "COOKY (The Muscular Bunny)",
+      "skzooKo": "쿠키 (COOKY - 열정 토끼)",
+      "skzooEs": "COOKY (El Conejo Fuerte)",
+      "emoji": "🐰",
+      "traits": [
+        "Up for Anything",
+        "Friendly Competition",
+        "Fiercely Loyal"
+      ],
+      "traitsKo": [
+        "뭐든 일단 해보자",
+        "선의의 경쟁",
+        "누구보다 강한 의리"
+      ],
+      "traitsEs": [
+        "Se Apunta a Todo",
+        "Competencia Amistosa",
+        "Lealtad Feroz"
+      ],
+      "description": "You and Jungkook became best friends after a 'quick' game turned into a five-hour rematch. He shows up at midnight saying 'ramyeon?', drags you to the gym, and treats every challenge like a team mission, with you as his number one teammate.",
+      "descriptionKo": "당신은 정국과 가장 친한 절친이 되었어요! '딱 한 판만'이 다섯 시간 재대결이 되면서 친해진 사이. 자정에 '라면?' 하고 찾아오고, 같이 운동하자고 끌고 가고, 모든 도전을 팀 미션처럼 여기는데 그 1번 팀원은 언제나 당신이에요.",
+      "descriptionEs": "Tú y Jungkook se hicieron mejores amigos cuando una partida 'rápida' se convirtió en una revancha de cinco horas. Aparece a medianoche diciendo '¿ramyeon?', te lleva al gym y trata cada reto como una misión de equipo, contigo como su compañero número uno.",
+      "bestMatchId": "rm",
+      "bestMatchName": "RM",
+      "bestMatchNameKo": "RM",
+      "bestMatchNameEs": "RM",
+      "bestMatchReason": "RM would join your crew as the big brother who cheers on your wildest plans and keeps them (mostly) safe.",
+      "bestMatchReasonKo": "RM이 합류하면 엉뚱한 계획도 응원해주면서 (대부분은) 안전하게 지켜주는 든든한 형이 돼요.",
+      "bestMatchReasonEs": "RM se uniría como el hermano mayor que apoya sus planes más locos y los mantiene (casi siempre) a salvo.",
+      "colorHex": "#dc2626",
+      "bgGradient": "from-rose-600 via-purple-700 to-slate-950"
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "question": "You and your best friend have a free Saturday. What's the plan?",
+      "questionKo": "절친과 함께하는 자유로운 토요일, 우리의 계획은?",
+      "questionEs": "Tú y tu mejor amigo tienen un sábado libre. ¿Cuál es el plan?",
+      "emoji": "☀️",
+      "options": [
+        {
+          "id": "A",
+          "text": "Browse a bookstore, then talk for hours at a quiet café",
+          "textKo": "서점 구경하고 조용한 카페에서 몇 시간이고 수다 떨기",
+          "textEs": "Recorrer una librería y luego charlar por horas en un café tranquilo",
+          "scores": { "rm": 3, "v": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Cook a huge meal at home, play games, and laugh at everything",
+          "textKo": "집에서 한 상 차려 먹고 게임하면서 별것 아닌 일에도 깔깔 웃기",
+          "textEs": "Cocinar un banquete en casa, jugar videojuegos y reírnos de todo",
+          "scores": { "jin": 3, "rm": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Take a dance class or hit a festival together",
+          "textKo": "같이 댄스 클래스를 듣거나 페스티벌에 가서 신나게 놀기",
+          "textEs": "Tomar una clase de baile o ir juntos a un festival",
+          "scores": { "jhope": 3, "jungkook": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Jump on a random bus with a film camera and see where it goes",
+          "textKo": "필름 카메라 하나 들고 아무 버스나 타서 발길 닿는 대로 가보기",
+          "textEs": "Subir a un bus cualquiera con una cámara analógica y ver a dónde nos lleva",
+          "scores": { "v": 3, "jimin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Your best friend texts you at 2AM: 'are you up?' What do you do?",
+      "questionKo": "새벽 2시, 절친에게 '자?'라는 문자가 왔다. 당신은?",
+      "questionEs": "Tu mejor amigo te escribe a las 2AM: '¿estás despierto?' ¿Qué haces?",
+      "emoji": "🌙",
+      "options": [
+        {
+          "id": "A",
+          "text": "Call right away and listen for as long as they need",
+          "textKo": "바로 전화 걸어서 친구가 괜찮아질 때까지 들어주기",
+          "textEs": "Llamar al instante y escuchar todo el tiempo que necesite",
+          "scores": { "jimin": 3, "jhope": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Reply 'yeah. what's up' and quietly stay up with them all night",
+          "textKo": "'응. 왜' 짧게 답하고는 밤새 조용히 곁을 지켜주기",
+          "textEs": "Responder 'sí. ¿qué pasa?' y quedarme despierto con él toda la noche",
+          "scores": { "suga": 3, "rm": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Send memes until they finally laugh",
+          "textKo": "친구가 웃을 때까지 웃긴 짤을 폭탄처럼 보내기",
+          "textEs": "Mandar memes hasta que por fin se ría",
+          "scores": { "jin": 3, "jungkook": 1 }
+        },
+        {
+          "id": "D",
+          "text": "'Ramyeon? I'm coming over.' Already putting on shoes",
+          "textKo": "'라면 먹을래? 지금 갈게.' 이미 신발 신는 중",
+          "textEs": "'¿Ramyeon? Voy para allá.' Ya me estoy poniendo los zapatos",
+          "scores": { "jungkook": 3, "v": 1 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "What do you value most in a best friend?",
+      "questionKo": "절친에게서 가장 소중하게 여기는 것은?",
+      "questionEs": "¿Qué es lo que más valoras en un mejor amigo?",
+      "emoji": "💎",
+      "options": [
+        {
+          "id": "A",
+          "text": "Deep conversations that help us both grow",
+          "textKo": "서로를 성장하게 만드는 깊은 대화",
+          "textEs": "Conversaciones profundas que nos hagan crecer a los dos",
+          "scores": { "rm": 3, "suga": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Loyalty that doesn't need to be said out loud",
+          "textKo": "굳이 말하지 않아도 느껴지는 의리",
+          "textEs": "Una lealtad que no necesita decirse en voz alta",
+          "scores": { "suga": 3, "jin": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Positive energy that lifts me up on bad days",
+          "textKo": "힘든 날에도 기운 나게 해주는 긍정 에너지",
+          "textEs": "Energía positiva que me levanta en los días malos",
+          "scores": { "jhope": 3, "jungkook": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Someone who gets my weird side without judging",
+          "textKo": "나의 엉뚱한 모습까지 그대로 이해해주는 것",
+          "textEs": "Alguien que entienda mi lado raro sin juzgarme",
+          "scores": { "v": 3, "jungkook": 1 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "It's your best friend's birthday. What's your gift?",
+      "questionKo": "절친의 생일! 당신이 준비하는 선물은?",
+      "questionEs": "Es el cumpleaños de tu mejor amigo. ¿Qué le regalas?",
+      "emoji": "🎂",
+      "options": [
+        {
+          "id": "A",
+          "text": "A long handwritten letter about everything they mean to me",
+          "textKo": "친구가 나에게 얼마나 소중한지 꾹꾹 눌러 쓴 긴 손편지",
+          "textEs": "Una carta larga escrita a mano sobre todo lo que significa para mí",
+          "scores": { "jimin": 3, "rm": 1 }
+        },
+        {
+          "id": "B",
+          "text": "A birthday feast I cooked myself, seaweed soup included",
+          "textKo": "미역국까지 직접 끓여 차린 생일상",
+          "textEs": "Un banquete de cumpleaños cocinado por mí, sopa de algas incluida",
+          "scores": { "jin": 3, "jimin": 1 }
+        },
+        {
+          "id": "C",
+          "text": "A surprise party I planned down to the last balloon",
+          "textKo": "풍선 하나까지 완벽하게 기획한 깜짝 파티",
+          "textEs": "Una fiesta sorpresa planeada hasta el último globo",
+          "scores": { "jhope": 3, "jimin": 1 }
+        },
+        {
+          "id": "D",
+          "text": "That thing they mentioned once, three months ago",
+          "textKo": "석 달 전에 지나가듯 말했던 바로 그 물건",
+          "textEs": "Eso que mencionó una sola vez, hace tres meses",
+          "scores": { "suga": 3, "v": 1 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "You and your best friend just had a fight. How does it get resolved?",
+      "questionKo": "절친과 다퉜다! 우리는 어떻게 화해할까?",
+      "questionEs": "Tú y tu mejor amigo acaban de pelear. ¿Cómo se arregla?",
+      "emoji": "🤝",
+      "options": [
+        {
+          "id": "A",
+          "text": "We sit down the same day and talk it through calmly",
+          "textKo": "그날 바로 마주 앉아 차분하게 이야기로 풀기",
+          "textEs": "Nos sentamos ese mismo día y lo hablamos con calma",
+          "scores": { "rm": 3, "jhope": 1 }
+        },
+        {
+          "id": "B",
+          "text": "I apologize first, I can't stand the tension",
+          "textKo": "어색한 게 너무 싫어서 내가 먼저 사과하기",
+          "textEs": "Pido perdón primero, no soporto la tensión",
+          "scores": { "jimin": 3, "v": 1 }
+        },
+        {
+          "id": "C",
+          "text": "A day of silence, then I show up with their favorite snack like nothing happened",
+          "textKo": "하루 조용히 있다가, 아무 일 없었다는 듯 친구가 좋아하는 간식 들고 찾아가기",
+          "textEs": "Un día de silencio y luego aparezco con su snack favorito como si nada",
+          "scores": { "suga": 3, "jin": 1 }
+        },
+        {
+          "id": "D",
+          "text": "One game. Loser apologizes. Somehow we end up laughing",
+          "textKo": "게임 한 판, 진 사람이 사과하기! 하다 보면 어느새 같이 웃고 있음",
+          "textEs": "Una partida. El que pierde se disculpa. De alguna forma terminamos riendo",
+          "scores": { "jungkook": 3, "v": 1 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Where does your dream best-friend trip go?",
+      "questionKo": "절친과 떠나는 꿈의 여행지는?",
+      "questionEs": "¿A dónde sería tu viaje soñado con tu mejor amigo?",
+      "emoji": "✈️",
+      "options": [
+        {
+          "id": "A",
+          "text": "A city full of museums, old streets, and history",
+          "textKo": "미술관과 오래된 골목, 역사가 가득한 도시",
+          "textEs": "Una ciudad llena de museos, calles antiguas e historia",
+          "scores": { "rm": 3, "v": 1 }
+        },
+        {
+          "id": "B",
+          "text": "A food trip where we plan every meal before the flight",
+          "textKo": "비행기 타기 전부터 끼니마다 맛집을 정해두는 먹방 여행",
+          "textEs": "Un viaje gastronómico con cada comida planeada antes del vuelo",
+          "scores": { "jin": 3, "suga": 1 }
+        },
+        {
+          "id": "C",
+          "text": "A beach or theme park with nonstop activities",
+          "textKo": "쉴 틈 없이 놀거리가 가득한 바다나 놀이공원",
+          "textEs": "Una playa o parque de diversiones con actividades sin parar",
+          "scores": { "jungkook": 3, "jhope": 1 }
+        },
+        {
+          "id": "D",
+          "text": "No plan at all. We'll figure it out when we land",
+          "textKo": "계획 없음! 도착해서 그때그때 정하기",
+          "textEs": "Sin ningún plan. Ya veremos al aterrizar",
+          "scores": { "v": 3, "jimin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What's your role in your friend group?",
+      "questionKo": "친구들 사이에서 나의 포지션은?",
+      "questionEs": "¿Cuál es tu rol en tu grupo de amigos?",
+      "emoji": "🧩",
+      "options": [
+        {
+          "id": "A",
+          "text": "The planner who books everything and keeps the group chat organized",
+          "textKo": "예약부터 일정까지 다 챙기고 단톡방을 정리하는 총무",
+          "textEs": "El que organiza todo y mantiene el chat grupal en orden",
+          "scores": { "jhope": 3, "rm": 1 }
+        },
+        {
+          "id": "B",
+          "text": "The mood maker who keeps everyone laughing",
+          "textKo": "모두를 웃게 만드는 분위기 메이커",
+          "textEs": "El alma de la fiesta que hace reír a todos",
+          "scores": { "jin": 3, "jhope": 1 }
+        },
+        {
+          "id": "C",
+          "text": "The listener everyone comes to with their problems",
+          "textKo": "다들 고민이 생기면 찾아오는 상담사",
+          "textEs": "El que escucha y a quien todos acuden con sus problemas",
+          "scores": { "jimin": 3, "rm": 1 }
+        },
+        {
+          "id": "D",
+          "text": "The one who says yes to every crazy challenge",
+          "textKo": "어떤 엉뚱한 도전이든 일단 '콜!' 외치는 행동대장",
+          "textEs": "El que dice que sí a cada reto loco",
+          "scores": { "jungkook": 3, "v": 1 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "It's late and you're still talking. What's the topic?",
+      "questionKo": "밤이 깊었는데 대화가 끝나지 않는다. 우리의 대화 주제는?",
+      "questionEs": "Es tarde y siguen hablando. ¿De qué?",
+      "emoji": "💬",
+      "options": [
+        {
+          "id": "A",
+          "text": "Life, the universe, and what we really want to become",
+          "textKo": "인생과 우주, 그리고 우리가 진짜 되고 싶은 사람",
+          "textEs": "La vida, el universo y quiénes queremos llegar a ser",
+          "scores": { "rm": 3, "v": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Music, and that project we keep saying we'll make together",
+          "textKo": "음악, 그리고 언젠가 같이 만들자던 우리의 프로젝트",
+          "textEs": "Música, y ese proyecto que siempre decimos que haremos juntos",
+          "scores": { "suga": 3, "jhope": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Feelings, crushes, and the worries we don't tell anyone else",
+          "textKo": "감정, 짝사랑, 다른 사람에겐 말 못 한 고민들",
+          "textEs": "Sentimientos, crushes y las preocupaciones que no contamos a nadie",
+          "scores": { "jimin": 3, "jungkook": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Completely random 'what if' scenarios that make no sense",
+          "textKo": "아무 의미 없는 엉뚱한 '만약에' 시리즈",
+          "textEs": "Escenarios '¿y si...?' totalmente random que no tienen sentido",
+          "scores": { "v": 3, "jin": 1 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Your best friend had an awful day. How do you cheer them up?",
+      "questionKo": "절친이 최악의 하루를 보냈다. 당신의 위로 방법은?",
+      "questionEs": "Tu mejor amigo tuvo un día horrible. ¿Cómo lo animas?",
+      "emoji": "🫂",
+      "options": [
+        {
+          "id": "A",
+          "text": "Blast their favorite song and dance until they crack a smile",
+          "textKo": "친구 최애곡을 크게 틀어놓고 웃음 터질 때까지 같이 춤추기",
+          "textEs": "Poner su canción favorita a todo volumen y bailar hasta que sonría",
+          "scores": { "jhope": 3, "jungkook": 1 }
+        },
+        {
+          "id": "B",
+          "text": "A long hug and 'you did so well today'",
+          "textKo": "꼭 안아주면서 '오늘 정말 고생 많았어'",
+          "textEs": "Un abrazo largo y un 'hoy lo hiciste muy bien'",
+          "scores": { "jimin": 3, "v": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Quietly take care of the practical stuff so they can rest",
+          "textKo": "말없이 필요한 일들을 처리해줘서 친구가 푹 쉴 수 있게 하기",
+          "textEs": "Encargarme en silencio de lo práctico para que pueda descansar",
+          "scores": { "suga": 3, "rm": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Drag them to the gym or a late-night run to sweat it out",
+          "textKo": "헬스장이나 밤 러닝에 끌고 가서 땀으로 다 날려버리기",
+          "textEs": "Llevarlo al gym o a correr de noche para sacarlo todo",
+          "scores": { "jungkook": 3, "jhope": 1 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "You get one whole day to hang out with a BTS member as their best friend. What do you do?",
+      "questionKo": "BTS 멤버와 절친으로 하루를 보낼 수 있다면, 우리는 무엇을 할까?",
+      "questionEs": "Tienes un día entero para pasar con un miembro de BTS como su mejor amigo. ¿Qué hacen?",
+      "emoji": "💜",
+      "options": [
+        {
+          "id": "A",
+          "text": "Vintage record shops, photo booths, and café-hopping",
+          "textKo": "빈티지 LP 가게, 인생네컷, 카페 투어",
+          "textEs": "Tiendas de vinilos vintage, fotomatones y recorrer cafés",
+          "scores": { "v": 3, "rm": 1 }
+        },
+        {
+          "id": "B",
+          "text": "A late-night studio session making a song together",
+          "textKo": "늦은 밤 작업실에서 함께 노래 한 곡 만들기",
+          "textEs": "Una sesión nocturna en el estudio creando una canción juntos",
+          "scores": { "suga": 2, "jhope": 2 }
+        },
+        {
+          "id": "C",
+          "text": "A fishing trip with way too many snacks",
+          "textKo": "간식 잔뜩 챙겨서 떠나는 낚시 여행",
+          "textEs": "Un viaje de pesca con demasiados snacks",
+          "scores": { "jin": 3, "jungkook": 1 }
+        },
+        {
+          "id": "D",
+          "text": "A sleepover with face masks and midnight confessions",
+          "textKo": "마스크팩 붙이고 밤새 속마음 털어놓는 파자마 파티",
+          "textEs": "Una pijamada con mascarillas y confesiones a medianoche",
+          "scores": { "jimin": 2, "jungkook": 2 }
+        }
+      ]
+    }
+  ]
+}

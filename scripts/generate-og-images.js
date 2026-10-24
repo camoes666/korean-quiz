@@ -93,6 +93,15 @@ const THEMES = {
     pillText: '#ffffff',
     tag: 'PERSONALITY TEST · BTS ARMY 🔮💜',
   },
+  'which-bts-member-is-your-soulmate': {
+    bgStart: '#1a0420',
+    bgMid: '#4a044e',
+    bgEnd: '#be185d',
+    accent: '#f9a8d4',
+    pillBg: '#db2777',
+    pillText: '#ffffff',
+    tag: 'SOULMATE TEST · BTS',
+  },
   'which-blackpink-member-are-you': {
     bgStart: '#14030d',
     bgMid: '#380922',
@@ -129,7 +138,7 @@ async function generateAll() {
     };
 
     const tagEscaped = (theme.tag || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-    const questionCount = quiz.questions ? quiz.questions.length : 10;
+    const questionCount = quiz.personalityQuestions?.length || quiz.questions?.length || 10;
     const titleEscaped = (quiz.title || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     const descEscaped = (quiz.subtitle || quiz.description || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -219,7 +228,7 @@ async function generateAll() {
     if (quiz.slug === 'blackpink-blink-trivia' || quiz.slug === 'which-blackpink-member-are-you') {
       const bpMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'bomi-blackpink.png');
       if (fs.existsSync(bpMascot)) mascotFile = bpMascot;
-    } else if (quiz.slug === 'bts-army-trivia' || quiz.slug === 'which-bts-member-are-you') {
+    } else if (quiz.slug === 'bts-army-trivia' || quiz.slug === 'which-bts-member-are-you' || quiz.slug === 'which-bts-member-is-your-soulmate') {
       const btsMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-bts.png');
       if (fs.existsSync(btsMascot)) mascotFile = btsMascot;
     } else if (quiz.slug === 'stray-kids-stay-trivia' || quiz.slug === 'which-stray-kids-member-are-you') {
