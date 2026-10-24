@@ -1,19 +1,32 @@
 'use client';
 
 import Link from 'next/link';
-import { Zap, Sparkles, ArrowRight, CheckCircle2, Flame } from 'lucide-react';
+import { Zap, Sparkles, ArrowRight, Flame } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { Quiz, getLocalizedText } from '@/types/quiz';
 import { getQuizMascot } from '@/lib/mascot';
+import type { Language } from '@/lib/translations';
+
+export type HeroBadge = 'featured' | 'trending' | 'new';
 
 interface DailyQuestCardProps {
   questQuiz: Quiz;
+  badge?: HeroBadge;
+  onPlayClick?: () => void;
 }
 
-export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
+function getBadgeLabel(badge: HeroBadge, tag: string, lang: Language): string {
+  if (badge === 'new') return `NEW · ${tag}`;
+  if (badge === 'trending') {
+    return lang === 'ko' ? `인기 급상승 · ${tag}` : lang === 'es' ? `Tendencia · ${tag}` : `Trending · ${tag}`;
+  }
+  return lang === 'ko' ? `인기 메인 테스트 · ${tag}` : lang === 'es' ? `Test Destacado · ${tag}` : `Featured Test · ${tag}`;
+}
+
+export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayClick }: DailyQuestCardProps) {
   const { lang } = useLanguage();
-  const { dailyQuestCompleted, streak } = useGame();
+  const { streak } = useGame();
   const quizTitle = getLocalizedText(questQuiz, 'title', lang);
   const quizDesc = getLocalizedText(questQuiz, 'description', lang);
   const mascot = getQuizMascot(questQuiz.slug, questQuiz.tag);
@@ -58,11 +71,7 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-200 text-xs font-extrabold backdrop-blur-md shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-pink-400" />
             {isPersonality
-              ? lang === 'ko'
-                ? '인기 메인 테스트 · BLACKPINK'
-                : lang === 'es'
-                ? 'Test Destacado · BLACKPINK'
-                : 'Featured Test · BLACKPINK'
+              ? getBadgeLabel(badge, questQuiz.tag || 'K-Pop', lang)
               : lang === 'ko'
               ? '오늘의 데일리 퀘스트'
               : lang === 'es'
@@ -110,7 +119,7 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
           )}
 
           {/* Hero-sized Mascot Bomi with Motion Graphics & Stage Aura */}
-          <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 -mt-10 sm:-mt-12 -mr-2 relative select-none pointer-events-none z-10">
+          <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 ml-auto -mt-10 sm:-mt-12 -mr-2 relative select-none pointer-events-none z-10">
             {/* Pulsing Pink Stage Halo */}
             <div className="absolute inset-1 rounded-full bg-gradient-to-tr from-pink-500/50 via-rose-400/35 to-purple-500/30 blur-xl animate-bomi-aura" />
             {/* Rotating Dashed Stage Orbit Ring */}
@@ -143,32 +152,27 @@ export default function DailyQuestCard({ questQuiz }: DailyQuestCardProps) {
           </span>
         </div>
 
-        {dailyQuestCompleted ? (
-          <div className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 font-black px-5 py-2.5 text-xs">
-            <CheckCircle2 className="w-4 h-4" />
-            <span>{lang === 'ko' ? '참여 완료' : lang === 'es' ? '¡Completado!' : 'Completed'}</span>
-          </div>
-        ) : (
-          <Link
-            href={`/quiz/${questQuiz.slug}`}
-            className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-400 hover:to-rose-500 active:scale-95 text-white px-5 py-2.5 text-xs sm:text-sm font-black shadow-lg shadow-pink-500/30 transition-all shrink-0"
-          >
-            <span>
-              {isPersonality
-                ? lang === 'ko'
-                  ? '내 멤버 알아보러 가기'
-                  : lang === 'es'
-                  ? 'Descubrir Mi Miembro'
-                  : 'Find My Member'
-                : lang === 'ko'
-                ? '데일리 도전하기'
+        {/* Always clickable: completing the daily trivia quest shouldn't hide the featured tests. */}
+        <Link
+          href={`/quiz/${questQuiz.slug}`}
+          onClick={onPlayClick}
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-400 hover:to-rose-500 active:scale-95 text-white px-5 py-2.5 text-xs sm:text-sm font-black shadow-lg shadow-pink-500/30 transition-all shrink-0"
+        >
+          <span>
+            {isPersonality
+              ? lang === 'ko'
+                ? '내 멤버 알아보러 가기'
                 : lang === 'es'
-                ? 'Jugar Misión'
-                : 'Play Daily Quest'}
-            </span>
-            <ArrowRight className="w-4 h-4" />
-          </Link>
-        )}
+                ? 'Descubrir Mi Miembro'
+                : 'Find My Member'
+              : lang === 'ko'
+              ? '데일리 도전하기'
+              : lang === 'es'
+              ? 'Jugar Misión'
+              : 'Play Daily Quest'}
+          </span>
+          <ArrowRight className="w-4 h-4" />
+        </Link>
       </div>
     </div>
   );

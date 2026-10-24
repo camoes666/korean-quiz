@@ -2,11 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { getAllQuizzes } from '@/data/quizzes';
+import { getAllQuizzes, getHeroQuizzes } from '@/data/quizzes';
 import { Category } from '@/types/quiz';
 import QuizCard from '@/components/QuizCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
-import DailyQuestCard from '@/components/DailyQuestCard';
+import HeroCarousel from '@/components/HeroCarousel';
 import PlayerLevelCard from '@/components/PlayerLevelCard';
 import LeaderboardCard from '@/components/LeaderboardCard';
 import { Sparkles, Trophy, ArrowRight, Tag, BookOpen } from 'lucide-react';
@@ -24,9 +24,7 @@ export default function HomePage() {
   const allQuizzes = getAllQuizzes();
   const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
 
-  // Pick the featured main quiz (BLACKPINK member personality test)
-  const dailyQuestQuiz =
-    allQuizzes.find((q) => q.slug === 'which-blackpink-member-are-you') || allQuizzes[0];
+  const heroSlides = getHeroQuizzes();
 
   // Extract relevant tags based on category
   const getAvailableTags = () => {
@@ -223,9 +221,9 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Column: Spotlight BLACKPINK Member Card */}
+            {/* Right Column: rotating spotlight of featured personality tests */}
             <div className="lg:col-span-5">
-              <DailyQuestCard questQuiz={dailyQuestQuiz} />
+              <HeroCarousel slides={heroSlides} />
             </div>
           </div>
         </div>

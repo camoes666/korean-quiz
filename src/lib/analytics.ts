@@ -79,6 +79,18 @@ export function trackShare(params: {
   });
 }
 
+export function trackHeroCardClick(params: {
+  slug: string;
+  position: number; // 1-based slide position in the home hero carousel
+  lang: Language;
+}): void {
+  trackEvent('hero_card_click', {
+    quiz_slug: params.slug,
+    slide_position: params.position,
+    language: params.lang,
+  });
+}
+
 export function trackCardDownload(params: {
   slug: string;
   cardType: 'trivia' | 'personality';

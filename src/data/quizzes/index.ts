@@ -39,6 +39,20 @@ export function getQuizBySlug(slug: string): Quiz | undefined {
   return quizzes.find((q) => q.slug === slug);
 }
 
+// Home hero carousel slides, in display order: newest test, top search entry, the long-time featured test.
+const HERO_SLIDES = [
+  { slug: 'which-bts-member-is-your-soulmate', badge: 'new' },
+  { slug: 'which-stray-kids-member-are-you', badge: 'trending' },
+  { slug: 'which-blackpink-member-are-you', badge: 'featured' },
+] as const;
+
+export function getHeroQuizzes(): { quiz: Quiz; badge: (typeof HERO_SLIDES)[number]['badge'] }[] {
+  return HERO_SLIDES.flatMap(({ slug, badge }) => {
+    const quiz = getQuizBySlug(slug);
+    return quiz ? [{ quiz, badge }] : [];
+  });
+}
+
 export function getFeaturedQuizzes(): Quiz[] {
   return quizzes.filter((q) => q.featured);
 }
