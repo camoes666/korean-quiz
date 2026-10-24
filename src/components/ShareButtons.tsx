@@ -5,6 +5,7 @@ import { Share2, Check, Copy, Swords, User, Camera, Loader2 } from 'lucide-react
 import { useLanguage } from '@/context/LanguageContext';
 import { encodeChallenge } from '@/lib/challenge';
 import { downloadResultCard } from '@/lib/renderResultCard';
+import { getQuizMascot } from '@/lib/mascot';
 import { trackShare, trackCardDownload } from '@/lib/analytics';
 
 interface ShareButtonsProps {
@@ -194,6 +195,7 @@ export default function ShareButtons({
         badgeEmoji,
         userNickname: nickname,
         timeFormatted,
+        mascotUrl: getQuizMascot(slug).avatarUrl,
       }, `${slug || 'kpulse'}-result`);
       setCardDownloaded(true);
       setTimeout(() => setCardDownloaded(false), 3500);

@@ -9,6 +9,7 @@ import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Heart, Trophy, Co
 import QuizCard from './QuizCard';
 import { getQuizMascot } from '@/lib/mascot';
 import { downloadResultCard } from '@/lib/renderResultCard';
+import { getTopMatches } from '@/lib/personalityMatch';
 import { getQuizThemeGroup } from '@/lib/theme';
 import {
   PERSONALITY_RUNNER_MS,
@@ -248,6 +249,8 @@ export default function PersonalityTestRunner({
       const memberSubtitle = getLocalizedText(matchedResult, 'subtitle', lang);
       const traits = getLocalizedArray(matchedResult, 'traits', lang);
       const bestMatchName = getLocalizedText(matchedResult, 'bestMatchName', lang);
+      // Card uses short names: "Jimin (Park Jimin)" -> "Jimin"
+      const shortName = (name: string) => name.replace(/\s*\(.*\)\s*$/, '');
 
       await downloadResultCard(
         {
@@ -255,12 +258,18 @@ export default function PersonalityTestRunner({
           quizTitle: getLocalizedText(quiz, 'title', lang),
           slug: quiz.slug,
           lang,
-          memberName,
+          memberName: shortName(memberName),
           memberTitle,
           memberSubtitle,
           memberEmoji: matchedResult.emoji,
           traits,
           bestMatchName,
+          mascotUrl: mascot.avatarUrl,
+          groupName: quiz.tag,
+          topMatches: getTopMatches(questions, scores).map(({ id, percent }) => ({
+            name: shortName(getLocalizedText(resultsMap[id], 'name', lang)),
+            percent,
+          })),
         },
         `${quiz.slug}-${matchedResult.id}`
       );
