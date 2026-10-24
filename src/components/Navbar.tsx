@@ -61,11 +61,12 @@ export default function Navbar() {
             className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-bold text-slate-700"
             title={`Level ${currentLevel.level}: ${levelTitle} · ${streak}d streak`}
           >
-            <span className="flex items-center gap-1 text-rose-600 font-extrabold" title={`${streak} Day Streak`}>
+            {/* Streak hides on phones so the language switcher still fits in a 375px header. */}
+            <span className="hidden sm:flex items-center gap-1 text-rose-600 font-extrabold" title={`${streak} Day Streak`}>
               <Flame className="w-3.5 h-3.5 fill-current text-rose-500" />
               <span className="tabular-nums">{streak}</span>
             </span>
-            <span className="h-3 w-px bg-slate-200" />
+            <span className="hidden sm:block h-3 w-px bg-slate-200" />
             <span className="flex items-center gap-1 text-emerald-700 font-extrabold">
               <Zap className="w-3.5 h-3.5 fill-current text-emerald-500" />
               <span className="tabular-nums">{xp}</span>

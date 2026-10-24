@@ -78,7 +78,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
       <div className="p-5 flex flex-col flex-1 justify-between">
         <div>
           <Link href={`/quiz/${quiz.slug}`} className="block">
-            <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-1 group-hover:text-purple-600 transition-colors">
+            <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-2 min-h-[2lh] group-hover:text-purple-600 transition-colors">
               {title}
             </h3>
           </Link>
