@@ -7,6 +7,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: ['/record/'],
     },
     sitemap: 'https://kpulsequiz.com/sitemap.xml',
   };

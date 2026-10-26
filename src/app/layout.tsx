@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://kpulsequiz.com'),
   title: 'K-Pop Quizzes & Personality Tests: Which Member Are You? | K-Pulse',
   description:
-    'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
+    'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, TWICE, ENHYPEN, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
   keywords: [
     'Which Member Are You',
     'K-Pop Personality Test',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'K-Pop Quizzes & Personality Tests: Which Member Are You? | K-Pulse',
     description:
-      'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
+      'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, TWICE, ENHYPEN, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
     url: 'https://kpulsequiz.com',
     siteName: 'K-Pulse',
     locale: 'en_US',
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'K-Pop Quizzes & Personality Tests: Which Member Are You? | K-Pulse',
     description:
-      'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
+      'Free K-Pop quizzes & personality tests. Which BTS, BLACKPINK, Stray Kids, TWICE, ENHYPEN, aespa or LE SSERAFIM member are you? Plus K-Drama & Korean culture trivia.',
     images: ['/images/og-banner.png'],
   },
 };

@@ -15,7 +15,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     title: 'Which BLACKPINK Member Are You? (Personality & Vibe Quiz) | K-Pulse',
     ogTitle: 'Which BLACKPINK Member Are You? (Jisoo, Jennie, Rosé, or Lisa) | K-Pulse',
     description:
-      'Find out what BLACKPINK member you are! Take this 10-question BLACKPINK personality quiz to see if you match witty Jisoo, trendsetting Jennie, soulful Rosé, or Lisa.',
+      'Find out what BLACKPINK member you are! Take this free 10-question BLACKPINK personality quiz to get your holographic photocard, Top 3 sync %, and match with Jisoo, Jennie, Rosé, or Lisa!',
     keywords: [
       'which blackpink member are you',
       'what blackpink member are you',
@@ -48,7 +48,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     title: 'Which BTS Member Are You? BTS Soulmate & Personality Quiz | K-Pulse',
     ogTitle: 'Which BTS Member Are You? (10-Question Soulmate & Personality Test) | K-Pulse',
     description:
-      'Which BTS member are you and who is your BTS soulmate? Discover your Bangtan archetype, BT21 twin & chemistry: RM, Jin, SUGA, J-Hope, Jimin, V, or Jungkook. Play free!',
+      'Which BTS member are you and who is your BTS soulmate? Get your free BTS holographic photocard, Top 3 sync %, BT21 twin & best duo match across RM, Jin, SUGA, J-Hope, Jimin, V, and Jungkook!',
     keywords: [
       'which bts member are you',
       'what bts member are you',
@@ -175,7 +175,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     title: 'Which Stray Kids Member Are You? (SKZOO & Soulmate Quiz) | K-Pulse',
     ogTitle: 'Which Stray Kids Member Are You? Find Your SKZOO Twin | K-Pulse',
     description:
-      'Find out what Stray Kids member you are and discover your SKZOO twin! Are you Bang Chan, Lee Know, Changbin, Hyunjin, HAN, Felix, Seungmin, or I.N? Free 10-question quiz.',
+      'Find out what Stray Kids member you are and discover your SKZOO twin! Get your holographic photocard, Top 3 sync % & SKZOO twin across Bang Chan, Lee Know, Changbin, Hyunjin, HAN, Felix, Seungmin, and I.N!',
     keywords: [
       'which stray kids member are you',
       'what stray kids member are you',
