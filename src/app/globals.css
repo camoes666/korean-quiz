@@ -167,3 +167,94 @@ body {
 .animate-particle-3 {
   animation: particleFloatUp 3s ease-in-out 2s infinite;
 }
+
+/* =============================================================
+   Holographic Photocard Result Motion Graphics
+   ============================================================= */
+
+@keyframes holoCardReveal {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateY(-22deg) rotateX(10deg) scale(0.88) translateY(24px);
+    filter: brightness(1.6) blur(6px);
+  }
+  60% {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(4deg) rotateX(-2deg) scale(1.015) translateY(-4px);
+    filter: brightness(1.1) blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateY(0deg) rotateX(0deg) scale(1) translateY(0);
+    filter: brightness(1) blur(0);
+  }
+}
+
+@keyframes holoFoilSweep {
+  0% {
+    transform: translateX(-140%) skewX(-22deg);
+  }
+  45%, 100% {
+    transform: translateX(220%) skewX(-22deg);
+  }
+}
+
+@keyframes holoRainbowShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes syncStampPop {
+  0% {
+    opacity: 0;
+    transform: scale(1.75) rotate(-14deg);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(0.92) rotate(4deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(-3deg);
+  }
+}
+
+@keyframes sparkleBurst {
+  0%, 100% {
+    transform: scale(0.65) rotate(0deg);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.25) rotate(45deg);
+    opacity: 1;
+  }
+}
+
+.animate-holo-card-reveal {
+  animation: holoCardReveal 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-holo-foil-sweep {
+  animation: holoFoilSweep 4.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.animate-holo-rainbow {
+  background-size: 300% 300%;
+  animation: holoRainbowShift 5s ease infinite;
+}
+
+.animate-sync-stamp {
+  animation: syncStampPop 0.65s cubic-bezier(0.22, 1, 0.36, 1) 0.35s both;
+}
+
+.animate-sparkle-twinkle {
+  animation: sparkleBurst 2.4s ease-in-out infinite;
+}
+
+.animate-sparkle-twinkle-delay {
+  animation: sparkleBurst 2.8s ease-in-out 1.1s infinite;
+}

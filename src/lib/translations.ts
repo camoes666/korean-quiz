@@ -168,7 +168,7 @@ export const translations: Record<Language, TranslationDictionary> = {
       BLACKPINK: '블랙핑크',
       NewJeans: '뉴진스',
       'Stray Kids': '스트레이 키즈',
-      SEVENTEEN: '세븐틴',
+      TWICE: '트와이스 (TWICE)', ENHYPEN: '엔하이픈 (ENHYPEN)', aespa: '에스파 (aespa)', 'LE SSERAFIM': '르세라핌 (LE SSERAFIM)', SEVENTEEN: '세븐틴',
       'Squid Game': '오징어 게임',
       'Queen of Tears': '눈물의 여왕',
       'Street Food': '길거리 음식',

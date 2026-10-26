@@ -111,6 +111,42 @@ const THEMES = {
     pillText: '#ffffff',
     tag: 'PERSONALITY TEST · BLACKPINK 🔮💖',
   },
+  'which-twice-member-are-you': {
+    bgStart: '#1f0518',
+    bgMid: '#701a75',
+    bgEnd: '#f43f5e',
+    accent: '#f9a8d4',
+    pillBg: '#ec4899',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · TWICE ONCE 🍭💖',
+  },
+  'which-enhypen-member-are-you': {
+    bgStart: '#090514',
+    bgMid: '#3b0764',
+    bgEnd: '#9f1239',
+    accent: '#fb7185',
+    pillBg: '#e11d48',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · ENHYPEN 🧛🔥',
+  },
+  'which-aespa-member-are-you': {
+    bgStart: '#040d21',
+    bgMid: '#1e1b4b',
+    bgEnd: '#0891b2',
+    accent: '#67e8f9',
+    pillBg: '#06b6d4',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · aespa MY 💙✨',
+  },
+  'which-le-sserafim-member-are-you': {
+    bgStart: '#09090b',
+    bgMid: '#1e1b4b',
+    bgEnd: '#e11d48',
+    accent: '#fb7185',
+    pillBg: '#f43f5e',
+    pillText: '#ffffff',
+    tag: 'PERSONALITY TEST · LE SSERAFIM 🔥👑',
+  },
   'which-korean-food-are-you': {
     bgStart: '#1c0704',
     bgMid: '#7c2d12',
@@ -224,14 +260,28 @@ async function generateAll() {
 
     const outputPath = path.join(OUTPUT_DIR, `${quiz.slug}.png`);
 
-    let mascotFile = HOBI_PATH;
-    if (quiz.slug === 'blackpink-blink-trivia' || quiz.slug === 'which-blackpink-member-are-you') {
+    let mascotFile = HOBI_PATH; if (quiz.slug.includes('food')) mascotFile = path.join(__dirname, '..', 'public', 'images', 'mascot', 'bomi-food.png'); else if (quiz.slug.includes('drama')) mascotFile = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-kdrama.png');
+    if (
+      quiz.slug === 'blackpink-blink-trivia' ||
+      quiz.slug === 'which-blackpink-member-are-you' ||
+      quiz.slug === 'which-twice-member-are-you'
+    ) {
       const bpMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'bomi-blackpink.png');
       if (fs.existsSync(bpMascot)) mascotFile = bpMascot;
+    } else if (quiz.slug === 'which-aespa-member-are-you') {
+      const aespaMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'bomi-aespa.png');
+      if (fs.existsSync(aespaMascot)) mascotFile = aespaMascot;
+    } else if (quiz.slug === 'which-le-sserafim-member-are-you') {
+      const lsfMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'bomi-lesserafim.png');
+      if (fs.existsSync(lsfMascot)) mascotFile = lsfMascot;
     } else if (quiz.slug === 'bts-army-trivia' || quiz.slug === 'which-bts-member-are-you' || quiz.slug === 'which-bts-member-is-your-soulmate') {
       const btsMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-bts.png');
       if (fs.existsSync(btsMascot)) mascotFile = btsMascot;
-    } else if (quiz.slug === 'stray-kids-stay-trivia' || quiz.slug === 'which-stray-kids-member-are-you') {
+    } else if (
+      quiz.slug === 'stray-kids-stay-trivia' ||
+      quiz.slug === 'which-stray-kids-member-are-you' ||
+      quiz.slug === 'which-enhypen-member-are-you'
+    ) {
       const skzMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-skz.png');
       if (fs.existsSync(skzMascot)) mascotFile = skzMascot;
     }

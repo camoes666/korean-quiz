@@ -70,18 +70,6 @@ export default function HomePage() {
       style: 'border-pink-200 bg-white/90 text-pink-700 hover:bg-pink-50 hover:border-pink-300',
     },
     {
-      label: '✨ aespa',
-      category: 'K-Pop' as Category,
-      tag: 'aespa',
-      style: 'border-cyan-200 bg-white/90 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-300',
-    },
-    {
-      label: '🔥 LE SSERAFIM',
-      category: 'K-Pop' as Category,
-      tag: 'LE SSERAFIM',
-      style: 'border-emerald-200 bg-white/90 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300',
-    },
-    {
       label: '💜 BTS',
       category: 'K-Pop' as Category,
       tag: 'BTS',
@@ -92,6 +80,30 @@ export default function HomePage() {
       category: 'K-Pop' as Category,
       tag: 'Stray Kids',
       style: 'border-rose-200 bg-white/90 text-rose-700 hover:bg-rose-50 hover:border-rose-300',
+    },
+    {
+      label: '🍭 TWICE',
+      category: 'K-Pop' as Category,
+      tag: 'TWICE',
+      style: 'border-fuchsia-200 bg-white/90 text-fuchsia-700 hover:bg-fuchsia-50 hover:border-fuchsia-300',
+    },
+    {
+      label: '🧛 ENHYPEN',
+      category: 'K-Pop' as Category,
+      tag: 'ENHYPEN',
+      style: 'border-red-200 bg-white/90 text-red-700 hover:bg-red-50 hover:border-red-300',
+    },
+    {
+      label: '✨ aespa',
+      category: 'K-Pop' as Category,
+      tag: 'aespa',
+      style: 'border-cyan-200 bg-white/90 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-300',
+    },
+    {
+      label: '🔥 LE SSERAFIM',
+      category: 'K-Pop' as Category,
+      tag: 'LE SSERAFIM',
+      style: 'border-emerald-200 bg-white/90 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300',
     },
     {
       label: lang === 'ko' ? '🌶️ K-푸드' : '🌶️ K-Food',

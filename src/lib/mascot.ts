@@ -30,6 +30,141 @@ export function getQuizMascot(slug?: string, tag?: string): QuizMascot {
   const normalizedTag = (tag || '').toLowerCase();
   const normalizedSlug = (slug || '').toLowerCase();
 
+  // K-Food / Culinary -> Chef Bomi (셰프 봄이 🍜🌶️)
+  if (
+    normalizedTag.includes('food') ||
+    normalizedTag.includes('spicy') ||
+    normalizedSlug.includes('food') ||
+    normalizedSlug.includes('spicy')
+  ) {
+    return {
+      name: 'Bomi 🍜',
+      nameKo: '봄이 🍜',
+      nameEs: 'Bomi 🍜',
+      namePt: 'Bomi 🍜',
+      avatarUrl: '/images/mascot/bomi-food.webp',
+      gender: 'female',
+      badgeTitle: 'Chef Bomi 🍜🌶️',
+      badgeTitleKo: '미식 셰프 봄이 🍜🌶️',
+      badgeTitleEs: 'Chef Bomi 🍜🌶️',
+      badgeTitlePt: 'Chef Bomi 🍜🌶️',
+      greeting: 'Chef Bomi cooked up a sizzling K-Food challenge! 🍜🌶️',
+      greetingKo: '미식 셰프 봄이와 함께하는 매콤달콤 K-푸드 챌린지! 🍜🌶️',
+      greetingEn: 'Chef Bomi cooked up a sizzling K-Food challenge! 🍜🌶️',
+      greetingEs: '¡La Chef Bomi preparó un delicioso reto de K-Food! 🍜🌶️',
+      greetingPt: 'A Chef Bomi preparou um delicioso desafio de K-Food! 🍜🌶️',
+      winCheer: '3-Star Michelin K-Foodie certified by Chef Bomi! 🍜🔥',
+      winCheerKo: '대박! 미슐랭 3스타급 찐 K-푸드 미식가 인정! 🍜🔥',
+      winCheerEn: '3-Star Michelin K-Foodie certified by Chef Bomi! 🍜🔥',
+      winCheerEs: '¡Increíble! ¡Experto Michelin en comida coreana! 🍜🔥',
+      winCheerPt: 'Incrível! Especialista Michelin em comida coreana! 🍜🔥',
+      encourage: 'Grab a bite of tteokbokki and try again! 🍜💖',
+      encourageKo: '떡볶이 한 입 먹고 다시 만점에 도전해봐요! 🍜💖',
+      encourageEn: 'Grab a bite of tteokbokki and try again! 🍜💖',
+      encourageEs: '¡Toma un bocado de tteokbokki e inténtalo de nuevo! 🍜💖',
+      encouragePt: 'Coma um pouco de tteokbokki e tente novamente! 🍜💖',
+    };
+  }
+
+  // K-Drama -> Actor / Director Hobi (K-드라마 남주 호비 🎬💖)
+  if (
+    normalizedTag.includes('drama') ||
+    normalizedTag.includes('squid') ||
+    normalizedTag.includes('tears') ||
+    normalizedSlug.includes('kdrama') ||
+    normalizedSlug.includes('drama')
+  ) {
+    return {
+      name: 'Hobi 🎬',
+      nameKo: '호비 🎬',
+      nameEs: 'Hobi 🎬',
+      namePt: 'Hobi 🎬',
+      avatarUrl: '/images/mascot/hobi-kdrama.webp',
+      gender: 'male',
+      badgeTitle: 'K-Drama Hobi 🎬💖',
+      badgeTitleKo: '드라마 남주 호비 🎬💖',
+      badgeTitleEs: 'Actor Hobi 🎬💖',
+      badgeTitlePt: 'Ator Hobi 🎬💖',
+      greeting: 'Lights, Camera, Action! Ready for K-Drama magic with Hobi? 🎬💖',
+      greetingKo: '레디 액션! 드라마 남주 호비와 함께 명장면 퀴즈 도전! 🎬💖',
+      greetingEn: 'Lights, Camera, Action! Ready for K-Drama magic with Hobi? 🎬💖',
+      greetingEs: '¡Luces, cámara, acción! ¿Listo para el reto de K-Dramas con Hobi? 🎬💖',
+      greetingPt: 'Luz, câmera, ação! Pronto para o desafio de K-Dramas com o Hobi? 🎬💖',
+      winCheer: 'Daesang Grand Prize winner! True K-Drama main character! 🎬🏆',
+      winCheerKo: '연기대상 급 완벽 정답! 당신이 바로 K-드라마 주인공! 🎬🏆',
+      winCheerEn: 'Daesang Grand Prize winner! True K-Drama main character! 🎬🏆',
+      winCheerEs: '¡Ganador del Daesang! ¡Verdadero protagonista de K-Drama! 🎬🏆',
+      winCheerPt: 'Vencedor do Daesang! Verdadeiro protagonista de K-Drama! 🎬🏆',
+      encourage: 'Plot twist incoming! Your happy ending is on the next take! 🎬✨',
+      encourageKo: '반전 드라마는 지금부터! 다음 테이크에서 해피엔딩을 만들어요! 🎬✨',
+      encourageEn: 'Plot twist incoming! Your happy ending is on the next take! 🎬✨',
+      encourageEs: '¡Giro de trama! ¡Tu final feliz está en la siguiente toma! 🎬✨',
+      encouragePt: 'Reviravolta! Seu final feliz está no próximo take! 🎬✨',
+    };
+  }
+
+  // TWICE -> ONCE Bomi (원스 봄이 🍭💖)
+  if (normalizedTag.includes('twice') || normalizedSlug.includes('twice')) {
+    return {
+      name: 'Bomi 🍭',
+      nameKo: '봄이 🍭',
+      nameEs: 'Bomi 🍭',
+      namePt: 'Bomi 🍭',
+      avatarUrl: '/images/mascot/bomi-blackpink-v2.webp',
+      gender: 'female',
+      badgeTitle: 'ONCE Bomi 🍭💖',
+      badgeTitleKo: '원스 봄이 🍭💖',
+      badgeTitleEs: 'ONCE Bomi 🍭💖',
+      badgeTitlePt: 'ONCE Bomi 🍭💖',
+      greeting: 'One in a Million! Bomi is ready with Candybong! 🍭💖',
+      greetingKo: 'One in a Million! 캔디봉을 든 봄이와 함께 트와이스 소울메이트 찾기! 🍭💖',
+      greetingEn: 'One in a Million! Bomi is ready with Candybong! 🍭💖',
+      greetingEs: '¡One in a Million! ¡Bomi lista con el Candybong para encontrar tu alma gemela de TWICE! 🍭💖',
+      greetingPt: 'One in a Million! Bomi pronta com o Candybong para achar sua alma gêmea do TWICE! 🍭💖',
+      winCheer: 'One in a Million! 100% True ONCE certified! Shake your Candybong! 🍭💖',
+      winCheerKo: '대박! 원 인 어 밀리언! 싱크로율 100% 찐 원스(ONCE) 인정! 🍭💖',
+      winCheerEn: 'One in a Million! 100% True ONCE certified! Shake your Candybong! 🍭💖',
+      winCheerEs: '¡One in a Million! ¡100% verdadera ONCE certificada! 🍭💖',
+      winCheerPt: 'One in a Million! 100% verdadeira ONCE certificada! 🍭💖',
+      encourage: 'Cheer Up, baby! Your TWICE energy is shining bright! 🍭',
+      encourageKo: 'Cheer Up 베이비! 당신 안의 트와이스 에너지는 언제나 반짝여요! 🍭',
+      encourageEn: 'Cheer Up, baby! Your TWICE energy is shining bright! 🍭',
+      encourageEs: '¡Cheer Up! ¡Tu energía TWICE brilla con fuerza! 🍭',
+      encouragePt: 'Cheer Up! Sua energia TWICE brilha com força! 🍭',
+    };
+  }
+
+  // ENHYPEN -> ENGENE Hobi (엔진 호비 🧛🔥)
+  if (normalizedTag.includes('enhypen') || normalizedSlug.includes('enhypen')) {
+    return {
+      name: 'Hobi 🧛',
+      nameKo: '호비 🧛',
+      nameEs: 'Hobi 🧛',
+      namePt: 'Hobi 🧛',
+      avatarUrl: '/images/mascot/hobi-skz-v2.webp',
+      gender: 'male',
+      badgeTitle: 'ENGENE Hobi 🧛🔥',
+      badgeTitleKo: '엔진 호비 🧛🔥',
+      badgeTitleEs: 'ENGENE Hobi 🧛🔥',
+      badgeTitlePt: 'ENGENE Hobi 🧛🔥',
+      greeting: 'Connect! Hobi is ready to find your ENHYPEN vampire fate! 🧛🔥',
+      greetingKo: 'Connect! 엔진봉을 든 호비와 함께 운명의 엔하이픈 소울메이트 찾기! 🧛🔥',
+      greetingEn: 'Connect! Hobi is ready to find your ENHYPEN vampire fate! 🧛🔥',
+      greetingEs: '¡Connect! ¡Hobi está listo para descubrir tu destino con ENHYPEN! 🧛🔥',
+      greetingPt: 'Connect! Hobi está pronto para descobrir seu destino com o ENHYPEN! 🧛🔥',
+      winCheer: 'Bite Me! 100% True ENGENE soulmate bond certified! 🧛🔥',
+      winCheerKo: '완벽해! 운명처럼 연결된 100% 찐 엔진(ENGENE) 인정! 🧛🔥',
+      winCheerEn: 'Bite Me! 100% True ENGENE soulmate bond certified! 🧛🔥',
+      winCheerEs: '¡Increíble! ¡Vínculo 100% ENGENE certificado! 🧛🔥',
+      winCheerPt: 'Incrível! Conexão 100% ENGENE certificada! 🧛🔥',
+      encourage: 'Keep connecting! An ENGENE never stops shining! 🧛🔥',
+      encourageKo: '파이팅! 엔진과 엔하이픈의 연결은 멈추지 않아! 🧛🔥',
+      encourageEn: 'Keep connecting! An ENGENE never stops shining! 🧛🔥',
+      encourageEs: '¡Sigue adelante! ¡Un ENGENE nunca se rinde! 🧛🔥',
+      encouragePt: 'Continue firme! Um ENGENE nunca desiste! 🧛🔥',
+    };
+  }
+
   // aespa -> Bomi in cyber-Y2K futuristic outfit (사이버 봄이 💙✨)
   if (normalizedTag.includes('aespa') || normalizedSlug.includes('aespa')) {
     return {
@@ -195,13 +330,13 @@ export function getQuizMascot(slug?: string, tag?: string): QuizMascot {
     };
   }
 
-  // Default -> Hobi (기본 백호랑이 🐯)
+  // Default -> Sleek v2 Hobi (세련된 마스코트 호비 🐯)
   return {
     name: 'Hobi 🐯',
     nameKo: '호비 🐯',
     nameEs: 'Hobi 🐯',
     namePt: 'Hobi 🐯',
-    avatarUrl: '/images/hobi01.webp',
+    avatarUrl: '/images/mascot/hobi-bts-v2.webp',
     gender: 'male',
     badgeTitle: 'Mascot Hobi 🐯',
     badgeTitleKo: '마스코트 호비 🐯',

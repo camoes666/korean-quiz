@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Quiz, PersonalityQuestion, PersonalityMemberResult, getLocalizedText, getLocalizedArray } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
-import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Heart, Trophy, Compass, Camera, Loader2 } from 'lucide-react';
+import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Trophy, Compass, Camera, Loader2 } from 'lucide-react';
 import QuizCard from './QuizCard';
 import { getQuizMascot } from '@/lib/mascot';
 import { downloadResultCard } from '@/lib/renderResultCard';
@@ -20,60 +20,80 @@ import {
 import { trackQuizStart, trackQuizComplete, trackShare, trackCardDownload } from '@/lib/analytics';
 
 // Result-screen labels per group (the data's `skzoo` field holds each group's character twin).
-const RESULT_LABELS: Record<
-  string,
-  {
-    soulmate: string;
-    soulmateEs: string;
-    soulmateKo: string;
-    soulmatePt: string;
-    twin: string;
-    twinEs: string;
-    twinKo: string;
-    twinPt: string;
+function getResultLabels(quiz: Quiz) {
+  const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
+  if (themeGroup === 'skz') {
+    return {
+      soulmate: 'Your Stray Kids Soulmate',
+      soulmateEs: 'Tu Alma Gemela de Stray Kids',
+      soulmateKo: '나의 스트레이 키즈 소울메이트',
+      soulmatePt: 'Sua Alma Gêmea do Stray Kids',
+      twin: 'SKZOO Twin',
+      twinEs: 'Gemelo SKZOO',
+      twinKo: 'SKZOO 캐릭터',
+      twinPt: 'Gêmeo SKZOO',
+    };
   }
-> = {
-  skz: {
-    soulmate: 'Your Stray Kids Soulmate',
-    soulmateEs: 'Tu Alma Gemela de Stray Kids',
-    soulmateKo: '나의 스트레이 키즈 소울메이트',
-    soulmatePt: 'Sua Alma Gêmea do Stray Kids',
-    twin: 'SKZOO Twin',
-    twinEs: 'Gemelo SKZOO',
-    twinKo: 'SKZOO 캐릭터',
-    twinPt: 'Gêmeo SKZOO',
-  },
-  bts: {
-    soulmate: 'Your BTS Soulmate',
-    soulmateEs: 'Tu Alma Gemela de BTS',
-    soulmateKo: '나의 방탄소년단 소울메이트',
-    soulmatePt: 'Sua Alma Gêmea do BTS',
-    twin: 'BT21 Twin',
-    twinEs: 'Gemelo BT21',
-    twinKo: 'BT21 캐릭터',
-    twinPt: 'Gêmeo BT21',
-  },
-  blackpink: {
-    soulmate: 'Your BLACKPINK Soulmate',
-    soulmateEs: 'Tu Alma Gemela de BLACKPINK',
-    soulmateKo: '나의 블랙핑크 소울메이트',
-    soulmatePt: 'Sua Alma Gêmea do BLACKPINK',
+  if (themeGroup === 'bts') {
+    return {
+      soulmate: 'Your BTS Soulmate',
+      soulmateEs: 'Tu Alma Gemela de BTS',
+      soulmateKo: '나의 방탄소년단 소울메이트',
+      soulmatePt: 'Sua Alma Gêmea do BTS',
+      twin: 'BT21 Twin',
+      twinEs: 'Gemelo BT21',
+      twinKo: 'BT21 캐릭터',
+      twinPt: 'Gêmeo BT21',
+    };
+  }
+  if (themeGroup === 'blackpink') {
+    return {
+      soulmate: 'Your BLACKPINK Soulmate',
+      soulmateEs: 'Tu Alma Gemela de BLACKPINK',
+      soulmateKo: '나의 블랙핑크 소울메이트',
+      soulmatePt: 'Sua Alma Gêmea do BLACKPINK',
+      twin: 'Character Twin',
+      twinEs: 'Personaje Gemelo',
+      twinKo: '상징 캐릭터',
+      twinPt: 'Personagem Gêmeo',
+    };
+  }
+  if (quiz.category === 'Food' || quiz.tag === 'K-Food') {
+    return {
+      soulmate: 'Your Korean Food Soulmate',
+      soulmateEs: 'Tu Comida Coreana Gemela',
+      soulmateKo: '나의 한국 음식 소울메이트',
+      soulmatePt: 'Sua Comida Coreana Gêmea',
+      twin: 'Food Spirit',
+      twinEs: 'Espíritu Culinario',
+      twinKo: '소울 푸드 심볼',
+      twinPt: 'Espírito Culinário',
+    };
+  }
+  if (quiz.tag === 'TWICE') {
+    return {
+      soulmate: 'Your TWICE Soulmate',
+      soulmateEs: 'Tu Alma Gemela de TWICE',
+      soulmateKo: '나의 트와이스 소울메이트',
+      soulmatePt: 'Sua Alma Gêmea do TWICE',
+      twin: 'Lovelys Twin',
+      twinEs: 'Gemelo Lovelys',
+      twinKo: '러블리(Lovelys) 캐릭터',
+      twinPt: 'Gêmeo Lovelys',
+    };
+  }
+  const groupTag = quiz.tag || 'K-Pop';
+  return {
+    soulmate: `Your ${groupTag} Soulmate`,
+    soulmateEs: `Tu Alma Gemela de ${groupTag}`,
+    soulmateKo: `나의 ${groupTag} 소울메이트`,
+    soulmatePt: `Sua Alma Gêmea do ${groupTag}`,
     twin: 'Character Twin',
     twinEs: 'Personaje Gemelo',
     twinKo: '상징 캐릭터',
     twinPt: 'Personagem Gêmeo',
-  },
-  default: {
-    soulmate: 'Your Korean Food Soulmate',
-    soulmateEs: 'Tu Comida Coreana Gemela',
-    soulmateKo: '나의 한국 음식 소울메이트',
-    soulmatePt: 'Sua Comida Coreana Gêmea',
-    twin: 'Food Spirit',
-    twinEs: 'Espíritu Culinario',
-    twinKo: '소울 푸드 심볼',
-    twinPt: 'Espírito Culinário',
-  },
-};
+  };
+}
 
 interface PersonalityTestRunnerProps {
   quiz: Quiz;
@@ -90,7 +110,7 @@ export default function PersonalityTestRunner({
 
   const allQuestions: PersonalityQuestion[] = quiz.personalityQuestions || [];
   const resultsMap: Record<string, PersonalityMemberResult> = quiz.personalityResults || {};
-  const resultLabels = RESULT_LABELS[getQuizThemeGroup(quiz.slug, quiz.tag)] || RESULT_LABELS.default;
+  const resultLabels = getResultLabels(quiz);
 
   // Record mode: /record/[slug] embeds this page and sends a plan of answers in its start
   // message (not the URL, so the page keeps its static intro HTML for search engines).
@@ -119,6 +139,11 @@ export default function PersonalityTestRunner({
   const [isGeneratingCard, setIsGeneratingCard] = useState(false);
   const [cardDownloaded, setCardDownloaded] = useState(false);
 
+  // Motion graphics state for holographic result photocard
+  const [cardTilt, setCardTilt] = useState<{ rx: number; ry: number }>({ rx: 0, ry: 0 });
+  const [animatedSyncPct, setAnimatedSyncPct] = useState(0);
+  const [gaugesReady, setGaugesReady] = useState(false);
+
   const currentQ = questions[currentIndex];
   const progressPercent = Math.round(((currentIndex) / questions.length) * 100);
 
@@ -130,6 +155,31 @@ export default function PersonalityTestRunner({
       setFriendMatch(resultsMap[friendMemberId]);
     }
   }, [resultsMap]);
+
+  // Animate sync percentage count-up and gauge bars when result screen mounts
+  useEffect(() => {
+    if (testState !== 'result' || !matchedResult) {
+      setAnimatedSyncPct(0);
+      setGaugesReady(false);
+      return;
+    }
+    const topList = getTopMatches(questions, scores);
+    const targetPct = topList[0]?.percent || 94;
+    const timerGauge = setTimeout(() => setGaugesReady(true), 180);
+    let frame = 0;
+    const totalFrames = 28;
+    const interval = setInterval(() => {
+      frame += 1;
+      const progress = Math.min(1, frame / totalFrames);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setAnimatedSyncPct(Math.round(targetPct * eased));
+      if (frame >= totalFrames) clearInterval(interval);
+    }, 24);
+    return () => {
+      clearTimeout(timerGauge);
+      clearInterval(interval);
+    };
+  }, [testState, matchedResult, questions, scores]);
 
   const startTest = () => {
     if (!recordPlan) {
@@ -235,6 +285,8 @@ export default function PersonalityTestRunner({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recordPlan, testState, currentIndex]);
 
+  const shortName = (name: string) => name.replace(/\s*\(.*\)\s*$/, '');
+
   const handleDownloadCard = async () => {
     if (!matchedResult) return;
     trackCardDownload({
@@ -249,8 +301,8 @@ export default function PersonalityTestRunner({
       const memberSubtitle = getLocalizedText(matchedResult, 'subtitle', lang);
       const traits = getLocalizedArray(matchedResult, 'traits', lang);
       const bestMatchName = getLocalizedText(matchedResult, 'bestMatchName', lang);
-      // Card uses short names: "Jimin (Park Jimin)" -> "Jimin"
-      const shortName = (name: string) => name.replace(/\s*\(.*\)\s*$/, '');
+      const skzooName = getLocalizedText(matchedResult, 'skzoo', lang);
+      const twinLabel = getLocalizedText(resultLabels, 'twin', lang);
 
       await downloadResultCard(
         {
@@ -264,6 +316,9 @@ export default function PersonalityTestRunner({
           memberEmoji: matchedResult.emoji,
           traits,
           bestMatchName,
+          twinLabel,
+          skzooName,
+          bgGradient: matchedResult.bgGradient,
           mascotUrl: mascot.avatarUrl,
           groupName: quiz.tag,
           topMatches: getTopMatches(questions, scores).map(({ id, percent }) => ({
@@ -335,6 +390,14 @@ export default function PersonalityTestRunner({
         ? 'BTS,BTSARMY,KPulse'
         : quiz.tag === 'BLACKPINK'
         ? 'BLACKPINK,BLINK,KPulse'
+        : quiz.tag === 'TWICE'
+        ? 'TWICE,ONCE,KPulse'
+        : quiz.tag === 'ENHYPEN'
+        ? 'ENHYPEN,ENGENE,KPulse'
+        : quiz.tag === 'aespa'
+        ? 'aespa,MY,KPulse'
+        : quiz.tag === 'LE SSERAFIM'
+        ? 'LESSERAFIM,FEARNOT,KPulse'
         : quiz.category === 'Food' || quiz.tag === 'K-Food'
         ? 'KFood,KoreanFood,KCulture,KPulse'
         : 'StrayKids,SKZ,STAY,KPulse';
@@ -531,7 +594,7 @@ export default function PersonalityTestRunner({
     );
   }
 
-  // 3. RESULT SCREEN
+  // 3. RESULT SCREEN (HOLOGRAPHIC MOTION PHOTOCARD)
   if (testState === 'result' && matchedResult) {
     const memberName = getLocalizedText(matchedResult, 'name', lang);
     const memberTitle = getLocalizedText(matchedResult, 'title', lang);
@@ -543,282 +606,429 @@ export default function PersonalityTestRunner({
     const skzooName = getLocalizedText(matchedResult, 'skzoo', lang);
     const soulmateLabel = getLocalizedText(resultLabels, 'soulmate', lang);
     const twinLabel = getLocalizedText(resultLabels, 'twin', lang);
+    const topMatches = getTopMatches(questions, scores)
+      .slice(0, 3)
+      .map(({ id, percent }) => ({
+        id,
+        name: shortName(getLocalizedText(resultsMap[id], 'name', lang)),
+        emoji: resultsMap[id]?.emoji || '✨',
+        percent,
+      }));
+
+    const handleCardMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const x = (e.clientX - rect.left) / rect.width - 0.5;
+      const y = (e.clientY - rect.top) / rect.height - 0.5;
+      setCardTilt({ rx: Math.round(-y * 7 * 10) / 10, ry: Math.round(x * 7 * 10) / 10 });
+    };
+
+    const handleCardMouseLeave = () => {
+      setCardTilt({ rx: 0, ry: 0 });
+    };
 
     return (
-      <div className="max-w-3xl mx-auto px-4 py-8 animate-fadeIn">
-        {/* Main Result Card */}
-        <div className="bg-white rounded-3xl border-2 border-purple-100 shadow-xl shadow-purple-500/10 overflow-hidden mb-8">
-          {/* Header Banner */}
-          <div
-            className={`p-8 sm:p-12 text-white text-center relative overflow-hidden bg-gradient-to-r ${matchedResult.bgGradient}`}
-          >
-            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-black tracking-wider uppercase mb-3 border border-white/30">
-              <span>{matchedResult.emoji}</span>
-              <span>{soulmateLabel}</span>
-            </div>
-
-            <div className="text-5xl sm:text-6xl mb-2">{matchedResult.emoji}</div>
-            <h1 className="text-3xl sm:text-5xl font-black tracking-tight mb-2">
-              {memberName}
-            </h1>
-            <p className="text-lg sm:text-xl font-bold text-amber-200 mb-1">
-              {memberTitle}
-            </p>
-            <p className="text-xs sm:text-sm text-white/90 max-w-md mx-auto font-medium">
-              &quot;{memberSubtitle}&quot;
-            </p>
-
-            <div className="mt-4 inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md text-xs font-bold text-white border border-white/20">
-              <span>{twinLabel}:</span>
-              <span className="text-amber-300 font-black">{skzooName}</span>
-            </div>
-          </div>
-
-          {/* Result Body */}
-          <div className="p-6 sm:p-10 space-y-6">
-            {/* Traits Tags */}
-            <div>
-              <h3 className="text-xs font-black uppercase tracking-wider text-slate-400 mb-2.5">
-                {lang === 'ko'
-                  ? '핵심 성향 키워드'
-                  : lang === 'es'
-                  ? 'Rasgos Clave de Personalidad'
-                  : lang === 'pt'
-                  ? 'Traços Principais de Personalidade'
-                  : 'Key Personality Traits'}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {traits.map((trait, idx) => (
-                  <span
-                    key={idx}
-                    className="px-3.5 py-1.5 rounded-full bg-purple-50 text-purple-700 text-xs font-bold border border-purple-100"
-                  >
-                    #{trait}
-                  </span>
-                ))}
+      <div className="max-w-3xl mx-auto px-4 py-8">
+        {/* Holographic Outer Rainbow Frame + 3D Reveal Motion */}
+        <div
+          onMouseMove={handleCardMouseMove}
+          onMouseLeave={handleCardMouseLeave}
+          style={{
+            transform: `perspective(1200px) rotateX(${cardTilt.rx}deg) rotateY(${cardTilt.ry}deg)`,
+            transition: cardTilt.rx === 0 && cardTilt.ry === 0 ? 'transform 0.45s ease-out' : 'transform 0.08s linear',
+          }}
+          className="animate-holo-card-reveal rounded-[30px] p-1 bg-gradient-to-br from-pink-400 via-purple-500 to-cyan-400 animate-holo-rainbow shadow-2xl shadow-purple-500/25 mb-8"
+        >
+          <div className="bg-white rounded-[26px] overflow-hidden relative">
+            {/* Holographic Photocard Hero Stage */}
+            <div
+              className={`p-7 sm:p-11 text-white text-center relative overflow-hidden bg-gradient-to-br ${matchedResult.bgGradient}`}
+            >
+              {/* Diagonal Holographic Foil Shimmer Sweep */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 overflow-hidden"
+              >
+                <div className="animate-holo-foil-sweep absolute -inset-y-12 w-1/2 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
               </div>
-            </div>
 
-            {/* Description Narrative */}
-            <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
-              <h3 className="text-sm font-black text-slate-900 mb-2 flex items-center gap-1.5">
-                <Trophy className="w-4 h-4 text-purple-600" />
-                <span>
-                  {lang === 'ko'
-                    ? '당신과 멤버의 싱크로율 분석'
-                    : lang === 'es'
-                    ? 'Análisis de Sincronización'
-                    : lang === 'pt'
-                    ? 'Análise de Sincronia'
-                    : 'Soulmate Sync Analysis'}
-                </span>
-              </h3>
-              <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                {memberDesc}
-              </p>
-            </div>
+              {/* Ambient Pulse Aura & Twinkling Sparkle Particles */}
+              <div
+                aria-hidden="true"
+                className="animate-bomi-aura pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-white/15 blur-3xl"
+              />
+              <span
+                aria-hidden="true"
+                className="animate-sparkle-twinkle pointer-events-none select-none absolute top-6 left-7 text-amber-200 text-xl"
+              >
+                ✦
+              </span>
+              <span
+                aria-hidden="true"
+                className="animate-sparkle-twinkle-delay pointer-events-none select-none absolute top-14 right-8 text-cyan-200 text-lg"
+              >
+                ✦
+              </span>
+              <span
+                aria-hidden="true"
+                className="animate-sparkle-twinkle pointer-events-none select-none absolute bottom-10 left-10 text-pink-200 text-base"
+              >
+                ✦
+              </span>
 
-            {/* Best Match (궁합) Card */}
-            <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-50 to-rose-50 border border-amber-200/80 flex items-start gap-4">
-              <div className="text-3xl shrink-0">💖</div>
-              <div>
-                <span className="text-xs font-black uppercase tracking-wider text-rose-600 block mb-0.5">
-                  {lang === 'ko'
-                    ? '최고의 찰떡 궁합 멤버'
-                    : lang === 'es'
-                    ? 'Tu Mejor Dúo / Soulmate'
-                    : lang === 'pt'
-                    ? 'Sua Melhor Dupla / Química'
-                    : 'Best Chemistry Match'}
-                </span>
-                <h4 className="text-base font-black text-slate-900 mb-1">
-                  {bestMatchName}
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  {bestMatchReason}
-                </p>
+              {/* Top Official Photocard Header + Animated Sync Stamp */}
+              <div className="relative z-10 flex items-center justify-between gap-2 flex-wrap mb-4">
+                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md text-[11px] font-black tracking-widest uppercase border border-white/25 text-amber-200">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                  <span>✦ OFFICIAL SOULMATE PHOTOCARD ✦</span>
+                </div>
+
+                <div className="animate-sync-stamp inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-300 text-slate-950 text-xs sm:text-sm font-black tracking-wide shadow-lg border-2 border-white">
+                  <span>⚡ {animatedSyncPct}% SYNC</span>
+                </div>
               </div>
-            </div>
 
-            {/* Friend Soulmate Comparison Card (when opened via ?m=...) */}
-            {friendMatch && (
-              <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                <div className="flex items-center gap-2 shrink-0">
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
-                    {friendMatch.emoji}
-                  </div>
-                  <span className="text-purple-400 font-black text-lg">×</span>
-                  <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
+              {/* Floating Mascot + Member Symbol Stage */}
+              <div className="relative z-10 my-3 flex items-center justify-center">
+                <div className="relative inline-flex items-center justify-center">
+                  <img
+                    src={mascot.avatarUrl}
+                    alt={getLocalizedText(mascot, 'name', lang)}
+                    className="animate-bomi-float w-28 h-28 sm:w-36 sm:h-36 object-contain drop-shadow-[0_14px_24px_rgba(0,0,0,0.45)]"
+                  />
+                  <div className="animate-particle-1 absolute -right-4 -bottom-1 w-13 h-13 sm:w-15 sm:h-15 rounded-2xl bg-slate-950/80 backdrop-blur-md border-2 border-amber-300 flex items-center justify-center text-3xl sm:text-4xl shadow-xl">
                     {matchedResult.emoji}
                   </div>
                 </div>
-                <div className="flex-1">
-                  <span className="text-[11px] font-black uppercase tracking-wider text-purple-600 block mb-0.5">
-                    {matchedResult.id === friendMatch.id
-                      ? lang === 'ko'
-                        ? '🎉 100% 쌍둥이 소울메이트 매치!'
+              </div>
+
+              <div className="relative z-10 mt-3">
+                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-xs font-black tracking-wider uppercase mb-2 border border-white/30">
+                  <span>{matchedResult.emoji}</span>
+                  <span>{soulmateLabel}</span>
+                </div>
+
+                <h1 className="text-3xl sm:text-5xl font-black tracking-tight mb-1.5 drop-shadow-sm">
+                  {memberName}
+                </h1>
+                <p className="text-lg sm:text-xl font-extrabold text-amber-200 mb-1.5">
+                  {memberTitle}
+                </p>
+                <p className="text-xs sm:text-sm text-white/95 max-w-lg mx-auto font-semibold italic">
+                  &ldquo;{memberSubtitle}&rdquo;
+                </p>
+
+                <div className="mt-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/35 backdrop-blur-md text-xs font-bold text-white border border-amber-300/40 shadow-sm">
+                  <span className="text-white/80">{twinLabel}:</span>
+                  <span className="text-amber-300 font-black">{skzooName}</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Result Body */}
+            <div className="p-6 sm:p-10 space-y-6">
+              {/* Animated Top 3 Soulmate Sync Rate Gauge Bars */}
+              {topMatches.length > 0 && (
+                <div className="p-5 rounded-2xl bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white border border-purple-500/30 shadow-inner">
+                  <div className="flex items-center justify-between mb-3.5">
+                    <span className="text-xs font-black uppercase tracking-wider text-amber-300 flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5" />
+                      {lang === 'ko'
+                        ? '실시간 소울메이트 싱크로율 TOP 3'
                         : lang === 'es'
-                        ? '🎉 ¡100% GEMELOS DE ALMA!'
+                        ? 'Top 3 Sincronización de Alma Gemela'
                         : lang === 'pt'
-                        ? '🎉 100% GÊMEOS DE ALMA!'
-                        : '🎉 100% TWIN SOULMATE MATCH!'
-                      : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
-                      ? lang === 'ko'
-                        ? '🔥 운명의 1위 찰떡 케미 듀오!'
-                        : lang === 'es'
-                        ? '🔥 ¡DÚO DESTINADO CON QUÍMICA #1!'
-                        : lang === 'pt'
-                        ? '🔥 DUPLA DESTINADA COM QUÍMICA #1!'
-                        : '🔥 DESTINED #1 CHEMISTRY DUO!'
-                      : lang === 'ko'
-                      ? '✨ 친구와의 소울메이트 케미 결과'
+                        ? 'Top 3 Sincronia de Alma Gêmea'
+                        : 'Soulmate Sync Rate Top 3'}
+                    </span>
+                    <span className="text-[11px] font-bold text-purple-200/80">
+                      100% Match Analysis
+                    </span>
+                  </div>
+
+                  <div className="space-y-2.5">
+                    {topMatches.map((m, idx) => {
+                      const isWinner = idx === 0;
+                      return (
+                        <div key={m.id} className="space-y-1">
+                          <div className="flex items-center justify-between text-xs sm:text-sm">
+                            <span className={`flex items-center gap-1.5 ${isWinner ? 'font-black text-white' : 'font-bold text-purple-200/85'}`}>
+                              <span>{m.emoji}</span>
+                              <span>
+                                {idx + 1}. {m.name}
+                              </span>
+                              {isWinner && (
+                                <span className="px-2 py-0.5 rounded-full bg-amber-300/20 border border-amber-300/40 text-amber-300 text-[10px] font-black">
+                                  #1 MATCH
+                                </span>
+                              )}
+                            </span>
+                            <span className={`font-black ${isWinner ? 'text-amber-300 text-sm sm:text-base' : 'text-purple-200/80 text-xs'}`}>
+                              {m.percent}%
+                            </span>
+                          </div>
+                          <div className="h-2.5 w-full rounded-full bg-white/10 overflow-hidden p-0.5">
+                            <div
+                              className={`h-full rounded-full transition-all duration-1000 ease-out ${
+                                isWinner
+                                  ? 'bg-gradient-to-r from-amber-300 via-pink-500 to-purple-500 shadow-[0_0_12px_rgba(244,114,182,0.8)]'
+                                  : 'bg-white/45'
+                              }`}
+                              style={{ width: gaugesReady ? `${m.percent}%` : '6%' }}
+                            />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Traits Tags */}
+              <div>
+                <h3 className="text-xs font-black uppercase tracking-wider text-slate-400 mb-2.5">
+                  {lang === 'ko'
+                    ? '핵심 성향 키워드'
+                    : lang === 'es'
+                    ? 'Rasgos Clave de Personalidad'
+                    : lang === 'pt'
+                    ? 'Traços Principais de Personalidade'
+                    : 'Key Personality Traits'}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {traits.map((trait, idx) => (
+                    <span
+                      key={idx}
+                      className="px-3.5 py-1.5 rounded-full bg-gradient-to-r from-purple-50 to-pink-50 text-purple-800 text-xs font-extrabold border border-purple-200/80 shadow-2xs"
+                    >
+                      #{trait}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Description Narrative */}
+              <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
+                <h3 className="text-sm font-black text-slate-900 mb-2 flex items-center gap-1.5">
+                  <Trophy className="w-4 h-4 text-purple-600" />
+                  <span>
+                    {lang === 'ko'
+                      ? '당신과 멤버의 싱크로율 분석'
                       : lang === 'es'
-                      ? '✨ Resultado de Compatibilidad con tu Amigo/a'
+                      ? 'Análisis de Sincronización'
                       : lang === 'pt'
-                      ? '✨ Resultado de Compatibilidade com seu Amigo(a)'
-                      : '✨ Friend Soulmate Compatibility'}
+                      ? 'Análise de Sincronia'
+                      : 'Soulmate Sync Analysis'}
                   </span>
-                  <p className="text-xs sm:text-sm font-bold text-slate-800 leading-relaxed">
-                    {matchedResult.id === friendMatch.id
-                      ? lang === 'ko'
-                        ? `소름! 친구와 똑같이 [${memberName}] 소울메이트가 나왔어요! 지금 결과를 공유해 보세요!`
-                        : lang === 'es'
-                        ? `¡Increíble! Tú y tu amigo/a obtuvieron exactamente a [${memberName}]. ¡Envíale tu resultado!`
-                        : lang === 'pt'
-                        ? `Incrível! Você e seu amigo(a) tiraram exatamente [${memberName}]! Envie seu resultado!`
-                        : `Incredible! You and your friend both matched with [${memberName}]! Send them your result!`
-                      : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
-                      ? lang === 'ko'
-                        ? `친구의 [${getLocalizedText(friendMatch, 'name', lang)}] & 나의 [${memberName}] 조합은 그룹 내 최고 궁합 듀오입니다!`
-                        : lang === 'es'
-                        ? `¡[${getLocalizedText(friendMatch, 'name', lang)}] (tu amigo/a) y [${memberName}] (tú) son el mejor dúo del grupo!`
-                        : lang === 'pt'
-                        ? `[${getLocalizedText(friendMatch, 'name', lang)}] (seu amigo) e [${memberName}] (você) formam a melhor dupla do grupo!`
-                        : `Your friend's [${getLocalizedText(friendMatch, 'name', lang)}] & your [${memberName}] are each other's #1 Best Chemistry Match!`
-                      : lang === 'ko'
-                      ? `친구는 [${getLocalizedText(friendMatch, 'name', lang)}], 나는 [${memberName}]! 친구에게 내 결과를 답장으로 보내보세요!`
+                </h3>
+                <p className="text-sm text-slate-700 leading-relaxed font-medium">
+                  {memberDesc}
+                </p>
+              </div>
+
+              {/* Best Match (궁합) Card */}
+              <div className="p-5 rounded-2xl bg-gradient-to-r from-amber-50 via-rose-50 to-pink-50 border-2 border-rose-200/80 flex items-start gap-4 shadow-xs">
+                <div className="w-12 h-12 rounded-2xl bg-white border border-rose-200 flex items-center justify-center text-2xl shrink-0 shadow-xs">
+                  💖
+                </div>
+                <div>
+                  <span className="text-xs font-black uppercase tracking-wider text-rose-600 block mb-0.5">
+                    {lang === 'ko'
+                      ? '최고의 찰떡 궁합 멤버 (이 멤버 나온 친구 소환!)'
                       : lang === 'es'
-                      ? `Tu amigo/a obtuvo a [${getLocalizedText(friendMatch, 'name', lang)}] y tú a [${memberName}]. ¡Respóndele con tu resultado en WhatsApp!`
+                      ? 'Tu Mejor Dúo / Soulmate'
                       : lang === 'pt'
-                      ? `Seu amigo(a) tirou [${getLocalizedText(friendMatch, 'name', lang)}] e você [${memberName}]. Responda com seu resultado no WhatsApp!`
-                      : `Your friend got [${getLocalizedText(friendMatch, 'name', lang)}] and you got [${memberName}]! Send your result back to them!`}
+                      ? 'Sua Melhor Dupla / Química'
+                      : 'Best Chemistry Duo (Tag a Friend with This Match!)'}
+                  </span>
+                  <h4 className="text-base font-black text-slate-900 mb-1">
+                    {bestMatchName}
+                  </h4>
+                  <p className="text-xs text-slate-600 leading-relaxed font-medium">
+                    {bestMatchReason}
                   </p>
                 </div>
               </div>
-            )}
 
-            {/* Action Buttons (Share & Retake) */}
-            <div className="pt-4 border-t border-slate-100 space-y-3">
-              {/* 📸 Download Soulmate Result Card Button */}
-              <button
-                onClick={handleDownloadCard}
-                disabled={isGeneratingCard}
-                className="w-full py-3.5 px-5 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-400 hover:to-indigo-500 text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-purple-500/25 group"
-              >
-                {isGeneratingCard ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
+              {/* Friend Soulmate Comparison Card (when opened via ?m=...) */}
+              {friendMatch && (
+                <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+                  <div className="flex items-center gap-2 shrink-0">
+                    <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
+                      {friendMatch.emoji}
+                    </div>
+                    <span className="text-purple-400 font-black text-lg">×</span>
+                    <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
+                      {matchedResult.emoji}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <span className="text-[11px] font-black uppercase tracking-wider text-purple-600 block mb-0.5">
+                      {matchedResult.id === friendMatch.id
+                        ? lang === 'ko'
+                          ? '🎉 100% 쌍둥이 소울메이트 매치!'
+                          : lang === 'es'
+                          ? '🎉 ¡100% GEMELOS DE ALMA!'
+                          : lang === 'pt'
+                          ? '🎉 100% GÊMEOS DE ALMA!'
+                          : '🎉 100% TWIN SOULMATE MATCH!'
+                        : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
+                        ? lang === 'ko'
+                          ? '🔥 운명의 1위 찰떡 케미 듀오!'
+                          : lang === 'es'
+                          ? '🔥 ¡DÚO DESTINADO CON QUÍMICA #1!'
+                          : lang === 'pt'
+                          ? '🔥 DUPLA DESTINADA COM QUÍMICA #1!'
+                          : '🔥 DESTINED #1 CHEMISTRY DUO!'
+                        : lang === 'ko'
+                        ? '✨ 친구와의 소울메이트 케미 결과'
+                        : lang === 'es'
+                        ? '✨ Resultado de Compatibilidad con tu Amigo/a'
+                        : lang === 'pt'
+                        ? '✨ Resultado de Compatibilidade com seu Amigo(a)'
+                        : '✨ Friend Soulmate Compatibility'}
+                    </span>
+                    <p className="text-xs sm:text-sm font-bold text-slate-800 leading-relaxed">
+                      {matchedResult.id === friendMatch.id
+                        ? lang === 'ko'
+                          ? `소름! 친구와 똑같이 [${memberName}] 소울메이트가 나왔어요! 지금 결과를 공유해 보세요!`
+                          : lang === 'es'
+                          ? `¡Increíble! Tú y tu amigo/a obtuvieron exactamente a [${memberName}]. ¡Envíale tu resultado!`
+                          : lang === 'pt'
+                          ? `Incrível! Você e seu amigo(a) tiraram exatamente [${memberName}]! Envie seu resultado!`
+                          : `Incredible! You and your friend both matched with [${memberName}]! Send them your result!`
+                        : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
+                        ? lang === 'ko'
+                          ? `친구의 [${getLocalizedText(friendMatch, 'name', lang)}] & 나의 [${memberName}] 조합은 그룹 내 최고 궁합 듀오입니다!`
+                          : lang === 'es'
+                          ? `¡[${getLocalizedText(friendMatch, 'name', lang)}] (tu amigo/a) y [${memberName}] (tú) son el mejor dúo del grupo!`
+                          : lang === 'pt'
+                          ? `[${getLocalizedText(friendMatch, 'name', lang)}] (seu amigo) e [${memberName}] (você) formam a melhor dupla do grupo!`
+                          : `Your friend's [${getLocalizedText(friendMatch, 'name', lang)}] & your [${memberName}] are each other's #1 Best Chemistry Match!`
+                        : lang === 'ko'
+                        ? `친구는 [${getLocalizedText(friendMatch, 'name', lang)}], 나는 [${memberName}]! 친구에게 내 결과를 답장으로 보내보세요!`
+                        : lang === 'es'
+                        ? `Tu amigo/a obtuvo a [${getLocalizedText(friendMatch, 'name', lang)}] y tú a [${memberName}]. ¡Respóndele con tu resultado en WhatsApp!`
+                        : lang === 'pt'
+                        ? `Seu amigo(a) tirou [${getLocalizedText(friendMatch, 'name', lang)}] e você [${memberName}]. Responda com seu resultado no WhatsApp!`
+                        : `Your friend got [${getLocalizedText(friendMatch, 'name', lang)}] and you got [${memberName}]! Send your result back to them!`}
+                    </p>
+                  </div>
+                </div>
+              )}
+
+              {/* Action Buttons (Share & Retake) */}
+              <div className="pt-4 border-t border-slate-100 space-y-3">
+                {/* 📸 Download Soulmate Result Card Button */}
+                <button
+                  onClick={handleDownloadCard}
+                  disabled={isGeneratingCard}
+                  className="w-full py-4 px-5 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-400 hover:to-indigo-500 text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-purple-500/25 group"
+                >
+                  {isGeneratingCard ? (
+                    <>
+                      <Loader2 className="w-4 h-4 animate-spin" />
+                      <span>
+                        {lang === 'ko'
+                          ? '홀로그램 포토카드 생성 중... 📸'
+                          : lang === 'es'
+                          ? 'Generando Photocard Holográfica... 📸'
+                          : lang === 'pt'
+                          ? 'Gerando Photocard Holográfico... 📸'
+                          : 'Generating Holographic Photocard... 📸'}
+                      </span>
+                    </>
+                  ) : cardDownloaded ? (
+                    <>
+                      <Check className="w-4 h-4 text-emerald-200" />
+                      <span>
+                        {lang === 'ko'
+                          ? '홀로그램 포토카드 저장 완료! 인스타·X에 자랑해보세요 ✨'
+                          : lang === 'es'
+                          ? '¡Photocard guardada! ¡Compártela en Instagram y X! ✨'
+                          : lang === 'pt'
+                          ? 'Photocard salvo! Compartilhe no Instagram e X! ✨'
+                          : 'Photocard Saved! Share on Instagram & X! ✨'}
+                      </span>
+                    </>
+                  ) : (
+                    <>
+                      <Camera className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                      <span>
+                        {lang === 'ko'
+                          ? '📸 홀로그램 소울메이트 포토카드 저장 (인스타·X 자랑용)'
+                          : lang === 'es'
+                          ? '📸 Guardar Photocard Holográfica de Soulmate (PNG)'
+                          : lang === 'pt'
+                          ? '📸 Salvar Photocard Holográfico de Soulmate (PNG)'
+                          : '📸 Save Holographic Soulmate Photocard (PNG for IG & X)'}
+                      </span>
+                    </>
+                  )}
+                </button>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <button
+                    onClick={handleShareWhatsApp}
+                    className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-[#25D366]/25"
+                  >
+                    <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.556 4.119 1.528 5.847l-1.528 5.581 5.713-1.499c1.678.9 3.593 1.413 5.629 1.413 6.627 0 12-5.373 12-12s-5.373-12-12-12z" />
+                    </svg>
                     <span>
                       {lang === 'ko'
-                        ? '카드 이미지 생성 중... 📸'
+                        ? 'WhatsApp으로 친구와 궁합 보기'
                         : lang === 'es'
-                        ? 'Generando tarjeta de imagen... 📸'
+                        ? 'Compartir en WhatsApp'
                         : lang === 'pt'
-                        ? 'Gerando cartão de imagem... 📸'
-                        : 'Generating Card Image... 📸'}
+                        ? 'Compartilhar no WhatsApp'
+                        : 'Share on WhatsApp'}
                     </span>
-                  </>
-                ) : cardDownloaded ? (
-                  <>
-                    <Check className="w-4 h-4 text-emerald-200" />
+                  </button>
+
+                  <button
+                    onClick={handleShareTwitter}
+                    className="w-full py-3.5 px-4 bg-slate-900 hover:bg-black text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-slate-900/10"
+                  >
+                    <Share2 className="w-4 h-4" />
                     <span>
                       {lang === 'ko'
-                        ? '소울메이트 카드 저장 완료! 인스타·X에 자랑해보세요 ✨'
+                        ? 'X (트위터)에 결과 공유'
                         : lang === 'es'
-                        ? '¡Tarjeta guardada! ¡Compártela en Instagram y X! ✨'
+                        ? 'Compartir en X (Twitter)'
                         : lang === 'pt'
-                        ? 'Cartão salvo! Compartilhe no Instagram e X! ✨'
-                        : 'Card Saved! Share on Instagram & X! ✨'}
+                        ? 'Compartilhar no X (Twitter)'
+                        : 'Share Result on X'}
                     </span>
-                  </>
-                ) : (
-                  <>
-                    <Camera className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                  </button>
+                </div>
+
+                <div className="flex flex-col sm:flex-row items-center gap-3">
+                  <button
+                    onClick={handleCopyLink}
+                    className="w-full sm:flex-1 py-3 px-5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
+                  >
+                    {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
                     <span>
-                      {lang === 'ko'
-                        ? '📸 내 소울메이트 카드 이미지 저장 (인스타·X 자랑용)'
+                      {copied
+                        ? t.resultView.copied
+                        : lang === 'ko'
+                        ? '내 소울메이트 초대 링크 복사'
                         : lang === 'es'
-                        ? '📸 Guardar Tarjeta de Soulmate (PNG)'
+                        ? 'Copiar Enlace de Desafío'
                         : lang === 'pt'
-                        ? '📸 Salvar Cartão de Alma Gêmea (PNG)'
-                        : '📸 Save Soulmate Card Image (PNG for Instagram & X)'}
+                        ? 'Copiar Link de Desafio'
+                        : 'Copy Soulmate Challenge Link'}
                     </span>
-                  </>
-                )}
-              </button>
+                  </button>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <button
-                  onClick={handleShareWhatsApp}
-                  className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-[#25D366]/25"
-                >
-                  <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
-                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.556 4.119 1.528 5.847l-1.528 5.581 5.713-1.499c1.678.9 3.593 1.413 5.629 1.413 6.627 0 12-5.373 12-12s-5.373-12-12-12z" />
-                  </svg>
-                  <span>
-                    {lang === 'ko'
-                      ? 'WhatsApp으로 친구와 궁합 보기'
-                      : lang === 'es'
-                      ? 'Compartir en WhatsApp'
-                      : lang === 'pt'
-                      ? 'Compartilhar no WhatsApp'
-                      : 'Share on WhatsApp'}
-                  </span>
-                </button>
-
-                <button
-                  onClick={handleShareTwitter}
-                  className="w-full py-3.5 px-4 bg-slate-900 hover:bg-black text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-slate-900/10"
-                >
-                  <Share2 className="w-4 h-4" />
-                  <span>
-                    {lang === 'ko'
-                      ? 'X (트위터)에 결과 공유'
-                      : lang === 'es'
-                      ? 'Compartir en X (Twitter)'
-                      : lang === 'pt'
-                      ? 'Compartilhar no X (Twitter)'
-                      : 'Share Result on X'}
-                  </span>
-                </button>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center gap-3">
-                <button
-                  onClick={handleCopyLink}
-                  className="w-full sm:flex-1 py-3 px-5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
-                >
-                  {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                  <span>
-                    {copied
-                      ? t.resultView.copied
-                      : lang === 'ko'
-                      ? '내 소울메이트 초대 링크 복사'
-                      : lang === 'es'
-                      ? 'Copiar Enlace de Desafío'
-                      : lang === 'pt'
-                      ? 'Copiar Link de Desafio'
-                      : 'Copy Soulmate Challenge Link'}
-                  </span>
-                </button>
-
-                <button
-                  onClick={startTest}
-                  className="w-full sm:w-auto py-3 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
-                >
-                  <RotateCcw className="w-4 h-4" />
-                  <span>{t.resultView.retake}</span>
-                </button>
+                  <button
+                    onClick={startTest}
+                    className="w-full sm:w-auto py-3 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
+                  >
+                    <RotateCcw className="w-4 h-4" />
+                    <span>{t.resultView.retake}</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

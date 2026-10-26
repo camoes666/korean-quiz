@@ -13,8 +13,12 @@ import whichKoreanFoodAreYou from './which-korean-food-are-you.json';
 import whichAespaMemberAreYou from './which-aespa-member-are-you.json';
 import whichLeSserafimMemberAreYou from './which-le-sserafim-member-are-you.json';
 import whichBtsMemberIsYourSoulmate from './which-bts-member-is-your-soulmate.json';
+import whichTwiceMemberAreYou from './which-twice-member-are-you.json';
+import whichEnhypenMemberAreYou from './which-enhypen-member-are-you.json';
 
 export const quizzes: Quiz[] = [
+  whichTwiceMemberAreYou as unknown as Quiz,
+  whichEnhypenMemberAreYou as unknown as Quiz,
   whichBtsMemberIsYourSoulmate as unknown as Quiz,
   whichAespaMemberAreYou as unknown as Quiz,
   whichLeSserafimMemberAreYou as unknown as Quiz,

@@ -1,0 +1,946 @@
+{
+  "slug": "which-twice-member-are-you",
+  "addedAt": "2026-10-26",
+  "quizType": "personality",
+  "title": "Which TWICE Member Are You?",
+  "titleKo": "나와 가장 잘 맞는 트와이스(TWICE) 멤버 찾기",
+  "titleEs": "¿Qué integrante de TWICE eres?",
+  "titlePt": "Qual integrante do TWICE você é?",
+  "subtitle": "Discover your TWICE archetype, Lovelys twin, and ONCE soulmate match across all 9 members!",
+  "subtitleKo": "9명의 트와이스 멤버 중 나의 성향 아키타입, 라부리(Lovelys) 캐릭터, 그리고 환상의 케미 멤버를 찾아보세요!",
+  "subtitleEs": "¡Descubre tu arquetipo entre las 9 integrantes de TWICE, tu gemelo Lovelys y tu pareja ideal!",
+  "subtitlePt": "Descubra seu arquétipo entre as 9 integrantes do TWICE, seu gêmeo Lovelys e sua combinação ideal!",
+  "description": "Are you pop center Nayeon, warm guardian Jeongyeon, dancing machine Momo, sunshine angel Sana, powerhouse leader Jihyo, elegant penguin Mina, witty tofu Dahyun, artistic rebel Chaeyoung, or savage maknae Tzuyu? Take the 10-question test!",
+  "descriptionKo": "상큼한 확신의 센터 나연, 든든한 수호자 정연, 춤선 천재 모모, 사랑스러운 햇살 사나, 갓리더 지효, 우아한 백조 미나, 예능 천재 두부 다현, 자유로운 예술가 채영, 반전 팩폭 막내 쯔위 중 당신의 영혼과 가장 닮은 멤버는 누구일까요?",
+  "descriptionEs": "¿Eres el centro pop Nayeon, la protectora Jeongyeon, la reina del baile Momo, el sol radiante Sana, la líder Jihyo, la elegante Mina, la divertida Dahyun, la artística Chaeyoung o la maknae Tzuyu? ¡Haz el test de 10 preguntas!",
+  "descriptionPt": "Você é o centro pop Nayeon, a protetora Jeongyeon, a rainha da dança Momo, o raio de sol Sana, a líder Jihyo, a elegante Mina, a divertida Dahyun, a artística Chaeyoung ou a maknae Tzuyu? Faça o teste de 10 perguntas!",
+  "category": "K-Pop",
+  "tag": "TWICE",
+  "coverEmoji": "🍭",
+  "gradient": "from-pink-600 via-rose-500 to-amber-500",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "194.8K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "nayeon": {
+      "id": "nayeon",
+      "name": "Nayeon (Im Nayeon)",
+      "nameKo": "나연 (임나연)",
+      "nameEs": "Nayeon (Im Nayeon)",
+      "namePt": "Nayeon (Im Nayeon)",
+      "title": "The Born-to-Be Pop Star & Refreshing Fake Maknae",
+      "titleKo": "타고난 확신의 센터 & 과즙미 터지는 맏내",
+      "titleEs": "La Estrella Pop Innata y 'Fake Maknae' Radiante",
+      "titlePt": "A Estrela Pop Nata e 'Fake Maknae' Radiante",
+      "subtitle": "Unstoppable Confidence · Bunny Smile · Reliable Eldest Sister",
+      "subtitleKo": "자신감 뿜뿜 · 상큼한 토끼 미소 · 결정적 순간에 든든한 맏언니",
+      "subtitleEs": "Confianza Brillante · Sonrisa de Conejito · Hermana Mayor Fiel",
+      "subtitlePt": "Confiança Brilhante · Sorriso de Coelhinho · Irmã Mais Velha Fiel",
+      "skzoo": "Navely (Sky Blue Bunny 🐰🩵)",
+      "skzooKo": "나부리 (Navely - 스카이 블루 토끼 🐰🩵)",
+      "skzooEs": "Navely (Conejito Azul Cielo 🐰🩵)",
+      "skzooPt": "Navely (Coelhinho Azul-Celeste 🐰🩵)",
+      "emoji": "🐰",
+      "traits": [
+        "Magnetic Pop Aura",
+        "Playful Confidence",
+        "Crisis Problem-Solver"
+      ],
+      "traitsKo": [
+        "시선을 사로잡는 스타성",
+        "유쾌하고 당당한 자신감",
+        "위기에 강한 맏언니 리더십"
+      ],
+      "traitsEs": [
+        "Carisma Pop Magnético",
+        "Confianza Juguetona",
+        "Liderazgo en Momentos Clave"
+      ],
+      "traitsPt": [
+        "Carisma Pop Magnético",
+        "Confiança Divertida",
+        "Liderança nos Momentos Certos"
+      ],
+      "description": "Like Nayeon, you light up every room the second you walk in! You joke around with playful confidence and adorable energy, making people laugh effortlessly. Yet beneath your carefree 'fake maknae' charm, you have a cool head and step up immediately whenever your friends need real guidance.",
+      "descriptionKo": "나연처럼 등장만으로도 주변 공기를 상큼하게 바꾸는 확신의 주인공! 평소에는 장난기 넘치는 막내 같지만, 중요한 순간에는 누구보다 침착하고 현실적인 판단력으로 사람들을 이끄는 멋진 반전 매력을 지녔습니다.",
+      "descriptionEs": "Como Nayeon, iluminas cualquier lugar apenas entras. Bromeas con una seguridad encantadora que hace sonreír a todos, pero detrás de tu energía juguetona tienes una mente clara que siempre protege y guía a sus amigos cuando más importa.",
+      "descriptionPt": "Como Nayeon, você ilumina qualquer ambiente assim que entra! Brinca com uma confiança encantadora que faz todos sorrirem, mas por trás dessa energia divertida existe uma mente prática que sempre apoia e guia os amigos nos momentos decisivos.",
+      "bestMatchId": "jeongyeon",
+      "bestMatchName": "Jeongyeon",
+      "bestMatchNameKo": "정연 (Jeongyeon)",
+      "bestMatchNameEs": "Jeongyeon",
+      "bestMatchNamePt": "Jeongyeon",
+      "bestMatchReason": "The iconic 2Yeon duo! Nayeon's sparkling energy and Jeongyeon's warm, grounded care create an unbreakable lifelong bond.",
+      "bestMatchReasonKo": "전설의 투연(2Yeon) 케미! 나연의 통통 튀는 에너지와 정연의 든든하고 따뜻한 배려가 만나 평생 함께할 영혼의 단짝이 됩니다.",
+      "bestMatchReasonEs": "¡El icónico dúo 2Yeon! La chispa radiante de Nayeon y el cuidado protector de Jeongyeon forman un lazo indestructible.",
+      "bestMatchReasonPt": "A icônica dupla 2Yeon! O brilho vibrante de Nayeon e o cuidado protetor de Jeongyeon criam um laço inquebrável.",
+      "colorHex": "#0ea5e9",
+      "bgGradient": "from-sky-500 via-cyan-600 to-blue-900"
+    },
+    "jeongyeon": {
+      "id": "jeongyeon",
+      "name": "Jeongyeon (Yoo Jeongyeon)",
+      "nameKo": "정연 (유정연)",
+      "nameEs": "Jeongyeon (Yoo Jeongyeon)",
+      "namePt": "Jeongyeon (Yoo Jeongyeon)",
+      "title": "The Warm-Hearted Guardian & Prankster Pillar",
+      "titleKo": "따뜻한 수호천사 & 유쾌한 장난꾸러기 버팀목",
+      "titleEs": "La Guardiana de Corazón Cálido y Pilar Divertido",
+      "titlePt": "A Guardiã de Corazón Quente e Pilar Divertido",
+      "subtitle": "Acts of Service · Loyal Protector · Effortless Girl Crush",
+      "subtitleKo": "세심한 배려왕 · 의리파 수호자 · 걸크러시 매력",
+      "subtitleEs": "Amor en Acciones · Protectora Leal · Carisma Girl Crush",
+      "subtitlePt": "Amor em Atitudes · Protetora Leal · Carisma Girl Crush",
+      "skzoo": "Jeongvely (Light Green Dragon 🐲💚)",
+      "skzooKo": "정블리 (Jeongvely - 연두빛 공룡 🐲💚)",
+      "skzooEs": "Jeongvely (Dragón Verde Claro 🐲💚)",
+      "skzooPt": "Jeongvely (Dragão Verde-Claro 🐲💚)",
+      "emoji": "💚",
+      "traits": [
+        "Fiercely Protective",
+        "Expresses Love Through Actions",
+        "Witty Prankster"
+      ],
+      "traitsKo": [
+        "내 사람을 끝까지 챙기는 의리",
+        "말보다 행동으로 보여주는 다정함",
+        "분위기를 띄우는 유쾌한 장난기"
+      ],
+      "traitsEs": [
+        "Protectora Incondicional",
+        "Cariño Demostrado con Hechos",
+        "Bromista Carismática"
+      ],
+      "traitsPt": [
+        "Protetora Incondicional",
+        "Carinho Demonstrado em Atitudes",
+        "Brincalhona Carismática"
+      ],
+      "description": "Like Jeongyeon, you are the unspoken backbone of your friend group. You notice when someone is tired before anyone else does, quietly fixing things and taking care of everyone. You hide your soft, emotional heart behind playful teasing and hilarious faces.",
+      "descriptionKo": "정연처럼 주변 사람들의 작은 변화도 가장 먼저 알아차리고 묵묵히 챙겨주는 따뜻한 수호자! 쑥스러워서 장난스러운 농담으로 애정을 표현하지만, 누구보다 속이 깊고 의리가 넘치는 사람입니다.",
+      "descriptionEs": "Como Jeongyeon, eres el pilar silencioso de tu grupo. Notas cuando alguien necesita ayuda antes que nadie y cuidas a todos con detalles reales, ocultando tu corazón tierno detrás de bromas divertidas.",
+      "descriptionPt": "Como Jeongyeon, você é o alicerce silencioso do seu grupo. Percebe quando alguém precisa de ajuda antes de todo mundo e cuida de todos com atitudes reais, escondendo um coração super macio atrás de brincadeiras.",
+      "bestMatchId": "nayeon",
+      "bestMatchName": "Nayeon",
+      "bestMatchNameKo": "나연 (Nayeon)",
+      "bestMatchNameEs": "Nayeon",
+      "bestMatchNamePt": "Nayeon",
+      "bestMatchReason": "Nayeon pulls Jeongyeon into bright adventures, while Jeongyeon is Nayeon's safest harbor.",
+      "bestMatchReasonKo": "나연은 정연에게 끊임없는 웃음을 주고, 정연은 나연이 가장 편안하게 기댈 수 있는 안식처가 되어줍니다.",
+      "bestMatchReasonEs": "Nayeon llena de risas los días de Jeongyeon, mientras Jeongyeon es su refugio más seguro.",
+      "bestMatchReasonPt": "Nayeon enche os dias de Jeongyeon de risadas, enquanto Jeongyeon é seu porto mais seguro.",
+      "colorHex": "#16a34a",
+      "bgGradient": "from-emerald-600 via-green-700 to-slate-900"
+    },
+    "momo": {
+      "id": "momo",
+      "name": "Momo (Hirai Momo)",
+      "nameKo": "모모 (히라이 모모)",
+      "nameEs": "Momo (Hirai Momo)",
+      "namePt": "Momo (Hirai Momo)",
+      "title": "The Dancing Machine & Sweet Foodie Peach",
+      "titleKo": "무대 위 댄싱 머신 & 무대 아래 순둥 복숭아 미식가",
+      "titleEs": "La Máquina de Baile y Dulce Amante de la Comida",
+      "titlePt": "A Máquina de Dança e Doce Apaixonada por Gastronomia",
+      "subtitle": "Charismatic Performer · Jokbal Lover · Pure-Hearted Friend",
+      "subtitleKo": "압도적 퍼포먼스 · 맛있는 음식 러버 · 순수하고 다정한 평화주의자",
+      "subtitleEs": "Performances Épicas · Alma Gourmet · Corazón Puro y Pacífico",
+      "subtitlePt": "Performances Épicas · Alma Gourmet · Coração Puro e Pacífico",
+      "skzoo": "Movely (Peach Pink 🍑🩷)",
+      "skzooKo": "모부리 (Movely - 피치 핑크 🍑🩷)",
+      "skzooEs": "Movely (Durazno Rosa 🍑🩷)",
+      "skzooPt": "Movely (Pêssego Rosa 🍑🩷)",
+      "emoji": "🍑",
+      "traits": [
+        "Laser Focus on Passions",
+        "Adorable Dual Charisma",
+        "Food & Comfort Enthusiast"
+      ],
+      "traitsKo": [
+        "좋아하는 일에 미친 듯이 몰입하는 열정",
+        "무대 위 카리스마와 일상의 순둥미 반전",
+        "맛있는 음식을 나누는 행복주의자"
+      ],
+      "traitsEs": [
+        "Dedicación Total a sus Pasiones",
+        "Dualidad entre Fuerza y Ternura",
+        "Amante de la Buena Comida"
+      ],
+      "traitsPt": [
+        "Dedicação Total às Suas Paixões",
+        "Dualidade entre Força e Fofura",
+        "Amante da Boa Comida"
+      ],
+      "description": "Like Momo, your duality is unmatched! When you lock into something you love, your work ethic and precision leave everyone speechless. Off the clock, however, you are the sweetest, most laid-back soul who finds ultimate joy in good food and cozy nights with friends.",
+      "descriptionKo": "모모처럼 평소에는 순하고 애교 넘치는 평화주의자이지만, 내가 좋아하는 분야에서는 누구도 따라올 수 없는 연습량과 카리스마를 폭발시키는 반전 매력의 소유자입니다!",
+      "descriptionEs": "Como Momo, tu dualidad es increíble. Cuando te enfocas en tu pasión, tu disciplina deja a todos sin palabras; pero fuera del trabajo eres el alma más dulce, relajada y feliz compartiendo comida deliciosa.",
+      "descriptionPt": "Como Momo, sua dualidade é incrível! Quando foca no que ama, sua dedicação deixa todos sem palavras; mas no dia a dia você é a pessoa mais doce, tranquila e feliz compartilhando comidas deliciosas.",
+      "bestMatchId": "sana",
+      "bestMatchName": "Sana",
+      "bestMatchNameKo": "사나 (Sana)",
+      "bestMatchNameEs": "Sana",
+      "bestMatchNamePt": "Sana",
+      "bestMatchReason": "MoSa twins! Together since trainee days, Momo and Sana share telepathic humor and endless late-night talks.",
+      "bestMatchReasonKo": "연습생 시절부터 함께한 쌍둥이 같은 모사(MoSa) 케미! 눈빛만 봐도 통하는 텔레파시와 밤샘 수다 단짝입니다.",
+      "bestMatchReasonEs": "¡Gemelas MoSa! Comparten telepatía, risas interminables y una amistad que lo supera todo.",
+      "bestMatchReasonPt": "Gêmeas MoSa! Compartilham telepatia, risadas sem fim e uma amizade que supera tudo.",
+      "colorHex": "#ec4899",
+      "bgGradient": "from-pink-500 via-rose-600 to-fuchsia-950"
+    },
+    "sana": {
+      "id": "sana",
+      "name": "Sana (Minatozaki Sana)",
+      "nameKo": "사나 (미나토자키 사나)",
+      "nameEs": "Sana (Minatozaki Sana)",
+      "namePt": "Sana (Minatozaki Sana)",
+      "title": "The Irresistible Sunshine Butterfly & Love Magnet",
+      "titleKo": "No Sana No Life! 인간 햇살 비타민 & 사랑둥이",
+      "titleEs": "El Sol Irresistible y Mariposa Social Amorosa",
+      "titlePt": "O Raio de Sol Irresistível e Borboleta Social Amorosa",
+      "subtitle": "No Sana No Life · Affectionate Hugger · Optimistic Spark",
+      "subtitleKo": "사나 없인 사나 마나 · 애교 장인 · 초긍정 행복 전도사",
+      "subtitleEs": "No Sana No Life · Cariñosa al 100% · Optimismo Radiante",
+      "subtitlePt": "No Sana No Life · Carinhosa 100% · Otimismo Radiante",
+      "skzoo": "Savely (Purple Squirrel 🐿️💜)",
+      "skzooKo": "사부리 (Savely - 보라빛 다람쥐 🐿️💜)",
+      "skzooEs": "Savely (Ardilla Púrpura 🐿️💜)",
+      "skzooPt": "Savely (Esquilo Roxo 🐿️💜)",
+      "emoji": "🐿️",
+      "traits": [
+        "Boundless Warmth & Affection",
+        "Emotional Intelligence",
+        "Clumsy-Cute Charm"
+      ],
+      "traitsKo": [
+        "누구와도 금세 친해지는 친화력",
+        "사랑을 아낌없이 표현하는 다정함",
+        "미워할 수 없는 러블리 허당미"
+      ],
+      "traitsEs": [
+        "Calidez y Cariño Infinitos",
+        "Gran Inteligencia Emocional",
+        "Encanto Adorable e Inolvidable"
+      ],
+      "traitsPt": [
+        "Calor Humano e Carinho Infinitos",
+        "Alta Inteligência Emocional",
+        "Charme Adorável e Inesquecível"
+      ],
+      "description": "No Sana, No Life! Like Sana, you radiate pure sunshine, affection, and emotional intelligence. You make strangers feel like best friends within five minutes, love giving warm hugs, and always find the bright silver lining in every situation.",
+      "descriptionKo": "'사나 없인 사나 마나!' 사나처럼 존재 자체가 사랑스럽고 긍정 에너지로 가득한 당신. 풍부한 공감 능력과 다정한 스킨십, 밝은 웃음으로 주변 모든 사람들의 마음을 사르르 녹입니다.",
+      "descriptionEs": "¡No Sana, No Life! Como Sana, irradias alegría pura, afecto sincero y empatía. Haces que cualquiera se sienta especial en minutos y siempre encuentras el lado luminoso de la vida.",
+      "descriptionPt": "No Sana, No Life! Como Sana, você irradia alegria pura, afeto sincero e empatia. Faz qualquer pessoa se sentir especial em minutos e sempre encontra o lado luminoso da vida.",
+      "bestMatchId": "dahyun",
+      "bestMatchName": "Dahyun",
+      "bestMatchNameKo": "다현 (Dahyun)",
+      "bestMatchNameEs": "Dahyun",
+      "bestMatchNamePt": "Dahyun",
+      "bestMatchReason": "SaiDa forever! Sana's overflowing affection and Dahyun's hilarious reactions create pure happiness.",
+      "bestMatchReasonKo": "전설의 사이다(SaiDa) 조합! 사나의 애정 공세와 다현의 재치 만점 리액션이 만나면 웃음꽃이 떠나지 않습니다.",
+      "bestMatchReasonEs": "¡SaiDa por siempre! El cariño desbordante de Sana y el humor de Dahyun son felicidad pura.",
+      "bestMatchReasonPt": "SaiDa para sempre! O carinho transbordante de Sana e o humor de Dahyun são pura felicidade.",
+      "colorHex": "#a855f7",
+      "bgGradient": "from-purple-500 via-violet-600 to-indigo-950"
+    },
+    "jihyo": {
+      "id": "jihyo",
+      "name": "Jihyo (Park Jihyo)",
+      "nameKo": "지효 (박지효)",
+      "nameEs": "Jihyo (Park Jihyo)",
+      "namePt": "Jihyo (Park Jihyo)",
+      "title": "God Jihyo: The Powerhouse Captain & Passionate Leader",
+      "titleKo": "갓지효(God Jihyo)! 열정 만렙 리더 & 파워 보컬",
+      "titleEs": "God Jihyo: La Capitana Imparable y Líder Apasionada",
+      "titlePt": "God Jihyo: A Capitã Imparable e Líder Apaixonada",
+      "subtitle": "100% Stage Energy · Decisive Leader · Loyal Social Dynamo",
+      "subtitleKo": "무대를 찢는 성량과 에너지 · 흔들림 없는 통솔력 · 의리 넘치는 인싸",
+      "subtitleEs": "Energía al 200% · Liderazgo Firme · Corazón Leal y Valiente",
+      "subtitlePt": "Energia a 200% · Liderança Firme · Coração Leal e Corajoso",
+      "skzoo": "Jively (Apricot Gold Unicorn 🦄🧡)",
+      "skzooKo": "지부리 (Jively - 애프리콧 골드 🦄🧡)",
+      "skzooEs": "Jively (Dorado Albaricoque 🦄🧡)",
+      "skzooPt": "Jively (Dourado Damasco 🦄🧡)",
+      "emoji": "🦄",
+      "traits": [
+        "200% Passion & Drive",
+        "Trustworthy Leadership",
+        "Adventurous & Outgoing"
+      ],
+      "traitsKo": [
+        "매 순간 200%를 쏟아붓는 열정",
+        "모두가 믿고 따르는 갓리더",
+        "운동과 여행을 즐기는 에너자이저"
+      ],
+      "traitsEs": [
+        "Pasión y Entrega al 200%",
+        "Liderazgo Justo y Confiable",
+        "Espíritu Activo y Aventurero"
+      ],
+      "traitsPt": [
+        "Paixão e Entrega a 200%",
+        "Liderança Justa e Confiável",
+        "Espírito Ativo e Aventureiro"
+      ],
+      "description": "They call you 'God Jihyo' for a reason! You never give anything less than 100%, whether on stage, at work, or in friendships. You are decisive, fiercely protective of your team, and love staying active with workouts, travel, and lively gatherings.",
+      "descriptionKo": "'갓지효'라는 별명처럼 매 순간 최선을 다하는 열정의 아이콘! 어떤 어려움 앞에서도 흔들리지 않는 단단한 리더십과 시원시원한 성격으로 주변 사람들에게 큰 신뢰와 에너지를 줍니다.",
+      "descriptionEs": "¡Te llaman 'God Jihyo' por una razón! Nunca das menos del 100% en tus metas ni en la amistad. Eres decidida, justa y contagias una energía imparable a todos los que te rodean.",
+      "descriptionPt": "Não é à toa que chamam de 'God Jihyo'! Você nunca entrega menos de 100% nas suas metas ou amizades. É decidida, justa e contagia todos ao redor com uma energia imparável.",
+      "bestMatchId": "tzuyu",
+      "bestMatchName": "Tzuyu",
+      "bestMatchNameKo": "쯔위 (Tzuyu)",
+      "bestMatchNameEs": "Tzuyu",
+      "bestMatchNamePt": "Tzuyu",
+      "bestMatchReason": "Jihyo's expressive warmth and Tzuyu's calm, loyal sincerity create the most wholesome leader-maknae synergy.",
+      "bestMatchReasonKo": "열정 넘치는 리더 지효와 차분하고 진심 어린 막내 쯔위는 서로를 가장 아끼고 리스펙하는 훈훈한 조합입니다.",
+      "bestMatchReasonEs": "La energía cálida de Jihyo y la serenidad leal de Tzuyu crean una armonía perfecta.",
+      "bestMatchReasonPt": "A energia calorosa de Jihyo e a serenidade leal de Tzuyu criam uma harmonia perfeita.",
+      "colorHex": "#f59e0b",
+      "bgGradient": "from-amber-500 via-orange-600 to-rose-950"
+    },
+    "mina": {
+      "id": "mina",
+      "name": "Mina (Myoui Mina)",
+      "nameKo": "미나 (묘이 미나)",
+      "nameEs": "Mina (Myoui Mina)",
+      "namePt": "Mina (Myoui Mina)",
+      "title": "The Black Swan Ballerina & Cozy Gamer Penguin",
+      "titleKo": "우아한 블랙 스완 & 집순이 게이머 펭귄",
+      "titleEs": "El Cisne Negro Elegante y Pingüino Gamer Acogedor",
+      "titlePt": "O Cisne Negro Elegante e Pinguim Gamer Aconchegante",
+      "subtitle": "Royal Poise · Quiet Intelligence · Master of LEGO & Gaming",
+      "subtitleKo": "기품 넘치는 아우라 · 차분한 지성미 · 레고와 게임을 사랑하는 집순이",
+      "subtitleEs": "Elegancia Real · Calma Inteligente · Reina del Gaming y LEGO",
+      "subtitlePt": "Elegância Real · Calma Inteligente · Rainha dos Games e LEGO",
+      "skzoo": "Mively (Mint Green Penguin 🐧🩵)",
+      "skzooKo": "미부리 (Mively - 민트 펭귄 🐧🩵)",
+      "skzooEs": "Mively (Pingüino Verde Menta 🐧🩵)",
+      "skzooPt": "Mively (Pinguim Verde-Menta 🐧🩵)",
+      "emoji": "🐧",
+      "traits": [
+        "Graceful & Composed",
+        "Thoughtful Listener",
+        "Cozy Homebody Genius"
+      ],
+      "traitsKo": [
+        "언제나 기품 있고 차분한 태도",
+        "상대방의 말을 깊이 경청하는 배려",
+        "집에서 게임·조립에 몰입하는 반전 매력"
+      ],
+      "traitsEs": [
+        "Elegancia y Serenidad Natural",
+        "Oyente Empática y Sabia",
+        "Genio Hogareña de los Videojuegos"
+      ],
+      "traitsPt": [
+        "Elegância e Serenidade Natural",
+        "Ouvinte Empática e Sábia",
+        "Gênio Caseira dos Videogames"
+      ],
+      "description": "Like Mina, you carry an aura of effortless royalty and calm grace. You rarely raise your voice, yet when you speak, everyone listens closely. At home, your unexpected geeky side comes out through intense gaming, building intricate projects, and enjoying peaceful solitude.",
+      "descriptionKo": "미나처럼 가만히 있어도 고급스러운 아우라와 평온함이 흐르는 사람! 말수는 적지만 한마디 한마디에 깊은 생각과 배려가 담겨 있으며, 집에서는 게임이나 취미에 푹 빠지는 귀여운 집순이 매력을 지녔습니다.",
+      "descriptionEs": "Como Mina, transmites una elegancia serena e hipnótica. Hablas con calma e inteligencia, y en casa disfrutas tu espacio personal con videojuegos, proyectos creativos y paz absoluta.",
+      "descriptionPt": "Como Mina, você transmite uma elegância serena e hipnotizante. Fala com calma e inteligência, e em casa curte seu espaço pessoal com videogames, projetos criativos e paz absoluta.",
+      "bestMatchId": "chaeyoung",
+      "bestMatchName": "Chaeyoung",
+      "bestMatchNameKo": "채영 (Chaeyoung)",
+      "bestMatchNameEs": "Chaeyoung",
+      "bestMatchNamePt": "Chaeyoung",
+      "bestMatchReason": "MiChaeng soulmates! Mina's gentle elegance and Chaeyoung's free-spirited artistry attract like magnets.",
+      "bestMatchReasonKo": "전설의 미챙(MiChaeng) 서사! 차분하고 우아한 미나와 자유로운 아티스트 채영은 서로에게 완벽한 영감이 되어줍니다.",
+      "bestMatchReasonEs": "¡Almas gemelas MiChaeng! La elegancia suave de Mina y el espíritu libre de Chaeyoung se complementan como imanes.",
+      "bestMatchReasonPt": "Almas gêmeas MiChaeng! A elegância suave de Mina e o espírito livre de Chaeyoung se completam como ímãs.",
+      "colorHex": "#14b8a6",
+      "bgGradient": "from-teal-500 via-emerald-600 to-slate-900"
+    },
+    "dahyun": {
+      "id": "dahyun",
+      "name": "Dahyun (Kim Dahyun)",
+      "nameKo": "다현 (김다현)",
+      "nameEs": "Dahyun (Kim Dahyun)",
+      "namePt": "Dahyun (Kim Dahyun)",
+      "title": "The Variety Genius & Eagle-Eyed Tofu Entertainer",
+      "titleKo": "예능 천재 흥두부 & 카메라 찾는 매의 눈 엔터테이너",
+      "titleEs": "El Genio del Entretenimiento y Tofu Brillante",
+      "titlePt": "O Gênio do Entretenimento e Tofu Brilhante",
+      "subtitle": "Camera Finder · Poetic Lyricist · Private Yet Hilarious",
+      "subtitleKo": "어디서든 렌즈를 찾아내는 센스 · 감성 작사가 · 외유내강 반전 매력",
+      "subtitleEs": "Humor Instantáneo · Compositora Sensible · Dulce y Reservada",
+      "subtitlePt": "Humor Instantâneo · Compositora Sensível · Doce e Reservada",
+      "skzoo": "Davely (White Tofu Dubu 🤍🦅)",
+      "skzooKo": "다부리 (Davely - 화이트 두부 🤍🦅)",
+      "skzooEs": "Davely (Tofu Blanco 🤍🦅)",
+      "skzooPt": "Davely (Tofu Branco 🤍🦅)",
+      "emoji": "🤍",
+      "traits": [
+        "Quick-Witted Humor",
+        "Observant & Polite",
+        "Deep Poetic Soul"
+      ],
+      "traitsKo": [
+        "순발력 만점의 유머와 센스",
+        "예의 바르고 철저한 자기관리",
+        "감성적인 글을 쓰는 깊은 내면"
+      ],
+      "traitsEs": [
+        "Ingenio Rápido y Divertido",
+        "Observadora y Muy Cortés",
+        "Sensibilidad Poética Interior"
+      ],
+      "traitsPt": [
+        "Raciocínio Rápido e Divertido",
+        "Observadora e Muito Educada",
+        "Sensibilidade Poética Interior"
+      ],
+      "description": "Like Dahyun, you have a sixth sense for timing and humor—always knowing how to make the room burst into laughter! Yet behind your legendary 'Eagle Dance' energy, you are deeply polite, emotionally observant, and express your deepest thoughts through heartfelt writing.",
+      "descriptionKo": "다현처럼 타고난 센스와 유머로 모임의 분위기를 단숨에 띄우는 엔터테이너! 하지만 혼자 있을 때는 차분하고 예의 바르며, 진솔한 글과 음악으로 속마음을 표현하는 외유내강형 인재입니다.",
+      "descriptionEs": "Como Dahyun, tienes un sexto sentido para el humor y haces reír a todos al instante. Sin embargo, en tu mundo interior eres muy educada, reservada y expresas tus sentimientos con gran sensibilidad.",
+      "descriptionPt": "Como Dahyun, você tem um sexto sentido para o humor e faz todos rirem na hora. Porém, no seu mundo interior, é muito educada, reservada e expressa seus sentimentos com grande sensibilidade.",
+      "bestMatchId": "sana",
+      "bestMatchName": "Sana",
+      "bestMatchNameKo": "사나 (Sana)",
+      "bestMatchNameEs": "Sana",
+      "bestMatchNamePt": "Sana",
+      "bestMatchReason": "Sana's bright hugs melt Dahyun's shy walls, sparking nonstop giggles whenever they are together.",
+      "bestMatchReasonKo": "다현의 부끄러움도 단번에 무장해제시키는 사나의 밝은 에너지가 만나면 세상에서 가장 유쾌한 시너지가 폭발합니다.",
+      "bestMatchReasonEs": "Los abrazos de Sana derriten la timidez de Dahyun, creando risas interminables.",
+      "bestMatchReasonPt": "Os abraços de Sana derretem a timidez de Dahyun, criando risadas sem fim.",
+      "colorHex": "#6366f1",
+      "bgGradient": "from-indigo-500 via-purple-600 to-slate-900"
+    },
+    "chaeyoung": {
+      "id": "chaeyoung",
+      "name": "Chaeyoung (Son Chaeyoung)",
+      "nameKo": "채영 (손채영)",
+      "nameEs": "Chaeyoung (Son Chaeyoung)",
+      "namePt": "Chaeyoung (Son Chaeyoung)",
+      "title": "The Free-Spirited Artist & Baby Beast Poet",
+      "titleKo": "자유로운 영혼의 아티스트 & 딸기 공주 아기맹수",
+      "titleEs": "La Artista de Espíritu Libre y Bebé Tigre Creativa",
+      "titlePt": "A Artista de Espírito Livre e Bebê Tigre Criativa",
+      "subtitle": "Indie Aesthetic · Sketchbook & Tattoos · Unfiltered Authenticity",
+      "subtitleKo": "독창적인 인디 감성 · 그림과 작사 · 틀에 얽매이지 않는 자유로움",
+      "subtitleEs": "Estética Indie · Dibujo y Poesía · Autenticidad sin Filtros",
+      "subtitlePt": "Estética Indie · Desenho e Poesia · Autenticidade sem Filtros",
+      "skzoo": "Chaengvely (Crimson Baby Tiger 🐯🍓)",
+      "skzooKo": "채부리 (Chaengvely - 레드 아기맹수 🐯🍓)",
+      "skzooEs": "Chaengvely (Bebé Tigre Rojo 🐯🍓)",
+      "skzooPt": "Chaengvely (Bebê Tigre Vermelho 🐯🍓)",
+      "emoji": "🍓",
+      "traits": [
+        "100% Authentic Individualist",
+        "Artistic & Musical Vision",
+        "Adorable 'Baby Beast' Edge"
+      ],
+      "traitsKo": [
+        "남들의 시선보다 나만의 취향을 지키는 주체성",
+        "그림, 패션, 음악을 아우르는 예술 감각",
+        "귀여움과 힙함이 공존하는 아기맹수 매력"
+      ],
+      "traitsEs": [
+        "Individualidad 100% Auténtica",
+        "Visión Artística y Musical",
+        "Encanto Rebelde y Tierno"
+      ],
+      "traitsPt": [
+        "Individualidade 100% Autêntica",
+        "Visão Artística e Musical",
+        "Charme Rebelde e Fofo"
+      ],
+      "description": "Like Chaeyoung, you march to the beat of your own drum. You love indie music, sketching, bold fashion choices, and expressing your unfiltered self without worrying about trends. You combine a cool rebellious streak with the cutest 'Baby Beast' warmth.",
+      "descriptionKo": "채영처럼 유행에 휩쓸리지 않고 나만의 독창적인 취향과 예술 세계를 가꿔가는 자유로운 영혼! 겉으로는 힙하고 시크해 보이지만 친한 사람들 앞에서는 귀여운 아기맹수가 됩니다.",
+      "descriptionEs": "Como Chaeyoung, sigues tu propio camino sin imitar a nadie. Amas el arte, la música indie y la moda con personalidad, combinando un toque rebelde con una ternura única.",
+      "descriptionPt": "Como Chaeyoung, você segue seu próprio caminho sem imitar ninguém. Ama arte, música indie e moda autêntica, combinando um toque rebelde com uma fofura única.",
+      "bestMatchId": "mina",
+      "bestMatchName": "Mina",
+      "bestMatchNameKo": "미나 (Mina)",
+      "bestMatchNameEs": "Mina",
+      "bestMatchNamePt": "Mina",
+      "bestMatchReason": "Chaeyoung inspires Mina to try bold new adventures, while Mina appreciates every detail of Chaeyoung's art.",
+      "bestMatchReasonKo": "채영의 예술적 세계를 가장 깊이 이해해 주는 미나와 함께할 때 가장 편안하고 반짝이는 영감이 탄생합니다.",
+      "bestMatchReasonEs": "Mina admira cada detalle del arte de Chaeyoung, creando una conexión mágica.",
+      "bestMatchReasonPt": "Mina admira cada detalhe da arte de Chaeyoung, criando uma conexão mágica.",
+      "colorHex": "#e11d48",
+      "bgGradient": "from-rose-600 via-red-700 to-zinc-950"
+    },
+    "tzuyu": {
+      "id": "tzuyu",
+      "name": "Tzuyu (Chou Tzuyu)",
+      "nameKo": "쯔위 (저우쯔위)",
+      "nameEs": "Tzuyu (Chou Tzuyu)",
+      "namePt": "Tzuyu (Chou Tzuyu)",
+      "title": "The Visual Goddess & Low-Key Savage Maknae",
+      "titleKo": "여신 비주얼 실세 막내 & 맑은 눈의 팩폭러",
+      "titleEs": "La Diosa Visual y Maknae Ingeniosa de Calma Pura",
+      "titlePt": "A Deusa Visual e Maknae Espirituosa de Calma Pura",
+      "subtitle": "Unshakeable Poise · Deadpan Savage Wit · Animal Rescue Angel",
+      "subtitleKo": "흔들리지 않는 평정심 · 웃으며 날리는 촌철살인 유머 · 동물 애호가",
+      "subtitleEs": "Serenidad Inquebrantable · Humor Directo · Amor por los Animales",
+      "subtitlePt": "Serenidade Inabalável · Humor Direto · Amor pelos Animais",
+      "skzoo": "Tzuvely (Royal Blue Puppy 🐶💙)",
+      "skzooKo": "쯔부리 (Tzuvely - 블루 강아지 🐶💙)",
+      "skzooEs": "Tzuvely (Perrito Azul Real 🐶💙)",
+      "skzooPt": "Tzuvely (Cachorrinho Azul-Royal 🐶💙)",
+      "emoji": "🦌",
+      "traits": [
+        "Calm & Unbothered",
+        "Effortless Deadpan Roasts",
+        "Sincere & Loyal Heart"
+      ],
+      "traitsKo": [
+        "어떤 상황에서도 당황하지 않는 침착함",
+        "예쁜 미소로 툭 던지는 촌철살인 팩폭",
+        "유기견과 약자를 아끼는 선하고 깊은 마음"
+      ],
+      "traitsEs": [
+        "Calma Imperturbable",
+        "Respuestas Ingeniosas y Directas",
+        "Corazón Noble y Compasivo"
+      ],
+      "traitsPt": [
+        "Calma Imperturbável",
+        "Respostas Espirituosas e Diretas",
+        "Coração Nobre e Compassivo"
+      ],
+      "description": "Like Tzuyu, you combine breathtaking poise with hilarious deadpan honesty! You stay calm when everyone else panics, occasionally dropping a savage truth bomb with an innocent smile. Beneath your quiet exterior beats a deeply loyal, animal-loving, and disciplined heart.",
+      "descriptionKo": "쯔위처럼 차분하고 우아한 태도 속에 누구보다 단단한 내면과 엉뚱한 촌철살인 유머를 숨긴 매력 부자! 맑은 눈빛으로 툭 던지는 한마디로 모두를 빵 터뜨리며, 동물과 주변 사람들을 진심으로 아낍니다.",
+      "descriptionEs": "Como Tzuyu, combinas una elegancia serena con una honestidad directa que hace reír a todos. Mantienes la calma bajo presión y tienes un corazón inmensamente leal y compasivo.",
+      "descriptionPt": "Como Tzuyu, você combina uma elegância serena com uma sinceridade direta que faz todos rirem. Mantém a calma sob pressão e tem um coração imensamente leal e compassivo.",
+      "bestMatchId": "jihyo",
+      "bestMatchName": "Jihyo",
+      "bestMatchNameKo": "지효 (Jihyo)",
+      "bestMatchNameEs": "Jihyo",
+      "bestMatchNamePt": "Jihyo",
+      "bestMatchReason": "Jihyo dotes on Tzuyu endlessly, and Tzuyu grounds Jihyo with her steady, affectionate presence.",
+      "bestMatchReasonKo": "쯔위를 세상에서 제일 아끼는 지효 언니와, 묵묵히 언니들을 응원하는 막내 쯔위의 환상 케미!",
+      "bestMatchReasonEs": "Jihyo adora a Tzuyu sin límites y Tzuyu le brinda paz y lealtad incondicional.",
+      "bestMatchReasonPt": "Jihyo adora Tzuyu sem limites e Tzuyu traz paz e lealdade incondicional.",
+      "colorHex": "#2563eb",
+      "bgGradient": "from-blue-600 via-indigo-700 to-slate-950"
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "question": "It's a free weekend with zero schedules! How do you recharge your energy?",
+      "questionKo": "아무 스케줄 없는 완벽한 주말! 에너지를 충전하는 나만의 방식은?",
+      "questionEs": "¡Tienes un fin de semana totalmente libre! ¿Cómo recargas tu energía?",
+      "questionPt": "Fim de semana totalmente livre! Como você recarrega suas energias?",
+      "emoji": "🛋️",
+      "options": [
+        {
+          "id": "A",
+          "text": "Build an intricate LEGO set or play console games under a cozy blanket in blessed silence",
+          "textKo": "포근한 이불 속에서 조용히 콘솔 게임을 하거나 레고 조립에 푹 빠진다",
+          "textEs": "Armar un LEGO complejo o jugar videojuegos bajo una manta en paz total",
+          "textPt": "Montar um LEGO complexo ou jogar videogame debaixo das cobertas em paz total",
+          "scores": { "mina": 3, "tzuyu": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Order a giant feast of delivery food (jokbal, tteokbokki) and binge-watch dramas all night",
+          "textKo": "족발·떡볶이 등 최애 배달 음식을 한 상 가득 시켜놓고 드라마 정주행하기",
+          "textEs": "Pedir un banquete de comida deliciosa a domicilio y ver series toda la noche",
+          "textPt": "Pedir um banquete de comida deliciosa por delivery e maratonar séries a noite toda",
+          "scores": { "momo": 3, "nayeon": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Hit the gym, go for an outdoor run, or organize a lively hangout with my favorite friends",
+          "textKo": "상쾌하게 헬스장 운동이나 운동 모임을 가거나 친구들과 핫플 나들이 떠나기",
+          "textEs": "Ir al gimnasio, hacer deporte al aire libre o salir con mis mejores amigos",
+          "textPt": "Ir à academia, praticar esporte ao ar livre ou sair com meus melhores amigos",
+          "scores": { "jihyo": 3, "sana": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Visit an indie art exhibition, sketch in a quiet cafe, or reorganize my home and care for my pets",
+          "textKo": "감각적인 전시회를 보며 그림을 그리거나, 집 대청소를 하고 반려동물과 산책하기",
+          "textEs": "Ir a una galería indie, dibujar en un café o cuidar a mis mascotas en casa",
+          "textPt": "Visitar uma galeria indie, desenhar em um café ou cuidar dos meus pets em casa",
+          "scores": { "chaeyoung": 3, "jeongyeon": 2 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "In your friend group chat, what kind of messages do you send the most?",
+      "questionKo": "친구들과의 단톡방에서 내가 가장 자주 보내는 메시지 스타일은?",
+      "questionEs": "En el chat grupal con tus amigos, ¿qué tipo de mensajes envías más?",
+      "questionPt": "No grupo de mensagens dos amigos, que tipo de mensagem você mais manda?",
+      "emoji": "💬",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hilarious selfies, dramatic reaction memes, and 'Pay attention to me right now!!'",
+          "textKo": "웃긴 셀카, 주접 밈 짤방 폭격, 그리고 '얘들아 나 좀 봐줘!!' 텐션 업 메시지",
+          "textEs": "Selfies divertidas, memes exagerados y '¡¡Háganme caso ahora mismo!!'",
+          "textPt": "Selfies divertidas, memes exagerados e 'Prestem atenção em mim agora!!'",
+          "scores": { "nayeon": 3, "dahyun": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Sweet 'I miss you so much 💕' texts, heart emojis, and proposing spontaneous dinner dates",
+          "textKo": "'너무 보고 싶어 사랑해 💕' 하트 폭격과 오늘 저녁에 급번개 만나자는 다정한 메시지",
+          "textEs": "Mensajes dulces de 'Los extraño mucho 💕', corazones y planes para cenar juntos",
+          "textPt": "Mensagens doces de 'Saudades demais 💕', corações e convites para jantar juntos",
+          "scores": { "sana": 3, "momo": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Checking everyone's schedule, setting the meeting time, and making sure everyone got home safe",
+          "textKo": "모임 시간·장소 투표 정리하기, 그리고 헤어질 때 '다들 집 잘 들어갔어?' 안부 챙기기",
+          "textEs": "Organizar la hora y el lugar, y confirmar que todos hayan llegado bien a casa",
+          "textPt": "Organizar horário e local, e confirmar se todos chegaram bem em casa",
+          "scores": { "jeongyeon": 3, "jihyo": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Read quietly for 20 minutes, then drop one savage or wildly random one-liner that destroys the room",
+          "textKo": "조용히 읽고 있다가 한 줄 툭 던진 촌철살인 팩폭이나 엉뚱한 짤로 단톡방을 뒤집어놓기",
+          "textEs": "Leer en silencio y soltar una sola frase ingeniosa y directa que hace reír a todos",
+          "textPt": "Ler em silêncio e soltar uma única frase certeira e engraçada que desmonta todo mundo",
+          "scores": { "tzuyu": 3, "mina": 2 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "A camera suddenly zooms in on you at a crowded stadium concert! What do you do?",
+      "questionKo": "콘서트장 대형 전광판 카메라가 갑자기 나를 클로즈업했다! 나의 즉각 반응은?",
+      "questionEs": "¡Una cámara te enfoca en la pantalla gigante de un concierto! ¿Qué haces?",
+      "questionPt": "Uma câmera foca em você no telão gigante de um show! O que você faz?",
+      "emoji": "📸",
+      "options": [
+        {
+          "id": "A",
+          "text": "Spot the lens in 0.1 seconds and unleash a legendary funny dance or iconic meme pose!",
+          "textKo": "0.1초 만에 카메라 렌즈를 찾아내서 전설의 춤사위와 코믹 포즈로 현장을 초토화시킨다!",
+          "textEs": "¡Detecto el lente en 0.1 segundos y hago un baile épico o pose cómica legendaria!",
+          "textPt": "Encontro a lente em 0,1 segundo e mando uma dança épica ou pose cômica lendária!",
+          "scores": { "dahyun": 3, "jeongyeon": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Flash a dazzling pop-star wink, blow a kiss, and own the jumbo screen like my personal music video",
+          "textKo": "기다렸다는 듯 상큼한 윙크와 손키스를 날리며 전광판을 내 뮤직비디오로 만든다",
+          "textEs": "Lanzo un guiño deslumbrante, tiro un beso y domino la pantalla como estrella pop",
+          "textPt": "Mando uma piscadinha deslumbrante, jogo um beijo e domino o telão como estrela pop",
+          "scores": { "nayeon": 3, "sana": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Hit the exact chorus choreography with razor-sharp precision and hype up the whole section",
+          "textKo": "나오고 있는 노래의 하이라이트 칼군무를 완벽하게 추며 주변 관객들의 함성을 유도한다",
+          "textEs": "Bailo la coreografía exacta con potencia total y enciendo a todo el público",
+          "textPt": "Danço a coreografia exata com potência total e levanto toda a arquibancada",
+          "scores": { "momo": 3, "jihyo": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Give a shy, graceful wave with a soft smile that accidentally looks like a movie scene",
+          "textKo": "수줍고 우아하게 미소 지으며 손인사를 건네는데, 그 장면이 청순 영화 한 장면처럼 찍힌다",
+          "textEs": "Saludo con una sonrisa tímida y elegante que parece sacada de una película",
+          "textPt": "Aceno com um sorriso tímido e elegante que parece cena de filme",
+          "scores": { "mina": 3, "tzuyu": 2 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "How do you express affection to the people you care about most?",
+      "questionKo": "내가 가장 아끼는 사람들에게 사랑을 표현하는 나만의 언어는?",
+      "questionEs": "¿Cómo demuestras tu cariño a las personas que más quieres?",
+      "questionPt": "Como você demonstra carinho pelas pessoas que mais ama?",
+      "emoji": "💝",
+      "options": [
+        {
+          "id": "A",
+          "text": "Nonstop physical affection: warm hugs, linking arms, and telling them how cute they are",
+          "textKo": "만나자마자 달려가서 껴안기, 팔짱 끼기, '오늘 왜 이렇게 예뻐!' 칭찬 폭격하기",
+          "textEs": "Abrazos constantes, tomarlos del brazo y decirles cuánto los quiero sin filtro",
+          "textPt": "Abraços constantes, andar de braços dados e dizer o quanto são especiais",
+          "scores": { "sana": 3, "nayeon": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Quiet acts of service: remembering their favorite coffee order, carrying heavy bags, and fixing problems",
+          "textKo": "친구가 좋아하는 메뉴 기억해 두기, 무거운 짐 들어주기 등 세심한 행동으로 챙겨주기",
+          "textEs": "Acciones silenciosas: recordar su bebida favorita y ayudarlos sin que lo pidan",
+          "textPt": "Atitudes silenciosas: lembrar a bebida favorita deles e ajudar sem precisarem pedir",
+          "scores": { "jeongyeon": 3, "mina": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Making handmade drawings, curating an indie playlist for them, or picking out a unique vintage gift",
+          "textKo": "직접 그린 일러스트 카드, 나만의 감성 플레이리스트 공유, 특별한 빈티지 선물 고르기",
+          "textEs": "Regalarles un dibujo hecho por mí, una playlist especial o un detalle único",
+          "textPt": "Dar um desenho feito por mim, uma playlist especial ou um presente único",
+          "scores": { "chaeyoung": 3, "dahyun": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Sharing my favorite food with them and staying loyally by their side through thick and thin",
+          "textKo": "제일 맛있는 음식 한 입 양보하기, 그리고 무슨 일이 있어도 묵묵히 내 편이 되어주기",
+          "textEs": "Compartir mi comida favorita y estar a su lado con lealtad incondicional",
+          "textPt": "Dividir minha comida favorita e ficar ao lado deles com lealdade incondicional",
+          "scores": { "momo": 2, "tzuyu": 3 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "When a group project or trip runs into sudden trouble, what is your natural role?",
+      "questionKo": "팀 프로젝트나 여행 중 갑작스러운 돌발 문제가 터졌을 때, 나의 역할은?",
+      "questionEs": "Cuando surge un problema inesperado en un viaje o proyecto, ¿cuál es tu rol?",
+      "questionPt": "Quando surge um imprevisto em uma viagem ou projeto, qual é o seu papel?",
+      "emoji": "⚡",
+      "options": [
+        {
+          "id": "A",
+          "text": "Take charge immediately with a clear voice, rally everyone's spirits, and assign fast action steps",
+          "textKo": "시원시원한 목소리로 상황을 정리하고, 팀원들의 멘탈을 다잡으며 플랜 B를 지휘한다",
+          "textEs": "Tomo el mando con voz firme, animo al grupo y organizo el plan B al instante",
+          "textPt": "Assumo o comando com firmeza, animo o grupo e organizo o plano B na hora",
+          "scores": { "jihyo": 3, "nayeon": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Crack a witty joke to melt the tension so nobody panics or feels guilty",
+          "textKo": "실수한 친구가 무안하지 않게 유쾌한 농담으로 긴장된 분위기를 부드럽게 풀어준다",
+          "textEs": "Hago una broma oportuna para romper la tensión y que nadie se sienta culpable",
+          "textPt": "Faço uma brincadeira na hora certa para quebrar a tensão e ninguém se sentir culpado",
+          "scores": { "dahyun": 3, "sana": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Stay completely calm, analyze the facts quietly, and offer the most practical shortcut",
+          "textKo": "전혀 동요하지 않고 차분하게 원인을 파악한 뒤 가장 효율적인 해결책을 조용히 제시한다",
+          "textEs": "Mantengo la calma absoluta, analizo los datos y propongo la solución más lógica",
+          "textPt": "Mantenho a calma absoluta, analiso os fatos e proponho a solução mais prática",
+          "scores": { "mina": 2, "tzuyu": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Suggest a totally creative alternative: 'What if we turn this detour into an even cooler adventure?'",
+          "textKo": "'오히려 좋아! 이 김에 저기 새로 생긴 골목 구경 가볼까?' 창의적인 대안으로 반전을 만든다",
+          "textEs": "Propongo una idea creativa: '¿Y si convertimos este desvío en una aventura mejor?'",
+          "textPt": "Sugiro uma ideia criativa: 'E se transformarmos esse desvio em uma aventura ainda melhor?'",
+          "scores": { "chaeyoung": 3, "momo": 1 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Which fashion aesthetic makes you feel like your most iconic self?",
+      "questionKo": "입었을 때 가장 '나답고 멋지다'고 느끼는 최애 패션 스타일은?",
+      "questionEs": "¿Qué estilo de moda te hace sentir más icónica y auténtica?",
+      "questionPt": "Qual estilo de moda faz você se sentir mais icônica e autêntica?",
+      "emoji": "👗",
+      "options": [
+        {
+          "id": "A",
+          "text": "Trendy high-teen pop star: cropped cardigan, pleated skirt, statement hair ribbons, and bright colors",
+          "textKo": "트렌디한 하이틴 팝스타 룩: 상큼한 컬러 매치, 크롭 가디건과 리본 포인트",
+          "textEs": "Pop star high-teen: cárdigan corto, colores vibrantes y accesorios en tendencia",
+          "textPt": "Pop star high-teen: cardigã curto, cores vibrantes e acessórios tendência",
+          "scores": { "nayeon": 3, "sana": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Artsy vintage & indie edge: customized denim, leather boots, bold rings, and thrift-store gems",
+          "textKo": "독창적인 빈티지 & 인디 펑크: 유니크한 패턴, 레더 부츠와 개성 넘치는 주얼리 레이어링",
+          "textEs": "Vintage artístico e indie: denim personalizado, botas de cuero y anillos únicos",
+          "textPt": "Vintage artístico e indie: jeans customizado, botas de couro e anéis únicos",
+          "scores": { "chaeyoung": 3, "momo": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Timeless quiet luxury: tailored trench coat, soft cashmere knit, and effortless elegance",
+          "textKo": "우아한 클래식 & 올드머니 룩: 깔끔한 트렌치코트, 부드러운 캐시미어 니트와 정갈한 실루엣",
+          "textEs": "Elegancia clásica: abrigo estructurado, tejidos suaves y sofisticación natural",
+          "textPt": "Elegância clássica: casaco estruturado, tricô macio e sofisticação natural",
+          "scores": { "mina": 3, "tzuyu": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Chic sporty & tailored streetwear: crisp blazer or athletic crop top with wide-leg trousers",
+          "textKo": "시크한 애슬레저 & 매니시 캐주얼: 탄탄한 핏의 크롭탑이나 자켓에 와이드 팬츠 매치",
+          "textEs": "Deportivo chic y urbano: blazer moderno o top atlético con pantalones anchos",
+          "textPt": "Esportivo chique e urbano: blazer moderno ou top atlético com calça wide-leg",
+          "scores": { "jihyo": 3, "jeongyeon": 2 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "What is your ultimate midnight snack craving after a long day?",
+      "questionKo": "길고 고된 하루 끝에 참을 수 없는 나의 소울 야식 메뉴는?",
+      "questionEs": "¿Cuál es tu antojo nocturno definitivo después de un día largo?",
+      "questionPt": "Qual é o seu lanche da madrugada perfeito depois de um dia longo?",
+      "emoji": "🍜",
+      "options": [
+        {
+          "id": "A",
+          "text": "Savory braised jokbal (trotters), spicy tteokbokki, or hot ramen with extra toppings",
+          "textKo": "윤기 좔좔 흐르는 족발·보쌈이나 쫄깃하고 매콤한 떡볶이와 라면 한 상",
+          "textEs": "Un plato abundante de comida sabrosa, ramen caliente o tteokbokki picante",
+          "textPt": "Um prato caprichado de comida saborosa, lámen quente ou tteokbokki apimentado",
+          "scores": { "momo": 3, "jeongyeon": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Sweet fresh strawberries, chocolate desserts, or a warm cup of hot cocoa",
+          "textKo": "상큼달콤한 생딸기 듬뿍, 진한 초콜릿 디저트나 따뜻한 핫초코 한 잔",
+          "textEs": "Fresas frescas dulces, postres de chocolate o una taza de chocolate caliente",
+          "textPt": "Morangos frescos docinhos, sobremesas de chocolate ou chocolate quente",
+          "scores": { "chaeyoung": 2, "dahyun": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Crusty bread, cheese platter, or a fun dessert cafe run with my best friends",
+          "textKo": "고소한 빵과 치즈, 혹은 친구들과 수다 떨며 나눠 먹는 달콤한 디저트 카페 투어",
+          "textEs": "Pan recién horneado, postres bonitos y charlas nocturnas con amigas",
+          "textPt": "Pão quentinho, sobremesas lindas e papo noturno com as amigas",
+          "scores": { "sana": 2, "tzuyu": 2, "nayeon": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Ketchup-topped snacks while gaming, or a refreshing iced drink after a late workout",
+          "textKo": "게임하면서 집어 먹는 케첩 듬뿍 간식, 혹은 운동 후 마시는 시원한 음료 한 잔",
+          "textEs": "Snacks deliciosos mientras juego videojuegos o una bebida fría tras entrenar",
+          "textPt": "Petiscos deliciosos enquanto jogo videogame ou uma bebida gelada pós-treino",
+          "scores": { "mina": 2, "jihyo": 2 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "If you were preparing a solo stage for a world tour, what concept would you pick?",
+      "questionKo": "월드 투어 콘서트에서 나만의 솔로 무대를 꾸민다면 어떤 콘셉트를 고를까요?",
+      "questionEs": "Si prepararas un escenario solista para una gira mundial, ¿qué concepto elegirías?",
+      "questionPt": "Se você preparasse um palco solo para uma turnê mundial, qual conceito escolheria?",
+      "emoji": "🎤",
+      "options": [
+        {
+          "id": "A",
+          "text": "Infectious high-energy pop anthem with sparkling outfits and a viral hand-dance (POP! / ABCD)",
+          "textKo": "전 세계가 따라 추는 중독성 갑 하이틴 팝 앤섬과 화려한 스타일링 (POP! / ABCD)",
+          "textEs": "Un himno pop ultra pegajoso con vestuario brillante y baile viral (POP! / ABCD)",
+          "textPt": "Um hino pop super chiclete com figurino brilhante e coreografia viral (POP! / ABCD)",
+          "scores": { "nayeon": 3, "sana": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Explosive dance break & fierce hip-hop performance that shakes the entire stadium floor",
+          "textKo": "스타디움 무대가 부서질 듯한 고난도 댄스 브레이크와 압도적 카리스마 퍼포먼스",
+          "textEs": "Un dance break explosivo y performance feroz que haga vibrar todo el estadio",
+          "textPt": "Um dance break explosivo e performance poderosa que faça o estádio tremer",
+          "scores": { "momo": 3, "jihyo": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Acoustic guitar or piano self-written song with intimate, poetic storytelling",
+          "textKo": "직접 쓴 가사와 어쿠스틱 기타·피아노 선율로 관객의 마음을 울리는 감성 무대",
+          "textEs": "Una canción propia con guitarra acústica o piano llena de poesía y emoción",
+          "textPt": "Uma música autoral no violão ou piano cheia de poesia e emoção",
+          "scores": { "chaeyoung": 3, "dahyun": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Dreamy theatrical choreography with dramatic lighting, velvet elegance, and siren allure",
+          "textKo": "몽환적인 조명 아래 백조처럼 우아한 춤선과 고혹적인 분위기를 뽐내는 시네마틱 무대",
+          "textEs": "Coreografía teatral de ensueño con luces dramáticas y elegancia hipnótica",
+          "textPt": "Coreografia teatral dos sonhos com iluminação dramática e elegância hipnotizante",
+          "scores": { "mina": 2, "tzuyu": 2, "jeongyeon": 1 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "What compliment from a friend makes you happiest?",
+      "questionKo": "주변 친구들에게 들었을 때 가장 기분 좋은 칭찬은?",
+      "questionEs": "¿Qué cumplido de un amigo te hace más feliz?",
+      "questionPt": "Qual elogio de um amigo deixa você mais feliz?",
+      "emoji": "🌟",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Just being in the same room as you makes me feel happier and more energized!'",
+          "textKo": "'너랑 같이 있기만 해도 우울했던 기분이 싹 사라지고 행복해져!'",
+          "textEs": "'¡Solo estar cerca de ti me alegra el día y me llena de buena energía!'",
+          "textPt": "'Só de estar perto de você meu dia já fica mais alegre e cheio de energia!'",
+          "scores": { "sana": 3, "dahyun": 2 }
+        },
+        {
+          "id": "B",
+          "text": "'You are the most dependable person I know—I always feel safe when you're leading.'",
+          "textKo": "'네가 있으면 어떤 일도 다 잘 풀릴 것 같아. 진짜 든든하고 멋있어!'",
+          "textEs": "'Eres la persona más confiable que conozco; contigo todo sale bien.'",
+          "textPt": "'Você é a pessoa mais confiável que conheço; com você tudo dá certo.'",
+          "scores": { "jihyo": 3, "jeongyeon": 3 }
+        },
+        {
+          "id": "C",
+          "text": "'Your taste, creativity, and skills are on another level—nobody can copy your vibe.'",
+          "textKo": "'너만의 감각과 실력은 진짜 독보적이야. 아무도 너를 따라 할 수 없어.'",
+          "textEs": "'Tu creatividad y talento están en otro nivel; tienes un sello único.'",
+          "textPt": "'Sua criatividade e talento estão em outro nível; ninguém copia sua vibe.'",
+          "scores": { "chaeyoung": 2, "momo": 2, "nayeon": 2 }
+        },
+        {
+          "id": "D",
+          "text": "'You have such a calm, genuine soul, and your unexpected humor is the best.'",
+          "textKo": "'넌 참 한결같고 마음이 깊어. 그러다 가끔 툭 던지는 유머가 진짜 최고야.'",
+          "textEs": "'Tienes una paz interior hermosa y tu sentido del humor inesperado es genial.'",
+          "textPt": "'Você tem uma paz interior linda e seu humor inesperado é o melhor.'",
+          "scores": { "mina": 2, "tzuyu": 3 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Pick a TWICE anthem that matches your current life chapter!",
+      "questionKo": "지금 내 인생의 테마곡으로 삼고 싶은 트와이스(TWICE) 타이틀곡은?",
+      "questionEs": "¡Elige el himno de TWICE que mejor define tu momento actual!",
+      "questionPt": "Escolha o hino do TWICE que melhor define sua fase atual!",
+      "emoji": "🍭",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Feel Special': Even when the world feels cold, one warm person makes me feel truly special",
+          "textKo": "'Feel Special': 세상이 아무리 날 주저앉혀도, 소중한 사람 덕분에 다시 웃으며 일어선다",
+          "textEs": "'Feel Special': Aunque el mundo sea difícil, las personas que amo me hacen brillar",
+          "textPt": "'Feel Special': Mesmo quando o mundo parece difícil, quem eu amo me faz brilhar",
+          "scores": { "mina": 2, "sana": 2, "jeongyeon": 2 }
+        },
+        {
+          "id": "B",
+          "text": "'FANCY': Bold, glamorous, and fearless—I go after what I want without hesitation!",
+          "textKo": "'FANCY': 화려하고 당당하게! 내가 원하는 것을 향해 망설임 없이 직진한다!",
+          "textEs": "'FANCY': Audaz, brillante y sin miedo; voy directo por lo que quiero",
+          "textPt": "'FANCY': Ousada, brilhante e sem medo; vou direto atrás do que quero",
+          "scores": { "nayeon": 2, "chaeyoung": 2, "momo": 2 }
+        },
+        {
+          "id": "C",
+          "text": "'I CAN'T STOP ME': Driven by unstoppable passion and rhythm, pushing past every limit",
+          "textKo": "'I CAN'T STOP ME': 누구도 멈출 수 없는 뜨거운 열정과 에너지로 한계를 돌파한다",
+          "textEs": "'I CAN'T STOP ME': Impulsada por una pasión imparable que rompe todos los límites",
+          "textPt": "'I CAN'T STOP ME': Movida por uma paixão imparável que supera todos os limites",
+          "scores": { "jihyo": 3 }
+        },
+        {
+          "id": "D",
+          "text": "'What is Love?' / 'Talk that Talk': Joyful curiosity, sweet romance, and speaking from the heart",
+          "textKo": "'What is Love?' / 'Talk that Talk': 설레는 호기심과 솔직한 진심으로 매일을 영화처럼 만든다",
+          "textEs": "'What is Love?' / 'Talk that Talk': Curiosidad alegre, sinceridad y corazón puro",
+          "textPt": "'What is Love?' / 'Talk that Talk': Curiosidade alegre, sinceridade e coração puro",
+          "scores": { "dahyun": 2, "tzuyu": 2 }
+        }
+      ]
+    }
+  ]
+}

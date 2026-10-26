@@ -1,0 +1,835 @@
+{
+  "slug": "which-enhypen-member-are-you",
+  "addedAt": "2026-10-26",
+  "quizType": "personality",
+  "title": "Which ENHYPEN Member Are You?",
+  "titleKo": "나와 가장 잘 맞는 엔하이픈(ENHYPEN) 멤버 찾기",
+  "titleEs": "¿Qué integrante de ENHYPEN eres?",
+  "titlePt": "Qual integrante do ENHYPEN você é?",
+  "subtitle": "Discover your ENHYPEN archetype, Dark Blood aura, and ENGENE soulmate match across all 7 members!",
+  "subtitleKo": "7명의 엔하이픈 멤버 중 나의 성향 아키타입, 다크문 아우라, 그리고 환상의 엔진(ENGENE) 소울메이트를 찾아보세요!",
+  "subtitleEs": "¡Descubre tu arquetipo entre los 7 integrantes de ENHYPEN, tu aura y tu alma gemela ENGENE!",
+  "subtitlePt": "Descubra seu arquétipo entre os 7 integrantes do ENHYPEN, sua aura e sua alma gêmea ENGENE!",
+  "description": "Are you dependable dimple leader Jungwon, all-rounder ace Heeseung, passionate trendsetter Jay, golden retriever Jake, ice prince Sunghoon, sunshine vitamin Sunoo, or dance prodigy Ni-ki? Take the 10-question test!",
+  "descriptionKo": "든든한 보조개 리더 정원, 올라운더 맏내 희승, 열정과 의리의 제이, 다정한 골든 리트리버 제이크, 차가운 얼음왕자 성훈, 인간 복숭아 비타민 선우, 천재 춤선 막내 니키 중 당신과 가장 닮은 멤버는 누구일까요?",
+  "descriptionEs": "¿Eres el líder confiable Jungwon, el as todoterreno Heeseung, el apasionado Jay, el dulce Jake, el príncipe del hielo Sunghoon, el radiante Sunoo o el prodigio del baile Ni-ki? ¡Haz el test de 10 preguntas!",
+  "descriptionPt": "Você é o líder confiável Jungwon, o ás completo Heeseung, o apaixonado Jay, o doce Jake, o príncipe do gelo Sunghoon, o radiante Sunoo ou o prodígio da dança Ni-ki? Faça o teste de 10 perguntas!",
+  "category": "K-Pop",
+  "tag": "ENHYPEN",
+  "coverEmoji": "🧛",
+  "gradient": "from-slate-950 via-rose-950 to-indigo-950",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "182.6K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "jungwon": {
+      "id": "jungwon",
+      "name": "Jungwon (Yang Jungwon)",
+      "nameKo": "정원 (양정원)",
+      "nameEs": "Jungwon (Yang Jungwon)",
+      "namePt": "Jungwon (Yang Jungwon)",
+      "title": "The Composed Dimple Leader & Sharp Cat Captain",
+      "titleKo": "단단한 멘탈의 보조개 리더 & 야무진 아기 고양이",
+      "titleEs": "El Líder Sereno de Hoyuelos y Capitán Felino",
+      "titlePt": "O Líder Sereno de Covinhas e Capitão Felino",
+      "subtitle": "Taekwondo Discipline · Calm Under Pressure · Cat-Like Charm",
+      "subtitleKo": "태권도 정신력 · 흔들림 없는 침착함 · 사랑스러운 양옹이",
+      "subtitleEs": "Disciplina Impecable · Calma Bajo Presión · Encanto Felino",
+      "subtitlePt": "Disciplina Impecável · Calma Sob Pressão · Charme Felino",
+      "skzoo": "Garden Cat (양옹이 🐱🌱)",
+      "skzooKo": "양옹이 (Garden Cat 🐱🌱)",
+      "skzooEs": "Gatito Jungwon (Garden Cat 🐱🌱)",
+      "skzooPt": "Gatinho Jungwon (Garden Cat 🐱🌱)",
+      "emoji": "🐱",
+      "traits": [
+        "Mature Beyond Your Years",
+        "Consistent Daily Discipline",
+        "Adorable Dimple Smile"
+      ],
+      "traitsKo": [
+        "나이보다 훨씬 성숙하고 단단한 내면",
+        "매일 팬들과 소통하는 성실함과 책임감",
+        "카리스마 뒤의 귀여운 보조개 미소"
+      ],
+      "traitsEs": [
+        "Madurez y Templaza Admirables",
+        "Constancia y Responsabilidad Diaria",
+        "Sonrisa con Hoyuelos Encantadora"
+      ],
+      "traitsPt": [
+        "Maturidade e Equilíbrio Admiráveis",
+        "Constância e Responsabilidade Diária",
+        "Sorriso com Covinhas Encantador"
+      ],
+      "description": "Like Jungwon, you possess an unshakable sense of responsibility and quiet authority. People naturally trust your judgment because you listen carefully before speaking and never panic in a crisis. Beneath your disciplined exterior, you have the cutest cat-like habits and a warm dimple smile.",
+      "descriptionKo": "정원처럼 어린 나이에도 흔들리지 않는 단단한 중심과 책임감을 가진 리더! 위기 상황에서도 당황하지 않고 침착하게 해답을 찾아내며, 똑 부러지는 성격 뒤에 사랑스러운 양옹이 매력을 품고 있습니다.",
+      "descriptionEs": "Como Jungwon, tienes una madurez y sentido de la responsabilidad admirables. Todos confían en tu criterio porque escuchas con atención y mantienes la calma bajo presión, combinando disciplina con una dulzura felina única.",
+      "descriptionPt": "Como Jungwon, você tem uma maturidade e senso de responsabilidade admiráveis. Todos confiam no seu julgamento porque você ouve com atenção e mantém a calma sob pressão, combinando disciplina com uma doçura felina única.",
+      "bestMatchId": "jay",
+      "bestMatchName": "Jay",
+      "bestMatchNameKo": "제이 (Jay)",
+      "bestMatchNameEs": "Jay",
+      "bestMatchNamePt": "Jay",
+      "bestMatchReason": "Yang-Jay synergy! Jungwon's calm composure and Jay's fiery loyalty make them the ultimate leadership duo.",
+      "bestMatchReasonKo": "든든한 양제이(Yang-Jay) 케미! 정원의 침착한 리더십과 제이의 뜨거운 의리가 만나 완벽한 시너지를 발휘합니다.",
+      "bestMatchReasonEs": "¡Química Yang-Jay! La serenidad de Jungwon y la lealtad apasionada de Jay forman el dúo perfecto.",
+      "bestMatchReasonPt": "Química Yang-Jay! A serenidade de Jungwon e a lealdade apaixonada de Jay formam a dupla perfeita.",
+      "colorHex": "#f59e0b",
+      "bgGradient": "from-amber-600 via-orange-700 to-slate-950"
+    },
+    "heeseung": {
+      "id": "heeseung",
+      "name": "Heeseung (Lee Heeseung)",
+      "nameKo": "희승 (이희승)",
+      "nameEs": "Heeseung (Lee Heeseung)",
+      "namePt": "Heeseung (Lee Heeseung)",
+      "title": "The All-Rounder Ace & Chill Ramen Gamer",
+      "titleKo": "확신의 올라운더 에이스 & 라면 러버 맏내 밤비",
+      "titleEs": "El As Todoterreno y Gamer Amante del Ramen",
+      "titlePt": "O Ás Completo e Gamer Apaixonado por Lámen",
+      "subtitle": "Perfect Pitch · Effortless Stage Genius · Easygoing Eldest",
+      "subtitleKo": "절대음감 천재 · 무대 위 카리스마 · 일상 속 편안한 맏내",
+      "subtitleEs": "Oído Absoluto · Genio del Escenario · Hermano Mayor Relajado",
+      "subtitlePt": "Ouvido Absoluto · Gênio do Palco · Irmão Mais Velho Tranquilo",
+      "skzoo": "Bambi Deer (밤비 사슴 🦌🎤)",
+      "skzooKo": "희승 밤비 (Bambi Deer 🦌🎤)",
+      "skzooEs": "Ciervo Bambi (Bambi Deer 🦌🎤)",
+      "skzooPt": "Cervo Bambi (Bambi Deer 🦌🎤)",
+      "emoji": "🦌",
+      "traits": [
+        "Perfectionist in Your Craft",
+        "Laid-Back & Low-Drama",
+        "Late-Night Ramen & Gaming Fan"
+      ],
+      "traitsKo": [
+        "본업에서는 타협 없는 천재 올라운더",
+        "권위의식 없이 편안한 맏내 바이브",
+        "밤샘 게임과 라면을 사랑하는 집돌이"
+      ],
+      "traitsEs": [
+        "Perfeccionista en su Arte",
+        "Personalidad Relajada y Cero Dramas",
+        "Fan del Ramen y los Videojuegos"
+      ],
+      "traitsPt": [
+        "Perfeccionista na Sua Arte",
+        "Personalidade Tranquila e Zero Drama",
+        "Fã de Lámen e Videogames"
+      ],
+      "description": "Like Heeseung, you are the definition of an effortless ace! When it comes to your passions, your focus and talent are unmatched. In everyday life, however, you are super chill, hate unnecessary drama, and are happiest eating spicy ramen and playing games late into the night.",
+      "descriptionKo": "희승처럼 무대나 본업에서는 압도적인 실력을 발휘하는 확신의 에이스! 하지만 일상에서는 권위의식 하나 없이 친구처럼 편안하며, 매운 라면과 게임을 즐기는 반전 맏내 매력을 지녔습니다.",
+      "descriptionEs": "Como Heeseung, eres un as natural. Cuando te concentras en tu pasión, tu talento brilla al máximo; pero en el día a día eres súper relajado, cero dramas y feliz con un buen plato de ramen y videojuegos.",
+      "descriptionPt": "Como Heeseung, você é um ás natural! Quando foca na sua paixão, seu talento brilha ao máximo; mas no dia a dia é super tranquilo, zero drama e feliz com um bom prato de lámen e videogames.",
+      "bestMatchId": "jake",
+      "bestMatchName": "Jake",
+      "bestMatchNameKo": "제이크 (Jake)",
+      "bestMatchNameEs": "Jake",
+      "bestMatchNamePt": "Jake",
+      "bestMatchReason": "The Ramyeonz duo! Heeseung and Jake share the same playful humor, late-night snack runs, and effortless brotherhood.",
+      "bestMatchReasonKo": "전설의 라면즈(Ramyeonz) 케미! 밤늦게 라면을 끓여 먹으며 게임과 음악 이야기를 나누는 영혼의 단짝입니다.",
+      "bestMatchReasonEs": "¡El dúo Ramyeonz! Comparten el mismo humor, cenas nocturnas de ramen y una amistad incondicional.",
+      "bestMatchReasonPt": "A dupla Ramyeonz! Compartilham o mesmo humor, lanches noturnos de lámen e uma amizade incondicional.",
+      "colorHex": "#e11d48",
+      "bgGradient": "from-rose-600 via-red-700 to-slate-950"
+    },
+    "jay": {
+      "id": "jay",
+      "name": "Jay (Park Jongseong)",
+      "nameKo": "제이 (박종성)",
+      "nameEs": "Jay (Park Jongseong)",
+      "namePt": "Jay (Park Jongseong)",
+      "title": "The Rock-Star Trendsetter & Loyal Chef Pillar",
+      "titleKo": "록스타 패셔니스타 & 의리와 요리의 열정남",
+      "titleEs": "El Rockstar de la Moda y Chef Leal Apasionado",
+      "titlePt": "O Rockstar da Moda e Chef Leal Apaixonado",
+      "subtitle": "Electric Guitar Soul · Encyclopedic Trivia · Ride-or-Die Friend",
+      "subtitleKo": "일렉 기타와 록 스피릿 · 잡학다식 토크왕 · 내 사람을 챙기는 셰프",
+      "subtitleEs": "Alma de Guitarra Rock · Cultura General · Amigo Incondicional",
+      "subtitlePt": "Alma de Guitarra Rock · Cultura Geral · Amigo Incondicional",
+      "skzoo": "Black Eagle (블랙 이글 🦅🎸)",
+      "skzooKo": "블랙 이글 쟂 (Black Eagle 🦅🎸)",
+      "skzooEs": "Águila Negra (Black Eagle 🦅🎸)",
+      "skzooPt": "Águia Negra (Black Eagle 🦅🎸)",
+      "emoji": "🎸",
+      "traits": [
+        "Unfiltered Passion & Honesty",
+        "High-Fashion & Rock Aesthetic",
+        "Cooks & Cares for Friends"
+      ],
+      "traitsKo": [
+        "매사에 진심을 다하는 뜨거운 열정",
+        "확고한 패션 철학과 록스타 감성",
+        "친구들에게 직접 요리해 주는 다정한 의리파"
+      ],
+      "traitsEs": [
+        "Pasión y Honestidad sin Filtros",
+        "Estilo Rockstar y Alta Moda",
+        "Cocina y Cuida a sus Amigos"
+      ],
+      "traitsPt": [
+        "Paixão e Honestidade sem Filtros",
+        "Estilo Rockstar e Alta Moda",
+        "Cozinha e Cuida dos Amigos"
+      ],
+      "description": "Like Jay, you look like a fierce, stylish rockstar at first glance, but you actually have the warmest, most generous heart in the room! You love learning random facts, playing guitar, curating impeccable outfits, and cooking delicious meals for the people you love.",
+      "descriptionKo": "제이처럼 첫인상은 시크하고 강렬한 록스타 같지만, 알고 보면 정이 넘치고 친구들을 위해 기꺼이 요리까지 해주는 진국! 패션과 음악에 확고한 취향을 가진 열정파입니다.",
+      "descriptionEs": "Como Jay, a primera vista pareces un rockstar audaz y elegante, pero tienes el corazón más noble y generoso. Te encanta aprender de todo, vestir con estilo y cocinar para quienes amas.",
+      "descriptionPt": "Como Jay, à primeira vista você parece um rockstar ousado e estiloso, mas tem o coração mais nobre e generoso. Adora aprender sobre tudo, vestir-se bem e cozinhar para quem ama.",
+      "bestMatchId": "jungwon",
+      "bestMatchName": "Jungwon",
+      "bestMatchNameKo": "정원 (Jungwon)",
+      "bestMatchNameEs": "Jungwon",
+      "bestMatchNamePt": "Jungwon",
+      "bestMatchReason": "Jay's passionate drive and Jungwon's steady wisdom balance each other like fire and anchor.",
+      "bestMatchReasonKo": "제이의 뜨거운 추진력과 정원의 차분한 지혜가 만나 서로에게 가장 든든한 버팀목이 되어줍니다.",
+      "bestMatchReasonEs": "La pasión de Jay y la templanza de Jungwon se equilibran a la perfección.",
+      "bestMatchReasonPt": "A paixão de Jay e a serenidade de Jungwon se equilibram perfeitamente.",
+      "colorHex": "#4f46e5",
+      "bgGradient": "from-indigo-700 via-slate-800 to-zinc-950"
+    },
+    "jake": {
+      "id": "jake",
+      "name": "Jake (Sim Jaeyun)",
+      "nameKo": "제이크 (심재윤)",
+      "nameEs": "Jake (Sim Jaeyun)",
+      "namePt": "Jake (Sim Jaeyun)",
+      "title": "The Aussie Golden Retriever & Heartthrob Charmer",
+      "titleKo": "호주 골든 리트리버 & 설렘 유발 다정남",
+      "titleEs": "El Golden Retriever Australiano y Encanto Puro",
+      "titlePt": "O Golden Retriever Australiano e Puro Charme",
+      "subtitle": "Puppy Energy · Sporty & Curious · Warmest Listener",
+      "subtitleKo": "멍뭉미 폭발 · 운동과 물리학 러버 · 스윗한 공감 요정",
+      "subtitleEs": "Energía de Cachorro · Deportista y Curioso · Corazón Dulce",
+      "subtitlePt": "Energia de Cachorrinho · Esportista e Curioso · Coração Doce",
+      "skzoo": "Golden Puppy (심장 폭격 리트리버 🐶💛)",
+      "skzooKo": "골든 리트리버 댕댕이 (Golden Puppy 🐶💛)",
+      "skzooEs": "Golden Retriever (Golden Puppy 🐶💛)",
+      "skzooPt": "Golden Retriever (Golden Puppy 🐶💛)",
+      "emoji": "🐶",
+      "traits": [
+        "Golden Retriever Positivity",
+        "Sincere & Approachable",
+        "Rapid Growth & Grit"
+      ],
+      "traitsKo": [
+        "누구에게나 호감을 주는 골든 리트리버 친화력",
+        "다정하고 솔직한 리액션 부자",
+        "한 번 목표를 잡으면 무섭게 성장하는 끈기"
+      ],
+      "traitsEs": [
+        "Positividad de Golden Retriever",
+        "Sincero, Cálido y Cercano",
+        "Crecimiento y Esfuerzo Constante"
+      ],
+      "traitsPt": [
+        "Positividade de Golden Retriever",
+        "Sincero, Caloroso e Acessível",
+        "Crescimento e Esforço Constante"
+      ],
+      "description": "Like Jake, you have irresistible 'Golden Retriever' energy! You are friendly, affectionate, and genuinely curious about the world. People feel instantly comfortable around your warm smile, yet they are always amazed by how fiercely you work behind the scenes to achieve your goals.",
+      "descriptionKo": "제이크처럼 보는 사람까지 기분 좋게 만드는 대형견 매력의 소유자! 다정한 눈빛과 리액션으로 누구와도 금세 친해지며, 부드러운 인상 뒤에 목표를 끝까지 이뤄내는 강한 승부욕을 품고 있습니다.",
+      "descriptionEs": "Como Jake, tienes una energía de 'Golden Retriever' irresistible. Eres amable, cercano y curioso; todos se sienten cómodos con tu sonrisa, mientras admiran tu enorme dedicación.",
+      "descriptionPt": "Como Jake, você tem uma energia de 'Golden Retriever' irresistível! É gentil, acessível e curioso; todos se sentem confortáveis com seu sorriso, enquanto admiram sua enorme dedicação.",
+      "bestMatchId": "sunghoon",
+      "bestMatchName": "Sunghoon",
+      "bestMatchNameKo": "성훈 (Sunghoon)",
+      "bestMatchNameEs": "Sunghoon",
+      "bestMatchNamePt": "Sunghoon",
+      "bestMatchReason": "The legendary JakeHoon (DaengJjong) soulmates! Warm puppy Jake and cool ice prince Sunghoon are inseparable.",
+      "bestMatchReasonKo": "전설의 댕쭝즈(제이크 & 성훈) 케미! 따뜻한 골든 리트리버 제이크와 시크한 얼음왕자 성훈은 떼려야 뗄 수 없는 단짝입니다.",
+      "bestMatchReasonEs": "¡Almas gemelas JakeHoon! La calidez de Jake y el estilo cool de Sunghoon son inseparables.",
+      "bestMatchReasonPt": "Almas gêmeas JakeHoon! O calor de Jake e o estilo cool de Sunghoon são inseparáveis.",
+      "colorHex": "#eab308",
+      "bgGradient": "from-amber-500 via-yellow-600 to-slate-900"
+    },
+    "sunghoon": {
+      "id": "sunghoon",
+      "name": "Sunghoon (Park Sunghoon)",
+      "nameKo": "성훈 (박성훈)",
+      "nameEs": "Sunghoon (Park Sunghoon)",
+      "namePt": "Sunghoon (Park Sunghoon)",
+      "title": "The Elegant Ice Prince & Secretly Loud Prankster",
+      "titleKo": "피겨 얼음왕자 비주얼 & 알고 보면 장난기 만렙 개그맨",
+      "titleEs": "El Príncipe del Hielo Elegante y Bromista Secreto",
+      "titlePt": "O Príncipe do Gelo Elegante e Brincalhão Secreto",
+      "subtitle": "Figure Skater Grace · Visual Perfection · Unexpected Loud Laugh",
+      "subtitleKo": "피겨 스케이터의 기품 · 냉미남 정석 · 친해지면 제일 시끄러운 반전 매력",
+      "subtitleEs": "Gracia sobre Hielo · Visual Impecable · Risa Contagiosa",
+      "subtitlePt": "Graça no Gelo · Visual Impecável · Risada Contagiante",
+      "skzoo": "Ice Penguin / White Puppy (얼음왕자 백구 🐧❄️)",
+      "skzooKo": "얼음왕자 백구 (Ice Prince 🐧❄️)",
+      "skzooEs": "Príncipe del Hielo (Ice Prince 🐧❄️)",
+      "skzooPt": "Príncipe do Gelo (Ice Prince 🐧❄️)",
+      "emoji": "❄️",
+      "traits": [
+        "Cool & Poised First Impression",
+        "Iron Self-Discipline",
+        "Hilariously Goofy with Close Friends"
+      ],
+      "traitsKo": [
+        "첫인상은 다가서기 힘든 차가운 냉미남/냉미녀",
+        "운동선수처럼 철저한 자기관리와 성실함",
+        "친한 친구들 앞에서는 봉인 해제되는 개그 욕심"
+      ],
+      "traitsEs": [
+        "Primera Impresión Elegante y Reservada",
+        "Autodisciplina de Atleta",
+        "Súper Divertido en Confianza"
+      ],
+      "traitsPt": [
+        "Primeira Impressão Elegante e Reservada",
+        "Autodisciplina de Atleta",
+        "Super Divertido com os Amigos Íntimos"
+      ],
+      "description": "Like Sunghoon, strangers think you are an untouchable, cool 'Ice Prince' because of your poised posture and calm demeanor. But once someone enters your inner circle, they discover you have the loudest laugh, love silly dad jokes, and have athlete-level discipline.",
+      "descriptionKo": "성훈처럼 처음 보는 사람들은 차갑고 도도한 얼음왕자/얼음공주라고 생각하지만, 친해지고 나면 단톡방과 모임에서 제일 크게 웃고 장난치는 반전 매력의 소유자입니다!",
+      "descriptionEs": "Como Sunghoon, quienes no te conocen piensan que eres distante y frío como un príncipe del hielo; pero tus amigos cercanos saben que tienes la risa más fuerte y un humor encantador.",
+      "descriptionPt": "Como Sunghoon, quem não conhece acha que você é distante como um príncipe do gelo; mas seus amigos íntimos sabem que você tem a risada mais alta e um humor encantador.",
+      "bestMatchId": "jake",
+      "bestMatchName": "Jake",
+      "bestMatchNameKo": "제이크 (Jake)",
+      "bestMatchNameEs": "Jake",
+      "bestMatchNamePt": "Jake",
+      "bestMatchReason": "Jake melts Sunghoon's shyness in seconds, bringing out his brightest smiles and chaotic jokes.",
+      "bestMatchReasonKo": "성훈의 수줍은 얼음을 단숨에 녹여버리는 제이크와 함께할 때 가장 유쾌한 에너지가 터져 나옵니다.",
+      "bestMatchReasonEs": "Jake derrite la timidez de Sunghoon al instante, sacando su lado más divertido.",
+      "bestMatchReasonPt": "Jake derrete a timidez de Sunghoon na hora, revelando seu lado mais divertido.",
+      "colorHex": "#0284c7",
+      "bgGradient": "from-sky-600 via-blue-800 to-slate-950"
+    },
+    "sunoo": {
+      "id": "sunoo",
+      "name": "Sunoo (Kim Sunoo)",
+      "nameKo": "선우 (김선우)",
+      "nameEs": "Sunoo (Kim Sunoo)",
+      "namePt": "Sunoo (Kim Sunoo)",
+      "title": "The Sunshine Vitamin & Expressive Desert Fox",
+      "titleKo": "인간 복숭아 행복 비타민 & 매력만점 사막여우",
+      "titleEs": "La Vitamina de Sol y Zorro del Desierto Expresivo",
+      "titlePt": "A Vitamina de Sol e Raposa do Deserto Expressiva",
+      "subtitle": "Selfie King · Mint Choco Enthusiast · Honest Emotional Depth",
+      "subtitleKo": "셀카 장인 · 민트초코 & 떡볶이 러버 · 풍부한 감수성과 표현력",
+      "subtitleEs": "Rey de las Selfies · Fan del Mint Choco · Emoción Auténtica",
+      "subtitlePt": "Rei das Selfies · Fã de Chocomenta · Emoção Autêntica",
+      "skzoo": "Desert Fox (사막여우 🦊🍑)",
+      "skzooKo": "사막여우 썬 (Desert Fox 🦊🍑)",
+      "skzooEs": "Zorro del Desierto (Desert Fox 🦊🍑)",
+      "skzooPt": "Raposa do Deserto (Desert Fox 🦊🍑)",
+      "emoji": "🦊",
+      "traits": [
+        "Radiant Mood-Maker",
+        "Unapologetic Taste & Style",
+        "Deeply Empathetic & Perceptive"
+      ],
+      "traitsKo": [
+        "어디서나 분위기를 밝히는 비타민 에너지",
+        "민트초코처럼 호불호 앞에서도 당당한 나만의 취향",
+        "섬세한 감수성과 깊은 공감 능력"
+      ],
+      "traitsEs": [
+        "Energía Radiante que Alegra a Todos",
+        "Gustos Auténticos y Personalidad Única",
+        "Sensibilidad y Empatía Profundas"
+      ],
+      "traitsPt": [
+        "Energia Radiante que Alegra a Todos",
+        "Gostos Autênticos e Personalidade Única",
+        "Sensibilidade e Empatia Profundas"
+      ],
+      "description": "Like Sunoo, you are a walking ray of sunshine with a desert-fox wink! You know your best angles, love sweet treats (yes, even mint choco!) and spicy tteokbokki, and express your emotions with refreshing honesty. Beneath your cute exterior, you are remarkably perceptive and resilient.",
+      "descriptionKo": "선우처럼 존재만으로도 주변을 환하게 밝히는 인간 복숭아! 풍부한 표정과 솔직한 감정 표현으로 사랑받으며, 귀여운 외면 속에 누구보다 섬세하고 단단한 속마음을 지녔습니다.",
+      "descriptionEs": "Como Sunoo, eres un rayo de sol con el encanto de un zorro del desierto. Expresas tus emociones con sinceridad refrescante, amas los postres dulces y tienes una gran fortaleza interior.",
+      "descriptionPt": "Como Sunoo, você é um raio de sol com o charme de uma raposa do deserto! Expressa suas emoções com sinceridade refrescante, ama doces e tem uma grande força interior.",
+      "bestMatchId": "niki",
+      "bestMatchName": "Ni-ki",
+      "bestMatchNameKo": "니키 (Ni-ki)",
+      "bestMatchNameEs": "Ni-ki",
+      "bestMatchNamePt": "Ni-ki",
+      "bestMatchReason": "SunKi opposites-attract magic! Sunshine Sunoo and cool maknae Ni-ki create the sweetest, most iconic dynamic.",
+      "bestMatchReasonKo": "전설의 썬키(SunKi) 케미! 햇살처럼 밝은 선우와 시크한 막내 니키의 정반대 매력이 만나 최고의 케미를 만듭니다.",
+      "bestMatchReasonEs": "¡La magia SunKi! Los polos opuestos de Sunoo y Ni-ki crean la dinámica más tierna.",
+      "bestMatchReasonPt": "A magia SunKi! Os polos opostos de Sunoo e Ni-ki criam a dinâmica mais fofa.",
+      "colorHex": "#ec4899",
+      "bgGradient": "from-pink-500 via-rose-500 to-purple-950"
+    },
+    "niki": {
+      "id": "niki",
+      "name": "Ni-ki (Nishimura Riki)",
+      "nameKo": "니키 (니시무라 리키)",
+      "nameEs": "Ni-ki (Nishimura Riki)",
+      "title": "The Dance Prodigy & Cool-Hearted Golden Maknae",
+      "titleKo": "천재 춤선 퍼포먼스 킹 & 시크한 매력의 폭풍성장 막내",
+      "titleEs": "El Prodigio del Baile y Maknae de Estilo Impecable",
+      "titlePt": "O Prodígio da Dança e Maknae de Estilo Impecável",
+      "subtitle": "Choreography Genius · Streetwear Icon · Playful Little Brother",
+      "subtitleKo": "안무 습득력 1초 컷 · 스트릿 패션 아이콘 · 형들 놀리는 장난꾸러기 막내",
+      "subtitleEs": "Genio de la Coreografía · Icono Streetwear · Maknae Juguetón",
+      "subtitlePt": "Gênio da Coreografia · Ícone Streetwear · Maknae Brincalhão",
+      "skzoo": "Baby Puma / Duckling (아기 퓨마 오리 🐆🐥)",
+      "skzooKo": "아기 퓨마 오리 (Baby Puma 🐆🐥)",
+      "skzooEs": "Puma Bebé (Baby Puma 🐆🐥)",
+      "skzooPt": "Bebê Puma (Baby Puma 🐆🐥)",
+      "emoji": "🐆",
+      "traits": [
+        "Laser-Focused Prodigy",
+        "Effortless Streetwear Drip",
+        "Playful Prankster with Friends"
+      ],
+      "traitsKo": [
+        "한 번 본 것은 완벽히 내 것으로 만드는 천재성",
+        "타고난 힙합·스트릿 패션 감각",
+        "겉은 시크하지만 친한 사람에겐 장난기 가득"
+      ],
+      "traitsEs": [
+        "Talento Prodigioso y Enfoque Total",
+        "Estilo Urbano Impecable",
+        "Bromista Cariñoso en Confianza"
+      ],
+      "traitsPt": [
+        "Talento Prodigioso e Foco Total",
+        "Estilo Urbano Impecável",
+        "Brincalhão Carinhoso com os Próximos"
+      ],
+      "description": "Like Ni-ki, you have a rare artistic drive and master new skills at lightning speed when you care about them. You carry yourself with a cool, mature streetwear vibe, yet around your closest friends you love pulling harmless pranks and showing your loyal, sentimental side.",
+      "descriptionKo": "니키처럼 좋아하는 분야에서는 타의 추종을 불허하는 몰입도와 천재적인 감각을 발휘하는 타입! 겉으로는 시크하고 어른스러워 보이지만, 내 사람들에게는 장난기도 많고 정이 깊은 매력을 지녔습니다.",
+      "descriptionEs": "Como Ni-ki, dominas lo que te apasiona a la velocidad de la luz. Tienes un estilo urbano impecable y maduro, pero con tus mejores amigos eres juguetón, leal y muy sentimental.",
+      "descriptionPt": "Como Ni-ki, você domina o que ama na velocidade da luz. Tem um estilo urbano impecável e maduro, mas com seus melhores amigos é brincalhão, leal e muito sentimental.",
+      "bestMatchId": "sunoo",
+      "bestMatchName": "Sunoo",
+      "bestMatchNameKo": "선우 (Sunoo)",
+      "bestMatchNameEs": "Sunoo",
+      "bestMatchNamePt": "Sunoo",
+      "bestMatchReason": "Ni-ki always gravitates toward Sunoo's warm sunshine energy, creating an adorable maknae-line bond.",
+      "bestMatchReasonKo": "시크한 니키도 무장해제시키는 선우의 햇살 에너지가 만나면 세상에서 가장 귀여운 막내라인 케미가 완성됩니다.",
+      "bestMatchReasonEs": "Ni-ki siempre busca la calidez radiante de Sunoo, formando un dúo adorable.",
+      "bestMatchReasonPt": "Ni-ki sempre busca o calor radiante de Sunoo, formando uma dupla adorável.",
+      "colorHex": "#dc2626",
+      "bgGradient": "from-red-700 via-zinc-900 to-black"
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "question": "What does your ideal late-night recharge look like after a busy day?",
+      "questionKo": "바쁜 하루가 끝난 늦은 밤, 나를 가장 행복하게 만드는 힐링 루틴은?",
+      "questionEs": "¿Cómo es tu noche perfecta para recargar energía tras un día ocupado?",
+      "questionPt": "Como é sua noite perfeita para recarregar as energias após um dia cheio?",
+      "emoji": "🌙",
+      "options": [
+        {
+          "id": "A",
+          "text": "Cooking a steaming bowl of spicy ramen at midnight and locking into a gaming session",
+          "textKo": "야식으로 얼큰한 라면 한 그릇 끓여 먹고 헤드셋 끼고 게임에 몰입하기",
+          "textEs": "Preparar un buen plato de ramen caliente a medianoche y jugar videojuegos",
+          "textPt": "Preparar um prato de lámen quente à meia-noite e jogar videogame",
+          "scores": { "heeseung": 3, "jake": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Taking a quiet evening walk with headphones on, organizing tomorrow's plans, and checking in on friends",
+          "textKo": "이어폰을 끼고 시원한 밤공기를 마시며 산책하고 내일 일정을 차분히 정리하기",
+          "textEs": "Dar un paseo nocturno tranquilo con música y organizar el día siguiente",
+          "textPt": "Dar uma caminhada noturna tranquila ouvindo música e organizar o dia seguinte",
+          "scores": { "jungwon": 3, "sunghoon": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Putting on a face mask, eating sweet mint-choco ice cream or tteokbokki, and taking cute selfies",
+          "textKo": "마스크팩 붙이고 달콤한 민트초코 아이스크림이나 떡볶이 먹으며 기분 전환하기",
+          "textEs": "Cuidar mi piel, comer helado dulce o tteokbokki y ver videos divertidos",
+          "textPt": "Fazer skincare, comer sorvete doce ou tteokbokki e ver vídeos divertidos",
+          "scores": { "sunoo": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Practicing guitar chords, curating tomorrow's outfit, or watching dance choreography videos until 2 AM",
+          "textKo": "일렉 기타를 연주하거나 내일 입을 패션을 코디하고 새벽까지 댄스 영상 파고들기",
+          "textEs": "Practicar guitarra, armar mi outfit de mañana o ver videos de coreografías",
+          "textPt": "Tocar guitarra, montar o look de amanhã ou assistir a vídeos de coreografia",
+          "scores": { "jay": 2, "niki": 3 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "question": "What do people usually say about your first impression vs. the real you?",
+      "questionKo": "사람들이 말하는 나의 '첫인상'과 '친해진 후 실제 모습'의 차이는?",
+      "questionEs": "¿Qué dice la gente sobre tu primera impresión comparada con tu verdadero yo?",
+      "questionPt": "O que as pessoas dizem sobre sua primeira impressão comparada a quem você realmente é?",
+      "emoji": "❄️",
+      "options": [
+        {
+          "id": "A",
+          "text": "'You looked like an untouchable Ice Prince/Princess at first, but you're actually the loudest comedian!'",
+          "textKo": "'처음엔 차가운 얼음왕자/공주인 줄 알았는데, 친해지니까 세상에서 제일 웃기고 시끄러워!'",
+          "textEs": "'¡Parecías un príncipe de hielo inalcanzable, pero eres el más divertido del grupo!'",
+          "textPt": "'Você parecia um príncipe do gelo intocável, mas na verdade é o mais engraçado da turma!'",
+          "scores": { "sunghoon": 3, "jay": 1 }
+        },
+        {
+          "id": "B",
+          "text": "'You immediately felt like a warm, friendly puppy from the very first hello!'",
+          "textKo": "'첫인상부터 꼬리 흔드는 골든 리트리버나 햇살처럼 밝고 다정해서 금방 편해졌어!'",
+          "textEs": "'¡Desde el primer saludo transmitiste la calidez y alegría de un cachorro amigable!'",
+          "textPt": "'Desde o primeiro oi você passou a energia calorosa e alegre de um golden retriever!'",
+          "scores": { "jake": 3, "sunoo": 2 }
+        },
+        {
+          "id": "C",
+          "text": "'You seemed quiet and polite, then suddenly blew everyone away with your crazy talent on stage.'",
+          "textKo": "'평소엔 조용하고 순둥해 보였는데, 본업 들어가니까 눈빛이 완전히 돌변해서 깜짝 놀랐어.'",
+          "textEs": "'Parecías tranquilo y reservado, hasta que dejaste a todos sin aliento con tu talento.'",
+          "textPt": "'Você parecia calmo e tímido, até deixar todo mundo sem fôlego com seu talento.'",
+          "scores": { "heeseung": 3, "niki": 2 }
+        },
+        {
+          "id": "D",
+          "text": "'You looked super cute with those dimples, but you are actually the most reliable leader here.'",
+          "textKo": "'보조개 때문에 귀여운 막내인 줄 알았는데, 누구보다 어른스럽고 결단력 있어서 놀랐어.'",
+          "textEs": "'Te veías súper tierno, pero resultaste ser la persona más madura y confiable.'",
+          "textPt": "'Você parecia super fofo, mas revelou ser a pessoa mais madura e confiável.'",
+          "scores": { "jungwon": 3 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "question": "You and your friends are cooking a big dinner together at a vacation house. What is your role?",
+      "questionKo": "친구들과 여행지에 가서 다 같이 저녁 요리를 만든다! 나의 포지션은?",
+      "questionEs": "Tus amigos y tú preparan una gran cena juntos en un viaje. ¿Cuál es tu rol?",
+      "questionPt": "Você e seus amigos estão preparando um grande jantar juntos em uma viagem. Qual é o seu papel?",
+      "emoji": "🍳",
+      "options": [
+        {
+          "id": "A",
+          "text": "The Head Chef: Put on an apron, sear the steaks to perfection, and plate restaurant-quality pasta",
+          "textKo": "메인 셰프 등판! 앞치마를 두르고 스테이크 굽기부터 파스타 소스까지 완벽하게 요리한다",
+          "textEs": "El Chef Principal: Me pongo el delantal y cocino carne y pasta con calidad de restaurante",
+          "textPt": "O Chef Principal: Coloco o avental e preparo carne e massa dignas de restaurante",
+          "scores": { "jay": 3, "heeseung": 1 }
+        },
+        {
+          "id": "B",
+          "text": "The Enthusiastic Sous-Chef: Grill the meat outside, hype up the chef, and taste-test everything with a thumbs-up",
+          "textKo": "열정 보조 & 리액션 담당! 옆에서 고기 굽는 걸 돕고 한 입 먹자마자 '와 진짜 대박이다!' 폭풍 칭찬",
+          "textEs": "El Ayudante Entusiasta: Ayudo en la parrilla, pruebo todo y aplaudo al chef con emoción",
+          "textPt": "O Ajudante Entusiasta: Ajudo na churrasqueira, provo tudo e elogio o chef com empolgação",
+          "scores": { "jake": 3, "jungwon": 1 }
+        },
+        {
+          "id": "C",
+          "text": "The Dessert & Vibe Curator: Set up the aesthetics, bring out sweet treats, and film cute vlog clips",
+          "textKo": "디저트와 감성 세팅! 예쁘게 테이블을 꾸미고 달콤한 디저트를 준비하며 브이로그 영상을 남긴다",
+          "textEs": "El Encargado del Postre y Ambiente: Decoro la mesa, traigo dulces y grabo recuerdos",
+          "textPt": "O Curador de Sobremesas e Clima: Decoro a mesa, trago doces e gravo vídeos fofos",
+          "scores": { "sunoo": 3, "sunghoon": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Playfully sneak bites of food from the kitchen while teasing the older friends and setting the music",
+          "textKo": "블루투스 스피커로 힙한 음악을 틀어놓고, 요리하는 형/언니들 옆에서 장난치며 한 입씩 뺏어 먹기",
+          "textEs": "Poner buena música, hacer bromas en la cocina y probar bocados antes de que sirvan",
+          "textPt": "Colocar música boa, fazer brincadeiras na cozinha e roubar petiscos antes de servirem",
+          "scores": { "niki": 3 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "question": "When learning a difficult new choreography or skill, what is your approach?",
+      "questionKo": "어렵고 새로운 기술이나 안무를 배울 때, 나만의 마스터 방식은?",
+      "questionEs": "Al aprender una habilidad o coreografía difícil, ¿cuál es tu método?",
+      "questionPt": "Ao aprender uma habilidade ou coreografia difícil, qual é o seu método?",
+      "emoji": "🔥",
+      "options": [
+        {
+          "id": "A",
+          "text": "Watch it once, absorb the rhythm instantly, and add my own unmistakable swagger and groove",
+          "textKo": "한 번 보면 동선과 그루브를 단숨에 흡수하고, 나만의 독보적인 춤선과 바이브를 입힌다",
+          "textEs": "Lo veo una vez, capto el ritmo al instante y le doy mi propio estilo único",
+          "textPt": "Vejo uma vez, absorvo o ritmo na hora e coloco meu próprio estilo único",
+          "scores": { "niki": 3, "heeseung": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Drill the fundamentals with athlete-level discipline until every angle and posture is flawless",
+          "textKo": "운동선수 같은 정신력으로 기본기부터 각도 하나까지 오차 없이 몸에 익을 때까지 반복한다",
+          "textEs": "Practico con disciplina de atleta hasta que cada ángulo y postura sea impecable",
+          "textPt": "Treino com disciplina de atleta até que cada ângulo e postura fiquem impecáveis",
+          "scores": { "sunghoon": 3, "jungwon": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Refuse to give up no matter how tough it gets—fueling myself with pure grit and determination",
+          "textKo": "'안 되면 될 때까지!' 오기와 끈기로 밤늦게까지 남아서 끝내 한계를 돌파해 낸다",
+          "textEs": "Jamás me rindo sin importar lo difícil que sea; mi determinación lo vence todo",
+          "textPt": "Jamais desisto, não importa o quão difícil seja; minha determinação vence tudo",
+          "scores": { "jay": 3, "jake": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Focus on facial expressions, emotional storytelling, and captivating the audience's heart",
+          "textKo": "곡의 분위기에 맞는 표정 연기와 감정선에 집중해서 보는 사람의 시선을 단숨에 사로잡는다",
+          "textEs": "Me enfoco en la expresión facial y la emoción para cautivar al público al instante",
+          "textPt": "Foco nas expressões faciais e na emoção para cativar o público instantaneamente",
+          "scores": { "sunoo": 3 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "question": "Pick an airport / daily outfit aesthetic that feels 100% you!",
+      "questionKo": "평소 내 옷장이나 공항 패션으로 입었을 때 가장 잘 어울리는 스타일은?",
+      "questionEs": "¡Elige el estilo de ropa diario o de aeropuerto que más te representa!",
+      "questionPt": "Escolha o estilo de roupa do dia a dia ou de aeroporto que mais combina com você!",
+      "emoji": "🧥",
+      "options": [
+        {
+          "id": "A",
+          "text": "Rock-chic luxury: leather jacket, silver jewelry, dark denim, and effortless cool",
+          "textKo": "시크한 록스타 무드: 핏 좋은 레더 재킷, 실버 액세서리와 다크 데님 매치",
+          "textEs": "Rock-chic de lujo: chaqueta de cuero, joyería plateada y mezclilla oscura",
+          "textPt": "Rock-chic de luxo: jaqueta de couro, acessórios prateados e jeans escuro",
+          "scores": { "jay": 3, "niki": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Clean minimalist tailored look: crisp coat, monochrome knit, and sleek model proportions",
+          "textKo": "깔끔한 미니멀 남친/여친룩: 핏이 살아있는 롱코트와 모노톤 니트의 정갈한 실루엣",
+          "textEs": "Minimalismo elegante: abrigo estructurado, tonos neutros y porte de modelo",
+          "textPt": "Minimalismo elegante: casaco estruturado, tons neutros e postura de modelo",
+          "scores": { "sunghoon": 3, "jungwon": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Cozy oversized streetwear: vintage hoodie, baggy cargos, headphones, and a baseball cap",
+          "textKo": "편안하고 힙한 스트릿 룩: 오버핏 빈티지 후디, 와이드 카고 팬츠에 볼캡과 헤드폰",
+          "textEs": "Streetwear cómodo: sudadera oversize, pantalones cargo, gorra y audífonos",
+          "textPt": "Streetwear confortável: moletom oversized, calça cargo, boné e fones de ouvido",
+          "scores": { "heeseung": 2, "jake": 2, "niki": 2 }
+        },
+        {
+          "id": "D",
+          "text": "Soft pastel cardigans, cute berets or bags, and fresh, bright colors that pop in photos",
+          "textKo": "화사하고 러블리한 파스텔 니트 가디건, 포인트 비니나 가방으로 완성한 상큼한 코디",
+          "textEs": "Cárdigan en tonos suaves, accesorios adorables y colores luminosos",
+          "textPt": "Cardigã em tons suaves, acessórios fofos e cores iluminadas",
+          "scores": { "sunoo": 3 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "question": "Your friend is feeling down after a rough week. How do you cheer them up?",
+      "questionKo": "친한 친구가 힘든 일을 겪고 풀이 죽어 있을 때, 나만의 위로 방식은?",
+      "questionEs": "Tu mejor amigo está triste tras una semana difícil. ¿Cómo lo animas?",
+      "questionPt": "Seu melhor amigo está triste após uma semana difícil. Como você o anima?",
+      "emoji": "🫂",
+      "options": [
+        {
+          "id": "A",
+          "text": "Stay right beside them like a loyal puppy, listen to every word, and take them out for their favorite meal",
+          "textKo": "든든한 강아지처럼 옆에 딱 붙어서 이야기를 다 들어주고, 맛있는 음식을 사주며 기분을 풀어준다",
+          "textEs": "Me quedo a su lado incondicionalmente, lo escucho y lo invito a su comida favorita",
+          "textPt": "Fico ao lado dele incondicionalmente, ouço tudo e o levo para comer seu prato favorito",
+          "scores": { "jake": 3, "jay": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Listen calmly without interrupting, then offer warm, grounded reassurance that puts their mind at ease",
+          "textKo": "조용히 끝까지 경청한 뒤, 친구의 마음이 한결 가벼워지는 성숙하고 따뜻한 한마디를 건넨다",
+          "textEs": "Escucho con serenidad y le doy un consejo maduro y reconfortante que le devuelve la paz",
+          "textPt": "Ouço com serenidade e dou um conselho maduro e acolhedor que devolve a paz",
+          "scores": { "jungwon": 3, "heeseung": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Bring them sweet desserts, send cute voice notes, and make them laugh until they forget their worries",
+          "textKo": "달콤한 디저트를 사 들고 가서 애교와 유쾌한 수다로 친구가 웃을 때까지 에너지를 불어넣는다",
+          "textEs": "Le llevo postres dulces y le saco mil sonrisas con mi energía positiva",
+          "textPt": "Levo doces gostosos e arranco mil sorrisos com minha energia positiva",
+          "scores": { "sunoo": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Tease them playfully so it doesn't get too heavy, then quietly do something thoughtful for them",
+          "textKo": "분위기가 너무 무거워지지 않게 장난치며 웃기다가, 뒤에서 조용히 필요한 걸 챙겨준다",
+          "textEs": "Bromeo un poco para aligerar el ambiente y luego tengo un gesto tierno en silencio",
+          "textPt": "Brinco um pouco para aliviar o clima e depois faço um gesto carinhoso em silêncio",
+          "scores": { "sunghoon": 2, "niki": 2 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "question": "If you had a whole afternoon free for a hobby, which one sounds most fun?",
+      "questionKo": "오후 내내 자유 시간이 주어졌을 때 가장 하고 싶은 취미 활동은?",
+      "questionEs": "Si tuvieras toda la tarde libre para un pasatiempo, ¿cuál elegirías?",
+      "questionPt": "Se você tivesse a tarde toda livre para um hobby, qual escolheria?",
+      "emoji": "⚡",
+      "options": [
+        {
+          "id": "A",
+          "text": "Playing soccer, billiards, or working out outdoors with my dogs and best friends",
+          "textKo": "잔디밭에서 반려견과 뛰어놀거나 축구, 당구, 야외 스포츠 즐기기",
+          "textEs": "Jugar fútbol, billar o hacer deporte al aire libre con amigos y mascotas",
+          "textPt": "Jogar futebol, sinuca ou praticar esporte ao ar livre com amigos e pets",
+          "scores": { "jake": 3, "niki": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Composing melodies in a studio, playing basketball, or singing my favorite R&B tracks",
+          "textKo": "작업실에서 R&B 곡을 부르고 작곡하거나, 코트에서 농구 한 게임 뛰기",
+          "textEs": "Cantar R&B, componer música en el estudio o jugar un partido de baloncesto",
+          "textPt": "Cantar R&B, compor música no estúdio ou jogar uma partida de basquete",
+          "scores": { "heeseung": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Exploring a gourmet coffee roastery, learning a foreign language, or watching history/science docs",
+          "textKo": "스페셜티 커피 로스터리 탐방, 외국어 공부, 혹은 흥미로운 다큐멘터리 정주행",
+          "textEs": "Explorar cafeterías de especialidad, aprender idiomas o ver documentales interesantes",
+          "textPt": "Explorar cafeterias especiais, aprender idiomas ou assistir a documentários interessantes",
+          "scores": { "jay": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Ice skating, weight training, or taking a peaceful walk while listening to emotional pop ballads",
+          "textKo": "스케이트나 웨이트 트레이닝으로 땀을 흘리거나, 감성 팝송을 들으며 산책하기",
+          "textEs": "Entrenar en el gimnasio, patinar o caminar escuchando baladas pop emotivas",
+          "textPt": "Treinar na academia, patinar ou caminhar ouvindo baladas pop emocionantes",
+          "scores": { "sunghoon": 2, "jungwon": 2 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "question": "In a funny variety show game with your friends, what is your strategy?",
+      "questionKo": "친구들과 자존심이 걸린 예능 게임을 할 때 나의 스타일은?",
+      "questionEs": "En un juego competitivo y divertido con amigos, ¿cuál es tu estrategia?",
+      "questionPt": "Em um jogo competitivo e divertido com os amigos, qual é a sua estratégia?",
+      "emoji": "🏆",
+      "options": [
+        {
+          "id": "A",
+          "text": "Go all-in with 200% passion! Even if I lose and become a hilarious meme, I never hold back",
+          "textKo": "열정 200% 풀가동! 지더라도 레전드 웃긴 짤을 남기며 온몸을 불사른다",
+          "textEs": "¡Lo doy todo al 200%! Aunque pierda y me vuelva un meme viviente, jamás me guardo nada",
+          "textPt": "Dou 200% de mim! Mesmo que eu perca e vire meme, nunca jogo pela metade",
+          "scores": { "jay": 3, "sunghoon": 2 }
+        },
+        {
+          "id": "B",
+          "text": "Stay calm and sharp—quietly figure out the rules and win with unexpected physical reflexes",
+          "textKo": "조용히 룰을 파악한 뒤 놀라운 순발력과 집중력으로 조용히 1등을 차지한다",
+          "textEs": "Mantengo la calma, entiendo el truco del juego y gano con reflejos rápidos",
+          "textPt": "Mantenho a calma, entendo o truque do jogo e venço com reflexos rápidos",
+          "scores": { "jungwon": 3, "heeseung": 2 }
+        },
+        {
+          "id": "C",
+          "text": "Playful chaos! Bend the rules a little to tease my friends and pull off a dramatic comeback",
+          "textKo": "형/언니들을 살살 약 올리는 장난꾸러기 모드! 결정적인 순간에 승부욕을 발휘해 역전한다",
+          "textEs": "¡Caos divertido! Molesto con cariño a mis amigos y logro una victoria épica",
+          "textPt": "Caos divertido! Provoco os amigos com carinho e consigo uma virada épica",
+          "scores": { "niki": 3, "jake": 1 }
+        },
+        {
+          "id": "D",
+          "text": "Win over the referee with dramatic cute reactions, expressive pouts, and pure charm!",
+          "textKo": "심판의 마음까지 사르르 녹이는 100점짜리 리액션과 애교로 특별 점수를 따낸다!",
+          "textEs": "¡Conquisto a todos con reacciones dramáticas, ternura y carisma puro!",
+          "textPt": "Conquisto todo mundo com reações dramáticas, fofura e puro carisma!",
+          "scores": { "sunoo": 3 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "question": "Which compliment would mean the absolute most to you?",
+      "questionKo": "누군가에게 들었을 때 가장 기분 좋고 감동적인 칭찬은?",
+      "questionEs": "¿Qué cumplido significaría más para ti?",
+      "questionPt": "Qual elogio teria o maior significado para você?",
+      "emoji": "💜",
+      "options": [
+        {
+          "id": "A",
+          "text": "'You can always be trusted—your calm leadership holds everyone together.'",
+          "textKo": "'네가 있어서 우리 팀이 흔들리지 않아. 넌 정말 믿음직하고 성숙한 리더야.'",
+          "textEs": "'Siempre se puede confiar en ti; tu liderazgo sereno mantiene unido a todo el grupo.'",
+          "textPt": "'Sempre dá para confiar em você; sua liderança serena mantém todo mundo unido.'",
+          "scores": { "jungwon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "'Your stage presence, vocals, and dance lines are pure art—you were born for the spotlight.'",
+          "textKo": "'네 목소리와 춤선은 진짜 예술이야. 넌 무대 위에 있을 때 제일 빛나.'",
+          "textEs": "'Tu presencia escénica, voz y baile son arte puro; naciste para brillar.'",
+          "textPt": "'Sua presença de palco, voz e dança são pura arte; você nasceu para brilhar.'",
+          "scores": { "heeseung": 2, "niki": 2, "sunghoon": 2 }
+        },
+        {
+          "id": "C",
+          "text": "'Your sincerity and loyalty are unmatched—anyone who is your friend is truly lucky.'",
+          "textKo": "'너처럼 진국이고 다정한 친구를 둔 건 내 인생 최고의 행운이야.'",
+          "textEs": "'Tu lealtad y buen corazón no tienen igual; qué suerte tenerte como amigo.'",
+          "textPt": "'Sua lealdade e bom coração são únicos; que sorte ter você como amigo.'",
+          "scores": { "jay": 2, "jake": 3 }
+        },
+        {
+          "id": "D",
+          "text": "'Your bright energy and expressive smile saved my whole day!'",
+          "textKo": "'네 밝은 미소와 긍정 에너지 덕분에 오늘 하루 우울했던 게 전부 사라졌어!'",
+          "textEs": "'¡Tu sonrisa radiante y tu energía positiva me alegraron todo el día!'",
+          "textPt": "'Seu sorriso radiante e sua energia positiva salvaram meu dia inteiro!'",
+          "scores": { "sunoo": 3 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "question": "Pick an ENHYPEN anthem that matches your personal vibe!",
+      "questionKo": "내 심장을 가장 뛰게 만드는 엔하이픈(ENHYPEN) 최애 타이틀곡 바이브는?",
+      "questionEs": "¡Elige el himno de ENHYPEN que mejor conecta con tu vibra!",
+      "questionPt": "Escolha o hino do ENHYPEN que mais conecta com a sua vibe!",
+      "emoji": "🦇",
+      "options": [
+        {
+          "id": "A",
+          "text": "'Bite Me' / 'Chaconne': Dark, hypnotic elegance and fateful vampire allure",
+          "textKo": "'Bite Me' / 'Chaconne': 치명적이고 우아한 다크 판타지와 거부할 수 없는 운명적 이끌림",
+          "textEs": "'Bite Me' / 'Chaconne': Elegancia hipnótica oscura y magnetismo irresistible",
+          "textPt": "'Bite Me' / 'Chaconne': Elegância hipnótica sombria e magnetismo irresistível",
+          "scores": { "sunghoon": 3, "heeseung": 2 }
+        },
+        {
+          "id": "B",
+          "text": "'Polaroid Love' / 'XO (Only If You Say Yes)': Sweet, heart-fluttering romance and pure devotion",
+          "textKo": "'Polaroid Love' / 'XO (Only If You Say Yes)': 폴라로이드 사진처럼 설레고 달콤한 하이틴 로맨스",
+          "textEs": "'Polaroid Love' / 'XO': Romance dulce que hace latir el corazón y ternura pura",
+          "textPt": "'Polaroid Love' / 'XO': Romance doce que faz o coração bater mais forte e pura ternura",
+          "scores": { "sunoo": 2, "jake": 2 }
+        },
+        {
+          "id": "C",
+          "text": "'Drunk-Dazed' / 'Brought The Heat Back': High-octane festival energy, fierce choreography, and adrenaline",
+          "textKo": "'Drunk-Dazed' / 'Brought The Heat Back': 심장이 터질 듯한 강렬한 비트와 칼군무 아드레날린",
+          "textEs": "'Drunk-Dazed' / 'Brought The Heat Back': Adrenalina pura, ritmo intenso y baile explosivo",
+          "textPt": "'Drunk-Dazed' / 'Brought The Heat Back': Pura adrenalina, ritmo intenso e dança explosiva",
+          "scores": { "niki": 2, "jungwon": 2 }
+        },
+        {
+          "id": "D",
+          "text": "'Sweet Venom' / 'Shout Out': Groovy rock-pop anthems about running together toward freedom",
+          "textKo": "'Sweet Venom' / 'Shout Out': 펑키한 그루브와 세상을 향해 함께 소리치는 뜨거운 록 스피릿",
+          "textEs": "'Sweet Venom' / 'Shout Out': Groove adictivo y espíritu rockero de libertad",
+          "textPt": "'Sweet Venom' / 'Shout Out': Groove viciante e espírito rockeiro de liberdade",
+          "scores": { "jay": 2 }
+        }
+      ]
+    }
+  ]
+}

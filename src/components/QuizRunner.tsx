@@ -1048,7 +1048,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   return (
     <div data-group={themeGroup} className="max-w-xl mx-auto px-4 py-8 sm:py-12 transition-colors duration-300">
       {/* 결과 축하 스코어보드 & 보상 결산 (Snippet 3) */}
-      <div className="qz-card bg-white rounded-3xl p-6 sm:p-8 border-2 border-purple-100 shadow-xl shadow-purple-500/10 text-center relative overflow-hidden my-4">
+      <div className="qz-card animate-holo-card-reveal bg-white rounded-3xl p-6 sm:p-8 border-2 border-purple-200 shadow-2xl shadow-purple-500/20 text-center relative overflow-hidden my-4">
         {/* 상단 퍼펙트 뱃지 */}
         <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 text-white rounded-full text-xs font-black shadow-md shadow-pink-500/20 mb-3">
           {isPerfect

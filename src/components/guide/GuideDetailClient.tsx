@@ -2,7 +2,8 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Quiz, Question, getLocalizedText } from '@/types/quiz';
+import { Quiz, getLocalizedText } from '@/types/quiz';
+import { getAllQuizzes } from '@/data/quizzes';
 import { useLanguage } from '@/context/LanguageContext';
 import { getCorrectAnswerText, getLevelBadge, estimateGuideReadTime } from '@/lib/guides';
 import {
@@ -11,15 +12,14 @@ import {
   CheckCircle2,
   Lightbulb,
   Search,
-  Filter,
   ArrowRight,
   ChevronRight,
-  Flame,
   Gamepad2,
   Share2,
   Clock,
   Layers,
   HelpCircle,
+  Heart,
 } from 'lucide-react';
 
 interface GuideDetailClientProps {
@@ -40,6 +40,14 @@ export default function GuideDetailClient({
   const subtitle = getLocalizedText(quiz, 'subtitle', lang);
   const description = getLocalizedText(quiz, 'description', lang);
   const readTime = estimateGuideReadTime(quiz.questions.length);
+
+  // Same-group personality tests so the lore guide passes authority directly to the personality test pages
+  const matchingPersonalityQuizzes = useMemo(() => {
+    if (!quiz.tag) return [];
+    return getAllQuizzes().filter(
+      (q) => q.quizType === 'personality' && q.tag === quiz.tag
+    );
+  }, [quiz.tag]);
 
   // Filter questions based on search query and selected level
   const filteredQuestions = useMemo(() => {
@@ -267,6 +275,46 @@ export default function GuideDetailClient({
 
       {/* 4. Questions & Lore List */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-8">
+        {/* Same-Group Personality & Soulmate Tests Banner */}
+        {matchingPersonalityQuizzes.length > 0 && (
+          <div className="mb-8 rounded-3xl border-2 border-purple-200/80 bg-gradient-to-r from-purple-50 via-pink-50/70 to-indigo-50 p-5 sm:p-6">
+            <div className="flex items-center gap-2 text-xs font-black uppercase tracking-wider text-purple-700 mb-3">
+              <Heart className="w-4 h-4 fill-pink-500 text-pink-500" />
+              <span>
+                {lang === 'ko'
+                  ? `${quiz.tag} 성향 & 소울메이트 테스트`
+                  : lang === 'es'
+                  ? `Tests de Personalidad y Alma Gemela de ${quiz.tag}`
+                  : lang === 'pt'
+                  ? `Testes de Personalidade e Alma Gêmea de ${quiz.tag}`
+                  : `${quiz.tag} Personality & Soulmate Tests`}
+              </span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {matchingPersonalityQuizzes.map((pQuiz) => (
+                <Link
+                  key={pQuiz.slug}
+                  href={`/quiz/${pQuiz.slug}`}
+                  className="group flex items-center justify-between gap-3 rounded-2xl bg-white hover:bg-purple-50/50 border border-purple-200/80 hover:border-purple-400 p-4 shadow-2xs transition-all"
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span className="text-3xl shrink-0">{pQuiz.coverEmoji}</span>
+                    <div className="min-w-0">
+                      <h2 className="text-sm font-black text-slate-900 group-hover:text-purple-700 transition-colors truncate">
+                        {getLocalizedText(pQuiz, 'title', lang)}
+                      </h2>
+                      <p className="text-xs text-slate-500 line-clamp-1 mt-0.5">
+                        {getLocalizedText(pQuiz, 'subtitle', lang)}
+                      </p>
+                    </div>
+                  </div>
+                  <ArrowRight className="w-4 h-4 text-purple-600 shrink-0 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* Results Counter */}
         <div className="mb-6 flex items-center justify-between text-xs font-bold text-slate-500">
           <span>
@@ -460,7 +508,7 @@ export default function GuideDetailClient({
                   : lang === 'es'
                   ? `Jugar el Quiz de ${title}`
                   : lang === 'pt'
-                  ? `Jogar o Quiz de ${title}`
+                  ? `Jugar el Quiz de ${title}`
                   : `Play the ${title} Now`}
               </span>
               <ArrowRight className="w-5 h-5" />
