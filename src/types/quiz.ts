@@ -24,6 +24,7 @@ export interface QuizOption {
 export interface Question {
   id: number;
   level?: QuestionLevel; // 1: Rookie/Easy, 2: Fan/Medium, 3: Hardcore/Hard
+  episodePack?: string; // e.g. 'BASE' | 'EP.1-2' | 'EP.3-4' | 'EP.5-6' | 'EP.7-8'
   question: string;
   questionKo?: string;
   questionEs?: string;
@@ -176,6 +177,17 @@ export interface PersonalityQuestion {
   options: PersonalityOption[];
 }
 
+export interface EpisodePack {
+  id: string;
+  label: string;
+  labelKo?: string;
+  labelEs?: string;
+  subtitle?: string;
+  subtitleKo?: string;
+  subtitleEs?: string;
+  isNew?: boolean;
+}
+
 export interface Quiz {
   slug: string;
   addedAt?: string; // YYYY-MM-DD the quiz went live; drives the "New" badge
@@ -201,6 +213,9 @@ export interface Quiz {
   category: Exclude<Category, 'All'>;
   tag?: string; // e.g. "BTS", "BLACKPINK", "Squid Game", "Spicy Level"
   coverEmoji: string;
+  coverImage?: string;
+  secondaryImage?: string;
+  episodePacks?: EpisodePack[];
   gradient: string;
   difficulty: 'Easy' | 'Medium' | 'Hard';
   estimatedMinutes: number;

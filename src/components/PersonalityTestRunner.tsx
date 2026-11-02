@@ -82,6 +82,18 @@ function getResultLabels(quiz: Quiz) {
       twinPt: 'Gêmeo Lovelys',
     };
   }
+  if (quiz.tag === 'Doctor X') {
+    return {
+      soulmate: 'Your Doctor X Character Match',
+      soulmateEs: 'Tu Personaje Compatible de Doctor X',
+      soulmateKo: '나와 닮은 닥터X 등장인물',
+      soulmatePt: 'Seu Personagem de Doctor X',
+      twin: 'Signature Symbol',
+      twinEs: 'Símbolo Característico',
+      twinKo: '상징 시그니처',
+      twinPt: 'Símbolo Característico',
+    };
+  }
   const groupTag = quiz.tag || 'K-Pop';
   return {
     soulmate: `Your ${groupTag} Soulmate`,
@@ -511,6 +523,34 @@ export default function PersonalityTestRunner({
           </div>
 
           {/* Quick Info & Start Button */}
+          {quiz.coverImage && (
+            <div className="px-6 sm:px-10 pt-6 sm:pt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-stretch max-w-2xl mx-auto">
+                <div className="sm:col-span-7 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-lg group bg-slate-950">
+                  <img
+                    src={quiz.coverImage}
+                    alt={getLocalizedText(quiz, 'title', lang)}
+                    className="w-full h-64 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-rose-600/90 backdrop-blur-md text-[11px] font-black text-white shadow-xs">
+                    {lang === 'ko' ? '🩺 MAIN · 닥터X 메스 버전' : '🩺 MAIN · Doctor X'}
+                  </span>
+                </div>
+                {quiz.secondaryImage && (
+                  <div className="sm:col-span-5 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-md group bg-slate-950">
+                    <img
+                      src={quiz.secondaryImage}
+                      alt={`${getLocalizedText(quiz, 'title', lang)} sub`}
+                      className="w-full h-56 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-[11px] font-bold text-rose-200 border border-rose-400/30 shadow-xs">
+                      {lang === 'ko' ? '🔥 SUB · 수술방 다크히어로' : '🔥 SUB · Dark Hero'}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
           <div className="p-6 sm:p-10 text-center">
             <div className="grid grid-cols-3 gap-3 mb-8 max-w-md mx-auto text-center">
               <div className="p-3 bg-purple-50 rounded-2xl border border-purple-100">
@@ -783,6 +823,31 @@ export default function PersonalityTestRunner({
                 </div>
               )}
 
+              {quiz.secondaryImage && quiz.coverImage && (
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-lg mx-auto pb-2">
+                  <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200 shadow-sm">
+                    <img
+                      src={quiz.coverImage}
+                      alt={memberName}
+                      className="w-full h-44 sm:h-52 object-cover object-top"
+                    />
+                    <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-black/70 text-[10px] font-black text-white">
+                      MAIN VISUAL
+                    </span>
+                  </div>
+                  <div className="relative rounded-2xl overflow-hidden border-2 border-rose-200 shadow-sm">
+                    <img
+                      src={quiz.secondaryImage}
+                      alt={`${memberName} scene`}
+                      className="w-full h-44 sm:h-52 object-cover object-top"
+                    />
+                    <span className="absolute bottom-2 left-2 px-2 py-0.5 rounded-md bg-rose-600/85 text-[10px] font-black text-white">
+                      OR SCENE
+                    </span>
+                  </div>
+                </div>
+              )}
+
               {/* Traits Tags */}
               <div>
                 <h3 className="text-xs font-black uppercase tracking-wider text-slate-400 mb-2.5">
@@ -1051,6 +1116,11 @@ export default function PersonalityTestRunner({
             bingeTitle = lang === 'ko' ? '블랙핑크 50문제 블링크 지식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío BLINK de 50 Preguntas?' : lang === 'pt' ? 'Pronto para o Desafio BLINK de 50 Perguntas?' : 'Ready for the 50-Question BLINK Trivia?';
             bingeDesc = lang === 'ko' ? '휘파람, 뚜두뚜두부터 코첼라 헤드라이너까지, 당신의 블링크 지식을 테스트하세요!' : lang === 'es' ? '¡Desde Whistle hasta Coachella! ¡Pon a prueba cuánto sabes de BLACKPINK!' : lang === 'pt' ? 'De Whistle ao Coachella, teste seus conhecimentos sobre o BLACKPINK!' : 'From Whistle to headlining Coachella, put your BLINK knowledge to the test!';
             bingeBtn = lang === 'ko' ? '50문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 50 Preguntas' : lang === 'pt' ? 'Jogar Quiz de 50 Perguntas' : 'Play 50-Question Trivia';
+          } else if (quiz.tag === 'Doctor X') {
+            bingeHref = '/quiz/doctor-x-white-mafia-trivia';
+            bingeTitle = lang === 'ko' ? '《닥터X: 하얀 마피아의 시대》 15문제 과몰입 덕력고사도 도전해볼까요?' : lang === 'es' ? '¿Listo para la Trivia de 15 Preguntas de Doctor X?' : 'Ready for the 15-Question Doctor X Trivia Challenge?';
+            bingeDesc = lang === 'ko' ? "'수술방의 미친 계' 계수정의 사이다 명대사부터 구서대학교병원 하얀 마피아의 숨겨진 설정까지 테스트해보세요!" : lang === 'es' ? '¡Desde las frases icónicas de Gye Su-jeong hasta los secretos del Hospital Guseo!' : 'From Gye Su-jeong’s iconic quotes to Guseo University Hospital secrets, prove your true Doctor X mastery!';
+            bingeBtn = lang === 'ko' ? '닥터X 상식 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Trivia Doctor X' : 'Play Doctor X Trivia';
           } else if (quiz.category === 'Food' || quiz.tag === 'K-Food') {
             bingeHref = '/quiz/korean-spicy-food';
             bingeTitle = lang === 'ko' ? '한국 매운 음식 & 길거리 음식 챌린지도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Reto de Comida Picante Coreana?' : lang === 'pt' ? 'Pronto para o Desafio de Comida Picante Coreana?' : 'Ready for the Spicy Food & Street Food Challenge?';

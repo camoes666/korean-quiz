@@ -69,7 +69,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <img
             src={mascot.avatarUrl}
             alt={mascot.name}
-            className="w-full h-full object-contain"
+            className={quiz.coverImage ? 'w-16 h-16 my-2 ml-auto rounded-2xl object-cover border-2 border-white/50 shadow-md' : 'w-full h-full object-contain'}
           />
         </div>
       </div>

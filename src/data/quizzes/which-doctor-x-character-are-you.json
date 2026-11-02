@@ -1,0 +1,572 @@
+{
+  "slug": "which-doctor-x-character-are-you",
+  "addedAt": "2026-11-02",
+  "quizType": "personality",
+  "title": "Which Doctor X: Age of the White Mafia Character Are You?",
+  "titleKo": "나와 닮은 《닥터X: 하얀 마피아의 시대》 캐릭터 테스트",
+  "titleEs": "¿Qué personaje de Doctor X: Age of the White Mafia eres?",
+  "subtitle": "Uncompromising genius surgeon, sharp broker, ruthless power player, or righteous resident?",
+  "subtitleKo": "실패 없는 천재 외과의 계수정부터 판을 짜는 장희숙, 야심가 부승권, 팩폭 레지던트 박태경까지!",
+  "subtitleEs": "¿Cirujana genio inquebrantable, estratega aguda, líder ambicioso o residente justiciero?",
+  "description": "Step inside Guseo University Hospital, where white-coat cartels clash with a lone dark-hero surgeon. Answer 10 medical noir scenarios to discover which Doctor X character matches your personality!",
+  "descriptionKo": "하얀 가운을 입은 권력 카르텔 '하얀 마피아'가 장악한 구서대학교병원! 일촉즉발의 수술방과 병원 권력 암투 속에서 당신은 어떤 인물과 가장 닮았는지 10가지 질문으로 확인해보세요.",
+  "descriptionEs": "Entra en el Hospital Universitario Guseo, donde la 'Mafia Blanca' choca con una cirujana genio. ¡Responde 10 preguntas para descubrir qué personaje de Doctor X eres!",
+  "category": "K-Drama",
+  "tag": "Doctor X",
+  "coverEmoji": "🩺",
+  "coverImage": "/images/quizzes/doctor-x-main.jpg",
+  "secondaryImage": "/images/quizzes/doctor-x-sub.jpg",
+  "gradient": "from-slate-950 via-zinc-900 to-rose-950",
+  "difficulty": "Easy",
+  "estimatedMinutes": 3,
+  "totalPlays": "42.8K",
+  "featured": true,
+  "questions": [],
+  "scoreTiers": [],
+  "personalityResults": {
+    "gye-sujeong": {
+      "id": "gye-sujeong",
+      "name": "Gye Su-jeong (Doctor X)",
+      "nameKo": "계수정 (닥터X · 프리랜서 천재 외과의)",
+      "nameEs": "Gye Su-jeong (Doctor X)",
+      "title": "The Uncompromising Dark-Hero Genius Surgeon",
+      "titleKo": "실패도 타협도 없는 '수술방의 미친 계' 다크히어로",
+      "titleEs": "La Cirujana Genio y Heroína Oscura Inquebrantable",
+      "subtitle": "Zero Compromise · God-Tier Skill · Patient First",
+      "subtitleKo": "압도적 실력 · 권력 타협 제로 · 오직 환자 생명 최우선",
+      "subtitleEs": "Cero Compromisos · Habilidad Suprema · El Paciente Primero",
+      "skzoo": "Silver Scalpel (The Lone Wolf 🩺)",
+      "skzooKo": "실버 메스 (고독한 승부사 🩺)",
+      "skzooEs": "Bisturí de Plata (Loba Solitaria 🩺)",
+      "emoji": "🩺",
+      "traits": [
+        "Unmatched Mastery",
+        "Zero Politics",
+        "Unshakable Conviction"
+      ],
+      "traitsKo": [
+        "압도적인 실력주의",
+        "정치질·파벌 거부",
+        "흔들리지 않는 신념"
+      ],
+      "traitsEs": [
+        "Maestría Inigualable",
+        "Cero Política",
+        "Convicción Inquebrantable"
+      ],
+      "description": "Like Gye Su-jeong (Doctor X), you despise empty authority, office politics, and pretentious hierarchy. You let your overwhelming skill and results speak for themselves. Cold and fiercely independent on the outside, you hold a burning sense of duty to protect what truly matters when everyone else backs down.",
+      "descriptionKo": "당신은 계수정(닥터X)처럼 보여주기식 권위나 줄서기, 파벌 싸움을 가장 싫어하며 오직 '진짜 실력과 결과'로 증명하는 타입입니다. 겉으로는 차갑고 독불장군처럼 보일지 몰라도, 모두가 책임을 회피하는 절체절명의 순간에 끝까지 메스를 잡는 뜨거운 사명감을 품고 있습니다.",
+      "descriptionEs": "Como Gye Su-jeong (Doctor X), detestas la autoridad vacía y la política de oficina. Dejas que tu habilidad sobresaliente hable por sí sola y nunca abandonas tus principios en los momentos críticos.",
+      "bestMatchId": "park-taekyung",
+      "bestMatchName": "Park Tae-kyung",
+      "bestMatchNameKo": "박태경 (외과 레지던트)",
+      "bestMatchNameEs": "Park Tae-kyung",
+      "bestMatchReason": "Your uncompromising genius and Park Tae-kyung's fearless honesty create an unstoppable surgical team that shatters hospital corruption.",
+      "bestMatchReasonKo": "타협 없는 당신의 천재적 돌파력과 부조리 앞에서 할 말은 하는 박태경의 정의감이 만나면, 하얀 마피아의 카르텔도 단숨에 깨부수는 최고의 수술방 콤비가 됩니다!",
+      "bestMatchReasonEs": "Tu genio implacable y la honestidad valiente de Park Tae-kyung forman un dúo quirúrgico imparable.",
+      "colorHex": "#e11d48",
+      "bgGradient": "from-slate-950 via-zinc-900 to-rose-900"
+    },
+    "jang-heesook": {
+      "id": "jang-heesook",
+      "name": "Jang Hee-sook",
+      "nameKo": "장희숙 (의사 용역 소개소 소장)",
+      "nameEs": "Jang Hee-sook",
+      "title": "The Mastermind Broker & Secret Strategist",
+      "titleKo": "판을 꿰뚫어 보는 의사 용역 소개소 소장 & 숨은 설계자",
+      "titleEs": "La Estratega Maestra y Directora de Agencia Médica",
+      "subtitle": "Sharp Negotiation · Deep Insight · Master of Timing",
+      "subtitleKo": "날카로운 협상력 · 판세를 읽는 통찰 · 결정적 타이밍의 조율자",
+      "subtitleEs": "Negociación Aguda · Visión Profunda · Maestra del Tiempo",
+      "skzoo": "Golden Contract (The Shadow Broker 💼)",
+      "skzooKo": "시크릿 계약서 (판세의 조율자 💼)",
+      "skzooEs": "Contrato Secreto (Estratega en la Sombra 💼)",
+      "emoji": "💼",
+      "traits": [
+        "Strategic Realism",
+        "People Reader",
+        "Cool-Headed Negotiator"
+      ],
+      "traitsKo": [
+        "현실적인 전략가",
+        "사람을 꿰뚫는 안목",
+        "능수능란한 협상력"
+      ],
+      "traitsEs": [
+        "Realismo Estratégico",
+        "Lectura de Personas",
+        "Negociadora Fría"
+      ],
+      "description": "Like Jang Hee-sook, you see through people's hidden motives in seconds. While others get swept up in emotional clashes, you read the entire chessboard, calculate value accurately, and know the exact moment to play your trump card. You are a pragmatic realist who guards your inner circle fiercely.",
+      "descriptionKo": "당신은 장희숙 소장처럼 감정에 휩쓸리기보다 판 전체의 흐름과 이해관계를 단숨에 파악하는 전략가입니다. 실속 챙기기에 능하고 현실적인 계산이 빠르지만, 결정적인 순간에는 내 사람의 가치를 누구보다 정확히 알아보고 판을 뒤집는 조커 카드를 쥐고 있습니다.",
+      "descriptionEs": "Como Jang Hee-sook, lees las intenciones ocultas en segundos. Mientras otros se dejan llevar por las emociones, tú dominas todo el tablero y sabes exactamente cuándo jugar tu carta ganadora.",
+      "bestMatchId": "gye-sujeong",
+      "bestMatchName": "Gye Su-jeong (Doctor X)",
+      "bestMatchNameKo": "계수정 (닥터X)",
+      "bestMatchNameEs": "Gye Su-jeong (Doctor X)",
+      "bestMatchReason": "Your shrewd negotiation and strategic stage-setting allow Gye Su-jeong's raw surgical genius to shine at maximum impact.",
+      "bestMatchReasonKo": "오직 수술밖에 모르는 계수정의 천재성을 현실 세계의 협상 테이블에서 가장 비싸고 통쾌하게 빛내줄 수 있는 사람은 오직 당신뿐입니다!",
+      "bestMatchReasonEs": "Tu astucia estratégica prepara el escenario perfecto para que el genio quirúrgico de Gye Su-jeong brille al máximo.",
+      "colorHex": "#d97706",
+      "bgGradient": "from-stone-950 via-amber-950 to-slate-900"
+    },
+    "boo-seungkwon": {
+      "id": "boo-seungkwon",
+      "name": "Boo Seung-kwon",
+      "nameKo": "부승권 (구서대병원 핵심 권력자)",
+      "nameEs": "Boo Seung-kwon",
+      "title": "The Heavyweight Power Architect of Guseo Hospital",
+      "titleKo": "구서대병원을 장악한 서늘한 카리스마 & 권력의 정점",
+      "titleEs": "El Arquitecto del Poder en el Hospital Guseo",
+      "subtitle": "Commanding Aura · Razor Intuition · Total Control",
+      "subtitleKo": "묵직한 중압감 · 예리한 추리력 · 조직을 장악하는 지배자",
+      "subtitleEs": "Aura Imponente · Intuición Afilada · Control Total",
+      "skzoo": "Obsidian Crown (The Power Broker ♟️)",
+      "skzooKo": "블랙 체스킹 (권력의 설계자 ♟️)",
+      "skzooEs": "Rey Negro de Ajedrez (Arquitecto del Poder ♟️)",
+      "emoji": "♟️",
+      "traits": [
+        "Overwhelming Presence",
+        "Relentless Analytical Mind",
+        "Big-Picture Ambition"
+      ],
+      "traitsKo": [
+        "좌중을 압도하는 카리스마",
+        "집요한 통찰과 추리력",
+        "거대한 야망과 통제력"
+      ],
+      "traitsEs": [
+        "Presencia Imponente",
+        "Mente Analítica Implacable",
+        "Ambición de Gran Escala"
+      ],
+      "description": "Like Boo Seung-kwon, you possess an unmistakable gravitas that silences a room the moment you walk in. You think ten steps ahead, value order and systemic control, and never miss a single detail when investigating an anomaly. You are a formidable leader who commands respect through sheer intellect and composure.",
+      "descriptionKo": "당신은 부승권처럼 등장만으로도 공기를 바꾸는 묵직한 존재감과 냉철한 통제력을 지닌 리더 타입입니다. 작은 단서 하나도 놓치지 않고 정체를 파고드는 집요한 통찰력을 가졌으며, 감정보다 거대한 조직의 논리와 목표를 우선시하는 완벽주의적 야심가입니다.",
+      "descriptionEs": "Como Boo Seung-kwon, tienes una presencia imponente que domina cualquier sala. Piensas diez pasos adelante y nunca pasas por alto ningún detalle.",
+      "bestMatchId": "jang-heesook",
+      "bestMatchName": "Jang Hee-sook",
+      "bestMatchNameKo": "장희숙 (의사 용역 소개소 소장)",
+      "bestMatchNameEs": "Jang Hee-sook",
+      "bestMatchReason": "Two masters of strategy! You and Jang Hee-sook understand the unspoken rules of power and negotiation without needing a single extra word.",
+      "bestMatchReasonKo": "고수와 고수의 만남! 눈빛과 짧은 한마디만으로도 서로의 패와 이해관계를 정확히 읽어내는 고차원적 심리전의 파트너입니다.",
+      "bestMatchReasonEs": "¡Dos maestros de la estrategia! Tú y Jang Hee-sook entienden las reglas del poder sin necesidad de palabras.",
+      "colorHex": "#475569",
+      "bgGradient": "from-slate-950 via-slate-800 to-zinc-900"
+    },
+    "park-taekyung": {
+      "id": "park-taekyung",
+      "name": "Park Tae-kyung",
+      "nameKo": "박태경 (구서대병원 외과 레지던트)",
+      "nameEs": "Park Tae-kyung",
+      "title": "The Sharp-Tongued Truth-Teller & Righteous Resident",
+      "titleKo": "유쾌함 속 날카로운 팩트 폭격기 & 정의파 외과 레지던트",
+      "titleEs": "El Residente Justiciero y Sincero del Hospital Guseo",
+      "subtitle": "Warm Energy · Fearless Fact-Bomber · True Medical Heart",
+      "subtitleKo": "밝은 에너지 · 부조리 앞 팩트 폭격 · 성장하는 진짜 의사",
+      "subtitleEs": "Energía Cálida · Verdades Sin Filtro · Corazón Médico",
+      "skzoo": "Neon Stethoscope (The Truth Pulse ⚡)",
+      "skzooKo": "네온 청진기 (정의로운 팩트 폭격 ⚡)",
+      "skzooEs": "Estetoscopio Neón (Pulso de la Verdad ⚡)",
+      "emoji": "⚡",
+      "traits": [
+        "Sharp Fact-Bomber",
+        "Warm Empathy",
+        "Fearless Justice"
+      ],
+      "traitsKo": [
+        "핵심을 찌르는 팩폭러",
+        "따뜻한 인간미와 유쾌함",
+        "부조리에 맞서는 정의감"
+      ],
+      "traitsEs": [
+        "Sinceridad Directa",
+        "Calidez Humana",
+        "Justicia Valiente"
+      ],
+      "description": "Like Park Tae-kyung, you bring bright, approachable energy to everyone around you, yet you have the sharpest eyes and tongue when confronting hypocrisy. Even inside a corrupt system, you refuse to lose your conscience, speaking up with refreshing facts while growing rapidly alongside true mentors.",
+      "descriptionKo": "당신은 박태경처럼 평소에는 밝고 유쾌한 에너지로 주변을 편하게 만들지만, 부조리하고 모순된 상황 앞에서는 누구보다 날카롭게 핵심 팩트를 짚어내는 반전 매력의 소유자입니다! 권력에 눈치 보지 않고 양심을 지키는 정의로운 성장형 인재입니다.",
+      "descriptionEs": "Como Park Tae-kyung, transmites una energía cálida y alegre, pero frente a la injusticia eres el primero en decir la verdad sin rodeos.",
+      "bestMatchId": "gye-sujeong",
+      "bestMatchName": "Gye Su-jeong (Doctor X)",
+      "bestMatchNameKo": "계수정 (닥터X)",
+      "bestMatchNameEs": "Gye Su-jeong (Doctor X)",
+      "bestMatchReason": "In a hospital full of 'White Mafia' politics, Gye Su-jeong is the one mentor whose pure skill and principles inspire you 100%.",
+      "bestMatchReasonKo": "하얀 마피아들이 판치는 병원 속에서 오직 실력과 환자만을 생각하는 계수정(닥터X)은 당신의 가슴을 뛰게 하는 최고의 롤모델이자 파트너입니다!",
+      "bestMatchReasonEs": "En un hospital lleno de política, Gye Su-jeong es la mentora cuya habilidad pura y principios te inspiran al 100%.",
+      "colorHex": "#0284c7",
+      "bgGradient": "from-slate-900 via-sky-950 to-indigo-950"
+    }
+  },
+  "personalityQuestions": [
+    {
+      "id": 1,
+      "emoji": "🚨",
+      "question": "An impossible emergency surgery arrives that every senior professor is avoiding to protect their reputation. What do you do?",
+      "questionKo": "성공 확률이 희박해 병원 교수들이 모두 자신의 경력을 지키려 피하는 초고난도 응급 수술 환자가 실려 왔습니다. 당신의 선택은?",
+      "questionEs": "Llega una cirugía de emergencia casi imposible que todos los profesores evitan para proteger su reputación. ¿Qué haces?",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"Step aside. I don't fail.\" Grab the scalpel immediately and focus solely on saving the patient.",
+          "textKo": "\"비켜요. 난 실패하지 않으니까.\" 누가 뭐라든 즉시 메스를 잡고 환자만 본다.",
+          "textEs": "\"Apártense. Yo no fallo.\" Tomas el bisturí de inmediato para salvar al paciente.",
+          "scores": { "gye-sujeong": 3, "park-taekyung": 1 }
+        },
+        {
+          "id": "B",
+          "text": "Call out the hypocrisy of the professors avoiding the patient right to their faces.",
+          "textKo": "\"의사가 환자 눈치 안 보고 라인 눈치 봅니까?\" 수술을 미루는 윗선에 시원하게 팩트를 날린다.",
+          "textEs": "Señalas directamente la hipocresía de los profesores que evitan al paciente.",
+          "scores": { "park-taekyung": 3, "gye-sujeong": 1 }
+        },
+        {
+          "id": "C",
+          "text": "Quickly negotiate emergency terms and bring in the one hidden ace who can pull it off.",
+          "textKo": "위기 상황을 기회로 삼아 최적의 조건을 협상하고 판을 뒤집을 에이스를 투입한다.",
+          "textEs": "Negocias rápidamente las condiciones y traes al as oculto capaz de lograrlo.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Assess the hospital-wide risk, take command of the control room, and trace who is responsible.",
+          "textKo": "병원 전체의 리스크를 계산해 지휘권을 장악하고, 이 사태의 핵심 책임과 흐름을 통제한다.",
+          "textEs": "Evalúas el riesgo del hospital, tomas el mando y controlas toda la situación.",
+          "scores": { "boo-seungkwon": 3 }
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "emoji": "🥼",
+      "question": "A powerful hospital faction ('The White Mafia') demands you join their line and obey unspoken rules. Your reaction?",
+      "questionKo": "병원을 장악한 권력 카르텔 '하얀 마피아' 측에서 당신에게 줄을 서고 관행을 따르라고 요구합니다. 당신의 반응은?",
+      "questionEs": "Una facción poderosa del hospital ('La Mafia Blanca') exige que te unas a su línea. ¿Cómo reaccionas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ignore them completely—my license and skill don't belong to any faction.",
+          "textKo": "\"라인 타는 건 취미 없어요.\" 가볍게 무시하고 내 실력과 원칙대로만 움직인다.",
+          "textEs": "Los ignoras por completo: tu habilidad no pertenece a ninguna facción.",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Smile outwardly, read their weaknesses, and use their network to my own advantage.",
+          "textKo": "겉으로는 웃으며 맞춰주는 척하면서 그들의 약점과 필요를 파악해 내 실속을 챙긴다.",
+          "textEs": "Sonríes por fuera, lees sus debilidades y usas su red a tu favor.",
+          "scores": { "jang-heesook": 3, "boo-seungkwon": 1 }
+        },
+        {
+          "id": "C",
+          "text": "I don't join lines—I am the one who builds and rules the line from the top.",
+          "textKo": "남의 줄에 서지 않는다. 내가 곧 조직의 정점이자 규칙을 만드는 사람이다.",
+          "textEs": "No te unes a ninguna fila: tú eres quien construye y gobierna desde la cima.",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Question why a hospital looks more like a mafia syndicate than a place that saves lives.",
+          "textKo": "\"여기가 병원입니까, 마피아 조직입니까?\" 부조리한 관행에 굴하지 않고 소신을 지킨다.",
+          "textEs": "Cuestionas por qué un hospital parece más una mafia que un lugar para salvar vidas.",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "emoji": "🔪",
+      "question": "What is your biggest weapon when facing a high-stakes crisis?",
+      "questionKo": "절체절명의 위기 상황에서 당신이 가장 믿는 나만의 무기는 무엇인가요?",
+      "questionEs": "¿Cuál es tu mayor arma cuando enfrentas una crisis de alto riesgo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Irreplaceable, overwhelming technical skill that nobody can argue with.",
+          "textKo": "누구도 반박하거나 대체할 수 없는 '압도적인 실력과 손끝의 감각'",
+          "textEs": "Una habilidad técnica irremplazable que nadie puede discutir.",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Timing, information, and knowing exactly what each person desperately wants.",
+          "textKo": "상대방이 가장 원하는 것과 약점을 정확히 찌르는 '정보력과 협상 타이밍'",
+          "textEs": "El tiempo, la información y saber exactamente qué necesita cada persona.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Ice-cold composure, authority, and relentless deductive insight.",
+          "textKo": "흔들리지 않는 서늘한 평정심과 사건의 본질을 꿰뚫는 '집요한 통찰력'",
+          "textEs": "Compostura fría, autoridad y una perspicacia implacable.",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Unfiltered truth, quick wit, and genuine sincerity toward people.",
+          "textKo": "핵심을 찌르는 사이다 직구와 사람을 향한 '진심 어린 열정'",
+          "textEs": "La verdad sin filtros, el ingenio rápido y la sinceridad genuina.",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "emoji": "☕",
+      "question": "How do people around you usually describe your first impression vs. your true self?",
+      "questionKo": "주변 사람들이 말하는 당신의 '첫인상'과 '실제 모습'의 반전은?",
+      "questionEs": "¿Cómo describen los demás tu primera impresión frente a tu verdadera personalidad?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Looks cold and untouchable, but cares more fiercely about saving lives than anyone.",
+          "textKo": "피도 눈물도 없을 것처럼 차가워 보이지만, 누구보다 생명을 살리는 일에 진심이다.",
+          "textEs": "Pareces fría e intocable, pero te importa salvar vidas más que a nadie.",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Looks friendly and chatty, but has a razor-sharp calculator running inside.",
+          "textKo": "능청스럽고 친근해 보이지만, 머릿속으로는 이미 수십 수 앞의 손익 계산이 끝나 있다.",
+          "textEs": "Pareces amigable, pero por dentro tienes una mente estratégica afilada.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Quiet and dignified, yet one sharp gaze is enough to make the whole room nervous.",
+          "textKo": "말수는 적고 중후하지만, 눈빛 하나로 방 안의 공기를 얼어붙게 만드는 카리스마가 있다.",
+          "textEs": "Tranquilo y digno, pero una sola mirada tuya impone respeto total.",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Bright and easygoing normally, but turns into a fearless fact-bomber against injustice.",
+          "textKo": "평소엔 밝고 유쾌한 분위기 메이커지만, 불의를 보면 누구보다 날카롭게 팩트를 찌른다.",
+          "textEs": "Alegre normalmente, pero implacable diciendo verdades ante la injusticia.",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "emoji": "💼",
+      "question": "When working on a team project or high-pressure job, what annoys you the most?",
+      "questionKo": "일이나 프로젝트를 할 때 당신이 가장 참기 힘들어하는 유형은?",
+      "questionEs": "Al trabajar bajo presión, ¿qué es lo que más te molesta?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Incompetent people who care more about meetings, titles, and excuses than actual results.",
+          "textKo": "실력은 없으면서 직함과 체면만 내세우며 변명부터 늘어놓는 무능한 사람",
+          "textEs": "Personas incompetentes que solo se preocupan por títulos y excusas.",
+          "scores": { "gye-sujeong": 3, "park-taekyung": 1 }
+        },
+        {
+          "id": "B",
+          "text": "People who don't honor contracts or try to get top-tier work for free.",
+          "textKo": "계약 조건이나 정당한 대가는 무시하고 공짜로 최고급 결과물만 바라는 양심 없는 사람",
+          "textEs": "Personas que no respetan los contratos ni el valor justo del trabajo.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Unpredictable variables that disrupt my carefully structured plan and order.",
+          "textKo": "치밀하게 설계해 둔 조직의 질서와 통제를 어지럽히는 예측 불가능한 돌발 변수",
+          "textEs": "Variables impredecibles que alteran tu plan cuidadosamente estructurado.",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "D",
+          "text": "People who stay silent in front of obvious wrongdoing just to protect their own comfort.",
+          "textKo": "명백히 잘못된 걸 알면서도 자기 보신을 위해 입을 다물고 방관하는 비겁한 태도",
+          "textEs": "Quienes callan ante una injusticia evidente solo por comodidad.",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "emoji": "🕵️",
+      "question": "You suspect someone around you is hiding a massive secret identity. How do you handle it?",
+      "questionKo": "주변 인물이 엄청난 비밀이나 진짜 정체를 숨기고 있다는 의심이 들 때 당신의 행동은?",
+      "questionEs": "Sospechas que alguien oculta una gran identidad secreta. ¿Cómo actúas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Quietly gather clues, test their reactions, and corner them with undeniable evidence.",
+          "textKo": "작은 단서 하나까지 집요하게 추적하고 떠보며 빠져나갈 수 없는 증거로 정체를 파고든다.",
+          "textEs": "Reúnes pistas en silencio y acorralas con pruebas irrefutables.",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Keep their secret safe in my vault—and use it as the ultimate leverage when needed.",
+          "textKo": "그 비밀을 완벽하게 지켜주는 대신, 결정적인 순간 판을 조율할 히든카드로 활용한다.",
+          "textEs": "Guardas el secreto bajo llave y lo usas como ventaja estratégica cuando hace falta.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Who cares about their past? All that matters is whether they have real skill right now.",
+          "textKo": "과거가 어떻든 상관없다. 지금 내 눈앞에서 진짜 실력을 보여주는지가 유일한 기준이다.",
+          "textEs": "No te importa su pasado; solo importa si tiene habilidad real ahora mismo.",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Ask them directly with honest curiosity—and back them up if their cause is just!",
+          "textKo": "돌려 말하지 않고 솔직하게 물어본 뒤, 그 사람의 뜻이 옳다면 든든한 조력자가 되어준다.",
+          "textEs": "Preguntas directamente con sinceridad y lo apoyas si su causa es justa.",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "emoji": "⚡",
+      "question": "After pulling off a seemingly impossible success, how do you celebrate?",
+      "questionKo": "모두가 불가능하다고 했던 일을 완벽하게 성공시킨 직후, 당신의 모습은?",
+      "questionEs": "Después de lograr un éxito que parecía imposible, ¿cómo reaccionas?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Walk out coolly without looking back—praise and applause don't interest me.",
+          "textKo": "생색내지 않고 쿨하게 자리를 뜬다. 타인의 박수나 칭찬 따위엔 관심 없다.",
+          "textEs": "Sales con calma sin mirar atrás; los aplausos no te interesan.",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Present the invoice with a bright smile and make sure every bonus is settled!",
+          "textKo": "성공의 가치를 확실하게 청구서로 내밀고 정당한 보상과 다음 기회를 알차게 챙긴다.",
+          "textEs": "Presentas la factura con una sonrisa y aseguras cada recompensa justa.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Analyze the outcome calmly and immediately prepare the next phase of the master plan.",
+          "textKo": "결과를 차분히 복기하며 곧바로 다음 단계의 더 큰 판을 설계한다.",
+          "textEs": "Analizas el resultado con calma y preparas la siguiente fase del plan.",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Share the joy with colleagues and feel proud that we did the right thing!",
+          "textKo": "함께 고생한 동료들과 기쁨을 나누며 '역시 포기하지 않길 잘했다'고 뿌듯해한다.",
+          "textEs": "Compartes la alegría con tus compañeros con orgullo genuino.",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "emoji": "🔥",
+      "question": "Pick the quote that resonates deepest with your personal philosophy:",
+      "questionKo": "다음 중 당신의 가슴을 가장 뜨겁게 만드는 한 줄의 신조는?",
+      "questionEs": "Elige la frase que más resuena con tu filosofía personal:",
+      "options": [
+        {
+          "id": "A",
+          "text": "\"I never fail, and I never compromise.\"",
+          "textKo": "\"실패도, 타협도 하지 않는다. 실력이 곧 나의 증명이다.\"",
+          "textEs": "\"Nunca fallo y nunca transijo.\"",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "B",
+          "text": "\"In a world of masks, only those who read the board survive.\"",
+          "textKo": "\"감정은 사치야. 판을 읽고 타이밍을 쥐는 사람이 결국 이기는 법이지.\"",
+          "textEs": "\"En un mundo de máscaras, solo sobrevive quien sabe leer el tablero.\"",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "C",
+          "text": "\"Power isn't given—it is built through absolute control.\"",
+          "textKo": "\"권력과 질서는 저절로 주어지지 않는다. 완벽한 통제로 증명할 뿐.\"",
+          "textEs": "\"El poder no se regala; se construye con control absoluto.\"",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "D",
+          "text": "\"What is the point of wearing a white coat if you turn away from the truth?\"",
+          "textKo": "\"진실과 환자 앞에서 눈감는다면 하얀 가운을 입을 자격이 없다!\"",
+          "textEs": "\"¿De qué sirve la bata blanca si le das la espalda a la verdad?\"",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "emoji": "🌙",
+      "question": "When someone unfairly criticizes or underestimates you, how do you respond?",
+      "questionKo": "누군가 당신을 부당하게 깎아내리거나 과소평가할 때 당신의 대처법은?",
+      "questionEs": "Cuando alguien te critica injustamente o te subestima, ¿cómo respondes?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Silence them completely with an overwhelmingly perfect performance they can't imitate.",
+          "textKo": "말로 싸우지 않는다. 그들이 감히 흉내조차 낼 수 없는 완벽한 결과물로 입을 다물게 만든다.",
+          "textEs": "Los silencias por completo con un resultado impecable que nadie puede imitar.",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "B",
+          "text": "Hit them right back with razor-sharp logic and undeniable facts on the spot.",
+          "textKo": "그 자리에서 상대방의 논리적 모순을 정확히 짚어내어 뼈 때리는 팩트로 반박한다.",
+          "textEs": "Respondes al instante con lógica afilada y hechos innegables.",
+          "scores": { "park-taekyung": 3 }
+        },
+        {
+          "id": "C",
+          "text": "Let them underestimate me—it makes negotiating a higher price later much easier!",
+          "textKo": "오히려 좋아! 상대가 방심하게 만든 뒤 나중에 두 배로 비싼 대가를 받아낸다.",
+          "textEs": "Dejas que te subestimen; así es más fácil cobrar el doble más adelante.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "D",
+          "text": "Remember their name quietly and show them the weight of real authority when the time comes.",
+          "textKo": "조용히 기억해 두었다가 결정적인 순간에 진짜 힘과 권위의 무게가 무엇인지 보여준다.",
+          "textEs": "Lo recuerdas en silencio y demuestras el peso de la verdadera autoridad en el momento clave.",
+          "scores": { "boo-seungkwon": 3 }
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "emoji": "🏥",
+      "question": "If you were in a medical noir drama, what role would make your heart beat fastest?",
+      "questionKo": "당신이 메디컬 느와르 드라마의 주인공이 된다면 가장 가슴 뛰는 포지션은?",
+      "questionEs": "Si estuvieras en un drama médico noir, ¿qué rol haría latir más rápido tu corazón?",
+      "options": [
+        {
+          "id": "A",
+          "text": "The lone-wolf genius surgeon who shatters corrupt cartels with a single scalpel.",
+          "textKo": "부패한 카르텔을 오직 메스 하나로 깨부수는 고독한 천재 프리랜서 외과의",
+          "textEs": "La cirujana genio solitaria que rompe carteles corruptos con un solo bisturí.",
+          "scores": { "gye-sujeong": 3 }
+        },
+        {
+          "id": "B",
+          "text": "The mysterious kingmaker behind the scenes who holds every secret card.",
+          "textKo": "모든 비밀과 히든카드를 쥐고 막후에서 판을 움직이는 미스터리한 소장",
+          "textEs": "La estratega misteriosa tras bambalinas que tiene todas las cartas secretas.",
+          "scores": { "jang-heesook": 3 }
+        },
+        {
+          "id": "C",
+          "text": "The charismatic powerhouse at the center of the hospital's grand chess game.",
+          "textKo": "거대한 대학병원의 권력 정점에서 판 전체를 지휘하고 추리하는 카리스마 권력자",
+          "textEs": "El líder carismático en el centro del gran juego de poder del hospital.",
+          "scores": { "boo-seungkwon": 3 }
+        },
+        {
+          "id": "D",
+          "text": "The righteous ace resident who speaks the truth and grows into a true doctor.",
+          "textKo": "할 말은 하는 사이다 팩폭러이자 진정한 의사로 거듭나는 정의파 에이스 레지던트",
+          "textEs": "El residente justiciero que dice la verdad y crece como un médico de verdad.",
+          "scores": { "park-taekyung": 3 }
+        }
+      ]
+    }
+  ]
+}

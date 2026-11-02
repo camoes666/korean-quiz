@@ -171,6 +171,7 @@ export const translations: Record<Language, TranslationDictionary> = {
       TWICE: '트와이스 (TWICE)', ENHYPEN: '엔하이픈 (ENHYPEN)', aespa: '에스파 (aespa)', 'LE SSERAFIM': '르세라핌 (LE SSERAFIM)', SEVENTEEN: '세븐틴',
       'Squid Game': '오징어 게임',
       'Queen of Tears': '눈물의 여왕',
+      'Doctor X': '닥터X: 하얀 마피아의 시대',
       'Street Food': '길거리 음식',
       'Spicy Level': '맵부심 척도',
       Etiquette: '식사 예절',

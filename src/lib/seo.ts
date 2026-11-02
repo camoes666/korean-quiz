@@ -358,6 +358,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'le sserafim test alma gemela',
     ],
   },
+
   'which-twice-member-are-you': {
     title: 'Which TWICE Member Are You? (ONCE Personality & Soulmate Quiz) | K-Pulse',
     ogTitle: 'Which TWICE Member Are You? (All 9 Members & Lovelys Match) | K-Pulse',
@@ -424,6 +425,45 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'quien eres de enhypen',
       'test enhypen espanol',
       'enhypen test alma gemela',
+    ],
+  },
+
+  'which-doctor-x-character-are-you': {
+    title: 'Which Doctor X: Age of the White Mafia Character Are You? | K-Pulse',
+    ogTitle: 'Which Doctor X Character Are You? (Gye Su-jeong, Jang Hee-sook, Boo Seung-kwon, Park Tae-kyung) | K-Pulse',
+    description:
+      'Find out which Doctor X: Age of the White Mafia character matches your personality! Are you genius surgeon Gye Su-jeong (Kim Ji-won), broker Jang Hee-sook, power player Boo Seung-kwon, or resident Park Tae-kyung?',
+    keywords: [
+      'doctor x quiz',
+      'which doctor x character are you',
+      'doctor x age of the white mafia',
+      'doctor x kdrama quiz',
+      'kim ji won doctor x',
+      'gye sujeong',
+      '닥터x 퀴즈',
+      '닥터x 하얀 마피아의 시대',
+      '닥터x 테스트',
+      '김지원 계수정',
+      'kdrama personality test',
+    ],
+  },
+  'doctor-x-white-mafia-trivia': {
+    title: 'Doctor X: Age of the White Mafia Quiz ({n} Questions) | K-Pulse',
+    ogTitle: 'Doctor X: Age of the White Mafia K-Drama Trivia Challenge | K-Pulse',
+    description:
+      'Test your knowledge on SBS medical noir K-Drama Doctor X: Age of the White Mafia! 15 questions across 3 levels covering Gye Su-jeong (Kim Ji-won), Guseo Hospital, and White Mafia lore.',
+    keywords: [
+      'doctor x quiz',
+      'doctor x trivia',
+      'doctor x age of the white mafia quiz',
+      'doctor x kdrama trivia',
+      'kim ji won doctor x quiz',
+      'gye sujeong trivia',
+      '닥터x 퀴즈',
+      '닥터x 하얀 마피아의 시대 퀴즈',
+      '닥터x 드라마 덕력고사',
+      '구서대학교병원',
+      'kdrama quiz',
     ],
   },
 };

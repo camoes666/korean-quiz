@@ -77,6 +77,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const questionTimeSec = isRecordMode ? RECORD_TIMER_SEC : 15;
 
   const [selectedLevel, setSelectedLevel] = useState<QuestionLevel | 'all'>('all');
+  const [selectedEpisodePack, setSelectedEpisodePack] = useState<string>('all');
   const [activeQuestions, setActiveQuestions] = useState<Question[]>(quiz.questions);
   const [gameState, setGameState] = useState<'intro' | 'playing' | 'result'>('intro');
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -154,7 +155,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
     return () => clearInterval(timer);
   }, [gameState, isAnswerSubmitted, currentIndex]);
 
-  const startQuiz = (levelChoice: QuestionLevel | 'all' = selectedLevel) => {
+  const startQuiz = (levelChoice: QuestionLevel | 'all' = selectedLevel, episodeChoice: string = selectedEpisodePack) => {
     let sessionQuestions: Question[];
     if (isRecordMode) {
       sessionQuestions = (recordParam ?? '')
@@ -165,8 +166,14 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       sessionQuestions = challengeQuestions;
     } else {
       let pool = quiz.questions;
+      if (episodeChoice !== 'all') {
+        const epFiltered = quiz.questions.filter((q) => q.episodePack === episodeChoice);
+        if (epFiltered.length > 0) {
+          pool = epFiltered;
+        }
+      }
       if (levelChoice !== 'all') {
-        const filtered = quiz.questions.filter((q) => q.level === levelChoice);
+        const filtered = pool.filter((q) => q.level === levelChoice);
         if (filtered.length > 0) {
           pool = filtered;
         }
@@ -475,6 +482,34 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           </div>
 
           {/* Details & Start Action */}
+          {quiz.coverImage && (
+            <div className="px-6 sm:px-10 pt-6 sm:pt-8">
+              <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-stretch max-w-2xl mx-auto">
+                <div className="sm:col-span-7 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-lg group bg-slate-950">
+                  <img
+                    src={quiz.coverImage}
+                    alt={quizTitle}
+                    className="w-full h-64 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-rose-600/90 backdrop-blur-md text-[11px] font-black text-white shadow-xs">
+                    {lang === 'ko' ? '🩺 MAIN · 닥터X 메스 버전' : '🩺 MAIN · Doctor X'}
+                  </span>
+                </div>
+                {quiz.secondaryImage && (
+                  <div className="sm:col-span-5 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-md group bg-slate-950">
+                    <img
+                      src={quiz.secondaryImage}
+                      alt={`${quizTitle} sub`}
+                      className="w-full h-56 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-[11px] font-bold text-rose-200 border border-rose-400/30 shadow-xs">
+                      {lang === 'ko' ? '🔥 SUB · 수술방 다크히어로' : '🔥 SUB · Dark Hero'}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
           <div className="p-6 sm:p-10">
             <p className="qz-card-muted text-slate-600 text-sm sm:text-base leading-relaxed text-center max-w-xl mx-auto mb-8 font-medium">
               {quizDescription}
@@ -517,6 +552,74 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               </div>
             ) : (
               <div className="mb-8 rounded-3xl bg-slate-50 p-5 border-2 border-purple-100">
+                {quiz.episodePacks && quiz.episodePacks.length > 0 && (
+                  <div className="mb-6 pb-5 border-b border-purple-100">
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="flex items-center gap-2">
+                        <span className="text-base">📺</span>
+                        <span className="text-xs font-black uppercase tracking-wider text-slate-900">
+                          {lang === 'ko'
+                            ? '방영 회차별 선택 (스포일러 방지)'
+                            : lang === 'es'
+                            ? 'Seleccionar por Episodios (Sin Spoilers)'
+                            : 'Select Episode Pack (Spoiler-Free)'}
+                        </span>
+                      </div>
+                      <span className="text-[11px] font-extrabold text-rose-600 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-full">
+                        {lang === 'ko' ? '매주 본방 후 업데이트!' : 'Updated Weekly!'}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                      <button
+                        type="button"
+                        onClick={() => setSelectedEpisodePack('all')}
+                        className={`p-3 rounded-2xl border-2 text-left transition-all ${
+                          selectedEpisodePack === 'all'
+                            ? 'border-rose-600 bg-rose-50/80 shadow-xs ring-2 ring-rose-400/20 -translate-y-0.5'
+                            : 'border-slate-200 bg-white hover:border-rose-200'
+                        }`}
+                      >
+                        <div className="text-xs font-black text-slate-900">
+                          {lang === 'ko' ? '🎲 전 회차 통합 랜덤' : lang === 'es' ? '🎲 Todos los Episodios' : '🎲 All Episodes Mix'}
+                        </div>
+                        <div className="text-[10px] text-slate-500 font-bold mt-0.5">
+                          {lang === 'ko' ? `총 ${quiz.questions.length}문항 중 5문제` : `${quiz.questions.length} Qs total`}
+                        </div>
+                      </button>
+                      {quiz.episodePacks.map((pack) => {
+                        const packCount = quiz.questions.filter((q) => q.episodePack === pack.id).length;
+                        const isSelected = selectedEpisodePack === pack.id;
+                        return (
+                          <button
+                            key={pack.id}
+                            type="button"
+                            onClick={() => {
+                              setSelectedEpisodePack(pack.id);
+                              setSelectedLevel('all');
+                            }}
+                            className={`p-3 rounded-2xl border-2 text-left transition-all relative ${
+                              isSelected
+                                ? 'border-rose-600 bg-rose-50/90 shadow-xs ring-2 ring-rose-400/20 -translate-y-0.5'
+                                : 'border-slate-200 bg-white hover:border-rose-200'
+                            }`}
+                          >
+                            {pack.isNew && (
+                              <span className="absolute -top-2 right-2 px-1.5 py-0.5 rounded-full bg-rose-600 text-[9px] font-black text-white uppercase tracking-wider shadow-xs">
+                                NEW
+                              </span>
+                            )}
+                            <div className="text-xs font-black text-slate-900 line-clamp-1">
+                              {getLocalizedText(pack, 'label', lang)}
+                            </div>
+                            <div className="text-[10px] text-slate-500 font-medium line-clamp-1 mt-0.5">
+                              {getLocalizedText(pack, 'subtitle', lang)} ({packCount}{t.levels.qsUnit})
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
                 <div className="flex items-center justify-between mb-3.5">
                   <div className="flex items-center gap-2">
                     <SlidersHorizontal className="w-4 h-4 text-purple-600" />
@@ -670,6 +773,16 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <span className="px-3 py-1 bg-white border border-purple-100 rounded-full font-black text-slate-700 shadow-xs">
                 Q. {currentIndex + 1 < 10 ? `0${currentIndex + 1}` : currentIndex + 1} / {totalQuestions < 10 ? `0${totalQuestions}` : totalQuestions}
               </span>
+              {currentQuestion.episodePack && (
+                <span className="px-2.5 py-0.5 rounded-full text-[11px] font-black bg-slate-900 text-rose-300 border border-rose-500/40">
+                  {currentQuestion.episodePack === 'BASE'
+                    ? lang === 'ko'
+                      ? '🎬 기본 설정'
+                      : '🎬 LORE'
+                    : `📺 ${currentQuestion.episodePack}`}
+                </span>
+              )}
+              
               {currentQuestion.level && (
                 <span
                   className={`px-2.5 py-0.5 rounded-full text-[11px] font-black border ${
@@ -718,6 +831,28 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         </div>
 
         {/* Question Card */}
+        {(quiz.coverImage || quiz.secondaryImage) && (
+          <div className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-950 relative h-32 sm:h-36 flex items-center justify-between px-5 text-white shadow-sm">
+            <img
+              src={currentIndex % 2 === 0 ? quiz.coverImage || quiz.secondaryImage : quiz.secondaryImage || quiz.coverImage}
+              alt={quizTitle}
+              className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
+            />
+            <div className="relative z-10 max-w-[65%]">
+              <span className="inline-block px-2.5 py-0.5 rounded-full bg-rose-600 text-[10px] font-black uppercase tracking-wider mb-1">
+                {currentIndex % 2 === 0 ? 'DOCTOR X · MAIN' : 'OPERATING ROOM · SUB'}
+              </span>
+              <p className="text-xs sm:text-sm font-black text-white/95 line-clamp-2">
+                {quizTitle}
+              </p>
+            </div>
+            <img
+              src={currentIndex % 2 === 0 ? quiz.coverImage || quiz.secondaryImage : quiz.secondaryImage || quiz.coverImage}
+              alt={quizTitle}
+              className="relative z-10 w-20 h-24 sm:w-24 sm:h-28 rounded-xl object-cover object-top border-2 border-white/40 shadow-md"
+            />
+          </div>
+        )}
         <div className="qz-card rounded-3xl border-2 border-purple-100 bg-white p-6 sm:p-8 shadow-lg shadow-purple-500/5">
           <h2 className="qz-card-title text-lg sm:text-2xl font-black text-slate-900 leading-snug mb-6">
             {questionText}

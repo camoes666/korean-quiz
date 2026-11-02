@@ -30,6 +30,37 @@ export function getQuizMascot(slug?: string, tag?: string): QuizMascot {
   const normalizedTag = (tag || '').toLowerCase();
   const normalizedSlug = (slug || '').toLowerCase();
 
+  // Doctor X -> Dark-Hero Surgeon Character (2번 메인 메스 아바타 & 1번 서브 수술방 아바타)
+  if (normalizedTag.includes('doctor x') || normalizedSlug.includes('doctor-x')) {
+    return {
+      name: 'Dr. X 🩺',
+      nameKo: '닥터X 🩺',
+      nameEs: 'Dra. X 🩺',
+      namePt: 'Dra. X 🩺',
+      avatarUrl: '/images/mascot/doctor-x-main.png',
+      gender: 'female',
+      badgeTitle: 'Dark Hero Dr. X 🩺',
+      badgeTitleKo: '수술방의 다크히어로 🩺',
+      badgeTitleEs: 'Heroína Oscura Dra. X 🩺',
+      badgeTitlePt: 'Heroína Sombria Dra. X 🩺',
+      greeting: '"I neither fail nor compromise!" Ready to enter the OR? 🩺⚡',
+      greetingKo: '"실패도, 타협도 하지 않는다!" 구서대병원 수술방 입장 준비됐나요? 🩺⚡',
+      greetingEn: '"I neither fail nor compromise!" Ready to enter the OR? 🩺⚡',
+      greetingEs: '"¡No fallo ni transijo!" ¿Listo para entrar al quirófano? 🩺⚡',
+      greetingPt: '"Não falho nem faço acordos!" Pronto para entrar no centro cirúrgico? 🩺⚡',
+      winCheer: 'Surgery 100% Complete! Zero-failure Doctor X certified! 🩺🏆',
+      winCheerKo: '집도 100% 성공! 실패를 모르는 찐 닥터X 인정! 🩺🏆',
+      winCheerEn: 'Surgery 100% Complete! Zero-failure Doctor X certified! 🩺🏆',
+      winCheerEs: '¡Cirugía 100% exitosa! ¡Verdadera Doctor X certificada! 🩺🏆',
+      winCheerPt: 'Cirurgia 100% concluída! Verdadeira Doctor X certificada! 🩺🏆',
+      encourage: 'Never drop the scalpel! A true surgeon never backs down! 🩺🔥',
+      encourageKo: '포기하지 마! 진정한 의사는 끝까지 메스를 놓지 않아! 🩺🔥',
+      encourageEn: 'Never drop the scalpel! A true surgeon never backs down! 🩺🔥',
+      encourageEs: '¡No sueltes el bisturí! ¡Una verdadera cirujana nunca se rinde! 🩺🔥',
+      encouragePt: 'Não largue o bisturi! Uma verdadeira cirurgiã nunca desiste! 🩺🔥',
+    };
+  }
+
   // K-Food / Culinary -> Chef Bomi (셰프 봄이 🍜🌶️)
   if (
     normalizedTag.includes('food') ||

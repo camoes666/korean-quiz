@@ -156,6 +156,25 @@ const THEMES = {
     pillText: '#ffffff',
     tag: 'PERSONALITY TEST · K-FOOD 🔮🍜',
   },
+  'which-doctor-x-character-are-you': {
+    bgStart: '#09090b',
+    bgMid: '#18181b',
+    bgEnd: '#881337',
+    accent: '#f43f5e',
+    pillBg: '#e11d48',
+    pillText: '#ffffff',
+    tag: 'K-DRAMA · DOCTOR X TEST 🩺',
+  },
+  'doctor-x-white-mafia-trivia': {
+    bgStart: '#09090b',
+    bgMid: '#4c0519',
+    bgEnd: '#18181b',
+    accent: '#fb7185',
+    pillBg: '#be123c',
+    pillText: '#ffffff',
+    tag: 'K-DRAMA · DOCTOR X TRIVIA 🩺',
+  },
+  },
 };
 
 const files = fs.readdirSync(QUIZZES_DIR).filter((f) => f.endsWith('.json'));
@@ -284,6 +303,9 @@ async function generateAll() {
     ) {
       const skzMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'hobi-skz.png');
       if (fs.existsSync(skzMascot)) mascotFile = skzMascot;
+    } else if (quiz.slug.includes('doctor-x')) {
+      const drxMascot = path.join(__dirname, '..', 'public', 'images', 'mascot', 'doctor-x-main.png');
+      if (fs.existsSync(drxMascot)) mascotFile = drxMascot;
     }
 
     // If mascot exists, resize and composite onto right side of image
