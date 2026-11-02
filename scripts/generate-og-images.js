@@ -174,7 +174,6 @@ const THEMES = {
     pillText: '#ffffff',
     tag: 'K-DRAMA · DOCTOR X TRIVIA 🩺',
   },
-  },
 };
 
 const files = fs.readdirSync(QUIZZES_DIR).filter((f) => f.endsWith('.json'));
