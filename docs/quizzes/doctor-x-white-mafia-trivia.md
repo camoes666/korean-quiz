@@ -1,7 +1,7 @@
 # 📝 [검토용 카탈로그] 《닥터X: 하얀 마피아의 시대》 회차별 명장면 & 과몰입 덕력고사
 > **영문명**: Doctor X: Age of the White Mafia Ultimate & Episode Quiz  
 > **슬러그**: `doctor-x-white-mafia-trivia`  
-> **카테고리**: K-Drama | **난이도**: Medium | **문항 수**: 총 25문항  
+> **카테고리**: K-Drama | **난이도**: Medium | **문항 수**: 총 30문항  
 > **실제 서비스 URL**: [https://kpulsequiz.com/quiz/doctor-x-white-mafia-trivia](https://kpulsequiz.com/quiz/doctor-x-white-mafia-trivia)  
 > **뒤로 가기**: [전체 카탈로그 목록 (INDEX)](./README.md)
 
@@ -12,11 +12,11 @@
 | :---: | :---: | :--- | :--- |
 | 0 ~ 2점 | 🩹 수습 인턴 | **구서대병원 첫 출근 인턴**<br>_First-Day Guseo Hospital Intern_ | 아직 구서대학교병원의 하얀 마피아 생태계가 낯선 신입 인턴이시군요! 계수정의 사이다 집도 장면을 복습하고 다시 도전해보세요. |
 | 3 ~ 4점 | ⚡ 팀 계수정 에이스 | **팀 계수정 에이스 외과 레지던트**<br>_Ace Surgical Resident (Team Gye Su-jeong)_ | 박태경·조원진처럼 날카로운 눈썰미로 구서대학교병원의 사건들을 꿰뚫고 계시네요! 닥터X의 전담 어시스트로 합격입니다. |
-| 5 ~ 5점 | 🩺 전설의 닥터X | **실패율 0% 전설의 '닥터X'**<br>_The Real Doctor X (Zero-Failure Legend)_ | "실패도, 타협도 하지 않는다!" 1화 당구장 탈장 진단부터 4화 'D.N' 낙인, 8화 단독 수술 엔딩까지 단 하나의 오차도 없이 완벽하게 집도를 끝내셨군요! |
+| 5 ~ 5점 | 🩺 전설의 닥터X | **실패율 0% 전설의 '닥터X'**<br>_The Real Doctor X (Zero-Failure Legend)_ | "실패도, 타협도 하지 않는다!" 1화 당구장 탈장 진단부터 4화 'D.N' 낙인, 9~10화 장기 6개 자가이식술과 병실 반전 엔딩까지 단 하나의 오차도 없이 완벽하게 집도를 끝내셨군요! |
 
 ---
 
-## ❓ 전체 문항 리스트 (25문항)
+## ❓ 전체 문항 리스트 (30문항)
 
 ### Q1. [🌱 Level 1 (입문)] SBS 금토드라마 《닥터X》의 공식 부제로, 가운을 입고 권력 카르텔을 형성한 의사 집단을 뜻하는 말은?
 * *English*: What is the official subtitle of the SBS Friday-Saturday medical noir drama 'Doctor X'?
@@ -389,7 +389,82 @@
 
 * **💡 상세 해설 (한국어)**: 1화 첫 장면에서 불길에 휩싸인 해외 의료 시설을 바라보던 계수정의 과거 회상은 그녀가 왜 조직을 불신하는 프리랜서 외과의가 되었는지, 그리고 '닥터X'라는 이름 뒤에 어떤 비극이 있었는지를 관통하는 핵심 복선입니다.
 * *Explanation (EN)*: The series opened with Gye Su-jeong staring at a burning overseas medical facility—the crucial mystery tying together her scar, Jang Hee-sook, and the name 'Doctor X'.
-* **✨ 펀팩트 / 비하인드**: 앞으로 9~10화 이후 새 회차가 방영될 때마다 이 퀴즈에 새로운 회차 팩이 매주 업데이트됩니다!
+* **✨ 펀팩트 / 비하인드**: 이 불타는 해외 의료 시설 회상은 10화에서 본격적으로 수면 위로 떠오른 국제 의료봉사 단체 '화이트 윙즈'의 과거 비극과 직결됩니다!
+
+---
+
+### Q26. [🌱 Level 1 (입문)] [9화] 본원에서도 포기한 8세 소아암 환아 이현아를 살리기 위해, 계수정이 사직서까지 던지며 감행한 초고난도 수술은?
+* *English*: [EP.9] To save 8-year-old pediatric cancer patient Lee Hyun-ah when everyone else gave up, what unprecedented ultra-high-risk surgery does Gye Su-jeong plan and perform?
+
+#### 🔘 선택지 (Options)
+- **[A]** 종양이 침윤한 6개의 장기를 몸 밖으로 꺼내 종양을 제거한 뒤 다시 이식하는 '복부 다장기 체외 종양 절제 및 자가이식술' (Ex-vivo tumor resection & autotransplantation of 6 abdominal organs (복부 다장기 6개 체외 종양 절제 및 자가이식술))  **[✅ 정답]**
+- **[B]** 국소 마취를 통한 단순 사랑니 발치 시술 (Simple wisdom tooth extraction under local anesthesia) 
+- **[C]** 피부과 레이저 기미·주근깨 제거 시술 (Cosmetic laser freckle removal) 
+- **[D]** 가벼운 발목 염좌 반깁스 고정 처치 (Mild ankle sprain cast application) 
+
+* **💡 상세 해설 (한국어)**: 9화에서 계수정은 악성 종양이 주요 혈관과 장기 6개에 침윤한 8세 이현아를 살리기 위해, 6개 장기를 모두 체외로 꺼내 종양을 도려낸 뒤 다시 이식하는 '복부 다장기 체외 종양 절제 및 자가이식술'을 결단합니다.
+* *Explanation (EN)*: In Episode 9, Gye Su-jeong plans an unprecedented 'multi-visceral ex-vivo tumor resection and autotransplantation'—taking 6 tumor-infiltrated organs out of the body, removing the tumors, and re-implanting them!
+* **✨ 펀팩트 / 비하인드**: 병원장 부승권이 계약 해지로 압박하자, 계수정은 오히려 사직서를 먼저 던지며 아이의 생명을 구하기 위해 수술실로 향했습니다!
+
+---
+
+### Q27. [🌱 Level 1 (입문)] [9화 엔딩] 이현아의 수술 도중 혈압이 급격히 떨어지는 절체절명의 순간, 수술복을 입고 등장해 "제 스승님입니다"라는 계수정의 소개와 함께 메스를 잡은 인물은?
+* *English*: [EP.9 Ending] When patient Lee Hyun-ah's blood pressure plummets during surgery, who walks into the operating room in surgical scrubs and is introduced by Gye Su-jeong as "My mentor"?
+
+#### 🔘 선택지 (Options)
+- **[A]** 의사 용역 소개소 소장 장희숙 (배우 이정은) (Agency Director Jang Hee-sook (장희숙 · played by Lee Jung-eun))  **[✅ 정답]**
+- **[B]** 응급실에서 난동을 부렸던 나대일 (Disgraced surgeon Na Dae-il (나대일)) 
+- **[C]** 라텍스 쇼크로 은퇴한 전 병원장 김명섭 (Former Hospital Director Kim Myung-seop (김명섭)) 
+- **[D]** 간 낙인 피해 환자였던 제약회사 직원 권충현 (Pharmaceutical employee Kwon Chung-hyun (권충현)) 
+
+* **💡 상세 해설 (한국어)**: 돈만 밝히는 용역 소개소 소장인 줄 알았던 장희숙(이정은)이 위기의 순간 수술복을 입고 등장해 "외과의 장희숙입니다"라고 선언하고, 계수정이 "제 스승님입니다"라고 밝히며 전율의 9화 엔딩을 장식했습니다!
+* *Explanation (EN)*: At the end of Episode 9, Jang Hee-sook (Lee Jung-eun)—who seemed like a money-minded broker—enters the OR announcing 'I am surgeon Jang Hee-sook,' and Gye Su-jeong reveals, 'She is my mentor!'
+* **✨ 펀팩트 / 비하인드**: 수술방 문을 열고 들어오는 이정은 배우의 압도적인 포스와 김지원과의 사제 케미가 폭발하며 10화 최고 시청률 20.2% 돌파의 일등 공신이 되었습니다!
+
+---
+
+### Q28. [⭐ Level 2 (일반/팬)] [9화] "계수정이 닥터X냐"며 추궁하는 병원장 부승권(손현주)과의 기싸움에서, 장희숙이 단번에 꿰뚫어 보며 역으로 부승권을 압박한 그의 숨겨진 안과 질환은?
+* *English*: [EP.9] During her tense confrontation with Hospital Director Boo Seung-kwon, what hidden eye disease of his does Jang Hee-sook sharply see right through?
+
+#### 🔘 선택지 (Options)
+- **[A]** 녹내장 (시야가 점차 좁아지는 질환) (Glaucoma (녹내장))  **[✅ 정답]**
+- **[B]** 선천성 적록색맹 (Red-green color blindness (적록색맹)) 
+- **[C]** 수영장 물로 인한 급성 외이도염 (Swimmer's ear infection (외이도염)) 
+- **[D]** 사랑니 신경 충치 (Wisdom tooth cavity (사랑니 충치)) 
+
+* **💡 상세 해설 (한국어)**: 장희숙은 자신을 압박하는 부승권의 미세한 시선과 행동만 보고도 그가 '녹내장'을 앓고 있다는 사실을 단번에 짚어내며, 그녀 역시 범상치 않은 실력자임을 드러냈습니다.
+* *Explanation (EN)*: Jang Hee-sook proves her razor-sharp clinical eye by immediately noticing that Director Boo Seung-kwon is hiding glaucoma (녹내장), turning the tables on him during their confrontation.
+* **✨ 펀팩트 / 비하인드**: 이 짧은 기싸움 장면은 9화 엔딩에서 장희숙이 사실은 전설적인 외과의이자 계수정의 스승이었음을 보여주는 치밀한 복선이었습니다!
+
+---
+
+### Q29. [🔥 Level 3 (코어/고난도)] [9~10화] 도윤식·장희숙·부승권 등 8인의 의사가 합류해 이현아의 대수술을 성공시킨 뒤, 목련회와 재단이 내린 무더기 중징계와 계약 해지를 일시 보류시킨 결정적 반격은?
+* *English*: [EP.9–10] After 8 doctors—including Do Yoon-sik, Jang Hee-sook, and Director Boo Seung-kwon—unite to save Lee Hyun-ah, how is the foundation's harsh disciplinary firing blocked?
+
+#### 🔘 선택지 (Options)
+- **[A]** 장희숙과 사전에 입을 맞춘 현아 어머니가 본원의 진료 거부 및 분원 방치를 문제 삼아 병원·재단·의료진 전원을 고소하겠다고 맞불을 놓는다 (Hyun-ah's mother—secretly coordinating with Jang Hee-sook—threatens a massive lawsuit against the hospital, branch, foundation, and doctors)  **[✅ 정답]**
+- **[B]** 복권 1등에 당첨되어 구서대병원 재단을 통째로 인수한다 (They win the national lottery and buy out the hospital foundation) 
+- **[C]** 수술에 참여한 의사 8명이 모두 크루즈선을 타고 해외로 도피한다 (All doctors flee overseas on a cruise ship) 
+- **[D]** 병원 전산 서버에 벼락이 쳐서 인사 기록이 삭제된다 (The hospital computer server is struck by lightning) 
+
+* **💡 상세 해설 (한국어)**: 재단이 원장 직위 해제와 교수진 정직, 계수정 해고를 통보하자, 장희숙과 사전 모의한 이현아의 어머니가 '본원에서 치료를 거부당해 분원으로 밀려났던 것'을 공론화하며 병원·재단·의사 모두를 고소하겠다고 선언해 징계를 보류시킵니다.
+* *Explanation (EN)*: When the foundation tries to purge Director Boo, suspend professors like Do Yoon-sik, and fire Gye Su-jeong, Hyun-ah's mother (in a clever scheme with Jang Hee-sook) threatens a public lawsuit over the main hospital's initial refusal to treat her daughter—forcing the board to freeze all punishments!
+* **✨ 펀팩트 / 비하인드**: 전공의 사직 결의회 투표장에서 좌불안석하다가 커리어를 걸고 수술실로 달려온 도윤식(김영민) 교수의 합류 역시 뜨거운 감동을 선사했습니다!
+
+---
+
+### Q30. [⭐ Level 2 (일반/팬)] [10화 엔딩] 평소 성실하던 인턴 박태경(김우석)이 병실에서 베개로 질식시키려다 계수정에게 제지당하고, 눈을 뜨며 "오랜만이구나, 닥터X"라고 말해 소름을 유발한 입원 환자는?
+* *English*: [EP.10 Ending] In the shocking Episode 10 finale, who is intern Park Tae-kyung trying to suffocate with a pillow before the patient opens his eyes and says to Gye Su-jeong, "Long time no see, Doctor X"?
+
+#### 🔘 선택지 (Options)
+- **[A]** 국제 의료봉사 단체 '화이트 윙즈'의 창립자 김승효 (배우 전국환) (Kim Seung-hyo (김승효 · played by Jeon Gook-hwan), founder of the international medical group 'White Wings')  **[✅ 정답]**
+- **[B]** 1화 당구장에서 서혜부 탈장으로 쓰러졌던 손님 (Billiard hall customer from Episode 1) 
+- **[C]** 구서대학교병원 구내식당 주방장 (Hospital cafeteria head chef) 
+- **[D]** 3화에서 수술을 받았던 청소 용역 직원 (Cleaning service worker from Episode 3) 
+
+* **💡 상세 해설 (한국어)**: 10화 엔딩에서 심장 이식 수술을 위해 입원한 '화이트 윙즈' 창립자 김승효(전국환)의 병실에서, 인턴 박태경이 베개로 그의 얼굴을 누르고 조원진이 이를 지켜보는 충격적인 장면이 펼쳐집니다. 계수정이 급히 말리자 눈을 뜬 김승효가 "오랜만이구나, 닥터X"라고 인사를 건네며 역대급 소름 엔딩을 완성했습니다!
+* *Explanation (EN)*: In the jaw-dropping Episode 10 finale, 'White Wings' founder Kim Seung-hyo (Jeon Gook-hwan) is admitted for a heart transplant. Gye Su-jeong catches Park Tae-kyung pressing a pillow over his face while Jo Won-jin watches—and Kim Seung-hyo opens his eyes, grabs Su-jeong's hand, and says, 'Long time no see, Doctor X!'
+* **✨ 펀팩트 / 비하인드**: 이 충격적인 병실 반전 엔딩과 함께 10화 시청률은 전국 17.7%, 순간 최고 20.2%까지 치솟으며 5주 연속 전 채널 1위를 수성했습니다!
 
 ---
 

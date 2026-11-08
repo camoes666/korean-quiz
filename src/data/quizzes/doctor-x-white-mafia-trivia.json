@@ -1,15 +1,15 @@
 {
   "slug": "doctor-x-white-mafia-trivia",
-  "addedAt": "2026-11-02",
+  "addedAt": "2026-11-08",
   "title": "Doctor X: Age of the White Mafia Ultimate & Episode Quiz",
   "titleKo": "《닥터X: 하얀 마피아의 시대》 회차별 명장면 & 과몰입 덕력고사",
   "titleEs": "Trivia por Episodios de Doctor X: Age of the White Mafia",
-  "subtitle": "From Episode 1 to the latest Episode 8 cliffhanger—can you pass with zero failures?",
-  "subtitleKo": "1화 당구장 응급처치부터 4화 'D.N' 낙인, 8화 단독 수술 & 정체 추궁 엔딩까지! 본방 사수 레벨을 증명하세요.",
-  "subtitleEs": "Desde el episodio 1 hasta el impactante final del episodio 8: ¿puedes aprobar sin fallos?",
-  "description": "Test your knowledge of SBS's hit Friday-Saturday medical noir K-Drama 'Doctor X: Age of the White Mafia'! Choose a specific episode pack (EP.1-2, EP.3-4, EP.5-6, EP.7-8) to avoid spoilers, or challenge all 25 questions!",
-  "descriptionKo": "화제의 SBS 금토 메디컬 느와르 《닥터X: 하얀 마피아의 시대》! 내가 본 회차(1~2화, 3~4화, 5~6화, 최신 7~8화)만 골라 스포일러 없이 풀거나, 전체 25문제 통합 모의고사에 도전해보세요!",
-  "descriptionEs": "¡Pon a prueba cuánto sabes de 'Doctor X: Age of the White Mafia'! Elige por episodios (EP.1-2 a EP.7-8) sin spoilers o juega el reto completo de 25 preguntas.",
+  "subtitle": "From Episode 1 to the latest Episode 10 twist—can you pass with zero failures?",
+  "subtitleKo": "1화 당구장 응급처치부터 4화 'D.N' 낙인, 9화 스승 장희숙 등판과 10화 충격의 병실 엔딩까지! 본방 사수 레벨을 증명하세요.",
+  "subtitleEs": "Desde el episodio 1 hasta el impactante giro del episodio 10: ¿puedes aprobar sin fallos?",
+  "description": "Test your knowledge of SBS's hit Friday-Saturday medical noir K-Drama 'Doctor X: Age of the White Mafia'! Choose a specific episode pack (EP.1-2 to EP.9-10) to avoid spoilers, or challenge all 30 questions!",
+  "descriptionKo": "화제의 SBS 금토 메디컬 느와르 《닥터X: 하얀 마피아의 시대》! 내가 본 회차(1~2화, 3~4화, 5~6화, 7~8화, 최신 9~10화)만 골라 스포일러 없이 풀거나, 전체 30문제 통합 모의고사에 도전해보세요!",
+  "descriptionEs": "¡Pon a prueba cuánto sabes de 'Doctor X: Age of the White Mafia'! Elige por episodios (EP.1-2 a EP.9-10) sin spoilers o juega el reto completo de 30 preguntas.",
   "category": "K-Drama",
   "tag": "Doctor X",
   "coverEmoji": "🩺",
@@ -59,12 +59,21 @@
     },
     {
       "id": "EP.7-8",
-      "label": "🔥 EP.7–8",
-      "labelKo": "🔥 7~8화 (최신)",
-      "labelEs": "🔥 EP.7–8 (Nuevo)",
+      "label": "📺 EP.7–8",
+      "labelKo": "📺 7~8화",
+      "labelEs": "📺 EP.7–8",
       "subtitle": "Doctors' Strike & Solo Surgery",
       "subtitleKo": "전공의 파업·곰인형 수술 & 단독 집도",
-      "subtitleEs": "Huelga médica y cirugía en solitario",
+      "subtitleEs": "Huelga médica y cirugía en solitario"
+    },
+    {
+      "id": "EP.9-10",
+      "label": "🔥 EP.9–10",
+      "labelKo": "🔥 9~10화 (최신)",
+      "labelEs": "🔥 EP.9–10 (Nuevo)",
+      "subtitle": "6-Organ Ex-Vivo Surgery & Mentor Reveal",
+      "subtitleKo": "장기 6개 체외 자가이식·스승 장희숙 & 병실 반전",
+      "subtitleEs": "Cirugía de 6 órganos y giro de Jang Hee-sook",
       "isNew": true
     }
   ],
@@ -1090,9 +1099,214 @@
       "explanation": "The series opened with Gye Su-jeong staring at a burning overseas medical facility—the crucial mystery tying together her scar, Jang Hee-sook, and the name 'Doctor X'.",
       "explanationKo": "1화 첫 장면에서 불길에 휩싸인 해외 의료 시설을 바라보던 계수정의 과거 회상은 그녀가 왜 조직을 불신하는 프리랜서 외과의가 되었는지, 그리고 '닥터X'라는 이름 뒤에 어떤 비극이 있었는지를 관통하는 핵심 복선입니다.",
       "explanationEs": "La serie comenzó con Gye Su-jeong mirando una instalación médica en llamas en el extranjero, la clave de su pasado como 'Doctor X'.",
-      "funFact": "New episode packs (EP.9–10 and beyond) will be added right here every week as new episodes air!",
-      "funFactKo": "앞으로 9~10화 이후 새 회차가 방영될 때마다 이 퀴즈에 새로운 회차 팩이 매주 업데이트됩니다!",
-      "funFactEs": "¡Cada semana se añadirán nuevos paquetes de episodios a medida que se emitan!"
+      "funFact": "This burning overseas facility is directly tied to the international medical volunteer group 'White Wings' revealed in Episode 10!",
+      "funFactKo": "이 불타는 해외 의료 시설 회상은 10화에서 본격적으로 수면 위로 떠오른 국제 의료봉사 단체 '화이트 윙즈'의 과거 비극과 직결됩니다!",
+      "funFactEs": "¡Esta instalación en llamas está directamente conectada con el grupo médico 'White Wings' revelado en el episodio 10!"
+    },
+    {
+      "id": 26,
+      "level": 1,
+      "episodePack": "EP.9-10",
+      "question": "[EP.9] To save 8-year-old pediatric cancer patient Lee Hyun-ah when everyone else gave up, what unprecedented ultra-high-risk surgery does Gye Su-jeong plan and perform?",
+      "questionKo": "[9화] 본원에서도 포기한 8세 소아암 환아 이현아를 살리기 위해, 계수정이 사직서까지 던지며 감행한 초고난도 수술은?",
+      "questionEs": "[EP.9] Para salvar a la niña de 8 años Lee Hyun-ah cuando todos se rindieron, ¿qué cirugía de altísimo riesgo realiza Gye Su-jeong?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Ex-vivo tumor resection & autotransplantation of 6 abdominal organs (복부 다장기 6개 체외 종양 절제 및 자가이식술)",
+          "textKo": "종양이 침윤한 6개의 장기를 몸 밖으로 꺼내 종양을 제거한 뒤 다시 이식하는 '복부 다장기 체외 종양 절제 및 자가이식술'",
+          "textEs": "Resección tumoral ex-vivo y autotrasplante de 6 órganos abdominales (장기 6개 체외 종양 절제 및 자가이식술)"
+        },
+        {
+          "id": "B",
+          "text": "Simple wisdom tooth extraction under local anesthesia",
+          "textKo": "국소 마취를 통한 단순 사랑니 발치 시술",
+          "textEs": "Extracción simple de muela del juicio con anestesia local"
+        },
+        {
+          "id": "C",
+          "text": "Cosmetic laser freckle removal",
+          "textKo": "피부과 레이저 기미·주근깨 제거 시술",
+          "textEs": "Eliminación cosmética de pecas con láser"
+        },
+        {
+          "id": "D",
+          "text": "Mild ankle sprain cast application",
+          "textKo": "가벼운 발목 염좌 반깁스 고정 처치",
+          "textEs": "Aplicación de yeso por un esguince leve de tobillo"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "In Episode 9, Gye Su-jeong plans an unprecedented 'multi-visceral ex-vivo tumor resection and autotransplantation'—taking 6 tumor-infiltrated organs out of the body, removing the tumors, and re-implanting them!",
+      "explanationKo": "9화에서 계수정은 악성 종양이 주요 혈관과 장기 6개에 침윤한 8세 이현아를 살리기 위해, 6개 장기를 모두 체외로 꺼내 종양을 도려낸 뒤 다시 이식하는 '복부 다장기 체외 종양 절제 및 자가이식술'을 결단합니다.",
+      "explanationEs": "En el episodio 9, Gye Su-jeong realiza una cirugía sin precedentes extrayendo 6 órganos para extirpar los tumores fuera del cuerpo y reimplantarlos.",
+      "funFact": "When Director Boo Seung-kwon threatens to terminate her contract, Gye Su-jeong throws down her resignation letter so nothing can stop her from saving the child!",
+      "funFactKo": "병원장 부승권이 계약 해지로 압박하자, 계수정은 오히려 사직서를 먼저 던지며 아이의 생명을 구하기 위해 수술실로 향했습니다!",
+      "funFactEs": "¡Cuando el director amenaza con despedirla, Gye Su-jeong entrega su renuncia para que nada le impida salvar a la niña!"
+    },
+    {
+      "id": 27,
+      "level": 1,
+      "episodePack": "EP.9-10",
+      "question": "[EP.9 Ending] When patient Lee Hyun-ah's blood pressure plummets during surgery, who walks into the operating room in surgical scrubs and is introduced by Gye Su-jeong as \"My mentor\"?",
+      "questionKo": "[9화 엔딩] 이현아의 수술 도중 혈압이 급격히 떨어지는 절체절명의 순간, 수술복을 입고 등장해 \"제 스승님입니다\"라는 계수정의 소개와 함께 메스를 잡은 인물은?",
+      "questionEs": "[Final EP.9] Cuando la cirugía entra en crisis, ¿quién entra al quirófano vestida de cirujana y es presentada por Gye Su-jeong como \"Mi maestra\"?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Agency Director Jang Hee-sook (장희숙 · played by Lee Jung-eun)",
+          "textKo": "의사 용역 소개소 소장 장희숙 (배우 이정은)",
+          "textEs": "La directora de la agencia Jang Hee-sook (interpretada por Lee Jung-eun)"
+        },
+        {
+          "id": "B",
+          "text": "Disgraced surgeon Na Dae-il (나대일)",
+          "textKo": "응급실에서 난동을 부렸던 나대일",
+          "textEs": "El cirujano caído en desgracia Na Dae-il"
+        },
+        {
+          "id": "C",
+          "text": "Former Hospital Director Kim Myung-seop (김명섭)",
+          "textKo": "라텍스 쇼크로 은퇴한 전 병원장 김명섭",
+          "textEs": "El exdirector del hospital Kim Myung-seop"
+        },
+        {
+          "id": "D",
+          "text": "Pharmaceutical employee Kwon Chung-hyun (권충현)",
+          "textKo": "간 낙인 피해 환자였던 제약회사 직원 권충현",
+          "textEs": "El empleado farmacéutico Kwon Chung-hyun"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "At the end of Episode 9, Jang Hee-sook (Lee Jung-eun)—who seemed like a money-minded broker—enters the OR announcing 'I am surgeon Jang Hee-sook,' and Gye Su-jeong reveals, 'She is my mentor!'",
+      "explanationKo": "돈만 밝히는 용역 소개소 소장인 줄 알았던 장희숙(이정은)이 위기의 순간 수술복을 입고 등장해 \"외과의 장희숙입니다\"라고 선언하고, 계수정이 \"제 스승님입니다\"라고 밝히며 전율의 9화 엔딩을 장식했습니다!",
+      "explanationEs": "Al final del episodio 9, Jang Hee-sook entra al quirófano como cirujana y Gye Su-jeong revela ante todos que ella es su maestra.",
+      "funFact": "Viewers got goosebumps as the mentor-disciple duo teamed up at the operating table with flawless surgical synergy in Episode 10!",
+      "funFactKo": "수술방 문을 열고 들어오는 이정은 배우의 압도적인 포스와 김지원과의 사제 케미가 폭발하며 10화 최고 시청률 20.2% 돌파의 일등 공신이 되었습니다!",
+      "funFactEs": "¡La entrada de Jang Hee-sook al quirófano fue uno de los momentos más épicos y aplaudidos de toda la serie!"
+    },
+    {
+      "id": 28,
+      "level": 2,
+      "episodePack": "EP.9-10",
+      "question": "[EP.9] During her tense confrontation with Hospital Director Boo Seung-kwon, what hidden eye disease of his does Jang Hee-sook sharply see right through?",
+      "questionKo": "[9화] \"계수정이 닥터X냐\"며 추궁하는 병원장 부승권(손현주)과의 기싸움에서, 장희숙이 단번에 꿰뚫어 보며 역으로 부승권을 압박한 그의 숨겨진 안과 질환은?",
+      "questionEs": "[EP.9] Durante su tenso enfrentamiento con el director Boo Seung-kwon, ¿qué enfermedad ocular oculta de él descubre Jang Hee-sook al instante?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Glaucoma (녹내장)",
+          "textKo": "녹내장 (시야가 점차 좁아지는 질환)",
+          "textEs": "Glaucoma (녹내장)"
+        },
+        {
+          "id": "B",
+          "text": "Red-green color blindness (적록색맹)",
+          "textKo": "선천성 적록색맹",
+          "textEs": "Daltonismo rojo-verde"
+        },
+        {
+          "id": "C",
+          "text": "Swimmer's ear infection (외이도염)",
+          "textKo": "수영장 물로 인한 급성 외이도염",
+          "textEs": "Infección de oído"
+        },
+        {
+          "id": "D",
+          "text": "Wisdom tooth cavity (사랑니 충치)",
+          "textKo": "사랑니 신경 충치",
+          "textEs": "Caries en la muela del juicio"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jang Hee-sook proves her razor-sharp clinical eye by immediately noticing that Director Boo Seung-kwon is hiding glaucoma (녹내장), turning the tables on him during their confrontation.",
+      "explanationKo": "장희숙은 자신을 압박하는 부승권의 미세한 시선과 행동만 보고도 그가 '녹내장'을 앓고 있다는 사실을 단번에 짚어내며, 그녀 역시 범상치 않은 실력자임을 드러냈습니다.",
+      "explanationEs": "Jang Hee-sook demuestra su agudeza clínica al notar de inmediato que el director Boo Seung-kwon padece glaucoma en secreto.",
+      "funFact": "This scene subtly foreshadowed that Jang Hee-sook was no ordinary placement broker, but a master clinician herself!",
+      "funFactKo": "이 짧은 기싸움 장면은 9화 엔딩에서 장희숙이 사실은 전설적인 외과의이자 계수정의 스승이었음을 보여주는 치밀한 복선이었습니다!",
+      "funFactEs": "¡Esta escena fue una pista brillante de que Jang Hee-sook era en realidad una cirujana maestra!"
+    },
+    {
+      "id": 29,
+      "level": 3,
+      "episodePack": "EP.9-10",
+      "question": "[EP.9–10] After 8 doctors—including Do Yoon-sik, Jang Hee-sook, and Director Boo Seung-kwon—unite to save Lee Hyun-ah, how is the foundation's harsh disciplinary firing blocked?",
+      "questionKo": "[9~10화] 도윤식·장희숙·부승권 등 8인의 의사가 합류해 이현아의 대수술을 성공시킨 뒤, 목련회와 재단이 내린 무더기 중징계와 계약 해지를 일시 보류시킨 결정적 반격은?",
+      "questionEs": "[EP.9–10] Tras el éxito de la cirugía con 8 médicos, ¿cómo logran frenar el despido y las sanciones disciplinarias de la fundación?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Hyun-ah's mother—secretly coordinating with Jang Hee-sook—threatens a massive lawsuit against the hospital, branch, foundation, and doctors",
+          "textKo": "장희숙과 사전에 입을 맞춘 현아 어머니가 본원의 진료 거부 및 분원 방치를 문제 삼아 병원·재단·의료진 전원을 고소하겠다고 맞불을 놓는다",
+          "textEs": "La madre de Hyun-ah, en coordinación secreta con Jang Hee-sook, amenaza con demandar al hospital y a la fundación"
+        },
+        {
+          "id": "B",
+          "text": "They win the national lottery and buy out the hospital foundation",
+          "textKo": "복권 1등에 당첨되어 구서대병원 재단을 통째로 인수한다",
+          "textEs": "Ganan la lotería y compran toda la fundación del hospital"
+        },
+        {
+          "id": "C",
+          "text": "All doctors flee overseas on a cruise ship",
+          "textKo": "수술에 참여한 의사 8명이 모두 크루즈선을 타고 해외로 도피한다",
+          "textEs": "Los 8 médicos huyen al extranjero en un crucero"
+        },
+        {
+          "id": "D",
+          "text": "The hospital computer server is struck by lightning",
+          "textKo": "병원 전산 서버에 벼락이 쳐서 인사 기록이 삭제된다",
+          "textEs": "Un rayo borra los servidores del hospital"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "When the foundation tries to purge Director Boo, suspend professors like Do Yoon-sik, and fire Gye Su-jeong, Hyun-ah's mother (in a clever scheme with Jang Hee-sook) threatens a public lawsuit over the main hospital's initial refusal to treat her daughter—forcing the board to freeze all punishments!",
+      "explanationKo": "재단이 원장 직위 해제와 교수진 정직, 계수정 해고를 통보하자, 장희숙과 사전 모의한 이현아의 어머니가 '본원에서 치료를 거부당해 분원으로 밀려났던 것'을 공론화하며 병원·재단·의사 모두를 고소하겠다고 선언해 징계를 보류시킵니다.",
+      "explanationEs": "Cuando la fundación intenta sancionar a los médicos, la madre de Hyun-ah (aliada con Jang Hee-sook) amenaza con una demanda pública que obliga a congelar los castigos.",
+      "funFact": "Professor Do Yoon-sik (Kim Young-min) bolting out of the strike resolution vote to join Gye Su-jeong's operating room was one of Episode 9's most cheering moments!",
+      "funFactKo": "전공의 사직 결의회 투표장에서 좌불안석하다가 커리어를 걸고 수술실로 달려온 도윤식(김영민) 교수의 합류 역시 뜨거운 감동을 선사했습니다!",
+      "funFactEs": "¡La decisión del profesor Do Yoon-sik de abandonar la votación para unirse a la cirugía fue muy aplaudida!"
+    },
+    {
+      "id": 30,
+      "level": 2,
+      "episodePack": "EP.9-10",
+      "question": "[EP.10 Ending] In the shocking Episode 10 finale, who is intern Park Tae-kyung trying to suffocate with a pillow before the patient opens his eyes and says to Gye Su-jeong, \"Long time no see, Doctor X\"?",
+      "questionKo": "[10화 엔딩] 평소 성실하던 인턴 박태경(김우석)이 병실에서 베개로 질식시키려다 계수정에게 제지당하고, 눈을 뜨며 \"오랜만이구나, 닥터X\"라고 말해 소름을 유발한 입원 환자는?",
+      "questionEs": "[Final EP.10] En el impactante final del episodio 10, ¿a quién intenta asfixiar Park Tae-kyung con una almohada antes de que el paciente diga \"Cuánto tiempo, Doctor X\"?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Kim Seung-hyo (김승효 · played by Jeon Gook-hwan), founder of the international medical group 'White Wings'",
+          "textKo": "국제 의료봉사 단체 '화이트 윙즈'의 창립자 김승효 (배우 전국환)",
+          "textEs": "Kim Seung-hyo (interpretado por Jeon Gook-hwan), fundador del grupo médico 'White Wings'"
+        },
+        {
+          "id": "B",
+          "text": "Billiard hall customer from Episode 1",
+          "textKo": "1화 당구장에서 서혜부 탈장으로 쓰러졌던 손님",
+          "textEs": "El cliente de la sala de billar del episodio 1"
+        },
+        {
+          "id": "C",
+          "text": "Hospital cafeteria head chef",
+          "textKo": "구서대학교병원 구내식당 주방장",
+          "textEs": "El chef principal de la cafetería del hospital"
+        },
+        {
+          "id": "D",
+          "text": "Cleaning service worker from Episode 3",
+          "textKo": "3화에서 수술을 받았던 청소 용역 직원",
+          "textEs": "El trabajador de limpieza del episodio 3"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "In the jaw-dropping Episode 10 finale, 'White Wings' founder Kim Seung-hyo (Jeon Gook-hwan) is admitted for a heart transplant. Gye Su-jeong catches Park Tae-kyung pressing a pillow over his face while Jo Won-jin watches—and Kim Seung-hyo opens his eyes, grabs Su-jeong's hand, and says, 'Long time no see, Doctor X!'",
+      "explanationKo": "10화 엔딩에서 심장 이식 수술을 위해 입원한 '화이트 윙즈' 창립자 김승효(전국환)의 병실에서, 인턴 박태경이 베개로 그의 얼굴을 누르고 조원진이 이를 지켜보는 충격적인 장면이 펼쳐집니다. 계수정이 급히 말리자 눈을 뜬 김승효가 \"오랜만이구나, 닥터X\"라고 인사를 건네며 역대급 소름 엔딩을 완성했습니다!",
+      "explanationEs": "En el impactante final del episodio 10, Park Tae-kyung intenta asfixiar a Kim Seung-hyo (fundador de 'White Wings') mientras Jo Won-jin observa, ¡y al despertar él saluda a Gye Su-jeong como 'Doctor X'!",
+      "funFact": "Episode 10 hit 17.7% nationwide and a 20.2% peak rating, leaving viewers stunned over why 'sunshine intern' Park Tae-kyung and Jo Won-jin targeted Kim Seung-hyo!",
+      "funFactKo": "이 충격적인 병실 반전 엔딩과 함께 10화 시청률은 전국 17.7%, 순간 최고 20.2%까지 치솟으며 5주 연속 전 채널 1위를 수성했습니다!",
+      "funFactEs": "¡El episodio 10 alcanzó un pico del 20,2% de audiencia con este giro inesperado de Park Tae-kyung y Jo Won-jin!"
     }
   ],
   "scoreTiers": [
@@ -1137,8 +1351,8 @@
       "badge": "🩺",
       "badgeKo": "🩺 전설의 닥터X",
       "badgeEs": "🩺 Leyenda Doctor X",
-      "description": "100% Flawless Surgery! From Episode 1's latex shock to Episode 4's 'D.N' mark and Episode 8's solo surgery, you never miss a single detail!",
-      "descriptionKo": "\"실패도, 타협도 하지 않는다!\" 1화 당구장 탈장 진단부터 4화 'D.N' 낙인, 8화 단독 수술 엔딩까지 단 하나의 오차도 없이 완벽하게 집도를 끝내셨군요!",
+      "description": "100% Flawless Surgery! From Episode 1's latex shock to Episode 4's 'D.N' mark and Episode 10's mentor surgery & ward twist, you never miss a single detail!",
+      "descriptionKo": "\"실패도, 타협도 하지 않는다!\" 1화 당구장 탈장 진단부터 4화 'D.N' 낙인, 9~10화 장기 6개 자가이식술과 병실 반전 엔딩까지 단 하나의 오차도 없이 완벽하게 집도를 끝내셨군요!",
       "descriptionEs": "¡Cirugía 100% impecable! Dominas cada episodio de 'Doctor X: Age of the White Mafia' sin un solo error.",
       "funQuote": "\"Step aside. Surgery complete—zero failures, as always.\"",
       "funQuoteKo": "\"수술 끝. 내가 말했잖아, 난 실패하지 않는다고.\"",

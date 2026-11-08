@@ -1118,7 +1118,7 @@ export default function PersonalityTestRunner({
             bingeBtn = lang === 'ko' ? '50문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 50 Preguntas' : lang === 'pt' ? 'Jogar Quiz de 50 Perguntas' : 'Play 50-Question Trivia';
           } else if (quiz.tag === 'Doctor X') {
             bingeHref = '/quiz/doctor-x-white-mafia-trivia';
-            bingeTitle = lang === 'ko' ? '《닥터X: 하얀 마피아의 시대》 15문제 과몰입 덕력고사도 도전해볼까요?' : lang === 'es' ? '¿Listo para la Trivia de 15 Preguntas de Doctor X?' : 'Ready for the 15-Question Doctor X Trivia Challenge?';
+            bingeTitle = lang === 'ko' ? '《닥터X: 하얀 마피아의 시대》 30문제 과몰입 덕력고사도 도전해볼까요?' : lang === 'es' ? '¿Listo para la Trivia de 30 Preguntas de Doctor X?' : 'Ready for the 30-Question Doctor X Trivia Challenge?';
             bingeDesc = lang === 'ko' ? "'수술방의 미친 계' 계수정의 사이다 명대사부터 구서대학교병원 하얀 마피아의 숨겨진 설정까지 테스트해보세요!" : lang === 'es' ? '¡Desde las frases icónicas de Gye Su-jeong hasta los secretos del Hospital Guseo!' : 'From Gye Su-jeong’s iconic quotes to Guseo University Hospital secrets, prove your true Doctor X mastery!';
             bingeBtn = lang === 'ko' ? '닥터X 상식 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Trivia Doctor X' : 'Play Doctor X Trivia';
           } else if (quiz.category === 'Food' || quiz.tag === 'K-Food') {

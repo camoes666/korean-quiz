@@ -451,7 +451,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     title: 'Doctor X: Age of the White Mafia Quiz ({n} Questions) | K-Pulse',
     ogTitle: 'Doctor X: Age of the White Mafia K-Drama Trivia Challenge | K-Pulse',
     description:
-      'Test your knowledge on SBS medical noir K-Drama Doctor X: Age of the White Mafia! 15 questions across 3 levels covering Gye Su-jeong (Kim Ji-won), Guseo Hospital, and White Mafia lore.',
+      'Test your knowledge on SBS medical noir K-Drama Doctor X: Age of the White Mafia! 30 questions across episode packs (EP.1-2 to EP.9-10) covering Gye Su-jeong (Kim Ji-won), Jang Hee-sook, Guseo Hospital, and White Mafia lore.',
     keywords: [
       'doctor x quiz',
       'doctor x trivia',
