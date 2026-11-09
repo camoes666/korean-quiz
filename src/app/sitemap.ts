@@ -17,6 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const guideHubUrl: MetadataRoute.Sitemap = [
     {
+      url: `${baseUrl}/chemistry`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/guide`,
       lastModified: new Date(),
       changeFrequency: 'weekly',

@@ -914,6 +914,56 @@ export default function PersonalityTestRunner({
                 </div>
               </div>
 
+              {/* 🔮 K-Saju × MBTI Real Birthdate Chemistry Deep-Link Card */}
+              {quiz.category === 'K-Pop' && (
+                <div className="p-5 rounded-2xl bg-gradient-to-r from-purple-950 via-fuchsia-900 to-rose-900 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+                  <div className="text-center sm:text-left">
+                    <span className="inline-block px-2.5 py-0.5 rounded-full bg-white/15 border border-white/25 text-[10px] font-black text-amber-300 mb-1">
+                      🔮 K-SAJU × MBTI LAB
+                    </span>
+                    <h4 className="text-sm sm:text-base font-black leading-snug">
+                      {lang === 'ko'
+                        ? `내 실제 생년월일·MBTI로 본 [${memberName}]와의 사주 궁합은 몇 %일까?`
+                        : lang === 'es'
+                        ? `¿Cuál es tu % de compatibilidad K-Saju y MBTI real con ${memberName}?`
+                        : `What is your real K-Saju & MBTI compatibility % with ${memberName}?`}
+                    </h4>
+                    <p className="text-xs text-purple-100/85 mt-0.5">
+                      {lang === 'ko'
+                        ? '오행(목·화·토·금·수) 상생과 MBTI로 전 멤버 궁합 순위까지 10초 만에 확인하세요!'
+                        : 'Check your Five Elements destiny score and full group ranking in 10 seconds!'}
+                    </p>
+                  </div>
+                  <Link
+                    href={`/chemistry?g=${
+                      quiz.tag === 'Stray Kids'
+                        ? 'stray-kids'
+                        : quiz.tag === 'BLACKPINK'
+                        ? 'blackpink'
+                        : quiz.tag === 'TWICE'
+                        ? 'twice'
+                        : quiz.tag === 'ENHYPEN'
+                        ? 'enhypen'
+                        : quiz.tag === 'aespa'
+                        ? 'aespa'
+                        : quiz.tag === 'LE SSERAFIM'
+                        ? 'le-sserafim'
+                        : 'bts'
+                    }&m=${encodeURIComponent(matchedResult.id)}`}
+                    className="w-full sm:w-auto shrink-0 px-4 py-2.5 rounded-xl bg-amber-300 hover:bg-amber-200 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95"
+                  >
+                    <span>
+                      {lang === 'ko'
+                        ? '사주·MBTI 궁합 보기'
+                        : lang === 'es'
+                        ? 'Ver Química Saju'
+                        : 'Check Saju Chemistry'}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              )}
+
               {/* Friend Soulmate Comparison Card (when opened via ?m=...) */}
               {friendMatch && (
                 <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">

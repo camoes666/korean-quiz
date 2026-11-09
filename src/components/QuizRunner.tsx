@@ -1373,6 +1373,32 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           />
         </div>
 
+        {/* 🔮 Idol K-Saju × MBTI Chemistry Link */}
+        <div className="mb-3">
+          <Link
+            href={
+              quiz.tag === 'Stray Kids'
+                ? '/chemistry?g=stray-kids'
+                : quiz.tag === 'BLACKPINK'
+                ? '/chemistry?g=blackpink'
+                : quiz.tag === 'BTS'
+                ? '/chemistry?g=bts'
+                : '/chemistry'
+            }
+            className="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 hover:from-pink-100 hover:to-purple-100 border border-pink-200 text-pink-800 text-xs font-black transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
+          >
+            <span>🔮</span>
+            <span>
+              {lang === 'ko'
+                ? '내 생년월일(K-사주 오행) × MBTI로 최애 멤버와 1:1 궁합 점수 보기 💖'
+                : lang === 'es'
+                ? '¡Calcula tu % de compatibilidad K-Saju y MBTI con tu Bias! 💖'
+                : 'Check Your 1:1 K-Saju & MBTI Compatibility % With Your Bias! 💖'}
+            </span>
+            <ArrowRight className="w-3.5 h-3.5 text-pink-600" />
+          </Link>
+        </div>
+
         {/* Full Guide & Lore Review Link */}
         <div className="mb-4">
           <Link
