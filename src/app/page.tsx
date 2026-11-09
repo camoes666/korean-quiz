@@ -295,7 +295,7 @@ export default function HomePage() {
                 ].map((grp) => (
                   <Link
                     key={grp.id}
-                    href={`/chemistry?g=${grp.id}`}
+                    href={`/chemistry/${grp.id}`}
                     className="px-2.5 py-1 rounded-full bg-white/12 hover:bg-white/25 border border-white/20 text-xs font-extrabold text-white transition-all active:scale-95"
                   >
                     {grp.label}

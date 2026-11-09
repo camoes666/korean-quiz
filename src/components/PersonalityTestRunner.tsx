@@ -935,7 +935,7 @@ export default function PersonalityTestRunner({
                     </p>
                   </div>
                   <Link
-                    href={`/chemistry?g=${
+                    href={`/chemistry/${
                       quiz.tag === 'Stray Kids'
                         ? 'stray-kids'
                         : quiz.tag === 'BLACKPINK'
@@ -949,7 +949,7 @@ export default function PersonalityTestRunner({
                         : quiz.tag === 'LE SSERAFIM'
                         ? 'le-sserafim'
                         : 'bts'
-                    }&m=${encodeURIComponent(matchedResult.id)}`}
+                    }?m=${encodeURIComponent(matchedResult.id)}`}
                     className="w-full sm:w-auto shrink-0 px-4 py-2.5 rounded-xl bg-amber-300 hover:bg-amber-200 text-slate-950 font-black text-xs flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95"
                   >
                     <span>

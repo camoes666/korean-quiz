@@ -38,14 +38,22 @@ import { downloadResultCard } from '@/lib/renderResultCard';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 
-export default function ChemistryClient() {
+interface ChemistryClientProps {
+  initialGroupId?: string;
+}
+
+export default function ChemistryClient({ initialGroupId }: ChemistryClientProps = {}) {
   const searchParams = useSearchParams();
   const { lang } = useLanguage();
   const { addXP } = useGame();
 
+  const defaultGroup = getIdolGroupById(initialGroupId || 'bts') || IDOL_GROUPS[0];
+
   // State for selected group & member
-  const [selectedGroupId, setSelectedGroupId] = useState<string>('bts');
-  const [selectedMemberId, setSelectedMemberId] = useState<string>('jungkook');
+  const [selectedGroupId, setSelectedGroupId] = useState<string>(defaultGroup.id);
+  const [selectedMemberId, setSelectedMemberId] = useState<string>(
+    defaultGroup.id === 'bts' ? 'jungkook' : defaultGroup.members[0].id
+  );
 
   // State for user profile inputs
   const [nickname, setNickname] = useState<string>('');
@@ -66,7 +74,7 @@ export default function ChemistryClient() {
     if (initializedFromUrl.current) return;
     initializedFromUrl.current = true;
 
-    const gParam = searchParams.get('g');
+    const gParam = searchParams.get('g') || initialGroupId;
     const mParam = searchParams.get('m');
     const yParam = searchParams.get('y');
     const moParam = searchParams.get('mo');
@@ -74,7 +82,7 @@ export default function ChemistryClient() {
     const mbtiParam = searchParams.get('mbti');
     const nParam = searchParams.get('n');
 
-    let targetGroup = IDOL_GROUPS[0];
+    let targetGroup = defaultGroup;
     if (gParam) {
       const foundGroup = getIdolGroupById(gParam);
       if (foundGroup) {
@@ -91,7 +99,9 @@ export default function ChemistryClient() {
         setSelectedMemberId(targetGroup.members[0].id);
       }
     } else if (gParam) {
-      setSelectedMemberId(targetGroup.members[0].id);
+      setSelectedMemberId(
+        targetGroup.id === 'bts' ? 'jungkook' : targetGroup.members[0].id
+      );
     }
 
     if (yParam && !Number.isNaN(Number(yParam))) {
@@ -117,7 +127,7 @@ export default function ChemistryClient() {
     if (moParam && dParam) {
       setHasAnalyzed(true);
     }
-  }, [searchParams]);
+  }, [searchParams, initialGroupId, defaultGroup]);
 
   const currentGroup: IdolGroupProfile = useMemo(
     () => getIdolGroupById(selectedGroupId) || IDOL_GROUPS[0],
@@ -211,9 +221,10 @@ export default function ChemistryClient() {
   };
 
   const getShareUrl = () => {
-    if (typeof window === 'undefined') return 'https://kpulsequiz.com/chemistry';
+    if (typeof window === 'undefined') {
+      return `https://kpulsequiz.com/chemistry/${currentGroup.id}`;
+    }
     const params = new URLSearchParams({
-      g: currentGroup.id,
       m: currentMember.id,
       y: String(birthYear),
       mo: String(birthMonth),
@@ -223,7 +234,7 @@ export default function ChemistryClient() {
     if (nickname.trim()) {
       params.set('n', nickname.trim());
     }
-    return `${window.location.origin}/chemistry?${params.toString()}`;
+    return `${window.location.origin}/chemistry/${currentGroup.id}?${params.toString()}`;
   };
 
   const handleCopyLink = async () => {

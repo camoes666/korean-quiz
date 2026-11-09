@@ -1378,11 +1378,11 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           <Link
             href={
               quiz.tag === 'Stray Kids'
-                ? '/chemistry?g=stray-kids'
+                ? '/chemistry/stray-kids'
                 : quiz.tag === 'BLACKPINK'
-                ? '/chemistry?g=blackpink'
+                ? '/chemistry/blackpink'
                 : quiz.tag === 'BTS'
-                ? '/chemistry?g=bts'
+                ? '/chemistry/bts'
                 : '/chemistry'
             }
             className="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 hover:from-pink-100 hover:to-purple-100 border border-pink-200 text-pink-800 text-xs font-black transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
