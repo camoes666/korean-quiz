@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next';
 import { getAllQuizzes, getTriviaQuizzes } from '@/data/quizzes';
+import { IDOL_GROUPS } from '@/data/idolChemistry';
 
 export const dynamic = 'force-static';
 
@@ -14,6 +15,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly',
     priority: 0.9,
   }));
+
+  const chemistryUrls: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/chemistry`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    ...IDOL_GROUPS.map((group) => ({
+      url: `${baseUrl}/chemistry/${group.id}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.92,
+    })),
+  ];
 
   const guideHubUrl: MetadataRoute.Sitemap = [
     {
@@ -45,6 +61,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'daily',
       priority: 1.0,
     },
+    ...chemistryUrls,
     ...quizUrls,
     ...guideHubUrl,
     ...guideUrls,

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Sparkles, Flame, Zap, ChevronDown, Check, BookOpen } from 'lucide-react';
+import { Sparkles, Flame, Zap, ChevronDown, Check, BookOpen, Heart } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { quizzes } from '@/data/quizzes';
 import { getLocalizedText } from '@/types/quiz';
@@ -77,6 +77,30 @@ export default function Navbar() {
               <span>{levelPrefix}{currentLevel.level}</span>
             </span>
           </div>
+
+          {/* Idol Chemistry & Saju Compatibility Link */}
+          <Link
+            href="/chemistry"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-pink-200 bg-gradient-to-r from-pink-50 to-purple-50 hover:from-pink-100 hover:to-purple-100 text-pink-700 font-extrabold text-xs transition-colors shrink-0"
+            title={
+              lang === 'ko'
+                ? 'K-사주 × MBTI 아이돌 궁합 연구소'
+                : lang === 'es'
+                ? 'Calculadora de Química K-Pop y Saju'
+                : 'K-Pop Idol Saju × MBTI Chemistry'
+            }
+          >
+            <Heart className="w-3.5 h-3.5 text-pink-600 fill-pink-500" />
+            <span className="hidden sm:inline">
+              {lang === 'ko'
+                ? '아이돌 궁합'
+                : lang === 'es'
+                ? 'Química Idol'
+                : lang === 'pt'
+                ? 'Química Idol'
+                : 'Idol Chemistry'}
+            </span>
+          </Link>
 
           {/* Knowledge Guides Navigation Link */}
           <Link

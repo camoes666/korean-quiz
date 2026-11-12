@@ -250,6 +250,85 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 1.5 NEW: IDOL K-SAJU × MBTI CHEMISTRY LAB SPOTLIGHT BANNER */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-7 w-full">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-purple-950 via-fuchsia-900 to-rose-900 text-white p-5 sm:p-7 shadow-lg border border-purple-300/30">
+          <div
+            className="absolute inset-0 opacity-20 pointer-events-none"
+            style={{
+              backgroundImage: 'radial-gradient(#f472b6 1px, transparent 1px)',
+              backgroundSize: '20px 20px',
+            }}
+          />
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+            <div className="space-y-2 max-w-2xl">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-[11px] font-black text-amber-300">
+                <span>🔮 NEW FEATURE</span>
+                <span>·</span>
+                <span>
+                  {lang === 'ko'
+                    ? 'K-사주 오행 × MBTI × 별자리 1:1 궁합'
+                    : lang === 'es'
+                    ? 'Química K-Saju × MBTI × Zodiaco'
+                    : 'K-Saju Five Elements × MBTI × Zodiac'}
+                </span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-black tracking-tight leading-snug">
+                {lang === 'ko'
+                  ? '나와 최애 아이돌의 사주·MBTI 궁합은 몇 %일까? 💖'
+                  : lang === 'es'
+                  ? '¿Cuál es tu % de compatibilidad K-Saju y MBTI con tu Bias? 💖'
+                  : 'What Is Your K-Saju & MBTI Compatibility % With Your Bias? 💖'}
+              </h2>
+              <p className="text-xs sm:text-sm text-purple-100/90 font-medium">
+                {lang === 'ko'
+                  ? '7개 그룹 44명 멤버의 실제 생년월일(오행: 목·화·토·금·수)과 MBTI로 10초 만에 내 최애와의 궁합 리포트와 그룹 내 천생연분 순위를 확인하세요!'
+                  : lang === 'es'
+                  ? 'Analiza tu fecha de nacimiento y MBTI con 44 miembros reales de BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa y LE SSERAFIM.'
+                  : 'Match your birth date (Korean Saju Five Elements) & MBTI against 44 idols across BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa & LE SSERAFIM!'}
+              </p>
+
+              {/* Direct Group Shortcut Pills */}
+              <div className="flex items-center gap-1.5 flex-wrap pt-1.5">
+                {[
+                  { id: 'bts', label: '💜 BTS' },
+                  { id: 'stray-kids', label: '🐺 Stray Kids' },
+                  { id: 'blackpink', label: '🖤💖 BLACKPINK' },
+                  { id: 'twice', label: '🍭 TWICE' },
+                  { id: 'enhypen', label: '🧛 ENHYPEN' },
+                  { id: 'aespa', label: '✨ aespa' },
+                  { id: 'le-sserafim', label: '🔥 LE SSERAFIM' },
+                ].map((grp) => (
+                  <Link
+                    key={grp.id}
+                    href={`/chemistry/${grp.id}`}
+                    className="px-2.5 py-1 rounded-full bg-white/12 hover:bg-white/25 border border-white/20 text-xs font-extrabold text-white transition-all active:scale-95"
+                  >
+                    {grp.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="shrink-0">
+              <Link
+                href="/chemistry"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-amber-300 via-pink-300 to-white hover:from-amber-200 hover:to-pink-200 text-slate-950 font-black text-xs sm:text-sm shadow-md transition-all active:scale-95"
+              >
+                <span>
+                  {lang === 'ko'
+                    ? '10초 궁합 분석 시작하기'
+                    : lang === 'es'
+                    ? 'Calcular Mi Química Ahora'
+                    : 'Check Idol Chemistry Now'}
+                </span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 2. QUIZ COLLECTION SECTION — IMMEDIATELY ABOVE THE FOLD */}
       <section id="quizzes" className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-12 w-full">
         <div className="flex flex-col gap-4 mb-7">
