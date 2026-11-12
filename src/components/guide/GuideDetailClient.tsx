@@ -181,7 +181,7 @@ export default function GuideDetailClient({
           {/* Fact Level Breakdown Pill Bar */}
           <div className="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3 flex-wrap text-xs font-bold text-slate-600">
             <span className="text-slate-400 font-semibold uppercase tracking-wider text-[11px]">
-              {lang === 'ko' ? '난이도 구성:' : lang === 'es' || lang === 'pt' ? 'Dificultad:' : 'Difficulty breakdown:'}
+              {lang === 'ko' ? '난이도 구성:' : lang === 'es' ? 'Dificultad:' : lang === 'pt' ? 'Dificuldade:' : 'Difficulty breakdown:'}
             </span>
             <span className="px-2.5 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-100">
               🟢 {lang === 'ko' ? '루키' : lang === 'es' || lang === 'pt' ? 'Novato' : 'Rookie'}: {levelStats.l1}
@@ -508,7 +508,7 @@ export default function GuideDetailClient({
                   : lang === 'es'
                   ? `Jugar el Quiz de ${title}`
                   : lang === 'pt'
-                  ? `Jugar el Quiz de ${title}`
+                  ? `Jogar o Quiz de ${title}`
                   : `Play the ${title} Now`}
               </span>
               <ArrowRight className="w-5 h-5" />

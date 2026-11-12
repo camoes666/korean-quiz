@@ -19,9 +19,21 @@ interface DailyQuestCardProps {
 function getBadgeLabel(badge: HeroBadge, tag: string, lang: Language): string {
   if (badge === 'new') return `NEW · ${tag}`;
   if (badge === 'trending') {
-    return lang === 'ko' ? `인기 급상승 · ${tag}` : lang === 'es' ? `Tendencia · ${tag}` : `Trending · ${tag}`;
+    return lang === 'ko'
+      ? `인기 급상승 · ${tag}`
+      : lang === 'es'
+      ? `Tendencia · ${tag}`
+      : lang === 'pt'
+      ? `Em Alta · ${tag}`
+      : `Trending · ${tag}`;
   }
-  return lang === 'ko' ? `인기 메인 테스트 · ${tag}` : lang === 'es' ? `Test Destacado · ${tag}` : `Featured Test · ${tag}`;
+  return lang === 'ko'
+    ? `인기 메인 테스트 · ${tag}`
+    : lang === 'es'
+    ? `Test Destacado · ${tag}`
+    : lang === 'pt'
+    ? `Teste em Destaque · ${tag}`
+    : `Featured Test · ${tag}`;
 }
 
 export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayClick }: DailyQuestCardProps) {
@@ -51,6 +63,13 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
           { emoji: '🐿️', name: 'Rosé', role: 'Alma Vocal' },
           { emoji: '🐤', name: 'Lisa', role: 'Reina Dance' },
         ]
+      : lang === 'pt'
+      ? [
+          { emoji: '🐰', name: 'Jisoo', role: 'Carisma 4D' },
+          { emoji: '🥟', name: 'Jennie', role: 'Ícone Trend' },
+          { emoji: '🐿️', name: 'Rosé', role: 'Alma Vocal' },
+          { emoji: '🐤', name: 'Lisa', role: 'Rainha da Dança' },
+        ]
       : [
           { emoji: '🐰', name: 'Jisoo', role: '4D Moodmaker' },
           { emoji: '🥟', name: 'Jennie', role: 'Trend Icon' },
@@ -76,6 +95,8 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
               ? '오늘의 데일리 퀘스트'
               : lang === 'es'
               ? 'Misión del Día'
+              : lang === 'pt'
+              ? 'Missão do Dia'
               : 'Daily Quest'}
           </span>
 
@@ -164,11 +185,15 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
                 ? '내 멤버 알아보러 가기'
                 : lang === 'es'
                 ? 'Descubrir Mi Miembro'
+                : lang === 'pt'
+                ? 'Descobrir Meu Membro'
                 : 'Find My Member'
               : lang === 'ko'
               ? '데일리 도전하기'
               : lang === 'es'
               ? 'Jugar Misión'
+              : lang === 'pt'
+              ? 'Jogar Missão'
               : 'Play Daily Quest'}
           </span>
           <ArrowRight className="w-4 h-4" />

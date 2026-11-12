@@ -5,12 +5,15 @@
   "title": "Which aespa Member Are You?",
   "titleKo": "나와 가장 잘 맞는 에스파(aespa) 멤버 찾기",
   "titleEs": "¿Qué integrante de aespa eres?",
+  "titlePt": "Qual integrante do aespa você é?",
   "subtitle": "Discover your Kwangya avatar, Supernova vibe, and best-match soulmate!",
   "subtitleKo": "나의 광야 아바타, 슈퍼노바 아우라, 그리고 환상의 케미 멤버를 찾아보세요!",
   "subtitleEs": "¡Descubre tu avatar de Kwangya, tu vibra Supernova y tu química ideal con aespa!",
+  "subtitlePt": "Descubra seu avatar de Kwangya, sua vibe Supernova e sua combinação ideal no aespa!",
   "description": "Are you AI-visual leader Karina, witty vocal ace Winter, chill multilingual hot girl Giselle, or soulful free-spirited maknae Ningning? Take the 10-question test!",
   "descriptionKo": "완벽한 비주얼과 다정한 리더십의 카리나, 무표정 속 엉뚱한 반전 매력의 윈터, 여유롭고 힙한 글로벌 핫걸 지젤, 예술적 감성과 비글미 넘치는 닝닝 중 당신의 영혼과 가장 닮은 멤버는 누구일까요?",
   "descriptionEs": "¿Eres la líder visual Karina, la talentosa vocalista Winter, la relajada reina del rap Giselle o la dulce y artística maknae Ningning? ¡Haz el test de 10 preguntas!",
+  "descriptionPt": "Você é a líder com visual de IA Karina, a vocalista afiada e espirituosa Winter, a rainha do rap cheia de estilo Giselle ou a doce e artística maknae Ningning? Faça o teste de 10 perguntas!",
   "category": "K-Pop",
   "tag": "aespa",
   "coverEmoji": "✨",
@@ -27,15 +30,19 @@
       "name": "Karina (Yoo Jimin)",
       "nameKo": "카리나 (유지민)",
       "nameEs": "Karina (Yoo Jimin)",
+      "namePt": "Karina (Yoo Jimin)",
       "title": "The AI Goddess Leader & Sweet Guardian Unnie",
       "titleKo": "독보적 AI 비주얼 리더 & 다정하고 엉뚱한 짱구미",
       "titleEs": "Líder Visual AI y Protectora Cariñosa",
+      "titlePt": "A Líder com Visual de IA e Protetora Carinhosa",
       "subtitle": "Unreal Charisma · Reliable Anchor · Anime & Gamer Soul",
       "subtitleKo": "비현실적 아우라 · 든든한 맏언니 · 애니와 게임을 사랑하는 반전 매력",
       "subtitleEs": "Carisma Irreal · Líder Confiable · Alma Gamer y Otaku",
+      "subtitlePt": "Carisma Surreal · Porto Seguro · Alma Gamer e Otaku",
       "skzoo": "Rocket Puncher (Blue Heart 💙)",
       "skzooKo": "로켓 펀처 (블루 하트 💙)",
       "skzooEs": "Rocket Puncher (Corazón Azul 💙)",
+      "skzooPt": "Rocket Puncher (Coração Azul 💙)",
       "emoji": "💙",
       "traits": [
         "Natural Leader",
@@ -52,16 +59,24 @@
         "Profunda Empatía",
         "Perfeccionismo Apasionado"
       ],
+      "traitsPt": [
+        "Liderança Natural",
+        "Empatia e Cuidado Profundos",
+        "Perfeccionismo Apaixonado"
+      ],
       "description": "Like Karina, you command attention with effortless charisma on the outside, but possess a heartwarming, gentle, and goofy soul on the inside. You naturally take care of your friends, solve problems calmly, and never stop pushing yourself to grow.",
       "descriptionKo": "카리나처럼 겉으로는 완벽한 아우라와 카리스마를 뿜어내지만, 속은 세상 다정하고 장난기 넘치는 따뜻한 사람! 주변 친구들을 살뜰히 챙기고, 어떤 어려운 상황에서도 중심을 잡아주는 든든한 존재입니다.",
       "descriptionEs": "Como Karina, tienes una presencia cautivadora y deslumbrante por fuera, pero por dentro eres cariñosa, dulce y muy divertida. Siempre cuidas de tus amigos y eres el pilar en quien todos confían.",
+      "descriptionPt": "Como a Karina, você chama a atenção com um carisma magnético por fora, mas tem uma alma doce, gentil e super divertida por dentro. Você cuida naturalmente dos seus amigos, resolve problemas com calma e nunca para de buscar evoluir.",
       "bestMatchId": "winter",
       "bestMatchName": "Winter",
       "bestMatchNameKo": "윈터 (Winter)",
       "bestMatchNameEs": "Winter",
+      "bestMatchNamePt": "Winter",
       "bestMatchReason": "The legendary Jim-Jung (Karina & Winter) synergy! Karina's caring warmth and Winter's witty humor balance each other seamlessly.",
       "bestMatchReasonKo": "레전드 짐정즈(카리나 & 윈터) 케미! 카리나의 다정한 리더십과 윈터의 츤데레 유머가 만나 세상에서 가장 편안하고 완벽한 티키타카를 완성합니다.",
       "bestMatchReasonEs": "¡La legendaria química Jim-Jung! La calidez de Karina y el humor ingenioso de Winter forman un dúo insuperable.",
+      "bestMatchReasonPt": "A lendária sinergia Jim-Jung (Karina & Winter)! O carinho acolhedor da Karina e o humor afiado da Winter se equilibram com perfeição.",
       "colorHex": "#2563eb",
       "bgGradient": "from-blue-600 via-indigo-700 to-purple-950"
     },
@@ -70,15 +85,19 @@
       "name": "Winter (Kim Minjeong)",
       "nameKo": "윈터 (김민정)",
       "nameEs": "Winter (Kim Minjeong)",
+      "namePt": "Winter (Kim Minjeong)",
       "title": "The Razor-Sharp Vocal Ace & Sassy Puppy",
       "titleKo": "독보적 음색 보컬 에이스 & 무표정 츤데레 멍뭉이",
       "titleEs": "As Vocal Impecable y Cachorrita Ingeniosa",
+      "titlePt": "A Craque Vocal Impecável e Cachorrinha Espirituosa",
       "subtitle": "Effortless Talent · Introvert Humor · Hidden Sweetness",
       "subtitleKo": "올라운더 재능 · 시크한 개그 본능 · 알고 보면 애교 장인",
       "subtitleEs": "Talento Puro · Humor 시크 · Ternura Oculta",
+      "subtitlePt": "Talento Natural · Humor Seco · Doçura Escondida",
       "skzoo": "Armamenter (White Star 🤍)",
       "skzooKo": "아머멘터 (화이트 스타 🤍)",
       "skzooEs": "Armamenter (Estrella Blanca 🤍)",
+      "skzooPt": "Armamenter (Estrela Branca 🤍)",
       "emoji": "🤍",
       "traits": [
         "Sharp Intuition",
@@ -95,16 +114,24 @@
         "Humor Sarcastico y Tierno",
         "Dedicación Silenciosa"
       ],
+      "traitsPt": [
+        "Intuição Afiada",
+        "Humor Irônico e Fofo",
+        "Dedicação Silenciosa"
+      ],
       "description": "Like Winter, you let your top-tier talents speak for themselves. You might look calm and reserved at first, but with people you love, your witty deadpan humor and quirky charm shine brighter than a supernova.",
       "descriptionKo": "윈터처럼 말보다 확실한 실력과 결과로 증명하는 올라운더! 겉보기에는 차분하고 시크해 보이지만, 친해지면 툭툭 던지는 엉뚱한 개그와 귀여운 반전 매력으로 모두를 사로잡습니다.",
       "descriptionEs": "Como Winter, dejas que tus talentos hablen por ti. Puedes parecer tranquila al principio, pero con quienes quieres tienes un humor hilarante y un encanto adorable irresistible.",
+      "descriptionPt": "Como a Winter, você deixa seus talentos incríveis falarem por si. Pode parecer calma e reservada à primeira vista, mas com quem você ama, seu humor espontâneo e seu charme único brilham mais forte que uma supernova.",
       "bestMatchId": "karina",
       "bestMatchName": "Karina",
       "bestMatchNameKo": "카리나 (Karina)",
       "bestMatchNameEs": "Karina",
+      "bestMatchNamePt": "Karina",
       "bestMatchReason": "Karina brings out Winter's soft playful side while Winter grounds Karina with calm reassurance.",
       "bestMatchReasonKo": "카리나는 윈터의 귀여운 응석과 장난을 다 받아주고, 윈터는 카리나의 마음을 가장 편안하게 릴랙스해 주는 영혼의 짝꿍입니다.",
       "bestMatchReasonEs": "Karina saca el lado más divertido de Winter, mientras Winter le da serenidad y confianza a Karina.",
+      "bestMatchReasonPt": "A Karina desperta o lado mais brincalhão e fofo da Winter, enquanto a Winter traz calma e segurança para a Karina.",
       "colorHex": "#0284c7",
       "bgGradient": "from-sky-500 via-cyan-600 to-indigo-950"
     },
@@ -113,15 +140,19 @@
       "name": "Giselle (Aeri Uchinaga)",
       "nameKo": "지젤 (우치나가 애리)",
       "nameEs": "Giselle (Aeri Uchinaga)",
+      "namePt": "Giselle (Aeri Uchinaga)",
       "title": "The Chill Global Trendsetter & Rap Flow Queen",
       "titleKo": "글로벌 핫걸 힙스터 & 멘탈 여유 넘치는 힐링 젠(Zen)",
       "titleEs": "Reina del Rap Cosmopolita y Vibra Zen",
+      "titlePt": "A Ícone Global Descolada e Rainha do Flow no Rap",
       "subtitle": "Multilingual Swagger · Unbothered Vibe · Trend Creator",
       "subtitleKo": "유창한 언어 센스 · 흔들리지 않는 여유 · 타고난 힙스터 감각",
       "subtitleEs": "Multilingüe con Estilo · Paz Interior · Creadora de Tendencias",
+      "subtitlePt": "Estilo Multilíngue · Vibe Despreocupada · Criadora de Tendências",
       "skzoo": "Xenoglossy (Crescent Moon 🌙)",
       "skzooKo": "제노글로시 (초승달 🌙)",
       "skzooEs": "Xenoglossy (Media Luna 🌙)",
+      "skzooPt": "Xenoglossy (Lua Crescente 🌙)",
       "emoji": "🌙",
       "traits": [
         "Unbothered & Chill",
@@ -138,16 +169,24 @@
         "Estilo Incomparable",
         "Gran Confidente"
       ],
+      "traitsPt": [
+        "Vibe Tranquila e Segura",
+        "Tendência sem Esforço",
+        "Ouvinte Acolhedora"
+      ],
       "description": "Like Giselle, you glide through life with an enviable chill and confident energy! You have an innate aesthetic sense, speak multiple cultural languages, and bring relaxing, stress-free vibes to every circle.",
       "descriptionKo": "지젤처럼 남들의 시선에 얽매이지 않고 나만의 멋진 라이프스타일을 즐기는 핫걸! 어떤 복잡한 상황에서도 여유를 잃지 않으며, 사람들을 편안하고 기분 좋게 만드는 마성의 매력이 있습니다.",
       "descriptionEs": "Como Giselle, vives con una seguridad envidiable y una calma que contagia. Tienes un estilo vanguardista, mente abierta internacional y haces que todos a tu alrededor se sientan relajados y queridos.",
+      "descriptionPt": "Como a Giselle, você leva a vida com uma energia tranquila e confiante de dar inveja! Tem um senso estético natural, mente aberta para o mundo e traz uma vibe leve e sem estresse para qualquer roda de amigos.",
       "bestMatchId": "ningning",
       "bestMatchName": "Ningning",
       "bestMatchNameKo": "닝닝 (Ningning)",
       "bestMatchNameEs": "Ningning",
+      "bestMatchNamePt": "Ningning",
       "bestMatchReason": "The Foreign-Swag Duo! Giselle and Ningning share the same creative frequency and non-stop laughter.",
       "bestMatchReasonKo": "글로벌 힙스터 룸메즈 케미! 지젤의 여유로운 스웨그와 닝닝의 예술적 감성이 만나 가장 힙하고 유쾌한 에너지를 만듭니다.",
       "bestMatchReasonEs": "¡El dúo internacional más divertido! Giselle y Ningning comparten la misma vibra creativa y risas infinitas.",
+      "bestMatchReasonPt": "A dupla internacional cheia de estilo! Giselle e Ningning compartilham a mesma sintonia criativa e risadas sem fim.",
       "colorHex": "#ec4899",
       "bgGradient": "from-pink-600 via-fuchsia-700 to-purple-950"
     },
@@ -156,15 +195,19 @@
       "name": "Ningning (Ning Yizhuo)",
       "nameKo": "닝닝 (닝이줘)",
       "nameEs": "Ningning (Ning Yizhuo)",
+      "namePt": "Ningning (Ning Yizhuo)",
       "title": "The Soulful Powerhouse & Mischievous Maknae Muse",
       "titleKo": "독보적 감성의 소울풀 보컬 & 통통 튀는 사랑스러운 막내",
       "titleEs": "Vocalista Apasionada y Musa Rebelde Tierna",
+      "titlePt": "A Potência Vocal Cheia de Alma e Musa Maknae Travessa",
       "subtitle": "Artistic Free Spirit · Sunshine Smile · High-Fashion Muse",
       "subtitleKo": "자유로운 예술가 영혼 · 사랑스러운 햇살 미소 · 당당한 패션 아이콘",
       "subtitleEs": "Espíritu Libre Artístico · Sonrisa Radiante · Icono de Alta Costura",
+      "subtitlePt": "Espíritu Livre Artístico · Sorriso Radiante · Musa da Alta-Costura",
       "skzoo": "E.d Hacker (Butterfly 🦋)",
       "skzooKo": "이디 해커 (나비 🦋)",
       "skzooEs": "E.d Hacker (Mariposa 🦋)",
+      "skzooPt": "E.d Hacker (Borboleta 🦋)",
       "emoji": "🦋",
       "traits": [
         "Free Spirit",
@@ -181,16 +224,24 @@
         "Alma Artística Pura",
         "Energía Juguetona"
       ],
+      "traitsPt": [
+        "Espírito Livre",
+        "Alma Artística Pura",
+        "Energia Brincalhona"
+      ],
       "description": "Like Ningning, you possess vibrant artistic flair, deep expressive emotion, and an infectious playful spark! You see beauty in everything, march to your own beat, and light up any room with genuine laughter.",
       "descriptionKo": "닝닝처럼 풍부한 감수성과 타고난 예술적 감각, 그리고 사랑스러운 에너지를 가진 사람! 틀에 얽매이지 않고 자유롭게 스스로를 표현하며, 어디서나 밝은 빛과 긍정 에너지를 전파합니다.",
       "descriptionEs": "Como Ningning, tienes una creatividad deslumbrante, emociones intensas y una energía risueña que ilumina cualquier lugar. Vives con autenticidad y conviertes lo cotidiano en arte.",
+      "descriptionPt": "Como a Ningning, você tem uma veia artística vibrante, emoções intensas e uma faísca divertida contagiante! Você enxerga beleza em tudo, segue seu próprio ritmo e ilumina qualquer lugar com risadas sinceras.",
       "bestMatchId": "giselle",
       "bestMatchName": "Giselle",
       "bestMatchNameKo": "지젤 (Giselle)",
       "bestMatchNameEs": "Giselle",
+      "bestMatchNamePt": "Giselle",
       "bestMatchReason": "Giselle gives Ningning the comfort to be 100% wild and artistic, while Ningning gives Giselle infinite joy.",
       "bestMatchReasonKo": "지젤 앞에서는 눈치 보지 않고 마음껏 자유롭게 표현할 수 있어 영혼이 통하는 단짝 조합입니다.",
       "bestMatchReasonEs": "Giselle le da a Ningning la confianza para ser libremente creativa, y Ningning le da a Giselle felicidad total.",
+      "bestMatchReasonPt": "A Giselle dá à Ningning o conforto para ser 100% livre e artística, enquanto a Ningning traz alegria infinita para a Giselle.",
       "colorHex": "#8b5cf6",
       "bgGradient": "from-purple-600 via-violet-700 to-slate-950"
     }
@@ -201,6 +252,7 @@
       "question": "What is your dream futuristic stage outfit vibe?",
       "questionKo": "무대 위에서 스포트라이트를 받는다면, 내가 입고 싶은 가장 완벽한 콘셉트 룩은?",
       "questionEs": "¿Cuál es tu estilo ideal para brillar bajo los reflectores?",
+      "questionPt": "Qual é a vibe do seu figurino futurista dos sonhos para brilhar no palco?",
       "emoji": "👗",
       "options": [
         {
@@ -208,6 +260,7 @@
           "text": "Sleek, sculpted metallic corset with dramatic high-fashion boots and cybernetic flair",
           "textKo": "완벽한 실루엣의 메탈릭 코르셋과 사이버네틱 무드, 압도적인 하이패션 롱부츠 룩",
           "textEs": "Corsé metálico esculpido con botas altas de alta costura y detalles cibernéticos",
+          "textPt": "Corset metálico estruturado com botas dramáticas de alta-costura e um toque cibernético",
           "scores": { "karina": 3, "winter": 1 }
         },
         {
@@ -215,6 +268,7 @@
           "text": "Cool cropped leather jacket with utility cargo trousers, combat boots, and sharp accessories",
           "textKo": "시크한 크롭 레더 재킷에 와이드 카고 팬츠, 날렵한 워커 부츠로 완성한 올라운더 룩",
           "textEs": "Chaqueta de cuero cropped con pantalones cargo utilitarios y botas militares",
+          "textPt": "Jaqueta de couro cropped estilosa com calça cargo utilitária, coturnos e acessórios marcantes",
           "scores": { "winter": 3, "karina": 1 }
         },
         {
@@ -222,6 +276,7 @@
           "text": "Baggy Y2K low-rise jeans, oversized vintage varsity bomber, and tinted cyber shades",
           "textKo": "자연스러운 Y2K 로우라이즈 데님, 오버핏 바시티 점퍼와 틴트 선글라스의 힙스터 룩",
           "textEs": "Pantalones Y2K holgados, chaqueta bomber vintage oversize y gafas futuristas",
+          "textPt": "Jeans cintura baixa larguinho estilo Y2K, jaqueta bomber vintage oversized e óculos cyber",
           "scores": { "giselle": 3, "ningning": 1 }
         },
         {
@@ -229,6 +284,7 @@
           "text": "Daring avant-garde dress with iridescent butterfly hues, vivid colors, and creative statement jewels",
           "textKo": "영롱한 나비빛 홀로그램 드레스, 과감한 컬러 포인트와 독창적인 커스텀 주얼리 룩",
           "textEs": "Vestido vanguardista tornasolado, colores vibrantes y joyas creativas impactantes",
+          "textPt": "Vestido avant-garde ousado com tons furta-cor de borboleta, cores vivas e joias criativas de impacto",
           "scores": { "ningning": 3, "giselle": 1 }
         }
       ]
@@ -238,6 +294,7 @@
       "question": "When unexpected chaos breaks out in a project or plan, how do you handle it?",
       "questionKo": "예상치 못한 돌발 상황이나 혼란이 생겼을 때, 당신의 대처 방식은?",
       "questionEs": "Cuando ocurre un imprevisto caótico, ¿cómo reaccionas?",
+      "questionPt": "Quando surge um imprevisto caótico em um projeto ou plano, como você lida com isso?",
       "emoji": "⚡",
       "options": [
         {
@@ -245,6 +302,7 @@
           "text": "Step up immediately, calm everyone down, and organize step-by-step solutions with quiet confidence",
           "textKo": "당황하지 않고 앞장서서 사람들을 안심시키고, 침착하게 해결책을 순서대로 정리한다",
           "textEs": "Tomo el control de inmediato, calmo a todos y organizo soluciones paso a paso",
+          "textPt": "Assumo a frente na hora, acalmo todo mundo e organizo soluções passo a passo com confiança",
           "scores": { "karina": 3 }
         },
         {
@@ -252,6 +310,7 @@
           "text": "Observe silently, analyze the root cause with sharp focus, and deliver the exact fix without drama",
           "textKo": "조용히 상황을 날카롭게 관찰한 뒤, 군더더기 없이 정확한 핵심만 짚어내 해결한다",
           "textEs": "Observo en silencio con mente fría y aplico la solución exacta sin dramas",
+          "textPt": "Observo em silêncio, analiso a causa principal com foco afiado e entrego a solução exata sem drama",
           "scores": { "winter": 3 }
         },
         {
@@ -259,6 +318,7 @@
           "text": "Stay chill, take a deep breath, and say 'It's all good, we will figure it out effortlessly'",
           "textKo": "'괜찮아, 어떻게든 다 풀릴 거야'라며 여유로운 태도로 멘탈을 릴랙스시키고 유연하게 대처한다",
           "textEs": "Mantengo la calma, respiro hondo y digo: 'Tranquilos, todo saldrá bien'",
+          "textPt": "Mantenho a calma, respiro fundo e digo: 'Tá tudo bem, a gente vai resolver isso de boa'",
           "scores": { "giselle": 3 }
         },
         {
@@ -266,6 +326,7 @@
           "text": "Turn the tension into creative fun! Look at it from a totally unexpected angle with a laugh",
           "textKo": "특유의 유쾌한 웃음으로 긴장을 풀고, 전혀 예상치 못한 기발한 아이디어로 반전을 만든다",
           "textEs": "Rompo la tensión con una sonrisa y propongo una idea creativa e inesperada",
+          "textPt": "Transformo a tensão em diversão criativa! Olho para a situação por um ângulo inesperado dando risada",
           "scores": { "ningning": 3 }
         }
       ]
@@ -275,6 +336,7 @@
       "question": "What does your ultimate Saturday night recharge session look like?",
       "questionKo": "토요일 밤, 에너지를 100% 충전하는 가장 나다운 힐링 시간은?",
       "questionEs": "¿Cómo es tu noche de sábado perfecta para recargar baterías?",
+      "questionPt": "Como é a sua noite de sábado perfeita para recarregar as baterias?",
       "emoji": "🌙",
       "options": [
         {
@@ -282,6 +344,7 @@
           "text": "Cozy blanket, favorite mobile/console game, and binging heartwarming anime series all night",
           "textKo": "포근한 이불 속에서 최애 콘솔/모바일 게임을 하거나 감동적인 애니메이션 정주행하기",
           "textEs": "Envuelta en una manta cálida jugando videojuegos o viendo series de anime favoritas",
+          "textPt": "Cobertor quentinho, meu jogo favorito no celular ou console e maratonar animes emocionantes a noite toda",
           "scores": { "karina": 3, "winter": 1 }
         },
         {
@@ -289,6 +352,7 @@
           "text": "Quiet bedroom, ice-cold drink, hilarious comedy clips or variety shows, laughing quietly to myself",
           "textKo": "시원한 음료 한 잔과 함께 누워서 배꼽 잡는 예능이나 밈 영상 보며 뒹굴거리기",
           "textEs": "En mi habitación con una bebida fría viendo videos cómicos y memes hasta tarde",
+          "textPt": "Quarto silencioso, bebida bem gelada, vídeos engraçados ou programas de variedades, rindo sozinho(a)",
           "scores": { "winter": 3, "karina": 1 }
         },
         {
@@ -296,6 +360,7 @@
           "text": "Listening to mellow R&B beats, lighting a scented candle, journaling or enjoying a late-night dessert with besties",
           "textKo": "감성 넘치는 R&B 플레이리스트를 틀고 향초 켜기, 혹은 친한 친구와 밤샘 수다 떨기",
           "textEs": "Escuchando R&B suave con velas aromáticas o compartiendo un postre nocturno con amigos",
+          "textPt": "Ouvindo R&B suave, acendendo uma vela aromática, escrevendo no diário ou dividindo uma sobremesa com os melhores amigos",
           "scores": { "giselle": 3, "ningning": 1 }
         },
         {
@@ -303,6 +368,7 @@
           "text": "Sketching, testing wild makeup ideas, online vintage hunting, and listening to deep acoustic ballads",
           "textKo": "그림을 그리거나 과감한 메이크업 연구, 감성적인 음악에 푹 빠져 나만의 예술 세계 즐기기",
           "textEs": "Pintando, probando maquillaje creativo o explorando tiendas vintage con buena música",
+          "textPt": "Desenhando, testando makes ousadas, garimpando peças vintage online e ouvindo baladas acústicas profundas",
           "scores": { "ningning": 3, "giselle": 1 }
         }
       ]
@@ -312,6 +378,7 @@
       "question": "Which musical vibe speaks to your soul on repeat?",
       "questionKo": "내 이어폰에서 24시간 무한 반복되고 있을 것 같은 음악 장르는?",
       "questionEs": "¿Qué estilo musical define mejor tu playlist diaria?",
+      "questionPt": "Qual vibe musical toca a sua alma no repeat?",
       "emoji": "🎧",
       "options": [
         {
@@ -319,6 +386,7 @@
           "text": "Epic cinematic beats with powerful drops, dynamic transitions, and futuristic bass (Supernova / Savage)",
           "textKo": "웅장하고 미래지향적인 베이스와 벅차오르는 파워풀한 비트 (Supernova, Savage 스타일)",
           "textEs": "Beats cinemáticos épicos, bajos potentes y transiciones futuristas (Supernova / Savage)",
+          "textPt": "Batidas cinematográficas épicas com drops poderosos, transições dinâmicas e grave futurista (Supernova / Savage)",
           "scores": { "karina": 3 }
         },
         {
@@ -326,6 +394,7 @@
           "text": "Razor-sharp guitar riffs, crisp pop anthems, and soaring high notes (Drama / Lucid Dream)",
           "textKo": "날카로운 기타 리프, 시원시원한 보컬과 중독적인 멜로디의 팝 앤섬 (Drama, Lucid Dream)",
           "textEs": "Riffs de guitarra impecables, pop adictivo y notas vocales espectaculares",
+          "textPt": "Riffs de guitarra afiados, hinos pop cristalinos e notas agudas de arrepiar (Drama / Lucid Dream)",
           "scores": { "winter": 3 }
         },
         {
@@ -333,6 +402,7 @@
           "text": "Smooth 90s hip-hop groove, chill lo-fi melodies, and rhythmic rap verses (Whiplash / Yeppi Yeppi)",
           "textKo": "그루비한 힙합 비트, 여유로운 로우파이 사운드와 세련된 래핑 (Whiplash, Yeppi Yeppi)",
           "textEs": "Groove hip-hop noventero, melodías lo-fi relajadas y rap con flow impecable",
+          "textPt": "Groove hip-hop suave dos anos 90, melodias lo-fi relaxantes e versos de rap cheios de ritmo (Whiplash / Yeppi Yeppi)",
           "scores": { "giselle": 3 }
         },
         {
@@ -340,6 +410,7 @@
           "text": "Deep soulful R&B, dramatic orchestral ballads, and expressive vocal harmonies (Welcome to My World)",
           "textKo": "호소력 짙은 R&B 소울, 몽환적인 멜로디와 감성을 울리는 보컬 (Welcome to My World)",
           "textEs": "R&B conmovedor y emotivo, baladas de ensueño y armonías vocales profundas",
+          "textPt": "R&B profundo e cheio de alma, baladas orquestrais dramáticas e harmonias vocais expressivas (Welcome to My World)",
           "scores": { "ningning": 3 }
         }
       ]
@@ -349,6 +420,7 @@
       "question": "In a group of friends, what is your unspoken role?",
       "questionKo": "친구들 모임에서 나는 보통 어떤 역할을 맡고 있나요?",
       "questionEs": "En tu grupo de amigos, ¿cuál es tu rol natural?",
+      "questionPt": "No seu grupo de amigos, qual é o seu papel natural?",
       "emoji": "👯‍♀️",
       "options": [
         {
@@ -356,6 +428,7 @@
           "text": "The dependable 'Captain' who keeps reservations in order and makes sure everyone feels included",
           "textKo": "예약부터 일정까지 꼼꼼히 챙기고, 소외되는 친구 없이 모두를 챙기는 든든한 캡틴",
           "textEs": "La capitana confiable que organiza todo y se asegura de que nadie quede fuera",
+          "textPt": "A 'Capitã' confiável que cuida das reservas e garante que todo mundo se sinta incluído",
           "scores": { "karina": 3 }
         },
         {
@@ -363,6 +436,7 @@
           "text": "The sharp-witted observer who drops unexpected one-liners that make everyone burst into laughter",
           "textKo": "가만히 듣고 있다가 한마디 툭 던져서 모두를 빵 터뜨리는 츤데레 저격수",
           "textEs": "La observadora ingeniosa que suelta un chiste inesperado y hace reír a todos",
+          "textPt": "A observadora espirituosa que solta comentários inesperados e faz todo mundo cair na gargalhada",
           "scores": { "winter": 3 }
         },
         {
@@ -370,6 +444,7 @@
           "text": "The chill confidante who listens without judgment and gives warm, grounded life advice",
           "textKo": "어떤 고민을 털어놓아도 편안하게 들어주고 공감해 주는 마음 넓은 힐러",
           "textEs": "La confidente comprensiva que escucha sin juzgar y transmite paz y seguridad",
+          "textPt": "A confidente tranquila que escuta sem julgar e dá conselhos sinceros e acolhedores",
           "scores": { "giselle": 3 }
         },
         {
@@ -377,6 +452,7 @@
           "text": "The energetic mood-lifter who brings spontaneous plans, infectious laughs, and viral photos",
           "textKo": "어디로 튈지 모르는 텐션과 유쾌함으로 모임 분위기를 화기애애하게 띄우는 분위기 메이커",
           "textEs": "El rayo de sol que propone planes espontáneos, risas contagiosas y fotos geniales",
+          "textPt": "A animadora da turma que traz planos espontâneos, risadas contagiantes e fotos perfeitas",
           "scores": { "ningning": 3 }
         }
       ]
@@ -386,6 +462,7 @@
       "question": "How do you react when you receive a massive public compliment?",
       "questionKo": "많은 사람들 앞에서 큰 칭찬이나 주목을 받았을 때, 당신의 솔직한 반응은?",
       "questionEs": "¿Cómo reaccionas cuando recibes un gran cumplido en público?",
+      "questionPt": "Como você reage quando recebe um grande elogio em público?",
       "emoji": "💖",
       "options": [
         {
@@ -393,6 +470,7 @@
           "text": "Smile gracefully, thank everyone sincerely, and immediately redirect credit to the team",
           "textKo": "우아하고 다정하게 감사 인사를 전하며, 함께 고생한 팀원들에게 공을 돌린다",
           "textEs": "Agradezco con una sonrisa cálida y comparto el mérito con todo el equipo",
+          "textPt": "Sorrio com elegância, agradeço de coração e logo divido o mérito com toda a equipe",
           "scores": { "karina": 3 }
         },
         {
@@ -400,6 +478,7 @@
           "text": "Get shy on the inside, give a modest chuckle or small bow, and quietly feel happy all day",
           "textKo": "속으로는 쑥스러워 뚝딱거리지만, 겉으로는 수줍은 미소를 지으며 하루 종일 기뻐한다",
           "textEs": "Me da timidez por dentro, sonrío modesta y me alegro el día en silencio",
+          "textPt": "Fico tímido(a) por dentro, dou um sorrisinho modesto e passo o resto do dia feliz em silêncio",
           "scores": { "winter": 3 }
         },
         {
@@ -407,6 +486,7 @@
           "text": "Rock it with cool confidence: 'Thank you so much! Sending love to everyone!' with effortless poise",
           "textKo": "'감사합니다! 다 여러분 덕분이에요~'라며 세련된 제스처와 여유 있는 태도로 즐긴다",
           "textEs": "Lo recibo con estilo y seguridad: '¡Muchísimas gracias a todos!' con total naturalidad",
+          "textPt": "Recebo com estilo e confiança: 'Muito obrigado(a)! Mandando amor pra todo mundo!' com total naturalidade",
           "scores": { "giselle": 3 }
         },
         {
@@ -414,6 +494,7 @@
           "text": "Beam with pure unfiltered joy, clap my hands cutely, and celebrate with a victory dance",
           "textKo": "온 세상이 다 알 정도로 환하게 웃으며 박수를 치고 사랑스럽게 기쁨을 표현한다",
           "textEs": "Sonrío de oreja a oreja con emoción pura y festejo con un bailecito divertido",
+          "textPt": "Brilho de pura alegria, bato palmas de um jeito fofo e comemoro com uma dancinha da vitória",
           "scores": { "ningning": 3 }
         }
       ]
@@ -423,6 +504,7 @@
       "question": "What kind of vacation destination matches your dream escape?",
       "questionKo": "현생을 벗어나 떠나는 꿈의 휴가지! 가장 끌리는 여행지는?",
       "questionEs": "¿Cuál sería tu destino de vacaciones soñado?",
+      "questionPt": "Que tipo de destino de férias combina com a sua viagem dos sonhos?",
       "emoji": "✈️",
       "options": [
         {
@@ -430,6 +512,7 @@
           "text": "A world-class cultural metropolis with neon skylines, high-tech museums, and world-class cuisine (Tokyo / New York)",
           "textKo": "화려한 야경과 현대적인 미술관, 최고의 미식이 가득한 글로벌 대도시 (도쿄, 뉴욕)",
           "textEs": "Una gran metrópolis con rascacielos iluminados, museos modernos y gastronomía de lujo",
+          "textPt": "Uma metrópole cultural incrível com horizonte iluminado por neon, museus tecnológicos e alta gastronomia (Tóquio / Nova York)",
           "scores": { "karina": 3, "giselle": 1 }
         },
         {
@@ -437,6 +520,7 @@
           "text": "A snowy mountain lodge with pine trees, open fireplace, and scenic skiing slopes (Sapporo / Alps)",
           "textKo": "새하얀 눈 덮인 설경과 따뜻한 모닥불, 조용하고 아늑한 겨울 힐링 리조트 (삿포로, 알프스)",
           "textEs": "Una cabaña nevada acogedora con chimenea y paisajes blancos serenos",
+          "textPt": "Um chalé na montanha coberta de neve com pinheiros, lareira acesa e paisagens de inverno (Sapporo / Alpes)",
           "scores": { "winter": 3, "karina": 1 }
         },
         {
@@ -444,6 +528,7 @@
           "text": "A sun-kissed beach resort with infinity pool, iced lattes, and tropical sunset parties (Bali / Hawaii)",
           "textKo": "푸른 파도와 선베드, 아이스 음료를 마시며 여유롭게 노을을 감상하는 휴양지 (발리, 하와이)",
           "textEs": "Un resort tropical frente al mar con cafés helados y atardeceres mágicos",
+          "textPt": "Um resort de praia ensolarado com piscina de borda infinita, cafés gelados e festas ao pôr do sol (Bali / Havaí)",
           "scores": { "giselle": 3, "ningning": 1 }
         },
         {
@@ -451,6 +536,7 @@
           "text": "An artistic European capital with historic streets, indie galleries, and colorful flea markets (Paris / Barcelona)",
           "textKo": "골목마다 예술 감성이 묻어나는 유럽의 고풍스러운 거리와 플리마켓 탐방 (파리, 바르셀로나)",
           "textEs": "Una ciudad europea llena de arte callejero, galerías independientes y mercados bohemios",
+          "textPt": "Uma capital europeia artística com ruas históricas, galerias independentes e feirinhas vintage coloridas (Paris / Barcelona)",
           "scores": { "ningning": 3, "winter": 1 }
         }
       ]
@@ -460,6 +546,7 @@
       "question": "What is your ultimate comfort treat when you need instant happiness?",
       "questionKo": "한 입 먹자마자 스트레스가 사르르 녹아내리는 나의 힐링 소울푸드는?",
       "questionEs": "¿Qué comida reconfortante te alegra el día de inmediato?",
+      "questionPt": "Qual é a sua comida afetiva favorita quando você precisa de felicidade instantânea?",
       "emoji": "🍜",
       "options": [
         {
@@ -467,6 +554,7 @@
           "text": "Fiery spicy ramen or hot pot that makes you sweat out all the fatigue with savory satisfaction",
           "textKo": "땀 뻘뻘 흘리며 스트레스를 날려주는 화끈한 매운 라면이나 얼큰한 찌개 요리",
           "textEs": "Ramen muy picante o guiso caliente que te hace olvidar todo el cansancio",
+          "textPt": "Lámen super apimentado ou hot pot bem quente que faz todo o cansaço ir embora",
           "scores": { "karina": 3 }
         },
         {
@@ -474,6 +562,7 @@
           "text": "Crispy sweet honey butter snacks, ice cream, or classic tteokbokki with chewy cheese",
           "textKo": "달콤하고 고소한 과자나 디저트, 혹은 쫀득한 치즈가 듬뿍 들어간 떡볶이",
           "textEs": "Postres crujientes dulces, helado o tteokbokki con queso derretido",
+          "textPt": "Snacks doces e crocantes, sorvete ou o clássico tteokbokki com bastante queijo derretido",
           "scores": { "winter": 3 }
         },
         {
@@ -481,6 +570,7 @@
           "text": "Iced vanilla latte or boba tea paired with a delicious bakery pastry or avocado toast",
           "textKo": "달콤하고 시원한 바닐라 라떼나 버블티, 그리고 감성 가득한 베이커리 빵",
           "textEs": "Un café latte helado con leche vegetal y un croissant recién horneado",
+          "textPt": "Vanilla latte gelado ou bubble tea acompanhado de um doce de padaria delicioso ou avocado toast",
           "scores": { "giselle": 3 }
         },
         {
@@ -488,6 +578,7 @@
           "text": "Authentic spicy skewers, sweet fruit tanghulu, or warm comfort noodles with rich broth",
           "textKo": "풍미 가득한 양꼬치나 마라탕, 그리고 달콤바삭한 탕후루나 과일 디저트",
           "textEs": "Brochetas sabrosas, fideos reconfortantes con caldo o frutas dulces",
+          "textPt": "Espetinhos apimentados autênticos, tanghulu de frutas docinhas ou macarrão quentinho com caldo encorpado",
           "scores": { "ningning": 3 }
         }
       ]
@@ -497,6 +588,7 @@
       "question": "When meeting someone for the first time, what catches your attention first?",
       "questionKo": "처음 만난 사람에게서 가장 먼저 눈에 들어오는 부분은?",
       "questionEs": "Al conocer a alguien nuevo, ¿qué es lo primero que notas?",
+      "questionPt": "Ao conhecer alguém pela primeira vez, o que chama a sua atenção primeiro?",
       "emoji": "👀",
       "options": [
         {
@@ -504,6 +596,7 @@
           "text": "Their manners, considerate tone of voice, and how respectfully they treat others",
           "textKo": "상대방의 배려 깊은 말투와 예의, 주변 사람들을 대하는 태도",
           "textEs": "Sus modales amables, su tono de voz y el respeto con el que trata a los demás",
+          "textPt": "A educação, o tom de voz gentil e o respeito com que trata as outras pessoas",
           "scores": { "karina": 3 }
         },
         {
@@ -511,6 +604,7 @@
           "text": "Their subtle humor, authenticity, and whether we share a similar quiet wavelength",
           "textKo": "은은한 유머 코드와 솔직함, 그리고 나와 비슷한 편안한 결이 느껴지는지",
           "textEs": "Su sentido del humor espontáneo y si compartimos la misma vibra tranquila",
+          "textPt": "O senso de humor sutil, a autenticidade e se compartilhamos uma sintonia parecida",
           "scores": { "winter": 3 }
         },
         {
@@ -518,6 +612,7 @@
           "text": "Their overall aura, unique fashion sense, and relaxed, friendly confidence",
           "textKo": "특유의 분위기(아우라), 감각적인 패션 센스와 부담 없는 친근한 태도",
           "textEs": "Su estilo propio, su vibra relajada y su seguridad sin pretensiones",
+          "textPt": "A aura geral, o estilo único de se vestir e a confiança leve e amigável",
           "scores": { "giselle": 3 }
         },
         {
@@ -525,6 +620,7 @@
           "text": "The warmth in their eyes, genuine smile, and artistic or creative vibe",
           "textKo": "따뜻하고 반짝이는 눈빛, 솔직한 웃음과 자유로운 개성",
           "textEs": "La calidez en su mirada, su sonrisa genuina y su energía creativa",
+          "textPt": "O brilho acolhedor no olhar, o sorriso sincero e a energia artística ou criativa",
           "scores": { "ningning": 3 }
         }
       ]
@@ -534,6 +630,7 @@
       "question": "Which aespa era and motto embodies your personal mindset?",
       "questionKo": "내 인생관을 가장 잘 표현하는 에스파의 타이틀곡 모토는?",
       "questionEs": "¿Qué era y lema de aespa define mejor tu filosofía de vida?",
+      "questionPt": "Qual era e lema do aespa melhor representa a sua mentalidade?",
       "emoji": "🌟",
       "options": [
         {
@@ -541,6 +638,7 @@
           "text": "'Supernova': Explosive inner power! Once I set my mind on a goal, nothing can hold me back",
           "textKo": "'Supernova': 내 안의 무한한 에너지를 폭발시켜 스스로의 길을 찬란하게 개척한다",
           "textEs": "'Supernova': ¡Poder interior explosivo! Cuando me propongo algo, nada me detiene",
+          "textPt": "'Supernova': Poder interior explosivo! Quando coloco uma meta na cabeça, nada me segura",
           "scores": { "karina": 3 }
         },
         {
@@ -548,6 +646,7 @@
           "text": "'Drama': Unshakable confidence! Every challenge starts with my own fearless resolve",
           "textKo": "'Drama': 어떤 위기 앞에서도 당당하게, 내 인생의 주인공으로서 당차게 맞선다",
           "textEs": "'Drama': Seguridad inquebrantable; todo reto empieza con mi propia determinación",
+          "textPt": "'Drama': Confiança inabalável! Todo desafio começa com a minha própria determinação sem medo",
           "scores": { "winter": 3 }
         },
         {
@@ -555,6 +654,7 @@
           "text": "'Whiplash': Effortless speed and chic groove! Never let outside noise disrupt my personal rhythm",
           "textKo": "'Whiplash': 남들의 소음에 흔들리지 않고 세련되고 빠른 템포로 나만의 페이스를 즐긴다",
           "textEs": "'Whiplash': Ritmo elegante y flow veloz; jamás dejo que el ruido ajeno me detenga",
+          "textPt": "'Whiplash': Velocidade natural e groove elegante! Nunca deixo o barulho externo atrapalhar meu ritmo",
           "scores": { "giselle": 3 }
         },
         {
@@ -562,6 +662,7 @@
           "text": "'Savage': Fearless artistic freedom! Break boundaries and stay true to my creative spark",
           "textKo": "'Savage': 틀에 갇히지 않는 자유로움! 상처받지 않고 가장 나다운 모습으로 세상을 놀라게 한다",
           "textEs": "'Savage': Libertad artística sin miedo; rompo límites siendo 100% auténtica",
+          "textPt": "'Savage': Liberdade artística destemida! Quebro barreiras e sou fiel à minha faísca criativa",
           "scores": { "ningning": 3 }
         }
       ]

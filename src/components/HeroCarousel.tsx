@@ -56,6 +56,8 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
       ? { region: '추천 테스트', slide: '슬라이드', pause: '자동 넘김 멈춤', play: '자동 넘김 재생' }
       : lang === 'es'
       ? { region: 'Tests destacados', slide: 'Diapositiva', pause: 'Pausar', play: 'Reproducir' }
+      : lang === 'pt'
+      ? { region: 'Testes em destaque', slide: 'Slide', pause: 'Pausar', play: 'Reproduzir' }
       : { region: 'Featured tests', slide: 'Slide', pause: 'Pause auto-rotation', play: 'Play auto-rotation' };
 
   return (

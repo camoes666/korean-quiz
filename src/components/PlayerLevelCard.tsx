@@ -53,6 +53,8 @@ export default function PlayerLevelCard() {
                 ? 'Progress to next level'
                 : lang === 'es'
                 ? 'Para el siguiente nivel'
+                : lang === 'pt'
+                ? 'Para o próximo nível'
                 : '다음 레벨까지'}
             </span>
             <span className="font-extrabold text-purple-600">
@@ -61,6 +63,8 @@ export default function PlayerLevelCard() {
                   ? `${xpToNextLevel} XP needed`
                   : lang === 'es'
                   ? `${xpToNextLevel} XP necesarios`
+                  : lang === 'pt'
+                  ? `${xpToNextLevel} XP necessários`
                   : `${xpToNextLevel} XP 필요`
                 : 'MAX LEVEL'}
             </span>

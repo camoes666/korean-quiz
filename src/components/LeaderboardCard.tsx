@@ -44,7 +44,7 @@ export default function LeaderboardCard() {
             <p className="text-[11px] text-slate-400 font-medium">
               {lang === 'ko'
                 ? '시즌 1 TOP 5 챌린저'
-                : lang === 'es'
+                : lang === 'es' || lang === 'pt'
                 ? 'Top 5 Temporada 1'
                 : 'Season 1 Top Challengers'}
             </p>
@@ -96,8 +96,10 @@ export default function LeaderboardCard() {
           <span className="text-xs font-bold text-purple-950">
             {lang === 'ko'
               ? '내 현재 순위: #42'
-              : lang === 'es' || lang === 'pt'
+              : lang === 'es'
               ? 'Tu Rango: #42'
+              : lang === 'pt'
+              ? 'Sua Posição: #42'
               : 'Your Rank: #42'}
           </span>
         </div>

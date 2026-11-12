@@ -182,9 +182,11 @@ export interface EpisodePack {
   label: string;
   labelKo?: string;
   labelEs?: string;
+  labelPt?: string;
   subtitle?: string;
   subtitleKo?: string;
   subtitleEs?: string;
+  subtitlePt?: string;
   isNew?: boolean;
 }
 

@@ -562,11 +562,19 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                             ? '방영 회차별 선택 (스포일러 방지)'
                             : lang === 'es'
                             ? 'Seleccionar por Episodios (Sin Spoilers)'
+                            : lang === 'pt'
+                            ? 'Selecionar por Episódios (Sem Spoilers)'
                             : 'Select Episode Pack (Spoiler-Free)'}
                         </span>
                       </div>
                       <span className="text-[11px] font-extrabold text-rose-600 bg-rose-50 border border-rose-200 px-2.5 py-0.5 rounded-full">
-                        {lang === 'ko' ? '매주 본방 후 업데이트!' : 'Updated Weekly!'}
+                        {lang === 'ko'
+                          ? '매주 본방 후 업데이트!'
+                          : lang === 'es'
+                          ? '¡Actualizado cada semana!'
+                          : lang === 'pt'
+                          ? 'Atualizado toda semana!'
+                          : 'Updated Weekly!'}
                       </span>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
@@ -580,10 +588,20 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                         }`}
                       >
                         <div className="text-xs font-black text-slate-900">
-                          {lang === 'ko' ? '🎲 전 회차 통합 랜덤' : lang === 'es' ? '🎲 Todos los Episodios' : '🎲 All Episodes Mix'}
+                          {lang === 'ko'
+                            ? '🎲 전 회차 통합 랜덤'
+                            : lang === 'es'
+                            ? '🎲 Todos los Episodios'
+                            : lang === 'pt'
+                            ? '🎲 Todos os Episódios'
+                            : '🎲 All Episodes Mix'}
                         </div>
                         <div className="text-[10px] text-slate-500 font-bold mt-0.5">
-                          {lang === 'ko' ? `총 ${quiz.questions.length}문항 중 5문제` : `${quiz.questions.length} Qs total`}
+                          {lang === 'ko'
+                            ? `총 ${quiz.questions.length}문항 중 5문제`
+                            : lang === 'es' || lang === 'pt'
+                            ? `${quiz.questions.length} perguntas no total`
+                            : `${quiz.questions.length} Qs total`}
                         </div>
                       </button>
                       {quiz.episodePacks.map((pack) => {

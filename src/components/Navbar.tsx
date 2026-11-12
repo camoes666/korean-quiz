@@ -82,7 +82,15 @@ export default function Navbar() {
           <Link
             href="/guide"
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs transition-colors shrink-0"
-            title={lang === 'ko' ? 'K-컬처 & K-Pop 지식 가이드' : lang === 'es' ? 'Guías de Lore' : 'Knowledge & Lore Guides'}
+            title={
+              lang === 'ko'
+                ? 'K-컬처 & K-Pop 지식 가이드'
+                : lang === 'es'
+                ? 'Guías de Lore'
+                : lang === 'pt'
+                ? 'Guias de Lore'
+                : 'Knowledge & Lore Guides'
+            }
           >
             <BookOpen className="w-3.5 h-3.5 text-purple-600" />
             <span className="hidden sm:inline">

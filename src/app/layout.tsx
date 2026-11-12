@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     url: 'https://kpulsequiz.com',
     siteName: 'K-Pulse',
     locale: 'en_US',
-    alternateLocale: ['es_ES', 'ko_KR'],
+    alternateLocale: ['es_ES', 'pt_BR', 'ko_KR'],
     type: 'website',
     images: [
       {
@@ -76,7 +76,7 @@ const websiteSchema = {
   alternateName: ['KPulse', 'K-Pulse Quiz'],
   url: 'https://kpulsequiz.com',
   description: 'Gamified K-Culture, K-Pop & Korean Language Trivia Quiz Hub',
-  inLanguage: ['en', 'es', 'ko'],
+  inLanguage: ['en', 'es', 'pt', 'ko'],
   publisher: {
     '@type': 'Organization',
     name: 'K-Pulse',

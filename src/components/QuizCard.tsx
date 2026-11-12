@@ -27,13 +27,15 @@ export default function QuizCard({ quiz }: QuizCardProps) {
   const depthLabel = isPersonality
     ? lang === 'en'
       ? 'Results'
-      : lang === 'es'
+      : lang === 'es' || lang === 'pt'
       ? 'Resultados'
       : '가지 결과'
     : lang === 'en'
     ? 'Levels'
     : lang === 'es'
     ? 'Niveles'
+    : lang === 'pt'
+    ? 'Níveis'
     : '단계';
 
   return (
@@ -46,7 +48,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <div className="flex items-center gap-1.5 flex-wrap">
             {isPersonality ? (
               <span className="px-2.5 py-0.5 bg-amber-300 text-amber-950 font-black rounded-full text-[11px] tracking-wide shadow-2xs">
-                🔮 {lang === 'en' ? 'Personality' : lang === 'es' ? 'Personalidad' : '성향 테스트'}
+                🔮 {lang === 'en' ? 'Personality' : lang === 'es' || lang === 'pt' ? 'Personalidade' : '성향 테스트'}
                 {tagLabel ? ` · ${tagLabel}` : ''}
               </span>
             ) : (
@@ -123,6 +125,8 @@ export default function QuizCard({ quiz }: QuizCardProps) {
                     ? 'Find Your Match'
                     : lang === 'es'
                     ? 'Descubrir Miembro'
+                    : lang === 'pt'
+                    ? 'Descobrir Membro'
                     : '나의 멤버 찾기'
                   : t.startChallenge}
               </span>
@@ -138,6 +142,8 @@ export default function QuizCard({ quiz }: QuizCardProps) {
                     ? '지식 가이드 & 해설 보기'
                     : lang === 'es'
                     ? 'Ver Guía de Lore'
+                    : lang === 'pt'
+                    ? 'Ver Guia de Lore'
                     : 'Read Lore Guide'
                 }
               >

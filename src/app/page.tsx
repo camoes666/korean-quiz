@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { getAllQuizzes, getHeroQuizzes } from '@/data/quizzes';
-import { Category } from '@/types/quiz';
+import { Category, getLocalizedText } from '@/types/quiz';
 import QuizCard from '@/components/QuizCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import HeroCarousel from '@/components/HeroCarousel';
@@ -22,7 +22,7 @@ export default function HomePage() {
   const [selectedTag, setSelectedTag] = useState<string>('All');
 
   const allQuizzes = getAllQuizzes();
-  const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
+  const levelTitle = getLocalizedText(currentLevel, 'title', lang);
 
   const heroSlides = getHeroQuizzes();
 
@@ -176,7 +176,7 @@ export default function HomePage() {
               {/* Interactive Fandom Quick-Jump Chips */}
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mr-1">
-                  {lang === 'ko' ? '인기 테마:' : lang === 'es' ? 'Popular:' : 'Hot Picks:'}
+                  {lang === 'ko' ? '인기 테마:' : lang === 'es' ? 'Popular:' : lang === 'pt' ? 'Em Alta:' : 'Hot Picks:'}
                 </span>
                 {quickFandomChips.map((chip) => (
                   <button
@@ -211,6 +211,10 @@ export default function HomePage() {
                         {xpToNextLevel > 0
                           ? lang === 'ko'
                             ? `${xpToNextLevel} XP 남음`
+                            : lang === 'es'
+                            ? `Faltan ${xpToNextLevel} XP`
+                            : lang === 'pt'
+                            ? `Faltam ${xpToNextLevel} XP`
                             : `${xpToNextLevel} XP to next`
                           : 'MAX'}
                       </span>
@@ -234,6 +238,8 @@ export default function HomePage() {
                       ? '명예의 전당 & 순위'
                       : lang === 'es'
                       ? 'Ver Clasificación'
+                      : lang === 'pt'
+                      ? 'Ver Classificação'
                       : 'Hall of Fame & Rank'}
                   </span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -339,6 +345,8 @@ export default function HomePage() {
                 ? '내 챌린저 스탯 & 명예의 전당'
                 : lang === 'es'
                 ? 'Estadísticas y Salón de la Fama'
+                : lang === 'pt'
+                ? 'Estatísticas e Hall da Fama'
                 : 'Your Stats & Global Hall of Fame'}
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium">
@@ -346,6 +354,8 @@ export default function HomePage() {
                 ? '퀴즈를 풀고 XP를 모아 글로벌 팬들과 랭킹을 겨뤄보세요.'
                 : lang === 'es'
                 ? 'Gana XP resolviendo quizzes y sube en el ranking global.'
+                : lang === 'pt'
+                ? 'Ganhe XP resolvendo quizzes e suba no ranking global.'
                 : 'Earn XP by completing quizzes and climb the seasonal ranks.'}
             </p>
           </div>
