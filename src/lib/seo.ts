@@ -614,7 +614,7 @@ export function generateQuizJsonLd(quiz: Quiz) {
     name: seoData.title,
     description: seoData.description,
     url: quizUrl,
-    inLanguage: 'en',
+    inLanguage: ['en', 'es', 'pt', 'ko'],
     isAccessibleForFree: true,
     educationalLevel: quiz.difficulty || 'Intermediate',
     about: {

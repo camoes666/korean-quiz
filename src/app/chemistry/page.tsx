@@ -19,6 +19,8 @@ export const metadata: Metadata = {
       'Discover your destiny match % with BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa, and LE SSERAFIM using Korean Saju Five Elements & MBTI!',
     url: 'https://kpulsequiz.com/chemistry',
     siteName: 'K-Pulse',
+    locale: 'en_US',
+    alternateLocale: ['es_ES', 'pt_BR', 'ko_KR'],
     type: 'website',
     images: [
       {
@@ -46,6 +48,7 @@ export default function ChemistryPage() {
     url: 'https://kpulsequiz.com/chemistry',
     applicationCategory: 'EntertainmentApplication',
     operatingSystem: 'All',
+    inLanguage: ['en', 'es', 'pt', 'ko'],
     description:
       'Interactive K-Pop idol compatibility calculator combining Korean Saju Five Elements (Wood, Fire, Earth, Metal, Water), 16 MBTI types, and Zodiac signs across 44 members of BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa, and LE SSERAFIM.',
     offers: {

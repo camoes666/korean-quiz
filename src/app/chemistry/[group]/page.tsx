@@ -55,6 +55,8 @@ export async function generateMetadata({
       description,
       url: canonicalUrl,
       siteName: 'K-Pulse',
+      locale: 'en_US',
+      alternateLocale: ['es_ES', 'pt_BR', 'ko_KR'],
       type: 'website',
       images: [
         {

@@ -46,6 +46,8 @@ export async function generateMetadata({
       description,
       url: `https://kpulsequiz.com/guide/${quiz.slug}`,
       siteName: 'K-Pulse',
+      locale: 'en_US',
+      alternateLocale: ['es_ES', 'pt_BR', 'ko_KR'],
       type: 'article',
       images: [
         {
