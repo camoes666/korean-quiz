@@ -78,17 +78,11 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
         ];
 
   return (
-    <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#160812] via-[#240d1d] to-[#12091a] p-6 sm:p-7 text-white shadow-2xl shadow-pink-950/25 border border-pink-500/30 flex flex-col justify-between h-full group">
-      {/* Stage Spotlight Glows */}
-      <div className="absolute -top-20 -right-16 w-64 h-64 rounded-full bg-pink-500/30 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-6 right-6 w-40 h-40 rounded-full bg-rose-500/25 blur-2xl pointer-events-none" />
-      <div className="absolute -bottom-20 -left-16 w-56 h-56 rounded-full bg-purple-600/20 blur-3xl pointer-events-none" />
-
+    <div className="relative overflow-hidden rounded-2xl bg-slate-900 p-6 sm:p-7 text-white border border-slate-800 flex flex-col justify-between h-full group">
       <div className="relative z-10">
         {/* Top Meta Badges */}
         <div className="flex items-center justify-between gap-2 flex-wrap mb-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-500/20 border border-pink-400/40 text-pink-200 text-xs font-extrabold backdrop-blur-md shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-pink-400" />
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-white/10 border border-white/15 text-slate-200 text-xs font-medium">
             {isPersonality
               ? getBadgeLabel(badge, questQuiz.tag || 'K-Pop', lang)
               : lang === 'ko'
@@ -100,18 +94,18 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
               : 'Daily Quest'}
           </span>
 
-          <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-400/15 border border-emerald-400/35 text-emerald-300 text-xs font-black">
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-emerald-500/15 border border-emerald-500/25 text-emerald-300 text-xs font-mono font-medium">
             <Zap className="w-3 h-3 fill-current" />
             +100 XP
           </span>
         </div>
 
         {/* Title & Subtitle */}
-        <div className="pr-24 sm:pr-32">
-          <h2 className="text-xl sm:text-2xl font-black tracking-tight text-white leading-snug">
+        <div className="pr-20 sm:pr-28">
+          <h2 className="text-lg sm:text-xl font-bold tracking-tight text-white leading-snug">
             {quizTitle}
           </h2>
-          <p className="mt-1.5 text-xs text-pink-100/75 font-medium leading-relaxed line-clamp-2">
+          <p className="mt-1.5 text-xs text-slate-400 font-normal leading-relaxed line-clamp-2">
             {quizDesc}
           </p>
         </div>
@@ -123,14 +117,14 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
               {members.map((m) => (
                 <div
                   key={m.name}
-                  className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white/[0.08] hover:bg-white/[0.12] border border-pink-300/15 backdrop-blur-md transition-colors"
+                  className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-white/5 border border-white/10"
                 >
-                  <span className="text-base leading-none">{m.emoji}</span>
+                  <span className="text-sm leading-none">{m.emoji}</span>
                   <div className="min-w-0">
-                    <div className="text-xs font-black text-white leading-tight truncate">
+                    <div className="text-xs font-medium text-white leading-tight truncate">
                       {m.name}
                     </div>
-                    <div className="text-[10px] font-semibold text-pink-200/70 truncate">
+                    <div className="text-[10px] text-slate-400 truncate">
                       {m.role}
                     </div>
                   </div>
@@ -139,64 +133,55 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
             </div>
           )}
 
-          {/* Hero-sized Mascot Bomi with Motion Graphics & Stage Aura */}
-          <div className="w-28 h-28 sm:w-32 sm:h-32 shrink-0 ml-auto -mt-10 sm:-mt-12 -mr-2 relative select-none pointer-events-none z-10">
-            {/* Pulsing Pink Stage Halo */}
-            <div className="absolute inset-1 rounded-full bg-gradient-to-tr from-pink-500/50 via-rose-400/35 to-purple-500/30 blur-xl animate-bomi-aura" />
-            {/* Rotating Dashed Stage Orbit Ring */}
-            <div className="absolute inset-1.5 rounded-full border border-dashed border-pink-400/40 animate-bomi-orbit" />
-            {/* Floating K-Pop Heart & Sparkle Particles */}
-            <span className="absolute -top-1 left-2 text-xs animate-particle-1">💖</span>
-            <span className="absolute top-3 -right-1 text-xs animate-particle-2">✨</span>
-            <span className="absolute bottom-4 -left-1 text-[11px] animate-particle-3">🌸</span>
-            {/* Floating Bomi Illustration */}
+          {/* Clean Mascot Illustration */}
+          <div className="w-24 h-24 sm:w-28 sm:h-28 shrink-0 ml-auto -mt-6 sm:-mt-8 relative select-none pointer-events-none z-10">
             <img
               src={mascot.avatarUrl}
               alt={mascot.name}
-              className="relative w-full h-full object-contain drop-shadow-[0_12px_20px_rgba(236,72,153,0.45)] animate-bomi-float"
+              className="relative w-full h-full object-contain"
             />
           </div>
         </div>
       </div>
 
       {/* Bottom CTA Bar */}
-      <div className="relative z-10 mt-5 pt-4 border-t border-pink-200/10 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-2 text-xs text-pink-100/80 font-semibold">
-          <span className="inline-flex items-center gap-1 text-pink-300 font-bold">
-            <Flame className="w-3.5 h-3.5 fill-current text-pink-400" />
+      <div className="relative z-10 mt-5 pt-4 border-t border-slate-800 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-2 text-xs text-slate-400 font-medium">
+          <span className="inline-flex items-center gap-1 text-slate-300">
+            <Flame className="w-3.5 h-3.5 text-rose-400 fill-current" />
             {lang === 'ko' ? `${streak}일 스트릭` : `${streak}d streak`}
           </span>
-          <span className="text-white/25">·</span>
+          <span className="text-slate-600">·</span>
           <span>
             {questionCount} {lang === 'ko' ? '문항' : 'Qs'} (~{questQuiz.estimatedMinutes}
             {lang === 'ko' ? '분' : 'm'})
           </span>
         </div>
 
-        {/* Always clickable: completing the daily trivia quest shouldn't hide the featured tests. */}
+        {/* Action Button */}
         <Link
           href={`/quiz/${questQuiz.slug}`}
           onClick={onPlayClick}
-          className="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-pink-500 via-rose-500 to-pink-600 hover:from-pink-400 hover:to-rose-500 active:scale-95 text-white px-5 py-2.5 text-xs sm:text-sm font-black shadow-lg shadow-pink-500/30 transition-all shrink-0"
+          className="inline-flex items-center justify-center gap-2 rounded-xl bg-white hover:bg-slate-100 text-slate-900 px-4 py-2 text-xs sm:text-sm font-semibold transition-colors shrink-0"
         >
           <span>
             {isPersonality
               ? lang === 'ko'
-                ? '내 멤버 알아보러 가기'
+                ? '내 멤버 찾기'
                 : lang === 'es'
-                ? 'Descubrir Mi Miembro'
+                ? 'Descubrir Miembro'
                 : lang === 'pt'
-                ? 'Descobrir Meu Membro'
+                ? 'Descobrir Membro'
                 : 'Find My Member'
               : lang === 'ko'
-              ? '데일리 도전하기'
+              ? '도전하기'
               : lang === 'es'
               ? 'Jugar Misión'
               : lang === 'pt'
               ? 'Jogar Missão'
               : 'Play Daily Quest'}
           </span>
-          <ArrowRight className="w-4 h-4" />
+          <ArrowRight className="w-3.5 h-3.5" />
         </Link>
       </div>
     </div>

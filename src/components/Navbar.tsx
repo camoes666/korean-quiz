@@ -42,14 +42,14 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
         {/* Brand Logo */}
         <Link href="/" className="flex items-center gap-2.5 group shrink-0">
-          <div className="w-9 h-9 rounded-xl bg-purple-50 p-0.5 border border-purple-200/60 flex items-center justify-center shadow-2xs group-hover:scale-105 transition-transform overflow-hidden relative">
+          <div className="w-8 h-8 rounded-lg bg-slate-100 p-0.5 border border-slate-200 flex items-center justify-center overflow-hidden relative">
             <img
               src="/images/hobi01.webp"
               alt="Hobi Mascot"
               className="w-full h-full object-cover"
             />
           </div>
-          <span className="font-black text-xl tracking-tight bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className="font-bold text-lg tracking-tight text-slate-900 group-hover:text-slate-700 transition-colors">
             {t.siteTitle}
           </span>
         </Link>
@@ -81,7 +81,7 @@ export default function Navbar() {
           {/* Idol Chemistry & Saju Compatibility Link */}
           <Link
             href="/chemistry"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-pink-200 bg-gradient-to-r from-pink-50 to-purple-50 hover:from-pink-100 hover:to-purple-100 text-pink-700 font-extrabold text-xs transition-colors shrink-0"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs transition-colors shrink-0"
             title={
               lang === 'ko'
                 ? 'K-사주 × MBTI 아이돌 궁합 연구소'
@@ -90,7 +90,7 @@ export default function Navbar() {
                 : 'K-Pop Idol Saju × MBTI Chemistry'
             }
           >
-            <Heart className="w-3.5 h-3.5 text-pink-600 fill-pink-500" />
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
             <span className="hidden sm:inline">
               {lang === 'ko'
                 ? '아이돌 궁합'
@@ -105,7 +105,7 @@ export default function Navbar() {
           {/* Knowledge Guides Navigation Link */}
           <Link
             href="/guide"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs transition-colors shrink-0"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors shrink-0"
             title={
               lang === 'ko'
                 ? 'K-컬처 & K-Pop 지식 가이드'
@@ -116,7 +116,7 @@ export default function Navbar() {
                 : 'Knowledge & Lore Guides'
             }
           >
-            <BookOpen className="w-3.5 h-3.5 text-purple-600" />
+            <BookOpen className="w-3.5 h-3.5 text-slate-500" />
             <span className="hidden sm:inline">
               {lang === 'en'
                 ? 'Guides'
@@ -138,7 +138,7 @@ export default function Navbar() {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setDropdownOpen((prev) => !prev)}
-              className="flex items-center gap-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 px-3 py-1.5 text-xs font-bold text-slate-700 transition-colors active:scale-95"
+              className="flex items-center gap-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 px-3 py-1.5 text-xs font-medium text-slate-700 transition-colors"
               aria-label="Select language"
             >
               <span className="text-sm">{currentLang.flag}</span>
@@ -151,9 +151,9 @@ export default function Navbar() {
             </button>
 
             {dropdownOpen && (
-              <div className="absolute right-0 mt-2 w-44 rounded-2xl border border-slate-200 bg-white p-1.5 shadow-xl shadow-slate-900/5 z-50 animate-fadeIn">
-                <div className="text-[10px] font-black uppercase tracking-wider text-slate-400 px-2.5 py-1 mb-1 border-b border-slate-100">
-                  Select Language
+              <div className="absolute right-0 mt-2 w-44 rounded-xl border border-slate-200 bg-white p-1.5 shadow-lg shadow-slate-900/5 z-50 animate-fadeIn">
+                <div className="text-[11px] font-medium text-slate-400 px-2.5 py-1 mb-1 border-b border-slate-100">
+                  Language
                 </div>
                 {languages.map((l) => {
                   const isSelected = l.code === lang;
@@ -164,9 +164,9 @@ export default function Navbar() {
                         setLang(l.code);
                         setDropdownOpen(false);
                       }}
-                      className={`flex w-full items-center justify-between gap-2 rounded-xl px-2.5 py-2 text-xs font-bold transition-all ${
+                      className={`flex w-full items-center justify-between gap-2 rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors ${
                         isSelected
-                          ? 'bg-purple-50 text-purple-700 font-black'
+                          ? 'bg-slate-100 text-slate-900 font-semibold'
                           : 'text-slate-700 hover:bg-slate-50'
                       }`}
                     >
@@ -174,7 +174,7 @@ export default function Navbar() {
                         <span className="text-sm">{l.flag}</span>
                         <span>{l.label}</span>
                       </span>
-                      {isSelected && <Check className="w-3.5 h-3.5 text-purple-600" />}
+                      {isSelected && <Check className="w-3.5 h-3.5 text-slate-900" />}
                     </button>
                   );
                 })}
@@ -185,10 +185,9 @@ export default function Navbar() {
           {/* Surprise Me Action Button */}
           <button
             onClick={handleRandomQuiz}
-            className="hidden sm:flex items-center gap-1.5 rounded-full bg-slate-900 hover:bg-purple-600 active:scale-95 text-white px-3.5 py-1.5 text-xs font-bold shadow-2xs transition-colors"
+            className="hidden sm:flex items-center gap-1.5 rounded-full bg-slate-900 hover:bg-slate-800 text-white px-3.5 py-1.5 text-xs font-medium shadow-2xs transition-colors"
             title={t.surpriseMe}
           >
-            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
             <span>{t.surpriseMe}</span>
           </button>
         </div>

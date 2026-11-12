@@ -429,53 +429,52 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           />
         )}
 
-        <div className="qz-card overflow-hidden rounded-3xl border-2 border-purple-100 bg-white shadow-xl shadow-purple-500/5">
+        <div className="qz-card overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-xs">
           {/* Header Banner */}
           <div
-            className={`relative bg-gradient-to-r ${quiz.gradient} p-8 sm:p-12 text-white text-center overflow-hidden`}
+            className="relative bg-slate-950 p-8 sm:p-12 text-white text-center overflow-hidden border-b border-slate-800"
           >
-            <div className="absolute inset-0 bg-black/10"></div>
             <div className="relative z-10">
               <div className="flex items-center justify-center gap-2 flex-wrap mb-4">
-                <span className="px-3.5 py-1 rounded-full bg-white/95 text-purple-900 text-xs sm:text-sm font-black tracking-wider uppercase shadow-xs">
+                <span className="px-2.5 py-0.5 rounded border border-white/20 bg-white/10 text-slate-200 text-xs font-mono tracking-wider uppercase">
                   {categoryLabel} {t.quizIntro.challenge}
                 </span>
                 {tagLabel && (
-                  <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-black/30 backdrop-blur-md text-xs font-bold">
-                    <Tag className="w-3 h-3" />
+                  <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded border border-white/15 bg-white/5 text-xs text-slate-300 font-mono">
+                    <Tag className="w-3 h-3 text-slate-400" />
                     {tagLabel}
                   </span>
                 )}
-                <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-400 text-emerald-950 text-xs font-black shadow-xs">
-                  <Zap className="w-3 h-3 fill-current" />
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded border border-emerald-500/30 bg-emerald-950/60 text-emerald-300 text-xs font-mono font-medium">
+                  <Zap className="w-3 h-3 fill-current text-emerald-400" />
                   +100 MAX XP
                 </span>
               </div>
 
               <div className="flex items-center justify-center gap-3.5 mb-3">
                 <div className="relative group">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/25 backdrop-blur-md p-1 border-2 border-white/60 shadow-lg shadow-black/10 flex items-center justify-center overflow-hidden">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/10 p-1 border border-white/20 flex items-center justify-center overflow-hidden">
                     <img
                       src={mascot.avatarUrl}
                       alt={getLocalizedText(mascot, 'name', lang)}
-                      className="w-full h-full object-contain filter drop-shadow hover:scale-110 transition-transform"
+                      className="w-full h-full object-contain filter drop-shadow"
                     />
                   </div>
-                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-black text-white whitespace-nowrap border border-white/30 shadow-xs">
+                  <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 rounded bg-slate-900 text-[10px] font-mono text-slate-300 whitespace-nowrap border border-white/20">
                     {getLocalizedText(mascot, 'badgeTitle', lang)}
                   </span>
                 </div>
-                <div className="text-5xl sm:text-6xl animate-bounce">
+                <div className="text-4xl sm:text-5xl">
                   {quiz.coverEmoji}
                 </div>
               </div>
-              <div className="inline-block px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md text-xs font-bold text-white/95 mb-3 shadow-xs">
+              <div className="inline-block px-3 py-1 rounded-full bg-white/10 text-xs font-medium text-slate-300 mb-3 border border-white/10">
                 {getLocalizedText(mascot, 'greeting', lang)}
               </div>
-              <h1 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight max-w-2xl mx-auto">
+              <h1 className="text-2xl sm:text-4xl font-bold tracking-tight leading-tight max-w-2xl mx-auto text-white">
                 {quizTitle}
               </h1>
-              <p className="mt-3 text-white/95 text-sm sm:text-base max-w-xl mx-auto font-medium">
+              <p className="mt-3 text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-normal">
                 {quizSubtitle}
               </p>
             </div>
@@ -485,25 +484,25 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           {quiz.coverImage && (
             <div className="px-6 sm:px-10 pt-6 sm:pt-8">
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-stretch max-w-2xl mx-auto">
-                <div className="sm:col-span-7 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-lg group bg-slate-950">
+                <div className="sm:col-span-7 relative rounded-xl overflow-hidden border border-slate-200 shadow-xs group bg-slate-950">
                   <img
                     src={quiz.coverImage}
                     alt={quizTitle}
                     className="w-full h-64 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
                   />
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-rose-600/90 backdrop-blur-md text-[11px] font-black text-white shadow-xs">
-                    {lang === 'ko' ? '🩺 MAIN · 닥터X 메스 버전' : '🩺 MAIN · Doctor X'}
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 text-[11px] font-mono font-medium text-white border border-white/20">
+                    {lang === 'ko' ? 'MAIN · 닥터X' : 'MAIN · Doctor X'}
                   </span>
                 </div>
                 {quiz.secondaryImage && (
-                  <div className="sm:col-span-5 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-md group bg-slate-950">
+                  <div className="sm:col-span-5 relative rounded-xl overflow-hidden border border-slate-200 shadow-xs group bg-slate-950">
                     <img
                       src={quiz.secondaryImage}
                       alt={`${quizTitle} sub`}
                       className="w-full h-56 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
                     />
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-[11px] font-bold text-rose-200 border border-rose-400/30 shadow-xs">
-                      {lang === 'ko' ? '🔥 SUB · 수술방 다크히어로' : '🔥 SUB · Dark Hero'}
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 text-[11px] font-mono font-medium text-slate-200 border border-white/20">
+                      {lang === 'ko' ? 'SUB · 다크히어로' : 'SUB · Dark Hero'}
                     </span>
                   </div>
                 )}
@@ -511,26 +510,26 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             </div>
           )}
           <div className="p-6 sm:p-10">
-            <p className="qz-card-muted text-slate-600 text-sm sm:text-base leading-relaxed text-center max-w-xl mx-auto mb-8 font-medium">
+            <p className="qz-card-muted text-slate-600 text-sm sm:text-base leading-relaxed text-center max-w-xl mx-auto mb-8 font-normal">
               {quizDescription}
             </p>
 
             <div className="grid grid-cols-3 gap-3 max-w-md mx-auto mb-8 text-center">
-              <div className="qz-stat-box p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
-                <div className="qz-stat-label text-xs text-slate-400 font-bold">{t.quizIntro.questions}</div>
-                <div className="qz-stat-val text-xl font-black text-slate-900">
-                  5 <span className="text-[11px] font-bold text-slate-400">/ {quiz.questions.length}</span>
+              <div className="qz-stat-box p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                <div className="qz-stat-label text-xs text-slate-500 font-medium">{t.quizIntro.questions}</div>
+                <div className="qz-stat-val text-xl font-bold text-slate-950">
+                  5 <span className="text-[11px] font-mono text-slate-400">/ {quiz.questions.length}</span>
                 </div>
               </div>
-              <div className="qz-stat-box p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
-                <div className="qz-stat-label text-xs text-slate-400 font-bold">{t.quizIntro.estTime}</div>
-                <div className="qz-stat-val text-xl font-black text-slate-900">
+              <div className="qz-stat-box p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                <div className="qz-stat-label text-xs text-slate-500 font-medium">{t.quizIntro.estTime}</div>
+                <div className="qz-stat-val text-xl font-bold text-slate-950">
                   ~{quiz.estimatedMinutes} {t.mins}
                 </div>
               </div>
-              <div className="qz-stat-box p-3.5 rounded-2xl bg-slate-50 border-2 border-slate-100">
-                <div className="qz-stat-label text-xs text-slate-400 font-bold">{t.quizIntro.difficulty}</div>
-                <div className="qz-stat-val text-xl font-black text-slate-900">
+              <div className="qz-stat-box p-3.5 rounded-xl bg-slate-50 border border-slate-200/80">
+                <div className="qz-stat-label text-xs text-slate-500 font-medium">{t.quizIntro.difficulty}</div>
+                <div className="qz-stat-val text-xl font-bold text-slate-950">
                   {t.difficulties[quiz.difficulty] || quiz.difficulty}
                 </div>
               </div>
@@ -538,15 +537,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
             {/* Question Bank & Difficulty Selector (Hidden in Challenge Mode) */}
             {isChallengeMode ? (
-              <div className="mb-8 rounded-3xl bg-gradient-to-r from-purple-50 via-pink-50 to-indigo-50 p-6 border-2 border-purple-200 text-center">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-100 text-purple-900 text-xs font-black mb-2">
-                  <Swords className="w-3.5 h-3.5 text-pink-600" />
+              <div className="mb-8 rounded-2xl bg-slate-50 p-6 border border-slate-200 text-center">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-slate-200 bg-white text-slate-800 text-xs font-mono font-medium mb-2">
+                  <Swords className="w-3.5 h-3.5 text-slate-600" />
                   <span>{t.challenge.friendChallengeBadge}</span>
                 </div>
-                <h4 className="text-sm font-black text-slate-800 mb-1">
+                <h4 className="text-sm font-bold text-slate-900 mb-1">
                   {t.challenge.asyncMatchTitle.replace('{name}', challengeData?.nickname || t.challenge.defaultFriend)}
                 </h4>
-                <p className="text-xs text-slate-600 font-medium max-w-md mx-auto">
+                <p className="text-xs text-slate-600 font-normal max-w-md mx-auto">
                   {t.challenge.asyncMatchDesc}
                 </p>
               </div>
@@ -722,7 +721,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
             <button
               onClick={() => startQuiz(selectedLevel)}
-              className="qz-btn-primary flex items-center justify-center gap-2 w-full max-w-md mx-auto rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-4 px-8 text-base font-black shadow-lg shadow-purple-500/25 transition-all active:scale-95 cursor-pointer"
+              className="qz-btn-primary flex items-center justify-center gap-2 w-full max-w-md mx-auto rounded-xl bg-slate-950 hover:bg-slate-800 text-white py-3.5 px-8 text-sm sm:text-base font-bold shadow-xs transition-colors active:scale-95 cursor-pointer"
             >
               <span>
                 {isChallengeMode
@@ -736,7 +735,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             <div className="mt-4 text-center">
               <Link
                 href={`/guide/${quiz.slug}`}
-                className="inline-flex items-center gap-1.5 text-xs font-black text-purple-600 hover:text-purple-700 hover:underline transition-colors"
+                className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-slate-950 hover:underline transition-colors"
               >
                 <BookOpen className="w-3.5 h-3.5" />
                 <span>
@@ -823,26 +822,26 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             {/* Dynamic Timer & XP Chip */}
             <div className="flex items-center gap-2">
               <div
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-full font-black text-xs shadow-xs transition-colors ${
+                className={`flex items-center gap-1.5 px-3 py-1 rounded-full font-mono text-xs transition-colors ${
                   timeLeft <= 5
-                    ? 'bg-rose-50 border-2 border-rose-400 text-rose-600 animate-pulse'
-                    : 'bg-white border border-slate-200 text-slate-700'
+                    ? 'bg-rose-50 border border-rose-300 text-rose-600 font-bold'
+                    : 'bg-white border border-slate-200 text-slate-700 font-medium'
                 }`}
               >
                 <Clock className={`w-3.5 h-3.5 ${timeLeft <= 5 ? 'text-rose-500' : 'text-slate-500'}`} />
-                <span>⏱️ {timeLeft}s</span>
+                <span>{timeLeft}s</span>
               </div>
-              <span className="hidden sm:flex items-center gap-1 text-emerald-600 font-black px-2.5 py-1 bg-emerald-50 rounded-full border border-emerald-200 text-xs">
-                <Zap className="w-3.5 h-3.5 fill-current" />
+              <span className="hidden sm:flex items-center gap-1 text-slate-700 font-mono font-medium px-2.5 py-1 bg-slate-50 rounded-full border border-slate-200 text-xs">
+                <Zap className="w-3.5 h-3.5 fill-current text-rose-500" />
                 +{earnedXPInSession} XP
               </span>
             </div>
           </div>
 
-          {/* Neon Smooth Progress Bar */}
-          <div className="qz-progress-track h-2.5 w-full rounded-full bg-slate-100 p-0.5 border border-purple-100 overflow-hidden">
+          {/* Clean Progress Bar */}
+          <div className="qz-progress-track h-2 w-full rounded-full bg-slate-100 border border-slate-200 overflow-hidden">
             <div
-              className="qz-progress-bar h-full rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-emerald-400 transition-all duration-300 ease-out shadow-xs"
+              className="qz-progress-bar h-full rounded-full bg-slate-900 transition-all duration-300 ease-out"
               style={{ width: `${progressPercentQuestion}%` }}
             ></div>
           </div>
@@ -850,29 +849,29 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
         {/* Question Card */}
         {(quiz.coverImage || quiz.secondaryImage) && (
-          <div className="mb-4 rounded-2xl overflow-hidden border border-slate-200 bg-slate-950 relative h-32 sm:h-36 flex items-center justify-between px-5 text-white shadow-sm">
+          <div className="mb-4 rounded-xl overflow-hidden border border-slate-200 bg-slate-950 relative h-32 sm:h-36 flex items-center justify-between px-5 text-white shadow-xs">
             <img
               src={currentIndex % 2 === 0 ? quiz.coverImage || quiz.secondaryImage : quiz.secondaryImage || quiz.coverImage}
               alt={quizTitle}
               className="absolute inset-0 w-full h-full object-cover object-top opacity-35"
             />
             <div className="relative z-10 max-w-[65%]">
-              <span className="inline-block px-2.5 py-0.5 rounded-full bg-rose-600 text-[10px] font-black uppercase tracking-wider mb-1">
+              <span className="inline-block px-2 py-0.5 rounded bg-slate-900/90 text-[10px] font-mono uppercase tracking-wider mb-1 border border-white/20 text-slate-200">
                 {currentIndex % 2 === 0 ? 'DOCTOR X · MAIN' : 'OPERATING ROOM · SUB'}
               </span>
-              <p className="text-xs sm:text-sm font-black text-white/95 line-clamp-2">
+              <p className="text-xs sm:text-sm font-bold text-white line-clamp-2">
                 {quizTitle}
               </p>
             </div>
             <img
               src={currentIndex % 2 === 0 ? quiz.coverImage || quiz.secondaryImage : quiz.secondaryImage || quiz.coverImage}
               alt={quizTitle}
-              className="relative z-10 w-20 h-24 sm:w-24 sm:h-28 rounded-xl object-cover object-top border-2 border-white/40 shadow-md"
+              className="relative z-10 w-20 h-24 sm:w-24 sm:h-28 rounded-lg object-cover object-top border border-white/30 shadow-xs"
             />
           </div>
         )}
-        <div className="qz-card rounded-3xl border-2 border-purple-100 bg-white p-6 sm:p-8 shadow-lg shadow-purple-500/5">
-          <h2 className="qz-card-title text-lg sm:text-2xl font-black text-slate-900 leading-snug mb-6">
+        <div className="qz-card rounded-2xl border border-slate-200/80 bg-white p-6 sm:p-8 shadow-xs">
+          <h2 className="qz-card-title text-lg sm:text-2xl font-bold text-slate-950 leading-snug mb-6">
             {questionText}
           </h2>
 
@@ -1089,7 +1088,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               <button
                 onClick={() => handleSubmitAnswer()}
                 disabled={!selectedOptionId}
-                className="qz-btn-primary w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 disabled:opacity-40 disabled:cursor-not-allowed text-white py-3.5 px-8 text-sm font-black transition-all shadow-md shadow-purple-500/25 active:scale-95"
+                className="qz-btn-primary w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-40 disabled:cursor-not-allowed text-white py-3.5 px-8 text-sm font-bold transition-colors active:scale-95"
               >
                 <span>{t.quizRunner.checkAnswer}</span>
                 <ChevronRight className="w-4 h-4" />
@@ -1097,7 +1096,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             ) : (
               <button
                 onClick={handleNextQuestion}
-                className="qz-btn-primary w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-3.5 px-8 text-sm font-black transition-all shadow-lg shadow-purple-500/25 active:scale-95 animate-pulse"
+                className="qz-btn-primary w-full sm:w-auto order-1 sm:order-2 flex items-center justify-center gap-2 rounded-xl bg-rose-500 hover:bg-rose-600 text-white py-3.5 px-8 text-sm font-bold transition-colors active:scale-95"
               >
                 <span>
                   {currentIndex + 1 < totalQuestions
@@ -1111,7 +1110,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
           {/* Explanation & Trivia Card (or Hint reveal) */}
           {(isAnswerSubmitted || isHintActive) && (
-            <div className="mt-6 rounded-2xl border-2 border-purple-100 bg-purple-50/50 p-5 animate-fadeIn">
+            <div className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-5">
               {isAnswerSubmitted ? (
                 <>
                   <div className="flex items-center justify-between flex-wrap gap-2 mb-2">
@@ -1200,40 +1199,40 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
 
   return (
     <div data-group={themeGroup} className="max-w-xl mx-auto px-4 py-8 sm:py-12 transition-colors duration-300">
-      {/* 결과 축하 스코어보드 & 보상 결산 (Snippet 3) */}
-      <div className="qz-card animate-holo-card-reveal bg-white rounded-3xl p-6 sm:p-8 border-2 border-purple-200 shadow-2xl shadow-purple-500/20 text-center relative overflow-hidden my-4">
-        {/* 상단 퍼펙트 뱃지 */}
-        <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 text-white rounded-full text-xs font-black shadow-md shadow-pink-500/20 mb-3">
+      {/* 결과 축하 스코어보드 & 보상 결산 */}
+      <div className="qz-card bg-white rounded-2xl p-6 sm:p-8 border border-slate-200/80 shadow-xs text-center relative overflow-hidden my-4">
+        {/* 상단 뱃지 */}
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-slate-900 text-white rounded-md text-xs font-mono font-medium mb-3">
           {isPerfect
             ? lang === 'ko'
-              ? '🎉 ALL CLEAR! 퍼펙트 클리어 ✨'
+              ? 'ALL CLEAR · 퍼펙트'
               : lang === 'es'
-              ? '🎉 ¡DESAFÍO PERFECTO! ✨'
+              ? 'DESAFÍO PERFECTO'
               : lang === 'pt'
-              ? '🎉 DESAFIO PERFEITO! ✨'
-              : '🎉 ALL CLEAR! PERFECT SCORE! ✨'
+              ? 'DESAFIO PERFEITO'
+              : 'ALL CLEAR · PERFECT SCORE'
             : lang === 'ko'
-            ? '🏆 챌린지 완료! 🏆'
+            ? 'CHALLENGE COMPLETE'
             : lang === 'es'
-            ? '🏆 ¡DESAFÍO COMPLETADO! 🏆'
+            ? 'DESAFÍO COMPLETADO'
             : lang === 'pt'
-            ? '🏆 DESAFIO CONCLUÍDO! 🏆'
-            : '🏆 CHALLENGE COMPLETED! 🏆'}
+            ? 'DESAFIO CONCLUÍDO'
+            : 'CHALLENGE COMPLETED'}
         </div>
 
-        {/* Dynamic Mascot Celebration / Encouragement */}
-        <div className="w-36 h-36 sm:w-44 sm:h-44 mx-auto my-2 relative">
-          <div className="relative w-full h-full animate-bounce" style={{ animationDuration: '2.5s' }}>
+        {/* Dynamic Mascot Celebration */}
+        <div className="w-32 h-32 sm:w-40 sm:h-40 mx-auto my-3 relative">
+          <div className="relative w-full h-full">
             <img
               src={mascot.avatarUrl}
               alt={getLocalizedText(mascot, 'name', lang)}
-              className="w-full h-full object-contain filter drop-shadow-lg"
+              className="w-full h-full object-contain filter drop-shadow"
             />
             <div
-              className={`absolute -bottom-2 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full text-white font-black text-xs whitespace-nowrap shadow-md border border-white ${
+              className={`absolute -bottom-2 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded text-white font-mono text-xs whitespace-nowrap border border-white/20 ${
                 score >= 4
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-500 shadow-purple-500/25'
-                  : 'bg-rose-500 shadow-rose-500/25'
+                  ? 'bg-slate-950 text-slate-200'
+                  : 'bg-rose-600 text-white'
               }`}
             >
               {score >= 4
@@ -1243,10 +1242,10 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           </div>
         </div>
 
-        <div className="qz-card-title text-purple-600 font-black text-2xl tracking-tight mt-4 mb-1">
+        <div className="qz-card-title text-slate-950 font-bold text-2xl tracking-tight mt-4 mb-1">
           {rankLabel}
         </div>
-        <div className="qz-card-muted text-slate-500 font-bold text-sm mb-4">
+        <div className="qz-card-muted text-slate-500 font-medium text-sm mb-4">
           {tierTitle} ({tierBadge})
         </div>
 
@@ -1343,32 +1342,31 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           </div>
         )}
 
-        {/* ⚡ High-Impact Primary CTA: Next Recommended Quiz */}
+        {/* Primary CTA: Next Recommended Quiz */}
         {relatedQuizzes.length > 0 && (
-          <div className="mb-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-purple-600 via-pink-600 to-indigo-700 text-white text-left shadow-lg shadow-purple-500/25 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 translate-x-4 -translate-y-4 w-28 h-28 bg-white/10 rounded-full blur-xl pointer-events-none" />
+          <div className="mb-5 p-5 rounded-2xl bg-slate-950 text-white text-left border border-slate-800 relative overflow-hidden group">
             <div className="flex items-center justify-between gap-2 mb-2">
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md text-[11px] font-black tracking-wide text-amber-200 shadow-xs">
-                <Zap className="w-3.5 h-3.5 fill-amber-300 text-amber-300 animate-pulse" />
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/10 text-[11px] font-mono font-medium text-slate-300">
+                <Zap className="w-3.5 h-3.5 text-rose-400" />
                 {t.resultView.nextChallengeBadge}
               </span>
-              <span className="text-[11px] font-extrabold text-white/90 flex items-center gap-1">
-                <Flame className="w-3.5 h-3.5 text-amber-300 fill-amber-300" />
+              <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1">
+                <Flame className="w-3.5 h-3.5 text-rose-400" />
                 {t.resultView.streakKeep}
               </span>
             </div>
-            <h4 className="text-base sm:text-lg font-black text-white mb-1 line-clamp-1 group-hover:text-amber-200 transition-colors">
+            <h4 className="text-base sm:text-lg font-bold text-white mb-1 line-clamp-1">
               {getLocalizedText(relatedQuizzes[0], 'title', lang)}
             </h4>
-            <p className="text-xs text-white/85 line-clamp-2 mb-3.5">
+            <p className="text-xs text-slate-300 line-clamp-2 mb-3.5 font-normal">
               {getLocalizedText(relatedQuizzes[0], 'description', lang)}
             </p>
             <Link
               href={`/quiz/${relatedQuizzes[0].slug}`}
-              className="w-full py-3.5 px-4 rounded-xl bg-white hover:bg-amber-50 text-purple-700 hover:text-purple-900 font-black text-sm flex items-center justify-center gap-2 shadow-md transition-all active:scale-98"
+              className="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition-colors active:scale-98"
             >
               <span>{t.resultView.playNextQuiz}</span>
-              <ArrowRight className="w-4 h-4 text-pink-600" />
+              <ArrowRight className="w-4 h-4 text-slate-950" />
             </Link>
           </div>
         )}
@@ -1391,7 +1389,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
           />
         </div>
 
-        {/* 🔮 Idol K-Saju × MBTI Chemistry Link */}
+        {/* Idol K-Saju × MBTI Chemistry Link */}
         <div className="mb-3">
           <Link
             href={
@@ -1403,17 +1401,16 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                 ? '/chemistry/bts'
                 : '/chemistry'
             }
-            className="w-full py-3 px-4 rounded-2xl bg-gradient-to-r from-pink-50 via-purple-50 to-indigo-50 hover:from-pink-100 hover:to-purple-100 border border-pink-200 text-pink-800 text-xs font-black transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
+            className="w-full py-3 px-4 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold transition-colors flex items-center justify-center gap-2"
           >
-            <span>🔮</span>
             <span>
               {lang === 'ko'
-                ? '내 생년월일(K-사주 오행) × MBTI로 최애 멤버와 1:1 궁합 점수 보기 💖'
+                ? '내 생년월일(K-사주 오행) × MBTI로 최애 멤버와 1:1 궁합 점수 보기'
                 : lang === 'es'
-                ? '¡Calcula tu % de compatibilidad K-Saju y MBTI con tu Bias! 💖'
-                : 'Check Your 1:1 K-Saju & MBTI Compatibility % With Your Bias! 💖'}
+                ? '¡Calcula tu % de compatibilidad K-Saju y MBTI con tu Bias!'
+                : 'Check Your 1:1 K-Saju & MBTI Compatibility % With Your Bias!'}
             </span>
-            <ArrowRight className="w-3.5 h-3.5 text-pink-600" />
+            <ArrowRight className="w-3.5 h-3.5 text-slate-500" />
           </Link>
         </div>
 

@@ -81,7 +81,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
         if (Math.abs(dx) > SWIPE_THRESHOLD_PX) goTo(index + (dx < 0 ? 1 : -1));
       }}
     >
-      <div className="overflow-hidden rounded-3xl flex-1">
+      <div className="overflow-hidden rounded-2xl flex-1">
         <div
           className="flex h-full transition-transform duration-700 ease-out motion-reduce:transition-none"
           style={{ transform: `translateX(-${index * 100}%)` }}

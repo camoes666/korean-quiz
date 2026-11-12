@@ -187,38 +187,41 @@ export default function Footer() {
           {/* Column 1: Brand & Site Navigation */}
           <div className="lg:col-span-3 space-y-3">
             <div className="flex items-center gap-2">
-              <span className="font-black text-lg tracking-tight bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+              <span className="font-bold text-base tracking-tight text-slate-900">
                 {t.siteTitle}
               </span>
-              <span className="text-xs font-semibold text-slate-400">{t.footer.tagline}</span>
+              <span className="text-xs text-slate-400 font-medium">{t.footer.tagline}</span>
             </div>
-            <p className="text-xs text-slate-500 leading-relaxed font-medium">
+            <p className="text-xs text-slate-500 leading-relaxed font-normal">
               {t.footer.desc}
             </p>
-            <div className="pt-2 flex flex-wrap gap-x-4 gap-y-2 text-xs font-bold text-slate-600">
-              <Link href="/" className="hover:text-purple-600 transition-colors">
+            <div className="pt-2 flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium text-slate-600">
+              <Link href="/" className="hover:text-slate-900 transition-colors">
                 {t.footer.home}
               </Link>
-              <Link href="/#quizzes" className="hover:text-purple-600 transition-colors">
+              <Link href="/#quizzes" className="hover:text-slate-900 transition-colors">
                 {t.footer.allQuizzes}
               </Link>
-              <Link href="/guide" className="hover:text-purple-600 transition-colors text-purple-700">
-                {lang === 'ko' ? '지식 가이드 백과' : lang === 'es' ? 'Guías de Lore' : lang === 'pt' ? 'Guias de Lore' : 'Knowledge Guides'}
+              <Link href="/chemistry" className="hover:text-slate-900 transition-colors">
+                {lang === 'ko' ? '아이돌 궁합' : lang === 'es' ? 'Química Idol' : lang === 'pt' ? 'Química Idol' : 'Idol Chemistry'}
               </Link>
-              <Link href="/about" className="hover:text-purple-600 transition-colors">
+              <Link href="/guide" className="hover:text-slate-900 transition-colors">
+                {lang === 'ko' ? '지식 가이드' : lang === 'es' ? 'Guías de Lore' : lang === 'pt' ? 'Guias de Lore' : 'Knowledge Guides'}
+              </Link>
+              <Link href="/about" className="hover:text-slate-900 transition-colors">
                 {t.footer.aboutUs}
               </Link>
-              <Link href="/privacy" className="hover:text-purple-600 transition-colors">
+              <Link href="/privacy" className="hover:text-slate-900 transition-colors">
                 {t.footer.privacyPolicy}
               </Link>
-              <Link href="/terms" className="hover:text-purple-600 transition-colors">
+              <Link href="/terms" className="hover:text-slate-900 transition-colors">
                 {t.footer.terms}
               </Link>
               <a
                 href="https://x.com/JIlmong"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-purple-600 transition-colors"
+                className="hover:text-slate-900 transition-colors"
               >
                 X (Twitter)
               </a>
@@ -227,24 +230,21 @@ export default function Footer() {
 
           {/* Column 2: K-Pop Personality & Soulmate Tests */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-1.5">
-              <span>🔮</span>
-              <span>
-                {lang === 'ko'
-                  ? 'K-Pop 소울메이트 성향 테스트'
-                  : lang === 'es'
-                  ? 'Tests de Personalidad K-Pop'
-                  : lang === 'pt'
-                  ? 'Testes de Personalidade K-Pop'
-                  : 'K-Pop Personality & Soulmate Tests'}
-              </span>
+            <h3 className="text-xs font-semibold text-slate-900 mb-3">
+              {lang === 'ko'
+                ? 'K-Pop 소울메이트 성향 테스트'
+                : lang === 'es'
+                ? 'Tests de Personalidad K-Pop'
+                : lang === 'pt'
+                ? 'Testes de Personalidade K-Pop'
+                : 'K-Pop Personality & Soulmate Tests'}
             </h3>
-            <ul className="space-y-2 text-xs font-medium text-slate-600">
+            <ul className="space-y-2 text-xs font-normal text-slate-600">
               {PERSONALITY_LINKS.map((item) => (
                 <li key={item.slug}>
                   <Link
                     href={`/quiz/${item.slug}`}
-                    className="hover:text-purple-600 hover:underline transition-colors block truncate"
+                    className="hover:text-slate-900 hover:underline transition-colors block truncate"
                   >
                     {pickLabel(item)}
                   </Link>
@@ -255,38 +255,35 @@ export default function Footer() {
 
           {/* Column 3: Verified Knowledge & Lore Guides (Direct Crawl Links for /guide/*) */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-1.5">
-              <span>📚</span>
-              <span>
-                {lang === 'ko'
-                  ? '팬덤 로어 & 해설 가이드북'
-                  : lang === 'es'
-                  ? 'Guías de Lore y Respuestas'
-                  : lang === 'pt'
-                  ? 'Guias de Lore e Respostas'
-                  : 'Verified Fan Lore & Study Guides'}
-              </span>
+            <h3 className="text-xs font-semibold text-slate-900 mb-3">
+              {lang === 'ko'
+                ? '팬덤 로어 & 해설 가이드북'
+                : lang === 'es'
+                ? 'Guías de Lore y Respuestas'
+                : lang === 'pt'
+                ? 'Guias de Lore e Respostas'
+                : 'Verified Fan Lore & Study Guides'}
             </h3>
-            <ul className="space-y-2 text-xs font-medium text-slate-600">
+            <ul className="space-y-2 text-xs font-normal text-slate-600">
               <li>
                 <Link
                   href="/guide"
-                  className="font-bold text-purple-700 hover:text-purple-900 hover:underline transition-colors block"
+                  className="font-medium text-slate-900 hover:underline transition-colors block"
                 >
                   {lang === 'ko'
-                    ? '✦ 전체 230+ 지식 가이드 허브 보기'
+                    ? '전체 지식 가이드 허브 보기'
                     : lang === 'es'
-                    ? '✦ Ver Todas las Guías de Lore (230+ Datos)'
+                    ? 'Ver Todas las Guías de Lore'
                     : lang === 'pt'
-                    ? '✦ Ver Todos os Guias de Lore (230+ Fatos)'
-                    : '✦ All K-Culture & K-Pop Lore Guides Hub'}
+                    ? 'Ver Todos os Guias de Lore'
+                    : 'All K-Culture & K-Pop Lore Guides Hub'}
                 </Link>
               </li>
               {GUIDE_LINKS.map((item) => (
                 <li key={item.slug}>
                   <Link
                     href={`/guide/${item.slug}`}
-                    className="hover:text-purple-600 hover:underline transition-colors block truncate"
+                    className="hover:text-slate-900 hover:underline transition-colors block truncate"
                   >
                     {pickLabel(item)}
                   </Link>
@@ -297,24 +294,21 @@ export default function Footer() {
 
           {/* Column 4: Fandom Trivia Quizzes */}
           <div className="lg:col-span-3">
-            <h3 className="text-xs font-black uppercase tracking-wider text-slate-900 mb-3 flex items-center gap-1.5">
-              <span>⚡</span>
-              <span>
-                {lang === 'ko'
-                  ? '팬덤 상식 & 한국 문화 퀴즈'
-                  : lang === 'es'
-                  ? 'Quizzes de Trivia K-Pop y Cultura'
-                  : lang === 'pt'
-                  ? 'Quizzes de Trivia K-Pop e Cultura'
-                  : 'K-Pop & Korean Culture Trivia'}
-              </span>
+            <h3 className="text-xs font-semibold text-slate-900 mb-3">
+              {lang === 'ko'
+                ? '팬덤 상식 & 한국 문화 퀴즈'
+                : lang === 'es'
+                ? 'Quizzes de Trivia K-Pop y Cultura'
+                : lang === 'pt'
+                ? 'Quizzes de Trivia K-Pop e Cultura'
+                : 'K-Pop & Korean Culture Trivia'}
             </h3>
-            <ul className="space-y-2 text-xs font-medium text-slate-600">
+            <ul className="space-y-2 text-xs font-normal text-slate-600">
               {TRIVIA_LINKS.map((item) => (
                 <li key={item.slug}>
                   <Link
                     href={`/quiz/${item.slug}`}
-                    className="hover:text-purple-600 hover:underline transition-colors block truncate"
+                    className="hover:text-slate-900 hover:underline transition-colors block truncate"
                   >
                     {pickLabel(item)}
                   </Link>

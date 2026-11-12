@@ -348,19 +348,12 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
   const days = Array.from({ length: 31 }, (_, i) => i + 1);
 
   return (
-    <div className="min-h-screen bg-[#F9FAFB] pb-20">
+    <div className="min-h-screen bg-[#F8F9FA] pb-20">
       {/* 1. HERO HEADER */}
-      <section className="relative overflow-hidden border-b border-purple-100 bg-gradient-to-br from-purple-950 via-fuchsia-900 to-indigo-950 text-white py-10 sm:py-14">
-        <div
-          className="absolute inset-0 opacity-20 pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(#f472b6 1px, transparent 1px)',
-            backgroundSize: '24px 24px',
-          }}
-        />
-        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 px-3.5 py-1.5 text-xs font-extrabold text-pink-200 mb-4">
-            <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+      <section className="border-b border-slate-800 bg-slate-950 text-white py-12 sm:py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+          <div className="inline-flex items-center gap-2 rounded-full bg-slate-900 border border-slate-800 px-3.5 py-1 text-xs font-medium text-slate-300 mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
             <span>
               {lang === 'ko'
                 ? 'K-사주 오행 × MBTI × 별자리 1:1 정밀 분석'
@@ -372,60 +365,38 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black tracking-tight leading-tight">
-            {lang === 'ko' ? (
-              <>
-                나와 최애 아이돌의{' '}
-                <span className="bg-gradient-to-r from-amber-300 via-pink-300 to-purple-200 bg-clip-text text-transparent">
-                  운명 궁합 연구소
-                </span>
-              </>
-            ) : lang === 'es' ? (
-              <>
-                Calculadora de{' '}
-                <span className="bg-gradient-to-r from-amber-300 via-pink-300 to-purple-200 bg-clip-text text-transparent">
-                  Química K-Pop y Saju
-                </span>
-              </>
-            ) : lang === 'pt' ? (
-              <>
-                Calculadora de{' '}
-                <span className="bg-gradient-to-r from-amber-300 via-pink-300 to-purple-200 bg-clip-text text-transparent">
-                  Química K-Pop & Saju
-                </span>
-              </>
-            ) : (
-              <>
-                K-Pop Idol{' '}
-                <span className="bg-gradient-to-r from-amber-300 via-pink-300 to-purple-200 bg-clip-text text-transparent">
-                  Soulmate & Saju Chemistry
-                </span>
-              </>
-            )}
+          <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+            {lang === 'ko'
+              ? '나와 최애 아이돌의 운명 궁합 연구소'
+              : lang === 'es'
+              ? 'Calculadora de Química K-Pop y Saju'
+              : lang === 'pt'
+              ? 'Calculadora de Química K-Pop & Saju'
+              : 'K-Pop Idol Soulmate & Saju Chemistry'}
           </h1>
 
-          <p className="mt-3 text-sm sm:text-base text-purple-100/90 max-w-2xl mx-auto font-medium">
+          <p className="mt-3 text-sm sm:text-base text-slate-400 max-w-2xl mx-auto font-normal leading-relaxed">
             {lang === 'ko'
-              ? '7개 인기 그룹 44명 멤버의 실제 생년월일(사주 오행)과 MBTI 데이터를 기반으로, 나와 내 최애의 1:1 궁합 점수와 그룹 내 천생연분 랭킹을 10초 만에 확인하세요!'
+              ? '7개 그룹 44명 멤버의 실제 생년월일(사주 오행)과 MBTI 데이터를 기반으로, 나와 최애의 1:1 궁합 점수와 그룹 내 매치 순위를 분석합니다.'
               : lang === 'es'
-              ? 'Basado en las fechas de nacimiento reales (Cinco Elementos del Saju coreano) y el MBTI de 44 idols de K-Pop. ¡Descubre tu porcentaje de compatibilidad en 10 segundos!'
+              ? 'Basado en las fechas de nacimiento reales (Cinco Elementos del Saju) y el MBTI de 44 idols de K-Pop. Descubre tu porcentaje de compatibilidad 1:1.'
               : lang === 'pt'
-              ? 'Baseado nas datas de nascimento reais (Cinco Elementos do Saju coreano) e MBTI de 44 idols de K-Pop em 7 grupos. Descubra sua compatibilidade 1:1 em 10 segundos!'
-              : 'Powered by real birth dates (Korean Saju Five Elements), Zodiac signs, and MBTIs of 44 K-Pop idols across 7 groups. Discover your 1:1 compatibility in 10 seconds!'}
+              ? 'Baseado nas datas de nascimento reais (Cinco Elementos do Saju coreano) e MBTI de 44 idols de K-Pop. Descubra sua compatibilidade 1:1.'
+              : 'Powered by real birth dates (Korean Saju Five Elements), Zodiac signs, and MBTIs of 44 K-Pop idols across 7 groups. Discover your 1:1 compatibility.'}
           </p>
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 -mt-6 relative z-10 space-y-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 -mt-6 relative z-10 space-y-6">
         {/* 2. INPUT & SELECTION CARD */}
-        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-xl shadow-purple-950/5 p-5 sm:p-8 space-y-7">
+        <div className="bg-white rounded-2xl border border-slate-200/90 shadow-xs p-5 sm:p-7 space-y-6">
           {/* STEP 1: SELECT GROUP */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <span className="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-black flex items-center justify-center">
+              <span className="w-5 h-5 rounded-md bg-slate-900 text-white text-[11px] font-mono font-medium flex items-center justify-center">
                 1
               </span>
-              <h2 className="text-base sm:text-lg font-black text-slate-900">
+              <h2 className="text-sm font-semibold text-slate-900">
                 {lang === 'ko'
                   ? '아이돌 그룹 선택'
                   : lang === 'es'
@@ -436,7 +407,7 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
               </h2>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2.5">
+            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-7 gap-2">
               {IDOL_GROUPS.map((group) => {
                 const isSelected = group.id === currentGroup.id;
                 return (
@@ -444,19 +415,19 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     key={group.id}
                     type="button"
                     onClick={() => handleSelectGroup(group.id)}
-                    className={`flex flex-col items-center justify-center p-3 rounded-2xl border text-center transition-all active:scale-95 ${
+                    className={`flex flex-col items-center justify-center p-2.5 rounded-xl border text-center transition-colors active:scale-98 cursor-pointer ${
                       isSelected
-                        ? 'bg-slate-900 text-white border-slate-900 shadow-md ring-2 ring-purple-400/50'
-                        : 'bg-slate-50/80 hover:bg-white border-slate-200 text-slate-700'
+                        ? 'bg-slate-900 text-white border-slate-900 shadow-xs'
+                        : 'bg-white hover:bg-slate-50 border-slate-200 text-slate-700'
                     }`}
                   >
-                    <span className="text-2xl mb-1">{group.emoji}</span>
-                    <span className="text-xs font-black tracking-tight leading-tight">
+                    <span className="text-xl mb-1">{group.emoji}</span>
+                    <span className="text-xs font-semibold tracking-tight leading-tight">
                       {group.name}
                     </span>
                     <span
-                      className={`text-[10px] mt-0.5 font-bold ${
-                        isSelected ? 'text-purple-300' : 'text-slate-400'
+                      className={`text-[10px] mt-0.5 font-medium ${
+                        isSelected ? 'text-slate-300' : 'text-slate-400'
                       }`}
                     >
                       {group.members.length}{' '}
@@ -472,10 +443,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
           <div className="pt-5 border-t border-slate-100">
             <div className="flex items-center justify-between gap-2 mb-3">
               <div className="flex items-center gap-2">
-                <span className="w-6 h-6 rounded-full bg-pink-600 text-white text-xs font-black flex items-center justify-center">
+                <span className="w-5 h-5 rounded-md bg-slate-900 text-white text-[11px] font-mono font-medium flex items-center justify-center">
                   2
                 </span>
-                <h2 className="text-base sm:text-lg font-black text-slate-900">
+                <h2 className="text-sm font-semibold text-slate-900">
                   {lang === 'ko'
                     ? `${currentGroup.nameKo} 멤버 선택`
                     : lang === 'es'
@@ -485,16 +456,16 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     : `Choose Your ${currentGroup.name} Bias`}
                 </h2>
               </div>
-              <span className="text-xs font-bold text-slate-400">
+              <span className="text-xs text-slate-400 font-normal">
                 {lang === 'ko'
-                  ? '결과 화면에서도 다른 멤버로 바로 전환 가능!'
+                  ? '결과 화면에서 다른 멤버로 바로 전환 가능'
                   : lang === 'pt'
-                  ? 'Mude de membro a qualquer momento com 1 clique!'
-                  : 'Switch members anytime with 1 click!'}
+                  ? 'Mude de membro a qualquer momento'
+                  : 'Switch members anytime'}
               </span>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2.5">
               {currentGroup.members.map((member) => {
                 const isSelected = member.id === currentMember.id;
                 const elMeta = SAJU_ELEMENTS[member.sajuElement];
@@ -503,33 +474,33 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     key={member.id}
                     type="button"
                     onClick={() => setSelectedMemberId(member.id)}
-                    className={`relative flex items-center gap-3 p-3 rounded-2xl border text-left transition-all active:scale-95 ${
+                    className={`relative flex items-center gap-2.5 p-2.5 rounded-xl border text-left transition-colors active:scale-98 cursor-pointer ${
                       isSelected
-                        ? 'bg-gradient-to-br from-purple-50 via-pink-50 to-white border-purple-500 shadow-md ring-2 ring-purple-400/40'
-                        : 'bg-white hover:bg-slate-50 border-slate-200/90 text-slate-800'
+                        ? 'bg-slate-50 border-slate-900 ring-1 ring-slate-900/10'
+                        : 'bg-white hover:bg-slate-50/80 border-slate-200 text-slate-800'
                     }`}
                   >
-                    <div className="w-11 h-11 rounded-xl bg-slate-100 flex items-center justify-center text-2xl shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-slate-100 flex items-center justify-center text-xl shrink-0">
                       {member.emoji}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="font-black text-xs sm:text-sm text-slate-900 truncate">
+                      <div className="font-semibold text-xs sm:text-sm text-slate-900 truncate">
                         {lang === 'ko' ? member.nameKo : member.name}
                       </div>
-                      <div className="flex items-center gap-1.5 mt-1 flex-wrap">
-                        <span className="inline-flex items-center px-1.5 py-0.5 rounded-md text-[10px] font-extrabold bg-slate-100 text-slate-700">
+                      <div className="flex items-center gap-1.5 mt-0.5 flex-wrap">
+                        <span className="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-medium bg-slate-100 text-slate-700">
                           {member.mbti}
                         </span>
                         <span
-                          className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-md text-[10px] font-extrabold border ${elMeta.badgeBg}`}
+                          className={`inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded text-[10px] font-medium border ${elMeta.badgeBg}`}
                         >
                           {elMeta.emoji} {elMeta.hanja}
                         </span>
                       </div>
                     </div>
                     {isSelected && (
-                      <div className="w-5 h-5 rounded-full bg-purple-600 text-white flex items-center justify-center shrink-0">
-                        <Check className="w-3 h-3" />
+                      <div className="w-4 h-4 rounded-full bg-slate-900 text-white flex items-center justify-center shrink-0">
+                        <Check className="w-2.5 h-2.5" />
                       </div>
                     )}
                   </button>
@@ -541,10 +512,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
           {/* STEP 3: USER BIRTHDATE & MBTI */}
           <div className="pt-5 border-t border-slate-100">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-6 h-6 rounded-full bg-indigo-600 text-white text-xs font-black flex items-center justify-center">
+              <span className="w-5 h-5 rounded-md bg-slate-900 text-white text-[11px] font-mono font-medium flex items-center justify-center">
                 3
               </span>
-              <h2 className="text-base sm:text-lg font-black text-slate-900">
+              <h2 className="text-sm font-semibold text-slate-900">
                 {lang === 'ko'
                   ? '내 생년월일 & MBTI 입력'
                   : lang === 'es'
@@ -559,7 +530,7 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
               {/* Nickname + Birth Date */}
               <div className="md:col-span-5 space-y-4">
                 <div>
-                  <label className="block text-xs font-extrabold text-slate-600 mb-1.5">
+                  <label className="block text-xs font-medium text-slate-600 mb-1.5">
                     {lang === 'ko'
                       ? '내 이름 / 닉네임 (선택)'
                       : lang === 'es'
@@ -582,13 +553,13 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                         : 'e.g. Alex, Mia'
                     }
                     maxLength={24}
-                    className="w-full rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm font-bold text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                    className="w-full rounded-xl border border-slate-200 px-3.5 py-2 text-sm font-normal text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900 focus:border-slate-900"
                   />
                 </div>
 
                 <div>
-                  <label className="flex items-center gap-1.5 text-xs font-extrabold text-slate-600 mb-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-purple-600" />
+                  <label className="flex items-center gap-1.5 text-xs font-medium text-slate-600 mb-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-slate-500" />
                     <span>
                       {lang === 'ko'
                         ? '생년월일 (사주 일간·오행 및 별자리 자동 계산)'
@@ -604,7 +575,7 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                       aria-label="Birth Year"
                       value={birthYear}
                       onChange={(e) => setBirthYear(Number(e.target.value))}
-                      className="rounded-xl border border-slate-200 bg-white px-2.5 py-2.5 text-xs sm:text-sm font-extrabold text-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="rounded-xl border border-slate-200 bg-white px-2.5 py-2 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-1 focus:ring-slate-900"
                     >
                       {years.map((y) => (
                         <option key={y} value={y}>
@@ -618,7 +589,7 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                       aria-label="Birth Month"
                       value={birthMonth}
                       onChange={(e) => setBirthMonth(Number(e.target.value))}
-                      className="rounded-xl border border-slate-200 bg-white px-2.5 py-2.5 text-xs sm:text-sm font-extrabold text-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="rounded-xl border border-slate-200 bg-white px-2.5 py-2 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-1 focus:ring-slate-900"
                     >
                       {months.map((m) => (
                         <option key={m} value={m}>
@@ -632,7 +603,7 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                       aria-label="Birth Day"
                       value={birthDay}
                       onChange={(e) => setBirthDay(Number(e.target.value))}
-                      className="rounded-xl border border-slate-200 bg-white px-2.5 py-2.5 text-xs sm:text-sm font-extrabold text-slate-800 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="rounded-xl border border-slate-200 bg-white px-2.5 py-2 text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-1 focus:ring-slate-900"
                     >
                       {days.map((d) => (
                         <option key={d} value={d}>
@@ -645,16 +616,16 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
 
                   {/* Live Preview of User's Saju Element & Zodiac */}
                   <div className="mt-2.5 flex items-center gap-2 flex-wrap text-xs">
-                    <span className="text-slate-400 font-bold">
-                      {lang === 'ko' ? '내 타고난 기운:' : 'Your Aura:'}
+                    <span className="text-slate-400 font-medium">
+                      {lang === 'ko' ? '기운:' : 'Aura:'}
                     </span>
                     <span
-                      className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-extrabold border ${analysis.userElement.badgeBg}`}
+                      className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-medium border ${analysis.userElement.badgeBg}`}
                     >
                       {analysis.userElement.emoji}{' '}
                       {getElementDisplayName(analysis.userElement, lang)}
                     </span>
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-extrabold bg-purple-50 text-purple-700 border border-purple-200">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-medium bg-slate-100 text-slate-700 border border-slate-200">
                       {analysis.userZodiac.emoji}{' '}
                       {getZodiacDisplayName(analysis.userZodiac, lang)}
                     </span>
@@ -665,8 +636,8 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
               {/* MBTI Grid */}
               <div className="md:col-span-7">
                 <div className="flex items-center justify-between mb-1.5">
-                  <label className="flex items-center gap-1.5 text-xs font-extrabold text-slate-600">
-                    <Brain className="w-3.5 h-3.5 text-pink-600" />
+                  <label className="flex items-center gap-1.5 text-xs font-medium text-slate-600">
+                    <Brain className="w-3.5 h-3.5 text-slate-500" />
                     <span>
                       {lang === 'ko'
                         ? '내 MBTI 선택'
@@ -680,17 +651,17 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   <button
                     type="button"
                     onClick={() => setMbti('UNKNOWN')}
-                    className={`text-xs font-extrabold px-2.5 py-1 rounded-lg border transition-all ${
+                    className={`text-xs font-medium px-2.5 py-1 rounded-lg border transition-colors cursor-pointer ${
                       mbti === 'UNKNOWN'
                         ? 'bg-slate-900 text-white border-slate-900'
                         : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
                     }`}
                   >
                     {lang === 'ko'
-                      ? '🤷 MBTI 모름 (사주·별자리로만 보기)'
+                      ? 'MBTI 모름 (사주로만 분석)'
                       : lang === 'pt'
-                      ? '🤷 Não sei meu MBTI (Usar apenas Saju)'
-                      : '🤷 Skip MBTI (Use Saju Only)'}
+                      ? 'Não sei meu MBTI (Apenas Saju)'
+                      : 'Skip MBTI (Saju Only)'}
                   </button>
                 </div>
 
@@ -702,10 +673,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                         key={type}
                         type="button"
                         onClick={() => setMbti(type)}
-                        className={`py-2 px-1 rounded-xl text-xs font-black border transition-all active:scale-95 ${
+                        className={`py-2 px-1 rounded-lg text-xs font-medium border transition-colors active:scale-95 cursor-pointer ${
                           isSelected
-                            ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white border-purple-600 shadow-xs'
-                            : 'bg-slate-50/80 hover:bg-white text-slate-700 border-slate-200'
+                            ? 'bg-slate-900 text-white border-slate-900 shadow-2xs font-semibold'
+                            : 'bg-white hover:bg-slate-50 text-slate-700 border-slate-200'
                         }`}
                       >
                         {type}
@@ -722,19 +693,19 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
             <button
               type="button"
               onClick={triggerAnalysis}
-              className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-rose-500 hover:from-purple-500 hover:via-pink-500 hover:to-rose-400 text-white font-black text-base sm:text-lg shadow-lg shadow-pink-500/20 flex items-center justify-center gap-2.5 transition-all active:scale-98 cursor-pointer"
+              className="w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm sm:text-base shadow-xs flex items-center justify-center gap-2 transition-colors active:scale-98 cursor-pointer"
             >
-              <Heart className="w-5 h-5 fill-current animate-pulse" />
+              <Heart className="w-4 h-4 fill-current text-rose-400" />
               <span>
                 {lang === 'ko'
-                  ? `나 × ${currentMember.nameKo} 궁합 결과 확인하기`
+                  ? `나 × ${currentMember.nameKo} 궁합 분석하기`
                   : lang === 'es'
-                  ? `Ver Mi Química con ${currentMember.name}`
+                  ? `Analizar Química con ${currentMember.name}`
                   : lang === 'pt'
-                  ? `Ver Minha Química com ${currentMember.name}`
-                  : `Reveal My Chemistry with ${currentMember.name}`}
+                  ? `Analisar Química com ${currentMember.name}`
+                  : `Analyze Chemistry with ${currentMember.name}`}
               </span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4 text-slate-400" />
             </button>
           </div>
         </div>
@@ -744,85 +715,77 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
           <div ref={resultRef} className="space-y-6 animate-fadeIn scroll-mt-20">
             {/* MAIN HERO REPORT CARD */}
             <div
-              className={`relative overflow-hidden rounded-3xl bg-gradient-to-br ${currentMember.bgGradient} text-white p-6 sm:p-9 shadow-2xl`}
+              className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${currentMember.bgGradient} text-white p-6 sm:p-8 shadow-xl`}
             >
-              <div
-                className="absolute inset-0 opacity-15 pointer-events-none"
-                style={{
-                  backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)',
-                  backgroundSize: '20px 20px',
-                }}
-              />
-
-              <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8">
                 {/* Left: Duo Profiles & Tier Title */}
                 <div className="flex-1 text-center lg:text-left space-y-4">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/15 backdrop-blur-md border border-white/25 text-xs sm:text-sm font-black text-amber-300">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-xs border border-white/20 text-xs font-semibold text-white">
                     <span>{analysis.tierBadge}</span>
                   </div>
 
                   {/* User x Idol Pairing Header */}
-                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-4">
-                    <div className="px-4 py-2.5 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-left">
-                      <div className="text-[11px] font-bold text-white/70">
-                        {lang === 'ko' ? '나 (YOU)' : 'YOU'}
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-3.5">
+                    <div className="px-3.5 py-2 rounded-xl bg-white/10 backdrop-blur-xs border border-white/15 text-left">
+                      <div className="text-[10px] font-medium text-white/70">
+                        {lang === 'ko' ? '나' : 'YOU'}
                       </div>
-                      <div className="text-base sm:text-lg font-black">
+                      <div className="text-base font-semibold">
                         {nickname.trim() || (lang === 'ko' ? '당신' : 'You')}
                       </div>
-                      <div className="text-xs font-bold text-amber-200 mt-0.5">
+                      <div className="text-xs font-medium text-white/80 mt-0.5">
                         {analysis.userElement.emoji} {analysis.userElement.hanja} ·{' '}
                         {mbti === 'UNKNOWN' ? analysis.userZodiac.emoji : mbti}
                       </div>
                     </div>
 
-                    <div className="w-10 h-10 rounded-full bg-pink-500/30 border border-pink-300/40 flex items-center justify-center text-xl shadow-inner">
-                      💞
+                    <div className="w-8 h-8 rounded-full bg-white/15 border border-white/20 flex items-center justify-center text-sm font-semibold">
+                      ×
                     </div>
 
-                    <div className="px-4 py-2.5 rounded-2xl bg-white/15 backdrop-blur-md border border-white/30 text-left">
-                      <div className="text-[11px] font-bold text-pink-200">
+                    <div className="px-3.5 py-2 rounded-xl bg-white/15 backdrop-blur-xs border border-white/25 text-left">
+                      <div className="text-[10px] font-medium text-white/70">
                         {currentGroup.name} · {currentMember.characterName}
                       </div>
-                      <div className="text-base sm:text-lg font-black flex items-center gap-1.5">
+                      <div className="text-base font-semibold flex items-center gap-1.5">
                         <span>{currentMember.emoji}</span>
                         <span>
                           {lang === 'ko' ? currentMember.nameKo : currentMember.name}
                         </span>
                       </div>
-                      <div className="text-xs font-bold text-amber-200 mt-0.5">
+                      <div className="text-xs font-medium text-white/80 mt-0.5">
                         {analysis.memberElement.emoji} {analysis.memberElement.hanja} ·{' '}
                         {currentMember.mbti} · {currentMember.birthDate}
                       </div>
                     </div>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-black leading-snug">
+                  <h2 className="text-xl sm:text-2xl font-bold leading-snug">
                     {analysis.tierTitle}
                   </h2>
 
                   {/* Member Charm Pills */}
-                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1">
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-1.5 pt-1">
                     {memberCharms.map((charm) => (
                       <span
                         key={charm}
-                        className="px-3 py-1 rounded-full bg-black/25 border border-white/20 text-xs font-extrabold text-white/95"
+                        className="px-2.5 py-0.5 rounded-md bg-black/20 border border-white/15 text-xs font-normal text-white/90"
                       >
-                        ✦ {charm}
+                        {charm}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Right: Giant Compatibility Score Badge */}
-                <div className="shrink-0 flex flex-col items-center justify-center bg-white/10 backdrop-blur-md border-2 border-white/30 rounded-3xl p-6 sm:p-7 min-w-[210px] shadow-xl">
-                  <span className="text-xs font-black uppercase tracking-widest text-pink-200">
-                    {lang === 'ko' ? '운명 싱크로율' : 'DESTINY SYNC'}
+                {/* Right: Compatibility Score Badge */}
+                <div className="shrink-0 flex flex-col items-center justify-center bg-black/20 backdrop-blur-xs border border-white/20 rounded-2xl p-6 sm:p-7 min-w-[200px]">
+                  <span className="text-[11px] font-mono tracking-wider uppercase text-white/70">
+                    {lang === 'ko' ? '운명 싱크로율' : 'COMPATIBILITY'}
                   </span>
-                  <div className="text-6xl sm:text-7xl font-black tracking-tight text-amber-300 my-1 tabular-nums drop-shadow-md">
+                  <div className="text-5xl sm:text-6xl font-bold tracking-tight text-white my-1 tabular-nums">
                     {analysis.totalScore}%
                   </div>
-                  <span className="text-xs font-extrabold text-white/90">
+                  <span className="text-xs font-medium text-white/80">
                     {lang === 'ko'
                       ? `${currentGroup.name} 내 나의 궁합 ${
                           groupRanking.findIndex((r) => r.member.id === currentMember.id) + 1
@@ -835,70 +798,66 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
               </div>
 
               {/* 4 SUB-STATS BARS */}
-              <div className="relative z-10 mt-8 pt-6 border-t border-white/20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="relative z-10 mt-8 pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 {[
                   {
                     label:
                       lang === 'ko'
-                        ? '☯️ K-사주 오행 상생'
+                        ? '사주 오행 상생'
                         : lang === 'es'
-                        ? '☯️ Destino K-Saju'
+                        ? 'Destino K-Saju'
                         : lang === 'pt'
-                        ? '☯️ Destino K-Saju'
-                        : '☯️ K-Saju Five Elements',
+                        ? 'Destino K-Saju'
+                        : 'K-Saju Five Elements',
                     score: analysis.stats.sajuScore,
-                    barColor: 'from-amber-300 to-orange-400',
                   },
                   {
                     label:
                       lang === 'ko'
-                        ? '🧠 MBTI 티키타카'
+                        ? 'MBTI 티키타카'
                         : lang === 'es'
-                        ? '🧠 Sinergia MBTI'
+                        ? 'Sinergia MBTI'
                         : lang === 'pt'
-                        ? '🧠 Sinergia MBTI'
-                        : '🧠 MBTI Tiki-Taka',
+                        ? 'Sinergia MBTI'
+                        : 'MBTI Tiki-Taka',
                     score: analysis.stats.mbtiScore,
-                    barColor: 'from-pink-300 to-rose-400',
                   },
                   {
                     label:
                       lang === 'ko'
-                        ? '✨ 별자리 감성 주파수'
+                        ? '별자리 주파수'
                         : lang === 'es'
-                        ? '✨ Vibra Zodiacal'
+                        ? 'Vibra Zodiacal'
                         : lang === 'pt'
-                        ? '✨ Vibração Zodiacal'
-                        : '✨ Zodiac Frequency',
+                        ? 'Vibração Zodiacal'
+                        : 'Zodiac Frequency',
                     score: analysis.stats.vibeScore,
-                    barColor: 'from-cyan-300 to-sky-400',
                   },
                   {
                     label:
                       lang === 'ko'
-                        ? '💖 설렘 & 데이트 텐션'
+                        ? '설렘 & 데이트 텐션'
                         : lang === 'es'
-                        ? '💖 Tensión Romántica'
+                        ? 'Tensión Romántica'
                         : lang === 'pt'
-                        ? '💖 Tensão Romântica'
-                        : '💖 Heartbeat Tension',
+                        ? 'Tensão Romântica'
+                        : 'Heartbeat Tension',
                     score: analysis.stats.dateScore,
-                    barColor: 'from-purple-300 to-fuchsia-400',
                   },
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="bg-black/25 backdrop-blur-xs rounded-2xl p-3.5 border border-white/15"
+                    className="bg-black/20 backdrop-blur-xs rounded-xl p-3 border border-white/10"
                   >
-                    <div className="flex items-center justify-between text-xs font-extrabold mb-2">
-                      <span className="text-white/90">{stat.label}</span>
-                      <span className="text-amber-300 tabular-nums font-black">
+                    <div className="flex items-center justify-between text-xs font-medium mb-2">
+                      <span className="text-white/80">{stat.label}</span>
+                      <span className="text-white tabular-nums font-semibold">
                         {stat.score}%
                       </span>
                     </div>
-                    <div className="h-2.5 w-full rounded-full bg-white/15 overflow-hidden">
+                    <div className="h-1.5 w-full bg-white/15 rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full bg-gradient-to-r ${stat.barColor} transition-all duration-700`}
+                        className="h-full bg-white/90 rounded-full transition-all duration-700"
                         style={{ width: `${stat.score}%` }}
                       />
                     </div>
@@ -908,129 +867,129 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
             </div>
 
             {/* 3 DEEP ANALYSIS CARDS (K-SAJU + MBTI + DATE SCENARIO) */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
               {/* Card 1: K-Saju Five Elements */}
-              <div className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-sm flex flex-col justify-between">
+              <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex flex-col justify-between">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-black mb-3">
-                    <Flame className="w-3.5 h-3.5 text-amber-600" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-medium mb-3">
+                    <Flame className="w-3.5 h-3.5 text-slate-600" />
                     <span>
                       {lang === 'ko'
-                        ? 'K-사주 오행(五行) 궁합 풀이'
+                        ? '사주 오행 궁합 풀이'
                         : 'K-Saju Five Elements Reading'}
                     </span>
                   </div>
 
                   {/* Element Duo Box */}
-                  <div className="flex items-center justify-between gap-2 p-3 rounded-2xl bg-slate-50 border border-slate-200/70 mb-3">
+                  <div className="flex items-center justify-between gap-2 p-3 rounded-lg bg-slate-50 border border-slate-200/70 mb-3">
                     <div className="text-center flex-1">
-                      <div className="text-2xl">{analysis.userElement.emoji}</div>
-                      <div className="text-xs font-black text-slate-800 mt-0.5">
+                      <div className="text-xl">{analysis.userElement.emoji}</div>
+                      <div className="text-xs font-semibold text-slate-800 mt-0.5">
                         {getElementDisplayName(analysis.userElement, lang)}
                       </div>
-                      <div className="text-[10px] font-bold text-slate-400">
-                        {lang === 'ko' ? '나의 일간 오행' : 'Your Element'}
+                      <div className="text-[10px] text-slate-400 font-medium">
+                        {lang === 'ko' ? '나의 일간' : 'Your Element'}
                       </div>
                     </div>
-                    <div className="text-xs font-black px-2 py-1 rounded-lg bg-purple-100 text-purple-700">
+                    <div className="text-xs font-mono font-medium text-slate-400">
                       ×
                     </div>
                     <div className="text-center flex-1">
-                      <div className="text-2xl">{analysis.memberElement.emoji}</div>
-                      <div className="text-xs font-black text-slate-800 mt-0.5">
+                      <div className="text-xl">{analysis.memberElement.emoji}</div>
+                      <div className="text-xs font-semibold text-slate-800 mt-0.5">
                         {getElementDisplayName(analysis.memberElement, lang)}
                       </div>
-                      <div className="text-[10px] font-bold text-slate-400">
+                      <div className="text-[10px] text-slate-400 font-medium">
                         {lang === 'ko' ? currentMember.nameKo : currentMember.name}
                       </div>
                     </div>
                   </div>
 
-                  <h3 className="font-black text-sm sm:text-base text-slate-900 mb-2 leading-snug">
+                  <h3 className="font-semibold text-sm sm:text-base text-slate-900 mb-1.5 leading-snug">
                     {analysis.sajuHeadline}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                     {analysis.sajuDetail}
                   </p>
                 </div>
               </div>
 
               {/* Card 2: MBTI & Zodiac Synergy */}
-              <div className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-sm flex flex-col justify-between">
+              <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex flex-col justify-between">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-purple-50 border border-purple-200 text-purple-800 text-xs font-black mb-3">
-                    <Brain className="w-3.5 h-3.5 text-purple-600" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-medium mb-3">
+                    <Brain className="w-3.5 h-3.5 text-slate-600" />
                     <span>
                       {lang === 'ko'
-                        ? 'MBTI & 별자리 성향 시너지'
+                        ? 'MBTI & 별자리 시너지'
                         : 'MBTI & Zodiac Chemistry'}
                     </span>
                   </div>
 
-                  <div className="flex items-center justify-between gap-2 p-3 rounded-2xl bg-slate-50 border border-slate-200/70 mb-3">
+                  <div className="flex items-center justify-between gap-2 p-3 rounded-lg bg-slate-50 border border-slate-200/70 mb-3">
                     <div className="text-center flex-1">
-                      <div className="text-base font-black text-purple-700">
+                      <div className="text-sm font-semibold text-slate-800">
                         {mbti === 'UNKNOWN' ? analysis.userZodiac.emoji : mbti}
                       </div>
-                      <div className="text-xs font-bold text-slate-600 mt-0.5">
+                      <div className="text-xs text-slate-600 mt-0.5 font-medium">
                         {analysis.userZodiac.emoji}{' '}
                         {getZodiacDisplayName(analysis.userZodiac, lang)}
                       </div>
                     </div>
-                    <div className="text-xs font-black px-2 py-1 rounded-lg bg-pink-100 text-pink-700">
+                    <div className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-slate-200 text-slate-700 font-medium">
                       SYNC
                     </div>
                     <div className="text-center flex-1">
-                      <div className="text-base font-black text-pink-600">
+                      <div className="text-sm font-semibold text-slate-800">
                         {currentMember.mbti}
                       </div>
-                      <div className="text-xs font-bold text-slate-600 mt-0.5">
+                      <div className="text-xs text-slate-600 mt-0.5 font-medium">
                         {analysis.memberZodiac.emoji}{' '}
                         {getZodiacDisplayName(analysis.memberZodiac, lang)}
                       </div>
                     </div>
                   </div>
 
-                  <h3 className="font-black text-sm sm:text-base text-slate-900 mb-2 leading-snug">
+                  <h3 className="font-semibold text-sm sm:text-base text-slate-900 mb-1.5 leading-snug">
                     {lang === 'ko'
                       ? '대화가 끊이지 않는 티키타카 주파수'
                       : 'Effortless Tiki-Taka & Emotional Sync'}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
                     {analysis.mbtiDetail}
                   </p>
                 </div>
               </div>
 
               {/* Card 3: Ideal Date / Bestie Scenario */}
-              <div className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-sm flex flex-col justify-between">
+              <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex flex-col justify-between">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-50 border border-pink-200 text-pink-800 text-xs font-black mb-3">
-                    <Compass className="w-3.5 h-3.5 text-pink-600" />
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-100 text-slate-800 text-xs font-medium mb-3">
+                    <Compass className="w-3.5 h-3.5 text-slate-600" />
                     <span>
                       {lang === 'ko'
-                        ? '우리가 만난다면? 추천 시나리오'
+                        ? '추천 케미 시나리오'
                         : 'Ideal Date & Bestie Scenario'}
                     </span>
                   </div>
 
-                  <div className="p-3.5 rounded-2xl bg-gradient-to-br from-pink-50/80 to-purple-50/80 border border-pink-200/60 mb-3 flex items-center gap-3">
-                    <span className="text-3xl">{currentMember.emoji}</span>
+                  <div className="p-3 rounded-lg bg-slate-50 border border-slate-200/70 mb-3 flex items-center gap-3">
+                    <span className="text-2xl">{currentMember.emoji}</span>
                     <div>
-                      <div className="text-xs font-black text-pink-700">
+                      <div className="text-xs font-semibold text-slate-800">
                         {lang === 'ko'
-                          ? `${currentMember.nameKo} 맞춤형 로망 데이트`
-                          : `Dream Hangout with ${currentMember.name}`}
+                          ? `${currentMember.nameKo} 맞춤형 데이트`
+                          : `Hangout with ${currentMember.name}`}
                       </div>
-                      <div className="text-[11px] font-bold text-slate-500">
+                      <div className="text-[11px] text-slate-500 font-medium">
                         {lang === 'ko'
-                          ? `설렘 텐션 지수 ${analysis.stats.dateScore}%`
+                          ? `텐션 지수 ${analysis.stats.dateScore}%`
                           : `Heartbeat Score: ${analysis.stats.dateScore}%`}
                       </div>
                     </div>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-bold">
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-normal">
                     “{analysis.dateScenario}”
                   </p>
                 </div>
@@ -1038,52 +997,52 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
             </div>
 
             {/* SHARE & STORY CARD ACTION BAR */}
-            <div className="bg-white rounded-3xl border border-purple-200/90 p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-              <div className="flex items-center gap-3.5 text-center sm:text-left">
+            <div className="bg-white rounded-xl border border-slate-200/90 p-4 sm:p-5 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-3 text-center sm:text-left">
                 <img
                   src={currentGroup.mascotUrl}
                   alt="Mascot"
-                  className="w-12 h-12 rounded-2xl object-cover border border-purple-200 shrink-0 hidden sm:block"
+                  className="w-10 h-10 rounded-xl object-cover border border-slate-200 shrink-0 hidden sm:block"
                 />
                 <div>
-                  <h3 className="font-black text-sm sm:text-base text-slate-900">
+                  <h3 className="font-semibold text-xs sm:text-sm text-slate-900">
                     {lang === 'ko'
-                      ? '내 궁합 인증샷 카드를 저장하거나 친구에게 공유해보세요!'
+                      ? '내 궁합 인증샷 카드를 저장하거나 친구에게 공유해보세요'
                       : lang === 'es'
-                      ? '¡Guarda tu tarjeta de historia 9:16 o compártela con tus amigos!'
+                      ? '¡Guarda tu tarjeta 9:16 o compártela con tus amigos!'
                       : lang === 'pt'
-                      ? 'Salve seu card de Story 9:16 ou compartilhe com seus amigos!'
-                      : 'Save your 9:16 Story Card or share your chemistry result!'}
+                      ? 'Salve seu card de Story 9:16 ou compartilhe com amigos'
+                      : 'Save your 9:16 Story Card or share your result'}
                   </h3>
-                  <p className="text-xs text-slate-500 font-medium mt-0.5">
+                  <p className="text-xs text-slate-400 font-normal mt-0.5">
                     {lang === 'ko'
-                      ? '인스타 스토리·X(트위터) 맞춤형 고화질 궁합 카드 이미지가 즉시 생성됩니다.'
+                      ? '인스타 스토리·X 맞춤형 고화질 궁합 카드 이미지가 즉시 생성됩니다.'
                       : lang === 'pt'
-                      ? 'Gera instantaneamente um card 1080×1920 com seus melhores matches no grupo.'
-                      : 'Generates an instant 1080×1920 image card with your top matches in the group.'}
+                      ? 'Gera instantaneamente um card 1080×1920 com seus melhores matches.'
+                      : 'Generates an instant 1080×1920 image card with your top matches.'}
                   </p>
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center justify-center gap-2.5 w-full sm:w-auto shrink-0">
+              <div className="flex flex-wrap items-center justify-center gap-2 w-full sm:w-auto shrink-0">
                 <button
                   type="button"
                   onClick={handleDownloadStoryCard}
                   disabled={isDownloadingCard}
-                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white text-xs font-black shadow-sm transition-all active:scale-95 cursor-pointer disabled:opacity-60"
+                  className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-medium shadow-xs transition-colors cursor-pointer disabled:opacity-50"
                 >
-                  <Download className="w-4 h-4" />
+                  <Download className="w-3.5 h-3.5" />
                   <span>
                     {isDownloadingCard
                       ? lang === 'ko'
-                        ? '이미지 생성 중...'
+                        ? '생성 중...'
                         : lang === 'pt'
                         ? 'Gerando...'
                         : 'Creating...'
                       : lang === 'ko'
-                      ? '스토리 결과 카드 저장'
+                      ? '스토리 카드 저장'
                       : lang === 'pt'
-                      ? 'Salvar Card de Story'
+                      ? 'Salvar Card'
                       : 'Save Story Card'}
                   </span>
                 </button>
@@ -1091,51 +1050,51 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                 <button
                   type="button"
                   onClick={handleShareTwitter}
-                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black transition-all active:scale-95 cursor-pointer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 text-xs font-medium transition-colors cursor-pointer"
                 >
-                  <Share2 className="w-3.5 h-3.5" />
-                  <span>{lang === 'ko' ? 'X(트위터) 공유' : lang === 'pt' ? 'Postar no X' : 'Post on X'}</span>
+                  <Share2 className="w-3.5 h-3.5 text-slate-500" />
+                  <span>{lang === 'ko' ? 'X 공유' : lang === 'pt' ? 'Postar no X' : 'Post on X'}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={handleCopyLink}
-                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-extrabold transition-all active:scale-95 cursor-pointer"
+                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-medium transition-colors cursor-pointer"
                 >
                   {copiedLink ? (
                     <>
-                      <Check className="w-3.5 h-3.5 text-emerald-600" />
-                      <span className="text-emerald-700">
-                        {lang === 'ko' ? '링크 복사됨!' : lang === 'pt' ? 'Copiado!' : 'Copied!'}
+                      <Check className="w-3.5 h-3.5 text-slate-900" />
+                      <span className="text-slate-900 font-medium">
+                        {lang === 'ko' ? '복사됨' : lang === 'pt' ? 'Copiado' : 'Copied'}
                       </span>
                     </>
                   ) : (
-                    <span>{lang === 'ko' ? '🔗 결과 링크 복사' : lang === 'pt' ? '🔗 Copiar Link' : '🔗 Copy Link'}</span>
+                    <span>{lang === 'ko' ? '링크 복사' : lang === 'pt' ? 'Copiar Link' : 'Copy Link'}</span>
                   )}
                 </button>
               </div>
             </div>
 
             {/* FULL GROUP RANKING & INSTANT 1-CLICK MEMBER SWITCHER */}
-            <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-sm">
+            <div className="bg-white rounded-xl border border-slate-200/90 p-5 sm:p-6 shadow-xs">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-5">
                 <div>
-                  <div className="inline-flex items-center gap-1.5 text-xs font-black text-purple-600 mb-1">
-                    <Trophy className="w-4 h-4 text-amber-500" />
+                  <div className="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500 mb-1">
+                    <Trophy className="w-3.5 h-3.5 text-slate-600" />
                     <span>
                       {lang === 'ko'
-                        ? '재입력 없이 클릭 한 번으로 다른 멤버와 궁합 비교!'
+                        ? '클릭 한 번으로 다른 멤버와 궁합 비교'
                         : lang === 'pt'
-                        ? 'Clique em qualquer membro abaixo para ver o resultado 1:1!'
-                        : 'Click any member below to view your 1:1 report immediately!'}
+                        ? 'Clique em qualquer membro para ver o resultado 1:1'
+                        : 'Click any member below to view your 1:1 report'}
                     </span>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-black text-slate-900">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-900">
                     {lang === 'ko'
-                      ? `${currentGroup.nameKo} 전 멤버 × 나 궁합 랭킹`
+                      ? `${currentGroup.nameKo} 전 멤버 궁합 랭킹`
                       : lang === 'pt'
-                      ? `Ranking Completo de Compatibilidade em ${currentGroup.name}`
-                      : `Your Full ${currentGroup.name} Compatibility Ranking`}
+                      ? `Ranking de Compatibilidade em ${currentGroup.name}`
+                      : `${currentGroup.name} Compatibility Ranking`}
                   </h3>
                 </div>
 
@@ -1146,10 +1105,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                       key={grp.id}
                       type="button"
                       onClick={() => handleSelectGroup(grp.id)}
-                      className={`px-2.5 py-1 rounded-full text-xs font-extrabold border transition-all cursor-pointer ${
+                      className={`px-2.5 py-1 rounded-full text-xs font-medium border transition-colors cursor-pointer ${
                         grp.id === currentGroup.id
                           ? 'bg-slate-900 text-white border-slate-900'
-                          : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                          : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
                       }`}
                     >
                       {grp.emoji} {grp.name}
