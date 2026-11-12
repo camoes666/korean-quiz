@@ -1408,6 +1408,8 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
                 ? '내 생년월일(K-사주 오행) × MBTI로 최애 멤버와 1:1 궁합 점수 보기'
                 : lang === 'es'
                 ? '¡Calcula tu % de compatibilidad K-Saju y MBTI con tu Bias!'
+                : lang === 'pt'
+                ? 'Calcule sua compatibilidade % K-Saju e MBTI com seu Bias!'
                 : 'Check Your 1:1 K-Saju & MBTI Compatibility % With Your Bias!'}
             </span>
             <ArrowRight className="w-3.5 h-3.5 text-slate-500" />

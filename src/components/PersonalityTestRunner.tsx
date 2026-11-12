@@ -898,11 +898,17 @@ export default function PersonalityTestRunner({
                         ? `내 실제 생년월일·MBTI로 본 [${memberName}]와의 사주 궁합은 몇 %일까?`
                         : lang === 'es'
                         ? `¿Cuál es tu % de compatibilidad K-Saju y MBTI real con ${memberName}?`
+                        : lang === 'pt'
+                        ? `Qual é a sua compatibilidade % K-Saju e MBTI real com ${memberName}?`
                         : `What is your real K-Saju & MBTI compatibility % with ${memberName}?`}
                     </h4>
                     <p className="text-xs text-slate-300 mt-0.5 font-normal">
                       {lang === 'ko'
                         ? '오행(목·화·토·금·수) 상생과 MBTI로 전 멤버 궁합 순위까지 10초 만에 확인하세요!'
+                        : lang === 'es'
+                        ? '¡Descubre tu puntuación de los Cinco Elementos y el ranking completo en 10 segundos!'
+                        : lang === 'pt'
+                        ? 'Confira sua pontuação dos Cinco Elementos e o ranking do grupo todo em 10 segundos!'
                         : 'Check your Five Elements destiny score and full group ranking in 10 seconds!'}
                     </p>
                   </div>
@@ -928,6 +934,8 @@ export default function PersonalityTestRunner({
                       {lang === 'ko'
                         ? '사주·MBTI 궁합 보기'
                         : lang === 'es'
+                        ? 'Ver Química Saju'
+                        : lang === 'pt'
                         ? 'Ver Química Saju'
                         : 'Check Saju Chemistry'}
                     </span>

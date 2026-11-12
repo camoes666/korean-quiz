@@ -235,6 +235,8 @@ export default function HomePage() {
                     ? 'K-사주 오행 × MBTI × 별자리 1:1 궁합'
                     : lang === 'es'
                     ? 'Química K-Saju × MBTI × Zodiaco'
+                    : lang === 'pt'
+                    ? 'Química K-Saju × MBTI × Zodíaco'
                     : 'K-Saju Five Elements × MBTI × Zodiac'}
                 </span>
               </div>
@@ -243,6 +245,8 @@ export default function HomePage() {
                   ? '나와 최애 아이돌의 사주·MBTI 궁합은 몇 %일까?'
                   : lang === 'es'
                   ? '¿Cuál es tu % de compatibilidad K-Saju y MBTI con tu Bias?'
+                  : lang === 'pt'
+                  ? 'Qual é a sua compatibilidade % K-Saju e MBTI com seu Bias?'
                   : 'What Is Your K-Saju & MBTI Compatibility % With Your Bias?'}
               </h2>
               <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
@@ -250,6 +254,8 @@ export default function HomePage() {
                   ? '7개 그룹 44명 멤버의 실제 생년월일(오행: 목·화·토·금·수)과 MBTI로 10초 만에 내 최애와의 궁합 리포트와 그룹 내 천생연분 순위를 확인하세요!'
                   : lang === 'es'
                   ? 'Analiza tu fecha de nacimiento y MBTI con 44 miembros reales de BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa y LE SSERAFIM.'
+                  : lang === 'pt'
+                  ? 'Analise sua data de nascimento (Cinco Elementos do Saju coreano) e MBTI com 44 idols de BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa e LE SSERAFIM!'
                   : 'Match your birth date (Korean Saju Five Elements) & MBTI against 44 idols across BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa & LE SSERAFIM!'}
               </p>
 
@@ -285,6 +291,8 @@ export default function HomePage() {
                     ? '10초 궁합 분석 시작하기'
                     : lang === 'es'
                     ? 'Calcular Mi Química Ahora'
+                    : lang === 'pt'
+                    ? 'Calcular Química Agora'
                     : 'Check Idol Chemistry Now'}
                 </span>
                 <ArrowRight className="w-4 h-4" />

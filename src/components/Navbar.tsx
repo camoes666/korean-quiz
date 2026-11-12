@@ -87,6 +87,8 @@ export default function Navbar() {
                 ? 'K-사주 × MBTI 아이돌 궁합 연구소'
                 : lang === 'es'
                 ? 'Calculadora de Química K-Pop y Saju'
+                : lang === 'pt'
+                ? 'Calculadora de Química K-Pop & Saju'
                 : 'K-Pop Idol Saju × MBTI Chemistry'
             }
           >
