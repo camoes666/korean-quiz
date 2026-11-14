@@ -11,8 +11,8 @@ export default function AdPlaceholder({
   label = 'Advertisement',
   className = '',
 }: AdPlaceholderProps) {
-  // Hide empty ad placeholders prior to AdSense approval to maintain clean UI and pass review
-  const adsEnabled = process.env.NEXT_PUBLIC_ENABLE_ADS === 'true' || !!process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+  // Keep empty ad placeholders hidden during AdSense review even when NEXT_PUBLIC_ADSENSE_CLIENT_ID is set for verification
+  const adsEnabled = process.env.NEXT_PUBLIC_ENABLE_ADS === 'true';
   if (!adsEnabled) {
     return null;
   }

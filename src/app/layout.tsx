@@ -8,6 +8,9 @@ import { LanguageProvider } from '@/context/LanguageContext';
 import { GameProvider } from '@/context/GameContext';
 import { GA_MEASUREMENT_ID } from '@/lib/analytics';
 
+const ADSENSE_CLIENT_ID =
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID?.trim() || 'ca-pub-6731103569114139';
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -40,6 +43,7 @@ export const metadata: Metadata = {
     google: '5_kHZ_qOX7BeXe3ASq_I5sL5nEg7JBfryf-xdI-a6CI',
     other: {
       'msvalidate.01': '2E8E822334A1673278BB491BB72FAF20',
+      ...(ADSENSE_CLIENT_ID ? { 'google-adsense-account': ADSENSE_CLIENT_ID } : {}),
     },
   },
   openGraph: {
@@ -95,6 +99,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased scroll-smooth`}
     >
+      <head>
+        {ADSENSE_CLIENT_ID && (
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
+      </head>
       <body className="min-h-full flex flex-col bg-[#F9FAFB] text-slate-900 font-sans selection:bg-purple-500 selection:text-white antialiased">
         {GA_MEASUREMENT_ID && (
           <>
