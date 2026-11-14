@@ -82,11 +82,11 @@ export default function Navbar() {
           {/* K-Pop Star Map Navigation Link */}
           <Link
             href="/map"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-semibold text-xs transition-colors shrink-0"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-pink-200 bg-pink-50/80 hover:bg-pink-100/80 text-slate-900 font-semibold text-xs transition-colors shrink-0"
             title={MAP_TRANSLATIONS[lang]?.title || 'K-Pop Star Map'}
           >
             <MapPin className="w-3.5 h-3.5 text-pink-600" />
-            <span className="hidden sm:inline">
+            <span>
               {MAP_TRANSLATIONS[lang]?.navLabel || 'K-Map'}
             </span>
           </Link>

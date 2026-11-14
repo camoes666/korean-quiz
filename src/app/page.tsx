@@ -9,7 +9,7 @@ import AdPlaceholder from '@/components/AdPlaceholder';
 import HeroCarousel from '@/components/HeroCarousel';
 import PlayerLevelCard from '@/components/PlayerLevelCard';
 import LeaderboardCard from '@/components/LeaderboardCard';
-import { Sparkles, Trophy, ArrowRight, Tag, BookOpen } from 'lucide-react';
+import { Sparkles, Trophy, ArrowRight, Tag, BookOpen, MapPin } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 
@@ -223,11 +223,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 1.5 IDOL K-SAJU × MBTI CHEMISTRY LAB SPOTLIGHT BANNER */}
+      {/* 1.5 SPOTLIGHT BANNERS: IDOL CHEMISTRY + K-POP STAR PILGRIMAGE MAP */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 w-full">
-        <div className="relative overflow-hidden rounded-2xl bg-slate-950 text-white p-6 sm:p-8 border border-slate-800">
-          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            <div className="space-y-2.5 max-w-2xl">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+          {/* Left: Idol K-Saju × MBTI Chemistry Lab */}
+          <div className="relative overflow-hidden rounded-2xl bg-slate-950 text-white p-6 sm:p-7 border border-slate-800 flex flex-col justify-between gap-5">
+            <div className="space-y-2.5">
               <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded border border-white/15 bg-white/5 text-[11px] font-mono text-slate-300">
                 <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
                 <span>
@@ -251,16 +252,16 @@ export default function HomePage() {
               </h2>
               <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
                 {lang === 'ko'
-                  ? '7개 그룹 44명 멤버의 실제 생년월일(오행: 목·화·토·금·수)과 MBTI로 10초 만에 내 최애와의 궁합 리포트와 그룹 내 천생연분 순위를 확인하세요!'
+                  ? '7개 그룹 44명 멤버의 실제 생년월일(오행)과 MBTI로 10초 만에 내 최애와의 궁합 리포트와 그룹 내 천생연분 순위를 확인하세요!'
                   : lang === 'es'
                   ? 'Analiza tu fecha de nacimiento y MBTI con 44 miembros reales de BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa y LE SSERAFIM.'
                   : lang === 'pt'
                   ? 'Analise sua data de nascimento (Cinco Elementos do Saju coreano) e MBTI com 44 idols de BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa e LE SSERAFIM!'
-                  : 'Match your birth date (Korean Saju Five Elements) & MBTI against 44 idols across BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa & LE SSERAFIM!'}
+                  : 'Match your birth date (Korean Saju Five Elements) & MBTI against 44 idols across 7 top K-Pop groups!'}
               </p>
 
               {/* Direct Group Shortcut Pills */}
-              <div className="flex items-center gap-1.5 flex-wrap pt-2">
+              <div className="flex items-center gap-1.5 flex-wrap pt-1">
                 {[
                   { id: 'bts', label: 'BTS' },
                   { id: 'stray-kids', label: 'Stray Kids' },
@@ -281,10 +282,10 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="shrink-0">
+            <div>
               <Link
                 href="/chemistry"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-xs sm:text-sm transition-colors"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-xs sm:text-sm transition-colors"
               >
                 <span>
                   {lang === 'ko'
@@ -294,6 +295,104 @@ export default function HomePage() {
                     : lang === 'pt'
                     ? 'Calcular Química Agora'
                     : 'Check Idol Chemistry Now'}
+                </span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+
+          {/* Right: K-Pop Star Pilgrimage Map */}
+          <div className="relative overflow-hidden rounded-2xl bg-white text-slate-950 p-6 sm:p-7 border border-slate-200 shadow-sm flex flex-col justify-between gap-5">
+            <div className="space-y-2.5">
+              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded border border-pink-200 bg-pink-50 text-[11px] font-mono text-pink-700">
+                <MapPin className="w-3 h-3 text-pink-600" />
+                <span>
+                  {lang === 'ko'
+                    ? '한국 K-Pop 성지순례 지도 · 30곳'
+                    : lang === 'es'
+                    ? 'Mapa K-Pop en Corea · 30 Lugares'
+                    : lang === 'pt'
+                    ? 'Mapa K-Pop na Coreia · 30 Locais'
+                    : lang === 'ru'
+                    ? 'K-Pop Карта Кореи · 30 мест'
+                    : lang === 'zh'
+                    ? '韩国 K-Pop 圣地巡礼地图 · 30处'
+                    : 'Interactive Korea K-Map · 30 Spots'}
+                </span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-slate-950 leading-snug">
+                {lang === 'ko'
+                  ? 'BTS·블랙핑크·스트레이키즈 실제 성지순례 K-Map'
+                  : lang === 'es'
+                  ? 'Explora 30 Lugares Reales de BTS, BLACKPINK y Stray Kids'
+                  : lang === 'pt'
+                  ? 'Explore 30 Locais Reais de BTS, BLACKPINK e Stray Kids'
+                  : lang === 'ru'
+                  ? '30 реальных мест BTS, BLACKPINK и Stray Kids в Корее'
+                  : lang === 'zh'
+                  ? '探索 BTS、BLACKPINK、Stray Kids 韩国 30 处打卡圣地'
+                  : 'Explore 30 Real BTS, BLACKPINK & Stray Kids Spots in Korea'}
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 font-normal leading-relaxed">
+                {lang === 'ko'
+                  ? '고향·단골 맛집·소속사·뮤비 촬영지까지 실제 사진과 함께 확인하고, 네이버·카카오·구글 지도로 바로 길찾기하세요.'
+                  : lang === 'es'
+                  ? 'Lugares natales, restaurantes favoritos, agencias y locaciones de MVs con fotos reales y rutas en Naver, Kakao y Google Maps.'
+                  : lang === 'pt'
+                  ? 'Cidades natais, restaurantes favoritos, agências e locações de MVs com fotos reais e rotas no Naver, Kakao e Google Maps.'
+                  : lang === 'ru'
+                  ? 'Родные города, любимые рестораны, агентства и места съёмок клипов с фото и маршрутами в Naver, Kakao и Google Maps.'
+                  : lang === 'zh'
+                  ? '包含故乡、常去美食店、经纪公司、MV取景地实景照片，支持 Naver / Kakao / Google 地图一键导航。'
+                  : 'Hometowns, favorite restaurants, agencies & MV filming sites with real photos and 1-tap Naver, Kakao & Google Maps directions.'}
+              </p>
+
+              {/* Spot Highlight Pills */}
+              <div className="flex items-center gap-1.5 flex-wrap pt-1">
+                {[
+                  { label: 'BTS · 14', color: 'bg-purple-50 text-purple-700 border-purple-200' },
+                  { label: 'BLACKPINK · 8', color: 'bg-pink-50 text-pink-700 border-pink-200' },
+                  { label: 'Stray Kids · 8', color: 'bg-red-50 text-red-700 border-red-200' },
+                  {
+                    label:
+                      lang === 'ko'
+                        ? '실제 사진 + 3사 지도 연동'
+                        : lang === 'es'
+                        ? 'Fotos reales + Naver/Google'
+                        : lang === 'pt'
+                        ? 'Fotos reais + Naver/Google'
+                        : 'Real Photos + 3-App Nav',
+                    color: 'bg-slate-100 text-slate-700 border-slate-200',
+                  },
+                ].map((pill) => (
+                  <span
+                    key={pill.label}
+                    className={`px-2.5 py-1 rounded-md border text-xs font-medium ${pill.color}`}
+                  >
+                    {pill.label}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <Link
+                href="/map"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm transition-colors"
+              >
+                <MapPin className="w-4 h-4 text-pink-400" />
+                <span>
+                  {lang === 'ko'
+                    ? 'K-Pop 성지순례 지도 열기'
+                    : lang === 'es'
+                    ? 'Abrir Mapa K-Pop Ahora'
+                    : lang === 'pt'
+                    ? 'Abrir Mapa K-Pop Agora'
+                    : lang === 'ru'
+                    ? 'Открыть K-Pop Карту'
+                    : lang === 'zh'
+                    ? '打开 K-Pop 圣地地图'
+                    : 'Open Interactive K-Map'}
                 </span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
