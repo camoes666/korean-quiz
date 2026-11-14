@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Sparkles, Flame, Zap, ChevronDown, Check, BookOpen } from 'lucide-react';
+import { Sparkles, Flame, Zap, ChevronDown, Check, BookOpen, MapPin } from 'lucide-react';
+import { MAP_TRANSLATIONS } from '@/lib/mapTranslations';
 import { useRouter } from 'next/navigation';
 import { quizzes } from '@/data/quizzes';
 import { getLocalizedText } from '@/types/quiz';
@@ -77,6 +78,18 @@ export default function Navbar() {
               <span>{levelPrefix}{currentLevel.level}</span>
             </span>
           </div>
+
+          {/* K-Pop Star Map Navigation Link */}
+          <Link
+            href="/map"
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs transition-colors shrink-0"
+            title={MAP_TRANSLATIONS[lang]?.title || 'K-Pop Star Map'}
+          >
+            <MapPin className="w-3.5 h-3.5 text-pink-600" />
+            <span className="hidden sm:inline">
+              {MAP_TRANSLATIONS[lang]?.navLabel || 'K-Map'}
+            </span>
+          </Link>
 
           {/* Knowledge Guides Navigation Link */}
           <Link
