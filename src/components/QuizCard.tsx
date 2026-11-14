@@ -27,13 +27,15 @@ export default function QuizCard({ quiz }: QuizCardProps) {
   const depthLabel = isPersonality
     ? lang === 'en'
       ? 'Results'
-      : lang === 'es'
+      : lang === 'es' || lang === 'pt'
       ? 'Resultados'
       : '가지 결과'
     : lang === 'en'
     ? 'Levels'
     : lang === 'es'
     ? 'Niveles'
+    : lang === 'pt'
+    ? 'Níveis'
     : '단계';
 
   return (
@@ -45,19 +47,19 @@ export default function QuizCard({ quiz }: QuizCardProps) {
         <div className="flex flex-col items-start gap-1.5 z-10 max-w-[72%]">
           <div className="flex items-center gap-1.5 flex-wrap">
             {isPersonality ? (
-              <span className="px-2.5 py-0.5 bg-amber-300 text-amber-950 font-black rounded-full text-[11px] tracking-wide shadow-2xs">
-                🔮 {lang === 'en' ? 'Personality' : lang === 'es' ? 'Personalidad' : '성향 테스트'}
+              <span className="px-2 py-0.5 bg-white/95 backdrop-blur-xs text-slate-800 font-medium rounded-md text-[11px] shadow-2xs">
+                {lang === 'en' ? 'Personality' : lang === 'es' || lang === 'pt' ? 'Personalidade' : '성향 테스트'}
                 {tagLabel ? ` · ${tagLabel}` : ''}
               </span>
             ) : (
-              <span className="px-2.5 py-0.5 bg-white/95 backdrop-blur-md rounded-full text-[11px] font-black text-slate-800 tracking-wide shadow-2xs">
+              <span className="px-2 py-0.5 bg-white/95 backdrop-blur-xs rounded-md text-[11px] font-medium text-slate-800 shadow-2xs">
                 {categoryLabel}
                 {tagLabel ? ` · ${tagLabel}` : ''}
               </span>
             )}
 
             {isNewQuiz(quiz) && (
-              <span className="px-2 py-0.5 bg-black/45 backdrop-blur-md rounded-full text-[10px] font-extrabold text-amber-300 uppercase tracking-wider">
+              <span className="px-1.5 py-0.5 bg-black/50 backdrop-blur-xs rounded text-[10px] font-mono font-medium text-amber-300 uppercase tracking-wide">
                 NEW
               </span>
             )}
@@ -78,18 +80,18 @@ export default function QuizCard({ quiz }: QuizCardProps) {
       <div className="p-5 flex flex-col flex-1 justify-between">
         <div>
           <Link href={`/quiz/${quiz.slug}`} className="block">
-            <h3 className="text-base sm:text-lg font-black text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-2 min-h-[2lh] group-hover:text-purple-600 transition-colors">
+            <h3 className="text-base sm:text-lg font-semibold text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-2 min-h-[2lh] group-hover:text-slate-700 transition-colors">
               {title}
             </h3>
           </Link>
-          <p className="text-xs text-slate-500 font-medium line-clamp-2 mb-4 leading-relaxed">
+          <p className="text-xs text-slate-500 font-normal line-clamp-2 mb-4 leading-relaxed">
             {description}
           </p>
         </div>
 
         <div>
           {/* Clean Meta Info Row */}
-          <div className="flex items-center gap-3 text-xs font-semibold text-slate-500 mb-4 pb-3.5 border-b border-slate-100">
+          <div className="flex items-center gap-3 text-xs font-normal text-slate-500 mb-4 pb-3 border-b border-slate-100">
             <span className="flex items-center gap-1">
               <HelpCircle className="w-3.5 h-3.5 text-slate-400" />
               {isPersonality
@@ -102,8 +104,8 @@ export default function QuizCard({ quiz }: QuizCardProps) {
               ~{quiz.estimatedMinutes} {t.mins}
             </span>
             {depthCount > 0 && (
-              <span className="flex items-center gap-1 text-purple-600 font-bold ml-auto">
-                <Layers className="w-3.5 h-3.5 text-purple-500" />
+              <span className="flex items-center gap-1 text-slate-600 font-medium ml-auto">
+                <Layers className="w-3.5 h-3.5 text-slate-400" />
                 {depthCount}
                 {lang === 'ko' ? '' : ' '}
                 {depthLabel}
@@ -115,7 +117,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <div className="flex items-center gap-2">
             <Link
               href={`/quiz/${quiz.slug}`}
-              className="flex-1 py-2.5 px-4 bg-slate-900 hover:bg-purple-600 text-white font-bold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-1.5 transition-colors active:scale-[0.99]"
+              className="flex-1 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-xl flex items-center justify-center gap-1.5 transition-colors active:scale-[0.99]"
             >
               <span>
                 {isPersonality
@@ -123,6 +125,8 @@ export default function QuizCard({ quiz }: QuizCardProps) {
                     ? 'Find Your Match'
                     : lang === 'es'
                     ? 'Descubrir Miembro'
+                    : lang === 'pt'
+                    ? 'Descobrir Membro'
                     : '나의 멤버 찾기'
                   : t.startChallenge}
               </span>
@@ -132,12 +136,14 @@ export default function QuizCard({ quiz }: QuizCardProps) {
             {!isPersonality && (
               <Link
                 href={`/guide/${quiz.slug}`}
-                className="p-2.5 rounded-xl border border-slate-200 hover:border-purple-200 hover:bg-purple-50 text-slate-600 hover:text-purple-700 flex items-center justify-center transition-colors"
+                className="p-2.5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors"
                 title={
                   lang === 'ko'
                     ? '지식 가이드 & 해설 보기'
                     : lang === 'es'
                     ? 'Ver Guía de Lore'
+                    : lang === 'pt'
+                    ? 'Ver Guia de Lore'
                     : 'Read Lore Guide'
                 }
               >

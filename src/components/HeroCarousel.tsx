@@ -56,6 +56,8 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
       ? { region: '추천 테스트', slide: '슬라이드', pause: '자동 넘김 멈춤', play: '자동 넘김 재생' }
       : lang === 'es'
       ? { region: 'Tests destacados', slide: 'Diapositiva', pause: 'Pausar', play: 'Reproducir' }
+      : lang === 'pt'
+      ? { region: 'Testes em destaque', slide: 'Slide', pause: 'Pausar', play: 'Reproduzir' }
       : { region: 'Featured tests', slide: 'Slide', pause: 'Pause auto-rotation', play: 'Play auto-rotation' };
 
   return (
@@ -79,7 +81,7 @@ export default function HeroCarousel({ slides }: HeroCarouselProps) {
         if (Math.abs(dx) > SWIPE_THRESHOLD_PX) goTo(index + (dx < 0 ? 1 : -1));
       }}
     >
-      <div className="overflow-hidden rounded-3xl flex-1">
+      <div className="overflow-hidden rounded-2xl flex-1">
         <div
           className="flex h-full transition-transform duration-700 ease-out motion-reduce:transition-none"
           style={{ transform: `translateX(-${index * 100}%)` }}

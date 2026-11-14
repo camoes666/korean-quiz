@@ -13,9 +13,8 @@ export interface LanguageOption {
 export const LANGUAGE_OPTIONS: LanguageOption[] = [
   { code: 'en', label: 'English', flag: '🇺🇸' },
   { code: 'es', label: 'Español', flag: '🇪🇸' },
+  { code: 'pt', label: 'Português', flag: '🇧🇷' },
   { code: 'ko', label: '한국어', flag: '🇰🇷' },
-  // To enable Portuguese in the language switcher once quiz JSON *Pt fields are populated, uncomment:
-  // { code: 'pt', label: 'Português', flag: '🇧🇷' },
 ];
 
 const ACTIVE_LANGUAGE_CODES = new Set<Language>(LANGUAGE_OPTIONS.map((opt) => opt.code));

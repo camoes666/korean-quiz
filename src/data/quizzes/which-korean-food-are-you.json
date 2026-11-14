@@ -5,12 +5,15 @@
   "title": "Which Korean Food Matches Your Soul?",
   "titleKo": "나와 영혼이 닮은 K-푸드 소울푸드 테스트",
   "titleEs": "¿Qué comida coreana es tu alma gemela?",
+  "titlePt": "Qual comida coreana combina com a sua alma?",
   "subtitle": "Discover your Korean food archetype across 10 delicious lifestyle questions!",
   "subtitleKo": "10개의 침샘 자극 문답으로 알아보는 나의 K-푸드 본캐와 환상의 궁합!",
   "subtitleEs": "¡Descubre tu arquetipo de comida coreana a través de 10 deliciosas preguntas!",
+  "subtitlePt": "Descubra seu arquétipo da culinária coreana em 10 perguntas deliciosas sobre o seu estilo de vida!",
   "description": "Are you fiery Spicy Tteokbokki, dependable K-BBQ Samgyeopsal, comforting Kimchi Jjigae, cheerful Chimaek, cozy Bungeoppang, harmonious Bibimbap, adventurous Han River Ramen, or trendy Snow Bingsu? Take the 10-question test!",
   "descriptionKo": "화끈한 엽기 떡볶이, 든든한 삼겹살 쌈, 포근한 김치찌개, 파티 비타민 양념치킨, 달콤한 붕어빵, 균형 잡힌 돌솥비빔밥, 낭만적인 한강 라면, 감각적인 눈꽃빙수 중 나의 소울푸드는?",
   "descriptionEs": "¿Eres el picante Tteokbokki, el confiable Samgyeopsal, el reconfortante Kimchi Jjigae, el festivo Chimaek, el tierno Bungeoppang, el armónico Bibimbap, el libre Ramen del Río Han o el dulce Bingsu? ¡Descúbrelo con 10 preguntas!",
+  "descriptionPt": "Você é o apimentado Tteokbokki, o confiável churrasco coreano Samgyeopsal, o reconfortante Kimchi Jjigae, o festivo Chimaek, o aconchegante Bungeoppang, o harmonioso Bibimbap, o aventureiro Lámen do Rio Han ou o estiloso Bingsu? Faça o teste de 10 perguntas!",
   "category": "Food",
   "tag": "K-Food",
   "coverEmoji": "🍜",
@@ -27,15 +30,19 @@
       "name": "Spicy Tteokbokki",
       "nameKo": "화끈하고 당당한 매운 떡볶이",
       "nameEs": "Tteokbokki Picante y Apasionado",
+      "namePt": "Tteokbokki Apimentado",
       "title": "Fiery Passion & Addictive Intensity",
       "titleKo": "거침없는 직진 본능 & 중독성 넘치는 열정가",
       "titleEs": "Pasión Feroz y Energía Adictiva",
+      "titlePt": "Paixão Ardente e Intensidade Viciante",
       "subtitle": "Bold Energy · Direct & Sincere · Stress Reliever",
       "subtitleKo": "화끈한 불맛 · 쿨한 직진 · 뒤끝 없는 솔직함",
       "subtitleEs": "Energía Audaz · Directo y Sincero · Quita Estrés",
+      "subtitlePt": "Energia Ousada · Direto e Sincero · Alívio de Estresse",
       "skzoo": "Spicy Red Pepper (고추장 요정)",
       "skzooKo": "고추장 요정 🌶️",
       "skzooEs": "Hada Picante Gochujang 🌶️",
+      "skzooPt": "Fada Apimentada do Gochujang 🌶️",
       "emoji": "🌶️",
       "traits": [
         "Bold & Unapologetic",
@@ -52,16 +59,24 @@
         "Chispa de Alta Energía",
         "Sabor Irresistible"
       ],
+      "traitsPt": [
+        "Ousado e Sem Filtro",
+        "Faísca de Alta Energia",
+        "Charme Viciante"
+      ],
       "description": "Like spicy Tteokbokki, you are vibrant, fiery, and impossible to forget! You speak your mind with refreshing honesty and ignite any room with your fiery charisma.",
       "descriptionKo": "매콤달콤한 떡볶이처럼 한 번 빠지면 헤어 나올 수 없는 마성의 매력! 답답한 것을 참지 못하고 시원하게 행동하며, 주변 사람들의 스트레스를 한 방에 날려주는 화끈한 의리파입니다.",
       "descriptionEs": "Como el Tteokbokki picante, eres vibrante, enérgico e inolvidable. Dices lo que piensas con sinceridad y enciendes cualquier lugar con tu carisma radiante.",
+      "descriptionPt": "Como o Tteokbokki apimentado, você é vibrante, intenso e impossível de esquecer! Você fala o que pensa com uma sinceridade refrescante e ilumina qualquer lugar com seu carisma ardente.",
       "bestMatchId": "bungeoppang",
       "bestMatchName": "Sweet Bungeoppang",
       "bestMatchNameKo": "달콤한 붕어빵",
       "bestMatchNameEs": "Bungeoppang Dulce",
+      "bestMatchNamePt": "Bungeoppang Doce",
       "bestMatchReason": "Sweet & Spicy chemistry! Mild cozy sweetness cools down your fiery flame perfectly.",
       "bestMatchReasonKo": "맵단(매운맛+단맛) 환상의 궁합! 붕어빵의 순수하고 부드러운 달콤함이 떡볶이의 불같은 열정을 가장 완벽하게 달래줍니다.",
       "bestMatchReasonEs": "¡La combinación dulce y picante perfecta! La ternura del Bungeoppang calma tu fuego.",
+      "bestMatchReasonPt": "Química doce e picante! A doçura suave e aconchegante do Bungeoppang equilibra sua chama ardente com perfeição.",
       "colorHex": "#dc2626",
       "bgGradient": "from-red-600 via-rose-600 to-amber-900"
     },
@@ -70,15 +85,19 @@
       "name": "K-BBQ Samgyeopsal",
       "nameKo": "노릇노릇 든든한 삼겹살 쌈",
       "nameEs": "Samgyeopsal Confiable a la Parrilla",
+      "namePt": "Samgyeopsal na Grelha (K-BBQ)",
       "title": "The Golden Anchor & Feast Master",
       "titleKo": "언제나 믿음직한 든든한 인생의 버팀목",
       "titleEs": "El Pilar Confiable y Rey del Banquete",
+      "titlePt": "O Porto Seguro e Mestre do Banquete",
       "subtitle": "Sizzling Sincerity · Feast Anchor · The Ultimate Host",
       "subtitleKo": "지글지글 진국 · 든든한 리더십 · 볶음밥 마무리 장인",
       "subtitleEs": "Sinceridad Total · Abrazo Cálido · Anfitrión Perfecto",
+      "subtitlePt": "Sinceridade Total · Base Confiável · O Anfitrião Perfeito",
       "skzoo": "Golden Ssamjang (쌈장 수호신)",
       "skzooKo": "쌈장 수호신 🥩",
       "skzooEs": "Guardián del Ssamjang 🥩",
+      "skzooPt": "Guardião do Ssamjang 🥩",
       "emoji": "🥩",
       "traits": [
         "Dependable & Solid",
@@ -95,16 +114,24 @@
         "Generoso y Protector",
         "Amado por Todos"
       ],
+      "traitsPt": [
+        "Confiável e Sólido",
+        "Generoso e Protetor",
+        "Queridinho de Todos"
+      ],
       "description": "Like sizzling K-BBQ Samgyeopsal wrapped with garlic and ssamjang, you are the rock everyone counts on! Generous, grounded, and loyal to the end.",
       "descriptionKo": "상추에 깻잎 얹고 마늘 쌈장 콕 찍어 싸 먹는 삼겹살처럼, 누구에게나 든든한 안식처가 되어주는 사람! 묵묵히 자리를 지키며 사람들을 살뜰히 챙기는 넉넉한 인품을 가졌습니다.",
       "descriptionEs": "Como el Samgyeopsal recién asado en hoja de sésamo, eres el pilar en el que todos confían. Generoso, leal y el alma de cualquier reunión con amigos.",
+      "descriptionPt": "Como o Samgyeopsal dourado na grelha envolto em folha com alho e ssamjang, você é a rocha com quem todos podem contar! Generoso, pé no chão e leal até o fim.",
       "bestMatchId": "kimchijjigae",
       "bestMatchName": "Kimchi Jjigae",
       "bestMatchNameKo": "뚝배기 김치찌개",
       "bestMatchNameEs": "Kimchi Jjigae",
+      "bestMatchNamePt": "Kimchi Jjigae",
       "bestMatchReason": "The undisputed royal pair! Savory sizzling meat and rich kimchi stew are made in heaven.",
       "bestMatchReasonKo": "말이 필요 없는 국룰 조합! 기름진 고기의 든든함과 김치찌개의 칼칼한 깊이가 만나 평생 질리지 않는 완벽한 짝이 됩니다.",
       "bestMatchReasonEs": "¡La pareja real de la gastronomía coreana! La carne crujiente y el caldo profundo son inseparables.",
+      "bestMatchReasonPt": "A dupla real indiscutível da gastronomia coreana! Carne grelhada suculenta e ensopado rico de kimchi foram feitos um para o outro.",
       "colorHex": "#b45309",
       "bgGradient": "from-amber-600 via-orange-700 to-stone-900"
     },
@@ -113,15 +140,19 @@
       "name": "Soulful Kimchi Jjigae",
       "nameKo": "깊고 진한 뚝배기 김치찌개",
       "nameEs": "Kimchi Jjigae Reconfortante",
+      "namePt": "Kimchi Jjigae Reconfortante",
       "title": "Heartwarming Healer & Soul Restorer",
       "titleKo": "마음을 어루만지는 깊은 국물의 힐링 요정",
       "titleEs": "Sanador del Alma y Refugio Cálido",
+      "titlePt": "Curador de Corações e Refúgio da Alma",
       "subtitle": "Deep Empathy · Timeless Classic · Comforting Hug",
       "subtitleKo": "깊은 속내 · 세월이 빚은 진국 · 따뜻한 위로",
       "subtitleEs": "Empatía Profunda · Clásico Eterno · Abrazo Reconfortante",
+      "subtitlePt": "Empatia Profunda · Clássico Atemporal · Abraço Acolhedor",
       "skzoo": "Earthen Pot Fairy (뚝배기 요정)",
       "skzooKo": "뚝배기 요정 🍲",
       "skzooEs": "Hada de Barro Ttukbaegi 🍲",
+      "skzooPt": "Fada da Panela de Barro Ttukbaegi 🍲",
       "emoji": "🍲",
       "traits": [
         "Deeply Caring",
@@ -138,16 +169,24 @@
         "Auténtico y Real",
         "Paz para el Alma"
       ],
+      "traitsPt": [
+        "Profundamente Acolhedor",
+        "Autêntico e Verdadeiro",
+        "Conforto para a Alma"
+      ],
       "description": "Like a bubbling earthenware pot of aged Kimchi Jjigae, you get richer and deeper over time. You are the emotional home that friends run to when they need solace.",
       "descriptionKo": "오래 끓일수록 진국인 묵은지 김치찌개처럼, 알면 알수록 깊고 따뜻한 사람! 화려하게 뽐내지 않아도 지친 사람들의 마음을 보듬어주는 가장 편안한 쉼터가 되어줍니다.",
       "descriptionEs": "Como un caldo de kimchi madurado a fuego lento, tienes una profundidad emocional que conforta a cualquiera. Eres el refugio al que todos acuden tras un día difícil.",
+      "descriptionPt": "Como uma panela de barro borbulhando com Kimchi Jjigae maturado, você fica ainda mais rico e profundo com o tempo. Você é o porto seguro emocional para onde os amigos correm quando precisam de consolo.",
       "bestMatchId": "samgyeopsal",
       "bestMatchName": "K-BBQ Samgyeopsal",
       "bestMatchNameKo": "삼겹살 쌈",
       "bestMatchNameEs": "Samgyeopsal",
+      "bestMatchNamePt": "Samgyeopsal (K-BBQ)",
       "bestMatchReason": "Soulmate harmony! Samgyeopsal provides solid abundance while you provide the soul-satisfying depth.",
       "bestMatchReasonKo": "환상의 밥도둑 짝꿍! 삼겹살의 든든한 존재감에 김치찌개의 깊은 울림이 더해져 천하무적의 시너지를 냅니다.",
       "bestMatchReasonEs": "¡Equilibrio puro! Samgyeopsal aporta la fuerza y abundancia, y el guiso aporta el calor del hogar.",
+      "bestMatchReasonPt": "Harmonia de almas gêmeas! O Samgyeopsal traz fartura e firmeza, enquanto você oferece a profundidade que aquece o coração.",
       "colorHex": "#ea580c",
       "bgGradient": "from-orange-600 via-red-700 to-zinc-950"
     },
@@ -156,15 +195,19 @@
       "name": "Crispy Chimaek (Chicken & Beer)",
       "nameKo": "바삭바삭 축제 분위기 양념치킨 & 맥주",
       "nameEs": "Chimaek Festivo (Pollo Frito y Cerveza)",
+      "namePt": "Chimaek Crocante (Frango Frito e Cerveja)",
       "title": "The Ultimate Life of the Party",
       "titleKo": "모두를 춤추게 만드는 흥부자 파티메이커",
       "titleEs": "El Alma de la Fiesta y Rey del Brindis",
+      "titlePt": "A Alma da Festa e Rei do Brinde",
       "subtitle": "Crackling Joy · Friday Euphoria · Contagious Laughter",
       "subtitleKo": "바삭한 텐션 · 불금의 상징 · 유쾌한 비타민",
       "subtitleEs": "Alegría Crujiente · Euforia de Viernes · Risa Contagiosa",
+      "subtitlePt": "Alegria Crocante · Euforia de Sexta-Feira · Risada Contagiante",
       "skzoo": "Crispy Drumstick (바삭 닭다리)",
       "skzooKo": "황금 닭다리 요정 🍗",
       "skzooEs": "Hada Dorada Crujiente 🍗",
+      "skzooPt": "Fada da Coxinha Dourada Crocante 🍗",
       "emoji": "🍗",
       "traits": [
         "Vibrant & Fun",
@@ -181,16 +224,24 @@
         "Encanto Irresistible",
         "Espíritu Celebratorio"
       ],
+      "traitsPt": [
+        "Vibrante e Divertido",
+        "Charme Irresistível",
+        "Clima de Festa Sempre"
+      ],
       "description": "Like piping hot crunchy fried chicken and cold beer on a Friday night, you turn ordinary moments into pure euphoria! Your cheerful laugh makes everyone's worries vanish.",
       "descriptionKo": "금요일 밤 시원한 맥주와 갓 튀긴 바삭한 양념치킨처럼, 등장만으로 주위 분위기를 축제로 만드는 인간 비타민! 밝고 재치 있는 성격으로 어디서나 사랑받습니다.",
       "descriptionEs": "Como el pollo frito recién hecho y una cerveza helada un viernes, transformas cualquier día normal en una fiesta. Tu optimismo contagioso hace olvidar cualquier pena.",
+      "descriptionPt": "Como frango frito supercrocante saindo da hora com cerveja gelada numa sexta à noite, você transforma momentos comuns em pura euforia! Sua risada alegre faz as preocupações de todo mundo desaparecerem.",
       "bestMatchId": "hangangramen",
       "bestMatchName": "Han River Ramen",
       "bestMatchNameKo": "한강 즉석 라면",
       "bestMatchNameEs": "Ramen del Río Han",
+      "bestMatchNamePt": "Lámen do Rio Han",
       "bestMatchReason": "Night picnic partners! Spontaneous fun and festival laughter under the night sky.",
       "bestMatchReasonKo": "야경 피크닉 찐친 조합! 한강의 시원한 바람을 맞으며 밤새 수다 떨고 웃을 수 있는 자유로운 모험의 짝꿍입니다.",
       "bestMatchReasonEs": "¡Compañeros de pícnic nocturno! Risas, libertad y anécdotas bajo las estrellas.",
+      "bestMatchReasonPt": "Parceiros de piquenique noturno! Diversão espontânea e risadas de festival sob o céu estrelado.",
       "colorHex": "#f59e0b",
       "bgGradient": "from-amber-500 via-orange-600 to-slate-950"
     },
@@ -199,15 +250,19 @@
       "name": "Warm Winter Bungeoppang",
       "nameKo": "달콤하고 포근한 겨울 붕어빵",
       "nameEs": "Bungeoppang Dulce de Invierno",
+      "namePt": "Bungeoppang Quentinho de Inverno",
       "title": "Nostalgic Sweetheart & Pure Comfort",
       "titleKo": "추위를 녹이는 사랑스럽고 순수한 낭만파",
       "titleEs": "Dulzura Nostálgica y Corazón Tierno",
+      "titlePt": "Doçura Nostálgica e Puro Aconchego",
       "subtitle": "Cozy Nostalgia · Gentle Sweetness · Winter Wonder",
       "subtitleKo": "추억의 달콤함 · 갓 구운 온기 · 팥 vs 슈크림",
       "subtitleEs": "Nostalgia Cálida · Ternura Pura · Milagro Invernal",
+      "subtitlePt": "Nostalgia Aconchegante · Doçura Suave · Encanto de Inverno",
       "skzoo": "Goldfish Bun Spirit (붕어빵 정령)",
       "skzooKo": "붕어빵 꼬마정령 🐟",
       "skzooEs": "Espíritu de Bungeoppang 🐟",
+      "skzooPt": "Espírito do Bungeoppang 🐟",
       "emoji": "🐟",
       "traits": [
         "Warm & Loving",
@@ -224,16 +279,24 @@
         "Aprecia lo Simple",
         "Dulzura Inocente"
       ],
+      "traitsPt": [
+        "Caloroso e Carinhoso",
+        "Nostalgia Suave",
+        "Doçura Encantadora"
+      ],
       "description": "Like a paper bag of steaming Bungeoppang bought on a freezing winter evening, your gentle warmth melts the coldest hearts. You find joy in tiny, precious moments.",
       "descriptionKo": "칼바람 부는 퇴근길 품에 안고 가는 따끈한 붕어빵 종이봉투처럼, 존재 자체만으로 세상의 시린 마음을 녹여주는 다정한 사람! 작고 소박한 순간에서 가장 반짝이는 행복을 발견합니다.",
       "descriptionEs": "Como una bolsa de papel con Bungeoppang caliente en una noche helada de invierno, tu dulzura derrite cualquier tristeza. Sabes encontrar magia en los detalles sencillos.",
+      "descriptionPt": "Como um saquinho de papel cheio de Bungeoppang quentinho numa noite fria de inverno, seu carinho derrete até os corações mais gelados. Você encontra alegria nos pequenos e preciosos momentos.",
       "bestMatchId": "tteokbokki",
       "bestMatchName": "Spicy Tteokbokki",
       "bestMatchNameKo": "매운 떡볶이",
       "bestMatchNameEs": "Tteokbokki Picante",
+      "bestMatchNamePt": "Tteokbokki Apimentado",
       "bestMatchReason": "Sweet & Fiery harmony! You bring gentle peace while Tteokbokki brings bold adventurous spark.",
       "bestMatchReasonKo": "달콤함과 매운맛의 완벽한 조화! 떡볶이의 불같은 에너지를 부드럽게 감싸 안아주며 평생을 함께할 꿀케미를 발휘합니다.",
       "bestMatchReasonEs": "¡Equilibrio entre dulzura y pasión! Traes paz y ternura al corazón ardiente del Tteokbokki.",
+      "bestMatchReasonPt": "Harmonia entre doce e picante! Você traz paz e ternura, enquanto o Tteokbokki traz uma faísca ousada e aventureira.",
       "colorHex": "#d97706",
       "bgGradient": "from-amber-600 via-yellow-600 to-stone-900"
     },
@@ -242,15 +305,19 @@
       "name": "Harmonious Dolsot Bibimbap",
       "nameKo": "다채로운 매력의 돌솥비빔밥",
       "nameEs": "Dolsot Bibimbap Armónico",
+      "namePt": "Dolsot Bibimbap Harmonioso",
       "title": "The Master Integrator & Balanced Visionary",
       "titleKo": "모든 재료를 조화롭게 아우르는 올라운더",
       "titleEs": "El Integrador Sabio y Visionario Equilibrado",
+      "titlePt": "O Integrador Sábio e Visionário Equilibrado",
       "subtitle": "Perfect Balance · Vibrant Diversity · Sizzling Depth",
       "subtitleKo": "완벽한 밸런스 · 다재다능 · 바삭한 누룽지 내공",
       "subtitleEs": "Equilibrio Perfecto · Diversidad Viva · Esencia Profunda",
+      "subtitlePt": "Equilíbrio Perfeito · Diversidade Vibrante · Essência Profunda",
       "skzoo": "Seven Colors Fairy (오색나물 요정)",
       "skzooKo": "오색나물 요정 🍚",
       "skzooEs": "Hada de los Siete Colores 🍚",
+      "skzooPt": "Fada das Sete Cores 🍚",
       "emoji": "🍚",
       "traits": [
         "Balanced & Wise",
@@ -267,16 +334,24 @@
         "Multitalento Completo",
         "Une a Todos en Armonía"
       ],
+      "traitsPt": [
+        "Equilibrado e Sábio",
+        "Multitalentoso",
+        "Unificador Harmonioso"
+      ],
       "description": "Like vibrant ingredients beautifully brought together in a sizzling hot stone bowl, you understand how to bring distinct personalities into unified harmony! Multi-talented and grounded.",
       "descriptionKo": "나물, 고기, 계란, 참기름이 고추장과 어우러져 완벽한 한 그릇을 완성하듯, 서로 다른 개성을 하나로 모으는 지혜를 가진 사람! 다재다능하며 어떤 환경에서도 중심을 잃지 않습니다.",
       "descriptionEs": "Como ingredientes de mil colores unidos por el toque mágico del aceite de sésamo y gochujang, sabes unir a personas distintas en perfecta armonía. Sabio, equilibrado y talentoso.",
+      "descriptionPt": "Como ingredientes vibrantes reunidos em uma tigela de pedra quente crepitante, você sabe exatamente como unir personalidades diferentes em perfeita harmonia! Multitalentoso e centrado.",
       "bestMatchId": "bingsu",
       "bestMatchName": "Snow Bingsu",
       "bestMatchNameKo": "망고 눈꽃빙수",
       "bestMatchNameEs": "Bingsu de Nieve",
+      "bestMatchNamePt": "Bingsu Flocos de Neve",
       "bestMatchReason": "Aesthetic feast! Bibimbap's wholesome grounding perfectly complements Bingsu's artistic sweetness.",
       "bestMatchReasonKo": "건강한 든든함과 감각적인 디저트의 만남! 비빔밥의 단단한 균형감과 빙수의 화려한 미적 감각이 서로를 빛내줍니다.",
       "bestMatchReasonEs": "¡Un banquete estético! La solidez del Bibimbap complementa la creatividad visual del Bingsu.",
+      "bestMatchReasonPt": "Um banquete estético! A base sólida e nutritiva do Bibimbap complementa perfeitamente a doçura artística do Bingsu.",
       "colorHex": "#059669",
       "bgGradient": "from-emerald-700 via-teal-800 to-slate-950"
     },
@@ -285,15 +360,19 @@
       "name": "Free-Spirited Han River Ramen",
       "nameKo": "낭만 가득 자유로운 한강 편의점 라면",
       "nameEs": "Ramen Bohemio del Río Han",
+      "namePt": "Lámen Espírito Livre do Rio Han",
       "title": "Spontaneous Nomad & Breeze Chaser",
       "titleKo": "격식 따위 던져버린 낭만 모험가 & 자유로운 영혼",
       "titleEs": "Aventurero Libre y Amante de la Brisa",
+      "titlePt": "Aventureiro Espontâneo e Alma Livre",
       "subtitle": "Carefree Soul · Midnight Breeze · Instant Joy",
       "subtitleKo": "한강 둔치 낭만 · 즉흥 여행자 · 가식 없는 칠(Chill)",
       "subtitleEs": "Alma Libre · Brisa de Medianoche · Felicidad Simple",
+      "subtitlePt": "Alma Livre · Brisa da Meia-Noite · Alegria Instantânea",
       "skzoo": "Ramen Machine Sprite (은박지 정령)",
       "skzooKo": "은박지 뽀글이 정령 🍜",
       "skzooEs": "Duende del Ramen de Aluminio 🍜",
+      "skzooPt": "Duende do Lámen na Bandeja de Alumínio 🍜",
       "emoji": "🍜",
       "traits": [
         "Carefree & Spontaneous",
@@ -310,16 +389,24 @@
         "Bohemio Romántico",
         "Encanto Genuino"
       ],
+      "traitsPt": [
+        "Despreocupado e Espontâneo",
+        "Romântico Descontraído",
+        "Charme Autêntico"
+      ],
       "description": "Like boiling instant ramen on a foil tray under the Seoul river breeze, you don't need fancy things to be wonderfully happy. You live in the moment and follow your adventurous intuition.",
       "descriptionKo": "한강 바람을 맞으며 호호 불어먹는 은박지 라면처럼, 비싼 격식 없이도 인생의 낭만을 100% 즐길 줄 아는 멋진 자유인! 틀에 얽매이지 않고 순간의 행복에 충실한 쿨한 매력의 소유자입니다.",
       "descriptionEs": "Como un ramen humeante cocinado frente a la brisa nocturna del río Han, no necesitas lujos para ser inmensamente feliz. Vives el momento con autenticidad y libertad total.",
+      "descriptionPt": "Como um lámen instantâneo fervendo na bandeja de alumínio sob a brisa do Rio Han em Seul, você não precisa de luxo para ser imensamente feliz. Você vive o momento e segue sua intuição aventureira.",
       "bestMatchId": "chimaek",
       "bestMatchName": "Crispy Chimaek",
       "bestMatchNameKo": "바삭 치맥",
       "bestMatchNameEs": "Chimaek",
+      "bestMatchNamePt": "Chimaek Crocante",
       "bestMatchReason": "The riverside dream team! Spontaneous ramen and celebratory chicken turn any night into magic.",
       "bestMatchReasonKo": "한강 피크닉의 양대 산맥! 자유로운 라면과 흥 넘치는 치맥이 만나 밤새 웃음이 끊이지 않는 환상의 파트너가 됩니다.",
       "bestMatchReasonEs": "¡El dúo soñado junto al río! Ramen libre y pollo crujiente hacen magia en cualquier noche.",
+      "bestMatchReasonPt": "A dupla dos sonhos à beira do rio! O lámen espontâneo e o frango frito festivo transformam qualquer noite em pura magia.",
       "colorHex": "#2563eb",
       "bgGradient": "from-blue-600 via-indigo-700 to-slate-950"
     },
@@ -328,15 +415,19 @@
       "name": "Chic Mango Snow Bingsu",
       "nameKo": "달콤하고 화려한 망고 눈꽃빙수",
       "nameEs": "Bingsu de Mango Elegante",
+      "namePt": "Bingsu Elegante de Manga",
       "title": "Aesthetic Dreamer & Trendsetting Visual",
       "titleKo": "트렌드를 이끄는 감각적인 예술가 & 비주얼 퀸",
       "titleEs": "Artista Estético e Icono de Tendencias",
+      "titlePt": "Sonhador Estético e Ícone de Tendências",
       "subtitle": "Fluffy Elegance · Trendy Eye · Sweet Escapism",
       "subtitleKo": "눈꽃 식감 · 비주얼 끝판왕 · 달콤한 힐링 디저트",
       "subtitleEs": "Elegancia de Nieve · Ojo para la Moda · Dulce Refugio",
+      "subtitlePt": "Elegância de Neve · Olhar Fashion · Doce Refúgio",
       "skzoo": "Snowflake Berry Spirit (눈꽃 빙수 요정)",
       "skzooKo": "눈꽃 빙수 요정 🍧",
       "skzooEs": "Hada de Nieve Dulce 🍧",
+      "skzooPt": "Fada do Bingsu Flocos de Neve 🍧",
       "emoji": "🍧",
       "traits": [
         "Aesthetic Vision",
@@ -353,16 +444,24 @@
         "Dulce y Refrescante",
         "Gusto Vanguardista"
       ],
+      "traitsPt": [
+        "Visão Estética",
+        "Doce e Refrescante",
+        "Gosto de Trendsetter"
+      ],
       "description": "Like fluffy milk snowflakes topped with sweet mango and condensed milk, you bring beauty, sweetness, and stylish polish to everything you touch. You appreciate elegance and good taste.",
       "descriptionKo": "사르르 녹는 부드러운 우유 눈꽃 위에 달콤한 망고가 듬뿍 올라간 빙수처럼, 감각적이고 스타일리시한 트렌드세터! 아름다운 비주얼과 달콤한 분위기로 사람들의 일상에 특별한 쉼을 선물합니다.",
       "descriptionEs": "Como copos de nieve de leche con mango dulce y leche condensada, aportas estilo, dulzura y belleza a todo lo que tocas. Tienes un gusto impecable y un encanto visual único.",
+      "descriptionPt": "Como flocos de neve de leite macios cobertos com manga doce e leite condensado, você traz beleza, doçura e sofisticação a tudo o que toca. Você valoriza a elegância e o bom gosto.",
       "bestMatchId": "bibimbap",
       "bestMatchName": "Dolsot Bibimbap",
       "bestMatchNameKo": "돌솥비빔밥",
       "bestMatchNameEs": "Bibimbap",
+      "bestMatchNamePt": "Dolsot Bibimbap",
       "bestMatchReason": "Hot & Cool harmony! The warm grounded depths of Bibimbap balance your refreshing artistic sweetness.",
       "bestMatchReasonKo": "온탕과 냉탕의 완벽한 앙상블! 뜨겁고 든든한 비빔밥의 내공과 시원달콤한 빙수의 감각이 만나 완벽한 미식 풀코스를 완성합니다.",
       "bestMatchReasonEs": "¡Frío y calor en armonía! La solidez del Bibimbap equilibra tu refrescante dulzura artística.",
+      "bestMatchReasonPt": "Harmonia entre o quente e o frio! A profundidade calorosa do Bibimbap equilibra sua doçura artística e refrescante.",
       "colorHex": "#ec4899",
       "bgGradient": "from-pink-500 via-rose-600 to-indigo-950"
     }
@@ -373,6 +472,7 @@
       "question": "What is your dream breakfast when waking up on a free Saturday morning?",
       "questionKo": "토요일 아침, 느지막이 눈을 떴을 때 가장 먼저 생각나는 아침 식사는?",
       "questionEs": "¿Cuál es tu desayuno soñado al despertar un sábado libre?",
+      "questionPt": "Qual é o seu café da manhã dos sonhos ao acordar num sábado de folga?",
       "emoji": "☀️",
       "options": [
         {
@@ -380,6 +480,7 @@
           "text": "Hot, bubbling stew with warm rice that warms up the entire body",
           "textKo": "뚝배기에서 보글보글 끓는 칼칼한 찌개에 갓 지은 흰쌀밥 한 공기",
           "textEs": "Un caldo caliente y reconfortante con arroz blanco que despierte el cuerpo",
+          "textPt": "Um ensopado quentinho borbulhando com arroz branco para aquecer o corpo inteiro",
           "scores": { "kimchijjigae": 3, "samgyeopsal": 1 }
         },
         {
@@ -387,6 +488,7 @@
           "text": "Spicy morning noodle kick that wakes up all my senses immediately!",
           "textKo": "잠든 세포를 한 번에 깨워주는 매콤하고 화끈한 라면이나 떡볶이",
           "textEs": "¡Algo picante que despierte todos mis sentidos de un solo bocado!",
+          "textPt": "Algo bem apimentado logo cedo para despertar todos os meus sentidos na hora!",
           "scores": { "tteokbokki": 3, "hangangramen": 1 }
         },
         {
@@ -394,6 +496,7 @@
           "text": "Aesthetic café brunch with fluffy pastries, coffee, and sweet desserts",
           "textKo": "예쁜 브런치 카페에서 즐기는 폭신한 디저트, 과일, 그리고 시원한 커피",
           "textEs": "Brunch estético en una cafetería con postres esponjosos y café helado",
+          "textPt": "Um brunch lindo de cafeteria com pães fofinhos, café gelado e doces deliciosos",
           "scores": { "bingsu": 3, "bungeoppang": 1 }
         },
         {
@@ -401,6 +504,7 @@
           "text": "Whatever is convenient! A quick bite while looking out the window",
           "textKo": "격식 없이 간단하게! 창밖 바람 쐬며 뚝딱 끓여 먹는 간편식",
           "textEs": "¡Lo que haya sin complicaciones! Un bocado rápido disfrutando la mañana",
+          "textPt": "O que for mais prático! Um lanche rápido curtindo a brisa da janela",
           "scores": { "hangangramen": 3, "bibimbap": 1 }
         }
       ]
@@ -410,6 +514,7 @@
       "question": "After a grueling 50-hour work/study week, it's 7 PM Friday! What are you eating?",
       "questionKo": "치열했던 한 주가 끝나고 맞이한 불금 저녁 7시! 당신의 영혼을 달래줄 첫 메뉴는?",
       "questionEs": "Tras una semana agotadora de estudio/trabajo, ¡son las 7 PM del viernes! ¿Qué cenas?",
+      "questionPt": "Depois de uma semana puxada de trabalho ou estudos, são 19h de sexta-feira! O que você vai comer?",
       "emoji": "🎉",
       "options": [
         {
@@ -417,6 +522,7 @@
           "text": "Sizzling thick pork belly (Samgyeopsal) on a hot grill with soju and friends",
           "textKo": "지글지글 달궈진 불판 위의 두툼한 삼겹살에 소주 한 잔, 시끌벅적한 이야기",
           "textEs": "Panceta de cerdo asándose a la parrilla con soju frío y risas con amigos",
+          "textPt": "Panceta suculenta (Samgyeopsal) chiando na grelha quente com soju e amigos",
           "scores": { "samgyeopsal": 3, "chimaek": 1 }
         },
         {
@@ -424,6 +530,7 @@
           "text": "Crispy golden fried chicken delivered piping hot with icy cold draft beer",
           "textKo": "바삭바삭한 갓 튀긴 치킨에 목 넘김이 짜릿한 시원한 생맥주 (치맥!)",
           "textEs": "Pollo frito crujiente recién entregado con cerveza de barril helada (Chimaek)",
+          "textPt": "Frango frito dourado e supercrocante entregue quentinho com cerveja trincando de gelada (Chimaek!)",
           "scores": { "chimaek": 3, "hangangramen": 1 }
         },
         {
@@ -431,6 +538,7 @@
           "text": "Blazing red spicy tteokbokki loaded with melted cheese and fish cakes",
           "textKo": "치즈를 듬뿍 얹어 눈물 쏙 빼게 매콤한 엽기 떡볶이로 스트레스 전소!",
           "textEs": "Tteokbokki súper picante bañado en queso derretido para quemar el estrés",
+          "textPt": "Tteokbokki superapimentado coberto de queijo derretido para queimar todo o estresse",
           "scores": { "tteokbokki": 3, "kimchijjigae": 1 }
         },
         {
@@ -438,6 +546,7 @@
           "text": "Comfort food spot: rich hearty soup where I can relax without rushing",
           "textKo": "조용한 단골 식당에서 푸짐한 한식 한 상과 든든한 찌개로 편안한 휴식",
           "textEs": "Un restaurante tranquilo con un guiso casero tradicional donde comer sin prisas",
+          "textPt": "Um restaurante acolhedor com um caldo caseiro bem rico onde posso relaxar sem pressa",
           "scores": { "kimchijjigae": 3, "bibimbap": 1 }
         }
       ]
@@ -447,6 +556,7 @@
       "question": "Your boss or a rude stranger ruined your afternoon. How do you blow off that rage?",
       "questionKo": "최악의 스트레스를 받아 분노가 머리끝까지 솟구쳤을 때, 당신의 스트레스 해소법은?",
       "questionEs": "Tuviste un día pésimo y necesitas desahogar la rabia. ¿Qué haces?",
+      "questionPt": "Alguém estragou a sua tarde e você precisa descontar a raiva. Como você alivia o estresse?",
       "emoji": "💥",
       "options": [
         {
@@ -454,6 +564,7 @@
           "text": "Eat the spiciest food on the menu until I sweat out every bit of anger!",
           "textKo": "입에서 불이 날 정도로 극한의 매운맛을 먹고 땀 흘리며 스트레스를 날린다",
           "textEs": "¡Comer lo más picante del menú hasta sudar toda la frustración!",
+          "textPt": "Comer o prato mais apimentado do cardápio até suar cada gota de raiva!",
           "scores": { "tteokbokki": 3, "kimchijjigae": 1 }
         },
         {
@@ -461,6 +572,7 @@
           "text": "Gather my favorite people, grill hearty food, and vent loudly together",
           "textKo": "내 편인 사람들을 모아 맛있는 고기를 구워 먹으며 시원하게 수다로 턴다",
           "textEs": "Reunir a mi gente de confianza, asar buena comida y desahogarme entre risas",
+          "textPt": "Reunir minha galera favorita, assar uma carne deliciosa e desabafar dando boas risadas",
           "scores": { "samgyeopsal": 3, "chimaek": 1 }
         },
         {
@@ -468,6 +580,7 @@
           "text": "Treat myself to an indulgent, ultra-sweet aesthetic dessert to soothe my heart",
           "textKo": "달콤하고 화려한 프리미엄 디저트를 나 자신에게 선물해 당 충전으로 위로받는다",
           "textEs": "Regalarme un postre exquisito, dulce y hermoso para calmar el corazón",
+          "textPt": "Me presentear com uma sobremesa linda, caprichada e bem doce para acalmar o coração",
           "scores": { "bingsu": 3, "bungeoppang": 1 }
         },
         {
@@ -475,6 +588,7 @@
           "text": "Take a solo walk in the cool night breeze, eat simple comfort street food",
           "textKo": "시원한 밤바람을 쐬며 혼자 산책하다가 따뜻한 길거리 간식으로 조용히 달랜다",
           "textEs": "Caminar solo sintiendo la brisa fresca de la noche y comer algo cálido al paso",
+          "textPt": "Fazer uma caminhada sozinho na brisa fresca da noite e comer um lanchinho de rua quentinho",
           "scores": { "hangangramen": 3, "bungeoppang": 1 }
         }
       ]
@@ -484,6 +598,7 @@
       "question": "You arrive at a K-BBQ restaurant with friends. Who are you at the table?",
       "questionKo": "친구들과 삼겹살집에 도착했다! 불판 앞 당신의 자연스러운 행동은?",
       "questionEs": "Llegas a una barbacoa coreana con amigos. ¿Qué papel tomas en la mesa?",
+      "questionPt": "Você chega a um restaurante de churrasco coreano (K-BBQ) com os amigos. Quem é você na mesa?",
       "emoji": "🥓",
       "options": [
         {
@@ -491,6 +606,7 @@
           "text": "The Grill Master: I hold the tongs and scissors, flipping meat with golden timing!",
           "textKo": "집게와 가위는 내 손에! 가장 완벽한 굽기로 고기를 구워 친구들 앞에 놔준다",
           "textEs": "El maestro parrillero: tomo las pinzas y corto la carne con precisión dorada",
+          "textPt": "O Mestre da Grelha: pego o pegador e a tesoura, virando a carne no ponto dourado perfeito!",
           "scores": { "samgyeopsal": 3, "bibimbap": 1 }
         },
         {
@@ -498,6 +614,7 @@
           "text": "The Moodmaker: I pour the drinks, lead the toasts, and make sure everyone laughs",
           "textKo": "술잔 채우고 건배사 외치며 테이블의 텐션을 최고조로 끌어올리는 분위기 메이커",
           "textEs": "El animador: sirvo las bebidas, propongo brindis y mantengo a todos riendo",
+          "textPt": "O Animador da Galera: sirvo as bebidas, puxo os brindes e garanto a risada de todo mundo",
           "scores": { "chimaek": 3, "tteokbokki": 1 }
         },
         {
@@ -505,6 +622,7 @@
           "text": "The Gourmet Artist: Carefully assembling the supreme ssam (leaf + garlic + ssamjang + rice)",
           "textKo": "상추와 깻잎, 구운 마늘과 파채의 환상 조합으로 예술적인 쌈을 완성해 감탄하며 먹기",
           "textEs": "El artista gourmet: armo el envoltorio perfecto (hoja, carne, ajo y ssamjang)",
+          "textPt": "O Artista Gourmet: monto cuidadosamente o ssam perfeito (folha + alho + ssamjang + arroz)",
           "scores": { "bibimbap": 3, "samgyeopsal": 1 }
         },
         {
@@ -512,6 +630,7 @@
           "text": "The Finale Strategist: Already anticipating the essential Kimchi fried rice finish!",
           "textKo": "'고기 적당히 남겨둬, 마지막에 볶음밥 볶아야 해!' K-디저트 볶음밥 빌드업 담당",
           "textEs": "El estratega final: '¡Guarden carne, que al final viene el arroz frito en la plancha!'",
+          "textPt": "O Estrategista do Gran Finale: já estou planejando o arroz frito com kimchi na chapa no final!",
           "scores": { "kimchijjigae": 3, "hangangramen": 1 }
         }
       ]
@@ -521,6 +640,7 @@
       "question": "It's a rainy afternoon outside. Gray skies, gentle rain drops. What's calling your name?",
       "questionKo": "비가 추적추적 내리는 회색빛 오후, 창밖을 보며 가장 참기 힘든 음식은?",
       "questionEs": "Tarde lluviosa y cielo gris. Miras por la ventana. ¿Qué se te antoja comer?",
+      "questionPt": "É uma tarde chuvosa lá fora. Céu cinzento e barulhinho de chuva. O que dá mais água na boca?",
       "emoji": "🌧️",
       "options": [
         {
@@ -528,6 +648,7 @@
           "text": "Deep bubbling Kimchi stew or hot noodle soup that warms your very bones",
           "textKo": "빗소리와 함께 보글보글 끓는 뜨끈한 김치찌개나 진한 칼국수 국물",
           "textEs": "Un caldo de kimchi hirviendo a fuego lento que caliente hasta los huesos",
+          "textPt": "Um ensopado de Kimchi borbulhando ou sopa de macarrão quentinha que aquece até a alma",
           "scores": { "kimchijjigae": 3, "hangangramen": 1 }
         },
         {
@@ -535,6 +656,7 @@
           "text": "Crispy Pajeon (scallion pancake) with cloudy Korean rice wine (Makgeolli)",
           "textKo": "지글지글 빗소리를 닮은 바삭한 해물파전과 달콤하고 톡 쏘는 막걸리 한 사발",
           "textEs": "Tortilla crujiente de cebolleta (Pajeon) con vino de arroz coreano (Makgeolli)",
+          "textPt": "Pajeon crocante (panqueca coreana de cebolinha) com vinho de arroz coreano (Makgeolli)",
           "scores": { "chimaek": 3, "samgyeopsal": 1 }
         },
         {
@@ -542,6 +664,7 @@
           "text": "Steaming hot spicy street tteokbokki with crispy fried dumplings",
           "textKo": "비 오는 날 포장마차 천막 아래서 먹는 매콤한 떡볶이와 바삭한 튀김범벅",
           "textEs": "Tteokbokki picante bien caliente bajo el toldo de un puesto callejero",
+          "textPt": "Tteokbokki de rua fumegante e apimentado com guiozas fritos supercrocantes",
           "scores": { "tteokbokki": 3, "bungeoppang": 1 }
         },
         {
@@ -549,6 +672,7 @@
           "text": "Freshly baked warm sweet Bungeoppang straight from the street griddle",
           "textKo": "빗길 퇴근길에 만난 갓 구워 겉바속촉 달콤한 팥 붕어빵 한 봉지",
           "textEs": "Una bolsa de Bungeoppang dulce recién salido del molde caliente",
+          "textPt": "Um saquinho de Bungeoppang doce recém-assado saindo quentinho da forminha na rua",
           "scores": { "bungeoppang": 3, "bingsu": 1 }
         }
       ]
@@ -558,6 +682,7 @@
       "question": "At 11:30 PM, you open Netflix. What midnight snack is sitting beside you?",
       "questionKo": "밤 11시 30분, 침대에서 넷플릭스를 틀었다! 옆자리에 놓여 있는 야식은?",
       "questionEs": "11:30 PM, enciendes Netflix en la cama. ¿Qué tentación nocturna tienes al lado?",
+      "questionPt": "Às 23h30, você abre a Netflix. Qual lanche da madrugada está ao seu lado?",
       "emoji": "📺",
       "options": [
         {
@@ -565,6 +690,7 @@
           "text": "Piping hot spicy cup ramen with crisp kimchi and a cheese slice",
           "textKo": "치즈 한 장 얹은 칼칼한 라면에 아삭한 김치! 참을 수 없는 3분의 마법",
           "textEs": "Ramen instantáneo picante con queso derretido y kimchi crujiente",
+          "textPt": "Lámen apimentado bem quente com uma fatia de queijo derretido e kimchi crocante",
           "scores": { "hangangramen": 3, "tteokbokki": 1 }
         },
         {
@@ -572,6 +698,7 @@
           "text": "Sweet, saucy fried chicken pieces that crackle with every bite",
           "textKo": "양념 소스가 반짝이는 겉바속촉 순살 치킨과 아삭한 치킨 무",
           "textEs": "Trozos de pollo frito bañado en salsa dulce y picante con rábano crujiente",
+          "textPt": "Pedaços de frango frito coreano banhados em molho agridoce que crocam a cada mordida",
           "scores": { "chimaek": 3, "samgyeopsal": 1 }
         },
         {
@@ -579,6 +706,7 @@
           "text": "A sweet midnight treat: ice cream, fruit bingsu, or bakery bread",
           "textKo": "하루를 달콤하게 마무리하는 시원한 아이스크림 빙수나 부드러운 빵",
           "textEs": "Un capricho dulce: bingsu helado con fruta fresca o repostería suave",
+          "textPt": "Um mimo doce da meia-noite: sorvete, bingsu de frutas ou pãozinho macio de padaria",
           "scores": { "bingsu": 3, "bungeoppang": 1 }
         },
         {
@@ -586,6 +714,7 @@
           "text": "Comfort street snacks: chewy spicy rice cakes and fish cake soup",
           "textKo": "출출함을 달래주는 쫀득한 떡볶이와 뜨끈한 어묵 국물 한 컵",
           "textEs": "Snacks callejeros: pastelitos de arroz masticables con caldo de pescado",
+          "textPt": "Clássicos de rua: bolinhos de arroz macios e apimentados (tteokbokki) com caldo quente de odeng",
           "scores": { "tteokbokki": 3, "kimchijjigae": 1 }
         }
       ]
@@ -595,6 +724,7 @@
       "question": "It's a breezy spring afternoon at Han River Park (한강공원). What is your essential stop?",
       "questionKo": "화창한 봄날, 한강공원에 돗자리 펴고 피크닉을 갔다! 절대 빼놓을 수 없는 코스는?",
       "questionEs": "Tarde de pícnic en el parque del Río Han en Seúl. ¿Cuál es tu parada obligatoria?",
+      "questionPt": "É uma tarde agradável de primavera no Parque do Rio Han (한강공원), em Seul. Qual é a sua parada obrigatória?",
       "emoji": "🏕️",
       "options": [
         {
@@ -602,6 +732,7 @@
           "text": "The Foil Ramen Machine: Pressing the boiling button and watching the noodles bubble by the river!",
           "textKo": "한강 편의점 즉석 라면 조리기! 은박지 용기 올려두고 보글보글 끓여 강바람 맞으며 먹기",
           "textEs": "La máquina de ramen en bandeja de aluminio: cocinar frente al río y comer con la brisa",
+          "textPt": "A Máquina de Lámen na Bandeja de Alumínio: apertar o botão na loja de conveniência e ver o macarrão ferver à beira do rio!",
           "scores": { "hangangramen": 3, "tteokbokki": 1 }
         },
         {
@@ -609,6 +740,7 @@
           "text": "Delivery Zone: Ordering crispy chicken directly to Picnic Tent Zone #3!",
           "textKo": "한강 배달존에서 갓 튀긴 치킨 받아서 돗자리에 펼쳐놓고 노을 보며 치맥하기",
           "textEs": "Zona de entrega: pedir pollo frito crujiente directamente a la manta de pícnic",
+          "textPt": "Zona de Delivery: pedir frango frito crocante direto na esteira de piquenique vendo o pôr do sol!",
           "scores": { "chimaek": 3, "samgyeopsal": 1 }
         },
         {
@@ -616,6 +748,7 @@
           "text": "Street snacks: Walking along the stalls buying Hotteok, corn, and grilled skewers",
           "textKo": "강변 산책로를 따라 걷다가 만난 길거리 간식과 붕어빵을 사 들고 벤치에서 즐기기",
           "textEs": "Comprar snacks callejeros a los vendedores ambulantes y pasear por la orilla",
+          "textPt": "Comidinhas de rua: caminhar pelas barraquinhas comprando Hotteok, milho e espetinhos grelhados",
           "scores": { "bungeoppang": 3, "bingsu": 1 }
         },
         {
@@ -623,6 +756,7 @@
           "text": "A beautiful fruit and snack platter packed neatly in aesthetic lunch boxes",
           "textKo": "예쁜 도시락통에 정갈하게 싸 온 과일과 김밥을 꺼내 감성 사진 남기기",
           "textEs": "Una cesta estética con fruta fresca y kimbap bien cortado para fotos bonitas",
+          "textPt": "Uma cesta linda com frutas frescas e kimbap caprichado em marmitinhas estéticas para tirar fotos",
           "scores": { "bibimbap": 3, "bingsu": 1 }
         }
       ]
@@ -632,6 +766,7 @@
       "question": "On a freezing winter evening walk, you spot steam rising from a street cart. Your reaction?",
       "questionKo": "영하의 추운 겨울밤, 길거리 포장마차에서 모락모락 김이 피어오르는 것을 보았다면?",
       "questionEs": "En una noche helada de invierno ves vapor saliendo de un puesto callejero. ¿Qué haces?",
+      "questionPt": "Numa noite congelante de inverno, você vê aquela fumacinha subindo de uma barraca de rua (pojangmacha). Qual é a sua reação?",
       "emoji": "🍢",
       "options": [
         {
@@ -639,6 +774,7 @@
           "text": "I immediately stop, grab a wooden skewer of fish cake, and sip the steaming soup!",
           "textKo": "발걸음 자동 정지! 종이컵에 뜨끈한 어묵 국물 국자로 떠서 호호 불며 원샷",
           "textEs": "¡Parada obligatoria! Tomar una brocheta de pescado y beber el caldo hirviendo",
+          "textPt": "Paro na hora, pego um espetinho de massa de peixe (odeng) e tomo o caldo fumegante no copinho!",
           "scores": { "kimchijjigae": 3, "hangangramen": 1 }
         },
         {
@@ -646,6 +782,7 @@
           "text": "Buy a bag of fresh Bungeoppang or Hotteok to keep in my jacket pocket like a hand warmer",
           "textKo": "갓 구운 붕어빵 종이봉투를 사서 주머니에 핫팩처럼 넣고 행복하게 걸어가기",
           "textEs": "Comprar una bolsa de Bungeoppang caliente y llevarla en el bolsillo como calentador",
+          "textPt": "Compro um saquinho de Bungeoppang ou Hotteok fresquinho para guardar no bolso do casaco e esquentar as mãos",
           "scores": { "bungeoppang": 3, "bingsu": 1 }
         },
         {
@@ -653,6 +790,7 @@
           "text": "Step inside the plastic tent, order tteokbokki and blood sausage (Sundae) with dipping salt",
           "textKo": "비닐 천막 젖히고 들어가 빨간 떡볶이와 순대 내장 섞어서 푸짐하게 먹기",
           "textEs": "Entrar a la carpa plástica y pedir tteokbokki con morcilla coreana (Sundae)",
+          "textPt": "Entro na barraca plástica e peço um prato farto de tteokbokki bem vermelho com sundae",
           "scores": { "tteokbokki": 3, "samgyeopsal": 1 }
         },
         {
@@ -660,6 +798,7 @@
           "text": "Call a friend: 'Hey, are you free right now? Meet me at the street cart!'",
           "textKo": "친구에게 바로 전화! '야 너 지금 어디야? 여기 포차로 나와 치킨에 한잔하자!'",
           "textEs": "Llamar a un amigo: 'Oye, ¿estás libre? ¡Ven al puesto a tomar algo caliente!'",
+          "textPt": "Ligo para um amigo na hora: 'Ei, está livre agora? Vem me encontrar aqui na barraquinha!'",
           "scores": { "chimaek": 3, "hangangramen": 1 }
         }
       ]
@@ -669,6 +808,7 @@
       "question": "After finishing a great meal, what does 'dessert' represent in your life?",
       "questionKo": "맛있는 식사를 마친 뒤, 당신에게 '디저트'란 인생에서 어떤 의미인가요?",
       "questionEs": "Tras terminar una gran comida, ¿qué representa el postre en tu vida?",
+      "questionPt": "Depois de terminar uma ótima refeição, o que a 'sobremesa' representa na sua vida?",
       "emoji": "🍰",
       "options": [
         {
@@ -676,6 +816,7 @@
           "text": "The true star of the day! A gorgeous, fluffy Bingsu or cake that completes happiness",
           "textKo": "식사의 진정한 주인공! 보기만 해도 행복해지는 화려한 눈꽃빙수나 예쁜 케이크",
           "textEs": "¡La verdadera estrella! Un bingsu esponjoso o pastel hermoso que completa el día",
+          "textPt": "A verdadeira estrela do dia! Um Bingsu lindo e fofinho ou um bolo perfeito que completa a felicidade",
           "scores": { "bingsu": 3, "bungeoppang": 1 }
         },
         {
@@ -683,6 +824,7 @@
           "text": "In Korea, fried rice in the leftover pan IS the dessert! Carbon on carbs!",
           "textKo": "한국인의 디저트는 볶음밥이지! 남은 양념에 밥 볶아서 누룽지까지 긁어먹어야 끝!",
           "textEs": "¡En Corea el postre es el arroz frito en la plancha! ¡Carbohidratos sobre salsa!",
+          "textPt": "Na Coreia, o arroz frito preparado na própria chapa no final É a sobremesa! Raspar até a crostinha!",
           "scores": { "samgyeopsal": 3, "kimchijjigae": 1 }
         },
         {
@@ -690,6 +832,7 @@
           "text": "A warm, nostalgic small bite: sweet Bungeoppang or Hotteok from a street cart",
           "textKo": "배불러도 들어가는 따끈따끈 달콤한 붕어빵이나 꿀호떡 하나로 소박한 행복",
           "textEs": "Un bocado dulce y nostálgico: un Bungeoppang caliente al paso por la calle",
+          "textPt": "Um docinho quentinho e nostálgico: um Bungeoppang ou Hotteok com mel comprado na rua",
           "scores": { "bungeoppang": 3, "chimaek": 1 }
         },
         {
@@ -697,6 +840,7 @@
           "text": "A simple iced americano while walking in the fresh air to digest",
           "textKo": "시원한 아이스 아메리카노 한 잔 들고 바람 쐬며 산책하는 깔끔한 마무리",
           "textEs": "Un café americano helado mientras paseo al aire libre para hacer la digestión",
+          "textPt": "Um Iced Americano bem gelado enquanto caminho ao ar livre para fazer a digestão",
           "scores": { "hangangramen": 3, "bibimbap": 1 }
         }
       ]
@@ -706,6 +850,7 @@
       "question": "At the end of the day, what does a good meal truly mean to you in life?",
       "questionKo": "마지막 질문! 당신에게 '좋은 한 끼의 식사'란 삶에서 궁극적으로 어떤 의미인가요?",
       "questionEs": "¡Última pregunta! Para ti, ¿qué significa realmente 'una buena comida' en la vida?",
+      "questionPt": "Última pergunta! No fim das contas, o que 'uma boa refeição' realmente significa para você na vida?",
       "emoji": "💖",
       "options": [
         {
@@ -713,6 +858,7 @@
           "text": "Healing love: It restores my soul, comforts my tears, and reminds me I am cared for",
           "textKo": "치유와 온기: 지친 영혼을 달래주고, 사랑받고 있음을 일깨워주는 따스한 위로",
           "textEs": "Sanación y calor: reconforta el alma y recuerda que la vida merece la pena",
+          "textPt": "Amor que cura: restaura minha alma, enxuga as lágrimas e me lembra de que sou acolhido",
           "scores": { "kimchijjigae": 3, "bungeoppang": 1 }
         },
         {
@@ -720,6 +866,7 @@
           "text": "Joy and celebration: An excuse to laugh, shout, and make memories with cherished people",
           "textKo": "축제와 활력: 소중한 사람들과 크게 웃고 행복한 추억을 나누는 인생의 비타민",
           "textEs": "Fiesta y alegría: el motivo perfecto para reír y crear recuerdos con seres queridos",
+          "textPt": "Alegria e celebração: o motivo perfeito para rir alto, brindar e criar memórias com quem eu amo",
           "scores": { "chimaek": 3, "samgyeopsal": 1 }
         },
         {
@@ -727,6 +874,7 @@
           "text": "Passionate fire: Pure excitement that fuels my ambition and burns away hesitation!",
           "textKo": "열정과 원동력: 온몸에 활기를 불어넣고 앞으로 나아가게 만드는 화끈한 에너지",
           "textEs": "Pasión y fuego: pura emoción que alimenta mis ganas de vivir con intensidad",
+          "textPt": "Chama de paixão: pura empolgação que alimenta minha ambição e queima qualquer hesitação!",
           "scores": { "tteokbokki": 3, "hangangramen": 1 }
         },
         {
@@ -734,6 +882,7 @@
           "text": "Art and sweet balance: Adding color, aesthetics, and delightful sweetness to daily life",
           "textKo": "예술과 조화: 반복되는 일상에 다채로운 색채와 달콤한 여유를 더해주는 행복",
           "textEs": "Arte y armonía: aportar belleza, dulzura y equilibrio a la rutina de cada día",
+          "textPt": "Arte e equilíbrio doce: adicionar cor, beleza e uma doçura encantadora à rotina do dia a dia",
           "scores": { "bingsu": 3, "bibimbap": 1 }
         }
       ]

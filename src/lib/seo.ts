@@ -42,6 +42,13 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'blackpink test alma gemela',
       'con que miembro de blackpink eres compatible',
       'blackpink test espanol',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual membro do blackpink voce e',
+      'qual integrante do blackpink voce e',
+      'teste qual membro do blackpink voce e',
+      'teste de personalidade blackpink',
+      'quiz blackpink portugues',
+      'quem voce seria no blackpink',
     ],
   },
   'which-bts-member-are-you': {
@@ -73,6 +80,13 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'miembro de bts segun tu personalidad',
       'con quien de bts eres compatible',
       'alma gemela bts test',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual membro do bts voce e',
+      'qual integrante do bts voce e',
+      'qual membro do bts e sua alma gemea',
+      'teste de personalidade bts',
+      'quiz bts portugues',
+      'quem voce e no bts',
     ],
   },
   'which-bts-member-is-your-soulmate': {
@@ -98,6 +112,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'alma gemela bts test',
       'que miembro de bts seria tu mejor amigo',
       'test bts mejor amigo',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual membro do bts e sua alma gemea',
+      'teste alma gemea bts',
+      'qual membro do bts seria seu melhor amigo',
+      'quiz bts alma gemea portugues',
     ],
   },
   'blackpink-blink-trivia': {
@@ -125,6 +144,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'trivia blackpink espanol',
       'test blink espanol',
       'quiz blackpink preguntas',
+      // Portuguese keywords
+      'quiz de blackpink em portugues',
+      'perguntas sobre blackpink',
+      'quanto voce sabe sobre blackpink',
+      'teste blink portugues',
     ],
   },
   'bts-army-trivia': {
@@ -149,6 +173,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'trivia bts espanol',
       'test army espanol',
       'quiz bts preguntas',
+      // Portuguese keywords
+      'quiz do bts em portugues',
+      'quanto voce sabe sobre o bts',
+      'perguntas sobre bts',
+      'teste army portugues',
     ],
   },
   'stray-kids-stay-trivia': {
@@ -169,6 +198,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'cuanto sabes de stray kids',
       'preguntas de stray kids',
       'test stay espanol',
+      // Portuguese keywords
+      'quiz stray kids portugues',
+      'quanto voce sabe sobre stray kids',
+      'perguntas stray kids',
+      'teste stay portugues',
     ],
   },
   'which-stray-kids-member-are-you': {
@@ -195,6 +229,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'test stray kids espanol',
       'quien eres de stray kids',
       'stray kids alma gemela test',
+      // Portuguese keywords
+      'qual membro do stray kids voce e',
+      'qual integrante do stray kids voce e',
+      'teste stray kids portugues',
+      'qual skzoo voce e',
     ],
   },
   'kpop-fandom-trivia': {
@@ -215,6 +254,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'test de kpop en espanol',
       'cuanto sabes de kpop',
       'preguntas de kpop espanol',
+      // Portuguese keywords
+      'quiz kpop portugues',
+      'teste de kpop em portugues',
+      'quanto voce sabe de kpop',
+      'perguntas de kpop',
     ],
   },
   'kdrama-trope-trivia': {
@@ -234,6 +278,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'test dramas coreanos espanol',
       'cuanto sabes de doramas',
       'quiz series coreanas',
+      // Portuguese keywords
+      'quiz dorama portugues',
+      'teste de doramas coreanos',
+      'quanto voce sabe sobre doramas',
+      'quiz round 6',
     ],
   },
   'korean-culture-iq': {
@@ -252,6 +301,10 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'quiz cultura coreana',
       'test cultura de corea del sur',
       'costumbres coreanas quiz',
+      // Portuguese keywords
+      'quiz cultura coreana',
+      'teste sobre a coreia do sul',
+      'costumes coreanos quiz',
     ],
   },
   'korean-spicy-food': {
@@ -270,6 +323,10 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'quiz comida coreana',
       'test comida coreana espanol',
       'cuanto sabes de comida coreana',
+      // Portuguese keywords
+      'quiz comida coreana',
+      'teste comida coreana portugues',
+      'quanto voce sabe sobre comida coreana',
     ],
   },
   'which-korean-food-are-you': {
@@ -295,6 +352,10 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'test que comida coreana eres',
       'test de personalidad comida coreana',
       'quiz comida coreana alma gemela',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual comida coreana voce e',
+      'teste qual comida coreana voce e',
+      'teste de personalidade comida coreana',
     ],
   },
   'which-aespa-member-are-you': {
@@ -325,6 +386,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'test aespa espanol',
       'quiz aespa espanol',
       'aespa test alma gemela',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual membro do aespa voce e',
+      'qual integrante do aespa voce e',
+      'teste de personalidade aespa',
+      'quiz aespa portugues',
     ],
   },
   'which-le-sserafim-member-are-you': {
@@ -356,6 +422,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'test le sserafim espanol',
       'quiz le sserafim espanol',
       'le sserafim test alma gemela',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual membro do le sserafim voce e',
+      'qual integrante do le sserafim voce e',
+      'teste de personalidade le sserafim',
+      'quiz le sserafim portugues',
     ],
   },
 
@@ -392,6 +463,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'quien eres de twice',
       'test twice espanol',
       'twice test alma gemela',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual membro do twice voce e',
+      'qual integrante do twice voce e',
+      'teste de personalidade twice',
+      'quiz twice portugues',
     ],
   },
   'which-enhypen-member-are-you': {
@@ -425,6 +501,11 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
       'quien eres de enhypen',
       'test enhypen espanol',
       'enhypen test alma gemela',
+      // Portuguese keywords (Brazil & Portugal)
+      'qual membro do enhypen voce e',
+      'qual integrante do enhypen voce e',
+      'teste de personalidade enhypen',
+      'quiz enhypen portugues',
     ],
   },
 
@@ -451,7 +532,7 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
     title: 'Doctor X: Age of the White Mafia Quiz ({n} Questions) | K-Pulse',
     ogTitle: 'Doctor X: Age of the White Mafia K-Drama Trivia Challenge | K-Pulse',
     description:
-      'Test your knowledge on SBS medical noir K-Drama Doctor X: Age of the White Mafia! 15 questions across 3 levels covering Gye Su-jeong (Kim Ji-won), Guseo Hospital, and White Mafia lore.',
+      'Test your knowledge on SBS medical noir K-Drama Doctor X: Age of the White Mafia! 30 questions across episode packs (EP.1-2 to EP.9-10) covering Gye Su-jeong (Kim Ji-won), Jang Hee-sook, Guseo Hospital, and White Mafia lore.',
     keywords: [
       'doctor x quiz',
       'doctor x trivia',
@@ -533,7 +614,7 @@ export function generateQuizJsonLd(quiz: Quiz) {
     name: seoData.title,
     description: seoData.description,
     url: quizUrl,
-    inLanguage: 'en',
+    inLanguage: ['en', 'es', 'pt', 'ko'],
     isAccessibleForFree: true,
     educationalLevel: quiz.difficulty || 'Intermediate',
     about: {

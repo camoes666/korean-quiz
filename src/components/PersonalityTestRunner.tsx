@@ -431,25 +431,24 @@ export default function PersonalityTestRunner({
     return (
       <div className="max-w-3xl mx-auto px-4 py-8">
         {friendMatch && (
-          <div className="mb-5 rounded-3xl bg-gradient-to-r from-fuchsia-600 via-purple-600 to-indigo-600 p-0.5 shadow-xl shadow-purple-500/20 animate-fade-in">
-            <div className="bg-slate-950/90 backdrop-blur-xl rounded-[22px] px-5 py-4 sm:px-6 sm:py-5 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="w-14 h-14 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center text-3xl shrink-0 shadow-inner">
+          <div className="mb-5 rounded-2xl bg-slate-950 text-white p-5 border border-slate-800">
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+              <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center text-2xl shrink-0">
                 {friendMatch.emoji}
               </div>
               <div className="flex-1">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-pink-500/20 border border-pink-400/30 text-pink-300 text-[11px] font-black uppercase tracking-wider mb-1">
-                  <span>💌</span>
+                <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-white/15 bg-white/5 text-slate-300 text-[11px] font-mono mb-1">
                   <span>
                     {lang === 'ko'
-                      ? '친구의 소울메이트 초대장'
+                      ? '소울메이트 초대'
                       : lang === 'es'
-                      ? '¡Desafío de Alma Gemela de tu Amigo/a!'
+                      ? 'Desafío de Alma Gemela'
                       : lang === 'pt'
-                      ? 'Desafio de Alma Gêmea de um Amigo!'
+                      ? 'Desafio de Alma Gêmea'
                       : "Friend's Soulmate Match"}
                   </span>
                 </div>
-                <p className="text-white font-black text-sm sm:text-base leading-snug">
+                <p className="text-white font-bold text-sm sm:text-base leading-snug">
                   {lang === 'ko'
                     ? `친구의 소울메이트는 [${friendName}] (${friendTitle}) 입니다!`
                     : lang === 'es'
@@ -458,28 +457,25 @@ export default function PersonalityTestRunner({
                     ? `A alma gêmea do seu amigo(a) é [${friendName}] (${friendTitle})!`
                     : `Your friend matched with [${friendName}] (${friendTitle})!`}
                 </p>
-                <p className="text-purple-200/90 text-xs sm:text-sm font-medium mt-0.5">
+                <p className="text-slate-300 text-xs sm:text-sm font-normal mt-0.5">
                   {lang === 'ko'
-                    ? '과연 나의 소울메이트는 누구일까요? 지금 테스트하고 친구와의 궁합을 확인해보세요! ✨'
+                    ? '과연 나의 소울메이트는 누구일까요? 지금 테스트하고 친구와의 궁합을 확인해보세요!'
                     : lang === 'es'
-                    ? '¿Quién será tu alma gemela? ¡Haz el test de 10 preguntas y compara vuestra compatibilidad! ✨'
+                    ? '¿Quién será tu alma gemela? ¡Haz el test de 10 preguntas y compara vuestra compatibilidad!'
                     : lang === 'pt'
-                    ? 'Quem será a sua alma gêmea? Faça o teste de 10 perguntas e compare a compatibilidade! ✨'
-                    : 'Who is your true soulmate? Take the 10-question test to compare your compatibility! ✨'}
+                    ? 'Quem será a sua alma gêmea? Faça o teste de 10 perguntas e compare a compatibilidade!'
+                    : 'Who is your true soulmate? Take the 10-question test to compare your compatibility!'}
                 </p>
               </div>
             </div>
           </div>
         )}
 
-        <div className="bg-white rounded-3xl border-2 border-purple-100 shadow-xl shadow-purple-500/10 overflow-hidden">
+        <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs overflow-hidden">
           {/* Hero Header */}
-          <div className="bg-gradient-to-r from-rose-600 via-purple-700 to-indigo-800 p-8 sm:p-12 text-white text-center relative overflow-hidden">
-            <div className="absolute -right-8 -bottom-8 opacity-20 text-9xl pointer-events-none select-none">
-              🔮
-            </div>
-            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-xs font-black tracking-wider uppercase mb-4 border border-white/30">
-              <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+          <div className="bg-slate-950 p-8 sm:p-12 text-white text-center relative overflow-hidden border-b border-slate-800">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded border border-white/20 bg-white/10 text-xs font-mono tracking-wider uppercase mb-4 text-slate-300">
+              <Sparkles className="w-3.5 h-3.5 text-rose-400" />
               <span>
                 {lang === 'ko'
                   ? '팬메이드 소울메이트 성격 테스트'
@@ -491,10 +487,10 @@ export default function PersonalityTestRunner({
               </span>
             </div>
 
-            <h1 className="text-2xl sm:text-4xl font-black tracking-tight leading-tight mb-4">
+            <h1 className="text-2xl sm:text-4xl font-bold tracking-tight leading-tight mb-4 text-white">
               {getLocalizedText(quiz, 'title', lang)}
             </h1>
-            <p className="text-white/90 text-sm sm:text-base max-w-xl mx-auto font-medium leading-relaxed">
+            <p className="text-slate-300 text-sm sm:text-base max-w-xl mx-auto font-normal leading-relaxed">
               {getLocalizedText(quiz, 'subtitle', lang)}
             </p>
 
@@ -503,20 +499,20 @@ export default function PersonalityTestRunner({
               <img
                 src={mascot.avatarUrl}
                 alt={getLocalizedText(mascot, 'name', lang)}
-                className="w-16 h-16 object-contain drop-shadow-md"
+                className="w-14 h-14 object-contain filter drop-shadow"
               />
-              <div className="text-left bg-black/25 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-white/15">
-                <span className="text-[11px] font-black text-amber-300 block">
+              <div className="text-left bg-white/5 px-3 py-2 rounded-xl border border-white/10">
+                <span className="text-[11px] font-mono text-slate-400 block">
                   {getLocalizedText(mascot, 'badgeTitle', lang)}
                 </span>
-                <span className="text-xs text-white/90 font-medium">
+                <span className="text-xs text-slate-200 font-normal">
                   {lang === 'ko'
-                    ? '정답은 없어요! 내 마음에 가장 와닿는 답변을 골라보세요 ✨'
+                    ? '정답은 없어요! 내 마음에 가장 와닿는 답변을 골라보세요.'
                     : lang === 'es'
-                    ? '¡No hay respuestas incorrectas! Elige lo que dicte tu corazón ✨'
+                    ? '¡No hay respuestas incorrectas! Elige lo que dicte tu corazón.'
                     : lang === 'pt'
-                    ? 'Não há respostas erradas! Escolha o que tocar seu coração ✨'
-                    : 'No wrong answers! Pick what resonates with your heart ✨'}
+                    ? 'Não há respostas erradas! Escolha o que tocar seu coração.'
+                    : 'No wrong answers! Pick what resonates with your heart.'}
                 </span>
               </div>
             </div>
@@ -526,25 +522,25 @@ export default function PersonalityTestRunner({
           {quiz.coverImage && (
             <div className="px-6 sm:px-10 pt-6 sm:pt-8">
               <div className="grid grid-cols-1 sm:grid-cols-12 gap-4 items-stretch max-w-2xl mx-auto">
-                <div className="sm:col-span-7 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-lg group bg-slate-950">
+                <div className="sm:col-span-7 relative rounded-xl overflow-hidden border border-slate-200 shadow-xs group bg-slate-950">
                   <img
                     src={quiz.coverImage}
                     alt={getLocalizedText(quiz, 'title', lang)}
                     className="w-full h-64 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
                   />
-                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-rose-600/90 backdrop-blur-md text-[11px] font-black text-white shadow-xs">
-                    {lang === 'ko' ? '🩺 MAIN · 닥터X 메스 버전' : '🩺 MAIN · Doctor X'}
+                  <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 text-[11px] font-mono font-medium text-white border border-white/20">
+                    {lang === 'ko' ? 'MAIN · 닥터X' : 'MAIN · Doctor X'}
                   </span>
                 </div>
                 {quiz.secondaryImage && (
-                  <div className="sm:col-span-5 relative rounded-2xl overflow-hidden border-2 border-slate-900/15 shadow-md group bg-slate-950">
+                  <div className="sm:col-span-5 relative rounded-xl overflow-hidden border border-slate-200 shadow-xs group bg-slate-950">
                     <img
                       src={quiz.secondaryImage}
                       alt={`${getLocalizedText(quiz, 'title', lang)} sub`}
                       className="w-full h-56 sm:h-72 object-cover object-top transition-transform duration-300 group-hover:scale-105"
                     />
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-slate-900/80 backdrop-blur-md text-[11px] font-bold text-rose-200 border border-rose-400/30 shadow-xs">
-                      {lang === 'ko' ? '🔥 SUB · 수술방 다크히어로' : '🔥 SUB · Dark Hero'}
+                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded bg-slate-950/80 text-[11px] font-mono font-medium text-slate-200 border border-white/20">
+                      {lang === 'ko' ? 'SUB · 다크히어로' : 'SUB · Dark Hero'}
                     </span>
                   </div>
                 )}
@@ -553,23 +549,23 @@ export default function PersonalityTestRunner({
           )}
           <div className="p-6 sm:p-10 text-center">
             <div className="grid grid-cols-3 gap-3 mb-8 max-w-md mx-auto text-center">
-              <div className="p-3 bg-purple-50 rounded-2xl border border-purple-100">
-                <span className="text-xs text-slate-400 block font-medium">
+              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80">
+                <span className="text-xs text-slate-500 block font-medium">
                   {t.quizIntro.questions}
                 </span>
-                <span className="text-base font-black text-purple-700">{questions.length} {t.levels.qsUnit}</span>
+                <span className="text-base font-bold text-slate-950">{questions.length} {t.levels.qsUnit}</span>
               </div>
-              <div className="p-3 bg-rose-50 rounded-2xl border border-rose-100">
-                <span className="text-xs text-slate-400 block font-medium">
+              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80">
+                <span className="text-xs text-slate-500 block font-medium">
                   {t.quizIntro.estTime}
                 </span>
-                <span className="text-base font-black text-rose-600">~{quiz.estimatedMinutes || 3} {t.mins}</span>
+                <span className="text-base font-bold text-slate-950">~{quiz.estimatedMinutes || 3} {t.mins}</span>
               </div>
-              <div className="p-3 bg-emerald-50 rounded-2xl border border-emerald-100">
-                <span className="text-xs text-slate-400 block font-medium">
+              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200/80">
+                <span className="text-xs text-slate-500 block font-medium">
                   {lang === 'ko' ? '결과 유형' : lang === 'es' || lang === 'pt' ? 'Resultados' : 'Outcomes'}
                 </span>
-                <span className="text-base font-black text-emerald-700">
+                <span className="text-base font-bold text-slate-950">
                   {memberCount} {lang === 'ko' ? '멤버' : lang === 'es' ? 'Miembros' : lang === 'pt' ? 'Membros' : 'Members'}
                 </span>
               </div>
@@ -577,18 +573,18 @@ export default function PersonalityTestRunner({
 
             <button
               onClick={startTest}
-              className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-lg rounded-full shadow-xl shadow-purple-500/25 transition-all hover:scale-105 active:scale-95 inline-flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-10 py-3.5 bg-slate-950 hover:bg-slate-800 text-white font-bold text-sm sm:text-base rounded-xl shadow-xs transition-colors active:scale-95 inline-flex items-center justify-center gap-2"
             >
               <span>
                 {lang === 'ko'
-                  ? '소울메이트 테스트 시작하기 ✨'
+                  ? '소울메이트 테스트 시작하기'
                   : lang === 'es'
-                  ? 'Comenzar Test de Personalidad ✨'
+                  ? 'Comenzar Test de Personalidad'
                   : lang === 'pt'
-                  ? 'Começar Teste de Personalidade ✨'
-                  : 'Find Your Soulmate ✨'}
+                  ? 'Começar Teste de Personalidade'
+                  : 'Find Your Soulmate'}
               </span>
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-4 h-4" />
             </button>
           </div>
         </div>
@@ -676,9 +672,9 @@ export default function PersonalityTestRunner({
             transform: `perspective(1200px) rotateX(${cardTilt.rx}deg) rotateY(${cardTilt.ry}deg)`,
             transition: cardTilt.rx === 0 && cardTilt.ry === 0 ? 'transform 0.45s ease-out' : 'transform 0.08s linear',
           }}
-          className="animate-holo-card-reveal rounded-[30px] p-1 bg-gradient-to-br from-pink-400 via-purple-500 to-cyan-400 animate-holo-rainbow shadow-2xl shadow-purple-500/25 mb-8"
+          className="animate-holo-card-reveal rounded-[28px] p-1 bg-slate-950 shadow-xl border border-slate-800 mb-8"
         >
-          <div className="bg-white rounded-[26px] overflow-hidden relative">
+          <div className="bg-white rounded-[24px] overflow-hidden relative">
             {/* Holographic Photocard Hero Stage */}
             <div
               className={`p-7 sm:p-11 text-white text-center relative overflow-hidden bg-gradient-to-br ${matchedResult.bgGradient}`}
@@ -688,42 +684,18 @@ export default function PersonalityTestRunner({
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-0 overflow-hidden"
               >
-                <div className="animate-holo-foil-sweep absolute -inset-y-12 w-1/2 bg-gradient-to-r from-transparent via-white/25 to-transparent" />
+                <div className="animate-holo-foil-sweep absolute -inset-y-12 w-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               </div>
 
-              {/* Ambient Pulse Aura & Twinkling Sparkle Particles */}
-              <div
-                aria-hidden="true"
-                className="animate-bomi-aura pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 rounded-full bg-white/15 blur-3xl"
-              />
-              <span
-                aria-hidden="true"
-                className="animate-sparkle-twinkle pointer-events-none select-none absolute top-6 left-7 text-amber-200 text-xl"
-              >
-                ✦
-              </span>
-              <span
-                aria-hidden="true"
-                className="animate-sparkle-twinkle-delay pointer-events-none select-none absolute top-14 right-8 text-cyan-200 text-lg"
-              >
-                ✦
-              </span>
-              <span
-                aria-hidden="true"
-                className="animate-sparkle-twinkle pointer-events-none select-none absolute bottom-10 left-10 text-pink-200 text-base"
-              >
-                ✦
-              </span>
-
-              {/* Top Official Photocard Header + Animated Sync Stamp */}
+              {/* Top Official Photocard Header + Sync Stamp */}
               <div className="relative z-10 flex items-center justify-between gap-2 flex-wrap mb-4">
-                <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-black/30 backdrop-blur-md text-[11px] font-black tracking-widest uppercase border border-white/25 text-amber-200">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 text-[11px] font-mono tracking-widest uppercase border border-white/20 text-slate-200">
+                  <Sparkles className="w-3.5 h-3.5 text-rose-300" />
                   <span>✦ OFFICIAL SOULMATE PHOTOCARD ✦</span>
                 </div>
 
-                <div className="animate-sync-stamp inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-amber-300 text-slate-950 text-xs sm:text-sm font-black tracking-wide shadow-lg border-2 border-white">
-                  <span>⚡ {animatedSyncPct}% SYNC</span>
+                <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white text-slate-950 text-xs sm:text-sm font-mono font-bold tracking-wide shadow-xs border border-white/40">
+                  <span>{animatedSyncPct}% SYNC</span>
                 </div>
               </div>
 
@@ -914,6 +886,64 @@ export default function PersonalityTestRunner({
                 </div>
               </div>
 
+              {/* 🔮 K-Saju × MBTI Real Birthdate Chemistry Deep-Link Card */}
+              {quiz.category === 'K-Pop' && (
+                <div className="p-5 rounded-xl bg-slate-950 text-white flex flex-col sm:flex-row items-center justify-between gap-4 border border-slate-800">
+                  <div className="text-center sm:text-left">
+                    <span className="inline-block px-2 py-0.5 rounded border border-white/20 bg-white/5 text-[10px] font-mono text-slate-300 mb-1">
+                      K-SAJU × MBTI LAB
+                    </span>
+                    <h4 className="text-sm sm:text-base font-bold leading-snug">
+                      {lang === 'ko'
+                        ? `내 실제 생년월일·MBTI로 본 [${memberName}]와의 사주 궁합은 몇 %일까?`
+                        : lang === 'es'
+                        ? `¿Cuál es tu % de compatibilidad K-Saju y MBTI real con ${memberName}?`
+                        : lang === 'pt'
+                        ? `Qual é a sua compatibilidade % K-Saju e MBTI real com ${memberName}?`
+                        : `What is your real K-Saju & MBTI compatibility % with ${memberName}?`}
+                    </h4>
+                    <p className="text-xs text-slate-300 mt-0.5 font-normal">
+                      {lang === 'ko'
+                        ? '오행(목·화·토·금·수) 상생과 MBTI로 전 멤버 궁합 순위까지 10초 만에 확인하세요!'
+                        : lang === 'es'
+                        ? '¡Descubre tu puntuación de los Cinco Elementos y el ranking completo en 10 segundos!'
+                        : lang === 'pt'
+                        ? 'Confira sua pontuação dos Cinco Elementos e o ranking do grupo todo em 10 segundos!'
+                        : 'Check your Five Elements destiny score and full group ranking in 10 seconds!'}
+                    </p>
+                  </div>
+                  <Link
+                    href={`/chemistry/${
+                      quiz.tag === 'Stray Kids'
+                        ? 'stray-kids'
+                        : quiz.tag === 'BLACKPINK'
+                        ? 'blackpink'
+                        : quiz.tag === 'TWICE'
+                        ? 'twice'
+                        : quiz.tag === 'ENHYPEN'
+                        ? 'enhypen'
+                        : quiz.tag === 'aespa'
+                        ? 'aespa'
+                        : quiz.tag === 'LE SSERAFIM'
+                        ? 'le-sserafim'
+                        : 'bts'
+                    }?m=${encodeURIComponent(matchedResult.id)}`}
+                    className="w-full sm:w-auto shrink-0 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors active:scale-95"
+                  >
+                    <span>
+                      {lang === 'ko'
+                        ? '사주·MBTI 궁합 보기'
+                        : lang === 'es'
+                        ? 'Ver Química Saju'
+                        : lang === 'pt'
+                        ? 'Ver Química Saju'
+                        : 'Check Saju Chemistry'}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              )}
+
               {/* Friend Soulmate Comparison Card (when opened via ?m=...) */}
               {friendMatch && (
                 <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
@@ -987,7 +1017,7 @@ export default function PersonalityTestRunner({
                 <button
                   onClick={handleDownloadCard}
                   disabled={isGeneratingCard}
-                  className="w-full py-4 px-5 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-400 hover:to-indigo-500 text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-all active:scale-95 shadow-lg shadow-purple-500/25 group"
+                  className="w-full py-3.5 px-5 bg-slate-950 hover:bg-slate-800 text-white text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors active:scale-95 group"
                 >
                   {isGeneratingCard ? (
                     <>
@@ -1118,9 +1148,9 @@ export default function PersonalityTestRunner({
             bingeBtn = lang === 'ko' ? '50문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 50 Preguntas' : lang === 'pt' ? 'Jogar Quiz de 50 Perguntas' : 'Play 50-Question Trivia';
           } else if (quiz.tag === 'Doctor X') {
             bingeHref = '/quiz/doctor-x-white-mafia-trivia';
-            bingeTitle = lang === 'ko' ? '《닥터X: 하얀 마피아의 시대》 15문제 과몰입 덕력고사도 도전해볼까요?' : lang === 'es' ? '¿Listo para la Trivia de 15 Preguntas de Doctor X?' : 'Ready for the 15-Question Doctor X Trivia Challenge?';
-            bingeDesc = lang === 'ko' ? "'수술방의 미친 계' 계수정의 사이다 명대사부터 구서대학교병원 하얀 마피아의 숨겨진 설정까지 테스트해보세요!" : lang === 'es' ? '¡Desde las frases icónicas de Gye Su-jeong hasta los secretos del Hospital Guseo!' : 'From Gye Su-jeong’s iconic quotes to Guseo University Hospital secrets, prove your true Doctor X mastery!';
-            bingeBtn = lang === 'ko' ? '닥터X 상식 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Trivia Doctor X' : 'Play Doctor X Trivia';
+            bingeTitle = lang === 'ko' ? '《닥터X: 하얀 마피아의 시대》 30문제 과몰입 덕력고사도 도전해볼까요?' : lang === 'es' ? '¿Listo para la Trivia de 30 Preguntas de Doctor X?' : lang === 'pt' ? 'Pronto para o Quiz de 30 Perguntas de Doctor X?' : 'Ready for the 30-Question Doctor X Trivia Challenge?';
+            bingeDesc = lang === 'ko' ? "'수술방의 미친 계' 계수정의 사이다 명대사부터 구서대학교병원 하얀 마피아의 숨겨진 설정까지 테스트해보세요!" : lang === 'es' ? '¡Desde las frases icónicas de Gye Su-jeong hasta los secretos del Hospital Guseo!' : lang === 'pt' ? 'Das frases icônicas de Gye Su-jeong aos segredos do Hospital Universitário Guseo!' : 'From Gye Su-jeong’s iconic quotes to Guseo University Hospital secrets, prove your true Doctor X mastery!';
+            bingeBtn = lang === 'ko' ? '닥터X 상식 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Trivia Doctor X' : lang === 'pt' ? 'Jogar Quiz Doctor X' : 'Play Doctor X Trivia';
           } else if (quiz.category === 'Food' || quiz.tag === 'K-Food') {
             bingeHref = '/quiz/korean-spicy-food';
             bingeTitle = lang === 'ko' ? '한국 매운 음식 & 길거리 음식 챌린지도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Reto de Comida Picante Coreana?' : lang === 'pt' ? 'Pronto para o Desafio de Comida Picante Coreana?' : 'Ready for the Spicy Food & Street Food Challenge?';
@@ -1129,24 +1159,24 @@ export default function PersonalityTestRunner({
           }
 
           return (
-            <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-slate-950 p-6 sm:p-8 rounded-3xl text-white shadow-xl mb-10 flex flex-col sm:flex-row items-center justify-between gap-6 border border-purple-500/20">
+            <div className="bg-slate-950 p-6 sm:p-8 rounded-2xl text-white mb-10 flex flex-col sm:flex-row items-center justify-between gap-6 border border-slate-800">
               <div>
-                <span className="px-3 py-1 rounded-full bg-rose-500/30 text-rose-300 text-xs font-black uppercase tracking-wider mb-2 inline-block border border-rose-500/40">
-                  ⚡ {t.resultView.nextChallengeBadge}
+                <span className="px-2.5 py-0.5 rounded bg-white/10 text-slate-300 text-xs font-mono uppercase tracking-wider mb-2 inline-block border border-white/15">
+                  {t.resultView.nextChallengeBadge}
                 </span>
-                <h3 className="text-xl sm:text-2xl font-black tracking-tight mb-1">
+                <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-1 text-white">
                   {bingeTitle}
                 </h3>
-                <p className="text-xs sm:text-sm text-purple-200/80 max-w-md font-medium">
+                <p className="text-xs sm:text-sm text-slate-300 max-w-md font-normal">
                   {bingeDesc}
                 </p>
               </div>
               <Link
                 href={bingeHref}
-                className="w-full sm:w-auto px-6 py-3.5 bg-rose-500 hover:bg-rose-400 active:scale-95 text-white font-black text-sm rounded-full shadow-lg shadow-rose-500/25 flex items-center justify-center gap-2 shrink-0 transition-all"
+                className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-950 font-bold text-sm rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors"
               >
                 <span>{bingeBtn}</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 text-slate-950" />
               </Link>
             </div>
           );
@@ -1154,8 +1184,7 @@ export default function PersonalityTestRunner({
 
         {/* Related Quizzes */}
         <div>
-          <h3 className="text-lg font-black text-slate-900 mb-4 flex items-center gap-2">
-            <span>✨</span>
+          <h3 className="text-lg font-bold text-slate-950 mb-4 flex items-center gap-2">
             <span>{t.resultView.keepPlaying}</span>
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -1173,7 +1202,7 @@ export default function PersonalityTestRunner({
     <div className="max-w-2xl mx-auto px-4 py-8">
       {/* Top Header & Progress */}
       <div className="mb-6">
-        <div className="flex items-center justify-between text-xs font-black text-slate-400 mb-2">
+        <div className="flex items-center justify-between text-xs font-mono text-slate-500 mb-2">
           <span>
             {lang === 'en'
               ? `Question ${currentIndex + 1} of ${questions.length}`
@@ -1183,23 +1212,23 @@ export default function PersonalityTestRunner({
               ? `Pergunta ${currentIndex + 1} de ${questions.length}`
               : `질문 ${currentIndex + 1} / ${questions.length}`}
           </span>
-          <span className="text-purple-600 font-extrabold">{progressPercent}%</span>
+          <span className="font-bold text-slate-900">{progressPercent}%</span>
         </div>
 
-        <div className="h-2.5 w-full bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200">
+        <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden border border-slate-200">
           <div
-            className="h-full bg-gradient-to-r from-purple-500 to-rose-500 rounded-full transition-all duration-300"
+            className="h-full bg-slate-900 rounded-full transition-all duration-300"
             style={{ width: `${progressPercent}%` }}
           />
         </div>
       </div>
 
       {/* Question Card */}
-      <div className="bg-white rounded-3xl border-2 border-purple-100 shadow-xl shadow-purple-500/10 p-6 sm:p-10 mb-6">
+      <div className="bg-white rounded-2xl border border-slate-200/80 shadow-xs p-6 sm:p-10 mb-6">
         <div className="text-3xl sm:text-4xl mb-3 text-center">
           {currentQ.emoji || '✨'}
         </div>
-        <h2 className="text-xl sm:text-2xl font-black text-slate-900 text-center tracking-tight leading-snug mb-8">
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-950 text-center tracking-tight leading-snug mb-8">
           {getLocalizedText(currentQ, 'question', lang)}
         </h2>
 
@@ -1214,18 +1243,18 @@ export default function PersonalityTestRunner({
                 key={opt.id}
                 onClick={() => handleSelectOption(opt)}
                 disabled={!!selectedOptionId}
-                className={`w-full text-left p-4 sm:p-5 rounded-2xl border-2 transition-all font-medium text-sm sm:text-base flex items-center justify-between gap-3 ${
+                className={`w-full text-left p-4 sm:p-5 rounded-xl border transition-all text-sm sm:text-base flex items-center justify-between gap-3 ${
                   isSelected
-                    ? 'border-purple-600 bg-purple-50 text-purple-950 font-bold scale-[1.01] shadow-md shadow-purple-500/15'
-                    : 'border-slate-200 bg-white hover:border-purple-300 hover:bg-slate-50/80 text-slate-800 active:scale-[0.99]'
+                    ? 'border-slate-950 bg-slate-950 text-white font-semibold'
+                    : 'border-slate-200 bg-white hover:border-slate-400 hover:bg-slate-50 text-slate-800'
                 }`}
               >
                 <span>{text}</span>
                 <span
-                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-black shrink-0 transition-colors ${
+                  className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-mono font-bold shrink-0 transition-colors ${
                     isSelected
-                      ? 'bg-purple-600 text-white'
-                      : 'bg-slate-100 text-slate-400 border border-slate-200'
+                      ? 'bg-white text-slate-950'
+                      : 'bg-slate-100 text-slate-500 border border-slate-200'
                   }`}
                 >
                   {opt.id}

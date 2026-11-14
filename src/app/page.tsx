@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { getAllQuizzes, getHeroQuizzes } from '@/data/quizzes';
-import { Category } from '@/types/quiz';
+import { Category, getLocalizedText } from '@/types/quiz';
 import QuizCard from '@/components/QuizCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import HeroCarousel from '@/components/HeroCarousel';
@@ -22,7 +22,7 @@ export default function HomePage() {
   const [selectedTag, setSelectedTag] = useState<string>('All');
 
   const allQuizzes = getAllQuizzes();
-  const levelTitle = lang === 'ko' ? currentLevel.titleKo : currentLevel.title;
+  const levelTitle = getLocalizedText(currentLevel, 'title', lang);
 
   const heroSlides = getHeroQuizzes();
 
@@ -64,104 +64,77 @@ export default function HomePage() {
 
   const quickFandomChips = [
     {
-      label: '🖤💖 BLACKPINK',
+      label: 'BLACKPINK',
       category: 'K-Pop' as Category,
       tag: 'BLACKPINK',
-      style: 'border-pink-200 bg-white/90 text-pink-700 hover:bg-pink-50 hover:border-pink-300',
     },
     {
-      label: '💜 BTS',
+      label: 'BTS',
       category: 'K-Pop' as Category,
       tag: 'BTS',
-      style: 'border-purple-200 bg-white/90 text-purple-700 hover:bg-purple-50 hover:border-purple-300',
     },
     {
-      label: '🐺 Stray Kids',
+      label: 'Stray Kids',
       category: 'K-Pop' as Category,
       tag: 'Stray Kids',
-      style: 'border-rose-200 bg-white/90 text-rose-700 hover:bg-rose-50 hover:border-rose-300',
     },
     {
-      label: '🍭 TWICE',
+      label: 'TWICE',
       category: 'K-Pop' as Category,
       tag: 'TWICE',
-      style: 'border-fuchsia-200 bg-white/90 text-fuchsia-700 hover:bg-fuchsia-50 hover:border-fuchsia-300',
     },
     {
-      label: '🧛 ENHYPEN',
+      label: 'ENHYPEN',
       category: 'K-Pop' as Category,
       tag: 'ENHYPEN',
-      style: 'border-red-200 bg-white/90 text-red-700 hover:bg-red-50 hover:border-red-300',
     },
     {
-      label: '✨ aespa',
+      label: 'aespa',
       category: 'K-Pop' as Category,
       tag: 'aespa',
-      style: 'border-cyan-200 bg-white/90 text-cyan-700 hover:bg-cyan-50 hover:border-cyan-300',
     },
     {
-      label: '🔥 LE SSERAFIM',
+      label: 'LE SSERAFIM',
       category: 'K-Pop' as Category,
       tag: 'LE SSERAFIM',
-      style: 'border-emerald-200 bg-white/90 text-emerald-700 hover:bg-emerald-50 hover:border-emerald-300',
     },
     {
-      label: lang === 'ko' ? '🌶️ K-푸드' : '🌶️ K-Food',
+      label: lang === 'ko' ? 'K-푸드' : 'K-Food',
       category: 'Food' as Category,
       tag: 'All',
-      style: 'border-amber-200 bg-white/90 text-amber-800 hover:bg-amber-50 hover:border-amber-300',
     },
     {
-      label: lang === 'ko' ? '🎬 K-드라마' : '🎬 K-Drama',
+      label: lang === 'ko' ? 'K-드라마' : 'K-Drama',
       category: 'K-Drama' as Category,
       tag: 'All',
-      style: 'border-indigo-200 bg-white/90 text-indigo-700 hover:bg-indigo-50 hover:border-indigo-300',
     },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#F9FAFB]">
-      {/* 1. ATMOSPHERIC STAGE HERO: AURORA MESH + SPLIT SPOTLIGHT */}
-      <section className="relative overflow-hidden py-9 sm:py-12 border-b border-purple-100/80 bg-gradient-to-br from-purple-50/90 via-pink-50/40 to-indigo-50/80">
-        {/* Subtle Dot Matrix Texture */}
-        <div
-          className="absolute inset-0 opacity-35 pointer-events-none"
-          style={{
-            backgroundImage: 'radial-gradient(#c084fc 1px, transparent 1px)',
-            backgroundSize: '24px 24px',
-          }}
-        />
-        {/* Stage Ambient Spotlights */}
-        <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-purple-300/30 blur-3xl pointer-events-none" />
-        <div className="absolute top-1/2 right-10 -translate-y-1/2 w-[420px] h-[420px] rounded-full bg-pink-400/20 blur-3xl pointer-events-none" />
-
+    <div className="flex flex-col min-h-screen bg-[#FAFAFA]">
+      {/* 1. EDITORIAL STAGE HERO */}
+      <section className="relative overflow-hidden py-10 sm:py-14 border-b border-slate-200/80 bg-white">
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
           {/* DOM order is headline → carousel → chips/level so phones see a clickable test in the
               first screen; on lg the grid puts the carousel back in the right column. */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-x-8 lg:gap-y-5 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-x-8 lg:gap-y-6 items-stretch">
             {/* Left Column (top): Brand Pitch */}
             <div className="lg:col-span-7 lg:row-start-1">
               {/* Hero Top Badge */}
-              <div className="inline-flex items-center gap-1.5 rounded-full border border-purple-200/90 bg-white/90 backdrop-blur-md px-3.5 py-1.5 text-xs font-extrabold text-purple-700 shadow-2xs mb-4">
-                <Sparkles className="w-3.5 h-3.5 text-pink-500" />
+              <div className="inline-flex items-center gap-2 rounded border border-slate-200 bg-slate-50 px-2.5 py-1 text-[11px] font-mono font-medium text-slate-700 mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
                 <span>{t.heroBadge}</span>
               </div>
 
-              {/* Main Headline with Kinetic Reveal & Liquid Aurora Shimmer */}
-              <h1 className="text-3xl sm:text-5xl font-black tracking-tight text-slate-900 leading-[1.14]">
-                <span className="inline-block animate-hero-reveal">
-                  {t.heroTitlePre}
-                </span>{' '}
-                <span className="relative inline-block animate-hero-reveal-delay">
-                  <span className="inline-block bg-gradient-to-r from-purple-600 via-pink-500 to-indigo-600 bg-clip-text text-transparent animate-liquid-shimmer">
-                    {t.heroTitleHighlight}
-                  </span>
-                  {/* Animated Neon Stage Underline */}
-                  <span className="absolute -bottom-1.5 left-0 h-1.5 w-full rounded-full bg-gradient-to-r from-purple-500 via-pink-500 to-rose-400 animate-underline-sweep" />
+              {/* Main Headline */}
+              <h1 className="text-3xl sm:text-5xl font-bold tracking-tight text-slate-950 leading-[1.15]">
+                <span>{t.heroTitlePre}</span>{' '}
+                <span className="text-slate-950 underline decoration-rose-500 decoration-2 underline-offset-8">
+                  {t.heroTitleHighlight}
                 </span>
               </h1>
 
-              <p className="mt-3.5 text-sm sm:text-base text-slate-600 max-w-xl font-medium leading-relaxed">
+              <p className="mt-4 text-sm sm:text-base text-slate-600 max-w-xl font-normal leading-relaxed">
                 {t.heroSubtitle}
               </p>
             </div>
@@ -171,28 +144,28 @@ export default function HomePage() {
               <HeroCarousel slides={heroSlides} />
             </div>
 
-            {/* Left Column (bottom): Fandom Quick-Jump Chips + Frosted Level Bar */}
+            {/* Left Column (bottom): Fandom Quick-Jump Chips + Level Bar */}
             <div className="lg:col-span-7 lg:row-start-2 flex flex-col justify-end">
               {/* Interactive Fandom Quick-Jump Chips */}
-              <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-[11px] font-extrabold uppercase tracking-wider text-slate-400 mr-1">
-                  {lang === 'ko' ? '인기 테마:' : lang === 'es' ? 'Popular:' : 'Hot Picks:'}
+              <div className="flex items-center gap-1.5 flex-wrap">
+                <span className="text-[11px] font-mono font-medium uppercase tracking-wider text-slate-400 mr-1">
+                  {lang === 'ko' ? '인기 테마:' : lang === 'es' ? 'Popular:' : lang === 'pt' ? 'Em Alta:' : 'Hot Picks:'}
                 </span>
                 {quickFandomChips.map((chip) => (
                   <button
                     key={chip.label}
                     onClick={() => handleQuickJump(chip.category, chip.tag)}
-                    className={`px-3 py-1.5 rounded-full border text-xs font-extrabold shadow-2xs backdrop-blur-md transition-all active:scale-95 ${chip.style}`}
+                    className="px-2.5 py-1 rounded-full border border-slate-200 bg-white text-xs font-medium text-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-colors active:scale-95"
                   >
                     {chip.label}
                   </button>
                 ))}
               </div>
 
-              {/* Frosted Glass Player Progress Bar */}
-              <div className="mt-6 rounded-2xl bg-white/85 backdrop-blur-md border border-purple-200/70 p-3.5 sm:px-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 shadow-sm shadow-purple-500/5">
-                <div className="flex items-center gap-3 flex-1 min-w-0">
-                  <div className="relative w-11 h-11 rounded-xl bg-gradient-to-tr from-purple-100 to-pink-50 p-0.5 border border-purple-200/80 flex items-center justify-center shrink-0">
+              {/* Editorial Player Progress Bar */}
+              <div className="mt-6 rounded-2xl bg-slate-50 border border-slate-200/80 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <div className="flex items-center gap-3.5 flex-1 min-w-0">
+                  <div className="relative w-11 h-11 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0">
                     <img
                       src="/images/hobi01.webp"
                       alt="Hobi Mascot"
@@ -204,20 +177,24 @@ export default function HomePage() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between text-xs mb-1.5 gap-2">
-                      <span className="font-black text-slate-900 truncate">
+                      <span className="font-bold text-slate-900 truncate">
                         Lv.{currentLevel.level} {levelTitle}
                       </span>
-                      <span className="font-extrabold text-purple-600 text-[11px] shrink-0">
+                      <span className="font-mono text-[11px] text-slate-500 shrink-0">
                         {xpToNextLevel > 0
                           ? lang === 'ko'
                             ? `${xpToNextLevel} XP 남음`
+                            : lang === 'es'
+                            ? `Faltan ${xpToNextLevel} XP`
+                            : lang === 'pt'
+                            ? `Faltam ${xpToNextLevel} XP`
                             : `${xpToNextLevel} XP to next`
                           : 'MAX'}
                       </span>
                     </div>
-                    <div className="h-2 w-full rounded-full bg-slate-100 overflow-hidden">
+                    <div className="h-1.5 w-full rounded-full bg-slate-200 overflow-hidden">
                       <div
-                        className="h-full rounded-full bg-gradient-to-r from-purple-600 via-pink-500 to-rose-500 transition-all duration-500"
+                        className="h-full rounded-full bg-slate-900 transition-all duration-500"
                         style={{ width: `${progressPercent}%` }}
                       />
                     </div>
@@ -226,7 +203,7 @@ export default function HomePage() {
 
                 <a
                   href="#ranking"
-                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-purple-50/80 hover:bg-purple-100/80 border border-purple-200/60 text-xs font-extrabold text-purple-700 transition-colors shrink-0"
+                  className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-xl bg-white hover:bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-800 transition-colors shrink-0"
                 >
                   <Trophy className="w-3.5 h-3.5 text-amber-500" />
                   <span>
@@ -234,6 +211,8 @@ export default function HomePage() {
                       ? '명예의 전당 & 순위'
                       : lang === 'es'
                       ? 'Ver Clasificación'
+                      : lang === 'pt'
+                      ? 'Ver Classificação'
                       : 'Hall of Fame & Rank'}
                   </span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -244,15 +223,94 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 2. QUIZ COLLECTION SECTION — IMMEDIATELY ABOVE THE FOLD */}
-      <section id="quizzes" className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 pb-12 w-full">
+      {/* 1.5 IDOL K-SAJU × MBTI CHEMISTRY LAB SPOTLIGHT BANNER */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-8 w-full">
+        <div className="relative overflow-hidden rounded-2xl bg-slate-950 text-white p-6 sm:p-8 border border-slate-800">
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="space-y-2.5 max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 rounded border border-white/15 bg-white/5 text-[11px] font-mono text-slate-300">
+                <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+                <span>
+                  {lang === 'ko'
+                    ? 'K-사주 오행 × MBTI × 별자리 1:1 궁합'
+                    : lang === 'es'
+                    ? 'Química K-Saju × MBTI × Zodiaco'
+                    : lang === 'pt'
+                    ? 'Química K-Saju × MBTI × Zodíaco'
+                    : 'K-Saju Five Elements × MBTI × Zodiac'}
+                </span>
+              </div>
+              <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-white leading-snug">
+                {lang === 'ko'
+                  ? '나와 최애 아이돌의 사주·MBTI 궁합은 몇 %일까?'
+                  : lang === 'es'
+                  ? '¿Cuál es tu % de compatibilidad K-Saju y MBTI con tu Bias?'
+                  : lang === 'pt'
+                  ? 'Qual é a sua compatibilidade % K-Saju e MBTI com seu Bias?'
+                  : 'What Is Your K-Saju & MBTI Compatibility % With Your Bias?'}
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-300 font-normal leading-relaxed">
+                {lang === 'ko'
+                  ? '7개 그룹 44명 멤버의 실제 생년월일(오행: 목·화·토·금·수)과 MBTI로 10초 만에 내 최애와의 궁합 리포트와 그룹 내 천생연분 순위를 확인하세요!'
+                  : lang === 'es'
+                  ? 'Analiza tu fecha de nacimiento y MBTI con 44 miembros reales de BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa y LE SSERAFIM.'
+                  : lang === 'pt'
+                  ? 'Analise sua data de nascimento (Cinco Elementos do Saju coreano) e MBTI com 44 idols de BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa e LE SSERAFIM!'
+                  : 'Match your birth date (Korean Saju Five Elements) & MBTI against 44 idols across BTS, Stray Kids, BLACKPINK, TWICE, ENHYPEN, aespa & LE SSERAFIM!'}
+              </p>
+
+              {/* Direct Group Shortcut Pills */}
+              <div className="flex items-center gap-1.5 flex-wrap pt-2">
+                {[
+                  { id: 'bts', label: 'BTS' },
+                  { id: 'stray-kids', label: 'Stray Kids' },
+                  { id: 'blackpink', label: 'BLACKPINK' },
+                  { id: 'twice', label: 'TWICE' },
+                  { id: 'enhypen', label: 'ENHYPEN' },
+                  { id: 'aespa', label: 'aespa' },
+                  { id: 'le-sserafim', label: 'LE SSERAFIM' },
+                ].map((grp) => (
+                  <Link
+                    key={grp.id}
+                    href={`/chemistry/${grp.id}`}
+                    className="px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 border border-white/10 text-xs font-medium text-slate-200 transition-colors"
+                  >
+                    {grp.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="shrink-0">
+              <Link
+                href="/chemistry"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-xs sm:text-sm transition-colors"
+              >
+                <span>
+                  {lang === 'ko'
+                    ? '10초 궁합 분석 시작하기'
+                    : lang === 'es'
+                    ? 'Calcular Mi Química Ahora'
+                    : lang === 'pt'
+                    ? 'Calcular Química Agora'
+                    : 'Check Idol Chemistry Now'}
+                </span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2. QUIZ COLLECTION SECTION */}
+      <section id="quizzes" className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-12 w-full">
         <div className="flex flex-col gap-4 mb-7">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
                 {t.trendingTitle}
               </h2>
-              <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium">
+              <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal">
                 {t.trendingDesc}
               </p>
             </div>
@@ -266,7 +324,7 @@ export default function HomePage() {
                   <button
                     key={category}
                     onClick={() => handleCategoryChange(category)}
-                    className={`rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all active:scale-95 ${
+                    className={`rounded-full px-4 py-2 text-xs sm:text-sm font-semibold transition-colors ${
                       isActive
                         ? 'bg-slate-900 text-white shadow-xs'
                         : 'bg-white border border-slate-200/80 hover:border-slate-300 text-slate-700'
@@ -282,8 +340,8 @@ export default function HomePage() {
           {/* Sub-tag Bar */}
           {availableTags.length > 1 && (
             <div className="flex items-center gap-1.5 flex-wrap pt-3 border-t border-slate-200/60">
-              <span className="text-[11px] font-bold text-slate-400 flex items-center gap-1 mr-1.5 uppercase tracking-wider">
-                <Tag className="w-3 h-3 text-purple-500" />
+              <span className="text-[11px] font-mono text-slate-400 flex items-center gap-1 mr-1.5 uppercase tracking-wider">
+                <Tag className="w-3 h-3 text-slate-400" />
                 {t.filterByTag}
               </span>
               {availableTags.map((tag) => {
@@ -293,9 +351,9 @@ export default function HomePage() {
                   <button
                     key={tag}
                     onClick={() => setSelectedTag(tag)}
-                    className={`rounded-full px-3 py-1 text-xs font-bold transition-all active:scale-95 ${
+                    className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${
                       isActive
-                        ? 'bg-purple-600 text-white'
+                        ? 'bg-slate-900 text-white'
                         : 'bg-white border border-slate-200/80 text-slate-600 hover:bg-slate-50'
                     }`}
                   >
@@ -322,7 +380,7 @@ export default function HomePage() {
                 setSelectedCategory('All');
                 setSelectedTag('All');
               }}
-              className="mt-3 text-xs text-violet-600 font-bold hover:underline"
+              className="mt-3 text-xs text-slate-900 font-bold hover:underline"
             >
               {t.resetFilters}
             </button>
@@ -331,21 +389,25 @@ export default function HomePage() {
       </section>
 
       {/* 3. PLAYER STATS & HALL OF FAME SECTION */}
-      <section id="ranking" className="border-t border-slate-200/80 bg-slate-50/70 py-12">
+      <section id="ranking" className="border-t border-slate-200/80 bg-slate-50 py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="mb-6">
-            <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
               {lang === 'ko'
                 ? '내 챌린저 스탯 & 명예의 전당'
                 : lang === 'es'
                 ? 'Estadísticas y Salón de la Fama'
+                : lang === 'pt'
+                ? 'Estatísticas e Hall da Fama'
                 : 'Your Stats & Global Hall of Fame'}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1 font-medium">
+            <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal">
               {lang === 'ko'
                 ? '퀴즈를 풀고 XP를 모아 글로벌 팬들과 랭킹을 겨뤄보세요.'
                 : lang === 'es'
                 ? 'Gana XP resolviendo quizzes y sube en el ranking global.'
+                : lang === 'pt'
+                ? 'Ganhe XP resolvendo quizzes e suba no ranking global.'
                 : 'Earn XP by completing quizzes and climb the seasonal ranks.'}
             </p>
           </div>
@@ -362,28 +424,27 @@ export default function HomePage() {
         <AdPlaceholder format="horizontal" label={t.ads.sponsored} />
       </div>
 
-      {/* 4. KNOWLEDGE & LORE GUIDES PROGRAMMATIC SEO SECTION */}
+      {/* 4. KNOWLEDGE & LORE GUIDES SECTION */}
       <section className="border-t border-slate-200/80 bg-white py-12">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-slate-50 p-6 sm:p-8 rounded-3xl border border-slate-200/80">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 bg-slate-50 p-6 sm:p-8 rounded-2xl border border-slate-200/80">
             <div className="flex items-start gap-4">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-purple-100/80 flex items-center justify-center shrink-0 text-3xl">
-                📚
+              <div className="w-12 h-12 rounded-xl bg-white border border-slate-200 flex items-center justify-center shrink-0 text-slate-800">
+                <BookOpen className="w-6 h-6" />
               </div>
               <div>
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-purple-100 text-purple-700 font-black text-[11px] mb-2">
-                  <Sparkles className="w-3 h-3 text-purple-600" />
+                <div className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded border border-slate-200 bg-white text-slate-700 font-mono text-[11px] mb-2">
                   <span>
                     {lang === 'en'
-                      ? '230+ Verified Facts & Explanations'
+                      ? '230+ Verified Facts'
                       : lang === 'es'
-                      ? '230+ Hechos y Respuestas Verificadas'
+                      ? '230+ Hechos Verificados'
                       : lang === 'pt'
-                      ? '230+ Fatos e Respostas Verificadas'
-                      : '230+개 팩트체크 & 해설 수록'}
+                      ? '230+ Fatos Verificados'
+                      : '230+개 팩트체크 수록'}
                   </span>
                 </div>
-                <h3 className="text-xl sm:text-2xl font-black text-slate-900 leading-snug">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-950 leading-snug">
                   {lang === 'en'
                     ? 'K-Culture & K-Pop Fan Knowledge Guides'
                     : lang === 'es'
@@ -392,7 +453,7 @@ export default function HomePage() {
                     ? 'Guias de Lore e Conhecimento K-Pop'
                     : 'K-컬처 & K-Pop 팬 지식 가이드 백과'}
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1 max-w-xl">
+                <p className="text-xs sm:text-sm text-slate-600 font-normal mt-1 max-w-xl">
                   {lang === 'en'
                     ? 'Explore verified answers, debut histories, cultural etiquette, and insider fun facts before taking the quizzes.'
                     : lang === 'es'
@@ -406,7 +467,7 @@ export default function HomePage() {
 
             <Link
               href="/guide"
-              className="w-full md:w-auto shrink-0 flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-slate-900 hover:bg-purple-600 text-white font-black text-xs sm:text-sm shadow-sm transition-all active:scale-95"
+              className="w-full md:w-auto shrink-0 flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm transition-colors"
             >
               <BookOpen className="w-4 h-4" />
               <span>
@@ -424,14 +485,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 5. SEO / AD-APPROVAL VALUE SECTION */}
-      <section className="border-t border-slate-200/80 bg-[#F9FAFB] py-16">
+      {/* 5. EDITORIAL VALUE SECTION */}
+      <section className="border-t border-slate-200/80 bg-slate-50 py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <h2 className="text-xl sm:text-2xl font-black text-slate-900">
+            <h2 className="text-xl sm:text-2xl font-bold text-slate-950">
               {t.whySectionTitle}
             </h2>
-            <p className="text-xs sm:text-sm text-slate-500 mt-2 font-medium">
+            <p className="text-xs sm:text-sm text-slate-500 mt-2 font-normal">
               {t.whySectionDesc}
             </p>
           </div>
@@ -442,11 +503,11 @@ export default function HomePage() {
                 key={idx}
                 className="p-6 rounded-2xl bg-white border border-slate-200/80 shadow-2xs"
               >
-                <div className="text-3xl mb-3">{card.emoji}</div>
-                <h3 className="font-black text-sm sm:text-base text-slate-900 mb-1.5">
+                <div className="text-2xl mb-3">{card.emoji}</div>
+                <h3 className="font-bold text-sm sm:text-base text-slate-950 mb-1.5">
                   {card.title}
                 </h3>
-                <p className="text-xs text-slate-500 leading-relaxed font-medium">
+                <p className="text-xs text-slate-600 leading-relaxed font-normal">
                   {card.desc}
                 </p>
               </div>

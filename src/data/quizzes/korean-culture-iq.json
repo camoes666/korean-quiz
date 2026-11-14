@@ -29,25 +29,29 @@
           "id": "A",
           "text": "Lay them horizontally across the bowl",
           "textKo": "밥그릇 위에 가로로 살짝 걸쳐두기",
-          "textEs": "Colocarlos horizontalmente sobre el tazón"
+          "textEs": "Colocarlos horizontalmente sobre el tazón",
+          "textPt": "Apoiá-los horizontalmente sobre a tigela"
         },
         {
           "id": "B",
           "text": "Stick them vertically upright into the rice",
           "textKo": "밥 한가운데에 젓가락을 수직으로 꽂아두기",
-          "textEs": "Clavarlos verticalmente en el centro del arroz"
+          "textEs": "Clavarlos verticalmente en el centro del arroz",
+          "textPt": "Espetá-los verticalmente em pé no centro do arroz"
         },
         {
           "id": "C",
           "text": "Use them with your left hand",
           "textKo": "왼손으로 젓가락 쥐고 먹기",
-          "textEs": "Usarlos con la mano izquierda"
+          "textEs": "Usarlos con la mano izquierda",
+          "textPt": "Usá-los com a mão esquerda"
         },
         {
           "id": "D",
           "text": "Drop them by accident",
           "textKo": "실수로 바닥에 떨어뜨리기",
-          "textEs": "Dejarlos caer por accidente"
+          "textEs": "Dejarlos caer por accidente",
+          "textPt": "Deixá-los cair no chão sem querer"
         }
       ],
       "correctAnswer": "B",
@@ -57,7 +61,10 @@
       "funFactKo": "한국 전통 식사 예절에서는 밥과 국은 숟가락으로 먹고, 반찬을 집을 때만 젓가락을 사용하는 것이 정석입니다.",
       "questionEs": "¿Qué NUNCA debes hacer con los palillos al comer arroz en Corea?",
       "explanationEs": "Clavar los palillos verticalmente recuerda al incienso que se quema en los ritos funerarios y ceremonias ancestrales, lo cual simboliza la muerte y es un tabú absoluto.",
-      "funFactEs": "¡La etiqueta tradicional coreana recomienda comer el arroz y la sopa con cuchara, y usar los palillos solo para las guarniciones!"
+      "funFactEs": "¡La etiqueta tradicional coreana recomienda comer el arroz y la sopa con cuchara, y usar los palillos solo para las guarniciones!",
+      "questionPt": "O que você NUNCA deve fazer com os hashis (palitinhos) ao comer arroz na Coreia?",
+      "explanationPt": "Espetar os hashis verticalmente no arroz lembra os incensos queimados em cerimônias memoriais aos antepassados e funerais, o que simboliza a morte e é considerado um grande tabu.",
+      "funFactPt": "A etiqueta tradicional coreana à mesa também recomenda usar a colher para comer o arroz e a sopa, reservando os hashis para os acompanhamentos (banchan)!"
     },
     {
       "id": 2,
@@ -69,25 +76,29 @@
           "id": "A",
           "text": "Tteokguk (Rice Cake Soup)",
           "textKo": "떡국",
-          "textEs": "Tteokguk (Sopa de pastel de arroz)"
+          "textEs": "Tteokguk (Sopa de pastel de arroz)",
+          "textPt": "Tteokguk (Sopa de bolinho de arroz)"
         },
         {
           "id": "B",
           "text": "Samgyetang (Ginseng Chicken Soup)",
           "textKo": "삼계탕",
-          "textEs": "Samgyetang (Sopa de pollo con ginseng)"
+          "textEs": "Samgyetang (Sopa de pollo con ginseng)",
+          "textPt": "Samgyetang (Sopa de frango com ginseng)"
         },
         {
           "id": "C",
           "text": "Miyeok-guk (Seaweed Soup)",
           "textKo": "미역국",
-          "textEs": "Miyeok-guk (Sopa de algas)"
+          "textEs": "Miyeok-guk (Sopa de algas)",
+          "textPt": "Miyeok-guk (Sopa de alga marinha)"
         },
         {
           "id": "D",
           "text": "Kimchi Jjigae (Kimchi Stew)",
           "textKo": "김치찌개",
-          "textEs": "Kimchi Jjigae (Guiso de kimchi)"
+          "textEs": "Kimchi Jjigae (Guiso de kimchi)",
+          "textPt": "Kimchi Jjigae (Ensopado de kimchi)"
         }
       ],
       "correctAnswer": "C",
@@ -97,7 +108,10 @@
       "funFactKo": "반대로 시험날에는 미역이 미끄럽기 때문에 '시험에서 미끄러진다(낙방한다)'는 징크스로 인해 미역국을 절대 먹지 않습니다!",
       "questionEs": "¿Qué alimento comen tradicionalmente los coreanos en su cumpleaños para la salud y longevidad?",
       "explanationEs": "El Miyeok-guk (sopa de algas) es rico en nutrientes y lo consumen tradicionalmente las madres tras dar a luz. Comerlo en el cumpleaños es una forma de honrar y agradecer a la madre.",
-      "funFactEs": "Por el contrario, los estudiantes evitan comer sopa de algas el día del examen porque creen que la buena suerte 'se resbalará'."
+      "funFactEs": "Por el contrario, los estudiantes evitan comer sopa de algas el día del examen porque creen que la buena suerte 'se resbalará'.",
+      "questionPt": "Qual prato os coreanos comem tradicionalmente no aniversário para atrair saúde e longevidade?",
+      "explanationPt": "O Miyeok-guk (sopa de alga marinha) é rico em nutrientes e tradicionalmente consumido pelas mães após o parto. Comê-lo no aniversário é uma forma de homenagear e agradecer à própria mãe.",
+      "funFactPt": "Por outro lado, os estudantes evitam comer a escorregadia sopa de alga no dia de provas porque acreditam que a boa sorte pode 'escorregar'!"
     },
     {
       "id": 3,
@@ -109,25 +123,29 @@
           "id": "A",
           "text": "Hold your cup with both hands and turn your head slightly away when sipping",
           "textKo": "잔을 두 손으로 공손히 받고, 마실 때는 고개를 살짝 돌려 마신다",
-          "textEs": "Sostener el vaso con ambas manos y girar la cabeza ligeramente hacia un lado al beber"
+          "textEs": "Sostener el vaso con ambas manos y girar la cabeza ligeramente hacia un lado al beber",
+          "textPt": "Segurar o copo com as duas mãos e virar levemente o rosto para o lado ao beber"
         },
         {
           "id": "B",
           "text": "Look them directly in the eyes without blinking to show respect",
           "textKo": "눈을 똑바로 응시하며 단숨에 마신다",
-          "textEs": "Mirarla fijamente a los ojos sin parpadear en señal de respeto"
+          "textEs": "Mirarla fijamente a los ojos sin parpadear en señal de respeto",
+          "textPt": "Olhar diretamente nos olhos dela sem piscar para demonstrar respeito"
         },
         {
           "id": "C",
           "text": "Pour your own drink right after to prove independence",
           "textKo": "받자마자 내 잔에 술을 더 채워 자립심을 보여준다",
-          "textEs": "Servirte tu propia bebida justo después para demostrar independencia"
+          "textEs": "Servirte tu propia bebida justo después para demostrar independencia",
+          "textPt": "Servir sua própria bebida logo em seguida para provar independência"
         },
         {
           "id": "D",
           "text": "Politely decline the first two glasses",
           "textKo": "예의상 첫 두 잔은 거절한다",
-          "textEs": "Rechazar cortésmente los primeros dos vasos"
+          "textEs": "Rechazar cortésmente los primeros dos vasos",
+          "textPt": "Recusar educadamente os dois primeiros copos"
         }
       ],
       "correctAnswer": "A",
@@ -137,7 +155,10 @@
       "funFactKo": "한국 술자리에서는 자기 잔에 자기가 직접 술을 채우는 '자작'보다는 서로 잔을 채워주며 유대감을 쌓는 정이 있습니다.",
       "questionEs": "Cuando una persona mayor o de mayor rango te sirve una bebida, ¿cuál es la etiqueta educada?",
       "explanationEs": "Sostener el vaso con ambas manos demuestra humildad y respeto. Girar la cabeza hacia un lado evita beber directamente de frente a un mayor, lo cual se considera muy educado.",
-      "funFactEs": "Nunca te sirvas tu propia bebida en una reunión social en Corea: servirse mutuamente fomenta la camaradería y la cercanía."
+      "funFactEs": "Nunca te sirvas tu propia bebida en una reunión social en Corea: servirse mutuamente fomenta la camaradería y la cercanía.",
+      "questionPt": "Quando uma pessoa mais velha ou de cargo superior serve uma bebida para você, qual é a etiqueta correta?",
+      "explanationPt": "Segurar o copo com ambas as mãos demonstra humildade e respeito. Virar o rosto para o lado ao beber evita beber diretamente de frente para o mais velho, o que é considerado sinal de boas maneiras.",
+      "funFactPt": "Nunca sirva sua própria bebida durante uma reunião social na Coreia — servir uns aos outros fortalece a camaradagem e a conexão!"
     },
     {
       "id": 4,
@@ -149,25 +170,29 @@
           "id": "A",
           "text": "Red ink was historically reserved only for royalty",
           "textKo": "과거 왕족만 사용할 수 있던 색이었기 때문에",
-          "textEs": "La tinta roja estaba históricamente reservada solo para la realeza"
+          "textEs": "La tinta roja estaba históricamente reservada solo para la realeza",
+          "textPt": "A tinta vermelha era historicamente reservada apenas para a realeza"
         },
         {
           "id": "B",
           "text": "Red ink was used on death registries and tombstones",
           "textKo": "과거 호적에서 사망자 이름이나 묘비에 붉은색을 썼기 때문에",
-          "textEs": "La tinta roja se usaba para registrar a los fallecidos y en las lápidas"
+          "textEs": "La tinta roja se usaba para registrar a los fallecidos y en las lápidas",
+          "textPt": "A tinta vermelha era usada em registros de óbito e lápides"
         },
         {
           "id": "C",
           "text": "Red ink fades faster in Korean paper",
           "textKo": "한지에서 붉은 먹물이 더 빨리 바래기 때문에",
-          "textEs": "La tinta roja se desvanece más rápido en el papel tradicional coreano"
+          "textEs": "La tinta roja se desvanece más rápido en el papel tradicional coreano",
+          "textPt": "A tinta vermelha desbota mais rápido no papel tradicional coreano"
         },
         {
           "id": "D",
           "text": "It implies you owe someone money",
           "textKo": "빚이 있다는 뜻으로 통했기 때문에",
-          "textEs": "Implica que le debes dinero a alguien"
+          "textEs": "Implica que le debes dinero a alguien",
+          "textPt": "Isso indica que você deve dinheiro a alguém"
         }
       ],
       "correctAnswer": "B",
@@ -177,7 +202,10 @@
       "funFactKo": "요즘도 학교 선생님들은 학생 출석부나 명단에 이름을 적을 때 빨간 펜을 피하는 경우가 많습니다.",
       "questionEs": "¿Por qué los coreanos evitan escribir el nombre de una persona viva con tinta roja?",
       "explanationEs": "Históricamente en Corea, los nombres de los fallecidos se escribían con tinta roja en los registros oficiales. Escribir el nombre de alguien vivo en rojo se percibe como desearle mala suerte o la muerte.",
-      "funFactEs": "Incluso hoy en día, los profesores en Corea suelen evitar los bolígrafos rojos para anotar los nombres de los estudiantes."
+      "funFactEs": "Incluso hoy en día, los profesores en Corea suelen evitar los bolígrafos rojos para anotar los nombres de los estudiantes.",
+      "questionPt": "Por que os coreanos evitam escrever o nome de uma pessoa viva com tinta vermelha?",
+      "explanationPt": "Historicamente na Coreia, os nomes de pessoas falecidas eram escritos com tinta vermelha nos registros oficiais e estandartes funerários. Escrever o nome de alguém vivo em vermelho é visto como desejar má sorte ou morte.",
+      "funFactPt": "Até hoje, professores na Coreia costumam usar canetas azuis ou verdes ao escrever os nomes dos alunos!"
     },
     {
       "id": 5,
@@ -189,25 +217,29 @@
           "id": "A",
           "text": "Swimming across the river at sunset",
           "textKo": "일몰 보며 한강 횡단 수영하기",
-          "textEs": "Cruzar el río nadando al atardecer"
+          "textEs": "Cruzar el río nadando al atardecer",
+          "textPt": "Atravessar o rio a nado no pôr do sol"
         },
         {
           "id": "B",
           "text": "Renting a picnic mat, cooking foil-tray instant ramen, and ordering delivery chicken",
           "textKo": "돗자리 펴고 편의점 즉석 라면 끓여먹으며 치킨 배달시켜 먹기",
-          "textEs": "Extender una manta de picnic, cocinar ramen instantáneo en máquina y pedir pollo frito a domicilio"
+          "textEs": "Extender una manta de picnic, cocinar ramen instantáneo en máquina y pedir pollo frito a domicilio",
+          "textPt": "Alugar uma esteira de piquenique, preparar lámen instantâneo na bandeja de alumínio e pedir frango frito por delivery"
         },
         {
           "id": "C",
           "text": "Catching wild fish with a hand net",
           "textKo": "손그물로 민물고기 낚시하기",
-          "textEs": "Pescar peces silvestres con una red de mano"
+          "textEs": "Pescar peces silvestres con una red de mano",
+          "textPt": "Pescar peixes selvagens com uma rede de mão"
         },
         {
           "id": "D",
           "text": "Singing the national anthem at midnight",
           "textKo": "자정에 모여 애국가 제창하기",
-          "textEs": "Cantar el himno nacional a medianoche"
+          "textEs": "Cantar el himno nacional a medianoche",
+          "textPt": "Cantar o hino nacional à meia-noite"
         }
       ],
       "correctAnswer": "B",
@@ -217,7 +249,10 @@
       "funFactKo": "한강공원에는 배달 음식을 안전하게 수령할 수 있는 공식 '배달존(Delivery Zone)'이 따로 마련되어 있습니다.",
       "questionEs": "¿Cuál es una experiencia nocturna imprescindible y clásica a lo largo del Río Han (Hangang) en Seúl?",
       "explanationEs": "Cocinar ramen instantáneo en máquinas de inducción automatizadas de tiendas de conveniencia y disfrutar de Chimaek (pollo + cerveza) entregado directamente en tu punto de picnic es una tradición icónica de Seúl.",
-      "funFactEs": "¡Los repartidores en Seúl pueden encontrarte en los inmensos parques del río gracias a las zonas de entrega especialmente designadas!"
+      "funFactEs": "¡Los repartidores en Seúl pueden encontrarte en los inmensos parques del río gracias a las zonas de entrega especialmente designadas!",
+      "questionPt": "Qual é a experiência noturna clássica e imperdível às margens do Rio Han (Hangang), em Seul?",
+      "explanationPt": "Cozinhar lámen instantâneo nas máquinas automáticas de indução das lojas de conveniência e saborear um Chimaek (frango + cerveja) entregue direto no seu piquenique é uma tradição icônica do estilo de vida de Seul.",
+      "funFactPt": "Os entregadores em Seul conseguem encontrar você no meio dos imensos gramados à beira do rio graças às zonas de entrega ('Delivery Zones') sinalizadas!"
     },
     {
       "id": 6,
@@ -229,25 +264,29 @@
           "id": "A",
           "text": "Oppa!",
           "textKo": "오빠!",
-          "textEs": "¡Oppa!"
+          "textEs": "¡Oppa!",
+          "textPt": "Oppa!"
         },
         {
           "id": "B",
           "text": "Geonbae! (건배)",
           "textKo": "건배! (짠!)",
-          "textEs": "¡Geonbae! (건배)"
+          "textEs": "¡Geonbae! (건배)",
+          "textPt": "Geonbae! (건배)"
         },
         {
           "id": "C",
           "text": "Daebak!",
           "textKo": "대박!",
-          "textEs": "¡Daebak!"
+          "textEs": "¡Daebak!",
+          "textPt": "Daebak!"
         },
         {
           "id": "D",
           "text": "Kamsahamnida!",
           "textKo": "감사합니다!",
-          "textEs": "¡Kamsahamnida!"
+          "textEs": "¡Kamsahamnida!",
+          "textPt": "Kamsahamnida!"
         }
       ],
       "correctAnswer": "B",
@@ -257,7 +296,10 @@
       "funFactKo": "요즘 젊은 층 사이에서는 개성 넘치는 줄임말 건배사(예: 청바지 - 청춘은 바로 지금부터)도 인기가 많습니다.",
       "questionEs": "¿Cuál es la expresión coreana más popular al brindar y chocar los vasos?",
       "explanationEs": "'Geonbae' (건배) significa literalmente 'vaciar el vaso' (el equivalente a '¡Salud!' o 'fondo blanco').",
-      "funFactEs": "Entre amigos jóvenes también se usa la divertida exclamación '¡Jjan!' (짠), que imita el sonido del choque de los vasos."
+      "funFactEs": "Entre amigos jóvenes también se usa la divertida exclamación '¡Jjan!' (짠), que imita el sonido del choque de los vasos.",
+      "questionPt": "Qual é a expressão coreana mais popular usada ao brindar e bater os copos?",
+      "explanationPt": "'Geonbae' (건배) significa literalmente 'esvaziar o copo' (o equivalente a 'Saúde!' ou 'Vira!').",
+      "funFactPt": "Outra expressão divertida e moderna usada entre amigos ao brindar é 'Jjan!' (짠), imitando o som do tilintar dos copos."
     },
     {
       "id": 7,
@@ -269,25 +311,29 @@
           "id": "A",
           "text": "Bow 3 times to the wall",
           "textKo": "벽을 보고 3번 절하기",
-          "textEs": "Hacer una reverencia 3 veces hacia la pared"
+          "textEs": "Hacer una reverencia 3 veces hacia la pared",
+          "textPt": "Fazer 3 reverências para a parede"
         },
         {
           "id": "B",
           "text": "Wash your face in the sink",
           "textKo": "세면대에서 세수하기",
-          "textEs": "Lavarte la cara en el lavabo"
+          "textEs": "Lavarte la cara en el lavabo",
+          "textPt": "Lavar o rosto na pia"
         },
         {
           "id": "C",
           "text": "Take off your outdoor shoes in the entryway (Hyeon-gwan)",
           "textKo": "현관에서 신발을 벗고 실내로 들어간다",
-          "textEs": "Quitarte los zapatos en la entrada (Hyeon-gwan)"
+          "textEs": "Quitarte los zapatos en la entrada (Hyeon-gwan)",
+          "textPt": "Tirar os sapatos na entrada (Hyeon-gwan)"
         },
         {
           "id": "D",
           "text": "Compliment the ceiling height",
           "textKo": "천장 높이를 칭찬하기",
-          "textEs": "Felicitar a los dueños por la altura del techo"
+          "textEs": "Felicitar a los dueños por la altura del techo",
+          "textPt": "Elogiar a altura do teto"
         }
       ],
       "correctAnswer": "C",
@@ -297,7 +343,10 @@
       "funFactKo": "한국 가정집 화장실에는 물기가 닿지 않도록 신는 별도의 고무 욕실화가 마련되어 있는 것도 독특한 특징입니다.",
       "questionEs": "¿Qué debes hacer SIEMPRE inmediatamente al entrar en una casa coreana?",
       "explanationEs": "Dado que la vida tradicional coreana gira en torno al suelo calefaccionado (Ondol), donde se come y duerme, los zapatos siempre deben quitarse en la entrada antes de pisar el interior.",
-      "funFactEs": "Muchos restaurantes tradicionales coreanos y casas de huéspedes también exigen quitarse los zapatos en la entrada."
+      "funFactEs": "Muchos restaurantes tradicionales coreanos y casas de huéspedes también exigen quitarse los zapatos en la entrada.",
+      "questionPt": "O que você deve fazer imediatamente ao entrar em uma casa coreana tradicional ou moderna?",
+      "explanationPt": "Como a vida tradicional coreana gira em torno de sentar, comer e dormir sobre pisos aquecidos (Ondol), os calçados usados na rua devem sempre ser retirados no hall de entrada rebaixado (Hyeon-gwan).",
+      "funFactPt": "Muitos restaurantes tradicionais coreanos e até algumas clínicas e pousadas também exigem tirar os sapatos na entrada."
     },
     {
       "id": 8,
@@ -309,25 +358,29 @@
           "id": "A",
           "text": "Songpyeon (송편)",
           "textKo": "송편",
-          "textEs": "Songpyeon (송편)"
+          "textEs": "Songpyeon (송편)",
+          "textPt": "Songpyeon (송편)"
         },
         {
           "id": "B",
           "text": "Hotteok (호떡)",
           "textKo": "호떡",
-          "textEs": "Hotteok (호떡)"
+          "textEs": "Hotteok (호떡)",
+          "textPt": "Hotteok (호떡)"
         },
         {
           "id": "C",
           "text": "Bungeoppang (붕어빵)",
           "textKo": "붕어빵",
-          "textEs": "Bungeoppang (붕어빵)"
+          "textEs": "Bungeoppang (붕어빵)",
+          "textPt": "Bungeoppang (붕어빵)"
         },
         {
           "id": "D",
           "text": "Yakgwa (약과)",
           "textKo": "약과",
-          "textEs": "Yakgwa (약과)"
+          "textEs": "Yakgwa (약과)",
+          "textPt": "Yakgwa (약과)"
         }
       ],
       "correctAnswer": "A",
@@ -337,7 +390,10 @@
       "funFactKo": "'송편을 예쁘게 빚으면 좋은 배우자를 만나거나 예쁜 딸을 낳는다'는 정겨운 옛 속담이 있습니다.",
       "questionEs": "¿Qué pastel de arroz relleno en forma de media luna es la comida tradicional representativa de Chuseok (el Día de Acción de Gracias coreano)?",
       "explanationEs": "El Songpyeon se elabora con masa de arroz glutinoso rellena de semillas de sésamo, miel, castañas o frijoles, y se cocina al vapor sobre agujas de pino para darle un aroma fresco.",
-      "funFactEs": "El folclore coreano dice que si preparas un Songpyeon con una forma hermosa, ¡conocerás a una gran pareja o tendrás una hija hermosa!"
+      "funFactEs": "El folclore coreano dice que si preparas un Songpyeon con una forma hermosa, ¡conocerás a una gran pareja o tendrás una hija hermosa!",
+      "questionPt": "Qual bolinho de arroz recheado em formato de meia-lua é a comida tradicional símbolo do Chuseok (Dia de Ação de Graças coreano)?",
+      "explanationPt": "O Songpyeon é feito de massa de arroz glutinoso recheada com sementes de gergelim, mel, feijão-azuqui ou castanhas, e cozido no vapor sobre uma camada de agulhas de pinheiro que lhe confere um aroma fresco.",
+      "funFactPt": "O folclore coreano diz que quem modela um Songpyeon bonito e bem-feito encontrará um ótimo par ou terá filhos lindos!"
     },
     {
       "id": 9,
@@ -349,25 +405,29 @@
           "id": "A",
           "text": "Strict corporate discipline and hierarchy",
           "textKo": "철저한 상명하복의 직장 규율",
-          "textEs": "Estricta disciplina y jerarquía corporativa"
+          "textEs": "Estricta disciplina y jerarquía corporativa",
+          "textPt": "Disciplina e hierarquia corporativa rígidas"
         },
         {
           "id": "B",
           "text": "A deep, warm feeling of affection, mutual attachment, and community caring built over time",
           "textKo": "오랜 시간 함께하며 쌓인 깊고 따뜻한 애착, 배려, 끈끈한 공동체적 유대감",
-          "textEs": "Un sentimiento profundo y cálido de afecto, apego mutuo y solidaridad comunitaria construido con el tiempo"
+          "textEs": "Un sentimiento profundo y cálido de afecto, apego mutuo y solidaridad comunitaria construido con el tiempo",
+          "textPt": "Um sentimento profundo e caloroso de afeto, apego mútuo e cuidado comunitário construído ao longo do tempo"
         },
         {
           "id": "C",
           "text": "The competitive urge to study harder than peers",
           "textKo": "남들보다 더 치열하게 공부하려는 경쟁심",
-          "textEs": "El impulso competitivo de estudiar más duro que los compañeros"
+          "textEs": "El impulso competitivo de estudiar más duro que los compañeros",
+          "textPt": "O impulso competitivo de estudar mais do que os colegas"
         },
         {
           "id": "D",
           "text": "An intense craving for spicy kimchi stew",
           "textKo": "얼큰한 찌개를 갈망하는 식탐",
-          "textEs": "Un antojo irresistible de guiso de kimchi picante"
+          "textEs": "Un antojo irresistible de guiso de kimchi picante",
+          "textPt": "Um desejo intenso por ensopado de kimchi apimentado"
         }
       ],
       "correctAnswer": "B",
@@ -377,7 +437,10 @@
       "funFactKo": "식당에서 주인 아주머니가 계란찜이나 음료수를 슬쩍 공짜로 얹어주는 '서비스'가 바로 정의 대표적 모습입니다.",
       "questionEs": "El concepto cultural coreano de 'Jeong' (정) se describe mejor como:",
       "explanationEs": "'Jeong' representa un lazo emocional de empatía, generosidad y calidez que se desarrolla entre las personas a través de experiencias compartidas y amabilidad sincera.",
-      "funFactEs": "Cuando el dueño de un restaurante te regala guarniciones o bebidas extra gratis, ese gesto amable se llama 'Servicio' motivado por el 'Jeong'."
+      "funFactEs": "Cuando el dueño de un restaurante te regala guarniciones o bebidas extra gratis, ese gesto amable se llama 'Servicio' motivado por el 'Jeong'.",
+      "questionPt": "O conceito cultural coreano intraduzível de 'Jeong' (정) é mais bem descrito como:",
+      "explanationPt": "'Jeong' representa um laço emocional de empatia, generosidade e acolhimento que se desenvolve entre as pessoas por meio de experiências compartilhadas, gentileza e convivência.",
+      "funFactPt": "Quando o dono de um restaurante lhe dá acompanhamentos ou bebidas extras de graça, esse gesto carinhoso é chamado de 'Service', motivado pelo 'Jeong'!"
     },
     {
       "id": 10,
@@ -389,25 +452,29 @@
           "id": "A",
           "text": "Fans attract friendly mountain spirits",
           "textKo": "선풍기 바람이 산신령을 불러온다는 미신",
-          "textEs": "Los ventiladores atraen a espíritus amigables de la montaña"
+          "textEs": "Los ventiladores atraen a espíritus amigables de la montaña",
+          "textPt": "Os ventiladores atraem espíritos amigáveis da montanha"
         },
         {
           "id": "B",
           "text": "Leaving a fan on while sleeping in a closed room can cause hypothermia or suffocation ('Fan Death')",
           "textKo": "밀폐된 방에서 선풍기를 틀고 자면 질식이나 저체온증으로 사망한다는 '선풍기 사망설'",
-          "textEs": "Dormir con un ventilador encendido en una habitación cerrada puede causar hipotermia o asfixia ('Muerte por ventilador')"
+          "textEs": "Dormir con un ventilador encendido en una habitación cerrada puede causar hipotermia o asfixia ('Muerte por ventilador')",
+          "textPt": "Deixar um ventilador ligado enquanto dorme em um quarto fechado pode causar hipotermia ou asfixia ('Morte por Ventilador')"
         },
         {
           "id": "C",
           "text": "Fans will blow away all household financial savings",
           "textKo": "선풍기가 집안의 재물운을 밖으로 날려버린다는 미신",
-          "textEs": "Los ventiladores alejan todos los ahorros económicos de la familia"
+          "textEs": "Los ventiladores alejan todos los ahorros económicos de la familia",
+          "textPt": "Os ventiladores sopram para longe todas as economias financeiras da família"
         },
         {
           "id": "D",
           "text": "Fans make watermelon taste sour",
           "textKo": "수박 맛을 시큼하게 만든다는 속설",
-          "textEs": "Los ventiladores hacen que la sandía tenga un sabor amargo"
+          "textEs": "Los ventiladores hacen que la sandía tenga un sabor amargo",
+          "textPt": "Os ventiladores deixam a melancia com gosto azedo"
         }
       ],
       "correctAnswer": "B",
@@ -417,7 +484,10 @@
       "funFactKo": "의학적으로 근거가 없음이 밝혀졌지만, 지금도 부모님들은 '선풍기 바람 직접 쐬지 말고 회전해라'고 당부하시곤 합니다.",
       "questionEs": "¿Cuál es la famosa superstición coreana sobre los ventiladores eléctricos en habitaciones cerradas durante el verano?",
       "explanationEs": "La 'Muerte por ventilador' (선풍기 사망설) es un célebre mito urbano en Corea del Sur que llevó a que casi todos los ventiladores incluyan un temporizador de apagado automático obligatorio.",
-      "funFactEs": "Aunque ha sido desmentido científicamente, casi todos los ventiladores que se venden en Corea aún cuentan con temporizadores de seguridad de 2 a 4 horas."
+      "funFactEs": "Aunque ha sido desmentido científicamente, casi todos los ventiladores que se venden en Corea aún cuentan con temporizadores de seguridad de 2 a 4 horas.",
+      "questionPt": "Qual é a famosa superstição coreana sobre ventiladores elétricos em quartos fechados durante o verão?",
+      "explanationPt": "A 'Morte por Ventilador' (선풍기 사망설) é uma lenda urbana lendária na Coreia do Sul que remonta a décadas atrás, fazendo com que muitos ventiladores coreanos venham com timers obrigatórios de desligamento automático.",
+      "funFactPt": "Embora já tenha sido desmentido pela ciência, quase todo ventilador elétrico vendido na Coreia do Sul ainda conta com um timer de segurança de 2 a 4 horas para dormir!"
     },
     {
       "id": 11,
@@ -434,7 +504,8 @@
           "textKo": "화려한 펜트하우스를 뜻하는 'Fancy'의 약자라서",
           "textEs": "'F' significa ático lujoso ('Fancy')",
           "textRu": "'F' означает роскошный пентхаус ('Fancy')",
-          "textZh": "代表豪华顶层公寓的缩写“Fancy”"
+          "textZh": "代表豪华顶层公寓的缩写“Fancy”",
+          "textPt": "'F' significa andar de cobertura luxuosa ('Fancy')"
         },
         {
           "id": "B",
@@ -442,7 +513,8 @@
           "textKo": "한자 숫자 '4(四)'의 발음이 죽을 '사(死)'와 같아 불길함을 피하기 위해 (Four의 F 사용)",
           "textEs": "La palabra sino-coreana para cuatro ('Sa') suena idéntica a la palabra para muerte ('Sa')",
           "textRu": "Корейское слово для цифры четыре («Са») звучит одинаково со словом смерть («Са»)",
-          "textZh": "汉字数字“四（사）”的发音与死亡的“死（사）”完全同音，为避讳不吉利而取英文Four的首字母F"
+          "textZh": "汉字数字“四（사）”的发音与死亡的“死（사）”完全同音，为避讳不吉利而取英文Four的首字母F",
+          "textPt": "A palavra sino-coreana para quatro ('Sa' / 四) tem exatamente o mesmo som da palavra para morte ('Sa' / 死)"
         },
         {
           "id": "C",
@@ -450,7 +522,8 @@
           "textKo": "숫자 4는 의사만 사용할 수 있는 번호라서",
           "textEs": "El número 4 está reservado por ley exclusivamente para médicos",
           "textRu": "Цифра 4 зарезервирована законом только для врачей",
-          "textZh": "法律规定数字4仅供医生专属使用"
+          "textZh": "法律规定数字4仅供医生专属使用",
+          "textPt": "O número 4 é reservado por lei apenas para médicos e cirurgiões"
         },
         {
           "id": "D",
@@ -458,7 +531,8 @@
           "textKo": "버튼 제조 공장에 숫자 4 부품이 부족해서",
           "textEs": "La fábrica de botones se quedó sin números cuatro",
           "textRu": "На заводе закончились детали с цифрой четыре",
-          "textZh": "电梯按钮制造厂把数字4零件用光了"
+          "textZh": "电梯按钮制造厂把数字4零件用光了",
+          "textPt": "A fábrica de botões de elevador ficou sem o número quatro"
         }
       ],
       "correctAnswer": "B",
@@ -471,7 +545,10 @@
       "funFactKo": "요즘 지어지는 신축 아파트는 4층을 그대로 표기하는 추세지만, 병원에서는 여전히 환자들의 심리적 안정을 위해 F층을 선호합니다!",
       "funFactEs": "¡Aunque los edificios modernos ya usan el '4', en los hospitales tradicionales casi siempre verás la 'F'!",
       "funFactRu": "В современных новостройках уже пишут «4», но в больницах почти всегда можно увидеть букву «F»!",
-      "funFactZh": "虽然如今很多现代新建高楼已恢复使用数字4，但在综合医院里为了照顾病患心理，依然极普遍保留着F层！"
+      "funFactZh": "虽然如今很多现代新建高楼已恢复使用数字4，但在综合医院里为了照顾病患心理，依然极普遍保留着F层！",
+      "questionPt": "Por que muitos elevadores em prédios residenciais, hospitais e hotéis na Coreia mostram a letra 'F' em vez do número '4'?",
+      "explanationPt": "A tetrafobia (medo do número 4) é comum no Leste Asiático. Como 'Sa' (사) significa tanto 4 quanto morte, os construtores historicamente substituíram o número pela letra 'F' (do inglês 'Four') para evitar maus presságios.",
+      "funFactPt": "Prédios de luxo modernos usam cada vez mais o '4' hoje em dia, mas em hospitais tradicionais você quase sempre verá o 'F'!"
     },
     {
       "id": 12,
@@ -488,7 +565,8 @@
           "textKo": "잔에 술이 남아있는데 덧붙여 따르지 않는다 (잔을 완전히 비운 뒤에 채워야 한다)",
           "textEs": "Nunca servir más alcohol en un vaso que aún esté a medio llenar: se debe esperar a que esté completamente vacío",
           "textRu": "Никогда не доливать напиток в наполовину полный бокал — нужно дождаться, пока человек допьет до дна",
-          "textZh": "对方杯中尚有残酒时切勿往里添酒（添盏），必须等杯子彻底见底后再行斟酒"
+          "textZh": "对方杯中尚有残酒时切勿往里添酒（添盏），必须等杯子彻底见底后再行斟酒",
+          "textPt": "Nunca servir mais bebida em um copo que ainda esteja parcialmente cheio — espere até que ele esteja completamente vazio"
         },
         {
           "id": "B",
@@ -496,7 +574,8 @@
           "textKo": "상대방에게 5분 안에 10잔을 강제로 마시게 한다",
           "textEs": "Obligar a la otra persona a beber 10 vasos en 5 minutos",
           "textRu": "Заставлять выпивать 10 рюмок за 5 минут",
-          "textZh": "强迫对方在5分钟内喝下10杯酒"
+          "textZh": "强迫对方在5分钟内喝下10杯酒",
+          "textPt": "Sempre forçar a outra pessoa a beber 10 copos em 5 minutos"
         },
         {
           "id": "C",
@@ -504,7 +583,8 @@
           "textKo": "보름달이 뜬 날에는 잔을 부딪치지 않는다",
           "textEs": "Nunca chocar los vasos si hay luna llena",
           "textRu": "Не чокаться в полнолуние",
-          "textZh": "满月之夜严禁碰杯"
+          "textZh": "满月之夜严禁碰杯",
+          "textPt": "Nunca brindar se for noite de lua cheia"
         },
         {
           "id": "D",
@@ -512,7 +592,8 @@
           "textKo": "발가락으로만 술병을 쥐고 따른다",
           "textEs": "Servir alcohol solo usando los dedos de los pies",
           "textRu": "Наливать алкоголь пальцами ног",
-          "textZh": "只准用脚趾夹着酒瓶倒酒"
+          "textZh": "只准用脚趾夹着酒瓶倒酒",
+          "textPt": "Servir bebida usando apenas os dedos dos pés"
         }
       ],
       "correctAnswer": "A",
@@ -525,7 +606,10 @@
       "funFactKo": "상대의 잔이 비었을 때 '한 잔 따라드릴까요?'라고 챙겨주는 것은 한국인의 정이 묻어나는 대표적인 술자리 배려입니다!",
       "funFactEs": "¡Si ves el vaso de un compañero vacío, ofrécete a llenarlo de inmediato; sin duda te devolverá el favor!",
       "funFactRu": "Если вы видите пустую рюмку у соседа, сразу предложите налить — он с радостью ответит взаимностью!",
-      "funFactZh": "看到同伴酒杯空了立即主动微笑着为其斟满，是对面同伴感受到温暖互动的关键社交技巧！"
+      "funFactZh": "看到同伴酒杯空了立即主动微笑着为其斟满，是对面同伴感受到温暖互动的关键社交技巧！",
+      "questionPt": "Na cultura tradicional coreana de bebidas, qual é o tabu rigoroso conhecido como 'Cheom-jan' (첨잔 금지)?",
+      "explanationPt": "Completar um copo que ainda tem bebida ('Cheom-jan') é historicamente reservado apenas para rituais memoriais aos antepassados (Jesa). Em encontros sociais, espera-se até que o copo de alguém esteja totalmente vazio antes de oferecer para enchê-lo.",
+      "funFactPt": "Se você vir o copo de um colega vazio na mesa, ofereça-se imediatamente para enchê-lo — e ele provavelmente retribuirá a gentileza!"
     },
     {
       "id": 13,
@@ -542,7 +626,8 @@
           "textKo": "신발 치수가 2치수 커지기 때문에",
           "textEs": "Hace que tus zapatos crezcan dos tallas",
           "textRu": "Из-за этого обувь увеличится на два размера",
-          "textZh": "会让鞋子尺寸变大两码"
+          "textZh": "会让鞋子尺寸变大两码",
+          "textPt": "Isso fará seus sapatos crescerem dois números"
         },
         {
           "id": "B",
@@ -550,7 +635,8 @@
           "textKo": "문지방 아래 숨겨둔 사탕이 깨지기 때문에",
           "textEs": "El umbral contiene dulces escondidos que se aplastan",
           "textRu": "Под порогом спрятаны конфеты, которые могут помяться",
-          "textZh": "会压碎门槛下藏着的糖果"
+          "textZh": "会压碎门槛下藏着的糖果",
+          "textPt": "A soleira esconde doces que vão estragar"
         },
         {
           "id": "C",
@@ -558,7 +644,8 @@
           "textKo": "문지방을 밟으면 집안의 복(福)이 달아나거나 조상신의 목을 밟는 것과 같다는 오랜 미신 때문에",
           "textEs": "La superstición advierte que pisarlo ahuyenta la buena fortuna o es como pisar a los espíritus protectores del hogar",
           "textRu": "По поверью, наступая на порог, вы прогоняете семейную удачу и благополучие из дома",
-          "textZh": "传统民俗认为踩在门槛上会踩碎或撵跑家中迎来的福气（복），如同踩在护家门神的头上一般大为不敬"
+          "textZh": "传统民俗认为踩在门槛上会踩碎或撵跑家中迎来的福气（복），如同踩在护家门神的头上一般大为不敬",
+          "textPt": "A superstição diz que pisar nela desrespeita os espíritos protetores ou afasta a boa sorte e a riqueza da casa"
         },
         {
           "id": "D",
@@ -566,7 +653,8 @@
           "textKo": "거실에 천둥 번개가 치기 때문에",
           "textEs": "Provoca truenos en la sala de estar",
           "textRu": "Это вызывает гром в гостиной",
-          "textZh": "会在客厅召唤雷鸣闪电"
+          "textZh": "会在客厅召唤雷鸣闪电",
+          "textPt": "Isso invoca trovões dentro da sala de estar"
         }
       ],
       "correctAnswer": "C",
@@ -579,7 +667,10 @@
       "funFactKo": "한국 가옥에서는 문지방을 사뿐히 '넘어가는' 것이 예의 바르고 복을 지키는 올바른 걸음걸이입니다!",
       "funFactEs": "¡Pasa siempre limpiamente POR ENCIMA del umbral, nunca sobre él!",
       "funFactRu": "Всегда аккуратно перешагивайте через порог, ни в коем случае не наступая!",
-      "funFactZh": "进入韩式房间时，一定要把脚抬高稳稳“迈过”门槛，切莫脚踩其上！"
+      "funFactZh": "进入韩式房间时，一定要把脚抬高稳稳“迈过”门槛，切莫脚踩其上！",
+      "questionPt": "Por que os mais velhos e os pais coreanos advertem severamente as crianças para nunca pisarem diretamente na soleira de madeira da porta (Munjibang)?",
+      "explanationPt": "Historicamente nas casas tradicionais Hanok, a soleira (Munjibang) era considerada a fronteira sagrada entre o espírito protetor do lar e o mundo exterior. Acreditava-se que pisar nela expulsava a boa sorte (Bok), além de empenar o batente de madeira.",
+      "funFactPt": "Sempre dê um passo passando POR CIMA da soleira, nunca pisando sobre ela!"
     },
     {
       "id": 14,
@@ -596,7 +687,8 @@
           "textKo": "미끄러운 바나나와 생선회",
           "textEs": "Plátanos resbaladizos y pescado crudo",
           "textRu": "Скользкие бананы и сырая рыба",
-          "textZh": "滑溜溜的香蕉皮和生鱼片"
+          "textZh": "滑溜溜的香蕉皮和生鱼片",
+          "textPt": "Bananas escorregadias e peixe cru"
         },
         {
           "id": "B",
@@ -604,7 +696,8 @@
           "textKo": "녹아내리는 아이스크림",
           "textEs": "Helados derretidos",
           "textRu": "Тающее мороженое",
-          "textZh": "融化融化的甜筒冰淇淋"
+          "textZh": "融化融化的甜筒冰淇淋",
+          "textPt": "Casquinhas de sorvete derretendo"
         },
         {
           "id": "C",
@@ -612,7 +705,8 @@
           "textKo": "시큼한 레몬 조각",
           "textEs": "Rodajas de limón ácido",
           "textRu": "Кислые дольки лимона",
-          "textZh": "酸涩柠檬片"
+          "textZh": "酸涩柠檬片",
+          "textPt": "Fatias de limão azedo"
         },
         {
           "id": "D",
@@ -620,7 +714,8 @@
           "textKo": "찰떡처럼 찰싹 붙으라는 의미의 '엿'과 쫀득한 '찹쌀떡'",
           "textEs": "Yeot tradicional (caramelo pegajoso de arroz) y Chapssaltteok (pasteles de arroz glutinoso)",
           "textRu": "Традиционная липкая патока Ёт и упругие клейкие рисовые пирожки Чхапссальтток",
-          "textZh": "黏性极强能牢牢粘住榜单的传统麦芽糖（Yeot / 엿）和软糯糯米糕（Chapssaltteok / 찹쌀떡）"
+          "textZh": "黏性极强能牢牢粘住榜单的传统麦芽糖（Yeot / 엿）和软糯糯米糕（Chapssaltteok / 찹쌀떡）",
+          "textPt": "Yeot tradicional (caramelo puxa-puxa) e Chapssaltteok (bolinhos de arroz glutinoso)"
         }
       ],
       "correctAnswer": "D",
@@ -633,7 +728,10 @@
       "funFactKo": "'정답만 콕콕 잘 찍어라!'라는 언어유희로 문제풀이용 포크나 거울, 두루마리 휴지를 선물하는 위트도 있습니다!",
       "funFactEs": "¡Los amigos también regalan tenedores con la broma '¡Acierta!' (que en coreano suena igual que pinchar)!",
       "funFactRu": "Друзья также дарят вилки с каламбуром «Уколи правильный ответ!»",
-      "funFactZh": "朋友们还会送叉子（寓意一戳就中选对答案）、卷筒卫生纸（寓意解题如撕纸般顺畅解开）！"
+      "funFactZh": "朋友们还会送叉子（寓意一戳就中选对答案）、卷筒卫生纸（寓意解题如撕纸般顺畅解开）！",
+      "questionPt": "Antes de os estudantes do ensino médio fazerem o intenso exame nacional de admissão universitária da Coreia (Suneung), quais doces grudentos as famílias dão de presente para desejar sucesso?",
+      "explanationPt": "Em coreano, 'But-da' (붙다) significa tanto 'grudar em algo' quanto 'ser aprovado em um exame'. Presentear doces bem grudentos como o Yeot ou bolinhos de arroz glutinoso simboliza 'grudar' o estudante diretamente na vaga da universidade!",
+      "funFactPt": "Os amigos também dão garfos decorativos fazendo um trocadilho com 'Jjik-eo!' (que significa tanto 'espetar' quanto 'chutar a alternativa certa na prova')!"
     },
     {
       "id": 15,
@@ -650,7 +748,8 @@
           "textKo": "한국의 모든 노트북은 테이블에 나사로 고정되어 있어서",
           "textEs": "Todos los portátiles están atornillados a las mesas",
           "textRu": "Все ноутбуки намертво прикручены к столам",
-          "textZh": "韩国所有笔记本电脑出厂时都被螺丝钉焊死在桌面上"
+          "textZh": "韩国所有笔记本电脑出厂时都被螺丝钉焊死在桌面上",
+          "textPt": "Todos os notebooks na Coreia são parafusados permanentemente nas mesas"
         },
         {
           "id": "B",
@@ -658,7 +757,8 @@
           "textKo": "촘촘한 고화질 CCTV 인프라, 빠른 경찰 수사력, 그리고 '전자기기는 절대 손대지 않는다'는 높은 시민의식과 상호 신뢰",
           "textEs": "Cobertura omnipresente de CCTV en alta definición, rápida respuesta policial y una alta confianza social",
           "textRu": "Повсеместные камеры видеонаблюдения высокого разрешения, быстрая работа полиции и высокое общественное доверие",
-          "textZh": "全国极高密度的超清CCTV监控网络、神速的警务破案追踪体系，以及“绝不盗窃他人电子设备”的极高社会公德互信"
+          "textZh": "全国极高密度的超清CCTV监控网络、神速的警务破案追踪体系，以及“绝不盗窃他人电子设备”的极高社会公德互信",
+          "textPt": "Cobertura onipresente de câmeras CCTV de alta definição, rastreamento policial rápido e alta confiança social ('Não roubamos eletrônicos, só guarda-chuvas!')"
         },
         {
           "id": "C",
@@ -666,7 +766,8 @@
           "textKo": "한국인들은 노트북을 사용할 줄 몰라서",
           "textEs": "Nadie en Corea sabe usar ordenadores portátiles",
           "textRu": "В Корее никто не умеет пользоваться ноутбуками",
-          "textZh": "韩国人根本不会操作笔记本电脑"
+          "textZh": "韩国人根本不会操作笔记本电脑",
+          "textPt": "Ninguém na Coreia sabe usar um notebook"
         },
         {
           "id": "D",
@@ -674,7 +775,8 @@
           "textKo": "노트북을 잃어버리면 경찰서에서 공짜로 새것을 지급해 줘서",
           "textEs": "La policía regala portátiles nuevos a quien los pierde",
           "textRu": "Полиция бесплатно раздает новые ноутбуки потерявшим",
-          "textZh": "丢了电脑警察局会免费发一台最新款"
+          "textZh": "丢了电脑警察局会免费发一台最新款",
+          "textPt": "A polícia distribui notebooks novos de graça para qualquer pessoa que perca um"
         }
       ],
       "correctAnswer": "B",
@@ -687,7 +789,10 @@
       "funFactKo": "한국인들 사이에서는 '수백만 원짜리 노트북과 지갑은 안 건드려도 비 오는 날 비닐 우산이나 자전거 안장은 훔쳐 간다'는 유쾌한 자조적 밈이 있습니다!",
       "funFactEs": "¡Los coreanos bromean: '¡Nunca tocaremos tu portátil de 2.000 $, pero vigila tu paraguas de plástico de 3 $ en un día de lluvia!'",
       "funFactRu": "Корейцы шутят: «Никто не тронет твой ноутбук за 2000$, но береги свой пластиковый зонтик за 3$ в дождь!»",
-      "funFactZh": "韩国民间爆笑调侃自嘲：“桌上两万块的苹果电脑绝对没人偷，但下雨天放在店门口的三块钱透明塑料雨伞可就不一定了！”"
+      "funFactZh": "韩国民间爆笑调侃自嘲：“桌上两万块的苹果电脑绝对没人偷，但下雨天放在店门口的三块钱透明塑料雨伞可就不一定了！”",
+      "questionPt": "Visitantes em Seul costumam ficar chocados quando os moradores deixam MacBooks, smartphones e carteiras sobre as mesas dos cafés enquanto vão ao banheiro. O que explica esse fenômeno?",
+      "explanationPt": "A Coreia do Sul possui uma das maiores densidades de câmeras de segurança CCTV do mundo e sistemas de pagamento quase 100% digitais, criando uma cultura em que furtar um notebook significa prisão praticamente garantida em poucas horas.",
+      "funFactPt": "Os coreanos brincam: 'Jamais tocaremos no seu notebook de 2.000 dólares, mas fique de olho no seu guarda-chuva transparente de 3 dólares em dias de chuva!'"
     },
     {
       "id": 16,
@@ -704,7 +809,8 @@
           "textKo": "초기 임산부와 임신부를 배려하기 위해 지정된 '임산부 배려석'",
           "textEs": "Asientos de cortesía reservados exclusivamente para mujeres embarazadas (Imsanbu baeryeoseok)",
           "textRu": "Приоритетные места, предназначенные для беременных женщин (Имсанбу пэресок)",
-          "textZh": "专为关怀体恤孕妇（包括孕早期孕妇）设立的“孕妇关爱专座（임산부 배려석）”"
+          "textZh": "专为关怀体恤孕妇（包括孕早期孕妇）设立的“孕妇关爱专座（임산부 배려석）”",
+          "textPt": "São assentos prioritários reservados para mulheres grávidas (Imsanbu baeryeoseok)"
         },
         {
           "id": "B",
@@ -712,7 +818,8 @@
           "textKo": "지워지지 않는 핑크색 페인트가 덜 마른 좌석이라서",
           "textEs": "Asientos cubiertos de pintura rosa fresca",
           "textRu": "Сиденья с невысохшей розовой краской",
-          "textZh": "刚刷上尚未风干的粉色油漆"
+          "textZh": "刚刷上尚未风干的粉色油漆",
+          "textPt": "São assentos cobertos com tinta rosa fresca que nunca seca"
         },
         {
           "id": "C",
@@ -720,7 +827,8 @@
           "textKo": "K-팝 아이돌 전용 VIP 지정석이라서",
           "textEs": "Asientos VIP reservados para idols de K-Pop",
           "textRu": "VIP-места только для K-Pop айдолов",
-          "textZh": "K-Pop偶像巡演专用VIP座"
+          "textZh": "K-Pop偶像巡演专用VIP座",
+          "textPt": "São assentos VIP reservados estritamente para idols de K-Pop em visita"
         },
         {
           "id": "D",
@@ -728,7 +836,8 @@
           "textKo": "앉으면 스마트폰을 떨어뜨리는 저주받은 자리라서",
           "textEs": "Asientos malditos donde se te cae el móvil",
           "textRu": "Проклятые места, где роняют телефоны",
-          "textZh": "坐上去手机必碎屏的被诅咒座位"
+          "textZh": "坐上去手机必碎屏的被诅咒座位",
+          "textPt": "São assentos amaldiçoados que fazem os passageiros derrubarem o celular"
         }
       ],
       "correctAnswer": "A",
@@ -741,7 +850,10 @@
       "funFactKo": "임산부들이 가방에 달고 다니는 무선 감지기(핑크라이트)가 가까이 오면 좌석 옆 불빛이 깜빡여 자리를 양보하게 돕는 첨단 시스템도 있습니다!",
       "funFactEs": "¡Las embarazadas llevan un distintivo Bluetooth que enciende una luz en el vagón avisando a los pasajeros!",
       "funFactRu": "У беременных женщин есть Bluetooth-брелоки, зажигающие мягкий маячок в вагоне!",
-      "funFactZh": "首尔还推广带有无线感应的孕妇关爱挂牌，走到座位附近时传感器会自动闪烁柔和提示灯！"
+      "funFactZh": "首尔还推广带有无线感应的孕妇关爱挂牌，走到座位附近时传感器会自动闪烁柔和提示灯！",
+      "questionPt": "Nos vagões do metrô de Seul, por que os passageiros deixam intencionalmente os assentos cor-de-rosa vibrantes vazios mesmo durante o horário de pico lotado?",
+      "explanationPt": "O metrô de Seul criou assentos prioritários cor-de-rosa exclusivos para gestantes. Como o início da gravidez muitas vezes não é visível, manter o assento sempre livre garante que futuras mães possam se sentar confortavelmente sem precisar pedir.",
+      "funFactPt": "As gestantes carregam um pequeno chaveiro Bluetooth ('Pink Light') que acende uma luz ao lado do assento no vagão para avisar os passageiros!"
     },
     {
       "id": 17,
@@ -758,7 +870,8 @@
           "textKo": "매주 일요일마다 마라톤을 뛰자고 졸라서",
           "textEs": "Te obligará a correr un maratón cada domingo",
           "textRu": "Партнер заставит бегать марафон по воскресеньям",
-          "textZh": "对方会逼你每个周日去跑马拉松"
+          "textZh": "对方会逼你每个周日去跑马拉松",
+          "textPt": "A pessoa vai obrigar você a correr uma maratona todo domingo"
         },
         {
           "id": "B",
@@ -766,7 +879,8 @@
           "textKo": "비가 올 때 신발이 녹아내려서",
           "textEs": "Los zapatos se disolverán con la lluvia",
           "textRu": "Обувь растворится под дождем",
-          "textZh": "鞋子一碰到雨水就会融化"
+          "textZh": "鞋子一碰到雨水就会融化",
+          "textPt": "Os sapatos vão se dissolver espontaneamente na chuva"
         },
         {
           "id": "C",
@@ -774,7 +888,8 @@
           "textKo": "그 신발을 신고 다른 사람에게로 '도망간다(바람나서 헤어진다)'는 속설 때문",
           "textEs": "La creencia de que la pareja se los pondrá y 'huirá' de la relación (romperán)",
           "textRu": "Поверье, что партнер наденет их и «убежит» из отношений (произойдет расставание)",
-          "textZh": "流传着对方穿上你送的鞋子就会“逃跑/移情别恋跑向别人”从而导致分手的恋爱迷信"
+          "textZh": "流传着对方穿上你送的鞋子就会“逃跑/移情别恋跑向别人”从而导致分手的恋爱迷信",
+          "textPt": "A crença de que o parceiro vai calçá-los e 'fugir' do relacionamento (terminar o namoro)"
         },
         {
           "id": "D",
@@ -782,7 +897,8 @@
           "textKo": "구두 장인이 커플 신발 제작을 금지하고 있어서",
           "textEs": "Los zapateros tienen prohibido fabricar calzado para parejas",
           "textRu": "Сапожникам запрещено делать обувь для пар",
-          "textZh": "制鞋师傅被行业行规严禁制作情侣鞋"
+          "textZh": "制鞋师傅被行业行规严禁制作情侣鞋",
+          "textPt": "Os sapateiros são proibidos de fabricar calçados para casais"
         }
       ],
       "correctAnswer": "C",
@@ -795,7 +911,10 @@
       "funFactKo": "커플들 사이에서 신발을 선물할 때 지갑에서 100원짜리 동전을 꺼내며 꺄르르 웃는 것은 한국의 대표적인 귀여운 연애 문화입니다!",
       "funFactEs": "¡Dar una moneda de 100 wones a cambio es una tradición entrañable que muchas parejas en Corea practican con humor!",
       "funFactRu": "Отдать 100 вон в ответ — милая и веселая традиция для корейских пар!",
-      "funFactZh": "收到新球鞋时娇嗔着掏出一枚小硬币递过去说“这是我买的哦”，是韩国情侣间心照不宣的浪漫互动！"
+      "funFactZh": "收到新球鞋时娇嗔着掏出一枚小硬币递过去说“这是我买的哦”，是韩国情侣间心照不宣的浪漫互动！",
+      "questionPt": "De acordo com uma famosa superstição romântica coreana, por que você deve pensar duas vezes antes de dar um par de sapatos de presente para sua namorada ou namorado?",
+      "explanationPt": "O folclore coreano adverte que dar calçados de presente simboliza dar ao parceiro os meios para fugir. Para quebrar essa superstição, quem ganha o sapato entrega uma moedinha (como 100 ou 500 wons) para quem deu, transformando o presente simbolicamente em uma 'compra'!",
+      "funFactPt": "Dar uma moedinha de 100 wons em troca é uma tradição adorável com a qual os casais se divertem e guardam de lembrança!"
     },
     {
       "id": 18,
@@ -812,7 +931,8 @@
           "textKo": "질문한 사람이 고급 뷔페를 즉시 사주어야 하는 법률 때문에",
           "textEs": "Porque están obligados por ley a invitarte a un bufé de inmediato",
           "textRu": "Задавший вопрос обязан немедленно угостить вас в ресторане",
-          "textZh": "问话的人在法律上有义务立即请你吃高档自助餐"
+          "textZh": "问话的人在法律上有义务立即请你吃高档自助餐",
+          "textPt": "Porque a pessoa é obrigada por lei a convidar você para um bufê caro imediatamente"
         },
         {
           "id": "B",
@@ -820,7 +940,8 @@
           "textKo": "과거 식량이 부족하고 힘들었던 시절, 끼니를 거르지 않고 무탈한지 서로의 안녕을 챙기던 가장 따뜻하고 진심 어린 안부 인사에서 유래해서",
           "textEs": "Arraigado históricamente en épocas de escasez de alimentos: preguntar si alguien había comido era la forma más sincera de preocuparse por su bienestar",
           "textRu": "Исторически связано с временами дефицита еды: вопрос о еде был самым искренним проявлением заботы о здоровье человека",
-          "textZh": "源于过去战乱与艰难年代粮食匮乏的历史，问对方吃没吃饭是对同胞是否安康无恙最真挚、最关切的深情问候"
+          "textZh": "源于过去战乱与艰难年代粮食匮乏的历史，问对方吃没吃饭是对同胞是否安康无恙最真挚、最关切的深情问候",
+          "textPt": "Enraizado historicamente em épocas difíceis de escassez de alimentos, perguntar se alguém já havia comido era a forma mais sincera de demonstrar cuidado com seu bem-estar"
         },
         {
           "id": "C",
@@ -828,7 +949,8 @@
           "textKo": "상대방의 몸무게를 비밀리에 계산하기 위해서",
           "textEs": "Para calcular en secreto tu peso corporal",
           "textRu": "Чтобы тайно подсчитать ваш вес",
-          "textZh": "暗中估算对方体重"
+          "textZh": "暗中估算对方体重",
+          "textPt": "Para calcular secretamente o seu peso corporal"
         },
         {
           "id": "D",
@@ -836,7 +958,8 @@
           "textKo": "식품위생 단속 공무원이라서",
           "textEs": "Porque trabajan inspeccionando restaurantes",
           "textRu": "Потому что это санитарная инспекция",
-          "textZh": "说话的人是食品药品安全监督员"
+          "textZh": "说话的人是食品药品安全监督员",
+          "textPt": "Porque estão inspecionando restaurantes para a vigilância sanitária"
         }
       ],
       "correctAnswer": "B",
@@ -849,7 +972,10 @@
       "funFactKo": "헤어질 때 '언제 밥 한번 먹자!'라고 인사하는 것은 진짜 약속이라기보다 반가움과 친근감을 담은 한국식 대표 작별 인사입니다!",
       "funFactEs": "¡Al despedirse, decir '¡Comamos juntos pronto!' es una frase cordial de despedida, ¡no necesariamente una cita fija!",
       "funFactRu": "При прощании фраза «Давай как-нибудь пообедаем!» — это скорее теплое пожелание, чем конкретная договоренность!",
-      "funFactZh": "分别时所说的“改天一起吃顿饭哦！（밥 한번 먹자!）”，多数情况下是表达亲切的客套礼貌告别语，不必非要当场掏出日历定时间！"
+      "funFactZh": "分别时所说的“改天一起吃顿饭哦！（밥 한번 먹자!）”，多数情况下是表达亲切的客套礼貌告别语，不必非要当场掏出日历定时间！",
+      "questionPt": "Por que 'Você já comeu?' ('Bap meogeosseo?' / 'Sik-sa hasyeosseoyo?') é usado como um cumprimento cotidiano na Coreia, parecido com 'Tudo bem?'",
+      "explanationPt": "Ao longo de séculos de guerras e escassez, passar fome era um perigo real. Perguntar se alguém já tinha comido uma tigela de arroz quentinho ('Bap') tornou-se a expressão máxima de afeto, carinho e preocupação com o bem-estar do outro.",
+      "funFactPt": "Ao se despedir, dizer 'Vamos comer uma refeição juntos qualquer dia!' (Bap han-beon meokja!) é uma expressão amigável de despedida, e não necessariamente um convite com hora marcada!"
     },
     {
       "id": 19,
@@ -866,7 +992,8 @@
           "textKo": "식사비를 연말정산하기 위해",
           "textEs": "Para calcular deducciones de impuestos",
           "textRu": "Чтобы рассчитать налоги за ужин",
-          "textZh": "为了计算晚饭餐饮税费抵扣"
+          "textZh": "为了计算晚饭餐饮税费抵扣",
+          "textPt": "Para calcular deduções de imposto de renda para o jantar"
         },
         {
           "id": "B",
@@ -874,7 +1001,8 @@
           "textKo": "국민연금 수령 순서를 확인하려고",
           "textEs": "Para ver quién cobra la pensión antes",
           "textRu": "Чтобы узнать, кто раньше выйдет на пенсию",
-          "textZh": "核对谁能先领国民养老金"
+          "textZh": "核对谁能先领国民养老金",
+          "textPt": "Para verificar quem vai receber a aposentadoria do governo primeiro"
         },
         {
           "id": "C",
@@ -882,7 +1010,8 @@
           "textKo": "동생들을 놀리기 위해서",
           "textEs": "Simplemente para burlarse de los más jóvenes",
           "textRu": "Чтобы подразнить младших",
-          "textZh": "纯粹为了嘲弄比自己小的年轻人"
+          "textZh": "纯粹为了嘲弄比自己小的年轻人",
+          "textPt": "Puramente para zombar dos mais jovens"
         },
         {
           "id": "D",
@@ -890,7 +1019,8 @@
           "textKo": "존댓말과 반말 등 올바른 존칭 언어 체계를 설정하고, 형·누나·오빠·언니 등 호칭을 정리하여 서로 편안한 관계를 맺기 위해",
           "textEs": "Para determinar el nivel gramatical de cortesía adecuado (Jondaetmal vs. Banmal) y los títulos de parentesco (Hyung, Noona, Oppa, Unnie)",
           "textRu": "Чтобы определить правильный уровень вежливости речи (Чондэтмаль или Панмаль) и уважительные обращения (Хён, Нуна, Оппа, Онни)",
-          "textZh": "为了确定恰当的语法敬语层级（敬语 Jondaetmal 还是非敬语 Banmal），并确立“哥（Hyung/Oppa）”“姐（Noona/Unnie）”等称谓以建立得体舒适的人际关系"
+          "textZh": "为了确定恰当的语法敬语层级（敬语 Jondaetmal 还是非敬语 Banmal），并确立“哥（Hyung/Oppa）”“姐（Noona/Unnie）”等称谓以建立得体舒适的人际关系",
+          "textPt": "Para definir o nível gramatical correto de formalidade na fala (Jondaetmal vs. Banmal) e os títulos de tratamento (Hyung, Noona, Oppa, Unnie)"
         }
       ],
       "correctAnswer": "D",
@@ -903,7 +1033,10 @@
       "funFactKo": "태어난 해가 같은 동갑이라는 것을 알게 되는 순간 '어! 우리 동갑이네! 친구하자!'라며 급속도로 친해집니다!",
       "funFactEs": "¡Cuando dos personas descubren que nacieron el mismo año, exclaman '¡Chingu!' (amigos de la misma edad) y conectan al instante!",
       "funFactRu": "Узнав, что они одногодки, корейцы радостно восклицают «Чхингу!» (друзья) и моментально сближаются!",
-      "funFactZh": "一旦发现彼此出生于同一年（同龄人），双方会立刻惊喜惊呼“原来我们是同岁朋友（Chingu）啊！”，心理距离瞬间拉近！"
+      "funFactZh": "一旦发现彼此出生于同一年（同龄人），双方会立刻惊喜惊呼“原来我们是同岁朋友（Chingu）啊！”，心理距离瞬间拉近！",
+      "questionPt": "Por que os coreanos costumam perguntar a idade de alguém que acabaram de conhecer logo nos primeiros minutos de conversa?",
+      "explanationPt": "A língua coreana possui uma gramática de honoríficos bastante sofisticada. Saber o ano de nascimento de alguém esclarece imediatamente se você deve falar de modo formal (Jondaetmal) ou informal (Banmal), evitando faltas de respeito involuntárias.",
+      "funFactPt": "Quando duas pessoas descobrem que nasceram no mesmo ano, elas exclamam 'Chingu!' (amigos da mesma idade) e criam afinidade na hora!"
     },
     {
       "id": 20,
@@ -920,7 +1053,8 @@
           "textKo": "두 손으로 공손히 건네거나, 오른손으로 주며 왼손으로 오른쪽 팔목이나 팔꿈치를 받친다",
           "textEs": "Usar ambas manos (o sostener el objeto con la mano derecha mientras apoyas la muñeca o antebrazo derecho con la mano izquierda)",
           "textRu": "Подавать двумя руками (или держать правой рукой, поддерживая запястье левой рукой)",
-          "textZh": "双手恭敬奉上（或右手持卡递出，同时左手轻托住右手手腕或前臂处）"
+          "textZh": "双手恭敬奉上（或右手持卡递出，同时左手轻托住右手手腕或前臂处）",
+          "textPt": "Usar as duas mãos (ou segurar o objeto com a mão direita enquanto apoia o pulso ou antebraço direito com a mão esquerda)"
         },
         {
           "id": "B",
@@ -928,7 +1062,8 @@
           "textKo": "원반 던지듯 계산대 위로 카드를 휙 팽개친다",
           "textEs": "Lanzar la tarjeta sobre el mostrador como un frisbee",
           "textRu": "Швырнуть карту через прилавок как летающую тарелку",
-          "textZh": "像扔飞盘一样把卡片轻浮地甩到柜台上"
+          "textZh": "像扔飞盘一样把卡片轻浮地甩到柜台上",
+          "textPt": "Jogar o cartão casualmente pelo balcão como um frisbee"
         },
         {
           "id": "C",
@@ -936,7 +1071,8 @@
           "textKo": "쇠젓가락으로 카드를 집어서 건넨다",
           "textEs": "Entregarla usando palillos de metal",
           "textRu": "Подать карту металлическими палочками",
-          "textZh": "用铁筷子夹着卡递给收银员"
+          "textZh": "用铁筷子夹着卡递给收银员",
+          "textPt": "Entregar usando hashis de metal"
         },
         {
           "id": "D",
@@ -944,7 +1080,8 @@
           "textKo": "신발 속에 숨겨두고 찾아보라고 한다",
           "textEs": "Esconder la tarjeta en tu zapato y pedirle que la busque",
           "textRu": "Спрятать карту в ботинок и предложить найти",
-          "textZh": "藏在鞋垫底下让对方自己找"
+          "textZh": "藏在鞋垫底下让对方自己找",
+          "textPt": "Esconder o cartão dentro do sapato e pedir para a pessoa procurar"
         }
       ],
       "correctAnswer": "A",
@@ -957,7 +1094,10 @@
       "funFactKo": "편의점 아르바이트생들도 영수증과 카드를 돌려줄 때 두 손으로 건네는 따뜻한 친절을 흔히 볼 수 있습니다!",
       "funFactEs": "¡Incluso los empleados de tiendas de conveniencia suelen devolverte la tarjeta con ambas manos!",
       "funFactRu": "Даже кассиры в круглосуточных магазинах часто возвращают чек и карту двумя руками!",
-      "funFactZh": "甚至在普通的便利店里，年轻店员找零递卡时也往往习惯性双手递回，令人倍感温暖尊重！"
+      "funFactZh": "甚至在普通的便利店里，年轻店员找零递卡时也往往习惯性双手递回，令人倍感温暖尊重！",
+      "questionPt": "Ao entregar um cartão de crédito, dinheiro ou cartão de visitas a um caixa, pessoa mais velha ou parceiro de negócios na Coreia, qual linguagem corporal educada você deve usar?",
+      "explanationPt": "Entregar itens com as duas mãos demonstra sinceridade, atenção e profundo respeito. Apoiar o antebraço direito com a mão esquerda teve origem na época em que era preciso segurar as mangas largas do Hanbok tradicional.",
+      "funFactPt": "Até mesmo os atendentes de lojas de conveniência costumam devolver o seu recibo e o cartão usando as duas mãos!"
     },
     {
       "id": 21,
@@ -974,7 +1114,8 @@
           "textKo": "식사하기 전에 손님이 화장실 청소를 다 해야 하는 규칙 때문에",
           "textEs": "Porque los invitados deben limpiar todos los baños antes de cenar",
           "textRu": "Потому что гости обязаны помыть все туалеты перед ужином",
-          "textZh": "客人进门吃饭前必须把房东家厕所全部刷干净"
+          "textZh": "客人进门吃饭前必须把房东家厕所全部刷干净",
+          "textPt": "Os convidados são obrigados a limpar todos os banheiros antes do jantar"
         },
         {
           "id": "B",
@@ -982,7 +1123,8 @@
           "textKo": "한국에 화장지가 영구적으로 부족해서",
           "textEs": "Corea sufre una escasez permanente de papel higiénico",
           "textRu": "В Корее постоянный дефицит бумаги",
-          "textZh": "韩国常年缺乏造纸原材料"
+          "textZh": "韩国常年缺乏造纸原材料",
+          "textPt": "A Coreia sofre com uma escassez permanente de papel higiênico"
         },
         {
           "id": "C",
@@ -990,7 +1132,8 @@
           "textKo": "휴지가 솔솔 풀리듯 모든 일이 술술 잘 풀리고, 세제 거품이 보글보글 일어나듯 재물과 복이 풍성하게 일어나라는 축복의 상징",
           "textEs": "El papel se desenrolla suavemente simbolizando que los problemas se resuelvan fácil, y las burbujas de detergente simbolizan riqueza creciente",
           "textRu": "Бумага легко разматывается, символизируя легкое решение всех дел, а пена от порошка символизирует стремительный рост богатства",
-          "textZh": "卷纸一拉即顺畅解开，寓意万事顺遂如意（일이 술술 풀리다）；洗衣液泡沫丰盈涌现，寓意财源滚滚滚利蒸蒸日上（재물이 뽀글뽀글）"
+          "textZh": "卷纸一拉即顺畅解开，寓意万事顺遂如意（일이 술술 풀리다）；洗衣液泡沫丰盈涌现，寓意财源滚滚滚利蒸蒸日上（재물이 뽀글뽀글）",
+          "textPt": "O papel higiênico se desenrola suavemente simbolizando que tudo dê certo facilmente, enquanto a espuma do sabão simboliza riqueza e prosperidade crescentes"
         },
         {
           "id": "D",
@@ -998,7 +1141,8 @@
           "textKo": "집주인에게 냄새가 난다는 은밀한 눈치를 주려고",
           "textEs": "Para insinuar sutilmente que el dueño de la casa huele mal",
           "textRu": "Чтобы намекнуть хозяину на неприятный запах",
-          "textZh": "委婉暗示新家主人有体味"
+          "textZh": "委婉暗示新家主人有体味",
+          "textPt": "Para dar uma indireta sutil de que o dono da casa está cheirando mal"
         }
       ],
       "correctAnswer": "C",
@@ -1011,7 +1155,10 @@
       "funFactKo": "최근에는 공기정화 식물이나 인테리어용 고급 캔들, 디퓨저도 세련된 집들이 선물로 인기가 높습니다!",
       "funFactEs": "¡Hoy en día las plantas decorativas y las velas aromáticas también son opciones muy populares!",
       "funFactRu": "Сегодня комнатные растения и ароматические свечи также стали популярным стильным подарком!",
-      "funFactZh": "如今发财树盆栽、高档香薰蜡烛也是年轻人极度青睐的时尚新潮暖房礼物！"
+      "funFactZh": "如今发财树盆栽、高档香薰蜡烛也是年轻人极度青睐的时尚新潮暖房礼物！",
+      "questionPt": "Quando você é convidado para a festa de inauguração da casa nova de um amigo (Jipdeuri), por que fardos gigantes de papel higiênico e sabão para roupas são os presentes clássicos?",
+      "explanationPt": "Jogos de palavras e simbolismos coreanos tornam esses itens práticos de casa profundamente auspiciosos: o rolo de papel se desenrola livremente ('que tudo flua e se resolva sem enroscos') e as bolhas de sabão se multiplicam rapidamente ('que sua fortuna cresça como espuma').",
+      "funFactPt": "Hoje em dia, um vaso de planta da fortuna ou velas aromáticas e difusores também se tornaram opções modernas e elegantes de presente de casa nova!"
     },
     {
       "id": 22,
@@ -1028,7 +1175,8 @@
           "textKo": "동네에 지진을 일으키기 때문에",
           "textEs": "Provoca pequeños terremotos en el barrio",
           "textRu": "Это вызывает небольшие землетрясения",
-          "textZh": "会在小区引发微型地震"
+          "textZh": "会在小区引发微型地震",
+          "textPt": "Isso provoca miniterremotos na vizinhança"
         },
         {
           "id": "B",
@@ -1036,7 +1184,8 @@
           "textKo": "'다리 떨면 들어오던 복(福)이 다 달아난다!'는 전통 미신 때문에",
           "textEs": "'¡Sacudir las piernas ahuyenta toda tu suerte, fortuna y salud!' ('Bok na-ganda!')",
           "textRu": "«Трясешь ногой — всю удачу и благополучие из жизни вытрясешь!» («Пок наганда!»)",
-          "textZh": "“抖腿会把即将到来的福气（복）全部抖光赶跑！（다리 떨면 복 나간다）”"
+          "textZh": "“抖腿会把即将到来的福气（복）全部抖光赶跑！（다리 떨면 복 나간다）”",
+          "textPt": "'Balançar as pernas sacode para longe toda a sua sorte, saúde e fortuna que estavam chegando' ('Bok na-ganda!')"
         },
         {
           "id": "C",
@@ -1044,7 +1193,8 @@
           "textKo": "2분 만에 바지 천이 다 해져서",
           "textEs": "Arruina la tela del pantalón en dos minutos",
           "textRu": "Это портит ткань брюк за две минуты",
-          "textZh": "两分钟内会把裤子面料磨破"
+          "textZh": "两分钟内会把裤子面料磨破",
+          "textPt": "Isso estraga o tecido da calça em 2 minutos"
         },
         {
           "id": "D",
@@ -1052,7 +1202,8 @@
           "textKo": "가정용 와이파이 연결이 끊겨서",
           "textEs": "Desconecta el router del Wi-Fi de casa",
           "textRu": "Это глушит сигнал домашнего Wi-Fi",
-          "textZh": "会切断家里的无线Wi-Fi信号"
+          "textZh": "会切断家里的无线Wi-Fi信号",
+          "textPt": "Isso desconecta o roteador de Wi-Fi da casa"
         }
       ],
       "correctAnswer": "B",
@@ -1065,7 +1216,10 @@
       "funFactKo": "현대 의학에서는 가벼운 다리 떨기가 혈액 순환과 칼로리 소모에 도움을 준다고 하지만, 어르신 앞에서는 바른 자세를 취하는 것이 센스입니다!",
       "funFactEs": "¡Aunque la medicina moderna dice que mover las piernas quema calorías, en la mesa familiar sigue estando mal visto!",
       "funFactRu": "Медики говорят, что это полезно для кровообращения, но за семейным столом в Корее так делать точно не стоит!",
-      "funFactZh": "虽然现代医学表示轻度抖腿有助于腿部血液循环，但在聚餐或长辈面前，保持沉稳坐姿依然是礼貌的最高准则！"
+      "funFactZh": "虽然现代医学表示轻度抖腿有助于腿部血液循环，但在聚餐或长辈面前，保持沉稳坐姿依然是礼貌的最高准则！",
+      "questionPt": "Por que familiares coreanos mais velhos vão repreender você imediatamente se o pegarem balançando ou tremendo as pernas rapidamente enquanto está sentado?",
+      "explanationPt": "A superstição coreana ensina que ficar inquieto balançando as pernas simbolicamente sacode para fora as bênçãos, a prosperidade e a compostura ('Bok na-ganda!'). Os mais velhos enfatizam que a postura calma transmite dignidade e preserva a boa sorte.",
+      "funFactPt": "Médicos modernos apontam que mexer as pernas na verdade queima calorias e ajuda na circulação sanguínea, mas à mesa de jantar com a família ainda é melhor evitar!"
     },
     {
       "id": 23,
@@ -1082,7 +1236,8 @@
           "textKo": "커서 뜨개질 장인이나 재단사가 된다",
           "textEs": "El bebé será sastre o tejerá jerséis",
           "textRu": "Ребенок вырастет портным или будет вязать свитера",
-          "textZh": "长大后会成为裁缝或毛衣编织达人"
+          "textZh": "长大后会成为裁缝或毛衣编织达人",
+          "textPt": "O bebê crescerá para ser alfaiate ou tricotar suéteres"
         },
         {
           "id": "B",
@@ -1090,7 +1245,8 @@
           "textKo": "전선 줄을 잘 푸는 기술자가 된다",
           "textEs": "El bebé será experto en desenredar cables",
           "textRu": "Ребенок будет легко распутывать провода",
-          "textZh": "擅长解开缠绕在一起的耳机线"
+          "textZh": "擅长解开缠绕在一起的耳机线",
+          "textPt": "O bebê vai desenrolar cabos elétricos com facilidade"
         },
         {
           "id": "C",
@@ -1098,7 +1254,8 @@
           "textKo": "연 날리기 공장을 차린다",
           "textEs": "El bebé comprará una fábrica de cometas",
           "textRu": "Купит фабрику воздушных змеев",
-          "textZh": "未来会收购一家风筝制造厂"
+          "textZh": "未来会收购一家风筝制造厂",
+          "textPt": "O bebê comprará uma fábrica de pipas"
         },
         {
           "id": "D",
@@ -1106,7 +1263,8 @@
           "textKo": "무병장수(無病長壽)! 병치레 없이 오랫동안 건강하게 천수를 누린다",
           "textEs": "Una vida larga, sana y próspera (Longevidad / Jang-su)",
           "textRu": "Долгая, здоровая жизнь без болезней (Долголетие / Чансу)",
-          "textZh": "无病无灾、健康长寿（무병장수 / Jang-su），像丝线一样延年益寿福泽绵长"
+          "textZh": "无病无灾、健康长寿（무병장수 / Jang-su），像丝线一样延年益寿福泽绵长",
+          "textPt": "Uma vida longa, saudável e próspera (Longevidade / Jang-su)"
         }
       ],
       "correctAnswer": "D",
@@ -1119,7 +1277,10 @@
       "funFactKo": "요즘 돌잡이 상에는 마이크(K-팝 아이돌), 비행기(파일럿), 판사봉(법조인), 골프채 등 현대적인 직업 아이템이 다채롭게 올라옵니다!",
       "funFactEs": "¡Las mesas modernas ahora incluyen micrófonos (estrella de K-Pop) o palos de golf!",
       "funFactRu": "На современные столики часто кладут микрофон (K-Pop айдол) или самолетик (пилот)!",
-      "funFactZh": "如今现代抓周桌上还会加入麦克风（K-Pop顶流偶像）、法槌（法官律师）以及高尔夫球杆等潮流新职业道具！"
+      "funFactZh": "如今现代抓周桌上还会加入麦克风（K-Pop顶流偶像）、法槌（法官律师）以及高尔夫球杆等潮流新职业道具！",
+      "questionPt": "Durante a festa de primeiro aniversário de um bebê (Doljanchi), ele é colocado diante de vários objetos no ritual 'Doljabi'. O que simboliza escolher o carretel de linha longa (Sil)?",
+      "explanationPt": "No Doljabi, os objetos preveem o destino da criança: a linha longa representa longevidade (Jang-su), um lápis ou livro simboliza sucesso nos estudos, o dinheiro representa riqueza e um estetoscópio significa tornar-se médico.",
+      "funFactPt": "As mesas modernas de Doljabi hoje incluem minitacos de golfe, aviõezinhos (piloto) e microfones (estrela de K-Pop)!"
     },
     {
       "id": 24,
@@ -1136,7 +1297,8 @@
           "textKo": "식탁에서 다른 사람들이 밥을 먹는데 휴지로 '팽~' 소리를 내며 코를 세게 푸는 행동",
           "textEs": "Sonarse ruidosamente la nariz con una servilleta en la mesa (lo educado es disculparse e ir al baño o limpiarse disimuladamente girando la cabeza)",
           "textRu": "Громко сморкаться в салфетку прямо за столом (вежливо выйти в туалет или тихо вытереть нос отвернувшись)",
-          "textZh": "当着全桌人的面用纸巾“扑哧——”发出巨大声响擤鼻涕（得体做法是轻微转头擦拭或离席去洗手间处理）"
+          "textZh": "当着全桌人的面用纸巾“扑哧——”发出巨大声响擤鼻涕（得体做法是轻微转头擦拭或离席去洗手间处理）",
+          "textPt": "Assoar o nariz alto com um guardanapo na mesa (o educado é pedir licença para ir ao banheiro ou secar discretamente virando o rosto)"
         },
         {
           "id": "B",
@@ -1144,7 +1306,8 @@
           "textKo": "시원한 생수 한 모금 마시기",
           "textEs": "Beber un vaso de agua fría",
           "textRu": "Выпить стакан холодной воды",
-          "textZh": "喝一口冰水"
+          "textZh": "喝一口冰水",
+          "textPt": "Beber um copo de água gelada"
         },
         {
           "id": "C",
@@ -1152,7 +1315,8 @@
           "textKo": "단무지나 깍두기 더 달라고 요청하기",
           "textEs": "Pedir más rábano encurtido",
           "textRu": "Попросить еще маринованной редьки",
-          "textZh": "向店员加一小碟泡萝卜"
+          "textZh": "向店员加一小碟泡萝卜",
+          "textPt": "Pedir mais nabo em conserva"
         },
         {
           "id": "D",
@@ -1160,7 +1324,8 @@
           "textKo": "입을 다물고 오물오물 씹기",
           "textEs": "Masticar con la boca cerrada",
           "textRu": "Жевать с закрытым ртом",
-          "textZh": "闭上嘴巴咀嚼食物"
+          "textZh": "闭上嘴巴咀嚼食物",
+          "textPt": "Mastigar de boca fechada"
         }
       ],
       "correctAnswer": "A",
@@ -1173,7 +1338,10 @@
       "funFactKo": "재미있게도 식사 중 살짝 훌쩍거리는 것은 매운 음식을 먹을 때 흔히 이해해 주지만, '팽!' 하고 푸는 것은 금기입니다!",
       "funFactEs": "¡Curiosamente, sorber la nariz discretamente al comer sopa picante se tolera bastante bien, pero sonarse fuerte no!",
       "funFactRu": "Любопытно, что легкое посапывание при остром супе вполне прощается, а вот громкий звук сморкания — табу!",
-      "funFactZh": "很有趣的是，吃辣汤时轻微吸鼻涕大家都能心照不宣地理解，但若当众大声擤鼻涕则是大忌！"
+      "funFactZh": "很有趣的是，吃辣汤时轻微吸鼻涕大家都能心照不宣地理解，但若当众大声擤鼻涕则是大忌！",
+      "questionPt": "Mesmo ao tomar um ensopado superquente e apimentado que faz o nariz escorrer, qual som ou atitude é considerado muito falta de educação diretamente à mesa de refeições na Coreia?",
+      "explanationPt": "Na etiqueta coreana, assoar o nariz fazendo barulho na mesa de jantar é considerado anti-higiênico e tira o apetite dos outros. Se a sopa apimentada fizer seu nariz escorrer, seque-o discretamente virando o rosto ou vá até o banheiro.",
+      "funFactPt": "Curiosamente, embora assoar o nariz com força seja um tabu, fungar baixinho (heul-jjeok) enquanto se toma uma sopa apimentada é amplamente compreendido!"
     },
     {
       "id": 25,
@@ -1190,7 +1358,8 @@
           "textKo": "소주병을 벽에 던져 깨뜨리기",
           "textEs": "Lanzar la botella contra la pared para romperla",
           "textRu": "Разбить бутылку об стену",
-          "textZh": "把酒瓶砸在墙上敲碎"
+          "textZh": "把酒瓶砸在墙上敲碎",
+          "textPt": "Atirar a garrafa contra a parede para quebrá-la"
         },
         {
           "id": "B",
@@ -1198,7 +1367,8 @@
           "textKo": "액체 질소에 1시간 동안 담가 얼리기",
           "textEs": "Congelar la botella en nitrógeno líquido",
           "textRu": "Заморозить бутылку в жидком азоте",
-          "textZh": "把酒瓶在液氮里冰冻一小时"
+          "textZh": "把酒瓶在液氮里冰冻一小时",
+          "textPt": "Congelar a garrafa em nitrogênio líquido por uma hora"
         },
         {
           "id": "C",
@@ -1206,7 +1376,8 @@
           "textKo": "병목을 잡고 강하게 손목 스냅을 돌려 '회오리(토네이도)'를 만든 뒤, 팔꿈치로 병 바닥을 탁 치기",
           "textEs": "Girar rápidamente la botella por el cuello para crear un vórtice o tornado interior y luego golpear la base con el codo",
           "textRu": "Энергично раскрутить бутылку за горлышко, создав внутри мини-торнадо («хвеори»), и ударить локтем по донышку",
-          "textZh": "单手握紧瓶颈利用手腕回旋晃出壮观的酒液水龙卷（소주 회오리），随后用手肘“啪”地重击瓶底"
+          "textZh": "单手握紧瓶颈利用手腕回旋晃出壮观的酒液水龙卷（소주 회오리），随后用手肘“啪”地重击瓶底",
+          "textPt": "Girar a garrafa rapidamente pelo gargalo para criar um redemoinho (tornado) lá dentro e depois bater no fundo com o cotovelo"
         },
         {
           "id": "D",
@@ -1214,7 +1385,8 @@
           "textKo": "라이터로 병뚜껑을 불태우기",
           "textEs": "Prenderle fuego al tapón con un mechero",
           "textRu": "Поджечь крышку зажигалкой",
-          "textZh": "用打火机把塑料瓶盖烧焦"
+          "textZh": "用打火机把塑料瓶盖烧焦",
+          "textPt": "Ateiar fogo na tampa plástica com um isqueiro"
         }
       ],
       "correctAnswer": "C",
@@ -1227,7 +1399,10 @@
       "funFactKo": "소주 뚜껑의 철사를 배배 꼬아 손가락으로 튕겨 끊는 사람이 벌주를 마시는 '뚜껑 꼬리 치기' 게임도 빠질 수 없습니다!",
       "funFactEs": "¡Tras abrir la botella, retuercen la tira metálica del tapón y juegan a golpearla por turnos con el dedo hasta romperla!",
       "funFactRu": "Оторвав крышку, корейцы скручивают металлический хвостик и по очереди щёлкают по нему пальцами в мини-игре!",
-      "funFactZh": "开盖后大家还会把瓶盖边缘多出的小铁丝拧成长条，轮流用手指弹击，谁把铁丝弹断谁就要罚酒一杯！"
+      "funFactZh": "开盖后大家还会把瓶盖边缘多出的小铁丝拧成长条，轮流用手指弹击，谁把铁丝弹断谁就要罚酒一杯！",
+      "questionPt": "Antes de abrir uma garrafa verde gelada de soju, qual truque dramático de mesa os coreanos fazem para entreter os amigos?",
+      "explanationPt": "O 'Tornado de Soju' (회오리) e a batida com o cotovelo vêm de épocas antigas, quando o soju podia conter resíduos de rolha no gargalo que se juntavam no redemoinho e eram descartados antes de beber. Hoje, virou um truque clássico para animar a mesa!",
+      "funFactPt": "Depois de abrir a tampa, as pessoas torcem a tirinha metálica da tampa e brincam de dar petelecos nela em rodadas até alguém quebrá-la!"
     },
     {
       "id": 26,
@@ -1244,7 +1419,8 @@
           "textKo": "신랑 스마트워치로 코인 전송하기",
           "textEs": "Transferir criptomonedas al reloj del novio",
           "textRu": "Перевести криптовалюту на часы жениха",
-          "textZh": "给新郎智能手表转账狗狗币"
+          "textZh": "给新郎智能手表转账狗狗币",
+          "textPt": "Enviar dogecoin diretamente para o relógio inteligente do noivo"
         },
         {
           "id": "B",
@@ -1252,7 +1428,8 @@
           "textKo": "단정한 흰 봉투에 빳빳한 신권을 넣고, 봉투 뒷면 좌측에 이름과 소속(관계)을 세로로 정갈하게 적어 전달한다",
           "textEs": "Colocar billetes nuevos en un sobre blanco limpio, con tu nombre completo y afiliación escritos verticalmente en la parte trasera",
           "textRu": "Положить новые купюры в белый конверт, написав сзади вертикально свое имя и принадлежность к компании/семье",
-          "textZh": "将平整挺括的崭新纸币放入白色信封中，信封背面左下方竖写上自己的完整姓名与单位/关系"
+          "textZh": "将平整挺括的崭新纸币放入白色信封中，信封背面左下方竖写上自己的完整姓名与单位/关系",
+          "textPt": "Colocar cédulas novas e lisinhas dentro de um envelope branco, com seu nome completo e organização/afiliação escritos verticalmente no verso"
         },
         {
           "id": "C",
@@ -1260,7 +1437,8 @@
           "textKo": "방명록 테이블에 10원짜리 동전을 테이프로 붙이기",
           "textEs": "Pegar monedas con cinta adhesiva en el libro de visitas",
           "textRu": "Приклеить скотчем монеты к книге гостей",
-          "textZh": "用胶带把零钱硬币贴在签到簿上"
+          "textZh": "用胶带把零钱硬币贴在签到簿上",
+          "textPt": "Colar moedas avulsas de 10 wons na mesa do livro de presenças com fita adesiva"
         },
         {
           "id": "D",
@@ -1268,7 +1446,8 @@
           "textKo": "신랑 신부 서약할 때 구겨진 돈뭉치 던지기",
           "textEs": "Lanzar billetes arrugados durante los votos",
           "textRu": "Бросать мятые купюры в молодоженов во время клятвы",
-          "textZh": "在新人念誓词时把揉皱的纸币扔向他们"
+          "textZh": "在新人念誓词时把揉皱的纸币扔向他们",
+          "textPt": "Jogar notas amassadas nos noivos durante os votos"
         }
       ],
       "correctAnswer": "B",
@@ -1281,7 +1460,10 @@
       "funFactKo": "축의금 액수는 음양오행에서 양(陽)의 기운을 뜻하는 홀수 단위(5만, 7만, 10만, 15만 원)로 맞추는 것이 전통적인 관례입니다!",
       "funFactEs": "¡Las cantidades suelen ser números impares como 50.000, 70.000 o 100.000 wones según la numerología tradicional!",
       "funFactRu": "Суммы обычно кратны традиционным числам (50 000, 70 000, 100 000 вон) по восточной нумерологии!",
-      "funFactZh": "礼金数额多按阳数单数（如5万、7万、10万、15万韩元，10万在数理中亦视同吉数满数）遵循阴阳平衡传统！"
+      "funFactZh": "礼金数额多按阳数单数（如5万、7万、10万、15万韩元，10万在数理中亦视同吉数满数）遵循阴阳平衡传统！",
+      "questionPt": "Ao comparecer a um casamento (Chuk-ui-geum) ou funeral (Jo-ui-geum) na Coreia, como o presente em dinheiro deve sempre ser preparado e entregue?",
+      "explanationPt": "Envelopes brancos são o padrão tanto para casamentos alegres quanto para funerais solenes na Coreia. Escrever seu nome verticalmente no verso permite que os anfitriões registrem a contribuição em um livro para retribuir o gesto em eventos futuros.",
+      "funFactPt": "Os valores em dinheiro geralmente seguem números ímpares (50.000, 70.000 ou a nota cheia de 100.000 wons), considerados harmoniosos na numerologia do Leste Asiático!"
     },
     {
       "id": 27,
@@ -1298,7 +1480,8 @@
           "textKo": "폭설에도 롱패딩을 안 입는 패션 피플",
           "textEs": "Personas que se niegan a usar abrigos en ventiscas",
           "textRu": "Люди, не надевающие пуховики в метель",
-          "textZh": "暴风雪里打死不穿长款羽绒服的时尚达人"
+          "textZh": "暴风雪里打死不穿长款羽绒服的时尚达人",
+          "textPt": "Pessoas que se recusam a usar casacos acolchoados grossos em tempestades de neve"
         },
         {
           "id": "B",
@@ -1306,7 +1489,8 @@
           "textKo": "강원도 아이스하키 열혈 팬",
           "textEs": "Aficionados al hockey sobre hielo en Gangwon",
           "textRu": "Фанаты хоккея из провинции Канвондо",
-          "textZh": "江原道冰球死忠粉"
+          "textZh": "江原道冰球死忠粉",
+          "textPt": "Fãs de hóquei no gelo na província de Gangwon"
         },
         {
           "id": "C",
@@ -1314,7 +1498,8 @@
           "textKo": "얼음으로 요리 조각상을 만드는 요리사",
           "textEs": "Chefs que esculpen comida en hielo",
           "textRu": "Повара, вырезающие скульптуры изо льда",
-          "textZh": "用大冰块雕刻菜肴的大厨"
+          "textZh": "用大冰块雕刻菜肴的大厨",
+          "textPt": "Chefs que esculpem comida em cubos de gelo"
         },
         {
           "id": "D",
@@ -1322,7 +1507,8 @@
           "textKo": "'얼어 죽어도 아이스 아메리카노!' (한겨울에도 얼음 동동 띄운 차가운 커피만 고집하는 사람)",
           "textEs": "'¡Aunque muera de frío, beberé Café Americano Helado!' (얼어 죽어도 아이스 아메리카노!)",
           "textRu": "«Даже если насмерть замерзну — буду пить только Айс Американо!» (얼어 죽어도 아이스 아메리카노!)",
-          "textZh": "“就算冻死也要喝冰美式！（얼어 죽어도 아이스 아메리카노 / 冻死也要冰美式）”"
+          "textZh": "“就算冻死也要喝冰美式！（얼어 죽어도 아이스 아메리카노 / 冻死也要冰美式）”",
+          "textPt": "'Mesmo que eu morra congelado, vou tomar Iced Americano!' (얼어 죽어도 아이스 아메리카노!)"
         }
       ],
       "correctAnswer": "D",
@@ -1335,7 +1521,10 @@
       "funFactKo": "반대로 한여름 폭염에도 뜨거운 음료만 마시는 소수의 취향은 '더죽따(더워 죽어도 따뜻한 음료)'라고 부릅니다!",
       "funFactEs": "¡Su contraparte veraniega es 'Deo-Juk-Tte': '¡Aunque muera de calor, bebo café caliente en agosto!'",
       "funFactRu": "Редкая летняя противоположность — «То-джук-тта» («Хоть умру от жары, пью горячее»)!",
-      "funFactZh": "它的反义词是盛夏三伏天里极少数坚持喝热饮的“热死也要喝热饮（더죽따 / Deo-Juk-Tte）”！"
+      "funFactZh": "它的反义词是盛夏三伏天里极少数坚持喝热饮的“热死也要喝热饮（더죽따 / Deo-Juk-Tte）”！",
+      "questionPt": "O que significa com orgulho a famosa gíria moderna coreana 'Eol-Juk-Ah' (얼죽아) durante as temperaturas abaixo de zero do inverno?",
+      "explanationPt": "'Eol-Juk-Ah' é o lema do café na Coreia do Sul. Mesmo sob ondas de frio siberiano, uma enorme parcela de trabalhadores e estudantes pede religiosamente copos grandes cheios de gelo e café expresso pela sensação refrescante e dose rápida de cafeína.",
+      "funFactPt": "Sua rara versão oposta de verão é 'Deo-Juk-Tta' (더죽따) — 'Mesmo que eu morra de calor em agosto, tomo café quente!'"
     },
     {
       "id": 28,
@@ -1352,7 +1541,8 @@
           "textKo": "소음을 막기 위해 전국 모든 항공기의 이착륙이 35분 동안 전면 금지되고 상공에서 선회 대기한다",
           "textEs": "Se prohíbe el despegue y aterrizaje de todos los vuelos comerciales del país durante 35 minutos para evitar ruidos de motores",
           "textRu": "Запрещаются взлеты и посадки всех коммерческих самолетов в стране на 35 минут ради тишины",
-          "textZh": "全国所有民航客机全面暂停起飞降落35分钟，空中的飞机必须在3000米以上高空盘旋待命，杜绝一切航发引擎噪音"
+          "textZh": "全国所有民航客机全面暂停起飞降落35分钟，空中的飞机必须在3000米以上高空盘旋待命，杜绝一切航发引擎噪音",
+          "textPt": "Todos os voos comerciais em todo o país são proibidos de decolar ou pousar durante 35 minutos para eliminar o barulho de aviões"
         },
         {
           "id": "B",
@@ -1360,7 +1550,8 @@
           "textKo": "전국 모든 인터넷 통신망이 차단된다",
           "textEs": "Se desconecta el internet de todo el país",
           "textRu": "Во всей стране полностью отключают интернет",
-          "textZh": "切断全半岛所有互联网基站网络"
+          "textZh": "切断全半岛所有互联网基站网络",
+          "textPt": "A internet em toda a península é desconectada"
         },
         {
           "id": "C",
@@ -1368,7 +1559,8 @@
           "textKo": "모든 반려견에게 귀마개를 씌워야 한다",
           "textEs": "Los perros deben llevar orejeras",
           "textRu": "Все собаки обязаны носить наушники",
-          "textZh": "街上所有宠物犬必须戴上隔音耳罩"
+          "textZh": "街上所有宠物犬必须戴上隔音耳罩",
+          "textPt": "Todos os cães na rua precisam usar protetores auriculares"
         },
         {
           "id": "D",
@@ -1376,7 +1568,8 @@
           "textKo": "모든 자동차는 후진 기어로만 주행해야 한다",
           "textEs": "Los coches solo pueden circular marcha atrás",
           "textRu": "Автомобилям разрешено ездить только задним ходом",
-          "textZh": "机动车必须一律挂倒挡行驶"
+          "textZh": "机动车必须一律挂倒挡行驶",
+          "textPt": "Os carros são obrigados a dirigir apenas em marcha à ré"
         }
       ],
       "correctAnswer": "A",
@@ -1389,7 +1582,10 @@
       "funFactKo": "수험표를 두고 오거나 지각할 위기에 처한 학생들을 위해 경찰 오토바이와 순찰차가 사이렌을 울리며 수험장까지 긴급 수송해 줍니다!",
       "funFactEs": "¡Las motos de policía escoltan a los estudiantes atascados en el tráfico con sirenas para que lleguen a tiempo!",
       "funFactRu": "Полицейские патрули на мотоциклах с сиренами бесплатно подвозят опаздывающих выпускников прямо к дверям школ!",
-      "funFactZh": "警方巡逻车与摩托车在考前整装待发，随时拉响警报免费风驰电掣护送被堵在路上的考生冲向考场！"
+      "funFactZh": "警方巡逻车与摩托车在考前整装待发，随时拉响警报免费风驰电掣护送被堵在路上的考生冲向考场！",
+      "questionPt": "No dia do exame nacional de admissão universitária da Coreia do Sul (Suneung), em novembro, qual medida extraordinária é aplicada durante a prova de compreensão auditiva (listening) de inglês?",
+      "explanationPt": "Como o Suneung define o futuro universitário dos estudantes, a Coreia do Sul literalmente para por eles. Durante os 35 minutos do teste de áudio de inglês, treinamentos militares cessam, caminhões pesados desviam a rota e aviões aguardam no ar sem pousar ou decolar.",
+      "funFactPt": "Viaturas e motos da polícia oferecem caronas de emergência gratuitas com sirenes ligadas para estudantes presos no trânsito chegarem a tempo!"
     },
     {
       "id": 29,
@@ -1406,7 +1602,8 @@
           "textKo": "NASA 우주비행사 지수",
           "textEs": "Índice de Misión Espacial de la NASA",
           "textRu": "Индекс космической миссии NASA",
-          "textZh": "美国宇航局太空指数"
+          "textZh": "美国宇航局太空指数",
+          "textPt": "Índice de Missão Espacial da NASA"
         },
         {
           "id": "B",
@@ -1414,7 +1611,8 @@
           "textKo": "MBTI 16가지 성격 유형 검사 (ENFP, ISTJ 등)",
           "textEs": "El marco de 16 personalidades MBTI (ej. ENFP, ISTJ)",
           "textRu": "16 типов личности MBTI (например, ENFP, ISTJ)",
-          "textZh": "MBTI十六型人格测试（如ENFP快乐修勾、ISTJ严谨模范等）"
+          "textZh": "MBTI十六型人格测试（如ENFP快乐修勾、ISTJ严谨模范等）",
+          "textPt": "O sistema de 16 personalidades MBTI (ex.: ENFP, ISTJ)"
         },
         {
           "id": "C",
@@ -1422,7 +1620,8 @@
           "textKo": "K-팝 댄스 속도 랭킹",
           "textEs": "Ranking de velocidad de baile K-Pop",
           "textRu": "Рейтинг скорости танцев K-Pop",
-          "textZh": "K-Pop齐舞手速段位"
+          "textZh": "K-Pop齐舞手速段位",
+          "textPt": "Ranking de Velocidade de Dança de K-Pop"
         },
         {
           "id": "D",
@@ -1430,7 +1629,8 @@
           "textKo": "라면 스코빌 등급 지표",
           "textEs": "Grado de tolerancia al ramen picante",
           "textRu": "Шкала стойкости к рамёну",
-          "textZh": "方便面史高维尔耐受度认证"
+          "textZh": "方便面史高维尔耐受度认证",
+          "textPt": "Grau de Tolerância a Lámen Apimentado"
         }
       ],
       "correctAnswer": "B",
@@ -1443,7 +1643,10 @@
       "funFactKo": "'너 F야, T야?'는 친구가 힘든 일을 털어놓았을 때 감정적으로 공감해 주는지(F), 현실적인 해결책을 따지는지(T) 묻는 전 국민 유행어입니다!",
       "funFactEs": "¡Preguntar '¿Eres F (sentimiento) o T (pensamiento)?' es el test clásico para ver si eres empático o lógico!",
       "funFactRu": "Вопрос «Ты F или T?» стал национальным мемом, проверяющим, склонен ли собеседник сопереживать или анализировать логически!",
-      "funFactZh": "名梗“你是不是T人啊？！”，专门用来吐槽在朋友遭遇委屈时不安慰只顾着冷静分析对错的直男朋友！"
+      "funFactZh": "名梗“你是不是T人啊？！”，专门用来吐槽在朋友遭遇委屈时不安慰只顾着冷静分析对错的直男朋友！",
+      "questionPt": "Na sociedade sul-coreana moderna, qual sistema de 4 letras se tornou o quebra-gelo indispensável em primeiros encontros e conversas casuais?",
+      "explanationPt": "A Coreia do Sul viveu uma verdadeira febre de MBTI. As pessoas analisam a compatibilidade entre os tipos (E vs. I, T vs. F), estampam características de MBTI em produtos e usam as 4 letras como um atalho divertido para entender personalidades.",
+      "funFactPt": "Perguntar 'Você é F (feeling/sentimento) ou T (thinking/razão)?' é o teste clássico para saber se alguém reage com empatia emocional ou lógica prática!"
     },
     {
       "id": 30,
@@ -1460,7 +1663,8 @@
           "textKo": "올빼미처럼 어둠 속에서 앞을 보는 시력",
           "textEs": "La capacidad física de ver en la oscuridad como un búho",
           "textRu": "Физическая способность видеть в темноте как сова",
-          "textZh": "像猫头鹰一样在漆黑一片中视物的夜视能力"
+          "textZh": "像猫头鹰一样在漆黑一片中视物的夜视能力",
+          "textPt": "A capacidade física de enxergar na escuridão total como uma coruja"
         },
         {
           "id": "B",
@@ -1468,7 +1672,8 @@
           "textKo": "눈 깜빡이지 않고 10분 동안 눈싸움에서 이기기",
           "textEs": "Ganar un concurso de miradas fijas sin parpadear",
           "textRu": "Победа в состязании в гляделки без моргания",
-          "textZh": "盯视比赛十分钟不眨眼夺冠"
+          "textZh": "盯视比赛十分钟不眨眼夺冠",
+          "textPt": "Vencer uma disputa intensa de encarar por 10 minutos sem piscar"
         },
         {
           "id": "C",
@@ -1476,7 +1681,8 @@
           "textKo": "타인의 감정과 주변 상황의 기류를 말하지 않아도 번개처럼 빠르게 포착하고, 그에 맞춰 센스 있게 행동하는 고도의 사회적 직관과 공감 능력",
           "textEs": "La rápida inteligencia emocional para 'leer la sala', percibir estados de ánimo tácitos y actuar con tacto y gracia",
           "textRu": "Эмоциональный интеллект, умение моментально «считывать атмосферу», понимать настроение без слов и чутко реагировать",
-          "textZh": "在旁人未言明的情况下，能够如闪电般敏锐捕捉他人微表情、空气氛围与弦外之音，并作出恰如其分周全应对的高超情商与洞察力"
+          "textZh": "在旁人未言明的情况下，能够如闪电般敏锐捕捉他人微表情、空气氛围与弦外之音，并作出恰如其分周全应对的高超情商与洞察力",
+          "textPt": "A rápida inteligência emocional para 'ler o ambiente', perceber climas não ditos e agir de acordo com tato e sutileza"
         },
         {
           "id": "D",
@@ -1484,7 +1690,8 @@
           "textKo": "5초 만에 식당 메뉴판 전체를 외우는 암기력",
           "textEs": "Memorizar un menú entero en 5 segundos",
           "textRu": "Запоминание ресторанного меню за 5 секунд",
-          "textZh": "5秒钟背下整张菜谱的记忆力"
+          "textZh": "5秒钟背下整张菜谱的记忆力",
+          "textPt": "Memorizar um cardápio inteiro em menos de 5 segundos"
         }
       ],
       "correctAnswer": "C",
@@ -1497,7 +1704,10 @@
       "funFactKo": "'눈치가 빠르면 절에 가도 젓갈을 얻어먹는다'는 옛 속담처럼, 눈치가 좋으면 불가능해 보이는 난관도 재치 있게 돌파할 수 있습니다!",
       "funFactEs": "¡Un célebre proverbio coreano dice: '¡Si tu Nunchi es rápido, puedes comer camarones salados hasta en un templo budista!'",
       "funFactRu": "Корейская пословица гласит: «Если у тебя хороший нунчхи, даже в буддийском храме тебе подадут соленые креветки!»",
-      "funFactZh": "韩国民间谚语有云：“只要眼力见足够好，就算进了吃素的和尚庙也能讨到鲜美虾酱吃！”足见眼色之重要！"
+      "funFactZh": "韩国民间谚语有云：“只要眼力见足够好，就算进了吃素的和尚庙也能讨到鲜美虾酱吃！”足见眼色之重要！",
+      "questionPt": "O que é o conceito social coreano essencial de 'Nunchi' (눈치), amplamente considerado um superpoder social indispensável em amizades, namoros e no trabalho?",
+      "explanationPt": "'Nunchi' significa literalmente 'medida com os olhos'. Ter 'Nunchi rápido' (눈치가 빠르다) significa captar sinais sociais sutis, antecipar necessidades e manter a harmonia interpessoal antes mesmo que alguém precise pedir.",
+      "funFactPt": "Um provérbio popular coreano diz: 'Se o seu Nunchi for rápido, você consegue comer camarão salgado até em um templo budista!' (눈치가 빠르면 절에 가도 젓갈을 얻어먹는다)!"
     }
   ],
   "scoreTiers": [
@@ -1523,7 +1733,11 @@
       "funQuoteKo": "화장실 전용 슬리퍼가 있고, 한겨울에도 얼죽아를 외치며, 눈치 100단의 센스를 갖추셨을 확률 100%!",
       "funQuoteEs": "¡Seguro tienes zapatillas de baño verdes, pides café helado en invierno y tu Nunchi es legendario!",
       "funQuoteRu": "Вы точно носите резиновые тапочки в ванной, пьете ледяной кофе зимой и обладаете супер-нунчхи!",
-      "funQuoteZh": "你家里卫生间肯定备着浴室防滑拖鞋，大冬天必点冰美式，且拥有满级神仙眼力见！"
+      "funQuoteZh": "你家里卫生间肯定备着浴室防滑拖鞋，大冬天必点冰美式，且拥有满级神仙眼力见！",
+      "titlePt": "Status de Cidadão Honorário de Seul",
+      "badgePt": "👑 Seulita Honorário",
+      "descriptionPt": "Impressionante! Você acertou quase 100%! Você conhece as nuances culturais, a etiqueta, os costumes sociais e a vida cotidiana moderna da Coreia melhor do que muitos moradores locais. Está pronto para brilhar em qualquer encontro social, jantar de trabalho ou situação de K-Drama sem cometer erros!",
+      "funQuotePt": "Você com certeza tem chinelos exclusivos de banheiro, pede Iced Americano no inverno e possui um Nunchi de nível mestre."
     },
     {
       "minScore": 20,
@@ -1547,7 +1761,11 @@
       "funQuoteKo": "젓가락질도 안정적이고, 두 손으로 술을 건네는 공손함이 몸에 자연스럽게 배어있으시네요!",
       "funQuoteEs": "¡Manejas los palillos a la perfección y siempre usas las dos manos al brindar o pagar!",
       "funQuoteRu": "Вы всегда подаете карту двумя руками и уверенно чокаетесь бокалами!",
-      "funQuoteZh": "用双手递接卡片已成下意识习惯，碰杯时双手护杯的气质拿捏得死死的！"
+      "funQuoteZh": "用双手递接卡片已成下意识习惯，碰杯时双手护杯的气质拿捏得死死的！",
+      "titlePt": "Explorador Hallyu Experiente",
+      "badgePt": "⭐ Aficionado pela Cultura K",
+      "descriptionPt": "Conhecimento admirável! Você entende os principais costumes sociais, regras à mesa, simbolismos de presentes de casa nova e o estilo de vida diário. Com só mais um pouquinho de prática nas superstições antigas, você será um mestre absoluto.",
+      "funQuotePt": "Seus hashis são firmes, seu 'Geonbae' é animado e sua etiqueta das duas mãos já virou memória muscular!"
     },
     {
       "minScore": 12,
@@ -1571,7 +1789,11 @@
       "funQuoteKo": "빨간 펜으로 이름 쓰지 않기와 문지방 밟지 않기! 요 두 가지만 기억해도 여행에서 큰 실수는 없습니다.",
       "funQuoteEs": "Recuerda: nada de tinta roja para nombres, no pises umbrales y ¡siempre dos manos con mayores!",
       "funQuoteRu": "Главное помните: не пишите имена красной ручкой и всегда держите бокал двумя руками!",
-      "funQuoteZh": "切记：别用红笔写人名，不要踩门槛，长辈面前双手奉物！"
+      "funQuoteZh": "切记：别用红笔写人名，不要踩门槛，长辈面前双手奉物！",
+      "titlePt": "Turista K Curioso",
+      "badgePt": "🌱 Entusiasta em Ascensão",
+      "descriptionPt": "Você conhece o básico e com certeza já assistiu a muitos K-Dramas! Continue explorando, porque as tradições e a etiqueta coreanas guardam histórias fascinantes.",
+      "funQuotePt": "Basta lembrar: nada de caneta vermelha para nomes, nada de pisar na soleira da porta e sempre usar as duas mãos com os mais velhos!"
     },
     {
       "minScore": 0,
@@ -1595,7 +1817,11 @@
       "funQuoteKo": "오늘 저녁엔 재미있는 한국 드라마 한 편 보면서 치킨 한 마리 어떠세요?",
       "funQuoteEs": "¡Es hora de hacer un maratón de K-Dramas y planear un viaje a Seúl!",
       "funQuoteRu": "Самое время посмотреть классную дораму и запланировать поездку в Сеул!",
-      "funQuoteZh": "今晚点一份炸鸡，看一部经典韩剧开启你的进阶之旅吧！"
+      "funQuoteZh": "今晚点一份炸鸡，看一部经典韩剧开启你的进阶之旅吧！",
+      "titlePt": "Recém-Chegado ao Aeroporto de Incheon",
+      "badgePt": "✈️ Novato Cultural",
+      "descriptionPt": "Bem-vindo à Coreia! Há um universo incrível de maravilhas gastronômicas, culturais e históricas esperando para ser descoberto por você. Não se preocupe — os coreanos adoram ajudar visitantes curiosos!",
+      "funQuotePt": "Hora de maratonar mais alguns K-Dramas e planejar uma viagem para Seul!"
     }
   ],
   "affiliateSuggestion": {
@@ -1617,6 +1843,15 @@
     "productNameEs": "Caja de Dulces y Snacks Coreanos Seoulbox",
     "descriptionEs": "Recibe snacks coreanos seleccionados, dulces, ramyeon y artículos de K-culture directamente desde Seúl hasta la puerta de tu casa en todo el mundo.",
     "buttonTextEs": "Ver Ofertas de Seoulbox →",
-    "badgeTextEs": "Favorito de los Fans"
-  }
+    "badgeTextEs": "Favorito de los Fans",
+    "tagPt": "Parceiro de Snacks",
+    "titlePt": "Experimente Snacks Coreanos Autênticos em Casa",
+    "productNamePt": "Caixa de Doces e Snacks Coreanos Autênticos Seoulbox",
+    "descriptionPt": "Receba salgadinhos, doces, ramyeon e itens da cultura K selecionados e enviados diretamente de Seul para a sua porta em qualquer lugar do mundo.",
+    "buttonTextPt": "Ver Ofertas da Seoulbox →",
+    "badgeTextPt": "Favorito dos Fãs"
+  },
+  "titlePt": "Teste Definitivo de QI sobre Cultura e Etiqueta Coreana",
+  "subtitlePt": "Você consegue sobreviver em Seul sem cometer nenhuma gafe social?",
+  "descriptionPt": "Teste seus conhecimentos sobre etiqueta à mesa coreana, costumes sociais, superstições e o dia a dia em Seul. Você é um verdadeiro expert ou ainda um turista novato?"
 }
