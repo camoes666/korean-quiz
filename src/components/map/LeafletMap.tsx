@@ -59,7 +59,13 @@ export default function LeafletMap({
     mapRef.current = map;
     markersLayerRef.current = layerGroup;
 
+    const ro = new ResizeObserver(() => {
+      map.invalidateSize();
+    });
+    ro.observe(containerRef.current);
+
     return () => {
+      ro.disconnect();
       map.remove();
       mapRef.current = null;
       markersLayerRef.current = null;
@@ -80,6 +86,7 @@ export default function LeafletMap({
       const emoji = CATEGORY_EMOJI[spot.category];
       const title = getLocalizedMapText(spot.name, lang);
 
+      const size = isSelected ? 44 : 38;
       const icon = L.divIcon({
         className: 'kpop-map-marker-wrapper',
         html: `
@@ -87,22 +94,22 @@ export default function LeafletMap({
             display:flex;
             align-items:center;
             justify-content:center;
-            width:${isSelected ? '44px' : '36px'};
-            height:${isSelected ? '44px' : '36px'};
+            width:${size}px;
+            height:${size}px;
             border-radius:9999px;
             background:${isSelected ? '#0f172a' : primaryGroup.color};
             border:${isSelected ? '3px solid #fbbf24' : '2.5px solid #ffffff'};
             box-shadow:0 6px 16px rgba(15,23,42,0.28);
             font-size:${isSelected ? '20px' : '16px'};
-            transform:translate(-50%, -50%) scale(${isSelected ? '1.12' : '1'});
+            transform:scale(${isSelected ? '1.08' : '1'});
             transition:transform 0.18s ease, background 0.18s ease;
             cursor:pointer;
           " title="${title.replace(/"/g, '&quot;')}">
             <span>${emoji}</span>
           </div>
         `,
-        iconSize: [0, 0],
-        iconAnchor: [0, 0],
+        iconSize: [size, size],
+        iconAnchor: [size / 2, size / 2],
       });
 
       const marker = L.marker([spot.coordinates.lat, spot.coordinates.lng], {
@@ -153,7 +160,7 @@ export default function LeafletMap({
   return (
     <div
       ref={containerRef}
-      className="w-full h-full min-h-[420px] rounded-2xl overflow-hidden z-0"
+      className="w-full h-full min-h-[300px] sm:min-h-[420px] rounded-2xl overflow-hidden z-0"
       aria-label="K-Pop Star Pilgrimage Map"
     />
   );

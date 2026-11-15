@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useEffect, useCallback, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
@@ -125,9 +125,23 @@ export default function KpopMapClient() {
     return filteredSpots.find((s) => s.id === selectedSpotId) || null;
   }, [filteredSpots, selectedSpotId]);
 
-  const handleSelectSpot = useCallback((spot: MapSpot) => {
-    setSelectedSpotId(spot.id);
+  const detailCardRef = useRef<HTMLDivElement>(null);
+
+  const scrollToDetailOnMobile = useCallback(() => {
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      window.setTimeout(() => {
+        detailCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 120);
+    }
   }, []);
+
+  const handleSelectSpot = useCallback(
+    (spot: MapSpot) => {
+      setSelectedSpotId(spot.id);
+      scrollToDetailOnMobile();
+    },
+    [scrollToDetailOnMobile]
+  );
 
   // Warm browser cache for the representative photo of visible spots after initial render
   useEffect(() => {
@@ -450,7 +464,7 @@ export default function KpopMapClient() {
             mobileView === 'map' ? 'block' : 'hidden lg:block'
           }`}
         >
-          <div className="bg-white rounded-2xl border border-slate-200 p-1.5 shadow-sm h-[420px] sm:h-[480px]">
+          <div className="bg-white rounded-2xl border border-slate-200 p-1.5 shadow-sm h-[300px] sm:h-[420px] lg:h-[480px]">
             <LeafletMap
               spots={filteredSpots}
               selectedSpotId={selectedSpotId}
@@ -462,7 +476,10 @@ export default function KpopMapClient() {
 
           {/* Selected Spot Detail Card */}
           {selectedSpot && (
-            <div className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm space-y-4">
+            <div
+              ref={detailCardRef}
+              className="bg-white rounded-2xl border border-slate-200 p-5 sm:p-6 shadow-sm space-y-4"
+            >
               <SpotGallery key={selectedSpot.id} spot={selectedSpot} lang={lang} ui={ui} />
 
               <div className="flex flex-wrap items-start justify-between gap-3">
@@ -639,7 +656,9 @@ export default function KpopMapClient() {
                     setOnlySaved(false);
                     setSelectedSpotId(spot.id);
                     setMobileView('map');
-                    window.scrollTo({ top: 180, behavior: 'smooth' });
+                    window.setTimeout(() => {
+                      detailCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }, 150);
                   }}
                   className="text-left p-3.5 rounded-xl bg-white border border-slate-200 hover:border-purple-300 transition-colors cursor-pointer"
                 >
