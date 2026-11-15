@@ -129,6 +129,20 @@ export default function KpopMapClient() {
     setSelectedSpotId(spot.id);
   }, []);
 
+  // Warm browser cache for the representative photo of visible spots after initial render
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      filteredSpots.forEach((spot) => {
+        const firstUrl = spot.photos?.[0]?.url;
+        if (!firstUrl || spot.id === selectedSpotId) return;
+        const img = new window.Image();
+        img.decoding = 'async';
+        img.src = firstUrl;
+      });
+    }, 400);
+    return () => window.clearTimeout(timer);
+  }, [filteredSpots, selectedSpotId]);
+
   const handleResetFilters = () => {
     setSelectedGroup('all');
     setSelectedCategory('all');

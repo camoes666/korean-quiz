@@ -52,6 +52,7 @@ export default function SpotGallery({ spot, lang, ui }: SpotGalleryProps) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [playingVideo, setPlayingVideo] = useState(false);
   const [brokenUrls, setBrokenUrls] = useState<Record<string, boolean>>({});
+  const [loadedUrls, setLoadedUrls] = useState<Record<string, boolean>>({});
 
   const slides: SlideItem[] = [
     ...(spot.photos ?? []).map((p) => ({
@@ -148,19 +149,28 @@ export default function SpotGallery({ spot, lang, ui }: SpotGalleryProps) {
             <button
               type="button"
               onClick={() => setLightboxOpen(true)}
-              className="w-full h-full relative cursor-zoom-in block"
+              className="w-full h-full relative cursor-zoom-in block bg-slate-200"
               aria-label="Open full-screen photo"
             >
+              {!loadedUrls[currentSlide.url] && (
+                <div className="absolute inset-0 bg-slate-200 animate-pulse" />
+              )}
               <img
+                key={currentSlide.url}
                 src={currentSlide.url}
                 alt={currentSlide.caption}
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
+                onLoad={() =>
+                  setLoadedUrls((prev) => ({ ...prev, [currentSlide.url]: true }))
+                }
                 onError={() =>
                   setBrokenUrls((prev) => ({ ...prev, [currentSlide.url]: true }))
                 }
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                className={`w-full h-full object-cover transition-all duration-300 group-hover:scale-[1.02] ${
+                  loadedUrls[currentSlide.url] ? 'opacity-100' : 'opacity-0'
+                }`}
               />
               <span className="absolute top-3 left-3 inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-black/55 backdrop-blur-xs text-white text-[10px] font-bold">
                 <Maximize2 className="w-3 h-3" />

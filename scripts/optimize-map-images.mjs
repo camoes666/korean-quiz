@@ -7,9 +7,9 @@ const MAP_IMG_DIR = path.join(ROOT, 'public', 'images', 'map');
 const MAP_SPOTS_FILE = path.join(ROOT, 'src', 'data', 'mapSpots.ts');
 
 const IMAGE_EXTS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif']);
-const MAX_WIDTH = 1200;
-const WEBP_QUALITY = 80;
-const SKIP_WEBP_MAX_BYTES = 200 * 1024;
+const MAX_WIDTH = 900;
+const WEBP_QUALITY = 75;
+const SKIP_WEBP_MAX_BYTES = 100 * 1024;
 
 async function main() {
   if (!fs.existsSync(MAP_IMG_DIR)) {
