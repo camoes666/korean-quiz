@@ -12,7 +12,7 @@
 | :--- | :--- | :--- | :---: | :---: | :---: |
 | **블랙핑크 블링크(BLINK) 덕력고사 & 얼티밋 퀴즈**<br>_BLACKPINK Fandom Lore & Ultimate Trivia_ | `blackpink-blink-trivia` | K-Pop | **50문항** | Medium | [검토 문서 보기](./blackpink-blink-trivia.md) |
 | **방탄소년단(BTS) 아미 공식 덕력 모의고사**<br>_The Ultimate BTS ARMY Knowledge Test_ | `bts-army-trivia` | K-Pop | **35문항** | Medium | [검토 문서 보기](./bts-army-trivia.md) |
-| **《닥터X: 하얀 마피아의 시대》 회차별 명장면 & 과몰입 덕력고사**<br>_Doctor X: Age of the White Mafia Ultimate & Episode Quiz_ | `doctor-x-white-mafia-trivia` | K-Drama | **30문항** | Medium | [검토 문서 보기](./doctor-x-white-mafia-trivia.md) |
+| **《닥터X: 하얀 마피아의 시대》 회차별 명장면 & 과몰입 덕력고사**<br>_Doctor X: Age of the White Mafia Ultimate & Episode Quiz_ | `doctor-x-white-mafia-trivia` | K-Drama | **35문항** | Medium | [검토 문서 보기](./doctor-x-white-mafia-trivia.md) |
 | **K-드라마 명장면 클리셰 & 명대사 마스터 챌린지**<br>_The Iconic K-Drama Tropes & Lore Challenge_ | `kdrama-trope-trivia` | K-Drama | **10문항** | Easy | [검토 문서 보기](./kdrama-trope-trivia.md) |
 | **한국 문화 & 일상 예절 상식 IQ 테스트**<br>_The Ultimate Korean Culture & Etiquette IQ Test_ | `korean-culture-iq` | Culture | **30문항** | Medium | [검토 문서 보기](./korean-culture-iq.md) |
 | **한국 길거리 음식 & 맵부심 지수 테스트**<br>_Korean Spicy Food & Street Bites IQ Test_ | `korean-spicy-food` | Food | **30문항** | Easy | [검토 문서 보기](./korean-spicy-food.md) |

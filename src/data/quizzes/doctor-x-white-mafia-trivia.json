@@ -5,14 +5,14 @@
   "titleKo": "《닥터X: 하얀 마피아의 시대》 회차별 명장면 & 과몰입 덕력고사",
   "titleEs": "Trivia por Episodios de Doctor X: Age of the White Mafia",
   "titlePt": "Quiz Definitivo e por Episódios de Doctor X: Age of the White Mafia",
-  "subtitle": "From Episode 1 to the latest Episode 10 twist—can you pass with zero failures?",
-  "subtitleKo": "1화 당구장 응급처치부터 4화 'D.N' 낙인, 9화 스승 장희숙 등판과 10화 충격의 병실 엔딩까지! 본방 사수 레벨을 증명하세요.",
-  "subtitleEs": "Desde el episodio 1 hasta el impactante giro del episodio 10: ¿puedes aprobar sin fallos?",
-  "subtitlePt": "Do Episódio 1 à surpreendente reviravolta do Episódio 10 — você consegue passar sem nenhuma falha?",
-  "description": "Test your knowledge of SBS's hit Friday-Saturday medical noir K-Drama 'Doctor X: Age of the White Mafia'! Choose a specific episode pack (EP.1-2 to EP.9-10) to avoid spoilers, or challenge all 30 questions!",
-  "descriptionKo": "화제의 SBS 금토 메디컬 느와르 《닥터X: 하얀 마피아의 시대》! 내가 본 회차(1~2화, 3~4화, 5~6화, 7~8화, 최신 9~10화)만 골라 스포일러 없이 풀거나, 전체 30문제 통합 모의고사에 도전해보세요!",
-  "descriptionEs": "¡Pon a prueba cuánto sabes de 'Doctor X: Age of the White Mafia'! Elige por episodios (EP.1-2 a EP.9-10) sin spoilers o juega el reto completo de 30 preguntas.",
-  "descriptionPt": "Teste seus conhecimentos sobre o sucesso médico noir de sexta e sábado da SBS, 'Doctor X: Age of the White Mafia'! Escolha um pacote de episódios (EP.1-2 a EP.9-10) para evitar spoilers ou encare o desafio completo de 30 perguntas!",
+  "subtitle": "From Episode 1 to the Episode 11–12 Series Finale—can you pass with zero failures?",
+  "subtitleKo": "1화 당구장 응급처치부터 9~10화 스승 장희숙 등판, 11~12화 김승효의 실체와 최종회 결말까지! 본방 사수 레벨을 증명하세요.",
+  "subtitleEs": "Desde el episodio 1 hasta el gran final de los episodios 11 y 12: ¿puedes aprobar sin fallos?",
+  "subtitlePt": "Do Episódio 1 ao grande final dos Episódios 11–12 — você consegue passar sem nenhuma falha?",
+  "description": "Test your knowledge of SBS's hit Friday-Saturday medical noir K-Drama 'Doctor X: Age of the White Mafia'! Choose a specific episode pack (EP.1-2 to EP.11-12 Finale) to avoid spoilers, or challenge all 35 questions!",
+  "descriptionKo": "화제의 SBS 금토 메디컬 느와르 《닥터X: 하얀 마피아의 시대》 완결판! 내가 본 회차(1~2화부터 최종회 11~12화까지)만 골라 스포일러 없이 풀거나, 전체 35문제 통합 모의고사에 도전해보세요!",
+  "descriptionEs": "¡Pon a prueba cuánto sabes del final de 'Doctor X: Age of the White Mafia'! Elige por episodios (EP.1-2 a EP.11-12) sin spoilers o juega el reto completo de 35 preguntas.",
+  "descriptionPt": "Teste seus conhecimentos sobre o final de 'Doctor X: Age of the White Mafia'! Escolha um pacote de episódios (EP.1-2 a EP.11-12) para evitar spoilers ou encare o desafio completo de 35 perguntas!",
   "category": "K-Drama",
   "tag": "Doctor X",
   "coverEmoji": "🩺",
@@ -81,14 +81,25 @@
     },
     {
       "id": "EP.9-10",
-      "label": "🔥 EP.9–10",
-      "labelKo": "🔥 9~10화 (최신)",
-      "labelEs": "🔥 EP.9–10 (Nuevo)",
-      "labelPt": "🔥 EP.9–10 (Novo)",
+      "label": "📺 EP.9–10",
+      "labelKo": "📺 9~10화",
+      "labelEs": "📺 EP.9–10",
+      "labelPt": "📺 EP.9–10",
       "subtitle": "6-Organ Ex-Vivo Surgery & Mentor Reveal",
       "subtitleKo": "장기 6개 체외 자가이식·스승 장희숙 & 병실 반전",
       "subtitleEs": "Cirugía de 6 órganos y giro de Jang Hee-sook",
-      "subtitlePt": "Cirurgia ex-vivo de 6 órgãos e revelação da mentora",
+      "subtitlePt": "Cirurgia ex-vivo de 6 órgãos e revelação da mentora"
+    },
+    {
+      "id": "EP.11-12",
+      "label": "🔥 EP.11–12 (Finale)",
+      "labelKo": "🔥 11~12화 (최종회)",
+      "labelEs": "🔥 EP.11–12 (Final)",
+      "labelPt": "🔥 EP.11–12 (Final)",
+      "subtitle": "White Wings' Dark Truth & Final Judgment",
+      "subtitleKo": "화이트 윙즈의 실체·수술 중 각성 & 최종회 결말",
+      "subtitleEs": "La verdad de White Wings y el gran final",
+      "subtitlePt": "A verdade da White Wings e o grande final",
       "isNew": true
     }
   ],
@@ -1532,6 +1543,246 @@
       "funFactKo": "이 충격적인 병실 반전 엔딩과 함께 10화 시청률은 전국 17.7%, 순간 최고 20.2%까지 치솟으며 5주 연속 전 채널 1위를 수성했습니다!",
       "funFactEs": "¡El episodio 10 alcanzó un pico del 20,2% de audiencia con este giro inesperado de Park Tae-kyung y Jo Won-jin!",
       "funFactPt": "Esse final eletrizante fez a audiência disparar para 17,7% nacional e pico de 20,2%, deixando todo mundo curioso sobre o verdadeiro motivo do ataque dos internos!"
+    },
+    {
+      "id": 31,
+      "level": 1,
+      "episodePack": "EP.11-12",
+      "question": "[EP.11] What is the shocking truth behind 'White Wings' founder Kim Seung-hyo—who was revered as a saint and called 'Baba'—and why do Gye Su-jeong, Park Tae-kyung, and Jo Won-jin share deep trauma?",
+      "questionKo": "[11화] 아이들에게 '바바'로 불리며 위대한 의료 봉사자로 존경받던 '화이트 윙즈' 창립자 김승효(전국환)의 충격적인 실체는 무엇이었나요?",
+      "questionEs": "[EP.11] ¿Cuál es la impactante verdad detrás de Kim Seung-hyo, fundador de 'White Wings' llamado 'Baba', que traumatizó a Gye Su-jeong, Park Tae-kyung y Jo Won-jin?",
+      "questionPt": "[EP.11] Qual é a verdade chocante por trás de Kim Seung-hyo, fundador da 'White Wings' chamado de 'Baba', que traumatizou Gye Su-jeong, Park Tae-kyung e Jo Won-jin?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Behind his philanthropic facade, he systematically committed horrific child sexual abuse and exploitation against vulnerable children",
+          "textKo": "선한 봉사자의 탈을 쓰고, 힘없는 어린아이들을 상대로 수십 년간 끔찍한 아동 성범죄와 착취를 저질러온 괴물이었다",
+          "textEs": "Bajo su fachada filantrópica, cometió abusos sexuales y explotación sistemática contra niños vulnerables durante décadas",
+          "textPt": "Por trás da fachada filantrópica, ele cometeu abusos sexuais e exploração sistemática contra crianças vulneráveis durante décadas"
+        },
+        {
+          "id": "B",
+          "text": "He secretly operated an illegal luxury resort using hospital funds",
+          "textKo": "병원 공금을 횡령해 해외에 초호화 불법 리조트를 몰래 운영하고 있었다",
+          "textEs": "Operaba en secreto un resort de lujo ilegal con fondos del hospital",
+          "textPt": "Ele operava em segredo um resort de luxo ilegal com fundos do hospital"
+        },
+        {
+          "id": "C",
+          "text": "He forged his medical license in order to become a hospital cafeteria supplier",
+          "textKo": "구내식당 식자재 납품업자가 되기 위해 의사 면허를 위조했었다",
+          "textEs": "Falsificó su licencia médica para ser proveedor de la cafetería",
+          "textPt": "Ele falsificou sua licença médica para se tornar fornecedor do refeitório"
+        },
+        {
+          "id": "D",
+          "text": "He was actually an undercover detective investigating latex allergies",
+          "textKo": "사실은 라텍스 알레르기 사건을 추적하던 잠복 형사였다",
+          "textEs": "En realidad era un detective encubierto que investigaba alergias al látex",
+          "textPt": "Na verdade era um detetive disfarçado investigando alergias ao látex"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Episode 11 reveals that Kim Seung-hyo ('Baba') used the respected medical relief group White Wings as a cover for decades of horrific child sexual abuse, explaining why survivors Gye Su-jeong, Park Tae-kyung, and Jo Won-jin carry deep repressed nightmares.",
+      "explanationKo": "11화에서는 구호단체 '화이트 윙즈'의 창립자로 존경받던 김승효('바바')가 실제로는 힘없는 아이들을 상대로 수십 년간 끔찍한 성범죄를 저질러온 추악한 실체가 밝혀지며, 계수정·박태경·조원진의 트라우마가 드러납니다.",
+      "explanationEs": "El episodio 11 revela que Kim Seung-hyo ('Baba') usó 'White Wings' como fachada para décadas de terribles abusos infantiles contra víctimas como Su-jeong, Tae-kyung y Won-jin.",
+      "explanationPt": "O Episódio 11 revela que Kim Seung-hyo ('Baba') usou a respeitada ONG White Wings como fachada para décadas de terríveis abusos infantis, explicando os traumas profundos de Su-jeong, Tae-kyung e Won-jin.",
+      "funFact": "Adding this original Korean noir arc gave Doctor X a chilling moral dilemma not seen in the Japanese original: whether a genius surgeon must save a monster who ruined her childhood.",
+      "funFactKo": "일본 원작에 없는 이 묵직한 한국형 각색 서사가 더해지며, '의사가 살려야 하는 생명의 경계는 어디까지인가'라는 강렬한 윤리적 질문을 던졌습니다.",
+      "funFactEs": "Este arco original de la adaptación coreana planteó un dilema moral desgarrador ausente en la serie original japonesa.",
+      "funFactPt": "Esse arco original da adaptação coreana trouxe um dilema moral arrepiante que não existia na versão japonesa!"
+    },
+    {
+      "id": 32,
+      "level": 2,
+      "episodePack": "EP.11-12",
+      "question": "[EP.11] What shocking family secret about anesthesiologist Jo Won-jin (played by Lee Jin-hee) is revealed as Kim Seung-hyo enters Guseo University Hospital?",
+      "questionKo": "[11화] 김승효의 심장 이식 수술을 앞두고 밝혀진 마취과 의사 조원진(이진희)의 충격적인 가족 관계 비밀은?",
+      "questionEs": "[EP.11] ¿Qué impactante secreto familiar de la anestesióloga Jo Won-jin (Lee Jin-hee) se revela en el episodio 11?",
+      "questionPt": "[EP.11] Qual segredo familiar chocante da anestesiologista Jo Won-jin (Lee Jin-hee) é revelado no Episódio 11?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Her real name is Kim Won-jin—she is Kim Seung-hyo's biological daughter who severed ties with her family and changed her surname",
+          "textKo": "본명은 '김원진'으로, 사실 김승효의 친딸이지만 부모와 연을 끊고 성을 바꾼 상태였다",
+          "textEs": "Su nombre real es Kim Won-jin: es la hija biológica de Kim Seung-hyo que rompió lazos con él y cambió su apellido",
+          "textPt": "Seu nome verdadeiro é Kim Won-jin: ela é filha biológica de Kim Seung-hyo, rompeu laços com a família e mudou de sobrenome"
+        },
+        {
+          "id": "B",
+          "text": "She is Hospital Director Boo Seung-kwon's younger sister",
+          "textKo": "부승권 병원장의 친여동생이자 재단 이사장의 후계자였다",
+          "textEs": "Es la hermana menor del director Boo Seung-kwon",
+          "textPt": "Ela é irmã mais nova do diretor Boo Seung-kwon"
+        },
+        {
+          "id": "C",
+          "text": "She is Jang Hee-sook's secret business partner running the agency",
+          "textKo": "장희숙과 함께 의사 용역 소개소를 공동 창업한 숨겨진 동업자였다",
+          "textEs": "Es socia secreta de Jang Hee-sook en la agencia médica",
+          "textPt": "Ela é sócia secreta de Jang Hee-sook na agência de médicos"
+        },
+        {
+          "id": "D",
+          "text": "She is a former billiard champion who coached Park Tae-kyung",
+          "textKo": "과거 박태경에게 당구를 가르쳐준 프로 당구 선수 출신이었다",
+          "textEs": "Fue campeona de billar y entrenó a Park Tae-kyung",
+          "textPt": "Foi campeã de bilhar e treinadora de Park Tae-kyung"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Jo Won-jin's birth name is Kim Won-jin—she is Kim Seung-hyo's biological daughter. Haunted by guilt over having looked away from her father's crimes in the past, she changed her surname and distanced herself from him.",
+      "explanationKo": "조원진의 본명은 '김원진'으로, 김승효의 친딸이었습니다. 아버지의 악행을 알면서도 외면했던 과거의 죄책감을 안고 성을 바꾼 채 살아가다 수술실에서 그와 마주하게 됩니다.",
+      "explanationEs": "El nombre real de Jo Won-jin es Kim Won-jin, hija biológica de Kim Seung-hyo, quien cambió su apellido cargando la culpa de haber callado en el pasado.",
+      "explanationPt": "O nome de nascimento de Jo Won-jin é Kim Won-jin — filha biológica de Kim Seung-hyo, que mudou de sobrenome carregando a culpa por não tê-lo detido antes.",
+      "funFact": "At the end of Episode 12, after Kim Seung-hyo's terrifying awakening, Jo Won-jin leaves him with the chilling question 'Do you believe in God?' before resigning from the hospital.",
+      "funFactKo": "12화에서 김승효가 수술 중 각성을 겪은 뒤, 조원진은 \"신을 믿느냐\"는 의미심장한 한마디를 남기고 병원을 퇴사하며 새로운 삶을 선택합니다.",
+      "funFactEs": "Al final del episodio 12, Jo Won-jin le pregunta '¿Cree en Dios?' antes de renunciar al hospital para empezar una nueva vida.",
+      "funFactPt": "No final do Episódio 12, Jo Won-jin deixa a pergunta arrepiante 'Você acredita em Deus?' antes de pedir demissão para recomeçar sua vida."
+    },
+    {
+      "id": 33,
+      "level": 2,
+      "episodePack": "EP.11-12",
+      "question": "[EP.11–12] What reversal drug did Gye Su-jeong and Jo Won-jin initially plan to use on Kim Seung-hyo during surgery—and what chilling twist happened anyway even after they returned it unused?",
+      "questionKo": "[11~12화] 계수정과 조원진이 김승효를 고통스럽게 깨우기 위해 고려했던 각성 유도 약물과, 끝내 약물을 반납하고 투여하지 않았음에도 수술실에서 벌어진 소름 돋는 반전은?",
+      "questionEs": "[EP.11–12] ¿Qué fármaco consideraron usar Su-jeong y Won-jin en la cirugía, y qué ocurrió aun después de devolverlo sin administrarlo?",
+      "questionPt": "[EP.11–12] Qual medicamento Su-jeong e Won-jin cogitaram usar na cirurgia, e o que aconteceu mesmo após devolverem o frasco sem aplicá-lo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Flumazenil (플루마제닐); even without administering it, Kim Seung-hyo suffered real intraoperative awareness (수술 중 각성), feeling the terror while paralyzed",
+          "textKo": "플루마제닐(Flumazenil); 약물을 투여하지 않았음에도 김승효가 스스로 '수술 중 각성'을 겪어 마취된 채 극한의 공포를 고스란히 느낀다",
+          "textEs": "Flumazenil; aun sin administrarlo, Kim Seung-hyo sufrió despertar intraoperatorio real, sintiendo el terror mientras estaba paralizado",
+          "textPt": "Flumazenil; mesmo sem aplicá-lo, Kim Seung-hyo sofreu despertar intraoperatório real, sentindo todo o terror paralisado na mesa"
+        },
+        {
+          "id": "B",
+          "text": "Insulin; his blood sugar dropped and the surgery was postponed for a month",
+          "textKo": "인슐린; 저혈당이 와서 수술이 한 달 뒤로 연기된다",
+          "textEs": "Insulina; su azúcar bajó y pospusieron la cirugía un mes",
+          "textPt": "Insulina; sua glicose caiu e a cirurgia foi adiada por um mês"
+        },
+        {
+          "id": "C",
+          "text": "Caffeine IV; he woke up and immediately signed over his foundation to the interns",
+          "textKo": "고농도 카페인; 깨어나자마자 재단 소유권을 인턴들에게 넘긴다",
+          "textEs": "Cafeína intravenosa; despertó y cedió su fundación a los internos",
+          "textPt": "Cafeína intravenosa; ele acordou e doou sua fundação aos internos"
+        },
+        {
+          "id": "D",
+          "text": "Saline placebo; he slept peacefully and escaped the country before waking",
+          "textKo": "생리식염수; 아무 일 없이 잠들었다가 깨어나기 전 해외로 도주한다",
+          "textEs": "Solución salina; durmió en paz y escapó del país",
+          "textPt": "Soro fisiológico; ele dormiu tranquilamente e fugiu do país"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "After Jang Hee-sook brings the recovered boy Nima's sketchbook to the hospital, Gye Su-jeong refuses to become a monster and returns the Flumazenil unused. Yet in a chilling twist of fate, Kim Seung-hyo naturally experiences intraoperative awareness—trapped paralyzed while hearing the doctors and feeling every moment of dread.",
+      "explanationKo": "장희숙이 건강해진 소년 '니마'의 진심 어린 스케치북을 전해준 덕분에 계수정은 복수를 접고 각성 약물 '플루마제닐'을 반납합니다. 하지만 운명의 심판처럼 김승효는 약물 없이도 '수술 중 각성'을 겪으며, 몸은 마비된 채 의료진의 목소리와 수술의 공포를 생생히 느끼는 지옥을 맛봅니다.",
+      "explanationEs": "Tras ver el cuaderno de dibujos del niño Nima que trajo Jang Hee-sook, Su-jeong devuelve el Flumazenil sin usarlo. Aun así, Kim Seung-hyo sufre un aterrador despertar intraoperatorio natural.",
+      "explanationPt": "Após Jang Hee-sook levar o caderno de desenhos do pequeno Nima, Su-jeong desiste da vingança e devolve o Flumazenil sem usar. Mesmo assim, por ironia do destino, Kim Seung-hyo sofre despertar intraoperatório natural na mesa!",
+      "funFact": "Nima's sketchbook reminded Gye Su-jeong why she became a surgeon in the first place—choosing to protect her own humanity rather than sink to her abuser's level.",
+      "funFactKo": "니마의 스케치북은 계수정이 복수귀가 되는 것을 막고, 끝까지 '생명을 살리는 의사'로서의 본분과 존엄을 지키게 만든 결정적 계기였습니다!",
+      "funFactEs": "El cuaderno de Nima salvó a Su-jeong de convertirse en un monstruo como su agresor.",
+      "funFactPt": "O caderno de Nima impediu que Su-jeong se tornasse um monstro, lembrando-a de por que escolheu salvar vidas!"
+    },
+    {
+      "id": 34,
+      "level": 2,
+      "episodePack": "EP.11-12",
+      "question": "[EP.12 Finale] In Episode 11, intern Park Tae-kyung tearfully begged Gye Su-jeong to 'fail just this once.' After his seniors stop him from joining the revenge, which department does he choose in the finale?",
+      "questionKo": "[12화 최종회] 11화에서 \"한 번만 수술에 실패해 달라\"며 오열하던 인턴 박태경(김우석)이 계수정·조원진의 만류로 복수를 내려놓은 뒤, 최종회에서 선택한 진로는?",
+      "questionEs": "[Final EP.12] Tras ser detenido por Su-jeong y Won-jin cuando buscaba venganza, ¿qué especialidad elige el interno Park Tae-kyung al final de la serie?",
+      "questionPt": "[Final EP.12] Após ser impedido por Su-jeong e Won-jin de buscar vingança, qual especialidade o interno Park Tae-kyung escolhe no episódio final?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Emergency Medicine (응급의학과) alongside Kim Seong-jin, using his hands to save lives",
+          "textKo": "김성진(허준석)이 있는 응급의학과를 선택해 사람을 살리는 의사의 길을 걷는다",
+          "textEs": "Medicina de Emergencias junto a Kim Seong-jin, usando sus manos para salvar vidas",
+          "textPt": "Medicina de Emergência ao lado de Kim Seong-jin, usando suas mãos para salvar vidas"
+        },
+        {
+          "id": "B",
+          "text": "He quits medicine completely to run a billiard hall",
+          "textKo": "의사를 완전히 그만두고 1화에서 만났던 당구장을 인수한다",
+          "textEs": "Deja la medicina para administrar una sala de billar",
+          "textPt": "Ele abandona a medicina para abrir um salão de bilhar"
+        },
+        {
+          "id": "C",
+          "text": "He joins the corrupt Mokryeonhoe (White Mafia) board as its youngest director",
+          "textKo": "부패한 목련회(하얀 마피아) 재단의 최연소 이사로 들어간다",
+          "textEs": "Se une a la junta corrupta de la Mafia Blanca",
+          "textPt": "Ele entra para a diretoria corrupta da Máfia Branca"
+        },
+        {
+          "id": "D",
+          "text": "He transfers to plastic surgery to erase hospital logos",
+          "textKo": "성형외과로 전과해 병원 로고 지우는 일만 전담한다",
+          "textEs": "Se transfiere a cirugía plástica",
+          "textPt": "Ele se transfere para cirurgia plástica"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "Gye Su-jeong and Jo Won-jin stop Park Tae-kyung from entering the operating room for revenge, reminding him that 'your hands must be used to save people.' Letting go of his hatred, he chooses Emergency Medicine with Kim Seong-jin.",
+      "explanationKo": "계수정과 조원진은 복수심에 수술실로 들어가려던 박태경을 막아서며 \"너의 손은 사람을 구하는 데 쓰여야 한다\"고 다독입니다. 이후 태경은 트라우마를 딛고 김성진(허준석)이 있는 응급의학과를 선택하며 진정한 의사로 성장합니다.",
+      "explanationEs": "Su-jeong y Won-jin le recuerdan que sus manos son para salvar vidas, por lo que Tae-kyung supera su sed de venganza y elige Medicina de Emergencias con Kim Seong-jin.",
+      "explanationPt": "Su-jeong e Won-jin lembram que suas mãos servem para salvar vidas, levando Tae-kyung a superar a vingança e escolher a Medicina de Emergência com Kim Seong-jin.",
+      "funFact": "Kim Woo-seok's emotional transformation from Episode 10's shocking pillow scene to Episode 12's quiet resolve earned praise from fans!",
+      "funFactKo": "10화 엔딩에서 충격적인 베개 장면으로 반전을 안겼던 박태경이 12화에서 다시 따뜻한 의사의 손을 선택하는 서사가 깊은 여운을 남겼습니다.",
+      "funFactEs": "La evolución de Park Tae-kyung desde el giro del episodio 10 hasta su elección final conmovió a los fans.",
+      "funFactPt": "A evolução de Park Tae-kyung da cena chocante do Episódio 10 até sua redenção no Episódio 12 emocionou o público!"
+    },
+    {
+      "id": 35,
+      "level": 3,
+      "episodePack": "EP.11-12",
+      "question": "[EP.12 Finale] At the very end of Episode 12, how does Gye Su-jeong respond to Hospital Director Boo Seung-kwon's formal offer to stay permanently at Guseo University Hospital?",
+      "questionKo": "[12화 최종회] 모든 사건이 마무리된 뒤, 구서대학교병원에 정식으로 남아달라는 병원장 부승권(손현주)의 영입 제안에 계수정이 보인 마지막 행동은?",
+      "questionEs": "[Final EP.12] Al cierre del episodio 12, ¿cómo responde Gye Su-jeong a la oferta formal del director Boo Seung-kwon para quedarse permanentemente en el Hospital Guseo?",
+      "questionPt": "[Final EP.12] No encerramento do Episódio 12, como Gye Su-jeong responde à proposta formal do diretor Boo Seung-kwon para ficar em definitivo no Hospital Guseo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "She declines the permanent offer, giving only a quiet nod instead of shaking his hand, and walks her own solo path as Doctor X",
+          "textKo": "정식 영입 제안을 거절하고, 내민 손을 잡는 대신 가벼운 목례만 남긴 채 홀로 병원을 떠나 자신만의 길을 걸어간다",
+          "textEs": "Rechaza la oferta permanente, hace solo una breve inclinación de cabeza en lugar de darle la mano y se marcha por su propio camino",
+          "textPt": "Ela recusa a proposta definitiva, faz apenas um leve aceno de cabeça em vez de apertar a mão dele e parte seguindo seu próprio caminho solo"
+        },
+        {
+          "id": "B",
+          "text": "She accepts the offer and becomes the new Vice Director of the White Mafia board",
+          "textKo": "제안을 수락하고 즉시 하얀 마피아 이사회 부원장으로 취임한다",
+          "textEs": "Acepta el puesto y se convierte en subdirectora del hospital",
+          "textPt": "Ela aceita o cargo e vira vice-diretora do hospital"
+        },
+        {
+          "id": "C",
+          "text": "She tears up her surgical license and moves to Antarctica",
+          "textKo": "의사 면허를 찢어버리고 남극 기지로 이민을 떠난다",
+          "textEs": "Rompe su licencia médica y se muda a la Antártida",
+          "textPt": "Ela rasga sua licença médica e se muda para a Antártida"
+        },
+        {
+          "id": "D",
+          "text": "She demands ownership of the hospital's rooftop helipad as her bonus",
+          "textKo": "계약 조건으로 병원 옥상 헬기장 소유권을 넘겨달라고 요구한다",
+          "textEs": "Exige la propiedad del helipuerto del hospital como bono",
+          "textPt": "Ela exige a posse do heliporto do hospital como bônus"
+        }
+      ],
+      "correctAnswer": "A",
+      "explanation": "True to her lone-wolf creed, Gye Su-jeong turns down Director Boo Seung-kwon's formal offer with a subtle nod rather than a handshake. Meanwhile, Jang Hee-sook plans to return to Largo/Lagota and cheers her on: 'Yeah, that's just like you. Go, Gye Su-jeong!'",
+      "explanationKo": "계수정은 끝까지 어떤 조직에도 얽매이지 않는 프리랜서 '닥터X'답게 부승권의 정식 영입을 거절하고, 악수 대신 가벼운 목례만 건넨 뒤 홀로 떠납니다. 스승 장희숙 역시 '라르고'로 돌아갈 뜻을 밝히며 \"그래, 이게 너지. 가라, 계수정\"이라는 뭉클한 응원으로 대단원의 막을 내립니다.",
+      "explanationEs": "Fiel a su esencia independiente, Su-jeong rechaza el puesto con una leve reverencia sin estrechar su mano, mientras Jang Hee-sook se despide diciendo: 'Sí, esa eres tú. ¡Ve, Gye Su-jeong!'",
+      "explanationPt": "Fiel ao seu estilo independente, Su-jeong recusa o cargo com apenas um aceno em vez de apertar a mão dele, enquanto Jang Hee-sook se despede torcendo: 'Sim, essa é você. Vá, Gye Su-jeong!'",
+      "funFact": "Seeing Gye Su-jeong walk forward alone with a fresh name-tape on her scrubs left fans eagerly hoping for a Doctor X Season 2!",
+      "funFactKo": "새로운 테이프 이름표를 달고 묵묵히 자신만의 의료 현장을 향해 걸어가는 계수정의 마지막 뒷모습은 시즌2를 향한 팬들의 뜨거운 기대감을 남겼습니다!",
+      "funFactEs": "¡Ver a Su-jeong seguir adelante por su cuenta dejó a los fans pidiendo una segunda temporada!",
+      "funFactPt": "Ver Su-jeong seguir em frente por conta própria deixou os fãs torcendo por uma 2ª temporada!"
     }
   ],
   "scoreTiers": [
@@ -1586,10 +1837,10 @@
       "badgeKo": "🩺 전설의 닥터X",
       "badgeEs": "🩺 Leyenda Doctor X",
       "badgePt": "🩺 Lenda Doctor X",
-      "description": "100% Flawless Surgery! From Episode 1's latex shock to Episode 4's 'D.N' mark and Episode 10's mentor surgery & ward twist, you never miss a single detail!",
-      "descriptionKo": "\"실패도, 타협도 하지 않는다!\" 1화 당구장 탈장 진단부터 4화 'D.N' 낙인, 9~10화 장기 6개 자가이식술과 병실 반전 엔딩까지 단 하나의 오차도 없이 완벽하게 집도를 끝내셨군요!",
-      "descriptionEs": "¡Cirugía 100% impecable! Dominas cada episodio de 'Doctor X: Age of the White Mafia' sin un solo error.",
-      "descriptionPt": "Cirurgia 100% impecável! Do choque ao látex no Episódio 1 à marca 'D.N' no Episódio 4, à cirurgia da mentora nos Episódios 9–10 e à reviravolta no quarto do hospital, você não perde um único detalhe!",
+      "description": "100% Flawless Surgery! From Episode 1's latex shock to Episode 10's mentor twist and Episode 11–12's unforgettable finale, you never miss a single detail!",
+      "descriptionKo": "\"실패도, 타협도 하지 않는다!\" 1화 당구장 탈장 진단부터 9~10화 스승 장희숙 등판, 11~12화 최종회 수술 중 각성과 결말까지 단 하나의 오차도 없이 완벽하게 집도를 끝내셨군요!",
+      "descriptionEs": "¡Cirugía 100% impecable! Dominas desde el episodio 1 hasta el gran final (EP.11–12) de 'Doctor X: Age of the White Mafia' sin un solo error.",
+      "descriptionPt": "Cirurgia 100% impecável! Do Episódio 1 ao grande final nos Episódios 11–12 de 'Doctor X: Age of the White Mafia', você não perde um único detalhe!",
       "funQuote": "\"Step aside. Surgery complete—zero failures, as always.\"",
       "funQuoteKo": "\"수술 끝. 내가 말했잖아, 난 실패하지 않는다고.\"",
       "funQuoteEs": "\"Cirugía terminada. Cero fallos, como siempre.\"",

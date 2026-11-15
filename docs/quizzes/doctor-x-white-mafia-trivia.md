@@ -1,7 +1,7 @@
 # 📝 [검토용 카탈로그] 《닥터X: 하얀 마피아의 시대》 회차별 명장면 & 과몰입 덕력고사
 > **영문명**: Doctor X: Age of the White Mafia Ultimate & Episode Quiz  
 > **슬러그**: `doctor-x-white-mafia-trivia`  
-> **카테고리**: K-Drama | **난이도**: Medium | **문항 수**: 총 30문항  
+> **카테고리**: K-Drama | **난이도**: Medium | **문항 수**: 총 35문항  
 > **실제 서비스 URL**: [https://kpulsequiz.com/quiz/doctor-x-white-mafia-trivia](https://kpulsequiz.com/quiz/doctor-x-white-mafia-trivia)  
 > **뒤로 가기**: [전체 카탈로그 목록 (INDEX)](./README.md)
 
@@ -16,7 +16,7 @@
 
 ---
 
-## ❓ 전체 문항 리스트 (30문항)
+## ❓ 전체 문항 리스트 (35문항)
 
 ### Q1. [🌱 Level 1 (입문)] SBS 금토드라마 《닥터X》의 공식 부제로, 가운을 입고 권력 카르텔을 형성한 의사 집단을 뜻하는 말은?
 * *English*: What is the official subtitle of the SBS Friday-Saturday medical noir drama 'Doctor X'?
@@ -465,6 +465,71 @@
 * **💡 상세 해설 (한국어)**: 10화 엔딩에서 심장 이식 수술을 위해 입원한 '화이트 윙즈' 창립자 김승효(전국환)의 병실에서, 인턴 박태경이 베개로 그의 얼굴을 누르고 조원진이 이를 지켜보는 충격적인 장면이 펼쳐집니다. 계수정이 급히 말리자 눈을 뜬 김승효가 "오랜만이구나, 닥터X"라고 인사를 건네며 역대급 소름 엔딩을 완성했습니다!
 * *Explanation (EN)*: In the jaw-dropping Episode 10 finale, 'White Wings' founder Kim Seung-hyo (Jeon Gook-hwan) is admitted for a heart transplant. Gye Su-jeong catches Park Tae-kyung pressing a pillow over his face while Jo Won-jin watches—and Kim Seung-hyo opens his eyes, grabs Su-jeong's hand, and says, 'Long time no see, Doctor X!'
 * **✨ 펀팩트 / 비하인드**: 이 충격적인 병실 반전 엔딩과 함께 10화 시청률은 전국 17.7%, 순간 최고 20.2%까지 치솟으며 5주 연속 전 채널 1위를 수성했습니다!
+
+---
+
+### Q31. [🌱 Level 1 (입문)] [11화] 아이들에게 '바바'로 불리며 위대한 의료 봉사자로 존경받던 '화이트 윙즈' 창립자 김승효(전국환)의 충격적인 실체는 무엇이었나요?
+* *English*: [EP.11] What is the shocking truth behind 'White Wings' founder Kim Seung-hyo—who was revered as a saint and called 'Baba'—and why do Gye Su-jeong, Park Tae-kyung, and Jo Won-jin share deep trauma?
+
+#### 🔘 선택지 (Options)
+- **[A]** 선한 봉사자의 탈을 쓰고, 힘없는 어린아이들을 상대로 수십 년간 끔찍한 아동 성범죄와 착취를 저질러온 괴물이었다  **[✅ 정답]**
+- **[B]** 병원 공금을 횡령해 해외에 초호화 불법 리조트를 몰래 운영하고 있었다
+- **[C]** 구내식당 식자재 납품업자가 되기 위해 의사 면허를 위조했었다
+- **[D]** 사실은 라텍스 알레르기 사건을 추적하던 잠복 형사였다
+
+* **💡 상세 해설 (한국어)**: 11화에서는 구호단체 '화이트 윙즈'의 창립자로 존경받던 김승효('바바')가 실제로는 힘없는 아이들을 상대로 수십 년간 끔찍한 성범죄를 저질러온 추악한 실체가 밝혀지며, 계수정·박태경·조원진의 트라우마가 드러납니다.
+
+---
+
+### Q32. [⭐ Level 2 (일반/팬)] [11화] 김승효의 심장 이식 수술을 앞두고 밝혀진 마취과 의사 조원진(이진희)의 충격적인 가족 관계 비밀은?
+* *English*: [EP.11] What shocking family secret about anesthesiologist Jo Won-jin (played by Lee Jin-hee) is revealed as Kim Seung-hyo enters Guseo University Hospital?
+
+#### 🔘 선택지 (Options)
+- **[A]** 본명은 '김원진'으로, 사실 김승효의 친딸이지만 부모와 연을 끊고 성을 바꾼 상태였다  **[✅ 정답]**
+- **[B]** 부승권 병원장의 친여동생이자 재단 이사장의 후계자였다
+- **[C]** 장희숙과 함께 의사 용역 소개소를 공동 창업한 숨겨진 동업자였다
+- **[D]** 과거 박태경에게 당구를 가르쳐준 프로 당구 선수 출신이었다
+
+* **💡 상세 해설 (한국어)**: 조원진의 본명은 '김원진'으로, 김승효의 친딸이었습니다. 아버지의 악행을 알면서도 외면했던 과거의 죄책감을 안고 성을 바꾼 채 살아가다 수술실에서 그와 마주하게 됩니다.
+
+---
+
+### Q33. [⭐ Level 2 (일반/팬)] [11~12화] 계수정과 조원진이 김승효를 고통스럽게 깨우기 위해 고려했던 각성 유도 약물과, 끝내 약물을 반납하고 투여하지 않았음에도 수술실에서 벌어진 소름 돋는 반전은?
+* *English*: [EP.11–12] What reversal drug did Gye Su-jeong and Jo Won-jin initially plan to use on Kim Seung-hyo during surgery—and what chilling twist happened anyway even after they returned it unused?
+
+#### 🔘 선택지 (Options)
+- **[A]** 플루마제닐(Flumazenil); 약물을 투여하지 않았음에도 김승효가 스스로 '수술 중 각성'을 겪어 마취된 채 극한의 공포를 고스란히 느낀다  **[✅ 정답]**
+- **[B]** 인슐린; 저혈당이 와서 수술이 한 달 뒤로 연기된다
+- **[C]** 고농도 카페인; 깨어나자마자 재단 소유권을 인턴들에게 넘긴다
+- **[D]** 생리식염수; 아무 일 없이 잠들었다가 깨어나기 전 해외로 도주한다
+
+* **💡 상세 해설 (한국어)**: 장희숙이 건강해진 소년 '니마'의 진심 어린 스케치북을 전해준 덕분에 계수정은 복수를 접고 각성 약물 '플루마제닐'을 반납합니다. 하지만 운명의 심판처럼 김승효는 약물 없이도 '수술 중 각성'을 겪으며 극한의 공포를 맛봅니다.
+
+---
+
+### Q34. [⭐ Level 2 (일반/팬)] [12화 최종회] 11화에서 "한 번만 수술에 실패해 달라"며 오열하던 인턴 박태경(김우석)이 계수정·조원진의 만류로 복수를 내려놓은 뒤, 최종회에서 선택한 진로는?
+* *English*: [EP.12 Finale] After his seniors stop him from joining the revenge, which department does intern Park Tae-kyung choose in the finale?
+
+#### 🔘 선택지 (Options)
+- **[A]** 김성진(허준석)이 있는 응급의학과를 선택해 사람을 살리는 의사의 길을 걷는다  **[✅ 정답]**
+- **[B]** 의사를 완전히 그만두고 1화에서 만났던 당구장을 인수한다
+- **[C]** 부패한 목련회(하얀 마피아) 재단의 최연소 이사로 들어간다
+- **[D]** 성형외과로 전과해 병원 로고 지우는 일만 전담한다
+
+* **💡 상세 해설 (한국어)**: 계수정과 조원진은 "너의 손은 사람을 구하는 데 쓰여야 한다"고 다독이고, 박태경은 트라우마를 딛고 김성진(허준석)이 있는 응급의학과를 선택하며 진정한 의사로 성장합니다.
+
+---
+
+### Q35. [🔥 Level 3 (코어/고난도)] [12화 최종회] 모든 사건이 마무리된 뒤, 구서대학교병원에 정식으로 남아달라는 병원장 부승권(손현주)의 영입 제안에 계수정이 보인 마지막 행동은?
+* *English*: [EP.12 Finale] At the very end of Episode 12, how does Gye Su-jeong respond to Hospital Director Boo Seung-kwon's formal offer to stay permanently at Guseo University Hospital?
+
+#### 🔘 선택지 (Options)
+- **[A]** 정식 영입 제안을 거절하고, 내민 손을 잡는 대신 가벼운 목례만 남긴 채 홀로 병원을 떠나 자신만의 길을 걸어간다  **[✅ 정답]**
+- **[B]** 제안을 수락하고 즉시 하얀 마피아 이사회 부원장으로 취임한다
+- **[C]** 의사 면허를 찢어버리고 남극 기지로 이민을 떠난다
+- **[D]** 계약 조건으로 병원 옥상 헬기장 소유권을 넘겨달라고 요구한다
+
+* **💡 상세 해설 (한국어)**: 계수정은 끝까지 어떤 조직에도 얽매이지 않는 프리랜서 '닥터X'답게 부승권의 정식 영입을 거절하고, 악수 대신 가벼운 목례만 건넨 뒤 홀로 떠납니다.
 
 ---
 
