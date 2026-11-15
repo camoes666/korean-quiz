@@ -85,7 +85,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-hybe-hq/1.jpg',
+        url: '/images/map/bts-hybe-hq/1.webp',
         caption: {
           en: 'HYBE Yongsan Headquarters View 1',
           ko: '하이브 용산 사옥 전경 1',
@@ -95,7 +95,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'exterior',
       },
       {
-        url: '/images/map/bts-hybe-hq/2.jpg',
+        url: '/images/map/bts-hybe-hq/2.webp',
         caption: {
           en: 'HYBE Yongsan Headquarters View 2',
           ko: '하이브 용산 사옥 전경 2',
@@ -105,7 +105,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'exterior',
       },
       {
-        url: '/images/map/bts-hybe-hq/3.jpg',
+        url: '/images/map/bts-hybe-hq/3.webp',
         caption: {
           en: 'HYBE Yongsan Street & Surroundings',
           ko: '하이브 사옥 주변 거리',
@@ -115,7 +115,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'exterior',
       },
       {
-        url: '/images/map/bts-hybe-hq/4.jpg',
+        url: '/images/map/bts-hybe-hq/4.webp',
         caption: {
           en: 'Sinyongsan ARMY Fan Zone & Cafes',
           ko: '신용산역 인근 아미 팬 스팟',
@@ -125,7 +125,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-hybe-hq/5.jpg',
+        url: '/images/map/bts-hybe-hq/5.webp',
         caption: {
           en: 'HYBE Building Exterior Detail',
           ko: '하이브 사옥 외관',
@@ -189,7 +189,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-yoojung-sikdang/1.jpg',
+        url: '/images/map/bts-yoojung-sikdang/1.webp',
         caption: {
           en: 'Yoojung Sikdang Photo 1',
           ko: '유정식당 전경 및 매장 1',
@@ -199,7 +199,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'exterior',
       },
       {
-        url: '/images/map/bts-yoojung-sikdang/2.jpg',
+        url: '/images/map/bts-yoojung-sikdang/2.webp',
         caption: {
           en: 'Yoojung Sikdang Photo 2',
           ko: '유정식당 전경 및 매장 2',
@@ -209,7 +209,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'food',
       },
       {
-        url: '/images/map/bts-yoojung-sikdang/3.jpg',
+        url: '/images/map/bts-yoojung-sikdang/3.webp',
         caption: {
           en: 'Yoojung Sikdang Photo 3',
           ko: '유정식당 메뉴 & 내부 3',
@@ -219,7 +219,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'interior',
       },
       {
-        url: '/images/map/bts-yoojung-sikdang/4.jpg',
+        url: '/images/map/bts-yoojung-sikdang/4.webp',
         caption: {
           en: 'Yoojung Sikdang Photo 4',
           ko: '유정식당 메뉴 & 내부 4',
@@ -283,7 +283,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-geumdwaeji-sikdang/1.jpg',
+        url: '/images/map/bts-geumdwaeji-sikdang/1.webp',
         caption: {
           en: 'Geumdwaeji Sikdang Photo 1',
           ko: '금돼지식당 사진 1',
@@ -293,7 +293,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'exterior',
       },
       {
-        url: '/images/map/bts-geumdwaeji-sikdang/2.jpg',
+        url: '/images/map/bts-geumdwaeji-sikdang/2.webp',
         caption: {
           en: 'Geumdwaeji Sikdang Photo 2',
           ko: '금돼지식당 사진 2',
@@ -303,7 +303,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'food',
       },
       {
-        url: '/images/map/bts-geumdwaeji-sikdang/3.jpg',
+        url: '/images/map/bts-geumdwaeji-sikdang/3.webp',
         caption: {
           en: 'Geumdwaeji Sikdang Photo 3',
           ko: '금돼지식당 사진 3',
@@ -313,7 +313,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'food',
       },
       {
-        url: '/images/map/bts-geumdwaeji-sikdang/4.jpg',
+        url: '/images/map/bts-geumdwaeji-sikdang/4.webp',
         caption: {
           en: 'Geumdwaeji Sikdang Photo 4',
           ko: '금돼지식당 사진 4',
@@ -323,7 +323,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'interior',
       },
       {
-        url: '/images/map/bts-geumdwaeji-sikdang/5.jpg',
+        url: '/images/map/bts-geumdwaeji-sikdang/5.webp',
         caption: {
           en: 'Geumdwaeji Sikdang Photo 5',
           ko: '금돼지식당 사진 5',
@@ -387,7 +387,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-gamcheon-mural/1.jpg',
+        url: '/images/map/bts-gamcheon-mural/1.webp',
         caption: {
           en: 'Gamcheon Culture Village Pastel Houses',
           ko: '부산 감천문화마을 전경',
@@ -398,7 +398,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-gamcheon-mural/2.jpg',
+        url: '/images/map/bts-gamcheon-mural/2.webp',
         caption: {
           en: 'Gamcheon Hillside View Under Blue Sky',
           ko: '감천문화마을 언덕 뷰',
@@ -409,7 +409,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-gamcheon-mural/3.jpg',
+        url: '/images/map/bts-gamcheon-mural/3.webp',
         caption: {
           en: 'Gamcheon Culture Village Alleyway View',
           ko: '감천문화마을 골목 풍경',
@@ -474,7 +474,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-daegu-v-mural/1.jpg',
+        url: '/images/map/bts-daegu-v-mural/1.webp',
         caption: {
           en: 'Daegu BTS V Mural Street 1',
           ko: '대구 BTS 뷔 벽화거리 1',
@@ -484,7 +484,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-daegu-v-mural/2.jpg',
+        url: '/images/map/bts-daegu-v-mural/2.webp',
         caption: {
           en: 'Daegu BTS V Mural Street 2',
           ko: '대구 BTS 뷔 벽화거리 2',
@@ -504,7 +504,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-daegu-v-mural/4.jpg',
+        url: '/images/map/bts-daegu-v-mural/4.webp',
         caption: {
           en: 'Daegu BTS V Mural Street 4',
           ko: '대구 BTS 뷔 벽화거리 4',
@@ -514,7 +514,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-daegu-v-mural/5.jpg',
+        url: '/images/map/bts-daegu-v-mural/5.webp',
         caption: {
           en: 'Daegu BTS V Mural Street 5',
           ko: '대구 BTS 뷔 벽화거리 5',
@@ -588,7 +588,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-ilsan-lake-park/1.jpg',
+        url: '/images/map/bts-ilsan-lake-park/1.webp',
         caption: {
           en: 'Ilsan Lake Park Walking & Cycling Path',
           ko: '일산 호수공원 산책로',
@@ -599,7 +599,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-ilsan-lake-park/2.jpg',
+        url: '/images/map/bts-ilsan-lake-park/2.webp',
         caption: {
           en: 'Goyang Ilsan Lake Waterfront',
           ko: '일산 호수공원 수변 전경',
@@ -664,7 +664,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-gyeongbokgung/1.jpg',
+        url: '/images/map/bts-gyeongbokgung/1.webp',
         caption: {
           en: 'Geunjeongjeon Hall — BTS "IDOL" Stage Backdrop',
           ko: '경복궁 근정전 — BTS "IDOL" 무대 배경',
@@ -675,7 +675,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'filming',
       },
       {
-        url: '/images/map/bts-gyeongbokgung/2.jpg',
+        url: '/images/map/bts-gyeongbokgung/2.webp',
         caption: {
           en: 'Front View of Geunjeongjeon Hall',
           ko: '경복궁 근정전 정면 전경',
@@ -686,7 +686,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'filming',
       },
       {
-        url: '/images/map/bts-gyeongbokgung/3.jpg',
+        url: '/images/map/bts-gyeongbokgung/3.webp',
         caption: {
           en: 'Gyeonghoeru Pavilion at Gyeongbokgung',
           ko: '경복궁 경회루 전경',
@@ -697,7 +697,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-gyeongbokgung/4.jpg',
+        url: '/images/map/bts-gyeongbokgung/4.webp',
         caption: {
           en: 'Gyeonghoeru Pavilion in Winter',
           ko: '경회루 겨울 설경',
@@ -762,7 +762,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-jumunjin-bus-stop/1.jpg',
+        url: '/images/map/bts-jumunjin-bus-stop/1.webp',
         caption: {
           en: 'BTS "You Never Walk Alone" Bus Stop at Jumunjin',
           ko: '주문진 향호해변 BTS 버스정류장',
@@ -773,7 +773,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'filming',
       },
       {
-        url: '/images/map/bts-jumunjin-bus-stop/2.jpg',
+        url: '/images/map/bts-jumunjin-bus-stop/2.webp',
         caption: {
           en: 'Hyangho Beach Coastline, Jumunjin',
           ko: '강릉 주문진 향호해변 풍경',
@@ -839,7 +839,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-yangju-iryeong-station/1.png',
+        url: '/images/map/bts-yangju-iryeong-station/1.webp',
         caption: {
           en: 'Iryeong Station Exterior Building',
           ko: '양주 일영역 역사 외관',
@@ -850,7 +850,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'filming',
       },
       {
-        url: '/images/map/bts-yangju-iryeong-station/2.png',
+        url: '/images/map/bts-yangju-iryeong-station/2.webp',
         caption: {
           en: 'Iryeong Station Platform',
           ko: '일영역 승강장',
@@ -861,7 +861,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'filming',
       },
       {
-        url: '/images/map/bts-yangju-iryeong-station/3.jpg',
+        url: '/images/map/bts-yangju-iryeong-station/3.webp',
         caption: {
           en: 'Vintage Gyooe Line Iryeong Station Sign',
           ko: '교외선 일영역 옛 표지판',
@@ -927,7 +927,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-buyeo-love-tree/1.jpg',
+        url: '/images/map/bts-buyeo-love-tree/1.webp',
         caption: {
           en: 'Garimseong Fortress Zelkova (Love Tree)',
           ko: '부여 가림성 느티나무 (사랑나무)',
@@ -992,7 +992,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-busan-dadaepo/1.jpg',
+        url: '/images/map/bts-busan-dadaepo/1.webp',
         caption: {
           en: 'Dadaepo Beach Sunset & Wide Sands, Busan',
           ko: '부산 다대포 해수욕장 전경',
@@ -1057,7 +1057,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-busan-oryukdo/1.jpg',
+        url: '/images/map/bts-busan-oryukdo/1.webp',
         caption: {
           en: 'Oryukdo Skywalk Overlooking the Ocean',
           ko: '오륙도 스카이워크 전경',
@@ -1068,7 +1068,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-busan-oryukdo/2.jpg',
+        url: '/images/map/bts-busan-oryukdo/2.webp',
         caption: {
           en: 'Oryukdo Islets Coastal View, Busan',
           ko: '부산 오륙도 해안 절경',
@@ -1133,7 +1133,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-daegu-dalseong-park/1.jpg',
+        url: '/images/map/bts-daegu-dalseong-park/1.webp',
         caption: {
           en: 'Dalseong Fortress Wall Trail, Daegu',
           ko: '대구 달성토성 성곽 산책로',
@@ -1144,7 +1144,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'landmark',
       },
       {
-        url: '/images/map/bts-daegu-dalseong-park/2.jpg',
+        url: '/images/map/bts-daegu-dalseong-park/2.webp',
         caption: {
           en: 'Historic Gate at Dalseong Park',
           ko: '대구 달성공원 정문 전경',
@@ -1209,7 +1209,7 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bts-gwangju-chungjangro/1.jpg',
+        url: '/images/map/bts-gwangju-chungjangro/1.webp',
         caption: {
           en: 'Chungjang-ro Downtown District, Gwangju',
           ko: '광주 충장로 거리 전경',
@@ -1278,22 +1278,22 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bp-yg-hq/1.jpg',
+        url: '/images/map/bp-yg-hq/1.webp',
         caption: { en: 'YG Entertainment HQ View 1', ko: 'YG 엔터테인먼트 신사옥 1', es: 'Sede de YG Entertainment 1', pt: 'Sede da YG Entertainment 1' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/bp-yg-hq/2.jpg',
+        url: '/images/map/bp-yg-hq/2.webp',
         caption: { en: 'YG Entertainment HQ View 2', ko: 'YG 엔터테인먼트 신사옥 2', es: 'Sede de YG Entertainment 2', pt: 'Sede da YG Entertainment 2' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/bp-yg-hq/3.jpg',
+        url: '/images/map/bp-yg-hq/3.webp',
         caption: { en: 'YG Entertainment HQ View 3', ko: 'YG 엔터테인먼트 신사옥 3', es: 'Sede de YG Entertainment 3', pt: 'Sede da YG Entertainment 3' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/bp-yg-hq/4.jpg',
+        url: '/images/map/bp-yg-hq/4.webp',
         caption: { en: 'YG Entertainment HQ View 4', ko: 'YG 엔터테인먼트 신사옥 4', es: 'Sede de YG Entertainment 4', pt: 'Sede da YG Entertainment 4' },
         kind: 'exterior',
       },
@@ -1352,17 +1352,17 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bp-the-samee/1.jpg',
+        url: '/images/map/bp-the-samee/1.webp',
         caption: { en: 'the SameE Cafe & MD Shop 1', ko: '더세임 카페 & MD샵 1', es: 'Café the SameE 1', pt: 'Café the SameE 1' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/bp-the-samee/2.jpg',
+        url: '/images/map/bp-the-samee/2.webp',
         caption: { en: 'the SameE Cafe & MD Shop 2', ko: '더세임 카페 & MD샵 2', es: 'Café the SameE 2', pt: 'Café the SameE 2' },
         kind: 'interior',
       },
       {
-        url: '/images/map/bp-the-samee/3.jpg',
+        url: '/images/map/bp-the-samee/3.webp',
         caption: { en: 'the SameE Cafe & MD Shop 3', ko: '더세임 카페 & MD샵 3', es: 'Café the SameE 3', pt: 'Café the SameE 3' },
         kind: 'interior',
       },
@@ -1426,22 +1426,22 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bp-haus-dosan/1.jpg',
+        url: '/images/map/bp-haus-dosan/1.webp',
         caption: { en: 'HAUS DOSAN & Nudake 1', ko: '하우스 도산 & 누데이크 1', es: 'HAUS DOSAN 1', pt: 'HAUS DOSAN 1' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/bp-haus-dosan/2.jpg',
+        url: '/images/map/bp-haus-dosan/2.webp',
         caption: { en: 'HAUS DOSAN & Nudake 2', ko: '하우스 도산 & 누데이크 2', es: 'HAUS DOSAN 2', pt: 'HAUS DOSAN 2' },
         kind: 'interior',
       },
       {
-        url: '/images/map/bp-haus-dosan/3.jpg',
+        url: '/images/map/bp-haus-dosan/3.webp',
         caption: { en: 'HAUS DOSAN & Nudake 3', ko: '하우스 도산 & 누데이크 3', es: 'HAUS DOSAN 3', pt: 'HAUS DOSAN 3' },
         kind: 'interior',
       },
       {
-        url: '/images/map/bp-haus-dosan/4.jpg',
+        url: '/images/map/bp-haus-dosan/4.webp',
         caption: { en: 'HAUS DOSAN & Nudake 4', ko: '하우스 도산 & 누데이크 4', es: 'HAUS DOSAN 4', pt: 'HAUS DOSAN 4' },
         kind: 'food',
       },
@@ -1451,12 +1451,12 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'food',
       },
       {
-        url: '/images/map/bp-haus-dosan/6.jpg',
+        url: '/images/map/bp-haus-dosan/6.webp',
         caption: { en: 'HAUS DOSAN & Nudake 6', ko: '하우스 도산 & 누데이크 6', es: 'HAUS DOSAN 6', pt: 'HAUS DOSAN 6' },
         kind: 'interior',
       },
       {
-        url: '/images/map/bp-haus-dosan/7.avif',
+        url: '/images/map/bp-haus-dosan/7.webp',
         caption: { en: 'HAUS DOSAN & Nudake 7', ko: '하우스 도산 & 누데이크 7', es: 'HAUS DOSAN 7', pt: 'HAUS DOSAN 7' },
         kind: 'interior',
       },
@@ -1520,12 +1520,12 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'exterior',
       },
       {
-        url: '/images/map/bp-downtowner-cheongdam/2.jpg',
+        url: '/images/map/bp-downtowner-cheongdam/2.webp',
         caption: { en: 'Downtowner Cheongdam 2', ko: '다운타우너 청담 2', es: 'Downtowner Cheongdam 2', pt: 'Downtowner Cheongdam 2' },
         kind: 'food',
       },
       {
-        url: '/images/map/bp-downtowner-cheongdam/3.jpg',
+        url: '/images/map/bp-downtowner-cheongdam/3.webp',
         caption: { en: 'Downtowner Cheongdam 3', ko: '다운타우너 청담 3', es: 'Downtowner Cheongdam 3', pt: 'Downtowner Cheongdam 3' },
         kind: 'food',
       },
@@ -1589,32 +1589,32 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bp-sanbon-jisoo/1.jpg',
+        url: '/images/map/bp-sanbon-jisoo/1.webp',
         caption: { en: 'Sanbon Central Park & Rodeo Street 1', ko: '산본 로데오거리 & 중앙공원 1', es: 'Sanbon Parque Central 1', pt: 'Parque Central de Sanbon 1' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-sanbon-jisoo/2.jpg',
+        url: '/images/map/bp-sanbon-jisoo/2.webp',
         caption: { en: 'Sanbon Central Park & Rodeo Street 2', ko: '산본 로데오거리 & 중앙공원 2', es: 'Sanbon Parque Central 2', pt: 'Parque Central de Sanbon 2' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-sanbon-jisoo/3.jpg',
+        url: '/images/map/bp-sanbon-jisoo/3.webp',
         caption: { en: 'Sanbon Central Park & Rodeo Street 3', ko: '산본 로데오거리 & 중앙공원 3', es: 'Sanbon Parque Central 3', pt: 'Parque Central de Sanbon 3' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-sanbon-jisoo/4.jpg',
+        url: '/images/map/bp-sanbon-jisoo/4.webp',
         caption: { en: 'Sanbon Central Park & Rodeo Street 4', ko: '산본 로데오거리 & 중앙공원 4', es: 'Sanbon Parque Central 4', pt: 'Parque Central de Sanbon 4' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-sanbon-jisoo/5.jpg',
+        url: '/images/map/bp-sanbon-jisoo/5.webp',
         caption: { en: 'Sanbon Central Park & Rodeo Street 5', ko: '산본 로데오거리 & 중앙공원 5', es: 'Sanbon Parque Central 5', pt: 'Parque Central de Sanbon 5' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-sanbon-jisoo/6.jpg',
+        url: '/images/map/bp-sanbon-jisoo/6.webp',
         caption: { en: 'Sanbon Central Park & Rodeo Street 6', ko: '산본 로데오거리 & 중앙공원 6', es: 'Sanbon Parque Central 6', pt: 'Parque Central de Sanbon 6' },
         kind: 'landmark',
       },
@@ -1673,27 +1673,27 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bp-cheongdam-jennie/1.jpg',
+        url: '/images/map/bp-cheongdam-jennie/1.webp',
         caption: { en: 'Cheongdam-dong Neighborhood 1', ko: '청담동 일대 전경 1', es: 'Barrio Cheongdam-dong 1', pt: 'Bairro Cheongdam-dong 1' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-cheongdam-jennie/2.jpg',
+        url: '/images/map/bp-cheongdam-jennie/2.webp',
         caption: { en: 'Cheongdam-dong Neighborhood 2', ko: '청담동 일대 전경 2', es: 'Barrio Cheongdam-dong 2', pt: 'Bairro Cheongdam-dong 2' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-cheongdam-jennie/3.jpg',
+        url: '/images/map/bp-cheongdam-jennie/3.webp',
         caption: { en: 'Cheongdam-dong Neighborhood 3', ko: '청담동 일대 전경 3', es: 'Barrio Cheongdam-dong 3', pt: 'Bairro Cheongdam-dong 3' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-cheongdam-jennie/4.jpg',
+        url: '/images/map/bp-cheongdam-jennie/4.webp',
         caption: { en: 'Cheongdam-dong Neighborhood 4', ko: '청담동 일대 전경 4', es: 'Barrio Cheongdam-dong 4', pt: 'Bairro Cheongdam-dong 4' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/bp-cheongdam-jennie/5.jpg',
+        url: '/images/map/bp-cheongdam-jennie/5.webp',
         caption: { en: 'Cheongdam-dong Neighborhood 5', ko: '청담동 일대 전경 5', es: 'Barrio Cheongdam-dong 5', pt: 'Bairro Cheongdam-dong 5' },
         kind: 'landmark',
       },
@@ -1752,27 +1752,27 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bp-hongdae-house/1.avif',
+        url: '/images/map/bp-hongdae-house/1.webp',
         caption: { en: 'BLACKPINK House Area (Hongdae) 1', ko: '블핑하우스 홍대 일대 1', es: 'Zona BLACKPINK House Hongdae 1', pt: 'Área BLACKPINK House Hongdae 1' },
         kind: 'filming',
       },
       {
-        url: '/images/map/bp-hongdae-house/2.jpg',
+        url: '/images/map/bp-hongdae-house/2.webp',
         caption: { en: 'BLACKPINK House Area (Hongdae) 2', ko: '블핑하우스 홍대 일대 2', es: 'Zona BLACKPINK House Hongdae 2', pt: 'Área BLACKPINK House Hongdae 2' },
         kind: 'filming',
       },
       {
-        url: '/images/map/bp-hongdae-house/3.jpg',
+        url: '/images/map/bp-hongdae-house/3.webp',
         caption: { en: 'BLACKPINK House Area (Hongdae) 3', ko: '블핑하우스 홍대 일대 3', es: 'Zona BLACKPINK House Hongdae 3', pt: 'Área BLACKPINK House Hongdae 3' },
         kind: 'filming',
       },
       {
-        url: '/images/map/bp-hongdae-house/4.jpg',
+        url: '/images/map/bp-hongdae-house/4.webp',
         caption: { en: 'BLACKPINK House Area (Hongdae) 4', ko: '블핑하우스 홍대 일대 4', es: 'Zona BLACKPINK House Hongdae 4', pt: 'Área BLACKPINK House Hongdae 4' },
         kind: 'filming',
       },
       {
-        url: '/images/map/bp-hongdae-house/5.jpg',
+        url: '/images/map/bp-hongdae-house/5.webp',
         caption: { en: 'BLACKPINK House Area (Hongdae) 5', ko: '블핑하우스 홍대 일대 5', es: 'Zona BLACKPINK House Hongdae 5', pt: 'Área BLACKPINK House Hongdae 5' },
         kind: 'filming',
       },
@@ -1831,17 +1831,17 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/bp-bukchon-hanok/1.jpg',
+        url: '/images/map/bp-bukchon-hanok/1.webp',
         caption: { en: 'Bukchon Hanok Village 1', ko: '북촌 한옥마을 전경 1', es: 'Aldea Hanok de Bukchon 1', pt: 'Vila Hanok de Bukchon 1' },
         kind: 'filming',
       },
       {
-        url: '/images/map/bp-bukchon-hanok/2.jpg',
+        url: '/images/map/bp-bukchon-hanok/2.webp',
         caption: { en: 'Bukchon Hanok Village 2', ko: '북촌 한옥마을 전경 2', es: 'Aldea Hanok de Bukchon 2', pt: 'Vila Hanok de Bukchon 2' },
         kind: 'filming',
       },
       {
-        url: '/images/map/bp-bukchon-hanok/3.jpg',
+        url: '/images/map/bp-bukchon-hanok/3.webp',
         caption: { en: 'Bukchon Hanok Village 3', ko: '북촌 한옥마을 전경 3', es: 'Aldea Hanok de Bukchon 3', pt: 'Vila Hanok de Bukchon 3' },
         kind: 'filming',
       },
@@ -1851,7 +1851,7 @@ export const MAP_SPOTS: MapSpot[] = [
         kind: 'filming',
       },
       {
-        url: '/images/map/bp-bukchon-hanok/5.jpg',
+        url: '/images/map/bp-bukchon-hanok/5.webp',
         caption: { en: 'Bukchon Hanok Village 5', ko: '북촌 한옥마을 전경 5', es: 'Aldea Hanok de Bukchon 5', pt: 'Vila Hanok de Bukchon 5' },
         kind: 'filming',
       },
@@ -1914,17 +1914,17 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-jyp-hq/1.jpg',
+        url: '/images/map/skz-jyp-hq/1.webp',
         caption: { en: 'JYP Entertainment Center 1', ko: 'JYP 엔터테인먼트 신사옥 1', es: 'Sede de JYP Entertainment 1', pt: 'Sede da JYP Entertainment 1' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/skz-jyp-hq/2.jpg',
+        url: '/images/map/skz-jyp-hq/2.webp',
         caption: { en: 'JYP Entertainment Center 2', ko: 'JYP 엔터테인먼트 신사옥 2', es: 'Sede de JYP Entertainment 2', pt: 'Sede da JYP Entertainment 2' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/skz-jyp-hq/3.jpg',
+        url: '/images/map/skz-jyp-hq/3.webp',
         caption: { en: 'JYP Entertainment Center 3', ko: 'JYP 엔터테인먼트 신사옥 3', es: 'Sede de JYP Entertainment 3', pt: 'Sede da JYP Entertainment 3' },
         kind: 'exterior',
       },
@@ -1983,27 +1983,27 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-gwangjang-market/1.jpg',
+        url: '/images/map/skz-gwangjang-market/1.webp',
         caption: { en: 'Gwangjang Market 1', ko: '광장시장 풍경 & 먹거리 1', es: 'Mercado de Gwangjang 1', pt: 'Mercado de Gwangjang 1' },
         kind: 'food',
       },
       {
-        url: '/images/map/skz-gwangjang-market/2.avif',
+        url: '/images/map/skz-gwangjang-market/2.webp',
         caption: { en: 'Gwangjang Market 2', ko: '광장시장 풍경 & 먹거리 2', es: 'Mercado de Gwangjang 2', pt: 'Mercado de Gwangjang 2' },
         kind: 'food',
       },
       {
-        url: '/images/map/skz-gwangjang-market/3.jpg',
+        url: '/images/map/skz-gwangjang-market/3.webp',
         caption: { en: 'Gwangjang Market 3', ko: '광장시장 풍경 & 먹거리 3', es: 'Mercado de Gwangjang 3', pt: 'Mercado de Gwangjang 3' },
         kind: 'food',
       },
       {
-        url: '/images/map/skz-gwangjang-market/4.jpg',
+        url: '/images/map/skz-gwangjang-market/4.webp',
         caption: { en: 'Gwangjang Market 4', ko: '광장시장 풍경 & 먹거리 4', es: 'Mercado de Gwangjang 4', pt: 'Mercado de Gwangjang 4' },
         kind: 'food',
       },
       {
-        url: '/images/map/skz-gwangjang-market/5.jpg',
+        url: '/images/map/skz-gwangjang-market/5.webp',
         caption: { en: 'Gwangjang Market 5', ko: '광장시장 풍경 & 먹거리 5', es: 'Mercado de Gwangjang 5', pt: 'Mercado de Gwangjang 5' },
         kind: 'food',
       },
@@ -2062,22 +2062,22 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-myeongdong-kalguksu/1.jpg',
+        url: '/images/map/skz-myeongdong-kalguksu/1.webp',
         caption: { en: 'Myeongdong Kyoja 1', ko: '명동교자 본점 1', es: 'Myeongdong Kyoja 1', pt: 'Myeongdong Kyoja 1' },
         kind: 'exterior',
       },
       {
-        url: '/images/map/skz-myeongdong-kalguksu/2.jpg',
+        url: '/images/map/skz-myeongdong-kalguksu/2.webp',
         caption: { en: 'Myeongdong Kyoja 2', ko: '명동교자 본점 2', es: 'Myeongdong Kyoja 2', pt: 'Myeongdong Kyoja 2' },
         kind: 'food',
       },
       {
-        url: '/images/map/skz-myeongdong-kalguksu/3.jpg',
+        url: '/images/map/skz-myeongdong-kalguksu/3.webp',
         caption: { en: 'Myeongdong Kyoja 3', ko: '명동교자 본점 3', es: 'Myeongdong Kyoja 3', pt: 'Myeongdong Kyoja 3' },
         kind: 'food',
       },
       {
-        url: '/images/map/skz-myeongdong-kalguksu/4.jpg',
+        url: '/images/map/skz-myeongdong-kalguksu/4.webp',
         caption: { en: 'Myeongdong Kyoja 4', ko: '명동교자 본점 4', es: 'Myeongdong Kyoja 4', pt: 'Myeongdong Kyoja 4' },
         kind: 'food',
       },
@@ -2136,27 +2136,27 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-gimpo-laveniche/1.jpg',
+        url: '/images/map/skz-gimpo-laveniche/1.webp',
         caption: { en: 'Gimpo Laveniche Canal 1', ko: '김포 라베니체 수변공원 1', es: 'Laveniche Gimpo 1', pt: 'Laveniche Gimpo 1' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gimpo-laveniche/2.jpg',
+        url: '/images/map/skz-gimpo-laveniche/2.webp',
         caption: { en: 'Gimpo Laveniche Canal 2', ko: '김포 라베니체 수변공원 2', es: 'Laveniche Gimpo 2', pt: 'Laveniche Gimpo 2' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gimpo-laveniche/3.jpg',
+        url: '/images/map/skz-gimpo-laveniche/3.webp',
         caption: { en: 'Gimpo Laveniche Canal 3', ko: '김포 라베니체 수변공원 3', es: 'Laveniche Gimpo 3', pt: 'Laveniche Gimpo 3' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gimpo-laveniche/4.jpg',
+        url: '/images/map/skz-gimpo-laveniche/4.webp',
         caption: { en: 'Gimpo Laveniche Canal 4', ko: '김포 라베니체 수변공원 4', es: 'Laveniche Gimpo 4', pt: 'Laveniche Gimpo 4' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gimpo-laveniche/5.jpg',
+        url: '/images/map/skz-gimpo-laveniche/5.webp',
         caption: { en: 'Gimpo Laveniche Canal 5', ko: '김포 라베니체 수변공원 5', es: 'Laveniche Gimpo 5', pt: 'Laveniche Gimpo 5' },
         kind: 'landmark',
       },
@@ -2215,27 +2215,27 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-gwangalli-in/1.jpg',
+        url: '/images/map/skz-gwangalli-in/1.webp',
         caption: { en: 'Gwangalli Beach, Busan 1', ko: '부산 광안리 해수욕장 1', es: 'Playa Gwangalli 1', pt: 'Praia Gwangalli 1' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gwangalli-in/2.jpg',
+        url: '/images/map/skz-gwangalli-in/2.webp',
         caption: { en: 'Gwangalli Beach, Busan 2', ko: '부산 광안리 해수욕장 2', es: 'Playa Gwangalli 2', pt: 'Praia Gwangalli 2' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gwangalli-in/3.jpeg',
+        url: '/images/map/skz-gwangalli-in/3.webp',
         caption: { en: 'Gwangalli Beach, Busan 3', ko: '부산 광안리 해수욕장 3', es: 'Playa Gwangalli 3', pt: 'Praia Gwangalli 3' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gwangalli-in/4.jpg',
+        url: '/images/map/skz-gwangalli-in/4.webp',
         caption: { en: 'Gwangalli Beach, Busan 4', ko: '부산 광안리 해수욕장 4', es: 'Playa Gwangalli 4', pt: 'Praia Gwangalli 4' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-gwangalli-in/5.jpg',
+        url: '/images/map/skz-gwangalli-in/5.webp',
         caption: { en: 'Gwangalli Beach, Busan 5', ko: '부산 광안리 해수욕장 5', es: 'Playa Gwangalli 5', pt: 'Praia Gwangalli 5' },
         kind: 'landmark',
       },
@@ -2294,22 +2294,22 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-sopa-school/1.jpg',
+        url: '/images/map/skz-sopa-school/1.webp',
         caption: { en: 'School of Performing Arts Seoul (SOPA) 1', ko: '서울공연예술고등학교 전경 1', es: 'SOPA Seúl 1', pt: 'SOPA Seul 1' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-sopa-school/2.jpg',
+        url: '/images/map/skz-sopa-school/2.webp',
         caption: { en: 'School of Performing Arts Seoul (SOPA) 2', ko: '서울공연예술고등학교 전경 2', es: 'SOPA Seúl 2', pt: 'SOPA Seul 2' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-sopa-school/3.png',
+        url: '/images/map/skz-sopa-school/3.webp',
         caption: { en: 'School of Performing Arts Seoul (SOPA) 3', ko: '서울공연예술고등학교 전경 3', es: 'SOPA Seúl 3', pt: 'SOPA Seul 3' },
         kind: 'landmark',
       },
       {
-        url: '/images/map/skz-sopa-school/4.jpg',
+        url: '/images/map/skz-sopa-school/4.webp',
         caption: { en: 'School of Performing Arts Seoul (SOPA) 4', ko: '서울공연예술고등학교 전경 4', es: 'SOPA Seúl 4', pt: 'SOPA Seul 4' },
         kind: 'landmark',
       },
@@ -2368,22 +2368,22 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-olympic-park-tree/1.jpg',
+        url: '/images/map/skz-olympic-park-tree/1.webp',
         caption: { en: 'Olympic Park Lone Tree 1', ko: '올림픽공원 나홀로나무 1', es: 'Parque Olímpico 1', pt: 'Parque Olímpico 1' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-olympic-park-tree/2.jpg',
+        url: '/images/map/skz-olympic-park-tree/2.webp',
         caption: { en: 'Olympic Park Lone Tree 2', ko: '올림픽공원 나홀로나무 2', es: 'Parque Olímpico 2', pt: 'Parque Olímpico 2' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-olympic-park-tree/3.jpg',
+        url: '/images/map/skz-olympic-park-tree/3.webp',
         caption: { en: 'Olympic Park Lone Tree 3', ko: '올림픽공원 나홀로나무 3', es: 'Parque Olímpico 3', pt: 'Parque Olímpico 3' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-olympic-park-tree/4.jpg',
+        url: '/images/map/skz-olympic-park-tree/4.webp',
         caption: { en: 'Olympic Park Lone Tree 4', ko: '올림픽공원 나홀로나무 4', es: 'Parque Olímpico 4', pt: 'Parque Olímpico 4' },
         kind: 'filming',
       },
@@ -2442,32 +2442,32 @@ export const MAP_SPOTS: MapSpot[] = [
     },
     photos: [
       {
-        url: '/images/map/skz-nodeul-island/1.jpg',
+        url: '/images/map/skz-nodeul-island/1.webp',
         caption: { en: 'Nodeul Island, Han River 1', ko: '노들섬 전경 1', es: 'Isla Nodeul 1', pt: 'Ilha Nodeul 1' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-nodeul-island/2.jpg',
+        url: '/images/map/skz-nodeul-island/2.webp',
         caption: { en: 'Nodeul Island, Han River 2', ko: '노들섬 전경 2', es: 'Isla Nodeul 2', pt: 'Ilha Nodeul 2' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-nodeul-island/3.jpg',
+        url: '/images/map/skz-nodeul-island/3.webp',
         caption: { en: 'Nodeul Island, Han River 3', ko: '노들섬 전경 3', es: 'Isla Nodeul 3', pt: 'Ilha Nodeul 3' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-nodeul-island/4.jpg',
+        url: '/images/map/skz-nodeul-island/4.webp',
         caption: { en: 'Nodeul Island, Han River 4', ko: '노들섬 전경 4', es: 'Isla Nodeul 4', pt: 'Ilha Nodeul 4' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-nodeul-island/5.jpg',
+        url: '/images/map/skz-nodeul-island/5.webp',
         caption: { en: 'Nodeul Island, Han River 5', ko: '노들섬 전경 5', es: 'Isla Nodeul 5', pt: 'Ilha Nodeul 5' },
         kind: 'filming',
       },
       {
-        url: '/images/map/skz-nodeul-island/6.jpg',
+        url: '/images/map/skz-nodeul-island/6.webp',
         caption: { en: 'Nodeul Island, Han River 6', ko: '노들섬 전경 6', es: 'Isla Nodeul 6', pt: 'Ilha Nodeul 6' },
         kind: 'filming',
       },

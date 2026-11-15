@@ -88,6 +88,15 @@ export default function SpotGallery({ spot, lang, ui }: SpotGalleryProps) {
   }, [totalSlides]);
 
   useEffect(() => {
+    if (totalSlides <= 1) return;
+    const nextSlide = slides[(safeIndex + 1) % totalSlides];
+    if (nextSlide?.type === 'photo') {
+      const img = new window.Image();
+      img.src = nextSlide.url;
+    }
+  }, [safeIndex, totalSlides, spot.id]);
+
+  useEffect(() => {
     if (!lightboxOpen) return;
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setLightboxOpen(false);
@@ -145,7 +154,9 @@ export default function SpotGallery({ spot, lang, ui }: SpotGalleryProps) {
               <img
                 src={currentSlide.url}
                 alt={currentSlide.caption}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 onError={() =>
                   setBrokenUrls((prev) => ({ ...prev, [currentSlide.url]: true }))
                 }
