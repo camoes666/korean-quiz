@@ -37,6 +37,8 @@ import {
 import { downloadResultCard } from '@/lib/renderResultCard';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
+import MapPromoCard from './MapPromoCard';
+import { resolveMapGroup } from '@/lib/mapLink';
 
 interface ChemistryClientProps {
   initialGroupId?: string;
@@ -1222,6 +1224,15 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                 </Link>
               </div>
             </div>
+
+            {/* K-POP STAR PILGRIMAGE MAP CTA */}
+            <MapPromoCard
+              groupId={resolveMapGroup({ groupId: currentGroup.id })}
+              fromSurface="chemistry_result"
+              fromSlug={currentGroup.id}
+              lang={lang}
+              variant="card"
+            />
           </div>
         )}
       </div>

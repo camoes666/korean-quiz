@@ -3,7 +3,7 @@
 > **목적**: 핀터레스트 검색 알고리즘(Visual SEO)과 K-Pop 팬들의 **'보드 저장(Save) 본능'**을 동시에 저격하여, 핀 1개가 수개월 동안 꾸준히 방문자를 데려오도록 설계된 실전 문구집입니다.  
 > **최종 업데이트**: 2026-11-20  
 > **공식 도메인**: `https://kpulsequiz.com`
-> **자동 생성 핀 시트**: `npm run generate:pins` 실행 시 [`public/images/pinterest/PINS_INDEX.md`](../public/images/pinterest/PINS_INDEX.md) 및 [`pinterest-pins-manifest.csv`](../public/images/pinterest/pinterest-pins-manifest.csv) (125장, ES/EN/PT + UTM 포함)가 자동 생성됩니다.
+> **자동 생성 핀 시트**: `npm run generate:pins` 실행 시 [`public/images/pinterest/PINS_INDEX.md`](../public/images/pinterest/PINS_INDEX.md) 및 [`pinterest-pins-manifest.csv`](../public/images/pinterest/pinterest-pins-manifest.csv) (137장, ES/EN/PT + UTM 포함)가 자동 생성됩니다.
 
 ---
 
@@ -430,3 +430,17 @@ https://kpulsequiz.com/quiz/{슬러그}?lang={es|pt}&utm_source=pinterest&utm_me
   ```text
   Pick what resonates with your heart across 10 aesthetic scenario questions and unlock your K-Pop idol soulmate + downloadable result card! Tap the link to take the full test in English, Spanish, or Korean.
   ```
+
+---
+
+## 5. 📍 [Format E] 한국 K-Pop 성지순례 여행 지도 핀 (`maps/` 폴더 · 12장)
+
+> **왜 여행 버킷리스트 핀이 중요한가?**: 퀴즈 핀보다 **"나중에 한국 여행 가면 가봐야지"** 하고 보드에 **저장(Save)** 되는 비율이 훨씬 높아, 한 번 올리면 수개월~수년 동안 검색 유입을 데려오는 에버그린(Evergreen) 트래픽 엔진 역할을 합니다.
+
+- **생성 파일 위치**: `public/images/pinterest/maps/` (총 12장: `bts`, `blackpink`, `stray-kids`, `kpop-korea` × `es / en / pt`)
+- **그룹별 바로가기 URL**:
+  - BTS (14곳): `https://kpulsequiz.com/map?group=bts`
+  - BLACKPINK (8곳): `https://kpulsequiz.com/map?group=blackpink`
+  - Stray Kids (8곳): `https://kpulsequiz.com/map?group=stray-kids`
+  - 전체 30곳: `https://kpulsequiz.com/map`
+- **필수 UTM 규칙**: 스페인어/포르투갈어 핀은 반드시 `?lang=es` / `?lang=pt` + `utm_source=pinterest&utm_medium=social&utm_campaign={map_id}_map_{lang}&utm_content=travel_map`이 포함된 URL을 사용합니다 (`PINS_INDEX.md` 및 `pinterest-pins-manifest.csv`에 자동 반영됨).

@@ -184,3 +184,59 @@ export function trackLanguageChange(params: {
     to_lang: params.to,
   });
 }
+
+export function trackMapCtaClick(params: {
+  fromSurface: 'personality_result' | 'trivia_result' | 'chemistry_result' | 'navbar' | 'home_banner';
+  fromSlug?: string;
+  targetGroup: 'bts' | 'blackpink' | 'stray-kids' | 'all';
+  lang: Language;
+}): void {
+  trackEvent('map_cta_click', {
+    from_surface: params.fromSurface,
+    from_slug: params.fromSlug,
+    target_group: params.targetGroup,
+    language: params.lang,
+  });
+}
+
+export function trackMapSpotClick(params: {
+  spotId: string;
+  groupId: string;
+  category: string;
+  source: 'marker' | 'list' | 'directory';
+  lang: Language;
+}): void {
+  trackEvent('map_spot_click', {
+    spot_id: params.spotId,
+    group_id: params.groupId,
+    category: params.category,
+    source: params.source,
+    language: params.lang,
+  });
+}
+
+export function trackMapNavClick(params: {
+  spotId: string;
+  provider: 'naver' | 'kakao' | 'google';
+  lang: Language;
+}): void {
+  trackEvent('map_nav_click', {
+    spot_id: params.spotId,
+    provider: params.provider,
+    language: params.lang,
+  });
+}
+
+export function trackMapSaveSpot(params: {
+  spotId: string;
+  saved: boolean;
+  totalSaved: number;
+  lang: Language;
+}): void {
+  trackEvent('map_save_spot', {
+    spot_id: params.spotId,
+    saved: params.saved,
+    total_saved: params.totalSaved,
+    language: params.lang,
+  });
+}

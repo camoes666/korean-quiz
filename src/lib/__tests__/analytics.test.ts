@@ -6,6 +6,10 @@ import {
   trackChemistryCtaClick,
   trackGuideCtaClick,
   trackQuizRetake,
+  trackMapCtaClick,
+  trackMapSpotClick,
+  trackMapNavClick,
+  trackMapSaveSpot,
 } from '../analytics';
 
 describe('analytics tracking helpers', () => {
@@ -120,5 +124,63 @@ describe('analytics tracking helpers', () => {
     expect(() =>
       trackQuizRetake({ slug: 'a', quizType: 'trivia', lang: 'en' })
     ).not.toThrow();
+    expect(() =>
+      trackMapCtaClick({ fromSurface: 'navbar', targetGroup: 'all', lang: 'en' })
+    ).not.toThrow();
+  });
+
+  it('sends map_cta_click, map_spot_click, map_nav_click, and map_save_spot events', () => {
+    const gtag = vi.fn();
+    vi.stubGlobal('window', { gtag });
+
+    trackMapCtaClick({
+      fromSurface: 'personality_result',
+      fromSlug: 'which-blackpink-member-are-you',
+      targetGroup: 'blackpink',
+      lang: 'es',
+    });
+    trackMapSpotClick({
+      spotId: 'bp-bukchon-hanok',
+      groupId: 'blackpink',
+      category: 'hometown',
+      source: 'marker',
+      lang: 'en',
+    });
+    trackMapNavClick({
+      spotId: 'bts-jumunjin-bus-stop',
+      provider: 'naver',
+      lang: 'pt',
+    });
+    trackMapSaveSpot({
+      spotId: 'skz-nodeul-island',
+      saved: true,
+      totalSaved: 3,
+      lang: 'ko',
+    });
+
+    expect(gtag).toHaveBeenNthCalledWith(1, 'event', 'map_cta_click', {
+      from_surface: 'personality_result',
+      from_slug: 'which-blackpink-member-are-you',
+      target_group: 'blackpink',
+      language: 'es',
+    });
+    expect(gtag).toHaveBeenNthCalledWith(2, 'event', 'map_spot_click', {
+      spot_id: 'bp-bukchon-hanok',
+      group_id: 'blackpink',
+      category: 'hometown',
+      source: 'marker',
+      language: 'en',
+    });
+    expect(gtag).toHaveBeenNthCalledWith(3, 'event', 'map_nav_click', {
+      spot_id: 'bts-jumunjin-bus-stop',
+      provider: 'naver',
+      language: 'pt',
+    });
+    expect(gtag).toHaveBeenNthCalledWith(4, 'event', 'map_save_spot', {
+      spot_id: 'skz-nodeul-island',
+      saved: true,
+      total_saved: 3,
+      language: 'ko',
+    });
   });
 });

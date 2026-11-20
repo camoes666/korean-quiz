@@ -9,6 +9,7 @@ import { quizzes } from '@/data/quizzes';
 import { getLocalizedText } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
+import { trackMapCtaClick } from '@/lib/analytics';
 
 export default function Navbar() {
   const router = useRouter();
@@ -82,12 +83,28 @@ export default function Navbar() {
           {/* K-Pop Star Map Navigation Link */}
           <Link
             href="/map"
+            onClick={() =>
+              trackMapCtaClick({
+                fromSurface: 'navbar',
+                targetGroup: 'all',
+                lang,
+              })
+            }
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-pink-200 bg-pink-50/80 hover:bg-pink-100/80 text-slate-900 font-semibold text-xs transition-colors shrink-0"
             title={MAP_TRANSLATIONS[lang]?.title || 'K-Pop Star Map'}
           >
             <MapPin className="w-3.5 h-3.5 text-pink-600" />
-            <span>
+            <span className="lg:hidden">
               {MAP_TRANSLATIONS[lang]?.navLabel || 'K-Map'}
+            </span>
+            <span className="hidden lg:inline">
+              {lang === 'ko'
+                ? '성지 지도'
+                : lang === 'es'
+                ? 'Mapa Corea'
+                : lang === 'pt'
+                ? 'Mapa Coreia'
+                : 'Korea Map'}
             </span>
           </Link>
 

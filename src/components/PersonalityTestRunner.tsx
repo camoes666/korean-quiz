@@ -7,10 +7,12 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { Sparkles, ArrowRight, RotateCcw, Share2, Copy, Check, Trophy, Compass, Camera, Loader2 } from 'lucide-react';
 import QuizCard from './QuizCard';
+import MapPromoCard from './MapPromoCard';
 import { getQuizMascot } from '@/lib/mascot';
 import { downloadResultCard } from '@/lib/renderResultCard';
 import { getTopMatches } from '@/lib/personalityMatch';
 import { getQuizThemeGroup } from '@/lib/theme';
+import { resolveMapGroup } from '@/lib/mapLink';
 import {
   PERSONALITY_RUNNER_MS,
   PERSONALITY_TIMING,
@@ -718,6 +720,8 @@ export default function PersonalityTestRunner({
         ? 'le-sserafim'
         : 'bts';
 
+    const mapGroupId = resolveMapGroup({ tag: quiz.tag, slug: quiz.slug });
+
     const friendComparisonCard = friendMatch ? (
       <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
         <div className="flex items-center gap-2 shrink-0">
@@ -1324,6 +1328,17 @@ export default function PersonalityTestRunner({
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>
+              )}
+
+              {/* K-Pop Star Pilgrimage Map Promo Card */}
+              {quiz.category === 'K-Pop' && !recordPlan && (
+                <MapPromoCard
+                  groupId={mapGroupId}
+                  fromSurface="personality_result"
+                  fromSlug={quiz.slug}
+                  lang={lang}
+                  variant="card"
+                />
               )}
 
               {/* Compact Footer Action Strip */}

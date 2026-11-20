@@ -12,6 +12,7 @@ import LeaderboardCard from '@/components/LeaderboardCard';
 import { Sparkles, Trophy, ArrowRight, Tag, BookOpen, MapPin } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
+import { trackMapCtaClick } from '@/lib/analytics';
 
 const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
 
@@ -378,6 +379,13 @@ export default function HomePage() {
             <div>
               <Link
                 href="/map"
+                onClick={() =>
+                  trackMapCtaClick({
+                    fromSurface: 'home_banner',
+                    targetGroup: 'all',
+                    lang,
+                  })
+                }
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-950 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm transition-colors"
               >
                 <MapPin className="w-4 h-4 text-pink-400" />

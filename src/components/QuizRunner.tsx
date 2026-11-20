@@ -8,6 +8,7 @@ import { Quiz, Question, ScoreTier, QuestionLevel, getLocalizedText } from '@/ty
 import AdPlaceholder from './AdPlaceholder';
 import AffiliateBox from './AffiliateBox';
 import QuizCard from './QuizCard';
+import MapPromoCard from './MapPromoCard';
 import ShareButtons from './ShareButtons';
 import ChallengeBanner from './ChallengeBanner';
 import ChallengeResult from './ChallengeResult';
@@ -15,6 +16,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { decodeChallenge, resolveChallengeQuestions } from '@/lib/challenge';
 import { calcQuestionPoints, calcTotalPoints, QUESTION_TIME_SEC, MAX_TOTAL_POINTS } from '@/lib/scoring';
+import { resolveMapGroup } from '@/lib/mapLink';
 import {
   trackQuizStart,
   trackQuizComplete,
@@ -1211,6 +1213,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       : quiz.tag === 'BTS'
       ? 'bts'
       : 'all';
+  const mapTargetGroup = resolveMapGroup({ tag: quiz.tag, slug: quiz.slug });
   const gridRelatedQuizzes = relatedQuizzes.length > 1 ? relatedQuizzes.slice(1, 5) : relatedQuizzes;
 
   return (
@@ -1439,6 +1442,17 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             </span>
             <ArrowRight className="w-3.5 h-3.5 text-slate-500" />
           </Link>
+        </div>
+
+        {/* K-Pop Star Pilgrimage Map Link */}
+        <div className="mb-3">
+          <MapPromoCard
+            groupId={mapTargetGroup}
+            fromSurface="trivia_result"
+            fromSlug={quiz.slug}
+            lang={lang}
+            variant="compact"
+          />
         </div>
 
         {/* Full Guide & Lore Review Link */}

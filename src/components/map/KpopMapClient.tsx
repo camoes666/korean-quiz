@@ -26,6 +26,11 @@ import { MAP_GROUPS, MAP_SPOTS, filterMapSpots } from '@/data/mapSpots';
 import { MAP_TRANSLATIONS } from '@/lib/mapTranslations';
 import { GroupId, MapSpot, SpotCategory, getLocalizedMapText } from '@/types/map';
 import SpotGallery from './SpotGallery';
+import {
+  trackMapSpotClick,
+  trackMapNavClick,
+  trackMapSaveSpot,
+} from '@/lib/analytics';
 
 const LeafletMap = dynamic(() => import('./LeafletMap'), {
   ssr: false,
@@ -70,6 +75,11 @@ export default function KpopMapClient() {
         const groupParam = params.get('group') as GroupId | null;
         if (groupParam && groupParam in MAP_GROUPS) {
           setSelectedGroup(groupParam);
+          const firstGroupSpot = MAP_SPOTS.find((spot) => spot.groupIds.includes(groupParam));
+          if (firstGroupSpot) {
+            setSelectedSpotId(firstGroupSpot.id);
+          }
+          setFitTrigger((c) => c + 1);
         }
 
         const spotsParam = params.get('spots');
@@ -96,19 +106,31 @@ export default function KpopMapClient() {
     return () => window.clearTimeout(timer);
   }, []);
 
-  const toggleSaveSpot = useCallback((spotId: string) => {
-    setSavedIds((prev) => {
-      const next = prev.includes(spotId)
-        ? prev.filter((id) => id !== spotId)
-        : [...prev, spotId];
-      try {
-        localStorage.setItem(SAVED_STORAGE_KEY, JSON.stringify(next));
-      } catch {
-        // Ignore storage quota errors
-      }
-      return next;
-    });
-  }, []);
+  const toggleSaveSpot = useCallback(
+    (spotId: string) => {
+      const willSave = !savedIds.includes(spotId);
+      const nextCount = willSave ? savedIds.length + 1 : Math.max(0, savedIds.length - 1);
+      trackMapSaveSpot({
+        spotId,
+        saved: willSave,
+        totalSaved: nextCount,
+        lang,
+      });
+
+      setSavedIds((prev) => {
+        const next = prev.includes(spotId)
+          ? prev.filter((id) => id !== spotId)
+          : [...prev, spotId];
+        try {
+          localStorage.setItem(SAVED_STORAGE_KEY, JSON.stringify(next));
+        } catch {
+          // Ignore storage quota errors
+        }
+        return next;
+      });
+    },
+    [savedIds, lang]
+  );
 
   const filteredSpots = useMemo(() => {
     return filterMapSpots({
@@ -121,8 +143,12 @@ export default function KpopMapClient() {
   }, [selectedGroup, selectedCategory, searchQuery, savedIds, onlySaved]);
 
   const selectedSpot = useMemo(() => {
-    if (!selectedSpotId) return null;
-    return filteredSpots.find((s) => s.id === selectedSpotId) || null;
+    if (filteredSpots.length === 0) return null;
+    if (selectedSpotId) {
+      const exact = filteredSpots.find((s) => s.id === selectedSpotId);
+      if (exact) return exact;
+    }
+    return filteredSpots[0];
   }, [filteredSpots, selectedSpotId]);
 
   const detailCardRef = useRef<HTMLDivElement>(null);
@@ -136,11 +162,18 @@ export default function KpopMapClient() {
   }, []);
 
   const handleSelectSpot = useCallback(
-    (spot: MapSpot) => {
+    (spot: MapSpot, source: 'marker' | 'list' | 'directory' = 'marker') => {
       setSelectedSpotId(spot.id);
+      trackMapSpotClick({
+        spotId: spot.id,
+        groupId: spot.groupIds[0] || 'all',
+        category: spot.category,
+        source,
+        lang,
+      });
       scrollToDetailOnMobile();
     },
-    [scrollToDetailOnMobile]
+    [scrollToDetailOnMobile, lang]
   );
 
   // Warm browser cache for the representative photo of visible spots after initial render
@@ -384,7 +417,7 @@ export default function KpopMapClient() {
             </div>
           ) : (
             filteredSpots.map((spot) => {
-              const isSelected = spot.id === selectedSpotId;
+              const isSelected = spot.id === selectedSpot?.id;
               const isSaved = savedIds.includes(spot.id);
               const primaryGroup = MAP_GROUPS[spot.groupIds[0]];
               const catEmoji = CATEGORY_META.find((c) => c.id === spot.category)?.emoji ?? '📍';
@@ -393,7 +426,7 @@ export default function KpopMapClient() {
                 <div
                   key={spot.id}
                   onClick={() => {
-                    handleSelectSpot(spot);
+                    handleSelectSpot(spot, 'list');
                     setMobileView('map');
                   }}
                   className={`rounded-2xl border p-4 cursor-pointer transition-all ${
@@ -467,7 +500,7 @@ export default function KpopMapClient() {
           <div className="bg-white rounded-2xl border border-slate-200 p-1.5 shadow-sm h-[300px] sm:h-[420px] lg:h-[480px]">
             <LeafletMap
               spots={filteredSpots}
-              selectedSpotId={selectedSpotId}
+              selectedSpotId={selectedSpot?.id ?? null}
               onSelectSpot={handleSelectSpot}
               lang={lang}
               fitTrigger={fitTrigger}
@@ -577,6 +610,13 @@ export default function KpopMapClient() {
                           href={links.naver}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() =>
+                            trackMapNavClick({
+                              spotId: selectedSpot.id,
+                              provider: 'naver',
+                              lang,
+                            })
+                          }
                           className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-extrabold transition-colors"
                         >
                           <span>Naver Map</span>
@@ -586,6 +626,13 @@ export default function KpopMapClient() {
                           href={links.kakao}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() =>
+                            trackMapNavClick({
+                              spotId: selectedSpot.id,
+                              provider: 'kakao',
+                              lang,
+                            })
+                          }
                           className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-amber-400 hover:bg-amber-500 text-slate-900 text-xs font-extrabold transition-colors"
                         >
                           <span>KakaoMap</span>
@@ -595,6 +642,13 @@ export default function KpopMapClient() {
                           href={links.google}
                           target="_blank"
                           rel="noopener noreferrer"
+                          onClick={() =>
+                            trackMapNavClick({
+                              spotId: selectedSpot.id,
+                              provider: 'google',
+                              lang,
+                            })
+                          }
                           className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-extrabold transition-colors"
                         >
                           <span>Google Maps</span>
@@ -655,6 +709,13 @@ export default function KpopMapClient() {
                     setSelectedCategory('all');
                     setOnlySaved(false);
                     setSelectedSpotId(spot.id);
+                    trackMapSpotClick({
+                      spotId: spot.id,
+                      groupId: spot.groupIds[0] || 'all',
+                      category: spot.category,
+                      source: 'directory',
+                      lang,
+                    });
                     setMobileView('map');
                     window.setTimeout(() => {
                       detailCardRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });

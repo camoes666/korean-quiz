@@ -6,9 +6,10 @@ const ROOT_DIR = path.join(__dirname, '..');
 const QUIZZES_DIR = path.join(ROOT_DIR, 'src', 'data', 'quizzes');
 const CHEMISTRY_FILE = path.join(ROOT_DIR, 'src', 'data', 'idolChemistry.ts');
 const MASCOT_DIR = path.join(ROOT_DIR, 'public', 'images', 'mascot');
+const MAP_IMAGES_DIR = path.join(ROOT_DIR, 'public', 'images', 'map');
 const OUTPUT_DIR = path.join(ROOT_DIR, 'public', 'images', 'pinterest');
 
-const FORMAT_DIRS = ['covers', 'questions', 'cards', 'chemistry'];
+const FORMAT_DIRS = ['covers', 'questions', 'cards', 'chemistry', 'maps'];
 const LEGACY_DIRS = ['main', 'es'];
 
 const LANGS = ['es', 'en', 'pt'];
@@ -254,8 +255,24 @@ function wrapText(text, maxChars, maxLines) {
   return sliced;
 }
 
-function buildPinUrl({ pathName, lang, campaign, content }) {
+function trimWords(str, maxLen) {
+  const s = stripEmojis(str);
+  if (s.length <= maxLen) return s;
+  const slice = s.slice(0, maxLen);
+  const lastSpace = slice.lastIndexOf(' ');
+  const cut = lastSpace >= Math.floor(maxLen * 0.55) ? slice.slice(0, lastSpace) : slice;
+  return `${cut.replace(/[,:;.\-?!¿¡]+$/, '')}…`;
+}
+
+function buildPinUrl({ pathName, lang, campaign, content, extraParams }) {
   const url = new URL(`https://kpulsequiz.com${pathName}`);
+  if (extraParams) {
+    for (const [k, v] of Object.entries(extraParams)) {
+      if (v !== undefined && v !== null && v !== '') {
+        url.searchParams.set(k, String(v));
+      }
+    }
+  }
   if (lang !== 'en') {
     url.searchParams.set('lang', lang);
   }
@@ -329,11 +346,21 @@ function parseChemistryGroups() {
   return groups;
 }
 
-async function writePng(svgString, composites, outPath) {
+async function writePng(svgString, composites, outPath, quality = 90) {
   await sharp(Buffer.from(svgString))
     .composite(composites)
-    .png({ compressionLevel: 9, palette: true, quality: 90 })
+    .png({ compressionLevel: 9, palette: true, quality })
     .toFile(outPath);
+}
+
+async function makeRoundedPhotoBuffer(absPath, width, height, rx = 24) {
+  const maskSvg = `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="${width}" height="${height}" rx="${rx}" ry="${rx}" fill="#ffffff"/></svg>`;
+  return sharp(absPath)
+    .resize(width, height, { fit: 'cover', position: 'centre' })
+    .ensureAlpha()
+    .composite([{ input: Buffer.from(maskSvg), blend: 'dest-in' }])
+    .png()
+    .toBuffer();
 }
 
 async function getResizedMascot(mascotPath, maxSize) {
@@ -584,10 +611,10 @@ async function generateFormatBQuestion(cfg, quiz, lang) {
 
   const pinTitle =
     lang === 'es'
-      ? `Test ${cfg.groupName}: "${stripEmojis(qRaw).slice(0, 58)}" ⚡ Descubre tu Miembro`
+      ? `Test ${cfg.groupName}: "${trimWords(qRaw, 58)}" ⚡ Descubre tu Miembro`
       : lang === 'pt'
-      ? `Teste ${cfg.groupName}: "${stripEmojis(qRaw).slice(0, 56)}" ⚡ Descubra Seu Membro`
-      : `${cfg.groupName} Quiz: "${stripEmojis(qRaw).slice(0, 58)}" ⚡ Find Your Match`;
+      ? `Teste ${cfg.groupName}: "${trimWords(qRaw, 56)}" ⚡ Descubra Seu Membro`
+      : `${cfg.groupName} Quiz: "${trimWords(qRaw, 58)}" ⚡ Find Your Match`;
 
   const pinDesc =
     lang === 'es'
@@ -1012,6 +1039,416 @@ async function generateFormatDChemistry(chemGroup, accentCfg, lang) {
   };
 }
 
+const MAP_PIN_CONFIGS = [
+  {
+    id: 'bts',
+    groupParam: 'bts',
+    boardKey: 'bts',
+    groupLabel: 'BTS',
+    accent: '#7C3AED',
+    mascotFile: 'hobi-bts-v2.png',
+    hero: {
+      file: 'bts-jumunjin-bus-stop/1.webp',
+      label: {
+        es: 'Parada BTS Jumunjin · Gangneung',
+        en: 'Jumunjin BTS Bus Stop · Gangneung',
+        pt: 'Ponto BTS Jumunjin · Gangneung',
+      },
+    },
+    left: {
+      file: 'bts-gyeongbokgung/1.webp',
+      label: {
+        es: 'Gyeongbokgung · Seúl',
+        en: 'Gyeongbokgung · Seoul',
+        pt: 'Gyeongbokgung · Seul',
+      },
+    },
+    right: {
+      file: 'bts-gamcheon-mural/1.webp',
+      label: {
+        es: 'Gamcheon · Busán',
+        en: 'Gamcheon · Busan',
+        pt: 'Gamcheon · Busan',
+      },
+    },
+    spotsPreview: {
+      es: 'HYBE HQ • Yoojung Sikdang • Jumunjin • Gamcheon +10 más',
+      en: 'HYBE HQ • Yoojung Sikdang • Jumunjin • Gamcheon +10 more',
+      pt: 'HYBE HQ • Yoojung Sikdang • Jumunjin • Gamcheon +10 locais',
+    },
+    copy: {
+      es: {
+        line1: 'Mapa de Lugares Reales de',
+        line2: 'BTS en Corea del Sur',
+        sub: '14 Lugares Verificados • Seúl, Busán y Gangneung',
+        title: 'Mapa BTS en Corea 📍 14 Lugares Reales (Jumunjin, Yoojung, HYBE)',
+        desc: 'Guarda este mapa interactivo de BTS para tu viaje a Corea: Parada de Jumunjin, Yoojung Sikdang, Palacio Gyeongbokgung, Aldea Gamcheon y HYBE con fotos reales y enlaces directos a Naver, Kakao y Google Maps.',
+      },
+      en: {
+        line1: 'Real BTS Places to Visit',
+        line2: 'Across South Korea',
+        sub: '14 Verified Spots • Seoul, Busan & Gangneung',
+        title: 'BTS Korea Travel Map 📍 14 Real ARMY Spots (Jumunjin, HYBE & Restaurants)',
+        desc: 'Save this free BTS Korea bucket-list map! Explore 14 verified ARMY spots including Jumunjin BTS Bus Stop, Yoojung Sikdang, Gyeongbokgung Palace, Gamcheon Village, and HYBE HQ with 1-tap Naver, Kakao & Google Maps.',
+      },
+      pt: {
+        line1: 'Lugares Reais do BTS',
+        line2: 'Para Visitar na Coreia',
+        sub: '14 Locais Verificados • Seul, Busan e Gangneung',
+        title: 'Mapa BTS na Coreia 📍 14 Locais Reais (Jumunjin, Restaurantes e HYBE)',
+        desc: 'Salve este mapa interativo do BTS para sua viagem à Coreia: Ponto de Ônibus em Jumunjin, Yoojung Sikdang, Palácio Gyeongbokgung, Vila Gamcheon e sede da HYBE com fotos reais e links para Naver e Google Maps.',
+      },
+    },
+  },
+  {
+    id: 'blackpink',
+    groupParam: 'blackpink',
+    boardKey: 'blackpink',
+    groupLabel: 'BLACKPINK',
+    accent: '#DB2777',
+    mascotFile: 'bomi-blackpink-v2.png',
+    hero: {
+      file: 'bp-bukchon-hanok/1.webp',
+      label: {
+        es: 'Aldea Bukchon Hanok · Seúl',
+        en: 'Bukchon Hanok Village · Seoul',
+        pt: 'Vila Bukchon Hanok · Seul',
+      },
+    },
+    left: {
+      file: 'bp-yg-hq/1.webp',
+      label: {
+        es: 'Sede YG · Hapjeong',
+        en: 'YG HQ · Hapjeong',
+        pt: 'Sede YG · Hapjeong',
+      },
+    },
+    right: {
+      file: 'bp-the-samee/1.webp',
+      label: {
+        es: 'Café the SameE · Seúl',
+        en: 'the SameE Cafe · Seoul',
+        pt: 'Café the SameE · Seul',
+      },
+    },
+    spotsPreview: {
+      es: 'YG HQ • the SameE • HAUS DOSAN • Bukchon +4 más',
+      en: 'YG HQ • the SameE • HAUS DOSAN • Bukchon +4 more',
+      pt: 'YG HQ • the SameE • HAUS DOSAN • Bukchon +4 locais',
+    },
+    copy: {
+      es: {
+        line1: 'Mapa de Lugares Reales de',
+        line2: 'BLACKPINK en Seúl',
+        sub: '8 Lugares Verificados • Hapjeong, Cheongdam y Bukchon',
+        title: 'Mapa BLACKPINK en Seúl 📍 8 Lugares Reales (YG, Cafés y Fotos)',
+        desc: 'Planea tu ruta BLINK por Seúl con fotos reales: sede de YG Entertainment, Café the SameE, HAUS DOSAN, restaurantes favoritos de las miembros y Aldea Bukchon Hanok con rutas directas en Naver y Google Maps.',
+      },
+      en: {
+        line1: 'Real BLACKPINK Spots',
+        line2: 'To Visit Across Seoul',
+        sub: '8 Verified Spots • Hapjeong, Cheongdam & Bukchon',
+        title: 'BLACKPINK Seoul Map 📍 8 Real BLINK Spots (YG HQ, Cafes & Filming Sites)',
+        desc: 'Save this BLACKPINK Seoul travel guide! Explore 8 verified spots with real photos: YG Entertainment HQ, the SameE Cafe, HAUS DOSAN, Bukchon Hanok Village, and member-loved eateries with Naver & Google Maps links.',
+      },
+      pt: {
+        line1: 'Lugares Reais BLACKPINK',
+        line2: 'Para Visitar em Seul',
+        sub: '8 Locais Verificados • Hapjeong, Cheongdam e Bukchon',
+        title: 'Mapa BLACKPINK em Seul 📍 8 Locais Reais (YG, Cafés e Pontos de MV)',
+        desc: 'Salve este roteiro BLINK em Seul com fotos reais: sede da YG Entertainment, Café the SameE, HAUS DOSAN, restaurantes favoritos das integrantes e Vila Bukchon Hanok com links diretos para Naver e Google Maps.',
+      },
+    },
+  },
+  {
+    id: 'stray-kids',
+    groupParam: 'stray-kids',
+    boardKey: 'stray-kids',
+    groupLabel: 'Stray Kids',
+    accent: '#DC2626',
+    mascotFile: 'hobi-skz-v2.png',
+    hero: {
+      file: 'skz-nodeul-island/1.webp',
+      label: {
+        es: 'Isla Nodeul · Río Han, Seúl',
+        en: 'Nodeul Island · Han River, Seoul',
+        pt: 'Ilha Nodeul · Rio Han, Seul',
+      },
+    },
+    left: {
+      file: 'skz-gimpo-laveniche/1.webp',
+      label: {
+        es: 'Canal Laveniche · Gimpo',
+        en: 'Laveniche Canal · Gimpo',
+        pt: 'Canal Laveniche · Gimpo',
+      },
+    },
+    right: {
+      file: 'skz-gwangalli-in/1.webp',
+      label: {
+        es: 'Playa Gwangalli · Busán',
+        en: 'Gwangalli Beach · Busan',
+        pt: 'Praia Gwangalli · Busan',
+      },
+    },
+    spotsPreview: {
+      es: 'JYP HQ • Mercado Gwangjang • Isla Nodeul • Gwangalli +4 más',
+      en: 'JYP HQ • Gwangjang Market • Nodeul Island • Gwangalli +4 more',
+      pt: 'JYP HQ • Mercado Gwangjang • Ilha Nodeul • Gwangalli +4 locais',
+    },
+    copy: {
+      es: {
+        line1: 'Mapa de Lugares Reales de',
+        line2: 'Stray Kids en Corea',
+        sub: '8 Lugares Verificados • Seúl, Gimpo y Busán',
+        title: 'Mapa Stray Kids en Corea 📍 8 Lugares STAY Reales (JYP, Seúl y Busán)',
+        desc: 'Descubre los 8 lugares reales de Stray Kids en Corea con fotos auténticas: sede de JYP, Isla Nodeul, Mercado Gwangjang, Myeongdong, Gimpo Laveniche y Playa Gwangalli en Busán con Naver y Google Maps.',
+      },
+      en: {
+        line1: 'Real Stray Kids Spots',
+        line2: 'Across Seoul & Busan',
+        sub: '8 Verified Spots • JYP, Han River & Busan',
+        title: 'Stray Kids Korea Map 📍 8 Real STAY Spots (JYP HQ, Nodeul Island & Foodie Picks)',
+        desc: 'Save this Stray Kids Korea bucket-list map! Explore 8 verified SKZ locations with real photos: JYP Center, Nodeul Island, Gwangjang Market, Myeongdong Kalguksu, Gimpo Laveniche & Gwangalli Beach.',
+      },
+      pt: {
+        line1: 'Lugares Reais Stray Kids',
+        line2: 'Para Visitar na Coreia',
+        sub: '8 Locais Verificados • Seul, Gimpo e Busan',
+        title: 'Mapa Stray Kids na Coreia 📍 8 Locais Reais STAY (JYP, Seul e Busan)',
+        desc: 'Salve este mapa de Stray Kids na Coreia com fotos reais: sede da JYP, Ilha Nodeul, Mercado Gwangjang, Myeongdong Kalguksu, Gimpo Laveniche e Praia Gwangalli com links diretos para Naver e Google Maps.',
+      },
+    },
+  },
+  {
+    id: 'kpop-korea',
+    groupParam: null,
+    boardKey: 'multistan',
+    groupLabel: 'All K-Pop',
+    accent: '#DB2777',
+    mascotFile: 'hobi-bts-v2.png',
+    hero: {
+      file: 'bp-bukchon-hanok/1.webp',
+      label: {
+        es: 'Seúl · Bukchon Hanok y N Tower',
+        en: 'Seoul · Bukchon Hanok & N Tower',
+        pt: 'Seul · Bukchon Hanok e N Tower',
+      },
+    },
+    left: {
+      file: 'bts-jumunjin-bus-stop/1.webp',
+      label: {
+        es: 'BTS · Parada Jumunjin',
+        en: 'BTS · Jumunjin Bus Stop',
+        pt: 'BTS · Ponto Jumunjin',
+      },
+    },
+    right: {
+      file: 'skz-gwangalli-in/1.webp',
+      label: {
+        es: 'Busán · Playa Gwangalli',
+        en: 'Busan · Gwangalli Beach',
+        pt: 'Busan · Praia Gwangalli',
+      },
+    },
+    spotsPreview: {
+      es: 'BTS (14) • BLACKPINK (8) • Stray Kids (8) · Fotos Reales',
+      en: 'BTS (14) • BLACKPINK (8) • Stray Kids (8) · Real Photos',
+      pt: 'BTS (14) • BLACKPINK (8) • Stray Kids (8) · Fotos Reais',
+    },
+    copy: {
+      es: {
+        line1: 'Guía y Mapa K-Pop en Corea',
+        line2: 'BTS, BLACKPINK y Stray Kids',
+        sub: '30 Lugares Reales • Agencias, Cafés y Sets de MV',
+        title: 'Mapa Turístico K-Pop en Corea 📍 30 Lugares de BTS, BLACKPINK y Stray Kids',
+        desc: 'Guarda el mapa definitivo para tu viaje a Corea: 30 lugares verificados de BTS, BLACKPINK y Stray Kids entre restaurantes, agencias (HYBE, YG, JYP), cafés y escenarios de MV con fotos reales y Naver/Google Maps.',
+      },
+      en: {
+        line1: 'Ultimate Korea K-Pop Map',
+        line2: 'BTS, BLACKPINK & Stray Kids',
+        sub: '30 Real Spots • Agencies, Restaurants & MV Sites',
+        title: 'Korea K-Pop Pilgrimage Map 📍 30 Verified BTS, BLACKPINK & Stray Kids Spots',
+        desc: 'Planning a Korea trip? Save this free interactive map of 30 verified BTS, BLACKPINK, and Stray Kids spots across Seoul, Busan & Gangneung with real photos and 1-tap Naver, Kakao & Google Maps directions.',
+      },
+      pt: {
+        line1: 'Guia e Mapa K-Pop na Coreia',
+        line2: 'BTS, BLACKPINK e Stray Kids',
+        sub: '30 Locais Reais • Agências, Restaurantes e MVs',
+        title: 'Mapa de Viagem K-Pop na Coreia 📍 30 Locais de BTS, BLACKPINK e Stray Kids',
+        desc: 'Planejando ir para a Coreia? Salve este mapa interativo grátis com 30 locais verificados do BTS, BLACKPINK e Stray Kids em Seul, Busan e Gangneung com fotos reais e rotas no Naver e Google Maps.',
+      },
+    },
+  },
+];
+
+async function generateFormatEMap(mapCfg, lang) {
+  const copy = mapCfg.copy[lang];
+  const heroLabel = stripEmojis(mapCfg.hero.label[lang]);
+  const leftLabel = stripEmojis(mapCfg.left.label[lang]);
+  const rightLabel = stripEmojis(mapCfg.right.label[lang]);
+  const spotsPreview = stripEmojis(mapCfg.spotsPreview[lang]);
+
+  const badgeLabel =
+    lang === 'es'
+      ? 'GUARDA PARA TU VIAJE'
+      : lang === 'pt'
+      ? 'SALVE PARA SUA VIAGEM'
+      : 'SAVE FOR KOREA TRIP';
+
+  const featurePills =
+    lang === 'es'
+      ? ['FOTOS REALES', 'NAVER + GOOGLE MAPS', '100% GRATIS']
+      : lang === 'pt'
+      ? ['FOTOS REAIS', 'NAVER + GOOGLE MAPS', '100% GRÁTIS']
+      : ['REAL PHOTOS', 'NAVER + GOOGLE MAPS', '100% FREE'];
+
+  const ctaText =
+    lang === 'es'
+      ? 'ABRIR MAPA INTERACTIVO →'
+      : lang === 'pt'
+      ? 'ABRIR MAPA INTERATIVO →'
+      : 'OPEN INTERACTIVE MAP →';
+
+  const [heroBuf, leftBuf, rightBuf, mascot] = await Promise.all([
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, mapCfg.hero.file), 864, 372, 24),
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, mapCfg.left.file), 422, 282, 24),
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, mapCfg.right.file), 422, 282, 24),
+    getResizedMascot(path.join(MASCOT_DIR, mapCfg.mascotFile), 76),
+  ]);
+
+  const heroPillW = Math.min(700, Math.max(250, Math.round(heroLabel.length * 12.6 + 48)));
+  const leftPillW = Math.min(390, Math.max(190, Math.round(leftLabel.length * 11.2 + 40)));
+  const rightPillW = Math.min(390, Math.max(190, Math.round(rightLabel.length * 11.2 + 40)));
+
+  const line1Size = copy.line1.length > 26 ? 48 : 52;
+  const line2Size = copy.line2.length > 25 ? 48 : 56;
+  const spotsFontSize = spotsPreview.length > 55 ? 20 : 22;
+
+  const featurePillsSvg = featurePills
+    .map((label, idx) => {
+      const pillX = 68 + idx * 295;
+      return `
+      <rect x="${pillX}" y="1062" width="274" height="54" rx="27" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+      <text x="${pillX + 137}" y="1096" fill="#0F172A" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800" letter-spacing="0.4" text-anchor="middle">
+        ${escapeXml(stripEmojis(label))}
+      </text>`;
+    })
+    .join('\n');
+
+  const baseSvg = `
+  <svg width="1000" height="1500" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1000" height="1500" fill="#FAF8F4"/>
+    <rect x="0" y="0" width="1000" height="16" fill="${mapCfg.accent}"/>
+    <rect x="32" y="36" width="936" height="1428" rx="34" fill="none" stroke="#E6DFD3" stroke-width="2.5"/>
+
+    <!-- Top Masthead -->
+    <text x="68" y="96" fill="#475569" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="3">
+      K-PULSE TRAVEL MAP
+    </text>
+    <rect x="596" y="62" width="336" height="48" rx="24" fill="${mapCfg.accent}"/>
+    <text x="764" y="93" fill="#FFFFFF" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="900" letter-spacing="1" text-anchor="middle">
+      ${escapeXml(stripEmojis(badgeLabel))}
+    </text>
+
+    <!-- Editorial 2-Line Headline -->
+    <text x="500" y="192" fill="#0F172A" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="${line1Size}" font-weight="800" text-anchor="middle" letter-spacing="-0.5">
+      ${escapeXml(stripEmojis(copy.line1))}
+    </text>
+    <text x="500" y="266" fill="${mapCfg.accent}" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="${line2Size}" font-weight="900" text-anchor="middle" letter-spacing="-1">
+      ${escapeXml(stripEmojis(copy.line2))}
+    </text>
+    <text x="500" y="320" fill="#475569" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.sub))}
+    </text>
+
+    <!-- Subtle Photo Frame Backdrops -->
+    <rect x="64" y="352" width="872" height="380" rx="26" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="64" y="744" width="430" height="290" rx="26" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="506" y="744" width="430" height="290" rx="26" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Feature Pills -->
+    ${featurePillsSvg}
+
+    <!-- Spots Summary Line -->
+    <text x="500" y="1174" fill="#334155" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="${spotsFontSize}" font-weight="700" text-anchor="middle">
+      ${escapeXml(spotsPreview)}
+    </text>
+
+    <!-- Dark Pill CTA -->
+    <rect x="140" y="1222" width="720" height="94" rx="47" fill="#0F172A"/>
+    <text x="500" y="1280" fill="#FFFFFF" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="30" font-weight="900" letter-spacing="0.8" text-anchor="middle">
+      ${escapeXml(stripEmojis(ctaText))}
+    </text>
+
+    <!-- Footer -->
+    <text x="500" y="1398" fill="#64748B" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="3.5" text-anchor="middle">
+      KPULSEQUIZ.COM/MAP
+    </text>
+  </svg>`;
+
+  const overlaySvg = `
+  <svg width="1000" height="1500" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+    <!-- Hero Photo Location Pill -->
+    <rect x="88" y="664" width="${heroPillW}" height="46" rx="23" fill="rgba(15,23,42,0.84)"/>
+    <text x="112" y="694" fill="#FFFFFF" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="800">
+      ${escapeXml(heroLabel)}
+    </text>
+
+    <!-- Left Photo Location Pill -->
+    <rect x="84" y="972" width="${leftPillW}" height="42" rx="21" fill="rgba(15,23,42,0.84)"/>
+    <text x="104" y="1000" fill="#FFFFFF" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800">
+      ${escapeXml(leftLabel)}
+    </text>
+
+    <!-- Right Photo Location Pill -->
+    <rect x="526" y="972" width="${rightPillW}" height="42" rx="21" fill="rgba(15,23,42,0.84)"/>
+    <text x="546" y="1000" fill="#FFFFFF" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-size="18" font-weight="800">
+      ${escapeXml(rightLabel)}
+    </text>
+
+    <!-- Top-Right Circular Mascot Seal -->
+    <circle cx="876" cy="412" r="50" fill="#FFFFFF" stroke="${mapCfg.accent}" stroke-width="3.5"/>
+  </svg>`;
+
+  const filename = `map-${mapCfg.id}-${lang}.png`;
+  const relPath = `public/images/pinterest/maps/${filename}`;
+  const outPath = path.join(OUTPUT_DIR, 'maps', filename);
+
+  const mascotLeft = Math.round(876 - mascot.info.width / 2);
+  const mascotTop = Math.round(412 - mascot.info.height / 2);
+
+  await writePng(
+    baseSvg,
+    [
+      { input: heroBuf, left: 68, top: 356 },
+      { input: leftBuf, left: 68, top: 748 },
+      { input: rightBuf, left: 510, top: 748 },
+      { input: Buffer.from(overlaySvg), left: 0, top: 0 },
+      { input: mascot.data, left: mascotLeft, top: mascotTop },
+    ],
+    outPath,
+    88
+  );
+
+  return {
+    format: 'Korea Travel Map',
+    lang,
+    group: mapCfg.groupLabel,
+    imageFile: relPath,
+    targetBoard: getTargetBoard(mapCfg.boardKey, lang),
+    pinTitle: copy.title,
+    pinDescription: copy.desc,
+    destinationUrl: buildPinUrl({
+      pathName: '/map',
+      extraParams: mapCfg.groupParam ? { group: mapCfg.groupParam } : undefined,
+      lang,
+      campaign: `${mapCfg.id}_map_${lang}`,
+      content: 'travel_map',
+    }),
+  };
+}
+
 function writeManifestFiles(rows) {
   // Sort ES -> PT -> EN, then by format and group
   const langRank = { es: 0, pt: 1, en: 2 };
@@ -1161,6 +1598,13 @@ async function main() {
     const accentCfg = cfgByChemId[chemGroup.id];
     for (const lang of LANGS) {
       rows.push(await generateFormatDChemistry(chemGroup, accentCfg, lang));
+    }
+  }
+
+  // Format E (Korea Travel Map Bucket-List Pins): 4 map scopes x 3 langs = 12 pins
+  for (const mapCfg of MAP_PIN_CONFIGS) {
+    for (const lang of LANGS) {
+      rows.push(await generateFormatEMap(mapCfg, lang));
     }
   }
 
