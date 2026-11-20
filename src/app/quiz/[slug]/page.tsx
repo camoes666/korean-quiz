@@ -73,7 +73,7 @@ export default async function QuizPage({ params }: QuizPageProps) {
     notFound();
   }
 
-  const relatedQuizzes = getRelatedQuizzes(quiz.slug, 4);
+  const relatedQuizzes = getRelatedQuizzes(quiz.slug, 5);
   const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
   const jsonLdSchemas = generateQuizJsonLd(quiz);
 

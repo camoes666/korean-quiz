@@ -15,7 +15,14 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { decodeChallenge, resolveChallengeQuestions } from '@/lib/challenge';
 import { calcQuestionPoints, calcTotalPoints, QUESTION_TIME_SEC, MAX_TOTAL_POINTS } from '@/lib/scoring';
-import { trackQuizStart, trackQuizComplete } from '@/lib/analytics';
+import {
+  trackQuizStart,
+  trackQuizComplete,
+  trackRelatedQuizClick,
+  trackChemistryCtaClick,
+  trackGuideCtaClick,
+  trackQuizRetake,
+} from '@/lib/analytics';
 import {
   CheckCircle2,
   XCircle,
@@ -1196,6 +1203,15 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
   const rankLabel = isPerfect ? `${rankPrefix} S+ 💜` : score >= 4 ? `${rankPrefix} S 🏆` : score >= 3 ? `${rankPrefix} A ⭐` : `${rankPrefix} B 🌱`;
   const tierTitle = getLocalizedText(currentTier, 'title', lang);
   const tierBadge = getLocalizedText(currentTier, 'badge', lang);
+  const chemistryTargetGroup =
+    quiz.tag === 'Stray Kids'
+      ? 'stray-kids'
+      : quiz.tag === 'BLACKPINK'
+      ? 'blackpink'
+      : quiz.tag === 'BTS'
+      ? 'bts'
+      : 'all';
+  const gridRelatedQuizzes = relatedQuizzes.length > 1 ? relatedQuizzes.slice(1, 5) : relatedQuizzes;
 
   return (
     <div data-group={themeGroup} className="max-w-xl mx-auto px-4 py-8 sm:py-12 transition-colors duration-300">
@@ -1363,6 +1379,16 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             </p>
             <Link
               href={`/quiz/${relatedQuizzes[0].slug}`}
+              onClick={() =>
+                trackRelatedQuizClick({
+                  fromSlug: quiz.slug,
+                  toSlug: relatedQuizzes[0].slug,
+                  toQuizType: relatedQuizzes[0].quizType || 'trivia',
+                  position: 1,
+                  placement: 'next_quiz_cta',
+                  lang,
+                })
+              }
               className="w-full py-3 px-4 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-sm flex items-center justify-center gap-2 transition-colors active:scale-98"
             >
               <span>{t.resultView.playNextQuiz}</span>
@@ -1392,14 +1418,13 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         {/* Idol K-Saju × MBTI Chemistry Link */}
         <div className="mb-3">
           <Link
-            href={
-              quiz.tag === 'Stray Kids'
-                ? '/chemistry/stray-kids'
-                : quiz.tag === 'BLACKPINK'
-                ? '/chemistry/blackpink'
-                : quiz.tag === 'BTS'
-                ? '/chemistry/bts'
-                : '/chemistry'
+            href={chemistryTargetGroup === 'all' ? '/chemistry' : `/chemistry/${chemistryTargetGroup}`}
+            onClick={() =>
+              trackChemistryCtaClick({
+                fromSlug: quiz.slug,
+                targetGroup: chemistryTargetGroup,
+                lang,
+              })
             }
             className="w-full py-3 px-4 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold transition-colors flex items-center justify-center gap-2"
           >
@@ -1420,6 +1445,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         <div className="mb-4">
           <Link
             href={`/guide/${quiz.slug}`}
+            onClick={() => trackGuideCtaClick({ fromSlug: quiz.slug, lang })}
             className="w-full py-3 px-4 rounded-2xl bg-purple-50/80 hover:bg-purple-100/90 border border-purple-200 text-purple-800 text-xs font-black transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
           >
             <BookOpen className="w-4 h-4 text-purple-600" />
@@ -1439,7 +1465,14 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         {/* Action Buttons: 다시 풀기 & 난이도 변경 & 홈으로 */}
         <div className="flex flex-wrap gap-2 justify-center pt-3 border-t border-slate-100">
           <button
-            onClick={() => (isChallengeMode ? handleRetakeNormal() : startQuiz(selectedLevel))}
+            onClick={() => {
+              trackQuizRetake({ slug: quiz.slug, quizType: 'trivia', lang });
+              if (isChallengeMode) {
+                handleRetakeNormal();
+              } else {
+                startQuiz(selectedLevel);
+              }
+            }}
             className="flex-1 min-w-[120px] py-2.5 px-3 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-bold transition-all flex items-center justify-center gap-1.5 active:scale-95"
           >
             <RotateCcw className="w-3.5 h-3.5" />
@@ -1463,7 +1496,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
       </div>
 
       {/* Next Quizzes to Multiply Pageviews (Elevated above Ads for immediate retention) */}
-      {relatedQuizzes.length > 0 && (
+      {gridRelatedQuizzes.length > 0 && (
         <div className="my-8">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg sm:text-xl font-black text-slate-900 flex items-center gap-2">
@@ -1473,6 +1506,16 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             {relatedQuizzes.length > 1 && (
               <Link
                 href={`/quiz/${relatedQuizzes[1].slug}`}
+                onClick={() =>
+                  trackRelatedQuizClick({
+                    fromSlug: quiz.slug,
+                    toSlug: relatedQuizzes[1].slug,
+                    toQuizType: relatedQuizzes[1].quizType || 'trivia',
+                    position: 1,
+                    placement: 'random_quiz',
+                    lang,
+                  })
+                }
                 className="text-xs font-black text-purple-700 hover:text-purple-900 flex items-center gap-1 bg-purple-50 hover:bg-purple-100 border border-purple-200 px-3 py-1.5 rounded-full transition-colors shadow-2xs"
               >
                 <Shuffle className="w-3 h-3 text-pink-500" />
@@ -1481,8 +1524,21 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             )}
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {relatedQuizzes.map((item) => (
-              <QuizCard key={item.slug} quiz={item} />
+            {gridRelatedQuizzes.map((item, idx) => (
+              <QuizCard
+                key={item.slug}
+                quiz={item}
+                onSelect={() =>
+                  trackRelatedQuizClick({
+                    fromSlug: quiz.slug,
+                    toSlug: item.slug,
+                    toQuizType: item.quizType || 'trivia',
+                    position: idx + 1,
+                    placement: 'related_grid',
+                    lang,
+                  })
+                }
+              />
             ))}
           </div>
         </div>

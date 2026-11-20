@@ -17,7 +17,23 @@ import {
   PersonalityStep,
   RECORD_MESSAGE,
 } from '@/lib/recordMode';
-import { trackQuizStart, trackQuizComplete, trackShare, trackCardDownload } from '@/lib/analytics';
+import {
+  trackQuizStart,
+  trackQuizComplete,
+  trackShare,
+  trackCardDownload,
+  trackRelatedQuizClick,
+  trackChemistryCtaClick,
+  trackQuizRetake,
+} from '@/lib/analytics';
+
+function WhatsAppIcon({ className = 'w-4 h-4 fill-current shrink-0' }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.556 4.119 1.528 5.847l-1.528 5.581 5.713-1.499c1.678.9 3.593 1.413 5.629 1.413 6.627 0 12-5.373 12-12s-5.373-12-12-12z" />
+    </svg>
+  );
+}
 
 // Result-screen labels per group (the data's `skzoo` field holds each group's character twin).
 function getResultLabels(quiz: Quiz) {
@@ -187,7 +203,7 @@ export default function PersonalityTestRunner({
       setAnimatedSyncPct(Math.round(targetPct * eased));
       if (frame >= totalFrames) clearInterval(interval);
     }, 24);
-    return () => {
+        return () => {
       clearTimeout(timerGauge);
       clearInterval(interval);
     };
@@ -223,7 +239,7 @@ export default function PersonalityTestRunner({
     };
     window.addEventListener('message', onMessage);
     window.parent.postMessage({ type: RECORD_MESSAGE.ready }, window.location.origin);
-    return () => window.removeEventListener('message', onMessage);
+        return () => window.removeEventListener('message', onMessage);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -284,7 +300,7 @@ export default function PersonalityTestRunner({
       const option = currentQ.options.find((o) => o.id === step?.optionId);
       if (!option) return;
       const id = setTimeout(() => handleSelectOption(option), PERSONALITY_TIMING.readMs);
-      return () => clearTimeout(id);
+          return () => clearTimeout(id);
     }
     if (testState === 'result') {
       window.parent.postMessage({ type: RECORD_MESSAGE.question, index: -1 }, window.location.origin);
@@ -292,19 +308,20 @@ export default function PersonalityTestRunner({
         () => window.parent.postMessage({ type: RECORD_MESSAGE.done }, window.location.origin),
         PERSONALITY_TIMING.resultMs
       );
-      return () => clearTimeout(id);
+          return () => clearTimeout(id);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recordPlan, testState, currentIndex]);
 
   const shortName = (name: string) => name.replace(/\s*\(.*\)\s*$/, '');
 
-  const handleDownloadCard = async () => {
+  const handleDownloadCard = async (placement: 'result_top' | 'result_bottom' = 'result_bottom') => {
     if (!matchedResult) return;
     trackCardDownload({
       slug: quiz.slug,
       cardType: 'personality',
       lang,
+      placement,
     });
     try {
       setIsGeneratingCard(true);
@@ -375,26 +392,26 @@ export default function PersonalityTestRunner({
       : `My ${groupName} soulmate is [${memberName} ${matchedResult.emoji}]! ✨ Which member matches your vibe 100%? Take the test:`;
   };
 
-  const handleCopyLink = () => {
-    trackShare({ slug: quiz.slug, method: 'link_copy', lang });
+  const handleCopyLink = (placement: 'result_top' | 'result_bottom' = 'result_bottom') => {
+    trackShare({ slug: quiz.slug, method: 'link_copy', lang, placement });
     const url = getPersonalityShareUrl();
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
 
-  const handleShareWhatsApp = () => {
+  const handleShareWhatsApp = (placement: 'result_top' | 'result_bottom' = 'result_bottom') => {
     if (!matchedResult) return;
-    trackShare({ slug: quiz.slug, method: 'whatsapp', lang });
+    trackShare({ slug: quiz.slug, method: 'whatsapp', lang, placement });
     const text = getPersonalityShareText();
     const targetUrl = getPersonalityShareUrl('https://kpulsequiz.com');
     const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(`${text}\n👉 ${targetUrl}`)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
-  const handleShareTwitter = () => {
+  const handleShareTwitter = (placement: 'result_top' | 'result_bottom' = 'result_bottom') => {
     if (!matchedResult) return;
-    trackShare({ slug: quiz.slug, method: 'twitter', lang });
+    trackShare({ slug: quiz.slug, method: 'twitter', lang, placement });
     const text = getPersonalityShareText();
 
     const hashtags =
@@ -422,13 +439,18 @@ export default function PersonalityTestRunner({
     window.open(shareUrl, '_blank', 'width=550,height=420');
   };
 
+  const handleRetake = () => {
+    trackQuizRetake({ slug: quiz.slug, quizType: 'personality', lang });
+    startTest();
+  };
+
   // 1. INTRO SCREEN
   if (testState === 'intro') {
     const memberCount = Object.keys(resultsMap).length;
     const friendName = friendMatch ? getLocalizedText(friendMatch, 'name', lang) : '';
     const friendTitle = friendMatch ? getLocalizedText(friendMatch, 'title', lang) : '';
 
-    return (
+        return (
       <div className="max-w-3xl mx-auto px-4 py-8">
         {friendMatch && (
           <div className="mb-5 rounded-2xl bg-slate-950 text-white p-5 border border-slate-800">
@@ -596,7 +618,7 @@ export default function PersonalityTestRunner({
   if (testState === 'calculating') {
     const memberCount = Object.keys(resultsMap).length;
     const localizedMascotName = getLocalizedText(mascot, 'name', lang);
-    return (
+        return (
       <div className="max-w-md mx-auto px-4 py-24 text-center">
         <div className="bg-white rounded-3xl p-10 border-2 border-purple-100 shadow-xl shadow-purple-500/10 flex flex-col items-center">
           <div className="relative mb-6">
@@ -661,6 +683,274 @@ export default function PersonalityTestRunner({
     const handleCardMouseLeave = () => {
       setCardTilt({ rx: 0, ry: 0 });
     };
+
+    const whatsappLabel =
+      lang === 'ko'
+        ? 'WhatsApp으로 친구와 궁합 보기'
+        : lang === 'es'
+        ? 'Compartir en WhatsApp'
+        : lang === 'pt'
+        ? 'Compartilhar no WhatsApp'
+        : 'Share on WhatsApp';
+
+    const copyLinkLabel = copied
+      ? t.resultView.copied
+      : lang === 'ko'
+      ? '내 소울메이트 초대 링크 복사'
+      : lang === 'es'
+      ? 'Copiar Enlace de Desafío'
+      : lang === 'pt'
+      ? 'Copiar Link de Desafio'
+      : 'Copy Soulmate Challenge Link';
+
+    const chemistryGroupId =
+      quiz.tag === 'Stray Kids'
+        ? 'stray-kids'
+        : quiz.tag === 'BLACKPINK'
+        ? 'blackpink'
+        : quiz.tag === 'TWICE'
+        ? 'twice'
+        : quiz.tag === 'ENHYPEN'
+        ? 'enhypen'
+        : quiz.tag === 'aespa'
+        ? 'aespa'
+        : quiz.tag === 'LE SSERAFIM'
+        ? 'le-sserafim'
+        : 'bts';
+
+    const friendComparisonCard = friendMatch ? (
+      <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
+        <div className="flex items-center gap-2 shrink-0">
+          <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
+            {friendMatch.emoji}
+          </div>
+          <span className="text-purple-400 font-black text-lg">×</span>
+          <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
+            {matchedResult.emoji}
+          </div>
+        </div>
+        <div className="flex-1">
+          <span className="text-[11px] font-black uppercase tracking-wider text-purple-600 block mb-0.5">
+            {matchedResult.id === friendMatch.id
+              ? lang === 'ko'
+                ? '🎉 100% 쌍둥이 소울메이트 매치!'
+                : lang === 'es'
+                ? '🎉 ¡100% GEMELOS DE ALMA!'
+                : lang === 'pt'
+                ? '🎉 100% GÊMEOS DE ALMA!'
+                : '🎉 100% TWIN SOULMATE MATCH!'
+              : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
+              ? lang === 'ko'
+                ? '🔥 운명의 1위 찰떡 케미 듀오!'
+                : lang === 'es'
+                ? '🔥 ¡DÚO DESTINADO CON QUÍMICA #1!'
+                : lang === 'pt'
+                ? '🔥 DUPLA DESTINADA COM QUÍMICA #1!'
+                : '🔥 DESTINED #1 CHEMISTRY DUO!'
+              : lang === 'ko'
+              ? '✨ 친구와의 소울메이트 케미 결과'
+              : lang === 'es'
+              ? '✨ Resultado de Compatibilidad con tu Amigo/a'
+              : lang === 'pt'
+              ? '✨ Resultado de Compatibilidade com seu Amigo(a)'
+              : '✨ Friend Soulmate Compatibility'}
+          </span>
+          <p className="text-xs sm:text-sm font-bold text-slate-800 leading-relaxed">
+            {matchedResult.id === friendMatch.id
+              ? lang === 'ko'
+                ? `소름! 친구와 똑같이 [${memberName}] 소울메이트가 나왔어요! 지금 결과를 공유해 보세요!`
+                : lang === 'es'
+                ? `¡Increíble! Tú y tu amigo/a obtuvieron exactamente a [${memberName}]. ¡Envíale tu resultado!`
+                : lang === 'pt'
+                ? `Incrível! Você e seu amigo(a) tiraram exatamente [${memberName}]! Envie seu resultado!`
+                : `Incredible! You and your friend both matched with [${memberName}]! Send them your result!`
+              : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
+              ? lang === 'ko'
+                ? `친구의 [${getLocalizedText(friendMatch, 'name', lang)}] & 나의 [${memberName}] 조합은 그룹 내 최고 궁합 듀오입니다!`
+                : lang === 'es'
+                ? `¡[${getLocalizedText(friendMatch, 'name', lang)}] (tu amigo/a) y [${memberName}] (tú) son el mejor dúo del grupo!`
+                : lang === 'pt'
+                ? `[${getLocalizedText(friendMatch, 'name', lang)}] (seu amigo) e [${memberName}] (você) formam a melhor dupla do grupo!`
+                : `Your friend's [${getLocalizedText(friendMatch, 'name', lang)}] & your [${memberName}] are each other's #1 Best Chemistry Match!`
+              : lang === 'ko'
+              ? `친구는 [${getLocalizedText(friendMatch, 'name', lang)}], 나는 [${memberName}]! 친구에게 내 결과를 답장으로 보내보세요!`
+              : lang === 'es'
+              ? `Tu amigo/a obtuvo a [${getLocalizedText(friendMatch, 'name', lang)}] y tú a [${memberName}]. ¡Respóndele con tu resultado en WhatsApp!`
+              : lang === 'pt'
+              ? `Seu amigo(a) tirou [${getLocalizedText(friendMatch, 'name', lang)}] e você [${memberName}]. Responda com seu resultado no WhatsApp!`
+              : `Your friend got [${getLocalizedText(friendMatch, 'name', lang)}] and you got [${memberName}]! Send your result back to them!`}
+          </p>
+        </div>
+      </div>
+    ) : null;
+
+    let bingeSlug = 'kpop-fandom-trivia';
+    let bingeHref = '/quiz/kpop-fandom-trivia';
+    let bingeTitle =
+      lang === 'ko'
+        ? 'K-Pop 팬덤 50문제 종합 덕력고사도 도전해볼까요?'
+        : lang === 'es'
+        ? '¿Listo para la Trivia Definitiva del Fandom K-Pop?'
+        : lang === 'pt'
+        ? 'Pronto para o Quiz Definitivo de Fandom K-Pop?'
+        : 'Ready for the Ultimate K-Pop Fandom Trivia?';
+    let bingeDesc =
+      lang === 'ko'
+        ? '응원봉, 팬덤명, 역사적 빌보드·코첼라 기록까지! K-Pop 덕후력을 증명하세요!'
+        : lang === 'es'
+        ? 'Lightsticks, nombres de fandom, récords históricos y más. ¡Demuestra cuánto sabes de K-Pop!'
+        : lang === 'pt'
+        ? 'Lightsticks, nomes de fandom, recordes históricos e muito mais. Prove quanto você sabe de K-Pop!'
+        : 'From lightsticks and fandom names to historic chart records, prove your ultimate K-Pop knowledge!';
+    let bingeBtn =
+      lang === 'ko'
+        ? 'K-Pop 종합 퀴즈 풀러 가기'
+        : lang === 'es'
+        ? 'Jugar Trivia K-Pop'
+        : lang === 'pt'
+        ? 'Jogar Quiz K-Pop'
+        : 'Play K-Pop Trivia';
+
+    if (quiz.tag === 'Stray Kids') {
+      bingeSlug = 'stray-kids-stay-trivia';
+      bingeHref = '/quiz/stray-kids-stay-trivia';
+      bingeTitle =
+        lang === 'ko'
+          ? '스키즈 60문제 상식 퀴즈도 도전해볼까요?'
+          : lang === 'es'
+          ? '¿Listo para el Desafío STAY de 60 Preguntas?'
+          : lang === 'pt'
+          ? 'Pronto para o Desafio STAY de 60 Perguntas?'
+          : 'Ready for the 60-Question STAY Trivia?';
+      bingeDesc =
+        lang === 'ko'
+          ? '데뷔곡 District 9부터 빌보드 200 대기록까지, 당신의 진정한 스테이 레벨을 증명하세요!'
+          : lang === 'es'
+          ? '¡Desde District 9 hasta récords de Billboard! ¡Demuestra cuánto sabes de Stray Kids!'
+          : lang === 'pt'
+          ? 'De District 9 aos recordes da Billboard, prove seu verdadeiro nível STAY!'
+          : 'From District 9 to historic Billboard #1 records, prove your true STAY status!';
+      bingeBtn =
+        lang === 'ko'
+          ? '60문제 퀴즈 풀러 가기'
+          : lang === 'es'
+          ? 'Jugar Quiz de 60 Preguntas'
+          : lang === 'pt'
+          ? 'Jogar Quiz de 60 Perguntas'
+          : 'Play 60-Question Trivia';
+    } else if (quiz.tag === 'BTS') {
+      bingeSlug = 'bts-army-trivia';
+      bingeHref = '/quiz/bts-army-trivia';
+      bingeTitle =
+        lang === 'ko'
+          ? '방탄소년단 35문제 아미 지식 퀴즈도 도전해볼까요?'
+          : lang === 'es'
+          ? '¿Listo para el Desafío ARMY de 35 Preguntas?'
+          : lang === 'pt'
+          ? 'Pronto para o Desafio ARMY de 35 Perguntas?'
+          : 'Ready for the 35-Question BTS ARMY Trivia?';
+      bingeDesc =
+        lang === 'ko'
+          ? '데뷔곡 No More Dream부터 빌보드 Hot 100 대기록까지, 아미 레벨을 증명하세요!'
+          : lang === 'es'
+          ? '¡Desde No More Dream hasta el Hot 100! ¡Demuestra tu nivel ARMY!'
+          : lang === 'pt'
+          ? 'De No More Dream ao topo da Billboard Hot 100, prove seu nível ARMY!'
+          : 'From No More Dream to Billboard Hot 100 records, prove your true ARMY status!';
+      bingeBtn =
+        lang === 'ko'
+          ? '35문제 퀴즈 풀러 가기'
+          : lang === 'es'
+          ? 'Jugar Quiz de 35 Preguntas'
+          : lang === 'pt'
+          ? 'Jogar Quiz de 35 Perguntas'
+          : 'Play 35-Question Trivia';
+    } else if (quiz.tag === 'BLACKPINK') {
+      bingeSlug = 'blackpink-blink-trivia';
+      bingeHref = '/quiz/blackpink-blink-trivia';
+      bingeTitle =
+        lang === 'ko'
+          ? '블랙핑크 50문제 블링크 지식 퀴즈도 도전해볼까요?'
+          : lang === 'es'
+          ? '¿Listo para el Desafío BLINK de 50 Preguntas?'
+          : lang === 'pt'
+          ? 'Pronto para o Desafio BLINK de 50 Perguntas?'
+          : 'Ready for the 50-Question BLINK Trivia?';
+      bingeDesc =
+        lang === 'ko'
+          ? '휘파람, 뚜두뚜두부터 코첼라 헤드라이너까지, 당신의 블링크 지식을 테스트하세요!'
+          : lang === 'es'
+          ? '¡Desde Whistle hasta Coachella! ¡Pon a prueba cuánto sabes de BLACKPINK!'
+          : lang === 'pt'
+          ? 'De Whistle ao Coachella, teste seus conhecimentos sobre o BLACKPINK!'
+          : 'From Whistle to headlining Coachella, put your BLINK knowledge to the test!';
+      bingeBtn =
+        lang === 'ko'
+          ? '50문제 퀴즈 풀러 가기'
+          : lang === 'es'
+          ? 'Jugar Quiz de 50 Preguntas'
+          : lang === 'pt'
+          ? 'Jogar Quiz de 50 Perguntas'
+          : 'Play 50-Question Trivia';
+    } else if (quiz.tag === 'Doctor X') {
+      bingeSlug = 'doctor-x-white-mafia-trivia';
+      bingeHref = '/quiz/doctor-x-white-mafia-trivia';
+      bingeTitle =
+        lang === 'ko'
+          ? '《닥터X: 하얀 마피아의 시대》 30문제 과몰입 덕력고사도 도전해볼까요?'
+          : lang === 'es'
+          ? '¿Listo para la Trivia de 30 Preguntas de Doctor X?'
+          : lang === 'pt'
+          ? 'Pronto para o Quiz de 30 Perguntas de Doctor X?'
+          : 'Ready for the 30-Question Doctor X Trivia Challenge?';
+      bingeDesc =
+        lang === 'ko'
+          ? "'수술방의 미친 계' 계수정의 사이다 명대사부터 구서대학교병원 하얀 마피아의 숨겨진 설정까지 테스트해보세요!"
+          : lang === 'es'
+          ? '¡Desde las frases icónicas de Gye Su-jeong hasta los secretos del Hospital Guseo!'
+          : lang === 'pt'
+          ? 'Das frases icônicas de Gye Su-jeong aos segredos do Hospital Universitário Guseo!'
+          : 'From Gye Su-jeong’s iconic quotes to Guseo University Hospital secrets, prove your true Doctor X mastery!';
+      bingeBtn =
+        lang === 'ko'
+          ? '닥터X 상식 퀴즈 풀러 가기'
+          : lang === 'es'
+          ? 'Jugar Trivia Doctor X'
+          : lang === 'pt'
+          ? 'Jogar Quiz Doctor X'
+          : 'Play Doctor X Trivia';
+    } else if (quiz.category === 'Food' || quiz.tag === 'K-Food') {
+      bingeSlug = 'korean-spicy-food';
+      bingeHref = '/quiz/korean-spicy-food';
+      bingeTitle =
+        lang === 'ko'
+          ? '한국 매운 음식 & 길거리 음식 챌린지도 도전해볼까요?'
+          : lang === 'es'
+          ? '¿Listo para el Reto de Comida Picante Coreana?'
+          : lang === 'pt'
+          ? 'Pronto para o Desafio de Comida Picante Coreana?'
+          : 'Ready for the Spicy Food & Street Food Challenge?';
+      bingeDesc =
+        lang === 'ko'
+          ? '불닭볶음면부터 길거리 포장마차 꿀조합까지, 당신의 진정한 K-푸드 레벨을 테스트해보세요!'
+          : lang === 'es'
+          ? '¡Desde Buldak ramen hasta comida callejera! ¡Demuestra tu nivel foodie coreano!'
+          : lang === 'pt'
+          ? 'Do Buldak ramen à comida de rua, teste seu verdadeiro nível foodie coreano!'
+          : 'From Buldak challenges to street food lore, test your true Korean foodie IQ!';
+      bingeBtn =
+        lang === 'ko'
+          ? '푸드 챌린지 풀러 가기'
+          : lang === 'es'
+          ? 'Jugar Reto Foodie'
+          : lang === 'pt'
+          ? 'Jogar Desafio Foodie'
+          : 'Play Food Challenge';
+    }
+
+    const displayRelatedQuizzes = relatedQuizzes
+      .filter((relQuiz) => relQuiz.slug !== bingeSlug)
+      .slice(0, 4);
 
     return (
       <div className="max-w-3xl mx-auto px-4 py-8">
@@ -738,6 +1028,104 @@ export default function PersonalityTestRunner({
 
             {/* Result Body */}
             <div className="p-6 sm:p-10 space-y-6">
+              {friendComparisonCard}
+
+              {!recordPlan && (
+                <div className="p-4 sm:p-5 rounded-2xl bg-slate-50 border border-slate-200/90 space-y-3">
+                  <p className="text-xs sm:text-sm font-bold text-slate-800 text-center">
+                    {lang === 'ko'
+                      ? '📸 내 포토카드를 저장하고 친구와 WhatsApp으로 궁합을 비교해보세요!'
+                      : lang === 'es'
+                      ? '📸 ¡Guarda tu photocard y compara tu alma gemela por WhatsApp!'
+                      : lang === 'pt'
+                      ? '📸 Salve seu photocard e compare sua alma gêmea no WhatsApp!'
+                      : '📸 Save your photocard & compare your soulmate match on WhatsApp!'}
+                  </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <button
+                      onClick={() => handleDownloadCard('result_top')}
+                      disabled={isGeneratingCard}
+                      className="w-full py-3 px-4 bg-slate-950 hover:bg-slate-800 text-white text-xs sm:text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors active:scale-95 group"
+                    >
+                      {isGeneratingCard ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          <span>
+                            {lang === 'ko'
+                              ? '포토카드 생성 중...'
+                              : lang === 'es'
+                              ? 'Generando Photocard...'
+                              : lang === 'pt'
+                              ? 'Gerando Photocard...'
+                              : 'Generating Photocard...'}
+                          </span>
+                        </>
+                      ) : cardDownloaded ? (
+                        <>
+                          <Check className="w-4 h-4 text-emerald-300" />
+                          <span>
+                            {lang === 'ko'
+                              ? '포토카드 저장 완료!'
+                              : lang === 'es'
+                              ? '¡Photocard guardada!'
+                              : lang === 'pt'
+                              ? 'Photocard salvo!'
+                              : 'Photocard Saved!'}
+                          </span>
+                        </>
+                      ) : (
+                        <>
+                          <Camera className="w-4 h-4 group-hover:rotate-12 transition-transform" />
+                          <span>
+                            {lang === 'ko'
+                              ? '포토카드 저장 (PNG)'
+                              : lang === 'es'
+                              ? 'Guardar Photocard (PNG)'
+                              : lang === 'pt'
+                              ? 'Salvar Photocard (PNG)'
+                              : 'Save Photocard (PNG)'}
+                          </span>
+                        </>
+                      )}
+                    </button>
+
+                    <button
+                      onClick={() => handleShareWhatsApp('result_top')}
+                      className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-xs sm:text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-sm shadow-[#25D366]/25"
+                    >
+                      <WhatsAppIcon />
+                      <span>{whatsappLabel}</span>
+                    </button>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2.5">
+                    <button
+                      onClick={() => handleCopyLink('result_top')}
+                      className="w-full py-2.5 px-3 bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 transition-colors border border-purple-200"
+                    >
+                      {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                      <span className="truncate">{copyLinkLabel}</span>
+                    </button>
+
+                    <button
+                      onClick={() => handleShareTwitter('result_top')}
+                      className="w-full py-2.5 px-3 bg-slate-100 hover:bg-slate-200 text-slate-900 text-xs font-bold rounded-xl flex items-center justify-center gap-1.5 transition-colors"
+                    >
+                      <Share2 className="w-3.5 h-3.5" />
+                      <span>
+                        {lang === 'ko'
+                          ? 'X에 결과 공유'
+                          : lang === 'es'
+                          ? 'Compartir en X'
+                          : lang === 'pt'
+                          ? 'Compartilhar no X'
+                          : 'Share on X'}
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              )}
+
               {/* Animated Top 3 Soulmate Sync Rate Gauge Bars */}
               {topMatches.length > 0 && (
                 <div className="p-5 rounded-2xl bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white border border-purple-500/30 shadow-inner">
@@ -760,7 +1148,7 @@ export default function PersonalityTestRunner({
                   <div className="space-y-2.5">
                     {topMatches.map((m, idx) => {
                       const isWinner = idx === 0;
-                      return (
+                          return (
                         <div key={m.id} className="space-y-1">
                           <div className="flex items-center justify-between text-xs sm:text-sm">
                             <span className={`flex items-center gap-1.5 ${isWinner ? 'font-black text-white' : 'font-bold text-purple-200/85'}`}>
@@ -913,21 +1301,15 @@ export default function PersonalityTestRunner({
                     </p>
                   </div>
                   <Link
-                    href={`/chemistry/${
-                      quiz.tag === 'Stray Kids'
-                        ? 'stray-kids'
-                        : quiz.tag === 'BLACKPINK'
-                        ? 'blackpink'
-                        : quiz.tag === 'TWICE'
-                        ? 'twice'
-                        : quiz.tag === 'ENHYPEN'
-                        ? 'enhypen'
-                        : quiz.tag === 'aespa'
-                        ? 'aespa'
-                        : quiz.tag === 'LE SSERAFIM'
-                        ? 'le-sserafim'
-                        : 'bts'
-                    }?m=${encodeURIComponent(matchedResult.id)}`}
+                    href={`/chemistry/${chemistryGroupId}?m=${encodeURIComponent(matchedResult.id)}`}
+                    onClick={() =>
+                      trackChemistryCtaClick({
+                        fromSlug: quiz.slug,
+                        targetGroup: chemistryGroupId,
+                        matchedMember: matchedResult.id,
+                        lang,
+                      })
+                    }
                     className="w-full sm:w-auto shrink-0 px-4 py-2.5 rounded-xl bg-white hover:bg-slate-100 text-slate-950 font-bold text-xs flex items-center justify-center gap-1.5 transition-colors active:scale-95"
                   >
                     <span>
@@ -944,254 +1326,106 @@ export default function PersonalityTestRunner({
                 </div>
               )}
 
-              {/* Friend Soulmate Comparison Card (when opened via ?m=...) */}
-              {friendMatch && (
-                <div className="p-5 rounded-2xl bg-gradient-to-r from-fuchsia-50 via-purple-50 to-indigo-50 border-2 border-purple-200/80 flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-                  <div className="flex items-center gap-2 shrink-0">
-                    <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
-                      {friendMatch.emoji}
-                    </div>
-                    <span className="text-purple-400 font-black text-lg">×</span>
-                    <div className="w-12 h-12 rounded-2xl bg-white border border-purple-200 flex items-center justify-center text-2xl shadow-sm">
-                      {matchedResult.emoji}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <span className="text-[11px] font-black uppercase tracking-wider text-purple-600 block mb-0.5">
-                      {matchedResult.id === friendMatch.id
-                        ? lang === 'ko'
-                          ? '🎉 100% 쌍둥이 소울메이트 매치!'
-                          : lang === 'es'
-                          ? '🎉 ¡100% GEMELOS DE ALMA!'
-                          : lang === 'pt'
-                          ? '🎉 100% GÊMEOS DE ALMA!'
-                          : '🎉 100% TWIN SOULMATE MATCH!'
-                        : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
-                        ? lang === 'ko'
-                          ? '🔥 운명의 1위 찰떡 케미 듀오!'
-                          : lang === 'es'
-                          ? '🔥 ¡DÚO DESTINADO CON QUÍMICA #1!'
-                          : lang === 'pt'
-                          ? '🔥 DUPLA DESTINADA COM QUÍMICA #1!'
-                          : '🔥 DESTINED #1 CHEMISTRY DUO!'
-                        : lang === 'ko'
-                        ? '✨ 친구와의 소울메이트 케미 결과'
-                        : lang === 'es'
-                        ? '✨ Resultado de Compatibilidad con tu Amigo/a'
-                        : lang === 'pt'
-                        ? '✨ Resultado de Compatibilidade com seu Amigo(a)'
-                        : '✨ Friend Soulmate Compatibility'}
-                    </span>
-                    <p className="text-xs sm:text-sm font-bold text-slate-800 leading-relaxed">
-                      {matchedResult.id === friendMatch.id
-                        ? lang === 'ko'
-                          ? `소름! 친구와 똑같이 [${memberName}] 소울메이트가 나왔어요! 지금 결과를 공유해 보세요!`
-                          : lang === 'es'
-                          ? `¡Increíble! Tú y tu amigo/a obtuvieron exactamente a [${memberName}]. ¡Envíale tu resultado!`
-                          : lang === 'pt'
-                          ? `Incrível! Você e seu amigo(a) tiraram exatamente [${memberName}]! Envie seu resultado!`
-                          : `Incredible! You and your friend both matched with [${memberName}]! Send them your result!`
-                        : matchedResult.bestMatchId === friendMatch.id || friendMatch.bestMatchId === matchedResult.id
-                        ? lang === 'ko'
-                          ? `친구의 [${getLocalizedText(friendMatch, 'name', lang)}] & 나의 [${memberName}] 조합은 그룹 내 최고 궁합 듀오입니다!`
-                          : lang === 'es'
-                          ? `¡[${getLocalizedText(friendMatch, 'name', lang)}] (tu amigo/a) y [${memberName}] (tú) son el mejor dúo del grupo!`
-                          : lang === 'pt'
-                          ? `[${getLocalizedText(friendMatch, 'name', lang)}] (seu amigo) e [${memberName}] (você) formam a melhor dupla do grupo!`
-                          : `Your friend's [${getLocalizedText(friendMatch, 'name', lang)}] & your [${memberName}] are each other's #1 Best Chemistry Match!`
-                        : lang === 'ko'
-                        ? `친구는 [${getLocalizedText(friendMatch, 'name', lang)}], 나는 [${memberName}]! 친구에게 내 결과를 답장으로 보내보세요!`
-                        : lang === 'es'
-                        ? `Tu amigo/a obtuvo a [${getLocalizedText(friendMatch, 'name', lang)}] y tú a [${memberName}]. ¡Respóndele con tu resultado en WhatsApp!`
-                        : lang === 'pt'
-                        ? `Seu amigo(a) tirou [${getLocalizedText(friendMatch, 'name', lang)}] e você [${memberName}]. Responda com seu resultado no WhatsApp!`
-                        : `Your friend got [${getLocalizedText(friendMatch, 'name', lang)}] and you got [${memberName}]! Send your result back to them!`}
-                    </p>
-                  </div>
-                </div>
-              )}
-
-              {/* Action Buttons (Share & Retake) */}
-              <div className="pt-4 border-t border-slate-100 space-y-3">
-                {/* 📸 Download Soulmate Result Card Button */}
-                <button
-                  onClick={handleDownloadCard}
-                  disabled={isGeneratingCard}
-                  className="w-full py-3.5 px-5 bg-slate-950 hover:bg-slate-800 text-white text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors active:scale-95 group"
-                >
-                  {isGeneratingCard ? (
-                    <>
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>
-                        {lang === 'ko'
-                          ? '홀로그램 포토카드 생성 중... 📸'
-                          : lang === 'es'
-                          ? 'Generando Photocard Holográfica... 📸'
-                          : lang === 'pt'
-                          ? 'Gerando Photocard Holográfico... 📸'
-                          : 'Generating Holographic Photocard... 📸'}
-                      </span>
-                    </>
-                  ) : cardDownloaded ? (
-                    <>
-                      <Check className="w-4 h-4 text-emerald-200" />
-                      <span>
-                        {lang === 'ko'
-                          ? '홀로그램 포토카드 저장 완료! 인스타·X에 자랑해보세요 ✨'
-                          : lang === 'es'
-                          ? '¡Photocard guardada! ¡Compártela en Instagram y X! ✨'
-                          : lang === 'pt'
-                          ? 'Photocard salvo! Compartilhe no Instagram e X! ✨'
-                          : 'Photocard Saved! Share on Instagram & X! ✨'}
-                      </span>
-                    </>
-                  ) : (
-                    <>
-                      <Camera className="w-4 h-4 group-hover:rotate-12 transition-transform" />
-                      <span>
-                        {lang === 'ko'
-                          ? '📸 홀로그램 소울메이트 포토카드 저장 (인스타·X 자랑용)'
-                          : lang === 'es'
-                          ? '📸 Guardar Photocard Holográfica de Soulmate (PNG)'
-                          : lang === 'pt'
-                          ? '📸 Salvar Photocard Holográfico de Soulmate (PNG)'
-                          : '📸 Save Holographic Soulmate Photocard (PNG for IG & X)'}
-                      </span>
-                    </>
-                  )}
-                </button>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {/* Compact Footer Action Strip */}
+              {!recordPlan && (
+                <div className="pt-4 border-t border-slate-100 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                   <button
-                    onClick={handleShareWhatsApp}
-                    className="w-full py-3.5 px-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-[#25D366]/25"
+                    onClick={() => handleShareWhatsApp('result_bottom')}
+                    className="w-full py-3 px-4 bg-[#25D366] hover:bg-[#1ebe5d] text-white text-xs sm:text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95"
                   >
-                    <svg className="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
-                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.124.556 4.119 1.528 5.847l-1.528 5.581 5.713-1.499c1.678.9 3.593 1.413 5.629 1.413 6.627 0 12-5.373 12-12s-5.373-12-12-12z" />
-                    </svg>
-                    <span>
-                      {lang === 'ko'
-                        ? 'WhatsApp으로 친구와 궁합 보기'
-                        : lang === 'es'
-                        ? 'Compartir en WhatsApp'
-                        : lang === 'pt'
-                        ? 'Compartilhar no WhatsApp'
-                        : 'Share on WhatsApp'}
-                    </span>
+                    <WhatsAppIcon />
+                    <span className="truncate">{whatsappLabel}</span>
                   </button>
 
                   <button
-                    onClick={handleShareTwitter}
-                    className="w-full py-3.5 px-4 bg-slate-900 hover:bg-black text-white text-sm font-black rounded-xl flex items-center justify-center gap-2 transition-transform active:scale-95 shadow-md shadow-slate-900/10"
-                  >
-                    <Share2 className="w-4 h-4" />
-                    <span>
-                      {lang === 'ko'
-                        ? 'X (트위터)에 결과 공유'
-                        : lang === 'es'
-                        ? 'Compartir en X (Twitter)'
-                        : lang === 'pt'
-                        ? 'Compartilhar no X (Twitter)'
-                        : 'Share Result on X'}
-                    </span>
-                  </button>
-                </div>
-
-                <div className="flex flex-col sm:flex-row items-center gap-3">
-                  <button
-                    onClick={handleCopyLink}
-                    className="w-full sm:flex-1 py-3 px-5 bg-purple-50 hover:bg-purple-100 text-purple-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
+                    onClick={() => handleCopyLink('result_bottom')}
+                    className="w-full py-3 px-4 bg-purple-50 hover:bg-purple-100 text-purple-700 text-xs sm:text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors border border-purple-200"
                   >
                     {copied ? <Check className="w-4 h-4 text-emerald-600" /> : <Copy className="w-4 h-4" />}
-                    <span>
-                      {copied
-                        ? t.resultView.copied
-                        : lang === 'ko'
-                        ? '내 소울메이트 초대 링크 복사'
-                        : lang === 'es'
-                        ? 'Copiar Enlace de Desafío'
-                        : lang === 'pt'
-                        ? 'Copiar Link de Desafio'
-                        : 'Copy Soulmate Challenge Link'}
-                    </span>
+                    <span className="truncate">{copyLinkLabel}</span>
                   </button>
 
                   <button
-                    onClick={startTest}
-                    className="w-full sm:w-auto py-3 px-5 bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
+                    onClick={handleRetake}
+                    className="w-full py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-bold rounded-xl flex items-center justify-center gap-2 transition-colors"
                   >
                     <RotateCcw className="w-4 h-4" />
                     <span>{t.resultView.retake}</span>
                   </button>
                 </div>
-              </div>
+              )}
             </div>
           </div>
         </div>
 
-        {/* Dynamic Continuous Binge Banner */}
-        {(() => {
-          let bingeHref = '/quiz/stray-kids-stay-trivia';
-          let bingeTitle = lang === 'ko' ? '스키즈 60문제 상식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío STAY de 60 Preguntas?' : lang === 'pt' ? 'Pronto para o Desafio STAY de 60 Perguntas?' : 'Ready for the 60-Question STAY Trivia?';
-          let bingeDesc = lang === 'ko' ? '데뷔곡 District 9부터 빌보드 200 대기록까지, 당신의 진정한 스테이 레벨을 증명하세요!' : lang === 'es' ? '¡Desde District 9 hasta récords de Billboard! ¡Demuestra cuánto sabes de Stray Kids!' : lang === 'pt' ? 'De District 9 aos recordes da Billboard, prove seu verdadeiro nível STAY!' : 'From District 9 to historic Billboard #1 records, prove your true STAY status!';
-          let bingeBtn = lang === 'ko' ? '60문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 60 Preguntas' : lang === 'pt' ? 'Jogar Quiz de 60 Perguntas' : 'Play 60-Question Trivia';
-
-          if (quiz.tag === 'BTS') {
-            bingeHref = '/quiz/bts-army-trivia';
-            bingeTitle = lang === 'ko' ? '방탄소년단 35문제 아미 지식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío ARMY de 35 Preguntas?' : lang === 'pt' ? 'Pronto para o Desafio ARMY de 35 Perguntas?' : 'Ready for the 35-Question BTS ARMY Trivia?';
-            bingeDesc = lang === 'ko' ? '데뷔곡 No More Dream부터 빌보드 Hot 100 대기록까지, 아미 레벨을 증명하세요!' : lang === 'es' ? '¡Desde No More Dream hasta el Hot 100! ¡Demuestra tu nivel ARMY!' : lang === 'pt' ? 'De No More Dream ao topo da Billboard Hot 100, prove seu nível ARMY!' : 'From No More Dream to Billboard Hot 100 records, prove your true ARMY status!';
-            bingeBtn = lang === 'ko' ? '35문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 35 Preguntas' : lang === 'pt' ? 'Jogar Quiz de 35 Perguntas' : 'Play 35-Question Trivia';
-          } else if (quiz.tag === 'BLACKPINK') {
-            bingeHref = '/quiz/blackpink-blink-trivia';
-            bingeTitle = lang === 'ko' ? '블랙핑크 50문제 블링크 지식 퀴즈도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Desafío BLINK de 50 Preguntas?' : lang === 'pt' ? 'Pronto para o Desafio BLINK de 50 Perguntas?' : 'Ready for the 50-Question BLINK Trivia?';
-            bingeDesc = lang === 'ko' ? '휘파람, 뚜두뚜두부터 코첼라 헤드라이너까지, 당신의 블링크 지식을 테스트하세요!' : lang === 'es' ? '¡Desde Whistle hasta Coachella! ¡Pon a prueba cuánto sabes de BLACKPINK!' : lang === 'pt' ? 'De Whistle ao Coachella, teste seus conhecimentos sobre o BLACKPINK!' : 'From Whistle to headlining Coachella, put your BLINK knowledge to the test!';
-            bingeBtn = lang === 'ko' ? '50문제 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Quiz de 50 Preguntas' : lang === 'pt' ? 'Jogar Quiz de 50 Perguntas' : 'Play 50-Question Trivia';
-          } else if (quiz.tag === 'Doctor X') {
-            bingeHref = '/quiz/doctor-x-white-mafia-trivia';
-            bingeTitle = lang === 'ko' ? '《닥터X: 하얀 마피아의 시대》 30문제 과몰입 덕력고사도 도전해볼까요?' : lang === 'es' ? '¿Listo para la Trivia de 30 Preguntas de Doctor X?' : lang === 'pt' ? 'Pronto para o Quiz de 30 Perguntas de Doctor X?' : 'Ready for the 30-Question Doctor X Trivia Challenge?';
-            bingeDesc = lang === 'ko' ? "'수술방의 미친 계' 계수정의 사이다 명대사부터 구서대학교병원 하얀 마피아의 숨겨진 설정까지 테스트해보세요!" : lang === 'es' ? '¡Desde las frases icónicas de Gye Su-jeong hasta los secretos del Hospital Guseo!' : lang === 'pt' ? 'Das frases icônicas de Gye Su-jeong aos segredos do Hospital Universitário Guseo!' : 'From Gye Su-jeong’s iconic quotes to Guseo University Hospital secrets, prove your true Doctor X mastery!';
-            bingeBtn = lang === 'ko' ? '닥터X 상식 퀴즈 풀러 가기' : lang === 'es' ? 'Jugar Trivia Doctor X' : lang === 'pt' ? 'Jogar Quiz Doctor X' : 'Play Doctor X Trivia';
-          } else if (quiz.category === 'Food' || quiz.tag === 'K-Food') {
-            bingeHref = '/quiz/korean-spicy-food';
-            bingeTitle = lang === 'ko' ? '한국 매운 음식 & 길거리 음식 챌린지도 도전해볼까요?' : lang === 'es' ? '¿Listo para el Reto de Comida Picante Coreana?' : lang === 'pt' ? 'Pronto para o Desafio de Comida Picante Coreana?' : 'Ready for the Spicy Food & Street Food Challenge?';
-            bingeDesc = lang === 'ko' ? '불닭볶음면부터 길거리 포장마차 꿀조합까지, 당신의 진정한 K-푸드 레벨을 테스트해보세요!' : lang === 'es' ? '¡Desde Buldak ramen hasta comida callejera! ¡Demuestra tu nivel foodie coreano!' : lang === 'pt' ? 'Do Buldak ramen à comida de rua, teste seu verdadeiro nível foodie coreano!' : 'From Buldak challenges to street food lore, test your true Korean foodie IQ!';
-            bingeBtn = lang === 'ko' ? '푸드 챌린지 풀러 가기' : lang === 'es' ? 'Jugar Reto Foodie' : lang === 'pt' ? 'Jogar Desafio Foodie' : 'Play Food Challenge';
-          }
-
-          return (
-            <div className="bg-slate-950 p-6 sm:p-8 rounded-2xl text-white mb-10 flex flex-col sm:flex-row items-center justify-between gap-6 border border-slate-800">
-              <div>
-                <span className="px-2.5 py-0.5 rounded bg-white/10 text-slate-300 text-xs font-mono uppercase tracking-wider mb-2 inline-block border border-white/15">
-                  {t.resultView.nextChallengeBadge}
-                </span>
-                <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-1 text-white">
-                  {bingeTitle}
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-300 max-w-md font-normal">
-                  {bingeDesc}
-                </p>
-              </div>
-              <Link
-                href={bingeHref}
-                className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-950 font-bold text-sm rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors"
-              >
-                <span>{bingeBtn}</span>
-                <ArrowRight className="w-4 h-4 text-slate-950" />
-              </Link>
+        {/* Related Quizzes Grid First — Keep Session Momentum */}
+        {displayRelatedQuizzes.length > 0 && (
+          <div className="mb-10">
+            <h3 className="text-lg font-bold text-slate-950 mb-1 flex items-center gap-2">
+              <span>{t.resultView.keepPlaying}</span>
+            </h3>
+            {quiz.category === 'K-Pop' && (
+              <p className="text-xs sm:text-sm text-slate-500 mb-4">
+                {lang === 'ko'
+                  ? '다른 K-Pop 그룹에서는 어떤 멤버가 나의 소울메이트일까? 바로 확인해보세요!'
+                  : lang === 'es'
+                  ? '¿Quién será tu alma gemela en otros grupos de K-Pop? ¡Descúbrelo ahora!'
+                  : lang === 'pt'
+                  ? 'Quem será sua alma gêmea em outros grupos de K-Pop? Descubra agora!'
+                  : 'Curious who your soulmate is in other K-Pop groups? Take another match test!'}
+              </p>
+            )}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {displayRelatedQuizzes.map((relQuiz, idx) => (
+                <QuizCard
+                  key={relQuiz.slug}
+                  quiz={relQuiz}
+                  onSelect={() =>
+                    trackRelatedQuizClick({
+                      fromSlug: quiz.slug,
+                      toSlug: relQuiz.slug,
+                      toQuizType: relQuiz.quizType || 'trivia',
+                      position: idx + 1,
+                      placement: 'related_grid',
+                      lang,
+                    })
+                  }
+                />
+              ))}
             </div>
-          );
-        })()}
-
-        {/* Related Quizzes */}
-        <div>
-          <h3 className="text-lg font-bold text-slate-950 mb-4 flex items-center gap-2">
-            <span>{t.resultView.keepPlaying}</span>
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {relatedQuizzes.slice(0, 2).map((relQuiz) => (
-              <QuizCard key={relQuiz.slug} quiz={relQuiz} />
-            ))}
           </div>
+        )}
+
+        {/* Dynamic Continuous Binge Banner */}
+        <div className="bg-slate-950 p-6 sm:p-8 rounded-2xl text-white mb-6 flex flex-col sm:flex-row items-center justify-between gap-6 border border-slate-800">
+          <div>
+            <span className="px-2.5 py-0.5 rounded bg-white/10 text-slate-300 text-xs font-mono uppercase tracking-wider mb-2 inline-block border border-white/15">
+              {t.resultView.nextChallengeBadge}
+            </span>
+            <h3 className="text-xl sm:text-2xl font-bold tracking-tight mb-1 text-white">
+              {bingeTitle}
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-md font-normal">
+              {bingeDesc}
+            </p>
+          </div>
+          <Link
+            href={bingeHref}
+            onClick={() =>
+              trackRelatedQuizClick({
+                fromSlug: quiz.slug,
+                toSlug: bingeSlug,
+                toQuizType: 'trivia',
+                position: 1,
+                placement: 'binge_banner',
+                lang,
+              })
+            }
+            className="w-full sm:w-auto px-6 py-3.5 bg-white hover:bg-slate-100 text-slate-950 font-bold text-sm rounded-xl flex items-center justify-center gap-2 shrink-0 transition-colors"
+          >
+            <span>{bingeBtn}</span>
+            <ArrowRight className="w-4 h-4 text-slate-950" />
+          </Link>
         </div>
       </div>
     );
@@ -1238,7 +1472,7 @@ export default function PersonalityTestRunner({
             const isSelected = selectedOptionId === opt.id;
             const text = getLocalizedText(opt, 'text', lang);
 
-            return (
+                return (
               <button
                 key={opt.id}
                 onClick={() => handleSelectOption(opt)}

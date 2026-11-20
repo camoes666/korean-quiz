@@ -71,11 +71,13 @@ export function trackShare(params: {
   slug?: string;
   method: 'challenge_copy' | 'link_copy' | 'native_share' | 'twitter' | 'whatsapp' | 'counter_challenge';
   lang: Language;
+  placement?: 'result_top' | 'result_bottom' | 'trivia_result' | 'challenge_result';
 }): void {
   trackEvent('share_click', {
     quiz_slug: params.slug || 'unknown',
     method: params.method,
     language: params.lang,
+    placement: params.placement,
   });
 }
 
@@ -95,10 +97,66 @@ export function trackCardDownload(params: {
   slug: string;
   cardType: 'trivia' | 'personality';
   lang: Language;
+  placement?: 'result_top' | 'result_bottom' | 'trivia_result';
 }): void {
   trackEvent('card_download', {
     quiz_slug: params.slug,
     card_type: params.cardType,
+    language: params.lang,
+    placement: params.placement,
+  });
+}
+
+export function trackRelatedQuizClick(params: {
+  fromSlug: string;
+  toSlug: string;
+  toQuizType: 'trivia' | 'personality';
+  position: number;
+  placement: 'related_grid' | 'binge_banner' | 'next_quiz_cta' | 'random_quiz';
+  lang: Language;
+}): void {
+  trackEvent('related_quiz_click', {
+    from_slug: params.fromSlug,
+    to_slug: params.toSlug,
+    to_quiz_type: params.toQuizType,
+    position: params.position,
+    placement: params.placement,
+    language: params.lang,
+  });
+}
+
+export function trackChemistryCtaClick(params: {
+  fromSlug: string;
+  targetGroup: string;
+  matchedMember?: string;
+  lang: Language;
+}): void {
+  trackEvent('chemistry_cta_click', {
+    from_slug: params.fromSlug,
+    target_group: params.targetGroup,
+    matched_member: params.matchedMember,
+    language: params.lang,
+  });
+}
+
+export function trackGuideCtaClick(params: {
+  fromSlug: string;
+  lang: Language;
+}): void {
+  trackEvent('guide_cta_click', {
+    from_slug: params.fromSlug,
+    language: params.lang,
+  });
+}
+
+export function trackQuizRetake(params: {
+  slug: string;
+  quizType: 'trivia' | 'personality';
+  lang: Language;
+}): void {
+  trackEvent('quiz_retake', {
+    quiz_slug: params.slug,
+    quiz_type: params.quizType,
     language: params.lang,
   });
 }

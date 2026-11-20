@@ -9,9 +9,10 @@ import { isNewQuiz } from '@/lib/quizBadges';
 
 interface QuizCardProps {
   quiz: Quiz;
+  onSelect?: () => void;
 }
 
-export default function QuizCard({ quiz }: QuizCardProps) {
+export default function QuizCard({ quiz, onSelect }: QuizCardProps) {
   const { lang, t } = useLanguage();
   const mascot = getQuizMascot(quiz.slug, quiz.tag);
 
@@ -48,7 +49,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <div className="flex items-center gap-1.5 flex-wrap">
             {isPersonality ? (
               <span className="px-2 py-0.5 bg-white/95 backdrop-blur-xs text-slate-800 font-medium rounded-md text-[11px] shadow-2xs">
-                {lang === 'en' ? 'Personality' : lang === 'es' || lang === 'pt' ? 'Personalidade' : '성향 테스트'}
+                {lang === 'en' ? 'Personality' : lang === 'es' ? 'Personalidad' : lang === 'pt' ? 'Personalidade' : '성향 테스트'}
                 {tagLabel ? ` · ${tagLabel}` : ''}
               </span>
             ) : (
@@ -79,7 +80,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
       {/* Card Body */}
       <div className="p-5 flex flex-col flex-1 justify-between">
         <div>
-          <Link href={`/quiz/${quiz.slug}`} className="block">
+          <Link href={`/quiz/${quiz.slug}`} onClick={onSelect} className="block">
             <h3 className="text-base sm:text-lg font-semibold text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-2 min-h-[2lh] group-hover:text-slate-700 transition-colors">
               {title}
             </h3>
@@ -117,6 +118,7 @@ export default function QuizCard({ quiz }: QuizCardProps) {
           <div className="flex items-center gap-2">
             <Link
               href={`/quiz/${quiz.slug}`}
+              onClick={onSelect}
               className="flex-1 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-xl flex items-center justify-center gap-1.5 transition-colors active:scale-[0.99]"
             >
               <span>
