@@ -1,8 +1,22 @@
 # 📌 K-Pulse 핀터레스트(Pinterest) 바이럴 & SEO 문구 모음집 (Copy & Paste Playbook)
 
 > **목적**: 핀터레스트 검색 알고리즘(Visual SEO)과 K-Pop 팬들의 **'보드 저장(Save) 본능'**을 동시에 저격하여, 핀 1개가 수개월 동안 꾸준히 방문자를 데려오도록 설계된 실전 문구집입니다.  
-> **최종 업데이트**: 2026-10-20  
+> **최종 업데이트**: 2026-11-20  
 > **공식 도메인**: `https://kpulsequiz.com`
+> **자동 생성 핀 시트**: `npm run generate:pins` 실행 시 [`public/images/pinterest/PINS_INDEX.md`](../public/images/pinterest/PINS_INDEX.md) 및 [`pinterest-pins-manifest.csv`](../public/images/pinterest/pinterest-pins-manifest.csv) (125장, ES/EN/PT + UTM 포함)가 자동 생성됩니다.
+
+---
+
+## 🔗 필수 UTM + 언어 URL 규칙 (Dark Social / Direct 누수 방지)
+
+핀터레스트 인앱 브라우저 클릭이 GA4에서 `Direct`로 섞이지 않도록, 모든 핀 링크에는 반드시 아래 형식을 사용합니다:
+
+```text
+https://kpulsequiz.com/quiz/{슬러그}?lang={es|pt}&utm_source=pinterest&utm_medium=social&utm_campaign={그룹}_{언어}&utm_content={cover|question_hook|card_멤버|saju_mbti}
+```
+
+- 영어(`en`) 핀은 `lang` 파라미터를 생략하고 `utm_source=pinterest&utm_medium=social&utm_campaign=...&utm_content=...`만 붙입니다.
+- `PINS_INDEX.md`와 `pinterest-pins-manifest.csv`에는 위 규칙이 이미 전부 적용되어 있습니다.
 
 ---
 
@@ -21,9 +35,9 @@
 
 ---
 
-## 1. 🗂️ 핀터레스트 계정 & 필수 보드(Board) 6개 세팅 문구
+## 1. 🗂️ 핀터레스트 계정 & 필수 보드(Board) 12개 세팅 문구
 
-핀을 올리기 전에 아래 **6개 보드를 먼저 생성**하고, 보드 설명(Description)까지 그대로 복사해 붙여넣으세요. 핀터레스트는 **보드의 설명문**을 읽고 내 핀을 누구에게 추천할지 결정합니다.
+핀을 올리기 전에 아래 **보드들을 먼저 생성**하고, 보드 설명(Description)까지 그대로 복사해 붙여넣으세요. 핀터레스트는 **보드의 설명문**을 읽고 내 핀을 누구에게 추천할지 결정합니다. (특히 **보드 11 스페인어 보드, 보드 12 포르투갈어 보드**는 우선 생성 권장!)
 
 ### 프로필 기본 세팅
 - **Display Name**: `K-Pulse | K-Pop Quizzes, Soulmate Tests & Korean Culture 🐯✨`
@@ -88,6 +102,34 @@
 - **Board Description**:
   ```text
   Which LE SSERAFIM member are you? Discover your FEARLESS archetype and unnie-maknae chemistry with Chaewon, Sakura, Yunjin, Kazuha, and Eunchae! Free interactive K-Pop quizzes, aesthetic bias cards, and EASY/CRAZY trivia for FEARNOTs.
+  ```
+
+### 보드 9: TWICE (ONCE & Lovelys)
+- **Board Name**: `TWICE Quizzes & Lovelys Personality Tests 🍭✨`
+- **Board Description**:
+  ```text
+  Which TWICE member are you? Discover your TWICE soulmate and Lovelys character twin among Nayeon, Jeongyeon, Momo, Sana, Jihyo, Mina, Dahyun, Chaeyoung, and Tzuyu! Free interactive ONCE personality quizzes, aesthetic photocards, and K-Saju MBTI compatibility tests.
+  ```
+
+### 보드 10: ENHYPEN (ENGENE & Dark Moon)
+- **Board Name**: `ENHYPEN Quizzes & Dark Moon Personality Tests 🧛🔥`
+- **Board Description**:
+  ```text
+  Which ENHYPEN member are you? Find your ENGENE soulmate match with Jungwon, Heeseung, Jay, Jake, Sunghoon, Sunoo, and Ni-ki! Free vampire-concept personality quizzes, K-Saju compatibility calculators, and aesthetic K-Pop cards.
+  ```
+
+### 보드 11: 스페인어 전용 보드 (ES 주력 성장 채널)
+- **Board Name**: `Tests de K-Pop en Español | BTS, BLACKPINK, Stray Kids ✨`
+- **Board Description**:
+  ```text
+  Tests de personalidad K-Pop gratis en español: descubre qué integrante de BTS, BLACKPINK, Stray Kids, TWICE, ENHYPEN, aespa o LE SSERAFIM es tu alma gemela. ¡Guarda tu photocard estética, compárate por WhatsApp con tus amigos y calcula tu compatibilidad K-Saju y MBTI!
+  ```
+
+### 보드 12: 포르투갈어 전용 보드 (PT 브라질 타깃)
+- **Board Name**: `Testes de K-Pop em Português | BTS, BLACKPINK, TWICE 💜`
+- **Board Description**:
+  ```text
+  Testes de personalidade K-Pop grátis em português para ARMY, BLINK, STAY, ONCE e ENGENE! Descubra qual membro do BTS, BLACKPINK, Stray Kids, TWICE, ENHYPEN, aespa ou LE SSERAFIM é a sua alma gêmea e veja sua química K-Saju e MBTI.
   ```
 
 ---

@@ -585,7 +585,7 @@ export const IDOL_GROUPS: IdolGroupProfile[] = [
     accentColor: '#d946ef',
     gradient: 'from-fuchsia-900 via-pink-800 to-rose-950',
     pillStyle: 'border-fuchsia-300 bg-fuchsia-50 text-fuchsia-800',
-    mascotUrl: '/images/mascot/bomi-blackpink-v2.webp',
+    mascotUrl: '/images/mascot/bomi-twice.webp',
     relatedQuizSlug: 'which-twice-member-are-you',
     members: [
       {
@@ -816,7 +816,7 @@ export const IDOL_GROUPS: IdolGroupProfile[] = [
     accentColor: '#dc2626',
     gradient: 'from-red-950 via-rose-900 to-slate-950',
     pillStyle: 'border-red-300 bg-red-50 text-red-800',
-    mascotUrl: '/images/mascot/hobi-skz-v2.webp',
+    mascotUrl: '/images/mascot/hobi-enhypen.webp',
     relatedQuizSlug: 'which-enhypen-member-are-you',
     members: [
       {
