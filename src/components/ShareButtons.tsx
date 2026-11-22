@@ -7,6 +7,7 @@ import { encodeChallenge } from '@/lib/challenge';
 import { downloadResultCard } from '@/lib/renderResultCard';
 import { getQuizMascot } from '@/lib/mascot';
 import { trackShare, trackCardDownload } from '@/lib/analytics';
+import { isPrefixLocale, localizePath } from '@/lib/i18nRoutes';
 
 interface ShareButtonsProps {
   quizTitle: string;
@@ -68,9 +69,10 @@ export default function ShareButtons({
   const isHigh = pct >= 70;
   const displayedPoints = totalPoints ?? score * 1000;
 
-  // Determine final share URL (preserve sender's language when non-English)
+  // Determine final share URL (use dedicated localized path for es/pt/ko so social previews match language)
   const origin = typeof window !== 'undefined' ? window.location.origin : 'https://kpulsequiz.com';
-  const langQuery = lang !== 'en' ? `lang=${lang}` : '';
+  const langQuery = lang !== 'en' && !isPrefixLocale(lang) ? `lang=${lang}` : '';
+  const localizedQuizPath = slug ? localizePath(`/quiz/${slug}`, lang) : '';
   let shareUrl = url || (typeof window !== 'undefined' ? window.location.href : 'https://kpulsequiz.com');
   if (slug && questionIds && questionScores && questionIds.length === 5 && questionScores.length === 5) {
     const payload = encodeChallenge(slug, {
@@ -78,9 +80,9 @@ export default function ShareButtons({
       p: questionScores,
       n: nickname.trim(),
     });
-    shareUrl = `${origin}/quiz/${slug}?c=${payload}${langQuery ? `&${langQuery}` : ''}`;
+    shareUrl = `${origin}${localizedQuizPath}?c=${payload}${langQuery ? `&${langQuery}` : ''}`;
   } else if (slug) {
-    shareUrl = `${origin}/quiz/${slug}${langQuery ? `?${langQuery}` : ''}`;
+    shareUrl = `${origin}${localizedQuizPath}${langQuery ? `?${langQuery}` : ''}`;
   } else if (langQuery && !shareUrl.includes('lang=')) {
     shareUrl += `${shareUrl.includes('?') ? '&' : '?'}${langQuery}`;
   }

@@ -1,8 +1,14 @@
 'use client';
 
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { Language, translations, TranslationDictionary } from '@/lib/translations';
 import { trackLanguageChange } from '@/lib/analytics';
+import {
+  getLocaleFromPathname,
+  isLocalizablePath,
+  localizePath,
+} from '@/lib/i18nRoutes';
 
 export interface LanguageOption {
   code: Language;
@@ -28,11 +34,11 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-function resolveInitialLanguage(): Language {
+function resolveClientFallbackLanguage(): Language {
   if (typeof window === 'undefined') return 'en';
 
   try {
-    // 1. URL Query Param: ?lang=es / ?lang=ko / ?lang=en / ?lang=pt (최우선)
+    // 1. URL Query Param: ?lang=es / ?lang=ko / ?lang=en / ?lang=pt
     const params = new URLSearchParams(window.location.search);
     const urlLang = params.get('lang')?.toLowerCase() as Language;
     if (urlLang && translations[urlLang]) {
@@ -62,40 +68,85 @@ function resolveInitialLanguage(): Language {
 }
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>(() => resolveInitialLanguage());
+  const pathname = usePathname();
+  const router = useRouter();
+  const pathLocale = getLocaleFromPathname(pathname);
 
-  // URL 쿼리 파라미터 변경 감지 및 동기화
-  React.useEffect(() => {
-    const handlePopState = () => {
-      try {
-        const params = new URLSearchParams(window.location.search);
-        const urlLang = params.get('lang')?.toLowerCase() as Language;
-        if (urlLang && translations[urlLang]) {
-          setLangState(urlLang);
-          localStorage.setItem('kpulse_lang', urlLang);
-        }
-      } catch {
-        // safe
-      }
+  // Derive lang directly from URL prefix when on /es, /pt, /ko so static HTML & hydration match 100%.
+  const [rootLang, setRootLang] = useState<Language>('en');
+  const lang: Language = pathLocale || rootLang;
+  const didHydrateRootRef = useRef(false);
+
+  useEffect(() => {
+    if (pathLocale) {
+      didHydrateRootRef.current = true;
+      return;
+    }
+
+    const applyRootResolution = () => {
+      didHydrateRootRef.current = true;
+      setRootLang(resolveClientFallbackLanguage());
     };
-    window.addEventListener('popstate', handlePopState);
+
+    let timer: number | undefined;
+    if (!didHydrateRootRef.current) {
+      timer = window.setTimeout(applyRootResolution, 0);
+    } else {
+      timer = window.setTimeout(() => {
+        try {
+          const params = new URLSearchParams(window.location.search);
+          const urlLang = params.get('lang')?.toLowerCase() as Language;
+          if (urlLang && translations[urlLang]) {
+            setRootLang(urlLang);
+          }
+        } catch {
+          // safe
+        }
+      }, 0);
+    }
+
+    window.addEventListener('popstate', applyRootResolution);
+    return () => {
+      if (timer !== undefined) window.clearTimeout(timer);
+      window.removeEventListener('popstate', applyRootResolution);
+    };
+  }, [pathLocale, pathname]);
+
+  useEffect(() => {
     if (typeof document !== 'undefined') {
       document.documentElement.lang = lang;
     }
-    return () => window.removeEventListener('popstate', handlePopState);
   }, [lang]);
 
   const setLang = (newLang: Language) => {
     if (newLang !== lang) {
       trackLanguageChange({ from: lang, to: newLang });
     }
-    setLangState(newLang);
+    setRootLang(newLang);
+
     try {
       localStorage.setItem('kpulse_lang', newLang);
       if (typeof document !== 'undefined') {
         document.documentElement.lang = newLang;
       }
+
       if (typeof window !== 'undefined') {
+        const currentPathname = pathname || window.location.pathname || '/';
+        const currentParams = new URLSearchParams(window.location.search);
+        const currentHash = window.location.hash || '';
+
+        if (isLocalizablePath(currentPathname)) {
+          currentParams.delete('lang');
+          const searchStr = currentParams.toString();
+          const pathWithSuffix = `${currentPathname}${searchStr ? `?${searchStr}` : ''}${currentHash}`;
+          const targetPath = localizePath(pathWithSuffix, newLang);
+          const currentFull = `${currentPathname}${window.location.search}${currentHash}`;
+          if (targetPath !== currentFull) {
+            router.push(targetPath);
+          }
+          return;
+        }
+
         const url = new URL(window.location.href);
         if (url.searchParams.has('lang')) {
           if (newLang === 'en') {

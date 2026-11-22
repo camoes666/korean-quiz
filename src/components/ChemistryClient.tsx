@@ -17,6 +17,8 @@ import {
   Brain,
   Compass,
   Users,
+  Stamp,
+  MapPin,
 } from 'lucide-react';
 import {
   IDOL_GROUPS,
@@ -39,6 +41,10 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import MapPromoCard from './MapPromoCard';
 import { resolveMapGroup } from '@/lib/mapLink';
+import { getSpotsForMember } from '@/lib/mapGeo';
+import { getLocalizedMapText } from '@/types/map';
+import { localizePath } from '@/lib/i18nRoutes';
+import { readUserProfile, saveUserProfile } from '@/lib/userProfile';
 
 interface ChemistryClientProps {
   initialGroupId?: string;
@@ -73,62 +79,82 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
 
   // Hydrate from URL query params on mount
   useEffect(() => {
-    if (initializedFromUrl.current) return;
-    initializedFromUrl.current = true;
+    const timer = window.setTimeout(() => {
+      if (initializedFromUrl.current) return;
+      initializedFromUrl.current = true;
 
-    const gParam = searchParams.get('g') || initialGroupId;
-    const mParam = searchParams.get('m');
-    const yParam = searchParams.get('y');
-    const moParam = searchParams.get('mo');
-    const dParam = searchParams.get('d');
-    const mbtiParam = searchParams.get('mbti');
-    const nParam = searchParams.get('n');
+      const gParam = searchParams.get('g') || initialGroupId;
+      const mParam = searchParams.get('m');
+      const yParam = searchParams.get('y');
+      const moParam = searchParams.get('mo');
+      const dParam = searchParams.get('d');
+      const mbtiParam = searchParams.get('mbti');
+      const nParam = searchParams.get('n');
 
-    let targetGroup = defaultGroup;
-    if (gParam) {
-      const foundGroup = getIdolGroupById(gParam);
-      if (foundGroup) {
-        targetGroup = foundGroup;
-        setSelectedGroupId(foundGroup.id);
+      let targetGroup = defaultGroup;
+      if (gParam) {
+        const foundGroup = getIdolGroupById(gParam);
+        if (foundGroup) {
+          targetGroup = foundGroup;
+          setSelectedGroupId(foundGroup.id);
+        }
       }
-    }
 
-    if (mParam) {
-      const foundMember = targetGroup.members.find((mem) => mem.id === mParam);
-      if (foundMember) {
-        setSelectedMemberId(foundMember.id);
-      } else {
-        setSelectedMemberId(targetGroup.members[0].id);
+      if (mParam) {
+        const foundMember = targetGroup.members.find((mem) => mem.id === mParam);
+        if (foundMember) {
+          setSelectedMemberId(foundMember.id);
+        } else {
+          setSelectedMemberId(targetGroup.members[0].id);
+        }
+      } else if (gParam) {
+        setSelectedMemberId(
+          targetGroup.id === 'bts' ? 'jungkook' : targetGroup.members[0].id
+        );
       }
-    } else if (gParam) {
-      setSelectedMemberId(
-        targetGroup.id === 'bts' ? 'jungkook' : targetGroup.members[0].id
-      );
-    }
 
-    if (yParam && !Number.isNaN(Number(yParam))) {
-      setBirthYear(Math.max(1950, Math.min(2025, Number(yParam))));
-    }
-    if (moParam && !Number.isNaN(Number(moParam))) {
-      setBirthMonth(Math.max(1, Math.min(12, Number(moParam))));
-    }
-    if (dParam && !Number.isNaN(Number(dParam))) {
-      setBirthDay(Math.max(1, Math.min(31, Number(dParam))));
-    }
-    if (mbtiParam) {
-      const upper = mbtiParam.toUpperCase();
-      if (upper === 'UNKNOWN' || ALL_MBTI_TYPES.includes(upper as MbtiType)) {
-        setMbti(upper as UserMbtiInput);
+      const savedProfile = readUserProfile();
+
+      if (yParam && !Number.isNaN(Number(yParam))) {
+        setBirthYear(Math.max(1950, Math.min(2025, Number(yParam))));
+      } else if (savedProfile?.birthYear) {
+        setBirthYear(Math.max(1950, Math.min(2025, savedProfile.birthYear)));
       }
-    }
-    if (nParam) {
-      setNickname(nParam.slice(0, 24));
-    }
+      if (moParam && !Number.isNaN(Number(moParam))) {
+        setBirthMonth(Math.max(1, Math.min(12, Number(moParam))));
+      } else if (savedProfile?.birthMonth) {
+        setBirthMonth(Math.max(1, Math.min(12, savedProfile.birthMonth)));
+      }
+      if (dParam && !Number.isNaN(Number(dParam))) {
+        setBirthDay(Math.max(1, Math.min(31, Number(dParam))));
+      } else if (savedProfile?.birthDay) {
+        setBirthDay(Math.max(1, Math.min(31, savedProfile.birthDay)));
+      }
+      if (mbtiParam) {
+        const upper = mbtiParam.toUpperCase();
+        if (upper === 'UNKNOWN' || ALL_MBTI_TYPES.includes(upper as MbtiType)) {
+          setMbti(upper as UserMbtiInput);
+        }
+      } else if (
+        savedProfile?.mbti &&
+        (savedProfile.mbti === 'UNKNOWN' ||
+          ALL_MBTI_TYPES.includes(savedProfile.mbti as MbtiType))
+      ) {
+        setMbti(savedProfile.mbti as UserMbtiInput);
+      }
+      if (nParam) {
+        setNickname(nParam.slice(0, 24));
+      } else if (savedProfile?.realName) {
+        setNickname(savedProfile.realName.slice(0, 24));
+      }
 
-    // If shared link contains birthday parameters, auto-open the result!
-    if (moParam && dParam) {
-      setHasAnalyzed(true);
-    }
+      // If shared link contains birthday parameters, auto-open the result!
+      if (moParam && dParam) {
+        setHasAnalyzed(true);
+      }
+    }, 0);
+
+    return () => window.clearTimeout(timer);
   }, [searchParams, initialGroupId, defaultGroup]);
 
   const currentGroup: IdolGroupProfile = useMemo(
@@ -194,6 +220,14 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
     playSuccessChime();
     addXP(50);
 
+    saveUserProfile({
+      birthYear,
+      birthMonth,
+      birthDay,
+      realName: nickname.trim() || undefined,
+      mbti,
+    });
+
     if (analysis.totalScore >= 88) {
       confetti({
         particleCount: 70,
@@ -223,8 +257,9 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
   };
 
   const getShareUrl = () => {
+    const localizedRoute = localizePath(`/chemistry/${currentGroup.id}`, lang);
     if (typeof window === 'undefined') {
-      return `https://kpulsequiz.com/chemistry/${currentGroup.id}`;
+      return `https://kpulsequiz.com${localizedRoute}`;
     }
     const params = new URLSearchParams({
       m: currentMember.id,
@@ -236,7 +271,7 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
     if (nickname.trim()) {
       params.set('n', nickname.trim());
     }
-    return `${window.location.origin}/chemistry/${currentGroup.id}?${params.toString()}`;
+    return `${window.location.origin}${localizedRoute}?${params.toString()}`;
   };
 
   const handleCopyLink = async () => {
@@ -1211,7 +1246,7 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
 
               <div className="flex items-center gap-2.5 w-full sm:w-auto shrink-0">
                 <Link
-                  href={`/quiz/${currentGroup.relatedQuizSlug}`}
+                  href={localizePath(`/quiz/${currentGroup.relatedQuizSlug}`, lang)}
                   className="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-5 py-3 rounded-2xl bg-white text-slate-950 hover:bg-pink-100 font-black text-xs sm:text-sm transition-all active:scale-95"
                 >
                   <Users className="w-4 h-4 text-purple-600" />
@@ -1225,6 +1260,54 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
               </div>
             </div>
 
+            {/* K-SAJU KOREAN NAME STUDIO CROSS-LINK */}
+            <div className="rounded-2xl bg-[#F6F1E7] border border-stone-300/80 p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="space-y-1 text-center sm:text-left">
+                <div className="inline-flex items-center gap-1.5 text-[11px] font-mono text-stone-600">
+                  <span className="w-2 h-2 rounded-xs bg-[#C8322B]" />
+                  <span>
+                    {lang === 'ko'
+                      ? '생년월일 사주 연동'
+                      : lang === 'es'
+                      ? 'Conectado con tu K-Saju'
+                      : lang === 'pt'
+                      ? 'Conectado ao seu K-Saju'
+                      : 'Linked with Your Birthday Saju'}
+                  </span>
+                </div>
+                <h3 className="text-base sm:text-lg font-semibold text-[#14151A]">
+                  {lang === 'ko'
+                    ? '방금 계산한 사주 오행으로 나만의 한국 이름도 지어볼까요?'
+                    : lang === 'es'
+                    ? '¿Quieres descubrir tu nombre coreano auténtico con estos mismos Cinco Elementos?'
+                    : lang === 'pt'
+                    ? 'Quer descobrir seu nome coreano autêntico com estes mesmos Cinco Elementos?'
+                    : 'Create your authentic Korean name balanced by these exact Five Elements'}
+                </h3>
+              </div>
+              <Link
+                href={localizePath(
+                  `/korean-name?y=${birthYear}&mo=${birthMonth}&d=${birthDay}${
+                    nickname.trim() ? `&n=${encodeURIComponent(nickname.trim())}` : ''
+                  }`,
+                  lang
+                )}
+                className="w-full sm:w-auto shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#14151A] hover:bg-stone-800 text-white font-semibold text-xs sm:text-sm transition-colors"
+              >
+                <Stamp className="w-4 h-4 text-[#F87171]" strokeWidth={1.5} />
+                <span>
+                  {lang === 'ko'
+                    ? '내 한국 이름 발급받기'
+                    : lang === 'es'
+                    ? 'Crear Mi Nombre Coreano'
+                    : lang === 'pt'
+                    ? 'Gerar Meu Nome Coreano'
+                    : 'Get My Korean Name'}
+                </span>
+                <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
+              </Link>
+            </div>
+
             {/* K-POP STAR PILGRIMAGE MAP CTA */}
             <MapPromoCard
               groupId={resolveMapGroup({ groupId: currentGroup.id })}
@@ -1233,6 +1316,53 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
               lang={lang}
               variant="card"
             />
+
+            {/* Direct Member Korea Spots Cross-Links */}
+            {(() => {
+              const mapGroup = resolveMapGroup({ groupId: currentGroup.id });
+              if (mapGroup === 'all') return null;
+              const matchedSpots = getSpotsForMember(currentMember.name, mapGroup, 3);
+              if (matchedSpots.length === 0) return null;
+              const memberDisplayName =
+                lang === 'ko' ? currentMember.nameKo : currentMember.name;
+              return (
+                <div className="rounded-2xl border border-stone-200 bg-white p-4 sm:p-5 space-y-3">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+                      <MapPin className="w-3.5 h-3.5 text-emerald-700" />
+                      <span>
+                        {lang === 'ko'
+                          ? `${memberDisplayName} 관련 한국 성지 바로 가기`
+                          : lang === 'es'
+                          ? `Lugares reales en Corea de ${memberDisplayName}`
+                          : lang === 'pt'
+                          ? `Locais reais na Coreia de ${memberDisplayName}`
+                          : `Top Korea Spots Linked to ${memberDisplayName}`}
+                      </span>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                    {matchedSpots.map((spot) => (
+                      <Link
+                        key={spot.id}
+                        href={localizePath(`/map/${spot.slug}`, lang)}
+                        className="rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-stone-400 p-3 flex items-center justify-between gap-2 transition-colors"
+                      >
+                        <div className="min-w-0">
+                          <div className="text-xs font-bold text-slate-900 line-clamp-1">
+                            {getLocalizedMapText(spot.name, lang)}
+                          </div>
+                          <div className="text-[11px] text-stone-500 line-clamp-1">
+                            {getLocalizedMapText(spot.district, lang)}
+                          </div>
+                        </div>
+                        <ArrowRight className="w-3.5 h-3.5 text-stone-500 shrink-0" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         )}
       </div>

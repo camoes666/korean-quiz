@@ -1,4 +1,5 @@
-import { Question, Quiz } from '@/types/quiz';
+import { Question, Quiz, getLocalizedText } from '../types/quiz';
+import { buildLocalizedUrl, type SiteLocale } from './i18nRoutes';
 
 export interface QuizSeoData {
   title: string;
@@ -549,8 +550,78 @@ const SEO_OVERRIDES: Record<string, Partial<QuizSeoData>> = {
   },
 };
 
-export function getQuizSeoData(quiz: Quiz): QuizSeoData {
+export function getQuizSeoData(quiz: Quiz, lang: SiteLocale = 'en'): QuizSeoData {
   const isPersonality = quiz.quizType === 'personality';
+  const questionCount = String(quiz.questions?.length || 0);
+
+  if (lang !== 'en') {
+    const localizedTitle = getLocalizedText(quiz, 'title', lang);
+    const localizedDesc = getLocalizedText(quiz, 'description', lang);
+    const tag = quiz.tag || 'K-Pop';
+
+    if (lang === 'es') {
+      const seoTitle = isPersonality
+        ? `${localizedTitle} (Test de Personalidad) | K-Pulse`
+        : `${localizedTitle} (${questionCount} Preguntas) | K-Pulse`;
+      return {
+        title: seoTitle,
+        ogTitle: seoTitle,
+        description: localizedDesc,
+        keywords: [
+          localizedTitle.toLowerCase(),
+          `test de ${tag.toLowerCase()}`,
+          `quiz ${tag.toLowerCase()} espanol`,
+          isPersonality ? `que miembro de ${tag.toLowerCase()} eres` : `preguntas de ${tag.toLowerCase()}`,
+          'test kpop espanol',
+          'k-pulse',
+          'trivia coreana',
+          'cultura coreana',
+        ],
+      };
+    }
+
+    if (lang === 'pt') {
+      const seoTitle = isPersonality
+        ? `${localizedTitle} (Teste de Personalidade) | K-Pulse`
+        : `${localizedTitle} (${questionCount} Perguntas) | K-Pulse`;
+      return {
+        title: seoTitle,
+        ogTitle: seoTitle,
+        description: localizedDesc,
+        keywords: [
+          localizedTitle.toLowerCase(),
+          `teste ${tag.toLowerCase()}`,
+          `quiz ${tag.toLowerCase()} portugues`,
+          isPersonality ? `qual membro do ${tag.toLowerCase()} voce e` : `perguntas sobre ${tag.toLowerCase()}`,
+          'teste kpop portugues',
+          'k-pulse',
+          'cultura coreana',
+          'trivia kpop',
+        ],
+      };
+    }
+
+    // Korean (ko)
+    const seoTitle = isPersonality
+      ? `${localizedTitle} (성향 테스트) | K-Pulse`
+      : `${localizedTitle} (${questionCount}문항 퀴즈) | K-Pulse`;
+    return {
+      title: seoTitle,
+      ogTitle: seoTitle,
+      description: localizedDesc,
+      keywords: [
+        localizedTitle,
+        `${tag} 테스트`,
+        `${tag} 퀴즈`,
+        isPersonality ? `${tag} 닮은꼴 멤버` : `${tag} 덕력고사`,
+        '케이팝 테스트',
+        'K-Pulse',
+        '한국 문화 퀴즈',
+        '소울메이트 테스트',
+      ],
+    };
+  }
+
   const defaultOgTitle = isPersonality
     ? `${quiz.title} - Personality Match | K-Pulse`
     : `${quiz.title} - High Score Challenge | K-Pulse`;
@@ -565,8 +636,6 @@ export function getQuizSeoData(quiz: Quiz): QuizSeoData {
 
   const override = SEO_OVERRIDES[quiz.slug];
 
-  const questionCount = String(quiz.questions?.length || 0);
-
   return {
     title: (override?.title || `${quiz.title} | K-Pulse`).replace('{n}', questionCount),
     ogTitle: override?.ogTitle || defaultOgTitle,
@@ -575,11 +644,32 @@ export function getQuizSeoData(quiz: Quiz): QuizSeoData {
   };
 }
 
-export function generateQuizJsonLd(quiz: Quiz) {
+export function generateQuizJsonLd(quiz: Quiz, lang: SiteLocale = 'en') {
   const baseUrl = 'https://kpulsequiz.com';
-  const quizUrl = `${baseUrl}/quiz/${quiz.slug}`;
+  const quizUrl = buildLocalizedUrl(`/quiz/${quiz.slug}`, lang);
+  const homeUrl = buildLocalizedUrl('/', lang);
+  const quizzesUrl = buildLocalizedUrl('/#quizzes', lang);
   const isPersonality = quiz.quizType === 'personality';
-  const seoData = getQuizSeoData(quiz);
+  const seoData = getQuizSeoData(quiz, lang);
+  const localizedTitle = getLocalizedText(quiz, 'title', lang);
+
+  const homeName =
+    lang === 'es' ? 'Inicio' : lang === 'pt' ? 'Início' : lang === 'ko' ? '홈' : 'Home';
+  const categoryName = isPersonality
+    ? lang === 'es'
+      ? 'Tests de Personalidad'
+      : lang === 'pt'
+      ? 'Testes de Personalidade'
+      : lang === 'ko'
+      ? '성향 테스트'
+      : 'Personality Tests'
+    : lang === 'es'
+    ? 'Quizzes de Trivia'
+    : lang === 'pt'
+    ? 'Quizzes de Trivia'
+    : lang === 'ko'
+    ? '상식 퀴즈'
+    : 'Trivia Quizzes';
 
   // 1. Breadcrumb Schema
   const breadcrumbSchema = {
@@ -589,19 +679,19 @@ export function generateQuizJsonLd(quiz: Quiz) {
       {
         '@type': 'ListItem',
         position: 1,
-        name: 'Home',
-        item: baseUrl,
+        name: homeName,
+        item: homeUrl,
       },
       {
         '@type': 'ListItem',
         position: 2,
-        name: isPersonality ? 'Personality Tests' : 'Trivia Quizzes',
-        item: `${baseUrl}/#quizzes`,
+        name: categoryName,
+        item: quizzesUrl,
       },
       {
         '@type': 'ListItem',
         position: 3,
-        name: quiz.title,
+        name: localizedTitle,
         item: quizUrl,
       },
     ],
@@ -614,7 +704,7 @@ export function generateQuizJsonLd(quiz: Quiz) {
     name: seoData.title,
     description: seoData.description,
     url: quizUrl,
-    inLanguage: ['en', 'es', 'pt', 'ko'],
+    inLanguage: lang === 'en' ? ['en', 'es', 'pt', 'ko'] : lang,
     isAccessibleForFree: true,
     educationalLevel: quiz.difficulty || 'Intermediate',
     about: {
@@ -633,7 +723,7 @@ export function generateQuizJsonLd(quiz: Quiz) {
   const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    mainEntity: getQuizFaq(quiz).map(({ question, answer }) => ({
+    mainEntity: getQuizFaq(quiz, lang).map(({ question, answer }) => ({
       '@type': 'Question',
       name: question,
       acceptedAnswer: { '@type': 'Answer', text: answer },
@@ -738,12 +828,149 @@ const PERSONALITY_FAQ_EXTRAS: Record<string, FaqItem[]> = {
 };
 
 /**
- * FAQ shown on the quiz page and emitted as FAQPage structured data. English only: the page
- * URL is indexed as English, so mixing in other languages here dilutes it without ranking
- * for those languages (that needs separate localized URLs).
+ * FAQ shown on the quiz page and emitted as FAQPage structured data in the active locale.
  */
-export function getQuizFaq(quiz: Quiz): FaqItem[] {
+export function getQuizFaq(quiz: Quiz, lang: SiteLocale = 'en'): FaqItem[] {
   const isPersonality = quiz.quizType === 'personality';
+  const localizedTitle = getLocalizedText(quiz, 'title', lang);
+  const localizedResults = Object.values(quiz.personalityResults || {}).map((r) =>
+    getLocalizedText(r, 'name', lang)
+  );
+  const questionCount = quiz.personalityQuestions?.length || 10;
+  const total = quiz.questions?.length || 0;
+
+  if (lang === 'es') {
+    const free: FaqItem = {
+      question: isPersonality ? '¿Este test es gratis?' : '¿Este quiz es gratis?',
+      answer:
+        'Sí, es 100% gratis, sin registro ni descargas. Puedes jugar en español, portugués, inglés o coreano.',
+    };
+    if (isPersonality) {
+      const faq: FaqItem[] = [
+        {
+          question: `¿Cómo funciona el test "${localizedTitle}"?`,
+          answer: `Responde ${questionCount} preguntas sobre tu estilo de vida, personalidad y gustos. Cada respuesta suma puntos hacia tu arquetipo ideal y revela tu tarjeta fotográfica.`,
+        },
+      ];
+      if (localizedResults.length > 0) {
+        faq.push({
+          question: '¿Qué resultados puedo obtener?',
+          answer: `Puedes hacer match con ${localizedResults.join(', ')}. Cada resultado muestra tus rasgos en común y tu mejor dúo compatible.`,
+        });
+      }
+      faq.push({
+        question: '¿Puedo compartir mi resultado con amigos?',
+        answer:
+          'Sí, al terminar puedes descargar tu tarjeta 9:16 para Instagram/TikTok o copiar tu enlace personalizado para comparar compatibilidad.',
+      });
+      return [...faq, free];
+    }
+    return [
+      {
+        question: `¿Cuántas preguntas tiene "${localizedTitle}"?`,
+        answer: `El banco tiene ${total} preguntas en 3 niveles de dificultad: Nivel 1 (Novato), Nivel 2 (Fan) y Nivel 3 (Experto). Cada partida elige 5 preguntas al azar.`,
+      },
+      {
+        question: '¿Muestra explicaciones después de responder?',
+        answer:
+          'Sí. Después de cada pregunta verás la respuesta correcta con una explicación verificada y un dato curioso.',
+      },
+      {
+        question: '¿Puedo desafiar a mis amigos?',
+        answer:
+          'Sí. Al finalizar obtienes un enlace de desafío con tu puntuación para que tus amigos intenten superarte.',
+      },
+      free,
+    ];
+  }
+
+  if (lang === 'pt') {
+    const free: FaqItem = {
+      question: isPersonality ? 'Este teste é gratuito?' : 'Este quiz é gratuito?',
+      answer:
+        'Sim, é 100% gratuito, sem cadastro nem download de aplicativo. Disponível em português, espanhol, inglês e coreano.',
+    };
+    if (isPersonality) {
+      const faq: FaqItem[] = [
+        {
+          question: `Como funciona o teste "${localizedTitle}"?`,
+          answer: `Responda ${questionCount} perguntas sobre seu estilo de vida, gostos e personalidade. Cada resposta soma pontos para revelar seu resultado e photocard.`,
+        },
+      ];
+      if (localizedResults.length > 0) {
+        faq.push({
+          question: 'Quais resultados posso receber?',
+          answer: `Você pode combinar com ${localizedResults.join(', ')}. Cada resultado traz seus traços em comum e sua melhor dupla.`,
+        });
+      }
+      faq.push({
+        question: 'Posso compartilhar meu resultado com amigos?',
+        answer:
+          'Sim, no final você pode salvar o cartão 9:16 para Stories ou copiar o link personalizado para comparar com amigos.',
+      });
+      return [...faq, free];
+    }
+    return [
+      {
+        question: `Quantas perguntas tem "${localizedTitle}"?`,
+        answer: `O banco possui ${total} perguntas em 3 níveis: Nível 1 (Novato), Nível 2 (Fã) e Nível 3 (Experiente). Cada rodada sorteia 5 perguntas.`,
+      },
+      {
+        question: 'As respostas têm explicação?',
+        answer:
+          'Sim. Após cada resposta você confere a explicação verificada e uma curiosidade exclusiva.',
+      },
+      {
+        question: 'Posso desafiar meus amigos?',
+        answer:
+          'Sim. Ao concluir, você gera um link de desafio com sua pontuação para seus amigos tentarem vencer.',
+      },
+      free,
+    ];
+  }
+
+  if (lang === 'ko') {
+    const free: FaqItem = {
+      question: isPersonality ? '이 테스트는 무료인가요?' : '이 퀴즈는 무료인가요?',
+      answer: '네, 별도 회원가입이나 앱 설치 없이 100% 무료로 즐길 수 있습니다.',
+    };
+    if (isPersonality) {
+      const faq: FaqItem[] = [
+        {
+          question: `"${localizedTitle}" 테스트는 어떻게 진행되나요?`,
+          answer: `일상 취향과 성향에 관한 ${questionCount}개의 시나리오 질문에 답하면 가장 닮은 결과와 홀로그램 포토카드·궁합 결과를 확인할 수 있습니다.`,
+        },
+      ];
+      if (localizedResults.length > 0) {
+        faq.push({
+          question: '어떤 결과 유형이 나오나요?',
+          answer: `${localizedResults.join(', ')} 중 나와 가장 잘 맞는 유형을 확인할 수 있으며, 베스트 케미 조합도 함께 제공됩니다.`,
+        });
+      }
+      faq.push({
+        question: '결과 카드 이미지를 저장하거나 친구와 공유할 수 있나요?',
+        answer:
+          '네, 결과 화면에서 9:16 스토리용 카드를 PNG로 저장하거나 공유 링크를 복사해 친구와 결과를 비교할 수 있습니다.',
+      });
+      return [...faq, free];
+    }
+    return [
+      {
+        question: `"${localizedTitle}"에는 총 몇 문제가 수록되어 있나요?`,
+        answer: `루키(기초), 팬(중급), 하드코어(고급) 3단계 난이도에 걸쳐 총 ${total}문제가 수록되어 있으며, 한 라운드마다 5문제가 무작위로 출제됩니다.`,
+      },
+      {
+        question: '문제를 푼 뒤 정답 해설을 볼 수 있나요?',
+        answer: '네, 매 문항 풀이 직후 정확한 정답 해설과 팬덤 비하인드 팁을 바로 확인할 수 있습니다.',
+      },
+      {
+        question: '친구에게 점수 대결을 보낼 수 있나요?',
+        answer: '네, 퀴즈 완료 후 나만의 챌린지 링크를 생성해 친구에게 같은 5문제로 도전장을 보낼 수 있습니다.',
+      },
+      free,
+    ];
+  }
+
   const free: FaqItem = {
     question: isPersonality ? 'Is this test free to play?' : 'Is this quiz free to play?',
     answer: 'Yes. It is 100% free with no sign-up or app download required. You can also switch the site to Spanish, Portuguese, or Korean.',
@@ -751,7 +978,6 @@ export function getQuizFaq(quiz: Quiz): FaqItem[] {
 
   if (isPersonality) {
     const results = Object.values(quiz.personalityResults || {}).map((r) => r.name);
-    const questionCount = quiz.personalityQuestions?.length || 10;
 
     const faq: FaqItem[] = [
       {
@@ -769,7 +995,6 @@ export function getQuizFaq(quiz: Quiz): FaqItem[] {
     return [...faq, ...extras, free];
   }
 
-  const total = quiz.questions?.length || 0;
   return [
     {
       question: `How many questions are in "${quiz.title}"?`,

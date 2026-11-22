@@ -6,6 +6,7 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { Quiz, getLocalizedText } from '@/types/quiz';
 import { getQuizMascot } from '@/lib/mascot';
+import { localizePath } from '@/lib/i18nRoutes';
 import type { Language } from '@/lib/translations';
 
 export type HeroBadge = 'featured' | 'trending' | 'new';
@@ -160,7 +161,7 @@ export default function DailyQuestCard({ questQuiz, badge = 'featured', onPlayCl
 
         {/* Action Button */}
         <Link
-          href={`/quiz/${questQuiz.slug}`}
+          href={localizePath(`/quiz/${questQuiz.slug}`, lang)}
           onClick={onPlayClick}
           className="inline-flex items-center justify-center gap-2 rounded-xl bg-white hover:bg-slate-100 text-slate-900 px-4 py-2 text-xs sm:text-sm font-semibold transition-colors shrink-0"
         >

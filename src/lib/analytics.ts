@@ -240,3 +240,115 @@ export function trackMapSaveSpot(params: {
     language: params.lang,
   });
 }
+
+export function trackMapStampSpot(params: {
+  spotId: string;
+  visited: boolean;
+  totalVisited: number;
+  lang: Language;
+}): void {
+  trackEvent('map_stamp_spot', {
+    spot_id: params.spotId,
+    visited: params.visited,
+    total_visited: params.totalVisited,
+    language: params.lang,
+  });
+}
+
+export function trackMapCourseSelect(params: {
+  courseSlug: string;
+  groupId: string;
+  source: 'map_strip' | 'spot_page' | 'course_directory';
+  lang: Language;
+}): void {
+  trackEvent('map_course_select', {
+    course_slug: params.courseSlug,
+    group_id: params.groupId,
+    source: params.source,
+    language: params.lang,
+  });
+}
+
+export function trackTravelAffiliateClick(params: {
+  provider: string;
+  category: string;
+  offerId: string;
+  spotSlug?: string;
+  courseSlug?: string;
+  region: string;
+  lang: Language;
+}): void {
+  trackEvent('travel_affiliate_click', {
+    provider: params.provider,
+    category: params.category,
+    offer_id: params.offerId,
+    spot_slug: params.spotSlug,
+    course_slug: params.courseSlug,
+    region: params.region,
+    language: params.lang,
+  });
+}
+
+export function trackKoreanNameGenerate(params: {
+  gender: string;
+  vibe: string;
+  coreElement: string;
+  luckyElement: string;
+  fullHangul: string;
+  lang: Language;
+}): void {
+  trackEvent('korean_name_generate', {
+    gender: params.gender,
+    vibe: params.vibe,
+    core_element: params.coreElement,
+    lucky_element: params.luckyElement,
+    full_hangul: params.fullHangul,
+    language: params.lang,
+  });
+}
+
+export function trackKoreanNameAudioPlay(params: {
+  fullHangul: string;
+  lang: Language;
+}): void {
+  trackEvent('korean_name_audio_play', {
+    full_hangul: params.fullHangul,
+    language: params.lang,
+  });
+}
+
+export function trackKoreanNameCardDownload(params: {
+  fullHangul: string;
+  rank: number;
+  lang: Language;
+}): void {
+  trackEvent('korean_name_card_download', {
+    full_hangul: params.fullHangul,
+    candidate_rank: params.rank,
+    language: params.lang,
+  });
+}
+
+export function trackKoreanNameShare(params: {
+  method: 'link_copy' | 'whatsapp' | 'twitter';
+  fullHangul: string;
+  lang: Language;
+}): void {
+  trackEvent('korean_name_share', {
+    method: params.method,
+    full_hangul: params.fullHangul,
+    language: params.lang,
+  });
+}
+
+export function trackKoreanNameChemistryClick(params: {
+  targetGroup: string;
+  matchedMember: string;
+  lang: Language;
+}): void {
+  trackEvent('korean_name_chemistry_click', {
+    target_group: params.targetGroup,
+    matched_member: params.matchedMember,
+    language: params.lang,
+  });
+}

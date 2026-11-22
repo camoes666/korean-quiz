@@ -1,6 +1,6 @@
 'use client';
  
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
 import { Quiz, PersonalityQuestion, PersonalityMemberResult, getLocalizedText, getLocalizedArray } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
@@ -13,6 +13,7 @@ import { downloadResultCard } from '@/lib/renderResultCard';
 import { getTopMatches } from '@/lib/personalityMatch';
 import { getQuizThemeGroup } from '@/lib/theme';
 import { resolveMapGroup } from '@/lib/mapLink';
+import { isPrefixLocale, localizePath } from '@/lib/i18nRoutes';
 import {
   PERSONALITY_RUNNER_MS,
   PERSONALITY_TIMING,
@@ -139,7 +140,10 @@ export default function PersonalityTestRunner({
   const mascot = getQuizMascot(quiz.slug, quiz.tag);
 
   const allQuestions: PersonalityQuestion[] = quiz.personalityQuestions || [];
-  const resultsMap: Record<string, PersonalityMemberResult> = quiz.personalityResults || {};
+  const resultsMap: Record<string, PersonalityMemberResult> = useMemo(
+    () => quiz.personalityResults || {},
+    [quiz.personalityResults]
+  );
   const resultLabels = getResultLabels(quiz);
 
   // Record mode: /record/[slug] embeds this page and sends a plan of answers in its start
@@ -178,20 +182,24 @@ export default function PersonalityTestRunner({
   const progressPercent = Math.round(((currentIndex) / questions.length) * 100);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const params = new URLSearchParams(window.location.search);
-    const friendMemberId = params.get('m');
-    if (friendMemberId && resultsMap[friendMemberId]) {
-      setFriendMatch(resultsMap[friendMemberId]);
-    }
+    const timer = window.setTimeout(() => {
+      const params = new URLSearchParams(window.location.search);
+      const friendMemberId = params.get('m');
+      if (friendMemberId && resultsMap[friendMemberId]) {
+        setFriendMatch(resultsMap[friendMemberId]);
+      }
+    }, 0);
+    return () => window.clearTimeout(timer);
   }, [resultsMap]);
 
   // Animate sync percentage count-up and gauge bars when result screen mounts
   useEffect(() => {
     if (testState !== 'result' || !matchedResult) {
-      setAnimatedSyncPct(0);
-      setGaugesReady(false);
-      return;
+      const resetTimer = window.setTimeout(() => {
+        setAnimatedSyncPct(0);
+        setGaugesReady(false);
+      }, 0);
+      return () => window.clearTimeout(resetTimer);
     }
     const topList = getTopMatches(questions, scores);
     const targetPct = topList[0]?.percent || 94;
@@ -374,11 +382,11 @@ export default function PersonalityTestRunner({
     if (matchedResult?.id) {
       queryParts.push(`m=${encodeURIComponent(matchedResult.id)}`);
     }
-    if (lang !== 'en') {
+    if (lang !== 'en' && !isPrefixLocale(lang)) {
       queryParts.push(`lang=${lang}`);
     }
     const queryString = queryParts.length > 0 ? `?${queryParts.join('&')}` : '';
-    return `${origin}/quiz/${quiz.slug}${queryString}`;
+    return `${origin}${localizePath(`/quiz/${quiz.slug}`, lang)}${queryString}`;
   };
 
   const getPersonalityShareText = () => {
@@ -1305,7 +1313,10 @@ export default function PersonalityTestRunner({
                     </p>
                   </div>
                   <Link
-                    href={`/chemistry/${chemistryGroupId}?m=${encodeURIComponent(matchedResult.id)}`}
+                    href={localizePath(
+                      `/chemistry/${chemistryGroupId}?m=${encodeURIComponent(matchedResult.id)}`,
+                      lang
+                    )}
                     onClick={() =>
                       trackChemistryCtaClick({
                         fromSlug: quiz.slug,
@@ -1425,7 +1436,7 @@ export default function PersonalityTestRunner({
             </p>
           </div>
           <Link
-            href={bingeHref}
+            href={localizePath(bingeHref, lang)}
             onClick={() =>
               trackRelatedQuizClick({
                 fromSlug: quiz.slug,

@@ -331,6 +331,90 @@ async function generateAll() {
 
     console.log(`Generated OG Image for ${quiz.slug} -> ${outputPath}`);
   }
+
+  // Generate dedicated editorial OG banner for K-Saju Korean Name Studio (/korean-name)
+  const koreanNameOutputPath = path.join(OUTPUT_DIR, 'korean-name.png');
+  const koreanNameSvg = `
+    <svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1200" height="630" fill="#F6F1E7"/>
+      <rect x="20" y="20" width="1160" height="590" rx="28" fill="none" stroke="#D5CCC0" stroke-width="3"/>
+      <rect x="34" y="34" width="1132" height="562" rx="22" fill="none" stroke="rgba(20, 21, 26, 0.08)" stroke-width="1.5"/>
+
+      <!-- Eyebrow pill -->
+      <g transform="translate(76, 72)">
+        <rect width="340" height="44" rx="10" fill="#FFFFFF" stroke="#E5DED3" stroke-width="2"/>
+        <rect x="20" y="16" width="12" height="12" rx="2" fill="#C8322B"/>
+        <text x="44" y="28" fill="#14151A" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">
+          K-SAJU NAME STUDIO
+        </text>
+      </g>
+
+      <!-- Main Title -->
+      <text x="76" y="188" fill="#14151A" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="900" letter-spacing="-0.5">
+        What Is Your Korean Name?
+      </text>
+      <text x="76" y="244" fill="#57534E" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">
+        Five Elements Hanja Meaning · Audio · 9:16 Seal ID Card
+      </text>
+
+      <!-- Sample Specimen Card -->
+      <g transform="translate(76, 286)">
+        <rect width="630" height="180" rx="22" fill="#FFFFFF" stroke="#E5DED3" stroke-width="2"/>
+        <text x="36" y="64" fill="#14151A" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="900">
+          한윤서
+        </text>
+        <text x="36" y="116" fill="#14151A" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700">
+          Han Yun-seo · /hahn yoon-suh/
+        </text>
+        <text x="36" y="150" fill="#57534E" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="600">
+          Balanced by K-Saju Water &amp; Wood Elements
+        </text>
+
+        <!-- Vermilion 2x2 Seal Mark -->
+        <g transform="translate(490, 34)">
+          <rect width="108" height="108" rx="12" fill="#C8322B"/>
+          <rect x="8" y="8" width="92" height="92" rx="8" fill="none" stroke="rgba(255,249,242,0.88)" stroke-width="3"/>
+          <text x="74" y="42" fill="#FFF9F2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" text-anchor="middle">韓</text>
+          <text x="74" y="82" fill="#FFF9F2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" text-anchor="middle">潤</text>
+          <text x="34" y="42" fill="#FFF9F2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" text-anchor="middle">瑞</text>
+          <text x="34" y="82" fill="#FFF9F2" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="900" text-anchor="middle">印</text>
+        </g>
+      </g>
+
+      <!-- Bottom CTA -->
+      <g transform="translate(76, 502)">
+        <rect width="276" height="56" rx="14" fill="#14151A"/>
+        <text x="138" y="35" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" text-anchor="middle">
+          Issue Name Free →
+        </text>
+      </g>
+      <text x="382" y="537" fill="#C8322B" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700">
+        kpulsequiz.com/korean-name
+      </text>
+    </svg>
+  `;
+
+  if (fs.existsSync(HOBI_PATH)) {
+    const hobiBuffer = await sharp(HOBI_PATH)
+      .resize(350, 350, { fit: 'inside' })
+      .toBuffer();
+
+    await sharp(Buffer.from(koreanNameSvg))
+      .composite([
+        {
+          input: hobiBuffer,
+          top: 145,
+          left: 785,
+        },
+      ])
+      .png({ quality: 90 })
+      .toFile(koreanNameOutputPath);
+  } else {
+    await sharp(Buffer.from(koreanNameSvg))
+      .png({ quality: 90 })
+      .toFile(koreanNameOutputPath);
+  }
+  console.log(`Generated OG Image for korean-name -> ${koreanNameOutputPath}`);
 }
 
 generateAll().catch(console.error);

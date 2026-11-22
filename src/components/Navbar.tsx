@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Sparkles, Flame, Zap, ChevronDown, Check, BookOpen, MapPin } from 'lucide-react';
+import { Flame, Zap, ChevronDown, Check, BookOpen, MapPin, Stamp } from 'lucide-react';
 import { MAP_TRANSLATIONS } from '@/lib/mapTranslations';
 import { useRouter } from 'next/navigation';
 import { quizzes } from '@/data/quizzes';
@@ -10,6 +10,7 @@ import { getLocalizedText } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { trackMapCtaClick } from '@/lib/analytics';
+import { localizePath } from '@/lib/i18nRoutes';
 
 export default function Navbar() {
   const router = useRouter();
@@ -26,7 +27,7 @@ export default function Navbar() {
     if (!quizzes.length) return;
     const randomIndex = Math.floor(Math.random() * quizzes.length);
     const randomSlug = quizzes[randomIndex].slug;
-    router.push(`/quiz/${randomSlug}`);
+    router.push(localizePath(`/quiz/${randomSlug}`, lang));
   };
 
   useEffect(() => {
@@ -43,7 +44,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 w-full border-b border-slate-200/80 bg-white/90 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-3">
         {/* Brand Logo */}
-        <Link href="/" className="flex items-center gap-2.5 group shrink-0">
+        <Link href={localizePath('/', lang)} className="flex items-center gap-2.5 group shrink-0">
           <div className="w-8 h-8 rounded-lg bg-slate-100 p-0.5 border border-slate-200 flex items-center justify-center overflow-hidden relative">
             <img
               src="/images/hobi01.webp"
@@ -57,10 +58,10 @@ export default function Navbar() {
         </Link>
 
         {/* Right Controls: Unified Status Pill + Nav Links */}
-        <div className="flex items-center gap-2 sm:gap-2.5">
+        <div className="flex items-center gap-1.5 sm:gap-2.5">
           {/* Unified Player Status Pill (Streak + XP + Level) */}
           <div
-            className="flex items-center gap-2.5 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-bold text-slate-700"
+            className="flex items-center gap-2 sm:gap-2.5 px-2.5 sm:px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-bold text-slate-700"
             title={`Level ${currentLevel.level}: ${levelTitle} · ${streak}d streak`}
           >
             {/* Streak hides on phones so the language switcher still fits in a 375px header. */}
@@ -80,9 +81,35 @@ export default function Navbar() {
             </span>
           </div>
 
+          {/* Korean Name Studio Navigation Link */}
+          <Link
+            href={localizePath('/korean-name', lang)}
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full border border-stone-200/90 bg-[#FAF8F5] hover:bg-stone-100 text-slate-900 font-semibold text-xs transition-colors shrink-0"
+            title={
+              lang === 'ko'
+                ? 'K-사주 한국 이름 작명소'
+                : lang === 'es'
+                ? 'Generador de Nombre Coreano K-Saju'
+                : lang === 'pt'
+                ? 'Gerador de Nome Coreano K-Saju'
+                : 'K-Saju Korean Name Studio'
+            }
+          >
+            <Stamp className="w-3.5 h-3.5 text-[#C8322B]" strokeWidth={1.75} />
+            <span className="hidden md:inline">
+              {lang === 'ko'
+                ? '한국 이름'
+                : lang === 'es'
+                ? 'Nombre'
+                : lang === 'pt'
+                ? 'Nome'
+                : 'Korean Name'}
+            </span>
+          </Link>
+
           {/* K-Pop Star Map Navigation Link */}
           <Link
-            href="/map"
+            href={localizePath('/map', lang)}
             onClick={() =>
               trackMapCtaClick({
                 fromSurface: 'navbar',
@@ -90,11 +117,11 @@ export default function Navbar() {
                 lang,
               })
             }
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-pink-200 bg-pink-50/80 hover:bg-pink-100/80 text-slate-900 font-semibold text-xs transition-colors shrink-0"
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full border border-pink-200 bg-pink-50/80 hover:bg-pink-100/80 text-slate-900 font-semibold text-xs transition-colors shrink-0"
             title={MAP_TRANSLATIONS[lang]?.title || 'K-Pop Star Map'}
           >
             <MapPin className="w-3.5 h-3.5 text-pink-600" />
-            <span className="lg:hidden">
+            <span className="hidden sm:inline lg:hidden">
               {MAP_TRANSLATIONS[lang]?.navLabel || 'K-Map'}
             </span>
             <span className="hidden lg:inline">
@@ -110,8 +137,8 @@ export default function Navbar() {
 
           {/* Idol Chemistry & Saju Compatibility Link */}
           <Link
-            href="/chemistry"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs transition-colors shrink-0"
+            href={localizePath('/chemistry', lang)}
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-full border border-slate-200/90 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs transition-colors shrink-0"
             title={
               lang === 'ko'
                 ? 'K-사주 × MBTI 아이돌 궁합 연구소'
@@ -136,8 +163,8 @@ export default function Navbar() {
 
           {/* Knowledge Guides Navigation Link */}
           <Link
-            href="/guide"
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors shrink-0"
+            href={localizePath('/guide', lang)}
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors shrink-0"
             title={
               lang === 'ko'
                 ? 'K-컬처 & K-Pop 지식 가이드'

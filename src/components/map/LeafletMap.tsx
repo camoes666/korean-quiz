@@ -12,6 +12,10 @@ interface LeafletMapProps {
   onSelectSpot: (spot: MapSpot) => void;
   lang: Language;
   fitTrigger?: number;
+  routeLine?: boolean;
+  numberedMarkers?: boolean;
+  routeColor?: string;
+  visitedIds?: string[];
 }
 
 const CATEGORY_EMOJI: Record<SpotCategory, string> = {
@@ -27,9 +31,14 @@ export default function LeafletMap({
   onSelectSpot,
   lang,
   fitTrigger = 0,
+  routeLine = false,
+  numberedMarkers = false,
+  routeColor,
+  visitedIds = [],
 }: LeafletMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<L.Map | null>(null);
+  const routeLayerRef = useRef<L.LayerGroup | null>(null);
   const markersLayerRef = useRef<L.LayerGroup | null>(null);
   const onSelectRef = useRef(onSelectSpot);
 
@@ -55,8 +64,10 @@ export default function LeafletMap({
       maxZoom: 19,
     }).addTo(map);
 
+    const routeGroup = L.layerGroup().addTo(map);
     const layerGroup = L.layerGroup().addTo(map);
     mapRef.current = map;
+    routeLayerRef.current = routeGroup;
     markersLayerRef.current = layerGroup;
 
     const ro = new ResizeObserver(() => {
@@ -68,44 +79,99 @@ export default function LeafletMap({
       ro.disconnect();
       map.remove();
       mapRef.current = null;
+      routeLayerRef.current = null;
       markersLayerRef.current = null;
     };
   }, []);
 
-  // Render markers whenever spots, selection, or language changes
+  // Render route polyline & markers whenever spots, selection, route mode, or visited state changes
   useEffect(() => {
     const map = mapRef.current;
+    const routeGroup = routeLayerRef.current;
     const layerGroup = markersLayerRef.current;
-    if (!map || !layerGroup) return;
+    if (!map || !routeGroup || !layerGroup) return;
 
+    routeGroup.clearLayers();
     layerGroup.clearLayers();
 
-    spots.forEach((spot) => {
+    if (routeLine && spots.length >= 2) {
+      const latLngs: [number, number][] = spots.map((s) => [
+        s.coordinates.lat,
+        s.coordinates.lng,
+      ]);
+
+      L.polyline(latLngs, {
+        color: '#ffffff',
+        weight: 7,
+        opacity: 0.9,
+        lineJoin: 'round',
+      }).addTo(routeGroup);
+
+      L.polyline(latLngs, {
+        color: routeColor || '#7c3aed',
+        weight: 4,
+        dashArray: '10 8',
+        opacity: 0.95,
+        lineJoin: 'round',
+      }).addTo(routeGroup);
+    }
+
+    spots.forEach((spot, idx) => {
       const primaryGroup = MAP_GROUPS[spot.groupIds[0]];
       const isSelected = spot.id === selectedSpotId;
-      const emoji = CATEGORY_EMOJI[spot.category];
+      const isVisited = visitedIds.includes(spot.id);
+      const innerLabel = numberedMarkers ? String(idx + 1) : CATEGORY_EMOJI[spot.category];
       const title = getLocalizedMapText(spot.name, lang);
+      const markerBg = isSelected
+        ? '#0f172a'
+        : routeColor && numberedMarkers
+        ? routeColor
+        : primaryGroup.color;
 
       const size = isSelected ? 44 : 38;
+      const visitedBadgeHtml = isVisited
+        ? `<span style="
+            position:absolute;
+            top:-3px;
+            right:-3px;
+            width:16px;
+            height:16px;
+            border-radius:9999px;
+            background:#059669;
+            border:2px solid #ffffff;
+            color:#ffffff;
+            font-size:10px;
+            font-weight:900;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            line-height:1;
+          ">✓</span>`
+        : '';
+
       const icon = L.divIcon({
         className: 'kpop-map-marker-wrapper',
         html: `
           <div style="
+            position:relative;
             display:flex;
             align-items:center;
             justify-content:center;
             width:${size}px;
             height:${size}px;
             border-radius:9999px;
-            background:${isSelected ? '#0f172a' : primaryGroup.color};
+            background:${markerBg};
             border:${isSelected ? '3px solid #fbbf24' : '2.5px solid #ffffff'};
             box-shadow:0 6px 16px rgba(15,23,42,0.28);
-            font-size:${isSelected ? '20px' : '16px'};
+            color:#ffffff;
+            font-weight:800;
+            font-size:${numberedMarkers ? (isSelected ? '16px' : '14px') : isSelected ? '20px' : '16px'};
             transform:scale(${isSelected ? '1.08' : '1'});
             transition:transform 0.18s ease, background 0.18s ease;
             cursor:pointer;
           " title="${title.replace(/"/g, '&quot;')}">
-            <span>${emoji}</span>
+            <span>${innerLabel}</span>
+            ${visitedBadgeHtml}
           </div>
         `,
         iconSize: [size, size],
@@ -114,10 +180,10 @@ export default function LeafletMap({
 
       const marker = L.marker([spot.coordinates.lat, spot.coordinates.lng], {
         icon,
-        zIndexOffset: isSelected ? 1000 : 0,
+        zIndexOffset: isSelected ? 1000 : numberedMarkers ? spots.length - idx : 0,
       });
 
-      marker.bindTooltip(title, {
+      marker.bindTooltip(numberedMarkers ? `${idx + 1}. ${title}` : title, {
         direction: 'top',
         offset: [0, -22],
         opacity: 0.95,
@@ -129,7 +195,7 @@ export default function LeafletMap({
 
       marker.addTo(layerGroup);
     });
-  }, [spots, selectedSpotId, lang]);
+  }, [spots, selectedSpotId, lang, routeLine, numberedMarkers, routeColor, visitedIds]);
 
   // Fly to selected spot
   useEffect(() => {

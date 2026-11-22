@@ -7,6 +7,7 @@ import { getQuizFaq, getSampleQuestions, getSamplePersonalityQuestions } from '@
 import { getAllQuizzes } from '@/data/quizzes';
 import { useLanguage } from '@/context/LanguageContext';
 import { getLevelBadge } from '@/lib/guides';
+import { localizePath, toSiteLocale } from '@/lib/i18nRoutes';
 
 /**
  * Pre-rendered SEO content below the quiz. Renders in the active user language on the client
@@ -18,7 +19,7 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
   const samples = isPersonality ? [] : getSampleQuestions(quiz);
   const personalitySamples = isPersonality ? getSamplePersonalityQuestions(quiz, 3) : [];
   const results = Object.values(quiz.personalityResults || {});
-  const faq = getQuizFaq(quiz);
+  const faq = getQuizFaq(quiz, toSiteLocale(lang));
   const localizedTitle = getLocalizedText(quiz, 'title', lang);
 
   // Build topical cluster links (same-tag quizzes + matching trivia study guide)
@@ -75,7 +76,10 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
       ? 'Ver resposta'
       : 'Show answer';
 
-  const guideTargetHref = matchingTriviaGuide ? `/guide/${matchingTriviaGuide.slug}` : '/guide';
+  const guideTargetHref = localizePath(
+    matchingTriviaGuide ? `/guide/${matchingTriviaGuide.slug}` : '/guide',
+    lang
+  );
 
   const guideCtaLabel = isPersonality
     ? matchingTriviaGuide
@@ -184,7 +188,7 @@ export default function QuizSeoContent({ quiz }: { quiz: Quiz }) {
             {sameTagQuizzes.map((rel) => (
               <Link
                 key={rel.slug}
-                href={`/quiz/${rel.slug}`}
+                href={localizePath(`/quiz/${rel.slug}`, lang)}
                 className="group flex items-start gap-3 rounded-2xl border border-purple-100 bg-purple-50/40 hover:bg-purple-50 hover:border-purple-300 p-3.5 transition-all"
               >
                 <span className="text-2xl shrink-0">{rel.coverEmoji}</span>

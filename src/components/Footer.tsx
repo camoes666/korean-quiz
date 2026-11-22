@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/context/LanguageContext';
+import { localizePath } from '@/lib/i18nRoutes';
 
 const PERSONALITY_LINKS = [
   {
@@ -196,16 +197,22 @@ export default function Footer() {
               {t.footer.desc}
             </p>
             <div className="pt-2 flex flex-wrap gap-x-4 gap-y-2 text-xs font-medium text-slate-600">
-              <Link href="/" className="hover:text-slate-900 transition-colors">
+              <Link href={localizePath('/', lang)} className="hover:text-slate-900 transition-colors">
                 {t.footer.home}
               </Link>
-              <Link href="/#quizzes" className="hover:text-slate-900 transition-colors">
+              <Link href={localizePath('/#quizzes', lang)} className="hover:text-slate-900 transition-colors">
                 {t.footer.allQuizzes}
               </Link>
-              <Link href="/chemistry" className="hover:text-slate-900 transition-colors">
+              <Link href={localizePath('/korean-name', lang)} className="hover:text-slate-900 transition-colors font-semibold text-slate-900">
+                {lang === 'ko' ? '한국 이름 작명' : lang === 'es' ? 'Nombre Coreano' : lang === 'pt' ? 'Nome Coreano' : 'Korean Name'}
+              </Link>
+              <Link href={localizePath('/chemistry', lang)} className="hover:text-slate-900 transition-colors">
                 {lang === 'ko' ? '아이돌 궁합' : lang === 'es' ? 'Química Idol' : lang === 'pt' ? 'Química Idol' : 'Idol Chemistry'}
               </Link>
-              <Link href="/guide" className="hover:text-slate-900 transition-colors">
+              <Link href={localizePath('/map', lang)} className="hover:text-slate-900 transition-colors">
+                {lang === 'ko' ? '성지 지도' : lang === 'es' ? 'Mapa K-Pop' : lang === 'pt' ? 'Mapa K-Pop' : 'Korea Map'}
+              </Link>
+              <Link href={localizePath('/guide', lang)} className="hover:text-slate-900 transition-colors">
                 {lang === 'ko' ? '지식 가이드' : lang === 'es' ? 'Guías de Lore' : lang === 'pt' ? 'Guias de Lore' : 'Knowledge Guides'}
               </Link>
               <Link href="/about" className="hover:text-slate-900 transition-colors">
@@ -243,7 +250,7 @@ export default function Footer() {
               {PERSONALITY_LINKS.map((item) => (
                 <li key={item.slug}>
                   <Link
-                    href={`/quiz/${item.slug}`}
+                    href={localizePath(`/quiz/${item.slug}`, lang)}
                     className="hover:text-slate-900 hover:underline transition-colors block truncate"
                   >
                     {pickLabel(item)}
@@ -267,7 +274,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs font-normal text-slate-600">
               <li>
                 <Link
-                  href="/guide"
+                  href={localizePath('/guide', lang)}
                   className="font-medium text-slate-900 hover:underline transition-colors block"
                 >
                   {lang === 'ko'
@@ -282,7 +289,7 @@ export default function Footer() {
               {GUIDE_LINKS.map((item) => (
                 <li key={item.slug}>
                   <Link
-                    href={`/guide/${item.slug}`}
+                    href={localizePath(`/guide/${item.slug}`, lang)}
                     className="hover:text-slate-900 hover:underline transition-colors block truncate"
                   >
                     {pickLabel(item)}
@@ -307,7 +314,7 @@ export default function Footer() {
               {TRIVIA_LINKS.map((item) => (
                 <li key={item.slug}>
                   <Link
-                    href={`/quiz/${item.slug}`}
+                    href={localizePath(`/quiz/${item.slug}`, lang)}
                     className="hover:text-slate-900 hover:underline transition-colors block truncate"
                   >
                     {pickLabel(item)}

@@ -5,6 +5,7 @@ import { ArrowRight, MapPin } from 'lucide-react';
 import type { Language } from '@/lib/translations';
 import { trackMapCtaClick } from '@/lib/analytics';
 import { MAP_GROUP_PREVIEW, MapTargetGroup, getMapHref } from '@/lib/mapLink';
+import { localizePath } from '@/lib/i18nRoutes';
 
 interface MapPromoCardProps {
   groupId: MapTargetGroup;
@@ -82,7 +83,7 @@ export default function MapPromoCard({
   variant = 'card',
 }: MapPromoCardProps) {
   const preview = MAP_GROUP_PREVIEW[groupId];
-  const href = getMapHref(groupId);
+  const href = localizePath(getMapHref(groupId), lang);
   const copy = getMapPromoCopy(groupId, lang);
 
   const handleClick = () => {

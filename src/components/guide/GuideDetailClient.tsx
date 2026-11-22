@@ -6,6 +6,7 @@ import { Quiz, getLocalizedText } from '@/types/quiz';
 import { getAllQuizzes } from '@/data/quizzes';
 import { useLanguage } from '@/context/LanguageContext';
 import { getCorrectAnswerText, getLevelBadge, estimateGuideReadTime } from '@/lib/guides';
+import { localizePath } from '@/lib/i18nRoutes';
 import {
   BookOpen,
   Sparkles,
@@ -97,11 +98,11 @@ export default function GuideDetailClient({
       <div className="bg-white border-b border-purple-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 py-3">
           <nav className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold flex-wrap">
-            <Link href="/" className="hover:text-purple-600 transition-colors">
+            <Link href={localizePath('/', lang)} className="hover:text-purple-600 transition-colors">
               {lang === 'ko' ? '홈' : lang === 'es' ? 'Inicio' : lang === 'pt' ? 'Início' : 'Home'}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-            <Link href="/guide" className="hover:text-purple-600 transition-colors">
+            <Link href={localizePath('/guide', lang)} className="hover:text-purple-600 transition-colors">
               {lang === 'ko' ? '지식 가이드' : lang === 'es' ? 'Guías' : lang === 'pt' ? 'Guias' : 'Guides'}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -154,7 +155,7 @@ export default function GuideDetailClient({
             {/* Quick Action Button Box */}
             <div className="w-full md:w-auto shrink-0 flex flex-col sm:flex-row md:flex-col gap-3">
               <Link
-                href={`/quiz/${quiz.slug}`}
+                href={localizePath(`/quiz/${quiz.slug}`, lang)}
                 className="flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-purple-600 via-pink-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-black text-sm shadow-lg shadow-purple-500/25 transition-all hover:scale-105 active:scale-95"
               >
                 <Gamepad2 className="w-4 h-4" />
@@ -294,7 +295,7 @@ export default function GuideDetailClient({
               {matchingPersonalityQuizzes.map((pQuiz) => (
                 <Link
                   key={pQuiz.slug}
-                  href={`/quiz/${pQuiz.slug}`}
+                  href={localizePath(`/quiz/${pQuiz.slug}`, lang)}
                   className="group flex items-center justify-between gap-3 rounded-2xl bg-white hover:bg-purple-50/50 border border-purple-200/80 hover:border-purple-400 p-4 shadow-2xs transition-all"
                 >
                   <div className="flex items-center gap-3 min-w-0">
@@ -498,7 +499,7 @@ export default function GuideDetailClient({
                 : `Answer all ${quiz.questions.length} questions interactively, beat the timer, and claim your verified fan tier!`}
             </p>
             <Link
-              href={`/quiz/${quiz.slug}`}
+              href={localizePath(`/quiz/${quiz.slug}`, lang)}
               className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white hover:bg-purple-50 text-purple-900 font-black text-sm sm:text-base shadow-lg transition-transform hover:scale-105 active:scale-95"
             >
               <Gamepad2 className="w-5 h-5 text-purple-600" />
@@ -541,7 +542,7 @@ export default function GuideDetailClient({
                 </p>
               </div>
               <Link
-                href="/guide"
+                href={localizePath('/guide', lang)}
                 className="text-xs font-black text-purple-600 hover:text-purple-700 flex items-center gap-1"
               >
                 <span>{lang === 'ko' ? '전체 가이드 허브' : lang === 'es' ? 'Ver todas' : lang === 'pt' ? 'Ver todos' : 'View all guides'}</span>
@@ -556,7 +557,7 @@ export default function GuideDetailClient({
                 return (
                   <Link
                     key={rel.slug}
-                    href={`/guide/${rel.slug}`}
+                    href={localizePath(`/guide/${rel.slug}`, lang)}
                     className="p-5 rounded-2xl bg-white border border-purple-100 hover:border-purple-300 hover:shadow-md transition-all group flex flex-col justify-between"
                   >
                     <div>

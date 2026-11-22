@@ -47,6 +47,7 @@ import { getQuizThemeGroup } from '@/lib/theme';
 import { getQuizMascot } from '@/lib/mascot';
 import { shuffleQuestionOptions } from '@/lib/shuffleOptions';
 import { RECORD_MESSAGE, RECORD_TIMER_SEC, RECORD_TIMING } from '@/lib/recordMode';
+import { localizePath } from '@/lib/i18nRoutes';
 
 interface QuizRunnerProps {
   quiz: Quiz;
@@ -743,7 +744,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             {/* Study Guide Link */}
             <div className="mt-4 text-center">
               <Link
-                href={`/guide/${quiz.slug}`}
+                href={localizePath(`/guide/${quiz.slug}`, lang)}
                 className="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 hover:text-slate-950 hover:underline transition-colors"
               >
                 <BookOpen className="w-3.5 h-3.5" />
@@ -1381,7 +1382,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
               {getLocalizedText(relatedQuizzes[0], 'description', lang)}
             </p>
             <Link
-              href={`/quiz/${relatedQuizzes[0].slug}`}
+              href={localizePath(`/quiz/${relatedQuizzes[0].slug}`, lang)}
               onClick={() =>
                 trackRelatedQuizClick({
                   fromSlug: quiz.slug,
@@ -1421,7 +1422,10 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         {/* Idol K-Saju × MBTI Chemistry Link */}
         <div className="mb-3">
           <Link
-            href={chemistryTargetGroup === 'all' ? '/chemistry' : `/chemistry/${chemistryTargetGroup}`}
+            href={localizePath(
+              chemistryTargetGroup === 'all' ? '/chemistry' : `/chemistry/${chemistryTargetGroup}`,
+              lang
+            )}
             onClick={() =>
               trackChemistryCtaClick({
                 fromSlug: quiz.slug,
@@ -1458,7 +1462,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
         {/* Full Guide & Lore Review Link */}
         <div className="mb-4">
           <Link
-            href={`/guide/${quiz.slug}`}
+            href={localizePath(`/guide/${quiz.slug}`, lang)}
             onClick={() => trackGuideCtaClick({ fromSlug: quiz.slug, lang })}
             className="w-full py-3 px-4 rounded-2xl bg-purple-50/80 hover:bg-purple-100/90 border border-purple-200 text-purple-800 text-xs font-black transition-all flex items-center justify-center gap-2 hover:scale-[1.01]"
           >
@@ -1500,7 +1504,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             <span>{t.levels.selectTitle}</span>
           </button>
           <Link
-            href="/"
+            href={localizePath('/', lang)}
             className="w-full sm:w-auto py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs font-bold transition-all flex items-center justify-center gap-1.5 active:scale-95"
           >
             <Home className="w-3.5 h-3.5" />
@@ -1519,7 +1523,7 @@ export default function QuizRunner({ quiz, relatedQuizzes }: QuizRunnerProps) {
             </h3>
             {relatedQuizzes.length > 1 && (
               <Link
-                href={`/quiz/${relatedQuizzes[1].slug}`}
+                href={localizePath(`/quiz/${relatedQuizzes[1].slug}`, lang)}
                 onClick={() =>
                   trackRelatedQuizClick({
                     fromSlug: quiz.slug,

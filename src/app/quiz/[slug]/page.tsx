@@ -1,19 +1,15 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getQuizBySlug, getRelatedQuizzes, getAllQuizzes } from '@/data/quizzes';
-import QuizRunner from '@/components/QuizRunner';
-import PersonalityTestRunner from '@/components/PersonalityTestRunner';
-import QuizSeoContent from '@/components/QuizSeoContent';
-import { getQuizThemeGroup } from '@/lib/theme';
-import { getQuizSeoData, generateQuizJsonLd } from '@/lib/seo';
+import { getAllQuizzes, getQuizBySlug } from '@/data/quizzes';
+import QuizPageView from '@/components/pages/QuizPageView';
+import { getQuizMetadata } from '@/lib/pageSeo';
 
 interface QuizPageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const quizzes = getAllQuizzes();
-  return quizzes.map((quiz) => ({
+  return getAllQuizzes().map((quiz) => ({
     slug: quiz.slug,
   }));
 }
@@ -23,80 +19,17 @@ export async function generateMetadata({
 }: QuizPageProps): Promise<Metadata> {
   const { slug } = await params;
   const quiz = getQuizBySlug(slug);
-
   if (!quiz) {
-    return {
-      title: 'Quiz Not Found | K-Pulse',
-    };
+    return { title: 'Quiz Not Found | K-Pulse' };
   }
-
-  const seo = getQuizSeoData(quiz);
-
-  return {
-    title: seo.title,
-    description: seo.description,
-    keywords: seo.keywords,
-    alternates: {
-      canonical: `https://kpulsequiz.com/quiz/${quiz.slug}`,
-    },
-    openGraph: {
-      title: seo.ogTitle,
-      description: seo.description,
-      url: `https://kpulsequiz.com/quiz/${quiz.slug}`,
-      siteName: 'K-Pulse',
-      locale: 'en_US',
-      alternateLocale: ['es_ES', 'es_MX', 'pt_BR', 'ko_KR'],
-      type: 'website',
-      images: [
-        {
-          url: `/images/og/${quiz.slug}.png`,
-          width: 1200,
-          height: 630,
-          alt: `${quiz.title} - K-Pulse`,
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: seo.ogTitle,
-      description: seo.description,
-      images: [`/images/og/${quiz.slug}.png`],
-    },
-  };
+  return getQuizMetadata(quiz, 'en');
 }
 
 export default async function QuizPage({ params }: QuizPageProps) {
   const { slug } = await params;
   const quiz = getQuizBySlug(slug);
-
   if (!quiz) {
     notFound();
   }
-
-  const relatedQuizzes = getRelatedQuizzes(quiz.slug, 5);
-  const themeGroup = getQuizThemeGroup(quiz.slug, quiz.tag);
-  const jsonLdSchemas = generateQuizJsonLd(quiz);
-
-  return (
-    <>
-      {jsonLdSchemas.map((schema, index) => (
-        <script
-          key={index}
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      ))}
-      {quiz.quizType === 'personality' ? (
-        <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
-          <PersonalityTestRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
-          <QuizSeoContent quiz={quiz} />
-        </main>
-      ) : (
-        <main data-group={themeGroup} className="min-h-screen pb-16 transition-colors duration-300">
-          <QuizRunner quiz={quiz} relatedQuizzes={relatedQuizzes} />
-          <QuizSeoContent quiz={quiz} />
-        </main>
-      )}
-    </>
-  );
+  return <QuizPageView quiz={quiz} locale="en" />;
 }

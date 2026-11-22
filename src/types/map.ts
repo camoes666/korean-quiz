@@ -78,3 +78,35 @@ export function getLocalizedMapText(
   if (!text) return '';
   return text[lang] || text.en || text.ko || '';
 }
+
+export interface MapCourse {
+  id: string;
+  slug: string;
+  groupId: GroupId | 'all';
+  region: MapRegion;
+  durationHours: number;
+  transitMode: 'walk-subway' | 'ktx-bus' | 'subway-taxi';
+  color: string;
+  title: LocalizedMapText;
+  subtitle: LocalizedMapText;
+  description: LocalizedMapText;
+  spotIds: string[];
+  highlights: LocalizedMapText[];
+}
+
+export type TravelAffiliateCategory = 'esim' | 'rail' | 'tour' | 'hotel';
+
+export type TravelAffiliateProvider = 'klook' | 'kkday' | 'trip';
+
+export interface TravelAffiliateOffer {
+  id: string;
+  provider: TravelAffiliateProvider;
+  providerName: string;
+  category: TravelAffiliateCategory;
+  title: LocalizedMapText;
+  subtitle: LocalizedMapText;
+  ctaLabel: LocalizedMapText;
+  badge?: LocalizedMapText;
+  url: string;
+  isPartnerTracked: boolean;
+}

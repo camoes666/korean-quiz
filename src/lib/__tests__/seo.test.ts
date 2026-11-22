@@ -109,4 +109,34 @@ describe('seo', () => {
     expect(pSamples).toHaveLength(3);
     expect(pSamples[0].options.length).toBeGreaterThanOrEqual(4);
   });
+
+  it('emits localized SEO titles, FAQPage parity, and localized canonicals for es, pt, and ko', () => {
+    const bp = getQuizBySlug('which-blackpink-member-are-you')!;
+
+    const esSeo = getQuizSeoData(bp, 'es');
+    expect(esSeo.title).toContain('BLACKPINK');
+    expect(esSeo.title).toContain('Test de Personalidad');
+    expect(esSeo.description).toContain('Jisoo');
+
+    const ptSeo = getQuizSeoData(bp, 'pt');
+    expect(ptSeo.title).toContain('Teste de Personalidade');
+
+    const koSeo = getQuizSeoData(bp, 'ko');
+    expect(koSeo.title).toContain('성향 테스트');
+
+    const esJsonLd = generateQuizJsonLd(bp, 'es');
+    const esQuizSchema = esJsonLd.find((s) => s['@type'] === 'Quiz') as {
+      url: string;
+      inLanguage: string;
+    };
+    expect(esQuizSchema.url).toBe('https://kpulsequiz.com/es/quiz/which-blackpink-member-are-you');
+    expect(esQuizSchema.inLanguage).toBe('es');
+
+    const esFaqSchema = esJsonLd.find((s) => s['@type'] === 'FAQPage') as {
+      mainEntity: { name: string; acceptedAnswer: { text: string } }[];
+    };
+    expect(esFaqSchema.mainEntity.map((e) => [e.name, e.acceptedAnswer.text])).toEqual(
+      getQuizFaq(bp, 'es').map((f) => [f.question, f.answer])
+    );
+  });
 });

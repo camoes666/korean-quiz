@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Quiz, Category, getLocalizedText } from '@/types/quiz';
 import { useLanguage } from '@/context/LanguageContext';
 import { estimateGuideReadTime } from '@/lib/guides';
+import { localizePath } from '@/lib/i18nRoutes';
 import {
   BookOpen,
   Sparkles,
@@ -71,7 +72,7 @@ export default function GuideHubClient({
       <div className="bg-white border-b border-purple-100">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3">
           <nav className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold">
-            <Link href="/" className="hover:text-purple-600 transition-colors">
+            <Link href={localizePath('/', lang)} className="hover:text-purple-600 transition-colors">
               {lang === 'ko' ? '홈' : lang === 'es' ? 'Inicio' : lang === 'pt' ? 'Início' : 'Home'}
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
@@ -305,7 +306,7 @@ export default function GuideHubClient({
                 {/* Bottom Action Buttons: Read Guide + Play Quiz */}
                 <div className="pt-4 border-t border-slate-100 flex items-center gap-2">
                   <Link
-                    href={`/guide/${guide.slug}`}
+                    href={localizePath(`/guide/${guide.slug}`, lang)}
                     className="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-black text-xs shadow-xs transition-colors"
                   >
                     <BookOpen className="w-3.5 h-3.5" />
@@ -316,7 +317,7 @@ export default function GuideHubClient({
                   </Link>
 
                   <Link
-                    href={`/quiz/${guide.slug}`}
+                    href={localizePath(`/quiz/${guide.slug}`, lang)}
                     className="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-purple-200 hover:bg-purple-50 text-purple-700 font-black text-xs transition-colors"
                     title={lang === 'ko' ? '퀴즈 바로 풀기' : lang === 'es' ? 'Jugar Quiz' : lang === 'pt' ? 'Jogar Quiz' : 'Play Quiz'}
                   >
@@ -492,7 +493,7 @@ export default function GuideHubClient({
                 </h3>
               </div>
               <Link
-                href="/"
+                href={localizePath('/', lang)}
                 className="text-xs font-black text-purple-700 hover:text-purple-800 flex items-center gap-1 shrink-0"
               >
                 <span>
@@ -514,7 +515,7 @@ export default function GuideHubClient({
                 return (
                   <Link
                     key={quiz.slug}
-                    href={`/quiz/${quiz.slug}`}
+                    href={localizePath(`/quiz/${quiz.slug}`, lang)}
                     className="p-4 rounded-2xl bg-white/90 hover:bg-white border border-purple-200/60 hover:shadow-md transition-all group flex items-center gap-3"
                   >
                     <span className="text-3xl shrink-0 group-hover:scale-110 transition-transform">

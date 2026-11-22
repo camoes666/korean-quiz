@@ -6,6 +6,7 @@ import { Clock, HelpCircle, Layers, ArrowRight, BookOpen } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { getQuizMascot } from '@/lib/mascot';
 import { isNewQuiz } from '@/lib/quizBadges';
+import { localizePath } from '@/lib/i18nRoutes';
 
 interface QuizCardProps {
   quiz: Quiz;
@@ -80,7 +81,7 @@ export default function QuizCard({ quiz, onSelect }: QuizCardProps) {
       {/* Card Body */}
       <div className="p-5 flex flex-col flex-1 justify-between">
         <div>
-          <Link href={`/quiz/${quiz.slug}`} onClick={onSelect} className="block">
+          <Link href={localizePath(`/quiz/${quiz.slug}`, lang)} onClick={onSelect} className="block">
             <h3 className="text-base sm:text-lg font-semibold text-slate-900 tracking-tight leading-snug mb-1.5 line-clamp-2 min-h-[2lh] group-hover:text-slate-700 transition-colors">
               {title}
             </h3>
@@ -117,7 +118,7 @@ export default function QuizCard({ quiz, onSelect }: QuizCardProps) {
           {/* CTA Button Row */}
           <div className="flex items-center gap-2">
             <Link
-              href={`/quiz/${quiz.slug}`}
+              href={localizePath(`/quiz/${quiz.slug}`, lang)}
               onClick={onSelect}
               className="flex-1 py-2.5 px-4 bg-slate-900 hover:bg-slate-800 text-white font-medium text-xs sm:text-sm rounded-xl flex items-center justify-center gap-1.5 transition-colors active:scale-[0.99]"
             >
@@ -137,7 +138,7 @@ export default function QuizCard({ quiz, onSelect }: QuizCardProps) {
 
             {!isPersonality && (
               <Link
-                href={`/guide/${quiz.slug}`}
+                href={localizePath(`/guide/${quiz.slug}`, lang)}
                 className="p-2.5 rounded-xl border border-slate-200 hover:border-slate-300 hover:bg-slate-50 text-slate-600 hover:text-slate-900 flex items-center justify-center transition-colors"
                 title={
                   lang === 'ko'
