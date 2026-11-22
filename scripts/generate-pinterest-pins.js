@@ -9,8 +9,19 @@ const MASCOT_DIR = path.join(ROOT_DIR, 'public', 'images', 'mascot');
 const MAP_IMAGES_DIR = path.join(ROOT_DIR, 'public', 'images', 'map');
 const OUTPUT_DIR = path.join(ROOT_DIR, 'public', 'images', 'pinterest');
 
-const FORMAT_DIRS = ['covers', 'questions', 'cards', 'chemistry', 'maps'];
+const FORMAT_DIRS = [
+  'covers',
+  'questions',
+  'cards',
+  'chemistry',
+  'maps',
+  'korean-name',
+  'courses',
+  'spots',
+];
 const LEGACY_DIRS = ['main', 'es'];
+const FONT_KOREAN =
+  "'Malgun Gothic', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Segoe UI', Arial, sans-serif";
 
 const LANGS = ['es', 'en', 'pt'];
 
@@ -158,6 +169,16 @@ const CHEMISTRY_BOARD_MAP = {
 };
 
 function getTargetBoard(groupKey, lang) {
+  if (groupKey === 'korean-name') {
+    if (lang === 'es') return 'Tu Nombre Coreano, Significado Hanja y Cultura Coreana 🇰🇷✨';
+    if (lang === 'pt') return 'Seu Nome Coreano, Significado Hanja e Cultura Coreana 🇰🇷✨';
+    return 'Korean Name Generator, Hangul Aesthetic & K-Saju Meanings 🇰🇷✨';
+  }
+  if (groupKey === 'korea-travel') {
+    if (lang === 'es') return 'Guía de Viaje a Corea y Mapa K-Pop (Seúl, Busán y Gangneung) 📍🇰🇷';
+    if (lang === 'pt') return 'Guia de Viagem para Coreia e Mapa K-Pop (Seul e Busan) 📍🇰🇷';
+    return 'Korea Travel Guide & K-Pop Pilgrimage Map (Seoul & Busan) 📍🇰🇷';
+  }
   if (lang === 'es') return CHEMISTRY_BOARD_MAP.es;
   if (lang === 'pt') return CHEMISTRY_BOARD_MAP.pt;
   const enBoards = {
@@ -265,16 +286,20 @@ function trimWords(str, maxLen) {
 }
 
 function buildPinUrl({ pathName, lang, campaign, content, extraParams }) {
-  const url = new URL(`https://kpulsequiz.com${pathName}`);
+  const cleanPath = pathName.startsWith('/') ? pathName : `/${pathName}`;
+  const localizedPath =
+    lang === 'en'
+      ? cleanPath
+      : cleanPath === '/'
+      ? `/${lang}`
+      : `/${lang}${cleanPath}`;
+  const url = new URL(`https://kpulsequiz.com${localizedPath}`);
   if (extraParams) {
     for (const [k, v] of Object.entries(extraParams)) {
       if (v !== undefined && v !== null && v !== '') {
         url.searchParams.set(k, String(v));
       }
     }
-  }
-  if (lang !== 'en') {
-    url.searchParams.set('lang', lang);
   }
   url.searchParams.set('utm_source', 'pinterest');
   url.searchParams.set('utm_medium', 'social');
@@ -1449,6 +1474,1316 @@ async function generateFormatEMap(mapCfg, lang) {
   };
 }
 
+const KOREAN_NAME_PIN_CONFIGS = [
+  {
+    id: 'celadon-studio',
+    mode: 'specimen',
+    bgStops: ['#064E3B', '#0F766E', '#0D9488'],
+    cardStart: '#F0FDFA',
+    cardEnd: '#CCFBF1',
+    accent: '#0D9488',
+    headerAccent: '#A7F3D0',
+    ink: '#063B32',
+    subInk: '#115E59',
+    pillBg: '#CCFBF1',
+    pillText: '#0F766E',
+    dark: false,
+    specimen: {
+      origin: 'SOFIA  →',
+      hangul: '한윤서',
+      hanja: '韓潤瑞',
+      roman: 'Han Yun-seo',
+      phonetic: '/hahn yoon-suh/',
+      aura: 'Celadon Saju · Water + Wood',
+      seal: ['韓', '潤', '瑞', '印'],
+      meaning: {
+        es: 'Gracia brillante que nutre como la lluvia de primavera',
+        en: 'Radiant grace that nourishes gently like spring rain',
+        pt: 'Graça radiante que nutre como a chuva da primavera',
+      },
+    },
+    copy: {
+      es: {
+        badge: 'GENERADOR K-SAJU · GRATIS',
+        line1: '¿Cuál Sería Tu Nombre',
+        line2: 'Coreano Según Tu Fecha?',
+        sub: 'Con Significado Hanja, Audio Real y Sello 9:16',
+        pills: ['AUDIO COREANO', 'SIGNIFICADO HANJA', 'TARJETA 9:16'],
+        cta: 'CREAR MI NOMBRE COREANO →',
+        title: '¿Cuál Es Tu Nombre Coreano Según Tu Cumpleaños? ✨ Generador K-Saju + Sello Hanja',
+        desc: 'Ingresa tu fecha de nacimiento y descubre tus 3 nombres coreanos ideales equilibrados por los Cinco Elementos del K-Saju. Incluye significado real en Hanja, pronunciación en audio coreano, tarjeta ID 9:16 con sello tradicional y tu idol compatible.',
+      },
+      en: {
+        badge: 'K-SAJU NAME STUDIO · FREE',
+        line1: 'What Is Your Real',
+        line2: 'Korean Name by Birthday?',
+        sub: 'Authentic Hanja Meaning, Audio & 9:16 Seal ID Card',
+        pills: ['KOREAN AUDIO', 'HANJA MEANING', '9:16 ID CARD'],
+        cta: 'ISSUE MY KOREAN NAME →',
+        title: 'What Is Your Korean Name? 🇰🇷 K-Saju Birthday Generator, Hanja Meaning & Seal Card',
+        desc: 'Enter your birthday and style to get 3 authentic Korean names balanced by Korean Saju Five Elements. Hear native Korean pronunciation, unlock Hanja character meanings, save your 9:16 Hanji ID card, and match with 44 K-Pop idols.',
+      },
+      pt: {
+        badge: 'ESTÚDIO K-SAJU · GRÁTIS',
+        line1: 'Qual Seria Seu Nome',
+        line2: 'Coreano Pelo Aniversário?',
+        sub: 'Significado Hanja, Áudio em Coreano e Cartão 9:16',
+        pills: ['ÁUDIO COREANO', 'HANJA AUTÊNTICO', 'CARTÃO 9:16'],
+        cta: 'GERAR MEU NOME COREANO →',
+        title: 'Qual É o Seu Nome Coreano? ✨ Gerador K-Saju com Hanja, Áudio e Cartão 9:16',
+        desc: 'Informe sua data de nascimento para receber 3 nomes coreanos autênticos equilibrados pelos Cinco Elementos do K-Saju. Ouça a pronúncia em coreano, veja o significado em Hanja e baixe seu cartão 9:16 com selo tradicional.',
+      },
+    },
+  },
+  {
+    id: 'rose-idol',
+    mode: 'specimen',
+    bgStops: ['#881337', '#BE123C', '#EA580C'],
+    cardStart: '#FFF1F2',
+    cardEnd: '#FFEDD5',
+    accent: '#E11D48',
+    headerAccent: '#FDE68A',
+    ink: '#3B0A1A',
+    subInk: '#881337',
+    pillBg: '#FFE4E6',
+    pillText: '#BE123C',
+    dark: false,
+    specimen: {
+      origin: 'IDOL STAGE EDITION',
+      hangul: '김서연',
+      hanja: '金瑞妍',
+      roman: 'Kim Seo-yeon',
+      phonetic: '/kim suh-yun/',
+      aura: 'Seoul Rose · Idol & Stage Aura',
+      seal: ['金', '瑞', '妍', '印'],
+      meaning: {
+        es: 'Belleza luminosa y estrella afortunada sobre el escenario',
+        en: 'Auspicious starlight with graceful and unforgettable charisma',
+        pt: 'Beleza luminosa e brilho marcante de estrela no palco',
+      },
+    },
+    copy: {
+      es: {
+        badge: 'EDICIÓN IDOL K-POP · GRATIS',
+        line1: 'Tu Nombre Coreano',
+        line2: 'Estilo Idol de K-Pop',
+        sub: 'Elige Vibra Idol, Suave, Chic o K-Drama Clásico',
+        pills: ['4 ESTILOS K-POP', 'TOP 3 NOMBRES', 'MATCH IDOL'],
+        cta: 'DESCUBRIR MI NOMBRE →',
+        title: 'Tu Nombre Coreano Estilo Idol K-Pop 💖 Prueba K-Saju + Hanja y Idol Compatible',
+        desc: '¿Quieres saber cómo te llamarías si debutaras en Corea? Elige tu vibra (Idol, Suave, Chic o Clásico), ingresa tu cumpleaños y obtén 3 nombres coreanos con Hanja, pronunciación y tu compatibilidad con BTS, BLACKPINK y Stray Kids.',
+      },
+      en: {
+        badge: 'K-POP IDOL EDITION · FREE',
+        line1: 'Get Your K-Pop Idol',
+        line2: 'Korean Stage Name',
+        sub: 'Pick Idol, Soft, Chic, or Classic K-Drama Aura',
+        pills: ['4 AURA STYLES', 'TOP 3 NAMES', 'IDOL MATCH'],
+        cta: 'CREATE STAGE NAME →',
+        title: 'Get Your K-Pop Idol Korean Name ✨ 4 Vibe Styles, Hanja & Soulmate Match',
+        desc: 'Ever wondered what your Korean name would be as a K-Pop idol? Enter your birthday and vibe to unlock 3 curated Korean names with real Hanja meanings, Korean audio pronunciation, and your top matching K-Pop idol.',
+      },
+      pt: {
+        badge: 'EDIÇÃO IDOL K-POP · GRÁTIS',
+        line1: 'Seu Nome Coreano',
+        line2: 'Estilo Idol de K-Pop',
+        sub: 'Escolha a Vibe: Idol, Suave, Chic ou K-Drama',
+        pills: ['4 ESTILOS', 'TOP 3 NOMES', 'IDOL MATCH'],
+        cta: 'DESCOBRIR MEU NOME →',
+        title: 'Descubra Seu Nome Coreano Estilo Idol K-Pop 💖 Hanja, Pronúncia e Match',
+        desc: 'Escolha sua vibe (Idol, Suave, Chic ou Clássico) e informe seu aniversário para receber 3 nomes coreanos com significado em Hanja, áudio em coreano e seu idol mais compatível.',
+      },
+    },
+  },
+  {
+    id: 'najeon-collector',
+    mode: 'specimen',
+    bgStops: ['#090D18', '#1E1B4B', '#134E4A'],
+    cardStart: '#0F172A',
+    cardEnd: '#0E2931',
+    accent: '#5EEAD4',
+    headerAccent: '#5EEAD4',
+    ink: '#F8FAFC',
+    subInk: '#CBD5E1',
+    pillBg: 'rgba(94, 234, 212, 0.16)',
+    pillText: '#99F6E4',
+    dark: true,
+    frameGrad: ['#2DD4BF', '#818CF8', '#F472B6'],
+    specimen: {
+      origin: 'NAJEON PEARL EDITION',
+      hangul: '박지우',
+      hanja: '朴智宇',
+      roman: 'Park Ji-woo',
+      phonetic: '/pahk jee-woo/',
+      aura: 'Chic & Modern Seoul Edition',
+      seal: ['朴', '智', '宇', '印'],
+      meaning: {
+        es: 'Sabiduría amplia como el universo en equilibrio nocturno',
+        en: 'Clear wisdom and expansive spirit shining like mother-of-pearl',
+        pt: 'Sabedoria ampla e brilho sereno em equilíbrio cósmico',
+      },
+    },
+    copy: {
+      es: {
+        badge: 'EDICIÓN COLECCIONISTA 9:16',
+        line1: 'Tu Tarjeta ID Coreana',
+        line2: 'Con Sello Tradicional',
+        sub: '6 Colores Incluyendo Nácar Najeon y Sello Rojo Hanja',
+        pills: ['6 PALETAS COLOR', 'SELLO 2x2', 'PNG PARA STORIES'],
+        cta: 'DESCARGAR MI TARJETA →',
+        title: 'Tarjeta ID Coreana Personalizada 9:16 🇰🇷 Descarga Gratis en 6 Colores',
+        desc: 'Personaliza tu tarjeta oficial con nombre coreano en Hangul, Hanja y sello rojo tradicional (낙관) en 6 estilos de color incluyendo Najeon Pearl oscuro. Perfecta para guardar en Pinterest o compartir en Instagram Stories.',
+      },
+      en: {
+        badge: 'COLLECTOR EDITION · PNG 9:16',
+        line1: 'Aesthetic Korean Name',
+        line2: 'ID Card & Stamp Seal',
+        sub: '6 Collector Color Themes Including Najeon Pearl',
+        pills: ['6 COLOR THEMES', 'HANJA SEAL 2x2', 'FREE PNG'],
+        cta: 'DESIGN MY ID CARD →',
+        title: 'Custom Korean Name ID Card (9:16 Story PNG) 🖤 6 K-Saju Collector Palettes',
+        desc: 'Create and download a printable 9:16 Korean Name ID card complete with Hangul, authentic Hanja characters, a traditional vermilion 2x2 seal stamp, and 6 colorful collector palettes including dark Najeon Pearl.',
+      },
+      pt: {
+        badge: 'EDIÇÃO COLECIONADOR 9:16',
+        line1: 'Seu Cartão ID Coreano',
+        line2: 'Com Selo Tradicional',
+        sub: '6 Paletas de Cores Incluindo Najeon Pearl Escuro',
+        pills: ['6 PALETAS', 'SELO VERMELHO', 'PNG 9:16'],
+        cta: 'BAIXAR MEU CARTÃO →',
+        title: 'Cartão ID Coreano Personalizado 9:16 🇰🇷 6 Paletas K-Saju e Selo Hanja',
+        desc: 'Gere seu nome coreano pelo K-Saju e baixe um cartão 9:16 de colecionador com escrita em Hangul, significado em Hanja, áudio real e carimbo vermelho tradicional em 6 cores.',
+      },
+    },
+  },
+  {
+    id: 'iris-surnames',
+    mode: 'surnames',
+    bgStops: ['#1E1B4B', '#4338CA', '#7C3AED'],
+    accent: '#6D28D9',
+    headerAccent: '#C4B5FD',
+    surnames: [
+      { hangul: '김', roman: 'Kim', hanja: '金', idols: 'V, Jennie, RM, Jin' },
+      { hangul: '이', roman: 'Lee', hanja: '李', idols: 'Felix, Heeseung' },
+      { hangul: '박', roman: 'Park', hanja: '朴', idols: 'Jimin, Rosé, Sunghoon' },
+      { hangul: '전', roman: 'Jeon', hanja: '全', idols: 'Jungkook, Soyeon' },
+      { hangul: '최', roman: 'Choi', hanja: '崔', idols: 'San, Beomgyu, Yeonjun' },
+      { hangul: '한', roman: 'Han', hanja: '韓', idols: 'HAN (Stray Kids)' },
+    ],
+    copy: {
+      es: {
+        badge: 'GUÍA DE APELLIDOS COREANOS',
+        line1: 'Apellidos Coreanos y',
+        line2: 'Qué Idols los Comparten',
+        sub: 'Descubre qué apellido combina mejor con tu fecha K-Saju',
+        pills: ['20 APELLIDOS REALES', '60 NOMBRES', 'ELEMENTOS SAJU'],
+        cta: 'VER MI APELLIDO IDEAL →',
+        title: 'Guía de Apellidos Coreanos y Idols de K-Pop ✨ Significado Hanja y K-Saju',
+        desc: '¿Kim, Lee, Park, Jeon o Han? Guarda esta guía visual con los apellidos coreanos más famosos del K-Pop, sus caracteres Hanja y descubre gratis cuál armoniza con tu fecha de nacimiento en K-Saju.',
+      },
+      en: {
+        badge: 'KOREAN SURNAMES CHEAT SHEET',
+        line1: 'Korean Family Surnames',
+        line2: 'Shared by K-Pop Idols',
+        sub: 'Pair 20 traditional surnames with your Five Elements',
+        pills: ['20 SURNAMES', '60 GIVEN NAMES', 'HANJA GUIDE'],
+        cta: 'FIND MY SURNAME →',
+        title: 'Korean Family Surnames & K-Pop Idols Guide 📌 Hanja Meanings & K-Saju Match',
+        desc: 'Save this Korean surnames cheat sheet! Learn the Hanja meanings behind Kim, Lee, Park, Jeon, Choi, and Han—and generate a full Korean name balanced to your birthday.',
+      },
+      pt: {
+        badge: 'GUIA DE SOBRENOMES COREANOS',
+        line1: 'Sobrenomes Coreanos',
+        line2: 'Mais Famosos no K-Pop',
+        sub: 'Descubra qual sobrenome combina com seu aniversário',
+        pills: ['20 SOBRENOMES', '60 NOMES', 'GUIA HANJA'],
+        cta: 'DESCOBRIR MEU SOBRENOME →',
+        title: 'Guia de Sobrenomes Coreanos e Idols K-Pop 📌 Hanja e Combinação K-Saju',
+        desc: 'Kim, Lee, Park, Jeon, Choi ou Han? Salve este guia com o significado em Hanja dos sobrenomes coreanos e gere gratuitamente seu nome coreano completo pelo K-Saju.',
+      },
+    },
+  },
+  {
+    id: 'water-elements',
+    mode: 'elements',
+    bgStops: ['#082F49', '#0369A1', '#0891B2'],
+    accent: '#0284C7',
+    headerAccent: '#67E8F9',
+    elements: [
+      { hanja: '木', dot: '#10B981', en: 'Wood · Creative & Warm', es: 'Madera · Creativa y Cálida', pt: 'Madeira · Criativa e Calorosa', rule: 'Water feeds Wood' },
+      { hanja: '火', dot: '#F43F5E', en: 'Fire · Radiant & Bold', es: 'Fuego · Radiante y Audaz', pt: 'Fogo · Radiante e Intenso', rule: 'Wood fuels Fire' },
+      { hanja: '土', dot: '#F59E0B', en: 'Earth · Steady & Noble', es: 'Tierra · Firme y Noble', pt: 'Terra · Firme e Leal', rule: 'Fire enriches Earth' },
+      { hanja: '金', dot: '#8B5CF6', en: 'Metal · Crisp & Iconic', es: 'Metal · Claro y Sofisticado', pt: 'Metal · Brilhante e Único', rule: 'Earth yields Metal' },
+      { hanja: '水', dot: '#0EA5E9', en: 'Water · Poetic & Deep', es: 'Agua · Poética y Profunda', pt: 'Água · Poética e Intuitiva', rule: 'Metal purifies Water' },
+    ],
+    copy: {
+      es: {
+        badge: 'ASTROLOGÍA COREANA · CINCO ELEMENTOS',
+        line1: 'Tu Elemento K-Saju y',
+        line2: 'Tu Nombre de la Suerte',
+        sub: 'El método tradicional coreano de armonía 상생 por cumpleaños',
+        pills: ['5 ELEMENTOS', 'SUERTE POR FECHA', 'AUDIO COREANO'],
+        cta: 'CALCULAR MI ELEMENTO →',
+        title: 'Los Cinco Elementos del K-Saju Coreano 🌊 Descubre Tu Nombre de la Suerte',
+        desc: '¿Madera, Fuego, Tierra, Metal o Agua? En la tradición coreana del Saju, tu fecha de nacimiento revela qué elemento equilibra tu energía. Obtén gratis tus 3 nombres coreanos con significado Hanja.',
+      },
+      en: {
+        badge: 'KOREAN SAJU FIVE ELEMENTS',
+        line1: 'Balance Your Birthday',
+        line2: 'With 5-Element Naming',
+        sub: 'How traditional Korean Saju chooses auspicious Hanja',
+        pills: ['5 ELEMENTS', 'BIRTHDAY SAJU', 'HANJA MEANING'],
+        cta: 'CHECK MY ELEMENT →',
+        title: 'Korean Saju Five Elements Name Guide 🌊 Wood, Fire, Earth, Metal & Water',
+        desc: 'Learn how traditional Korean Saju naming balances your birthday Day Master element (Wood, Fire, Earth, Metal, or Water) with harmonizing Hanja characters and try our free name generator.',
+      },
+      pt: {
+        badge: 'ASTROLOGIA COREANA · 5 ELEMENTOS',
+        line1: 'Seu Elemento K-Saju e',
+        line2: 'Nome da Sorte Coreano',
+        sub: 'Como a tradição coreana equilibra sua data de nascimento',
+        pills: ['5 ELEMENTOS', 'DATA DE NASCIMENTO', 'HANJA REAL'],
+        cta: 'CALCULAR MEU ELEMENTO →',
+        title: 'Cinco Elementos do K-Saju Coreano 🌊 Descubra Seu Elemento e Nome Ideal',
+        desc: 'Madeira, Fogo, Terra, Metal ou Água? Veja como o K-Saju coreano combina os cinco elementos pela sua data de nascimento para criar um nome coreano autêntico e harmonioso.',
+      },
+    },
+  },
+  {
+    id: 'amber-kdrama',
+    mode: 'specimen',
+    bgStops: ['#78350F', '#B45309', '#D97706'],
+    cardStart: '#FFFBEB',
+    cardEnd: '#FEF3C7',
+    accent: '#B45309',
+    headerAccent: '#FDE68A',
+    ink: '#381E08',
+    subInk: '#78350F',
+    pillBg: '#FEF3C7',
+    pillText: '#92400E',
+    dark: false,
+    specimen: {
+      origin: 'CLASSIC K-DRAMA & UNISEX',
+      hangul: '서지안',
+      hanja: '徐智安',
+      roman: 'Seo Ji-an',
+      phonetic: '/suh jee-ahn/',
+      aura: 'Classic & Noble Aesthetic',
+      seal: ['徐', '智', '安', '印'],
+      meaning: {
+        es: 'Elegancia tranquila y sabiduría atemporal de protagonista',
+        en: 'Calm wisdom and graceful poise worthy of a K-Drama lead',
+        pt: 'Elegância clássica e sabedoria serena de protagonista',
+      },
+    },
+    copy: {
+      es: {
+        badge: 'NOMBRES ESTÉTICOS DE K-DRAMA',
+        line1: 'Nombres Coreanos Más',
+        line2: 'Bonitos y Unisex en Hangul',
+        sub: 'Opciones Femeninas, Masculinas y Unisex con Significado',
+        pills: ['UNISEX Y GÉNERO', 'PRONUNCIACIÓN', '100% GRATIS'],
+        cta: 'VER MIS 3 NOMBRES →',
+        title: 'Nombres Coreanos Bonitos y Unisex ✨ Significado en Español y Audio K-Saju',
+        desc: 'Explora nombres coreanos elegantes estilo K-Drama (femeninos, masculinos o unisex) personalizados con tu cumpleaños. Escucha su pronunciación real y guarda tu tarjeta coreana gratis.',
+      },
+      en: {
+        badge: 'AESTHETIC K-DRAMA NAMES',
+        line1: 'Pretty & Unisex',
+        line2: 'Korean Names in Hangul',
+        sub: 'Curated Feminine, Masculine & Unisex Picks by Saju',
+        pills: ['UNISEX OPTIONS', 'AUDIO GUIDE', '100% FREE'],
+        cta: 'GET 3 CURATED NAMES →',
+        title: 'Pretty & Unisex Korean Names With Meanings ✨ K-Drama & Hangul Studio',
+        desc: 'Looking for an aesthetic feminine, masculine, or unisex Korean name? Generate 3 curated Hangul names with real Hanja meanings, romanized phonetics, and Korean audio in seconds.',
+      },
+      pt: {
+        badge: 'NOMES ESTÉTICOS DE K-DRAMA',
+        line1: 'Nomes Coreanos Lindos',
+        line2: 'e Unissex em Hangul',
+        sub: 'Opções Femininas, Masculinas e Unissex pelo K-Saju',
+        pills: ['OPÇÕES UNISSEX', 'PRONÚNCIA REAL', '100% GRÁTIS'],
+        cta: 'VER MEUS 3 NOMES →',
+        title: 'Nomes Coreanos Bonitos e Unissex ✨ Significado Hanja e Pronúncia Real',
+        desc: 'Descubra nomes coreanos estilosos de K-Drama (femininos, masculinos ou unissex) gerados pela sua data de nascimento com áudio em coreano e cartão ID para salvar.',
+      },
+    },
+  },
+];
+
+async function generateFormatFKoreanName(cfg, lang) {
+  const copy = cfg.copy[lang];
+  const pillsSvg = copy.pills
+    .map((label, idx) => {
+      const px = 68 + idx * 295;
+      return `
+      <rect x="${px}" y="1058" width="274" height="54" rx="27" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.28)" stroke-width="1.5"/>
+      <text x="${px + 137}" y="1091" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="18" font-weight="800" text-anchor="middle">
+        ${escapeXml(stripEmojis(label))}
+      </text>`;
+    })
+    .join('\n');
+
+  let centerCardSvg = '';
+
+  if (cfg.mode === 'specimen') {
+    const sp = cfg.specimen;
+    const meaningLines = wrapText(sp.meaning[lang], 38, 2);
+    const frameFill = cfg.dark ? 'url(#frameGrad)' : 'rgba(255,255,255,0.28)';
+    centerCardSvg = `
+    <rect x="74" y="366" width="852" height="650" rx="34" fill="${frameFill}"/>
+    <rect x="80" y="372" width="840" height="638" rx="30" fill="url(#cardGrad)" stroke="${cfg.dark ? 'rgba(129,140,248,0.45)' : 'rgba(255,255,255,0.85)'}" stroke-width="2"/>
+    <path d="M 80 402 Q 80 372 110 372 L 890 372 Q 920 372 920 402 L 920 442 L 80 442 Z" fill="${cfg.accent}"/>
+    <text x="120" y="414" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="18" font-weight="800" letter-spacing="1.5">
+      K-PULSE · OFFICIAL KOREAN NAME ID
+    </text>
+    <text x="880" y="414" fill="rgba(255,255,255,0.88)" font-family="${FONT_KOREAN}" font-size="17" font-weight="700" text-anchor="end">
+      K-SAJU EDITION
+    </text>
+
+    <!-- Aura Pill -->
+    <rect x="124" y="476" width="420" height="44" rx="22" fill="${cfg.pillBg}" stroke="${cfg.accent}" stroke-width="1.5"/>
+    <text x="334" y="505" fill="${cfg.pillText}" font-family="${FONT_KOREAN}" font-size="19" font-weight="800" text-anchor="middle">
+      ${escapeXml(stripEmojis(sp.aura))}
+    </text>
+
+    <!-- Origin -->
+    <text x="128" y="564" fill="${cfg.subInk}" font-family="${FONT_KOREAN}" font-size="22" font-weight="800" letter-spacing="1.5">
+      ${escapeXml(sp.origin)}
+    </text>
+
+    <!-- Hero Hangul -->
+    <text x="124" y="694" fill="${cfg.ink}" font-family="${FONT_KOREAN}" font-size="118" font-weight="900">
+      ${escapeXml(sp.hangul)}
+    </text>
+
+    <!-- Romanized + Phonetic + Hanja -->
+    <text x="128" y="758" fill="${cfg.ink}" font-family="${FONT_KOREAN}" font-size="38" font-weight="800">
+      ${escapeXml(sp.roman)}
+    </text>
+    <text x="128" y="802" fill="${cfg.subInk}" font-family="${FONT_KOREAN}" font-size="25" font-weight="700">
+      ${escapeXml(sp.phonetic)}  ·  ${escapeXml(sp.hanja)}
+    </text>
+
+    <!-- Traditional 2x2 Vermilion Square Seal Stamp -->
+    <g transform="translate(776, 622) rotate(-4)">
+      <rect x="-86" y="-86" width="172" height="172" rx="16" fill="#C8322B" ${cfg.dark ? 'stroke="rgba(255,249,242,0.45)" stroke-width="3"' : ''}/>
+      <rect x="-74" y="-74" width="148" height="148" rx="10" fill="none" stroke="rgba(255,249,242,0.88)" stroke-width="4"/>
+      <line x1="0" y1="-64" x2="0" y2="64" stroke="rgba(255,249,242,0.28)" stroke-width="1.5"/>
+      <line x1="-64" y1="0" x2="64" y2="0" stroke="rgba(255,249,242,0.28)" stroke-width="1.5"/>
+      <text x="34" y="-20" fill="#FFF9F2" font-family="${FONT_KOREAN}" font-size="44" font-weight="900" text-anchor="middle">${escapeXml(sp.seal[0])}</text>
+      <text x="34" y="48" fill="#FFF9F2" font-family="${FONT_KOREAN}" font-size="44" font-weight="900" text-anchor="middle">${escapeXml(sp.seal[1])}</text>
+      <text x="-34" y="-20" fill="#FFF9F2" font-family="${FONT_KOREAN}" font-size="44" font-weight="900" text-anchor="middle">${escapeXml(sp.seal[2])}</text>
+      <text x="-34" y="48" fill="#FFF9F2" font-family="${FONT_KOREAN}" font-size="44" font-weight="900" text-anchor="middle">${escapeXml(sp.seal[3])}</text>
+    </g>
+
+    <!-- Bottom Meaning -->
+    <line x1="124" y1="844" x2="876" y2="844" stroke="${cfg.dark ? 'rgba(148,163,184,0.26)' : 'rgba(15,23,42,0.12)'}" stroke-width="2"/>
+    ${meaningLines
+      .map(
+        (line, i) => `
+    <text x="128" y="${896 + i * 40}" fill="${cfg.subInk}" font-family="${FONT_KOREAN}" font-size="25" font-weight="700">
+      ${escapeXml(line)}
+    </text>`
+      )
+      .join('')}
+    `;
+  } else if (cfg.mode === 'surnames') {
+    centerCardSvg = cfg.surnames
+      .map((item, idx) => {
+        const col = idx % 2;
+        const row = Math.floor(idx / 2);
+        const cx = 78 + col * 432;
+        const cy = 368 + row * 218;
+        return `
+        <rect x="${cx}" y="${cy}" width="412" height="198" rx="24" fill="#FFFFFF" stroke="rgba(255,255,255,0.65)" stroke-width="2"/>
+        <text x="${cx + 32}" y="${cy + 78}" fill="#1E1B4B" font-family="${FONT_KOREAN}" font-size="56" font-weight="900">
+          ${escapeXml(item.hangul)}
+        </text>
+        <text x="${cx + 106}" y="${cy + 74}" fill="#312E81" font-family="${FONT_KOREAN}" font-size="36" font-weight="800">
+          ${escapeXml(item.roman)}
+        </text>
+        <rect x="${cx + 318}" y="${cy + 30}" width="64" height="58" rx="14" fill="#EDE9FE"/>
+        <text x="${cx + 350}" y="${cy + 72}" fill="#5B21B6" font-family="${FONT_KOREAN}" font-size="36" font-weight="900" text-anchor="middle">
+          ${escapeXml(item.hanja)}
+        </text>
+        <line x1="${cx + 28}" y1="${cy + 114}" x2="${cx + 384}" y2="${cy + 114}" stroke="#E2E8F0" stroke-width="1.5"/>
+        <text x="${cx + 32}" y="${cy + 158}" fill="#475569" font-family="${FONT_KOREAN}" font-size="22" font-weight="700">
+          ${escapeXml(item.idols)}
+        </text>`;
+      })
+      .join('\n');
+  } else {
+    centerCardSvg = cfg.elements
+      .map((el, idx) => {
+        const ey = 368 + idx * 128;
+        const labelText = lang === 'es' ? el.es : lang === 'pt' ? el.pt : el.en;
+        return `
+        <rect x="84" y="${ey}" width="832" height="112" rx="24" fill="#FFFFFF" stroke="rgba(255,255,255,0.65)" stroke-width="2"/>
+        <circle cx="152" cy="${ey + 56}" r="36" fill="${el.dot}"/>
+        <text x="152" y="${ey + 70}" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="40" font-weight="900" text-anchor="middle">
+          ${escapeXml(el.hanja)}
+        </text>
+        <text x="216" y="${ey + 48}" fill="#0F172A" font-family="${FONT_KOREAN}" font-size="28" font-weight="900">
+          ${escapeXml(labelText)}
+        </text>
+        <text x="216" y="${ey + 86}" fill="#475569" font-family="${FONT_KOREAN}" font-size="21" font-weight="700">
+          ${escapeXml(el.rule)}
+        </text>`;
+      })
+      .join('\n');
+  }
+
+  const line1Size = copy.line1.length > 26 ? 44 : 50;
+  const line2Size = copy.line2.length > 25 ? 46 : 54;
+  const footerPath =
+    lang === 'en'
+      ? 'KPULSEQUIZ.COM/KOREAN-NAME'
+      : `KPULSEQUIZ.COM/${lang.toUpperCase()}/KOREAN-NAME`;
+
+  const svg = `
+  <svg width="1000" height="1500" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="${cfg.bgStops[0]}"/>
+        <stop offset="52%" stop-color="${cfg.bgStops[1]}"/>
+        <stop offset="100%" stop-color="${cfg.bgStops[2]}"/>
+      </linearGradient>
+      <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="${cfg.cardStart || '#FFFFFF'}"/>
+        <stop offset="100%" stop-color="${cfg.cardEnd || '#FFFFFF'}"/>
+      </linearGradient>
+      ${
+        cfg.frameGrad
+          ? `<linearGradient id="frameGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="${cfg.frameGrad[0]}"/>
+              <stop offset="50%" stop-color="${cfg.frameGrad[1]}"/>
+              <stop offset="100%" stop-color="${cfg.frameGrad[2]}"/>
+            </linearGradient>`
+          : ''
+      }
+    </defs>
+
+    <rect width="1000" height="1500" fill="url(#bgGrad)"/>
+    <rect x="28" y="28" width="944" height="1444" rx="38" fill="none" stroke="rgba(255,255,255,0.22)" stroke-width="2.5"/>
+
+    <!-- Top Badge -->
+    <rect x="220" y="64" width="560" height="46" rx="23" fill="rgba(255,255,255,0.14)" stroke="rgba(255,255,255,0.34)" stroke-width="1.5"/>
+    <text x="500" y="94" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="18" font-weight="900" letter-spacing="1.6" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.badge))}
+    </text>
+
+    <!-- Headline -->
+    <text x="500" y="190" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="${line1Size}" font-weight="800" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.line1))}
+    </text>
+    <text x="500" y="262" fill="${cfg.headerAccent}" font-family="${FONT_KOREAN}" font-size="${line2Size}" font-weight="900" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.line2))}
+    </text>
+    <text x="500" y="316" fill="rgba(255,255,255,0.88)" font-family="${FONT_KOREAN}" font-size="22" font-weight="700" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.sub))}
+    </text>
+
+    ${centerCardSvg}
+    ${pillsSvg}
+
+    <!-- Bright Contrast Pill CTA -->
+    <rect x="140" y="1174" width="720" height="96" rx="48" fill="#FFFFFF"/>
+    <text x="500" y="1233" fill="#0F172A" font-family="${FONT_KOREAN}" font-size="29" font-weight="900" letter-spacing="0.6" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.cta))}
+    </text>
+
+    <!-- Localized URL Footer -->
+    <text x="500" y="1364" fill="rgba(255,255,255,0.85)" font-family="${FONT_KOREAN}" font-size="20" font-weight="800" letter-spacing="3" text-anchor="middle">
+      ${escapeXml(footerPath)}
+    </text>
+  </svg>`;
+
+  const filename = `kname-${cfg.id}-${lang}.png`;
+  const relPath = `public/images/pinterest/korean-name/${filename}`;
+  const outPath = path.join(OUTPUT_DIR, 'korean-name', filename);
+
+  await writePng(svg, [], outPath, 90);
+
+  return {
+    isNewPack: true,
+    format: 'Korean Name Studio',
+    lang,
+    group: 'Korean Name',
+    imageFile: relPath,
+    targetBoard: getTargetBoard('korean-name', lang),
+    pinTitle: copy.title,
+    pinDescription: copy.desc,
+    destinationUrl: buildPinUrl({
+      pathName: '/korean-name',
+      lang,
+      campaign: `korean_name_${cfg.id}_${lang}`,
+      content: cfg.id,
+    }),
+  };
+}
+
+const COURSE_PIN_CONFIGS = [
+  {
+    id: 'bts-seoul-heritage',
+    slug: 'bts-seoul-heritage-day',
+    groupLabel: 'BTS',
+    accent: '#7C3AED',
+    durationHours: 6,
+    photos: ['bts-hybe-hq/1.webp', 'bts-yoojung-sikdang/1.webp', 'bts-gyeongbokgung/1.webp'],
+    stops: [
+      { label: 'HYBE Yongsan HQ', sub: 'Yongsan-gu · Sinyongsan Exit 2' },
+      { label: 'Yoojung Sikdang', sub: 'Nonhyeon · BTS Rookie Diner' },
+      { label: 'Geumdwaeji (Gold Pig) BBQ', sub: 'Yaksu · Idol Favorite Pork' },
+      { label: 'Gyeongbokgung Geunjeongjeon', sub: 'Jongno · BTS "IDOL" Stage' },
+    ],
+    copy: {
+      es: {
+        badge: '6H · 4 PARADAS EN SEÚL',
+        line1: 'Ruta Completa BTS en Seúl',
+        line2: 'HYBE, Yoojung y Palacio IDOL',
+        sub: 'Itinerario paso a paso conectado en metro',
+        cta: 'VER RUTA COMPLETA →',
+        title: 'Itinerario BTS en Seúl 1 Día 💜 HYBE, Yoojung Sikdang, Gold Pig BBQ y Gyeongbokgung',
+        desc: 'Guarda esta ruta BTS de 6 horas por Seúl paso a paso: Sede de HYBE en Yongsan, comedor clásico Yoojung Sikdang, Gold Pig BBQ en Yaksu y el Palacio Gyeongbokgung de IDOL con mapa y enlaces a Naver Maps.',
+      },
+      en: {
+        badge: '6H · 4 STOPS IN SEOUL',
+        line1: '1-Day BTS Seoul Itinerary',
+        line2: 'HYBE, Yoojung & Palace IDOL',
+        sub: 'Step-by-step ARMY walking & subway route',
+        cta: 'OPEN COURSE ROUTE →',
+        title: '1-Day BTS Seoul Itinerary 💜 HYBE HQ, Yoojung Sikdang, Gold Pig BBQ & Gyeongbokgung',
+        desc: 'Save this 6-hour BTS Seoul pilgrimage itinerary! Connects HYBE Yongsan, BTS trainee diner Yoojung Sikdang, Gold Pig BBQ, and Gyeongbokgung Palace with numbered map pins and Naver Maps links.',
+      },
+      pt: {
+        badge: '6H · 4 PARADAS EM SEUL',
+        line1: 'Roteiro BTS 1 Dia em Seul',
+        line2: 'HYBE, Yoojung e Palácio IDOL',
+        sub: 'Roteiro passo a passo de metrô pela cidade',
+        cta: 'VER ROTEIRO COMPLETO →',
+        title: 'Roteiro BTS de 1 Dia em Seul 💜 HYBE, Yoojung Sikdang, Gold Pig BBQ e Gyeongbokgung',
+        desc: 'Salve este roteiro ARMY de 6 horas em Seul: sede da HYBE em Yongsan, restaurante Yoojung Sikdang, Gold Pig BBQ e Palácio Gyeongbokgung com mapa numerado e links no Naver Maps.',
+      },
+    },
+  },
+  {
+    id: 'bts-busan-ocean',
+    slug: 'bts-busan-jimin-jungkook-tour',
+    groupLabel: 'BTS',
+    accent: '#0284C7',
+    durationHours: 6.5,
+    photos: ['bts-gamcheon-mural/1.webp', 'bts-busan-oryukdo/1.webp', 'bts-busan-dadaepo/1.webp'],
+    stops: [
+      { label: 'Gamcheon Culture Village Mural', sub: 'Saha-gu · Jimin & Jungkook' },
+      { label: 'Oryukdo Skywalk', sub: 'Nam-gu · Ocean Glass Ledge' },
+      { label: 'Dadaepo Beach Sunset', sub: 'Saha-gu · Jimin Vlog Spot' },
+    ],
+    copy: {
+      es: {
+        badge: '6.5H · 3 PARADAS EN BUSÁN',
+        line1: 'Tour BTS en Busán de',
+        line2: 'Jimin y Jungkook al Atardecer',
+        sub: 'De los murales de Gamcheon a las playas de Oryukdo y Dadaepo',
+        cta: 'ABRIR RUTA DE BUSÁN →',
+        title: 'Tour BTS en Busán 🌊 Mural de Jimin y Jungkook en Gamcheon, Oryukdo y Playa Dadaepo',
+        desc: 'Recorre la ciudad natal de Jimin y Jungkook en 1 día: el mural gigante de Gamcheon Culture Village, el mirador de cristal Oryukdo Skywalk y el atardecer en la playa Dadaepo.',
+      },
+      en: {
+        badge: '6.5H · 3 STOPS IN BUSAN',
+        line1: 'Busan Jimin & Jungkook',
+        line2: 'Ocean Pilgrimage Itinerary',
+        sub: 'Gamcheon Murals, Oryukdo Skywalk & Dadaepo Sunset',
+        cta: 'OPEN BUSAN ROUTE →',
+        title: 'Busan BTS Travel Itinerary 🌊 Gamcheon Mural, Oryukdo Skywalk & Dadaepo Beach',
+        desc: 'Explore Jimin and Jungkook’s Busan in one coastal route! Includes Gamcheon Culture Village giant mural, Oryukdo Skywalk glass ocean ledge, and Dadaepo Beach sunset with Naver & Kakao directions.',
+      },
+      pt: {
+        badge: '6.5H · 3 PARADAS EM BUSAN',
+        line1: 'Roteiro BTS em Busan:',
+        line2: 'Jimin e Jungkook no Litoral',
+        sub: 'De Gamcheon ao mirante de vidro Oryukdo e Dadaepo',
+        cta: 'ABRIR ROTEIRO BUSAN →',
+        title: 'Roteiro BTS em Busan 🌊 Mural Gamcheon, Oryukdo Skywalk e Pôr do Sol em Dadaepo',
+        desc: 'Visite a cidade natal de Jimin e Jungkook: o mural gigante de Gamcheon Culture Village, a passarela de vidro Oryukdo Skywalk e a praia de Dadaepo com mapa interativo.',
+      },
+    },
+  },
+  {
+    id: 'bts-daegu-walk',
+    slug: 'bts-daegu-v-suga-walk',
+    groupLabel: 'BTS',
+    accent: '#9333EA',
+    durationHours: 3.5,
+    photos: ['bts-daegu-v-mural/1.webp', 'bts-daegu-v-mural/2.webp', 'bts-daegu-dalseong-park/1.webp'],
+    stops: [
+      { label: 'Daegu BTS V Mural Street', sub: 'Seo-gu · Daeseong Elementary' },
+      { label: 'Dalseong Park Earthen Wall', sub: 'Jung-gu · SUGA Hometown Walk' },
+    ],
+    copy: {
+      es: {
+        badge: '3.5H · 2 PARADAS EN DAEGU',
+        line1: 'Caminata KTX en Daegu:',
+        line2: 'Mural de V y Parque de SUGA',
+        sub: 'Excursión fácil de medio día desde Seúl en KTX',
+        cta: 'VER RUTA DE DAEGU →',
+        title: 'Excursión BTS en Daegu 💜 Mural de V y Parque Dalseong de SUGA (Día en KTX)',
+        desc: 'Descubre el mural artístico gigante de Taehyung (V) frente a la primaria Daeseong y camina por el Parque Dalseong vinculado a SUGA en un paseo de medio día desde la estación Dongdaegu.',
+      },
+      en: {
+        badge: '3.5H · 2 STOPS IN DAEGU',
+        line1: 'Daegu KTX Day Walk:',
+        line2: 'V Mural Street & Dalseong Park',
+        sub: 'Easy 3.5-hour Taehyung & SUGA hometown loop',
+        cta: 'OPEN DAEGU ROUTE →',
+        title: 'Daegu BTS V & SUGA Hometown Walk 💜 KTX Day-Trip Route & Map',
+        desc: 'Pair Daegu’s BTS V Panorama Mural Street outside Daeseong Elementary with historic Dalseong Park connected to SUGA—just over 1 km apart for an easy half-day KTX excursion.',
+      },
+      pt: {
+        badge: '3.5H · 2 PARADAS EM DAEGU',
+        line1: 'Caminhada em Daegu:',
+        line2: 'Mural do V e Parque de SUGA',
+        sub: 'Bate-volta fácil de KTX saindo de Seul em meio dia',
+        cta: 'VER ROTEIRO DAEGU →',
+        title: 'Roteiro BTS em Daegu 💜 Mural do V e Parque Dalseong do SUGA (Bate-Volta KTX)',
+        desc: 'Veja de perto o mural artístico de V perto da Escola Primária Daeseong e caminhe pelo histórico Parque Dalseong ligado a SUGA em um passeio leve de 3,5 horas.',
+      },
+    },
+  },
+  {
+    id: 'blackpink-seoul-style',
+    slug: 'blackpink-seoul-style-tour',
+    groupLabel: 'BLACKPINK',
+    accent: '#DB2777',
+    durationHours: 6,
+    photos: ['bp-yg-hq/1.webp', 'bp-the-samee/1.webp', 'bp-haus-dosan/1.webp'],
+    stops: [
+      { label: 'YG Entertainment HQ', sub: 'Hapjeong · Modern Agency Façade' },
+      { label: 'the SameE Official Cafe', sub: 'Hapjeong · Opposite YG HQ' },
+      { label: 'BLACKPINK House Area', sub: 'Hongdae · Seogyo-dong Filming' },
+      { label: 'HAUS DOSAN & Downtowner', sub: 'Apgujeong · Jennie Collab & Burgers' },
+    ],
+    copy: {
+      es: {
+        badge: '6H · 5 PARADAS EN SEÚL',
+        line1: 'Tour BLINK BLACKPINK',
+        line2: 'De Hapjeong a Gangnam',
+        sub: 'YG HQ, Café the SameE, Hongdae y HAUS DOSAN',
+        cta: 'ABRIR RUTA BLINK →',
+        title: 'Tour BLACKPINK 1 Día en Seúl 🖤💖 YG, Café the SameE, Hongdae y HAUS DOSAN',
+        desc: 'Vive el mejor recorrido BLINK por Seúl: sede de YG Entertainment, Café the SameE justo enfrente, la zona de BLACKPINK House en Hongdae, HAUS DOSAN de Jennie y Downtowner Cheongdam.',
+      },
+      en: {
+        badge: '6H · 5 STOPS IN SEOUL',
+        line1: 'BLACKPINK Seoul Style',
+        line2: 'Hapjeong to Cheongdam Route',
+        sub: 'YG HQ, the SameE, Hongdae & HAUS DOSAN in 1 Day',
+        cta: 'OPEN BLINK ROUTE →',
+        title: 'BLACKPINK Seoul 1-Day Itinerary 🖤💖 YG HQ, the SameE Cafe, Hongdae & HAUS DOSAN',
+        desc: 'Morning in Mapo exploring YG Entertainment HQ, official fan cafe the SameE, and Hongdae, followed by afternoon fashion stops at HAUS DOSAN and Downtowner Cheongdam.',
+      },
+      pt: {
+        badge: '6H · 5 PARADAS EM SEUL',
+        line1: 'Roteiro BLACKPINK Seul:',
+        line2: 'De Hapjeong a Gangnam',
+        sub: 'YG HQ, Café the SameE, Hongdae e HAUS DOSAN',
+        cta: 'ABRIR ROTEIRO BLINK →',
+        title: 'Roteiro BLACKPINK em Seul 🖤💖 YG, Café the SameE, Hongdae e HAUS DOSAN',
+        desc: 'Siga este roteiro completo em Seul: sede da YG Entertainment, café oficial the SameE, região da BLACKPINK House em Hongdae, HAUS DOSAN e Downtowner Cheongdam.',
+      },
+    },
+  },
+  {
+    id: 'stray-kids-seoul-stay',
+    slug: 'stray-kids-seoul-stay-tour',
+    groupLabel: 'Stray Kids',
+    accent: '#DC2626',
+    durationHours: 6.5,
+    photos: ['skz-jyp-hq/1.webp', 'skz-gwangjang-market/1.webp', 'skz-nodeul-island/1.webp'],
+    stops: [
+      { label: 'JYP Entertainment Center', sub: 'Seongnae-dong · Subway Line 5/8' },
+      { label: 'Olympic Park Lone Tree', sub: 'Across from JYP · Picnic Spot' },
+      { label: 'Gwangjang & Myeongdong Food', sub: 'Street Food & Kalguksu Favorites' },
+      { label: 'Nodeul Island Han River', sub: 'Yongsan · Sunset & Night View' },
+    ],
+    copy: {
+      es: {
+        badge: '6.5H · 5 PARADAS EN SEÚL',
+        line1: 'Ruta STAY Stray Kids',
+        line2: 'JYP, Comida y Río Han',
+        sub: 'Sede JYP, Parque Olímpico, Gwangjang e Isla Nodeul',
+        cta: 'ABRIR RUTA STAY →',
+        title: 'Itinerario Stray Kids en Seúl 🐺 JYP Center, Parque Olímpico, Mercado Gwangjang e Isla Nodeul',
+        desc: 'Empieza frente a JYP Entertainment y el Árbol Solitario del Parque Olímpico, prueba la comida callejera del Mercado Gwangjang y Myeongdong Kyoja, y termina con el atardecer en Isla Nodeul.',
+      },
+      en: {
+        badge: '6.5H · 5 STOPS IN SEOUL',
+        line1: 'Stray Kids STAY Seoul',
+        line2: 'JYP, Foodie & Han River Loop',
+        sub: 'JYP Center, Olympic Park, Gwangjang & Nodeul Island',
+        cta: 'OPEN STAY ROUTE →',
+        title: 'Stray Kids Seoul 1-Day Itinerary 🐺 JYP HQ, Olympic Park, Gwangjang Market & Nodeul Island',
+        desc: 'Designed for STAYs visiting Korea: visit JYP Center and Olympic Park’s Lone Tree, feast at Gwangjang Market and Myeongdong Kyoja, then unwind at Nodeul Island for Han River sunset views.',
+      },
+      pt: {
+        badge: '6.5H · 5 PARADAS EM SEUL',
+        line1: 'Roteiro STAY Stray Kids',
+        line2: 'JYP, Comidas e Rio Han',
+        sub: 'JYP Center, Parque Olímpico, Gwangjang e Ilha Nodeul',
+        cta: 'ABRIR ROTEIRO STAY →',
+        title: 'Roteiro Stray Kids em Seul 🐺 Sede da JYP, Parque Olímpico, Mercado Gwangjang e Ilha Nodeul',
+        desc: 'Comece na sede da JYP e no Parque Olímpico, prove as comidas de rua do Mercado Gwangjang e Myeongdong Kyoja, e termine vendo o pôr do sol na Ilha Nodeul no Rio Han.',
+      },
+    },
+  },
+  {
+    id: 'seoul-big3-agencies',
+    slug: 'seoul-big3-agencies-hanok-tour',
+    groupLabel: 'All K-Pop',
+    accent: '#0F766E',
+    durationHours: 7.5,
+    photos: ['bp-bukchon-hanok/1.webp', 'bts-hybe-hq/1.webp', 'skz-jyp-hq/1.webp'],
+    stops: [
+      { label: 'YG Entertainment (Hapjeong)', sub: 'West Seoul · Mapo District' },
+      { label: 'HYBE Yongsan HQ', sub: 'Central Seoul · Line 4 Sinyongsan' },
+      { label: 'Bukchon Hanok Village', sub: 'Jongno · Hanbok Cultural Walk' },
+      { label: 'JYP Center (Olympic Park)', sub: 'East Seoul · Line 5/8 Finish' },
+    ],
+    copy: {
+      es: {
+        badge: '7.5H · TOUR MULTISTAN SEÚL',
+        line1: 'Gran Tour K-Pop en 1 Día:',
+        line2: 'YG, HYBE, Bukchon y JYP',
+        sub: 'Cruza Seúl de oeste a este en un itinerario perfecto',
+        cta: 'VER GRAN TOUR SEÚL →',
+        title: 'Gran Ruta K-Pop en Seúl 📍 Visita YG, HYBE, Bukchon Hanok y JYP en 1 Día',
+        desc: '¿Tienes pocos días en Seúl? Visita las 3 grandes agencias (YG en Hapjeong, HYBE en Yongsan y JYP en Seongnae) más una parada cultural en Bukchon Hanok Village en una sola línea de metro.',
+      },
+      en: {
+        badge: '7.5H · CROSS-SEOUL ROUTE',
+        line1: '1-Day K-Pop Grand Slam:',
+        line2: 'YG, HYBE, Bukchon & JYP',
+        sub: 'Cross Seoul from West to East hitting the Big 3',
+        cta: 'OPEN GRAND SLAM MAP →',
+        title: '1-Day Seoul K-Pop Grand Slam 📍 Visit YG, HYBE, Bukchon Hanok & JYP HQ',
+        desc: 'Short on time in Seoul? Follow this west-to-east itinerary hitting YG Entertainment, HYBE Yongsan HQ, historic Bukchon Hanok Village, and JYP Center—complete with step distances and Naver links.',
+      },
+      pt: {
+        badge: '7.5H · ROTEIRO MULTIFANDOM',
+        line1: 'Grand Slam K-Pop Seul:',
+        line2: 'YG, HYBE, Bukchon e JYP',
+        sub: 'Atravesse Seul de oeste a leste em 1 único dia',
+        cta: 'ABRIR ROTEIRO SEUL →',
+        title: 'Roteiro Grand Slam K-Pop em Seul 📍 YG, HYBE, Bukchon Hanok e JYP em 1 Dia',
+        desc: 'Poucos dias em Seul? Visite as 3 grandes agências (YG, HYBE e JYP) mais uma pausa cultural nas casas tradicionais de Bukchon Hanok Village em um roteiro contínuo de metrô.',
+      },
+    },
+  },
+];
+
+async function generateFormatGCourse(cfg, lang) {
+  const copy = cfg.copy[lang];
+  const [heroBuf, leftBuf, rightBuf] = await Promise.all([
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, cfg.photos[0]), 864, 290, 22),
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, cfg.photos[1]), 422, 196, 20),
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, cfg.photos[2]), 422, 196, 20),
+  ]);
+
+  const stopHeader =
+    lang === 'es'
+      ? 'ITINERARIO PASO A PASO EN COREA'
+      : lang === 'pt'
+      ? 'ROTEIRO PASSO A PASSO NA COREIA'
+      : 'STEP-BY-STEP KOREA ROUTE';
+
+  const useTwoCol = cfg.stops.length >= 4;
+  const stopsSvg = cfg.stops
+    .map((stop, idx) => {
+      let sx = 104;
+      let sy = 944 + idx * 68;
+      if (useTwoCol) {
+        const col = idx < 2 ? 0 : 1;
+        const row = col === 0 ? idx : idx - 2;
+        sx = col === 0 ? 102 : 522;
+        sy = 958 + row * 100;
+      }
+      return `
+      <circle cx="${sx + 20}" cy="${sy + 20}" r="20" fill="${cfg.accent}"/>
+      <text x="${sx + 20}" y="${sy + 28}" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="20" font-weight="900" text-anchor="middle">
+        ${idx + 1}
+      </text>
+      <text x="${sx + 54}" y="${sy + 18}" fill="#0F172A" font-family="${FONT_KOREAN}" font-size="22" font-weight="800">
+        ${escapeXml(trimWords(stop.label, useTwoCol ? 24 : 42))}
+      </text>
+      <text x="${sx + 54}" y="${sy + 46}" fill="#64748B" font-family="${FONT_KOREAN}" font-size="18" font-weight="600">
+        ${escapeXml(trimWords(stop.sub, useTwoCol ? 28 : 48))}
+      </text>`;
+    })
+    .join('\n');
+
+  const line1Size = copy.line1.length > 26 ? 44 : 50;
+  const line2Size = copy.line2.length > 26 ? 46 : 52;
+  const footerPath =
+    lang === 'en'
+      ? `KPULSEQUIZ.COM/MAP/COURSE/${cfg.slug.toUpperCase()}`
+      : `KPULSEQUIZ.COM/${lang.toUpperCase()}/MAP/COURSE`;
+
+  const svg = `
+  <svg width="1000" height="1500" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1000" height="1500" fill="#FAF8F4"/>
+    <rect x="0" y="0" width="1000" height="16" fill="${cfg.accent}"/>
+    <rect x="32" y="36" width="936" height="1428" rx="34" fill="none" stroke="#E6DFD3" stroke-width="2.5"/>
+
+    <!-- Top Masthead -->
+    <text x="68" y="96" fill="#475569" font-family="${FONT_KOREAN}" font-size="22" font-weight="800" letter-spacing="3">
+      K-PULSE ITINERARY
+    </text>
+    <rect x="596" y="62" width="336" height="48" rx="24" fill="${cfg.accent}"/>
+    <text x="764" y="93" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="18" font-weight="900" letter-spacing="0.8" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.badge))}
+    </text>
+
+    <!-- Headline -->
+    <text x="500" y="182" fill="#0F172A" font-family="${FONT_KOREAN}" font-size="${line1Size}" font-weight="800" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.line1))}
+    </text>
+    <text x="500" y="250" fill="${cfg.accent}" font-family="${FONT_KOREAN}" font-size="${line2Size}" font-weight="900" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.line2))}
+    </text>
+    <text x="500" y="302" fill="#475569" font-family="${FONT_KOREAN}" font-size="22" font-weight="700" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.sub))}
+    </text>
+
+    <!-- Photo Collage Frame -->
+    <rect x="64" y="332" width="872" height="298" rx="24" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="64" y="638" width="430" height="204" rx="22" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <rect x="506" y="638" width="430" height="204" rx="22" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Numbered Route Timeline Panel -->
+    <rect x="68" y="868" width="864" height="314" rx="28" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="102" y="914" fill="${cfg.accent}" font-family="${FONT_KOREAN}" font-size="18" font-weight="900" letter-spacing="1.8">
+      ${escapeXml(stopHeader)}
+    </text>
+    <line x1="102" y1="932" x2="898" y2="932" stroke="#F1F5F9" stroke-width="2"/>
+    ${stopsSvg}
+
+    <!-- Dark Pill CTA -->
+    <rect x="140" y="1220" width="720" height="94" rx="47" fill="#0F172A"/>
+    <text x="500" y="1278" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="30" font-weight="900" letter-spacing="0.8" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.cta))}
+    </text>
+
+    <!-- Footer -->
+    <text x="500" y="1394" fill="#64748B" font-family="${FONT_KOREAN}" font-size="18" font-weight="800" letter-spacing="2" text-anchor="middle">
+      ${escapeXml(footerPath.length > 42 ? footerPath.slice(0, 42) : footerPath)}
+    </text>
+  </svg>`;
+
+  const filename = `course-${cfg.slug}-${lang}.png`;
+  const relPath = `public/images/pinterest/courses/${filename}`;
+  const outPath = path.join(OUTPUT_DIR, 'courses', filename);
+
+  await writePng(
+    svg,
+    [
+      { input: heroBuf, left: 68, top: 336 },
+      { input: leftBuf, left: 68, top: 642 },
+      { input: rightBuf, left: 510, top: 642 },
+    ],
+    outPath,
+    88
+  );
+
+  return {
+    isNewPack: true,
+    format: 'Korea Itinerary Course',
+    lang,
+    group: cfg.groupLabel,
+    imageFile: relPath,
+    targetBoard: getTargetBoard('korea-travel', lang),
+    pinTitle: copy.title,
+    pinDescription: copy.desc,
+    destinationUrl: buildPinUrl({
+      pathName: `/map/course/${cfg.slug}`,
+      lang,
+      campaign: `course_${cfg.id}_${lang}`,
+      content: 'itinerary_course',
+    }),
+  };
+}
+
+const SPOT_PIN_CONFIGS = [
+  {
+    id: 'bts-hybe-hq',
+    slug: 'hybe-yongsan-headquarters',
+    groupLabel: 'BTS',
+    accent: '#7C3AED',
+    photos: ['bts-hybe-hq/1.webp', 'bts-hybe-hq/2.webp'],
+    address: '42 Hangang-daero, Yongsan-gu, Seoul (Sinyongsan Exit 2)',
+    copy: {
+      es: {
+        badge: 'BTS · YONGSAN, SEÚL',
+        line1: 'Sede de HYBE Yongsan:',
+        line2: 'Cómo Llegar y Qué Ver',
+        sub: 'Guía real ARMY con cafés de cumpleaños alrededor',
+        tip: 'Tip: Recorre los cafés temáticos detrás de la salida 2 de la estación Sinyongsan.',
+        cta: 'VER DIRECCIÓN Y FOTOS →',
+        title: 'Sede de HYBE en Seúl 📍 Dirección Exacta, Cómo Llegar y Cafés ARMY (Yongsan)',
+        desc: 'Guarda esta guía para visitar HYBE Yongsan Headquarters en Seúl: dirección exacta, salida de metro Sinyongsan, fotos reales, cafés de cumpleaños y enlace directo en Naver y Google Maps.',
+      },
+      en: {
+        badge: 'BTS · YONGSAN, SEOUL',
+        line1: 'HYBE Yongsan Headquarters',
+        line2: 'Address, Subway & Fan Cafes',
+        sub: 'Exact Korea travel directions & Sinyongsan alley guide',
+        tip: 'Tip: Pair your photo stop with ARMY birthday event cafes behind Sinyongsan Exit 2.',
+        cta: 'OPEN SPOT GUIDE →',
+        title: 'HYBE Yongsan Seoul Address 📍 How to Get There, Photos & ARMY Fan Cafes',
+        desc: 'Save this guide before going to HYBE in Seoul! Find exact Hangang-daero address, Sinyongsan Station exit directions, surrounding birthday cafe spots, and 1-tap Naver/Kakao Maps links.',
+      },
+      pt: {
+        badge: 'BTS · YONGSAN, SEUL',
+        line1: 'Sede da HYBE em Seul:',
+        line2: 'Endereço e Como Chegar',
+        sub: 'Guia completo em Yongsan com cafés temáticos ARMY',
+        tip: 'Dica: Visite os cafés com eventos de aniversário atrás da saída 2 de Sinyongsan.',
+        cta: 'ABRIR GUIA DO LOCAL →',
+        title: 'Sede da HYBE em Seul 📍 Endereço Exato, Fotos e Cafés ARMY em Yongsan',
+        desc: 'Planejando conhecer a HYBE em Yongsan, Seul? Confira o endereço exato, como chegar de metrô pela estação Sinyongsan, cafés ao redor e rota pronta para Naver e Google Maps.',
+      },
+    },
+  },
+  {
+    id: 'bts-yoojung-sikdang',
+    slug: 'yoojung-sikdang-bts',
+    groupLabel: 'BTS',
+    accent: '#9333EA',
+    photos: ['bts-yoojung-sikdang/1.webp', 'bts-yoojung-sikdang/2.webp'],
+    address: '14 Dosan-daero 28-gil, Gangnam-gu, Seoul (Hakdong Exit 7)',
+    copy: {
+      es: {
+        badge: 'BTS · GANGNAM, SEÚL',
+        line1: 'Yoojung Sikdang en Seúl:',
+        line2: 'El Restaurante Favorito de BTS',
+        sub: 'Qué pedir, fotos del local y cómo llegar en metro',
+        tip: 'Tip: Pide el famoso Dolpan Bibimbap de cerdo negro frente a la estación Hakdong.',
+        cta: 'VER MENÚ Y MAPA →',
+        title: 'Yoojung Sikdang Seúl 🍜 El Restaurante de BTS Trainee (Dirección y Cómo Llegar)',
+        desc: 'Visita el legendario Yoojung Sikdang en Nonhyeon-dong donde BTS almorzaba antes de debutar. Incluye dirección exacta, qué plato pedir y enlaces a Naver y Google Maps.',
+      },
+      en: {
+        badge: 'BTS · GANGNAM, SEOUL',
+        line1: 'Yoojung Sikdang Seoul:',
+        line2: 'BTS Rookie Diner Guide',
+        sub: 'Exact Gangnam address, signature dish & subway guide',
+        tip: 'Tip: Order their famous hot-stone black pork bibimbap near Hakdong Station Exit 7.',
+        cta: 'VIEW ADDRESS & TIPS →',
+        title: 'BTS Yoojung Sikdang Address & Guide 🍜 How to Visit Their Rookie-Era Seoul Diner',
+        desc: 'Where did BTS eat during their trainee days in Seoul? Save this Yoojung Sikdang travel guide with exact Nonhyeon-dong address, real interior photos, and Naver/Kakao directions.',
+      },
+      pt: {
+        badge: 'BTS · GANGNAM, SEUL',
+        line1: 'Yoojung Sikdang em Seul:',
+        line2: 'O Restaurante Clássico do BTS',
+        sub: 'Endereço em Gangnam, o que pedir e fotos reais',
+        tip: 'Dica: Peça o famoso bibimbap na pedra com carne de porco perto da estação Hakdong.',
+        cta: 'VER ENDEREÇO E DICAS →',
+        title: 'Yoojung Sikdang Seul 🍜 Como Visitar o Restaurante Favorito do BTS (Endereço)',
+        desc: 'Conheça o Yoojung Sikdang em Gangnam onde o BTS ia na época de trainee! Veja endereço completo, fotos reais, dica do prato clássico e link para Naver e Google Maps.',
+      },
+    },
+  },
+  {
+    id: 'bts-jumunjin-bus-stop',
+    slug: 'jumunjin-bts-bus-stop',
+    groupLabel: 'BTS',
+    accent: '#0284C7',
+    photos: ['bts-jumunjin-bus-stop/1.webp', 'bts-jumunjin-bus-stop/2.webp'],
+    address: '8-55 Hyangho-ri, Jumunjin-eup, Gangneung, Gangwon',
+    copy: {
+      es: {
+        badge: 'BTS · GANGNEUNG',
+        line1: 'Parada BTS de Jumunjin:',
+        line2: 'Portada You Never Walk Alone',
+        sub: 'Cómo ir desde Seúl en KTX o tour por Gangneung',
+        tip: 'Tip: Llega temprano en la mañana para fotos con la luz azul del Mar del Este sin fila.',
+        cta: 'VER CÓMO LLEGAR →',
+        title: 'Parada de Autobús BTS en Jumunjin 📍 Gangneung: Cómo Llegar Desde Seúl y Fotos',
+        desc: 'Guarda cómo llegar a la famosa parada de BTS en la playa Hyangho de Gangneung (Spring Day / You Never Walk Alone) desde Seúl en KTX o bus, con fotos reales y Naver Maps.',
+      },
+      en: {
+        badge: 'BTS · GANGNEUNG COAST',
+        line1: 'Jumunjin BTS Bus Stop',
+        line2: 'Gangneung Travel Guide',
+        sub: 'How to reach the "You Never Walk Alone" album spot from Seoul',
+        tip: 'Tip: Morning sun hits the East Sea behind the stop for crisp Spring Day album cover photos.',
+        cta: 'GET DIRECTIONS →',
+        title: 'Jumunjin BTS Bus Stop Gangneung 📍 How to Get There From Seoul & Photo Tips',
+        desc: 'Planning to recreate the You Never Walk Alone cover in Korea? Here is the exact Hyangho Beach address, KTX + Gangneung transit tips, and 1-tap Naver Maps link.',
+      },
+      pt: {
+        badge: 'BTS · GANGNEUNG',
+        line1: 'Ponto BTS em Jumunjin:',
+        line2: 'Praia de Gangneung na Coreia',
+        sub: 'Como ir saindo de Seul de KTX para o cenário icônico',
+        tip: 'Dica: Vá pela manhã para fotografar com o mar azul ao fundo sem longas filas.',
+        cta: 'COMO CHEGAR LÁ →',
+        title: 'Ponto de Ônibus BTS em Jumunjin 📍 Como Ir de Seul a Gangneung + Dicas',
+        desc: 'Saiba como visitar o icônico ponto do álbum You Never Walk Alone em Gangneung saindo de Seul, com endereço exato, fotos reais e link para Naver e Google Maps.',
+      },
+    },
+  },
+  {
+    id: 'bts-gamcheon-mural',
+    slug: 'busan-gamcheon-bts-mural',
+    groupLabel: 'BTS',
+    accent: '#2563EB',
+    photos: ['bts-gamcheon-mural/1.webp', 'bts-gamcheon-mural/2.webp'],
+    address: '203 Gamnae 2-ro, Saha-gu, Busan (Toseong Station Exit 6)',
+    copy: {
+      es: {
+        badge: 'BTS · BUSÁN',
+        line1: 'Mural de Jimin y Jungkook',
+        line2: 'Aldea Cultural Gamcheon, Busán',
+        sub: 'Ubicación exacta entre las casas coloridas de Gamcheon',
+        tip: 'Tip: Toma el autobús local desde la salida 6 de la estación Toseong hasta la cima.',
+        cta: 'VER UBICACIÓN EXACTA →',
+        title: 'Mural BTS Jimin y Jungkook en Busán 🎨 Dónde Está en Gamcheon Culture Village',
+        desc: 'Encuentra la calle exacta del mural gigante de Jimin y Jungkook dentro de Gamcheon Culture Village en Busán, cómo subir desde la estación Toseong y fotos reales.',
+      },
+      en: {
+        badge: 'BTS · SAHA-GU, BUSAN',
+        line1: 'Gamcheon BTS Mural Spot:',
+        line2: 'Jimin & Jungkook in Busan',
+        sub: 'Exact hillside street pin inside colorful Gamcheon Village',
+        tip: 'Tip: Ride the green village bus from Toseong Station Exit 6 uphill then walk down.',
+        cta: 'SEE BUSAN GUIDE →',
+        title: 'Busan Gamcheon BTS Jimin & Jungkook Mural 🎨 Exact Pin, Bus Directions & Photos',
+        desc: 'Visiting Busan? Pinpoint the huge Jimin and Jungkook wall mural in Gamcheon Culture Village with exact Gamnae 2-ro address, subway/bus tips, and nearby Busan BTS stops.',
+      },
+      pt: {
+        badge: 'BTS · BUSAN',
+        line1: 'Mural Jimin e Jungkook:',
+        line2: 'Gamcheon Culture Village',
+        sub: 'Onde encontrar a arte gigante nas ladeiras de Busan',
+        tip: 'Dica: Pegue o ônibus verde na saída 6 da estação Toseong para subir sem cansar.',
+        cta: 'VER LOCAL EXATO →',
+        title: 'Mural BTS Jimin e Jungkook em Busan 🎨 Onde Fica em Gamcheon + Como Chegar',
+        desc: 'Guia prático para achar o mural gigante de Jimin e Jungkook na Vila Cultural de Gamcheon em Busan com endereço exato, dica de ônibus e fotos reais.',
+      },
+    },
+  },
+  {
+    id: 'bp-haus-dosan',
+    slug: 'haus-dosan-jennie-tamburins',
+    groupLabel: 'BLACKPINK',
+    accent: '#DB2777',
+    photos: ['bp-haus-dosan/1.webp', 'bp-haus-dosan/2.webp'],
+    address: '50 Apgujeong-ro 46-gil, Gangnam-gu, Seoul (Apgujeong Rodeo)',
+    copy: {
+      es: {
+        badge: 'BLACKPINK · GANGNAM, SEÚL',
+        line1: 'HAUS DOSAN y Nudake:',
+        line2: 'Icono de Jennie en Apgujeong',
+        sub: 'Gentle Monster, Tamburins y postres esculturales',
+        tip: 'Tip: Sube por todos los pisos para ver arte futurista y los croissants artísticos en B1.',
+        cta: 'VER GUÍA EN GANGNAM →',
+        title: 'HAUS DOSAN Seúl 🖤💖 Guía BLINK en Apgujeong Rodeo (Jennie x Tamburins y Nudake)',
+        desc: 'Explora HAUS DOSAN en Apgujeong Rodeo, Seúl: instalaciones de Gentle Monster y Tamburins ligadas a Jennie de BLACKPINK más el famoso café Nudake, con mapa directo.',
+      },
+      en: {
+        badge: 'BLACKPINK · APGUJEONG, SEOUL',
+        line1: 'HAUS DOSAN & Nudake:',
+        line2: 'Jennie Seoul Hotspot Guide',
+        sub: 'Gentle Monster, Tamburins & iconic Apgujeong Rodeo cafe',
+        tip: 'Tip: Explore the giant kinetic art floors first, then visit Nudake cafe on B1.',
+        cta: 'OPEN SEOUL GUIDE →',
+        title: 'HAUS DOSAN Seoul Travel Guide 🖤💖 Gentle Monster, Tamburins & Nudake Near Jennie Spots',
+        desc: 'Visit HAUS DOSAN in Gangnam’s Apgujeong Rodeo—celebrated by BLACKPINK’s Jennie and fashion lovers—with exact directions, gallery tips, and nearby Cheongdam spots.',
+      },
+      pt: {
+        badge: 'BLACKPINK · GANGNAM, SEUL',
+        line1: 'HAUS DOSAN e Nudake:',
+        line2: 'Roteiro Jennie em Apgujeong',
+        sub: 'Gentle Monster, Tamburins e café artístico em Gangnam',
+        tip: 'Dica: Visite os andares de instalação artística e prove os doces criativos do Nudake.',
+        cta: 'VER GUIA APGUJEONG →',
+        title: 'HAUS DOSAN em Seul 🖤💖 Guia BLINK em Apgujeong Rodeo (Gentle Monster & Nudake)',
+        desc: 'Confira onde fica a HAUS DOSAN em Gangnam ligada às campanhas da Jennie (Tamburins & Gentle Monster) mais o café Nudake com fotos reais e links no Naver Maps.',
+      },
+    },
+  },
+  {
+    id: 'skz-jyp-hq',
+    slug: 'jyp-entertainment-seongnae',
+    groupLabel: 'Stray Kids',
+    accent: '#DC2626',
+    photos: ['skz-jyp-hq/1.webp', 'skz-jyp-hq/2.webp'],
+    address: '205 Gangdong-daero, Gangdong-gu, Seoul (Across Olympic Park)',
+    copy: {
+      es: {
+        badge: 'STRAY KIDS · SEÚL',
+        line1: 'Sede JYP Entertainment',
+        line2: 'Frente al Parque Olímpico',
+        sub: 'Guía STAY para visitar Seongnae-dong y el Árbol Solitario',
+        tip: 'Tip: Cruza la calle hacia Olympic Park para fotos frente al famoso Árbol Solitario.',
+        cta: 'ABRIR GUÍA STAY →',
+        title: 'JYP Entertainment Seúl 📍 Cómo Llegar, Fotos y Parque Olímpico (Guía Stray Kids STAY)',
+        desc: 'Guarda la dirección exacta de JYP Entertainment Center en Seongnae-dong, frente al Parque Olímpico de Seúl, con salida de metro, fotos reales y cafés cercanos.',
+      },
+      en: {
+        badge: 'STRAY KIDS · GANGDONG, SEOUL',
+        line1: 'JYP Entertainment Center',
+        line2: 'Directions & Olympic Park',
+        sub: 'Exact Seongnae-dong STAY stop right across from Lone Tree',
+        tip: 'Tip: Walk straight into Olympic Park across the street to visit the iconic Lone Tree.',
+        cta: 'OPEN JYP GUIDE →',
+        title: 'JYP Entertainment Seoul Address 📍 How to Visit + Olympic Park Stray Kids Guide',
+        desc: 'Visiting Seoul as a STAY or ONCE? Save JYP Center’s exact Gangdong-daero address, Subway Line 5/8 access, and the nearby Olympic Park Lone Tree route with Naver Maps.',
+      },
+      pt: {
+        badge: 'STRAY KIDS · SEUL',
+        line1: 'Sede da JYP Entertainment',
+        line2: 'Frente ao Parque Olímpico',
+        sub: 'Guia completo em Seongnae-dong para fãs STAY e ONCE',
+        tip: 'Dica: Atravesse a rua até o Parque Olímpico para fotografar a famosa Árvore Solitária.',
+        cta: 'ABRIR GUIA JYP →',
+        title: 'Sede da JYP em Seul 📍 Endereço Exato, Metrô e Parque Olímpico (Stray Kids)',
+        desc: 'Veja como visitar o prédio da JYP Entertainment em Seul, com estação de metrô mais próxima, fotos reais e combinação com a Árvore Solitária do Parque Olímpico.',
+      },
+    },
+  },
+];
+
+async function generateFormatHSpot(cfg, lang) {
+  const copy = cfg.copy[lang];
+  const [heroBuf, insetBuf] = await Promise.all([
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, cfg.photos[0]), 864, 510, 26),
+    makeRoundedPhotoBuffer(path.join(MAP_IMAGES_DIR, cfg.photos[1]), 268, 190, 20),
+  ]);
+
+  const tipLines = wrapText(copy.tip, 54, 2);
+  const addressLabel =
+    lang === 'es' ? 'DIRECCIÓN EXACTA' : lang === 'pt' ? 'ENDEREÇO EXATO' : 'EXACT KOREA ADDRESS';
+  const line1Size = copy.line1.length > 26 ? 44 : 50;
+  const line2Size = copy.line2.length > 26 ? 46 : 52;
+  const footerPath =
+    lang === 'en'
+      ? `KPULSEQUIZ.COM/MAP/${cfg.slug.toUpperCase()}`
+      : `KPULSEQUIZ.COM/${lang.toUpperCase()}/MAP/${cfg.slug.toUpperCase()}`;
+
+  const baseSvg = `
+  <svg width="1000" height="1500" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1000" height="1500" fill="#FAF8F4"/>
+    <rect x="0" y="0" width="1000" height="16" fill="${cfg.accent}"/>
+    <rect x="32" y="36" width="936" height="1428" rx="34" fill="none" stroke="#E6DFD3" stroke-width="2.5"/>
+
+    <!-- Top Masthead -->
+    <text x="68" y="96" fill="#475569" font-family="${FONT_KOREAN}" font-size="22" font-weight="800" letter-spacing="3">
+      K-PULSE SPOT GUIDE
+    </text>
+    <rect x="596" y="62" width="336" height="48" rx="24" fill="${cfg.accent}"/>
+    <text x="764" y="93" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="18" font-weight="900" letter-spacing="0.8" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.badge))}
+    </text>
+
+    <!-- Headline -->
+    <text x="500" y="182" fill="#0F172A" font-family="${FONT_KOREAN}" font-size="${line1Size}" font-weight="800" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.line1))}
+    </text>
+    <text x="500" y="250" fill="${cfg.accent}" font-family="${FONT_KOREAN}" font-size="${line2Size}" font-weight="900" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.line2))}
+    </text>
+    <text x="500" y="302" fill="#475569" font-family="${FONT_KOREAN}" font-size="22" font-weight="700" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.sub))}
+    </text>
+
+    <!-- Hero Frame Backdrop -->
+    <rect x="64" y="338" width="872" height="518" rx="28" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+
+    <!-- Address + Map Apps + Fan Tip Card -->
+    <rect x="68" y="886" width="864" height="296" rx="28" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="2"/>
+    <text x="104" y="934" fill="${cfg.accent}" font-family="${FONT_KOREAN}" font-size="18" font-weight="900" letter-spacing="1.8">
+      ${escapeXml(addressLabel)}
+    </text>
+    <text x="104" y="976" fill="#0F172A" font-family="${FONT_KOREAN}" font-size="25" font-weight="800">
+      ${escapeXml(trimWords(cfg.address, 56))}
+    </text>
+
+    <!-- 3 Map App Strip -->
+    <rect x="104" y="1006" width="236" height="44" rx="12" fill="#059669"/>
+    <text x="222" y="1034" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="18" font-weight="800" text-anchor="middle">
+      NAVER MAP
+    </text>
+    <rect x="358" y="1006" width="236" height="44" rx="12" fill="#FBBF24"/>
+    <text x="476" y="1034" fill="#0F172A" font-family="${FONT_KOREAN}" font-size="18" font-weight="800" text-anchor="middle">
+      KAKAOMAP
+    </text>
+    <rect x="612" y="1006" width="236" height="44" rx="12" fill="#0F172A"/>
+    <text x="730" y="1034" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="18" font-weight="800" text-anchor="middle">
+      GOOGLE MAPS
+    </text>
+
+    <line x1="104" y1="1074" x2="896" y2="1074" stroke="#F1F5F9" stroke-width="2"/>
+    ${tipLines
+      .map(
+        (line, i) => `
+    <text x="104" y="${1114 + i * 34}" fill="#475569" font-family="${FONT_KOREAN}" font-size="22" font-weight="700">
+      ${escapeXml(line)}
+    </text>`
+      )
+      .join('')}
+
+    <!-- Dark Pill CTA -->
+    <rect x="140" y="1220" width="720" height="94" rx="47" fill="#0F172A"/>
+    <text x="500" y="1278" fill="#FFFFFF" font-family="${FONT_KOREAN}" font-size="30" font-weight="900" letter-spacing="0.8" text-anchor="middle">
+      ${escapeXml(stripEmojis(copy.cta))}
+    </text>
+
+    <!-- Footer -->
+    <text x="500" y="1394" fill="#64748B" font-family="${FONT_KOREAN}" font-size="18" font-weight="800" letter-spacing="2" text-anchor="middle">
+      ${escapeXml(footerPath.length > 42 ? footerPath.slice(0, 42) : footerPath)}
+    </text>
+  </svg>`;
+
+  const insetFrameSvg = `
+  <svg width="1000" height="1500" viewBox="0 0 1000 1500" xmlns="http://www.w3.org/2000/svg">
+    <rect x="634" y="636" width="284" height="206" rx="24" fill="#FFFFFF"/>
+  </svg>`;
+
+  const filename = `spot-${cfg.slug}-${lang}.png`;
+  const relPath = `public/images/pinterest/spots/${filename}`;
+  const outPath = path.join(OUTPUT_DIR, 'spots', filename);
+
+  await writePng(
+    baseSvg,
+    [
+      { input: heroBuf, left: 68, top: 342 },
+      { input: Buffer.from(insetFrameSvg), left: 0, top: 0 },
+      { input: insetBuf, left: 642, top: 644 },
+    ],
+    outPath,
+    88
+  );
+
+  return {
+    isNewPack: true,
+    format: 'Korea Spot Guide',
+    lang,
+    group: cfg.groupLabel,
+    imageFile: relPath,
+    targetBoard: getTargetBoard('korea-travel', lang),
+    pinTitle: copy.title,
+    pinDescription: copy.desc,
+    destinationUrl: buildPinUrl({
+      pathName: `/map/${cfg.slug}`,
+      lang,
+      campaign: `spot_${cfg.id}_${lang}`,
+      content: 'spot_guide',
+    }),
+  };
+}
+
 function writeManifestFiles(rows) {
   // Sort ES -> PT -> EN, then by format and group
   const langRank = { es: 0, pt: 1, en: 2 };
@@ -1479,11 +2814,12 @@ function writeManifestFiles(rows) {
   }
 
   const md = [];
-  md.push('# 📌 K-Pulse 핀터레스트 업로드 매칭표 (1000×1500 · UTM 자동 적용)');
+  md.push('# 📌 K-Pulse 핀터레스트 업로드 매칭표 (1000×1500 · 정적 다국어 경로 + UTM 자동 적용)');
   md.push('');
   md.push(`> 총 **${sorted.length}장** 생성 완료 (\`ES: ${countsByLang.es}장\`, \`EN: ${countsByLang.en}장\`, \`PT: ${countsByLang.pt}장\`).`);
-  md.push('> 모든 링크에 `?lang=` 및 `utm_source=pinterest&utm_medium=social&utm_campaign=...&utm_content=...`가 자동 포함됩니다.');
-  md.push('> 엑셀에서 바로 열려면 같은 폴더의 [`pinterest-pins-manifest.csv`](./pinterest-pins-manifest.csv)를 사용하세요.');
+  md.push('> 스페인어(`/es/...`)·포르투갈어(`/pt/...`) 정적 경로와 `utm_source=pinterest&utm_medium=social&utm_campaign=...&utm_content=...`가 자동 포함됩니다.');
+  md.push('> 신규 추가 54장만 바로 업로드하려면 [`NEW_PINS_GUIDE.md`](./NEW_PINS_GUIDE.md) / [`new-pins-manifest.csv`](./new-pins-manifest.csv)를 사용하세요.');
+  md.push('> 엑셀에서 전체를 열려면 [`pinterest-pins-manifest.csv`](./pinterest-pins-manifest.csv)를 사용하세요.');
   md.push('');
   md.push('## 포맷별 수량 요약');
   md.push('');
@@ -1517,6 +2853,46 @@ function writeManifestFiles(rows) {
   }
 
   fs.writeFileSync(path.join(OUTPUT_DIR, 'PINS_INDEX.md'), md.join('\n'), 'utf8');
+
+  // 3. Dedicated New Pins Manifest & Quick Copy-Paste Guide (54 new pins)
+  const newRows = sorted.filter((r) => r.isNewPack);
+  const newCsvLines = [
+    csvHeader.join(','),
+    ...newRows.map((r) =>
+      [r.format, r.lang.toUpperCase(), r.group, r.imageFile, r.targetBoard, r.pinTitle, r.pinDescription, r.destinationUrl]
+        .map(csvEscape)
+        .join(',')
+    ),
+  ];
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'new-pins-manifest.csv'), '\uFEFF' + newCsvLines.join('\r\n'), 'utf8');
+
+  const newMd = [];
+  newMd.push('# ✨ K-Pulse 신규 확장 기능 핀터레스트 빠른 업로드 가이드 (54장 · 복사-붙여넣기용)');
+  newMd.push('');
+  newMd.push(`> 이번에 새로 오픈한 **K-사주 한국 이름 스튜디오(18장)** + **추천 성지 코스 6종(18장)** + **핵심 스팟 개별 가이드 6종(18장)** = 총 **${newRows.length}장**입니다.`);
+  newMd.push('> 모든 링크에 `/es/...` · `/pt/...` 정적 다국어 경로 + `utm_source=pinterest` 추적 파라미터가 포함되어 있습니다.');
+  newMd.push('');
+
+  for (const l of ['es', 'pt', 'en']) {
+    const items = newRows.filter((r) => r.lang === l);
+    newMd.push(`## ${sectionLabels[l]} (${items.length}장)`);
+    newMd.push('');
+    for (const r of items) {
+      newMd.push(`### [${r.format}] ${r.pinTitle}`);
+      newMd.push(`- **Image File**: \`${r.imageFile}\``);
+      newMd.push(`- **Target Board**: \`${r.targetBoard}\``);
+      newMd.push(`- **Pin Title**: \`${r.pinTitle}\``);
+      newMd.push(`- **Pin Description**:`);
+      newMd.push('```text');
+      newMd.push(r.pinDescription);
+      newMd.push('```');
+      newMd.push(`- **Destination URL**: ${r.destinationUrl}`);
+      newMd.push('');
+    }
+  }
+
+  fs.writeFileSync(path.join(OUTPUT_DIR, 'NEW_PINS_GUIDE.md'), newMd.join('\n'), 'utf8');
+
   return sorted;
 }
 
@@ -1541,8 +2917,12 @@ async function validateOutputs(rows) {
     if (!r.destinationUrl.includes('utm_source=pinterest&utm_medium=social&utm_campaign=')) {
       throw new Error(`Missing UTM parameters on URL: ${r.destinationUrl}`);
     }
-    if (r.lang !== 'en' && !r.destinationUrl.includes(`lang=${r.lang}`)) {
-      throw new Error(`Missing lang=${r.lang} on URL: ${r.destinationUrl}`);
+    if (
+      r.lang !== 'en' &&
+      !r.destinationUrl.includes(`https://kpulsequiz.com/${r.lang}/`) &&
+      !r.destinationUrl.startsWith(`https://kpulsequiz.com/${r.lang}?`)
+    ) {
+      throw new Error(`Missing /${r.lang}/ prefix on URL: ${r.destinationUrl}`);
     }
   }
   return totalBytes;
@@ -1605,6 +2985,27 @@ async function main() {
   for (const mapCfg of MAP_PIN_CONFIGS) {
     for (const lang of LANGS) {
       rows.push(await generateFormatEMap(mapCfg, lang));
+    }
+  }
+
+  // Format F (K-Saju Korean Name Studio Pins): 6 designs x 3 langs = 18 pins
+  for (const knameCfg of KOREAN_NAME_PIN_CONFIGS) {
+    for (const lang of LANGS) {
+      rows.push(await generateFormatFKoreanName(knameCfg, lang));
+    }
+  }
+
+  // Format G (Curated Korea Itinerary Course Pins): 6 courses x 3 langs = 18 pins
+  for (const courseCfg of COURSE_PIN_CONFIGS) {
+    for (const lang of LANGS) {
+      rows.push(await generateFormatGCourse(courseCfg, lang));
+    }
+  }
+
+  // Format H (Individual Korea Spot Guide Pins): 6 hero spots x 3 langs = 18 pins
+  for (const spotCfg of SPOT_PIN_CONFIGS) {
+    for (const lang of LANGS) {
+      rows.push(await generateFormatHSpot(spotCfg, lang));
     }
   }
 

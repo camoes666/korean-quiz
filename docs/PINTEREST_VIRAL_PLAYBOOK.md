@@ -1,22 +1,25 @@
 # 📌 K-Pulse 핀터레스트(Pinterest) 바이럴 & SEO 문구 모음집 (Copy & Paste Playbook)
 
 > **목적**: 핀터레스트 검색 알고리즘(Visual SEO)과 K-Pop 팬들의 **'보드 저장(Save) 본능'**을 동시에 저격하여, 핀 1개가 수개월 동안 꾸준히 방문자를 데려오도록 설계된 실전 문구집입니다.  
-> **최종 업데이트**: 2026-11-20  
-> **공식 도메인**: `https://kpulsequiz.com`
-> **자동 생성 핀 시트**: `npm run generate:pins` 실행 시 [`public/images/pinterest/PINS_INDEX.md`](../public/images/pinterest/PINS_INDEX.md) 및 [`pinterest-pins-manifest.csv`](../public/images/pinterest/pinterest-pins-manifest.csv) (137장, ES/EN/PT + UTM 포함)가 자동 생성됩니다.
+> **최종 업데이트**: 2026-11-22  
+> **공식 도메인**: `https://kpulsequiz.com`  
+> **자동 생성 핀 시트**: `npm run generate:pins` 실행 시 [`public/images/pinterest/PINS_INDEX.md`](../public/images/pinterest/PINS_INDEX.md), [`pinterest-pins-manifest.csv`](../public/images/pinterest/pinterest-pins-manifest.csv) (191장 전체), 그리고 신규 54장 전용 빠른 업로드 가이드 [`NEW_PINS_GUIDE.md`](../public/images/pinterest/NEW_PINS_GUIDE.md) / [`new-pins-manifest.csv`](../public/images/pinterest/new-pins-manifest.csv)가 자동 생성됩니다.
 
 ---
 
-## 🔗 필수 UTM + 언어 URL 규칙 (Dark Social / Direct 누수 방지)
+## 🔗 필수 UTM + 정적 다국어 경로 규칙 (Dark Social / Direct 누수 방지)
 
-핀터레스트 인앱 브라우저 클릭이 GA4에서 `Direct`로 섞이지 않도록, 모든 핀 링크에는 반드시 아래 형식을 사용합니다:
+핀터레스트 인앱 브라우저 클릭이 GA4에서 `Direct`로 섞이지 않고, 핀터레스트 크롤러가 각 언어 메타데이터를 정확히 읽을 수 있도록 **정적 다국어 경로(`/es/...`, `/pt/...`) + UTM 파라미터** 형식을 사용합니다:
 
 ```text
-https://kpulsequiz.com/quiz/{슬러그}?lang={es|pt}&utm_source=pinterest&utm_medium=social&utm_campaign={그룹}_{언어}&utm_content={cover|question_hook|card_멤버|saju_mbti}
+# 스페인어(es) / 포르투갈어(pt) 정적 경로
+https://kpulsequiz.com/{es|pt}/{경로}?utm_source=pinterest&utm_medium=social&utm_campaign={캠페인}_{언어}&utm_content={콘텐츠}
+
+# 영어(en) 기본 루트 경로
+https://kpulsequiz.com/{경로}?utm_source=pinterest&utm_medium=social&utm_campaign={캠페인}_en&utm_content={콘텐츠}
 ```
 
-- 영어(`en`) 핀은 `lang` 파라미터를 생략하고 `utm_source=pinterest&utm_medium=social&utm_campaign=...&utm_content=...`만 붙입니다.
-- `PINS_INDEX.md`와 `pinterest-pins-manifest.csv`에는 위 규칙이 이미 전부 적용되어 있습니다.
+- `PINS_INDEX.md`, `pinterest-pins-manifest.csv`, `NEW_PINS_GUIDE.md`, `new-pins-manifest.csv`에는 위 정적 다국어 경로와 UTM이 모두 자동 적용되어 있습니다.
 
 ---
 
@@ -130,6 +133,40 @@ https://kpulsequiz.com/quiz/{슬러그}?lang={es|pt}&utm_source=pinterest&utm_me
 - **Board Description**:
   ```text
   Testes de personalidade K-Pop grátis em português para ARMY, BLINK, STAY, ONCE e ENGENE! Descubra qual membro do BTS, BLACKPINK, Stray Kids, TWICE, ENHYPEN, aespa ou LE SSERAFIM é a sua alma gêmea e veja sua química K-Saju e MBTI.
+  ```
+
+### 보드 13: K-사주 한국 이름 & 한글 보드 (`korean-name/` 18장 전용)
+- **Board Name (ES)**: `Tu Nombre Coreano, Significado Hanja y Cultura Coreana 🇰🇷✨`
+- **Board Description (ES)**:
+  ```text
+  Descubre tu nombre coreano auténtico equilibrado con los Cinco Elementos del K-Saju según tu fecha de nacimiento. Aprende el significado en Hanja, escucha la pronunciación en coreano, explora apellidos de idols K-Pop y descarga tu tarjeta ID 9:16 con sello tradicional.
+  ```
+- **Board Name (PT)**: `Seu Nome Coreano, Significado Hanja e Cultura Coreana 🇰🇷✨`
+- **Board Description (PT)**:
+  ```text
+  Qual seria seu nome coreano pela data de nascimento? Gere nomes autênticos pelo K-Saju com significado em Hanja, pronúncia em coreano, guia de sobrenomes dos idols e cartão 9:16 com selo tradicional para salvar e compartilhar.
+  ```
+- **Board Name (EN)**: `Korean Name Generator, Hangul Aesthetic & K-Saju Meanings 🇰🇷✨`
+- **Board Description (EN)**:
+  ```text
+  Discover your real Korean name balanced by Korean Saju Five Elements from your birthday! Authentic Hanja meanings, Korean audio pronunciation guides, famous Korean surnames cheat sheets, and printable 9:16 Hanji seal ID cards.
+  ```
+
+### 보드 14: 한국 성지순례 여행 & 코스 보드 (`courses/` 18장 + `spots/` 18장 전용)
+- **Board Name (ES)**: `Guía de Viaje a Corea y Mapa K-Pop (Seúl, Busán y Gangneung) 📍🇰🇷`
+- **Board Description (ES)**:
+  ```text
+  Rutas paso a paso e itinerarios K-Pop para viajar a Corea del Sur: HYBE Yongsan, Yoojung Sikdang, parada BTS Jumunjin en Gangneung, Gamcheon en Busán, YG, HAUS DOSAN y JYP con fotos reales, direcciones exactas y enlaces directos a Naver, Kakao y Google Maps.
+  ```
+- **Board Name (PT)**: `Guia de Viagem para Coreia e Mapa K-Pop (Seul e Busan) 📍🇰🇷`
+- **Board Description (PT)**:
+  ```text
+  Roteiros completos e locais reais de K-Pop na Coreia do Sul: sede da HYBE, Yoojung Sikdang, ponto BTS em Jumunjin, mural em Gamcheon Busan, YG, HAUS DOSAN e JYP com fotos reais, endereços exatos e links para Naver e Google Maps.
+  ```
+- **Board Name (EN)**: `Korea Travel Guide & K-Pop Pilgrimage Map (Seoul & Busan) 📍🇰🇷`
+- **Board Description (EN)**:
+  ```text
+  Save curated Korea K-Pop travel itineraries and verified spot guides! Step-by-step half-day and full-day routes across Seoul, Busan, Daegu, and Gangneung featuring HYBE, Yoojung Sikdang, Jumunjin Bus Stop, Gamcheon Village, YG, HAUS DOSAN, and JYP with Naver Maps directions.
   ```
 
 ---
@@ -443,4 +480,14 @@ https://kpulsequiz.com/quiz/{슬러그}?lang={es|pt}&utm_source=pinterest&utm_me
   - BLACKPINK (8곳): `https://kpulsequiz.com/map?group=blackpink`
   - Stray Kids (8곳): `https://kpulsequiz.com/map?group=stray-kids`
   - 전체 30곳: `https://kpulsequiz.com/map`
-- **필수 UTM 규칙**: 스페인어/포르투갈어 핀은 반드시 `?lang=es` / `?lang=pt` + `utm_source=pinterest&utm_medium=social&utm_campaign={map_id}_map_{lang}&utm_content=travel_map`이 포함된 URL을 사용합니다 (`PINS_INDEX.md` 및 `pinterest-pins-manifest.csv`에 자동 반영됨).
+- **필수 UTM 규칙**: 스페인어(`/es/...`)·포르투갈어(`/pt/...`) 정적 경로 + `utm_source=pinterest&utm_medium=social&utm_campaign={map_id}_map_{lang}&utm_content=travel_map`이 포함된 URL을 사용합니다 (`PINS_INDEX.md` 및 `pinterest-pins-manifest.csv`에 자동 반영됨).
+
+---
+
+## 6. ✨ [신규 54장 패키지] K-사주 이름 스튜디오 · 추천 여행 코스 · 스팟 개별 가이드 (`korean-name/`, `courses/`, `spots/`)
+
+> **바로 복사해서 업로드하려면**: `npm run generate:pins` 실행 시 생성되는 [`NEW_PINS_GUIDE.md`](../public/images/pinterest/NEW_PINS_GUIDE.md)와 [`new-pins-manifest.csv`](../public/images/pinterest/new-pins-manifest.csv)에 **신규 54장**의 이미지 경로·보드·제목·설명·정적 다국어 UTM URL이 정리되어 있습니다.
+
+- **Format F — K-사주 한국 이름 스튜디오 (`korean-name/`, 18장)**: 6가지 카드 에디션(Celadon, Seoul Rose, Najeon Dark, 성씨 도감, 오행 가이드, K-드라마) × `ES / EN / PT`
+- **Format G — 추천 성지순례 일일 코스 (`courses/`, 18장)**: BTS 서울·부산·대구, BLACKPINK 서울, Stray Kids 서울, BIG3 소속사+북촌 6개 코스 × `ES / EN / PT`
+- **Format H — 핵심 스팟 개별 주소 가이드 (`spots/`, 18장)**: HYBE, 유정식당, 주문진 정류장, 감천벽화, 하우스 도산, JYP 6곳 × `ES / EN / PT`
