@@ -13,6 +13,20 @@ export const TRAVEL_PARTNER_CONFIG = {
   tripSid: process.env.NEXT_PUBLIC_TRIP_SID?.trim() || '',
 } as const;
 
+/**
+ * Returns true when at least one travel affiliate partner ID or explicit opt-in flag is configured.
+ */
+export function hasActiveTravelPartner(): boolean {
+  if (process.env.NEXT_PUBLIC_ENABLE_TRAVEL_AFFILIATES === 'true') {
+    return true;
+  }
+  return Boolean(
+    TRAVEL_PARTNER_CONFIG.klookAid ||
+      TRAVEL_PARTNER_CONFIG.kkdayCid ||
+      TRAVEL_PARTNER_CONFIG.tripAllianceId
+  );
+}
+
 function getKlookLocalePath(lang: Language): string {
   if (lang === 'ko') return 'ko';
   if (lang === 'es') return 'es-ES';

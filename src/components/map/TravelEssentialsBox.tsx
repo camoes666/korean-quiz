@@ -14,6 +14,7 @@ import {
 } from '@/types/map';
 import type { Language } from '@/lib/translations';
 import { trackTravelAffiliateClick } from '@/lib/analytics';
+import { hasActiveTravelPartner } from '@/lib/travelAffiliateBuilder';
 
 interface TravelEssentialsBoxProps {
   offers: TravelAffiliateOffer[];
@@ -88,6 +89,15 @@ export default function TravelEssentialsBox({
 }: TravelEssentialsBoxProps) {
   if (!offers || offers.length === 0) return null;
 
+  const forceAll = process.env.NEXT_PUBLIC_ENABLE_TRAVEL_AFFILIATES === 'true';
+  const visibleOffers = forceAll
+    ? offers
+    : offers.filter((offer) => offer.isPartnerTracked);
+
+  if (!hasActiveTravelPartner() || visibleOffers.length === 0) {
+    return null;
+  }
+
   const copy = getSectionCopy(lang, Boolean(courseSlug && !spotSlug));
 
   return (
@@ -118,7 +128,7 @@ export default function TravelEssentialsBox({
             : 'grid-cols-1 md:grid-cols-3 gap-3.5'
         }`}
       >
-        {offers.map((offer) => (
+        {visibleOffers.map((offer) => (
           <a
             key={offer.id}
             href={offer.url}

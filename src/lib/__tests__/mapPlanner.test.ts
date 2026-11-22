@@ -13,7 +13,11 @@ import {
   getSpotBySlug,
   getSpotsForMember,
 } from '../mapGeo';
-import { getTravelOffersForCourse, getTravelOffersForSpot } from '../travelAffiliateBuilder';
+import {
+  getTravelOffersForCourse,
+  getTravelOffersForSpot,
+  hasActiveTravelPartner,
+} from '../travelAffiliateBuilder';
 import {
   generateMapCourseJsonLd,
   generateMapSpotJsonLd,
@@ -85,6 +89,13 @@ describe('mapGeo distance & matching helpers', () => {
 });
 
 describe('travelAffiliateBuilder', () => {
+  it('disables affiliate box by default until partner env vars are configured', () => {
+    expect(hasActiveTravelPartner()).toBe(false);
+    const hybe = getSpotBySlug('hybe-yongsan-headquarters')!;
+    const offers = getTravelOffersForSpot(hybe, 'en');
+    expect(offers.every((offer) => offer.isPartnerTracked === false)).toBe(true);
+  });
+
   it('generates 3 localized high-intent offers for Seoul (eSIM+Tour+Hotel) and regional Korea spots (Rail+Tour+Hotel)', () => {
     const hybe = getSpotBySlug('hybe-yongsan-headquarters')!;
     const seoulOffers = getTravelOffersForSpot(hybe, 'es');
