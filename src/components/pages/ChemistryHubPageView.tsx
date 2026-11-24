@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import Link from 'next/link';
 import { IDOL_GROUPS } from '@/data/idolChemistry';
 import ChemistryClient from '@/components/ChemistryClient';
@@ -16,15 +15,6 @@ export default function ChemistryHubPageView({ locale }: { locale: SiteLocale })
       ? 'K-Pop 그룹별 1:1 궁합 페이지'
       : 'Dedicated K-Pop Group Compatibility Pages';
 
-  const loadingText =
-    locale === 'es'
-      ? 'Cargando calculadora K-Saju × MBTI...'
-      : locale === 'pt'
-      ? 'Carregando calculadora K-Saju × MBTI...'
-      : locale === 'ko'
-      ? 'K-사주 × MBTI 궁합 연구소 로딩 중...'
-      : 'Loading K-Saju × MBTI Chemistry Lab...';
-
   return (
     <>
       {schemas.map((schema, idx) => (
@@ -35,15 +25,7 @@ export default function ChemistryHubPageView({ locale }: { locale: SiteLocale })
         />
       ))}
 
-      <Suspense
-        fallback={
-          <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] text-slate-500 font-bold text-sm">
-            {loadingText}
-          </div>
-        }
-      >
-        <ChemistryClient />
-      </Suspense>
+      <ChemistryClient />
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-16">
         <div className="bg-white rounded-3xl border border-slate-200/80 p-6 shadow-2xs">

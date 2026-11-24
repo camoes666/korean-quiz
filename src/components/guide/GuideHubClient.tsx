@@ -375,7 +375,7 @@ export default function GuideHubClient({
                 ? 'Base de Conocimiento Verificada'
                 : lang === 'pt'
                 ? 'Base de Conhecimento Verificada'
-                : 'Programmatic Knowledge Base'}
+                : 'Verified K-Culture Knowledge Base'}
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mb-4">
               {lang === 'ko'

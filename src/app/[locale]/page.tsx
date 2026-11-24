@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import HomeClient from '@/components/HomeClient';
+import { getFeaturedArticleSummaries } from '@/lib/articles';
 import { PREFIX_LOCALES, isPrefixLocale } from '@/lib/i18nRoutes';
 import { getHomeMetadata } from '@/lib/pageSeo';
 
@@ -27,5 +28,6 @@ export default async function LocaleHomePage({ params }: LocaleHomeProps) {
   if (!isPrefixLocale(locale)) {
     notFound();
   }
-  return <HomeClient />;
+  const featuredArticles = getFeaturedArticleSummaries(6);
+  return <HomeClient featuredArticles={featuredArticles} />;
 }

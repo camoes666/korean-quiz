@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useMemo, useSyncExternalStore } from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 import confetti from 'canvas-confetti';
 import { Quiz, Question, ScoreTier, QuestionLevel, getLocalizedText } from '@/types/quiz';
 import AdPlaceholder from './AdPlaceholder';

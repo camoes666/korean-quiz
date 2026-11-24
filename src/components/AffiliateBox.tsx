@@ -13,6 +13,12 @@ interface AffiliateBoxProps {
 export default function AffiliateBox({ affiliate, slug }: AffiliateBoxProps) {
   const { lang } = useLanguage();
 
+  // Keep unpartnered outbound store boxes hidden during AdSense review
+  const affiliatesEnabled = process.env.NEXT_PUBLIC_ENABLE_AFFILIATES === 'true';
+  if (!affiliatesEnabled) {
+    return null;
+  }
+
   const tag = getLocalizedText(affiliate, 'tag', lang);
   const title = getLocalizedText(affiliate, 'title', lang);
   const productName = getLocalizedText(affiliate, 'productName', lang);

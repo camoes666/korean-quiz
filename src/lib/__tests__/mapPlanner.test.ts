@@ -123,7 +123,7 @@ describe('travelAffiliateBuilder', () => {
 });
 
 describe('map SEO metadata & JSON-LD schemas', () => {
-  it('generates valid canonical URLs, hreflang alternates, and GeoCoordinates / TouristTrip schemas across all 4 locales', () => {
+  it('generates valid canonical URLs, noindex robots without hreflang, and GeoCoordinates / TouristTrip schemas across all 4 locales', () => {
     const hybe = getSpotBySlug('hybe-yongsan-headquarters')!;
     const nearby = getNearbySpots(hybe).map((n) => n.spot);
     const course = getCourseBySlug('bts-seoul-heritage-day')!;
@@ -136,9 +136,8 @@ describe('map SEO metadata & JSON-LD schemas', () => {
           ? `${BASE_URL}/map/${hybe.slug}`
           : `${BASE_URL}/${locale}/map/${hybe.slug}`;
       expect(spotMeta.alternates?.canonical).toBe(expectedSpotUrl);
-      expect(spotMeta.alternates?.languages?.es).toBe(
-        `${BASE_URL}/es/map/${hybe.slug}`
-      );
+      expect(spotMeta.alternates?.languages).toBeUndefined();
+      expect(spotMeta.robots).toEqual({ index: false, follow: true });
 
       const spotJsonLd = generateMapSpotJsonLd(hybe, nearby, locale);
       expect(spotJsonLd).toHaveLength(3);
@@ -158,6 +157,8 @@ describe('map SEO metadata & JSON-LD schemas', () => {
           ? `${BASE_URL}/map/course/${course.slug}`
           : `${BASE_URL}/${locale}/map/course/${course.slug}`;
       expect(courseMeta.alternates?.canonical).toBe(expectedCourseUrl);
+      expect(courseMeta.alternates?.languages).toBeUndefined();
+      expect(courseMeta.robots).toEqual({ index: false, follow: true });
 
       const courseJsonLd = generateMapCourseJsonLd(course, courseSpots, locale);
       expect(courseJsonLd).toHaveLength(3);

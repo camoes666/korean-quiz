@@ -1,7 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useMemo } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState, useEffect, useRef, useMemo, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import confetti from 'canvas-confetti';
 import {
@@ -50,8 +49,15 @@ interface ChemistryClientProps {
   initialGroupId?: string;
 }
 
+// Read query params via useSyncExternalStore instead of useSearchParams so static export
+// prerenders the full page HTML (H1 + calculator form) instead of a Suspense fallback.
+const subscribeToNothing = () => () => {};
+const getClientSearch = () => window.location.search;
+const getServerSearch = () => '';
+
 export default function ChemistryClient({ initialGroupId }: ChemistryClientProps = {}) {
-  const searchParams = useSearchParams();
+  const search = useSyncExternalStore(subscribeToNothing, getClientSearch, getServerSearch);
+  const searchParams = useMemo(() => new URLSearchParams(search), [search]);
   const { lang } = useLanguage();
   const { addXP } = useGame();
 
@@ -344,6 +350,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
           quizTitle:
             lang === 'ko'
               ? `${currentGroup.name} 사주 × MBTI 궁합 리포트`
+              : lang === 'es'
+              ? `Reporte K-Saju × MBTI de ${currentGroup.name}`
+              : lang === 'pt'
+              ? `Relatório K-Saju × MBTI de ${currentGroup.name}`
               : `${currentGroup.name} K-Saju × MBTI Chemistry`,
           slug: currentGroup.relatedQuizSlug,
           lang,
@@ -356,13 +366,20 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
           memberEmoji: currentMember.emoji,
           skzooName:
             lang === 'ko' ? currentMember.characterNameKo : currentMember.characterName,
-          twinLabel: lang === 'ko' ? '상징 캐릭터' : 'Iconic Character',
+          twinLabel:
+            lang === 'ko'
+              ? '상징 캐릭터'
+              : lang === 'es'
+              ? 'Personaje Icónico'
+              : lang === 'pt'
+              ? 'Personagem Icônico'
+              : 'Iconic Character',
           traits: charms,
           topMatches: cardMatches,
           bestMatchName:
             lang === 'ko'
               ? `${analysis.userElement.emoji}${analysis.userElement.hanja} × ${analysis.memberElement.emoji}${analysis.memberElement.hanja} (${mbti === 'UNKNOWN' ? currentMember.mbti : `${mbti}×${currentMember.mbti}`})`
-              : `${analysis.userElement.emoji} ${analysis.userElement.element.toUpperCase()} × ${analysis.memberElement.emoji} ${analysis.memberElement.element.toUpperCase()} (${mbti === 'UNKNOWN' ? currentMember.mbti : `${mbti}×${currentMember.mbti}`})`,
+              : `${analysis.userElement.emoji} ${getElementDisplayName(analysis.userElement, lang)} × ${analysis.memberElement.emoji} ${getElementDisplayName(analysis.memberElement, lang)} (${mbti === 'UNKNOWN' ? currentMember.mbti : `${mbti}×${currentMember.mbti}`})`,
         },
         `kpulse-chemistry-${currentGroup.id}-${currentMember.id}`
       );
@@ -468,7 +485,13 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                       }`}
                     >
                       {group.members.length}{' '}
-                      {lang === 'ko' ? '명' : lang === 'pt' ? 'membros' : 'members'}
+                      {lang === 'ko'
+                        ? '명'
+                        : lang === 'es'
+                        ? 'miembros'
+                        : lang === 'pt'
+                        ? 'membros'
+                        : 'members'}
                     </span>
                   </button>
                 );
@@ -496,6 +519,8 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
               <span className="text-xs text-slate-400 font-normal">
                 {lang === 'ko'
                   ? '결과 화면에서 다른 멤버로 바로 전환 가능'
+                  : lang === 'es'
+                  ? 'Cambia de miembro en cualquier momento'
                   : lang === 'pt'
                   ? 'Mude de membro a qualquer momento'
                   : 'Switch members anytime'}
@@ -654,7 +679,13 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   {/* Live Preview of User's Saju Element & Zodiac */}
                   <div className="mt-2.5 flex items-center gap-2 flex-wrap text-xs">
                     <span className="text-slate-400 font-medium">
-                      {lang === 'ko' ? '기운:' : 'Aura:'}
+                      {lang === 'ko'
+                        ? '기운:'
+                        : lang === 'es'
+                        ? 'Elemento:'
+                        : lang === 'pt'
+                        ? 'Elemento:'
+                        : 'Aura:'}
                     </span>
                     <span
                       className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full font-medium border ${analysis.userElement.badgeBg}`}
@@ -696,6 +727,8 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   >
                     {lang === 'ko'
                       ? 'MBTI 모름 (사주로만 분석)'
+                      : lang === 'es'
+                      ? 'Omitir MBTI (Solo Saju)'
                       : lang === 'pt'
                       ? 'Não sei meu MBTI (Apenas Saju)'
                       : 'Skip MBTI (Saju Only)'}
@@ -765,10 +798,23 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-3.5">
                     <div className="px-3.5 py-2 rounded-xl bg-white/10 backdrop-blur-xs border border-white/15 text-left">
                       <div className="text-[10px] font-medium text-white/70">
-                        {lang === 'ko' ? '나' : 'YOU'}
+                        {lang === 'ko'
+                          ? '나'
+                          : lang === 'es'
+                          ? 'TÚ'
+                          : lang === 'pt'
+                          ? 'VOCÊ'
+                          : 'YOU'}
                       </div>
                       <div className="text-base font-semibold">
-                        {nickname.trim() || (lang === 'ko' ? '당신' : 'You')}
+                        {nickname.trim() ||
+                          (lang === 'ko'
+                            ? '당신'
+                            : lang === 'es'
+                            ? 'Tú'
+                            : lang === 'pt'
+                            ? 'Você'
+                            : 'You')}
                       </div>
                       <div className="text-xs font-medium text-white/80 mt-0.5">
                         {analysis.userElement.emoji} {analysis.userElement.hanja} ·{' '}
@@ -817,7 +863,13 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                 {/* Right: Compatibility Score Badge */}
                 <div className="shrink-0 flex flex-col items-center justify-center bg-black/20 backdrop-blur-xs border border-white/20 rounded-2xl p-6 sm:p-7 min-w-[200px]">
                   <span className="text-[11px] font-mono tracking-wider uppercase text-white/70">
-                    {lang === 'ko' ? '운명 싱크로율' : 'COMPATIBILITY'}
+                    {lang === 'ko'
+                      ? '운명 싱크로율'
+                      : lang === 'es'
+                      ? 'COMPATIBILIDAD'
+                      : lang === 'pt'
+                      ? 'COMPATIBILIDADE'
+                      : 'COMPATIBILITY'}
                   </span>
                   <div className="text-5xl sm:text-6xl font-bold tracking-tight text-white my-1 tabular-nums">
                     {analysis.totalScore}%
@@ -827,6 +879,14 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                       ? `${currentGroup.name} 내 나의 궁합 ${
                           groupRanking.findIndex((r) => r.member.id === currentMember.id) + 1
                         }위`
+                      : lang === 'es'
+                      ? `#${
+                          groupRanking.findIndex((r) => r.member.id === currentMember.id) + 1
+                        } en ${currentGroup.name}`
+                      : lang === 'pt'
+                      ? `#${
+                          groupRanking.findIndex((r) => r.member.id === currentMember.id) + 1
+                        } no ${currentGroup.name}`
                       : `#${
                           groupRanking.findIndex((r) => r.member.id === currentMember.id) + 1
                         } Match in ${currentGroup.name}`}
@@ -913,6 +973,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     <span>
                       {lang === 'ko'
                         ? '사주 오행 궁합 풀이'
+                        : lang === 'es'
+                        ? 'Lectura K-Saju de Cinco Elementos'
+                        : lang === 'pt'
+                        ? 'Leitura K-Saju dos Cinco Elementos'
                         : 'K-Saju Five Elements Reading'}
                     </span>
                   </div>
@@ -925,7 +989,13 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                         {getElementDisplayName(analysis.userElement, lang)}
                       </div>
                       <div className="text-[10px] text-slate-400 font-medium">
-                        {lang === 'ko' ? '나의 일간' : 'Your Element'}
+                        {lang === 'ko'
+                          ? '나의 일간'
+                          : lang === 'es'
+                          ? 'Tu Elemento'
+                          : lang === 'pt'
+                          ? 'Seu Elemento'
+                          : 'Your Element'}
                       </div>
                     </div>
                     <div className="text-xs font-mono font-medium text-slate-400">
@@ -959,6 +1029,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     <span>
                       {lang === 'ko'
                         ? 'MBTI & 별자리 시너지'
+                        : lang === 'es'
+                        ? 'Sinergia MBTI y Zodíaco'
+                        : lang === 'pt'
+                        ? 'Sinergia MBTI e Zodíaco'
                         : 'MBTI & Zodiac Chemistry'}
                     </span>
                   </div>
@@ -990,6 +1064,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   <h3 className="font-semibold text-sm sm:text-base text-slate-900 mb-1.5 leading-snug">
                     {lang === 'ko'
                       ? '대화가 끊이지 않는 티키타카 주파수'
+                      : lang === 'es'
+                      ? 'Conexión Natural y Sintonía Emocional'
+                      : lang === 'pt'
+                      ? 'Conexão Natural e Sintonia Emocional'
                       : 'Effortless Tiki-Taka & Emotional Sync'}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
@@ -1006,6 +1084,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     <span>
                       {lang === 'ko'
                         ? '추천 케미 시나리오'
+                        : lang === 'es'
+                        ? 'Escenario Ideal de Cita y Amistad'
+                        : lang === 'pt'
+                        ? 'Cenário Ideal de Encontro e Amizade'
                         : 'Ideal Date & Bestie Scenario'}
                     </span>
                   </div>
@@ -1016,11 +1098,19 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                       <div className="text-xs font-semibold text-slate-800">
                         {lang === 'ko'
                           ? `${currentMember.nameKo} 맞춤형 데이트`
+                          : lang === 'es'
+                          ? `Salida ideal con ${currentMember.name}`
+                          : lang === 'pt'
+                          ? `Passeio ideal com ${currentMember.name}`
                           : `Hangout with ${currentMember.name}`}
                       </div>
                       <div className="text-[11px] text-slate-500 font-medium">
                         {lang === 'ko'
                           ? `텐션 지수 ${analysis.stats.dateScore}%`
+                          : lang === 'es'
+                          ? `Índice de química: ${analysis.stats.dateScore}%`
+                          : lang === 'pt'
+                          ? `Índice de química: ${analysis.stats.dateScore}%`
                           : `Heartbeat Score: ${analysis.stats.dateScore}%`}
                       </div>
                     </div>
@@ -1054,6 +1144,8 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   <p className="text-xs text-slate-400 font-normal mt-0.5">
                     {lang === 'ko'
                       ? '인스타 스토리·X 맞춤형 고화질 궁합 카드 이미지가 즉시 생성됩니다.'
+                      : lang === 'es'
+                      ? 'Genera al instante una tarjeta 1080×1920 con tus mejores resultados.'
                       : lang === 'pt'
                       ? 'Gera instantaneamente um card 1080×1920 com seus melhores matches.'
                       : 'Generates an instant 1080×1920 image card with your top matches.'}
@@ -1073,11 +1165,15 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     {isDownloadingCard
                       ? lang === 'ko'
                         ? '생성 중...'
+                        : lang === 'es'
+                        ? 'Creando...'
                         : lang === 'pt'
                         ? 'Gerando...'
                         : 'Creating...'
                       : lang === 'ko'
                       ? '스토리 카드 저장'
+                      : lang === 'es'
+                      ? 'Guardar Tarjeta'
                       : lang === 'pt'
                       ? 'Salvar Card'
                       : 'Save Story Card'}
@@ -1090,7 +1186,15 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   className="inline-flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-800 text-xs font-medium transition-colors cursor-pointer"
                 >
                   <Share2 className="w-3.5 h-3.5 text-slate-500" />
-                  <span>{lang === 'ko' ? 'X 공유' : lang === 'pt' ? 'Postar no X' : 'Post on X'}</span>
+                  <span>
+                    {lang === 'ko'
+                      ? 'X 공유'
+                      : lang === 'es'
+                      ? 'Publicar en X'
+                      : lang === 'pt'
+                      ? 'Postar no X'
+                      : 'Post on X'}
+                  </span>
                 </button>
 
                 <button
@@ -1102,11 +1206,25 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     <>
                       <Check className="w-3.5 h-3.5 text-slate-900" />
                       <span className="text-slate-900 font-medium">
-                        {lang === 'ko' ? '복사됨' : lang === 'pt' ? 'Copiado' : 'Copied'}
+                        {lang === 'ko'
+                          ? '복사됨'
+                          : lang === 'es'
+                          ? 'Copiado'
+                          : lang === 'pt'
+                          ? 'Copiado'
+                          : 'Copied'}
                       </span>
                     </>
                   ) : (
-                    <span>{lang === 'ko' ? '링크 복사' : lang === 'pt' ? 'Copiar Link' : 'Copy Link'}</span>
+                    <span>
+                      {lang === 'ko'
+                        ? '링크 복사'
+                        : lang === 'es'
+                        ? 'Copiar Enlace'
+                        : lang === 'pt'
+                        ? 'Copiar Link'
+                        : 'Copy Link'}
+                    </span>
                   )}
                 </button>
               </div>
@@ -1121,6 +1239,8 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                     <span>
                       {lang === 'ko'
                         ? '클릭 한 번으로 다른 멤버와 궁합 비교'
+                        : lang === 'es'
+                        ? 'Toca cualquier miembro para ver tu reporte 1:1'
                         : lang === 'pt'
                         ? 'Clique em qualquer membro para ver o resultado 1:1'
                         : 'Click any member below to view your 1:1 report'}
@@ -1129,6 +1249,8 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   <h3 className="text-base sm:text-lg font-semibold text-slate-900">
                     {lang === 'ko'
                       ? `${currentGroup.nameKo} 전 멤버 궁합 랭킹`
+                      : lang === 'es'
+                      ? `Ranking de Compatibilidad con ${currentGroup.name}`
                       : lang === 'pt'
                       ? `Ranking de Compatibilidade em ${currentGroup.name}`
                       : `${currentGroup.name} Compatibility Ranking`}
@@ -1209,9 +1331,17 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                           {isCurrent
                             ? lang === 'ko'
                               ? '현재 보고 있음'
+                              : lang === 'es'
+                              ? 'Viendo'
+                              : lang === 'pt'
+                              ? 'Vendo'
                               : 'Viewing'
                             : lang === 'ko'
                             ? '클릭해서 보기 →'
+                            : lang === 'es'
+                            ? 'Ver reporte →'
+                            : lang === 'pt'
+                            ? 'Ver relatório →'
                             : 'View report →'}
                         </div>
                       </div>
@@ -1229,16 +1359,30 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                 </div>
                 <div>
                   <div className="text-xs font-extrabold text-pink-300 uppercase tracking-wider">
-                    {lang === 'ko' ? '추천 성향 테스트' : 'Recommended Personality Quiz'}
+                    {lang === 'ko'
+                      ? '추천 성향 테스트'
+                      : lang === 'es'
+                      ? 'Test de Personalidad Recomendado'
+                      : lang === 'pt'
+                      ? 'Teste de Personalidade Recomendado'
+                      : 'Recommended Personality Quiz'}
                   </div>
                   <h3 className="text-lg sm:text-xl font-black mt-0.5">
                     {lang === 'ko'
                       ? `${currentGroup.nameKo} 질문형 성향 & 소울메이트 테스트도 해볼까요?`
+                      : lang === 'es'
+                      ? `¡Haz el Test de Personalidad de 10 Preguntas de ${currentGroup.name}!`
+                      : lang === 'pt'
+                      ? `Faça o Teste de Personalidade de 10 Perguntas de ${currentGroup.name}!`
                       : `Take the Full 10-Question ${currentGroup.name} Personality Quiz!`}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 mt-1">
                     {lang === 'ko'
                       ? '사주·MBTI 궁합과 실제 나의 선택으로 나온 소울메이트 결과가 일치하는지 확인해보세요!'
+                      : lang === 'es'
+                      ? '¡Comprueba si tu resultado del test coincide con tu destino K-Saju!'
+                      : lang === 'pt'
+                      ? 'Veja se o seu resultado do teste combina com o seu destino K-Saju!'
                       : 'See if your 10-question personality match agrees with your K-Saju destiny!'}
                   </p>
                 </div>
@@ -1253,6 +1397,10 @@ export default function ChemistryClient({ initialGroupId }: ChemistryClientProps
                   <span>
                     {lang === 'ko'
                       ? `${currentGroup.name} 테스트 하러가기`
+                      : lang === 'es'
+                      ? `Jugar Test de ${currentGroup.name}`
+                      : lang === 'pt'
+                      ? `Jogar Quiz de ${currentGroup.name}`
                       : `Play ${currentGroup.name} Quiz`}
                   </span>
                   <ArrowRight className="w-4 h-4" />

@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
-import { Flame, Zap, ChevronDown, Check, BookOpen, MapPin, Stamp } from 'lucide-react';
+import { Flame, Zap, ChevronDown, Check, BookOpen, MapPin, Stamp, FileText } from 'lucide-react';
 import { MAP_TRANSLATIONS } from '@/lib/mapTranslations';
 import { useRouter } from 'next/navigation';
 import { quizzes } from '@/data/quizzes';
@@ -161,10 +161,28 @@ export default function Navbar() {
             </span>
           </Link>
 
+          {/* Editorial Articles Link */}
+          <Link
+            href="/articles"
+            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-800 font-semibold text-xs transition-colors shrink-0"
+            title="Korean Culture & K-Pop Editorial Guides"
+          >
+            <FileText className="w-3.5 h-3.5 text-rose-600" />
+            <span>
+              {lang === 'ko'
+                ? '매거진'
+                : lang === 'es'
+                ? 'Artículos'
+                : lang === 'pt'
+                ? 'Artigos'
+                : 'Articles'}
+            </span>
+          </Link>
+
           {/* Knowledge Guides Navigation Link */}
           <Link
             href={localizePath('/guide', lang)}
-            className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors shrink-0"
+            className="hidden xl:flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-slate-200/80 bg-white hover:bg-slate-50 text-slate-700 font-medium text-xs transition-colors shrink-0"
             title={
               lang === 'ko'
                 ? 'K-컬처 & K-Pop 지식 가이드'

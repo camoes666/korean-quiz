@@ -1,4 +1,3 @@
-import { Suspense } from 'react';
 import Link from 'next/link';
 import { IDOL_GROUPS, type IdolGroupProfile } from '@/data/idolChemistry';
 import { SAJU_ELEMENTS, ZODIAC_META, getElementDisplayName, getZodiacDisplayName } from '@/lib/chemistryEngine';
@@ -71,15 +70,7 @@ export default function ChemistryGroupPageView({
         />
       ))}
 
-      <Suspense
-        fallback={
-          <div className="min-h-screen flex items-center justify-center bg-[#F9FAFB] text-slate-500 font-bold text-sm">
-            Loading {group.name} K-Saju × MBTI Chemistry Calculator...
-          </div>
-        }
-      >
-        <ChemistryClient initialGroupId={group.id} />
-      </Suspense>
+      <ChemistryClient initialGroupId={group.id} />
 
       <section className="max-w-5xl mx-auto px-4 sm:px-6 pb-20">
         <div className="bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-8 shadow-2xs space-y-6">

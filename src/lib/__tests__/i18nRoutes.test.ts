@@ -42,6 +42,8 @@ describe('i18nRoutes', () => {
     expect(isLocalizablePath('/guide/bts-army-trivia')).toBe(true);
 
     expect(isLocalizablePath('/about')).toBe(false);
+    expect(isLocalizablePath('/articles')).toBe(false);
+    expect(isLocalizablePath('/contact')).toBe(false);
     expect(isLocalizablePath('/privacy')).toBe(false);
     expect(isLocalizablePath('/terms')).toBe(false);
     expect(isLocalizablePath('/record/bts-army-trivia')).toBe(false);
@@ -70,6 +72,10 @@ describe('i18nRoutes', () => {
 
     // Non-localizable paths stay unprefixed
     expect(localizePath('/about', 'es')).toBe('/about');
+    expect(localizePath('/articles/korean-spicy-food-scoville-guide', 'ko')).toBe(
+      '/articles/korean-spicy-food-scoville-guide'
+    );
+    expect(localizePath('/contact', 'es')).toBe('/contact');
     expect(localizePath('/record/bts-army-trivia', 'pt')).toBe('/record/bts-army-trivia');
 
     // External URLs and bare hashes are untouched

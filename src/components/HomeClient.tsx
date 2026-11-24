@@ -4,12 +4,13 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { getAllQuizzes, getHeroQuizzes } from '@/data/quizzes';
 import { Category, getLocalizedText } from '@/types/quiz';
+import type { ArticleSummary } from '@/types/article';
 import QuizCard from '@/components/QuizCard';
 import AdPlaceholder from '@/components/AdPlaceholder';
 import HeroCarousel from '@/components/HeroCarousel';
 import PlayerLevelCard from '@/components/PlayerLevelCard';
 import LeaderboardCard from '@/components/LeaderboardCard';
-import { Trophy, ArrowRight, Tag, BookOpen, MapPin, Stamp } from 'lucide-react';
+import { Trophy, ArrowRight, Tag, BookOpen, MapPin, Stamp, Clock } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { useGame } from '@/context/GameContext';
 import { trackMapCtaClick } from '@/lib/analytics';
@@ -17,7 +18,11 @@ import { localizePath } from '@/lib/i18nRoutes';
 
 const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
 
-export default function HomeClient() {
+export default function HomeClient({
+  featuredArticles = [],
+}: {
+  featuredArticles?: ArticleSummary[];
+}) {
   const { t, lang } = useLanguage();
   const { currentLevel, progressPercent, xpToNextLevel } = useGame();
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
@@ -178,12 +183,12 @@ export default function HomeClient() {
                   <Trophy className="w-3.5 h-3.5 text-amber-500" />
                   <span>
                     {lang === 'ko'
-                      ? '명예의 전당 & 순위'
+                      ? '레벨 티어 보기'
                       : lang === 'es'
-                      ? 'Ver Clasificación'
+                      ? 'Ver Niveles'
                       : lang === 'pt'
-                      ? 'Ver Classificação'
-                      : 'Hall of Fame & Rank'}
+                      ? 'Ver Níveis'
+                      : 'Level & Tier Roadmap'}
                   </span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
@@ -486,6 +491,80 @@ export default function HomeClient() {
         </div>
       </section>
 
+      {/* 1.8 FEATURED EDITORIAL GUIDES */}
+      {featuredArticles.length > 0 && (
+        <section className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 w-full">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-6">
+            <div>
+              <span className="inline-flex items-center gap-1.5 text-[11px] font-mono font-medium text-rose-600 uppercase tracking-wider mb-1">
+                K-Pulse Editorial
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-slate-950 tracking-tight">
+                {lang === 'ko'
+                  ? '추천 K-컬처 & 한국 여행 심층 가이드'
+                  : lang === 'es'
+                  ? 'Guías Editoriales de Cultura Coreana y K-Pop'
+                  : lang === 'pt'
+                  ? 'Guias Editoriais de Cultura Coreana e K-Pop'
+                  : 'Featured K-Culture & K-Pop Guides'}
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal">
+                {lang === 'ko'
+                  ? '서울·부산 성지순례 동선, 한국 이름 한자·사주, 매운맛·식사 예절 심층 아티클 (영문 제공)'
+                  : 'Original long-form field guides on Korea itineraries, Korean names & Saju, food etiquette, and K-Pop history.'}
+              </p>
+            </div>
+
+            <Link
+              href="/articles"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-900 hover:text-rose-700 transition-colors shrink-0"
+            >
+              <span>Browse All 16 Editorial Guides</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            {featuredArticles.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/articles/${article.slug}`}
+                className="group rounded-2xl border border-slate-200/90 bg-white hover:border-slate-300 hover:shadow-md p-5 flex flex-col justify-between transition-all"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 text-xs text-slate-500 mb-3">
+                    <span className="inline-flex items-center gap-1.5 font-semibold text-slate-800">
+                      <span>{article.coverEmoji}</span>
+                      <span>{article.category}</span>
+                    </span>
+                    <span className="inline-flex items-center gap-1 font-mono text-[11px] text-slate-500">
+                      <Clock className="w-3 h-3" />
+                      <span>{article.readingTimeMinutes} min</span>
+                    </span>
+                  </div>
+                  <h3 className="text-base font-bold text-slate-950 group-hover:text-rose-700 transition-colors leading-snug line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="mt-2 text-xs text-slate-600 line-clamp-2 leading-relaxed">
+                    {article.description}
+                  </p>
+                </div>
+
+                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-900">
+                  <span className="font-mono text-[11px] text-slate-400 font-normal">
+                    {article.publishedAt}
+                  </span>
+                  <span className="inline-flex items-center gap-1 group-hover:text-rose-700">
+                    <span>Read Guide</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* 2. QUIZ COLLECTION SECTION */}
       <section id="quizzes" className="max-w-6xl mx-auto px-4 sm:px-6 pt-10 pb-12 w-full">
         <div className="flex flex-col gap-4 mb-7">
@@ -575,21 +654,21 @@ export default function HomeClient() {
           <div className="mb-6">
             <h2 className="text-xl sm:text-2xl font-bold text-slate-950 tracking-tight">
               {lang === 'ko'
-                ? '내 챌린저 스탯 & 명예의 전당'
+                ? '내 챌린저 스탯 & 레벨 티어'
                 : lang === 'es'
-                ? 'Estadísticas y Salón de la Fama'
+                ? 'Tus Estadísticas y Niveles'
                 : lang === 'pt'
-                ? 'Estatísticas e Hall da Fama'
-                : 'Your Stats & Global Hall of Fame'}
+                ? 'Suas Estatísticas e Níveis'
+                : 'Your Challenger Stats & Tier Roadmap'}
             </h2>
             <p className="text-xs sm:text-sm text-slate-500 mt-1 font-normal">
               {lang === 'ko'
-                ? '퀴즈를 풀고 XP를 모아 글로벌 팬들과 랭킹을 겨뤄보세요.'
+                ? '퀴즈를 풀고 XP를 모아 다음 챌린저 등급을 잠금 해제하세요.'
                 : lang === 'es'
-                ? 'Gana XP resolviendo quizzes y sube en el ranking global.'
+                ? 'Gana XP resolviendo quizzes y desbloquea los 5 niveles.'
                 : lang === 'pt'
-                ? 'Ganhe XP resolvendo quizzes e suba no ranking global.'
-                : 'Earn XP by completing quizzes and climb the seasonal ranks.'}
+                ? 'Ganhe XP resolvendo quizzes e desbloqueie os 5 níveis.'
+                : 'Earn XP by completing quizzes on this device and unlock all 5 tiers.'}
             </p>
           </div>
 

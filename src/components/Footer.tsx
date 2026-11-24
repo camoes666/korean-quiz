@@ -70,6 +70,33 @@ const PERSONALITY_LINKS = [
   },
 ];
 
+const EDITORIAL_ARTICLE_LINKS = [
+  {
+    slug: 'bts-seoul-1-day-pilgrimage-itinerary',
+    label: '1-Day BTS Seoul Itinerary & Subway Guide',
+  },
+  {
+    slug: 'korea-travel-apps-etiquette-for-kpop-fans',
+    label: 'Naver Map, T-Money & Birthday Cafe Guide',
+  },
+  {
+    slug: 'how-korean-names-work-surnames-hanja-guide',
+    label: 'How Korean Names, Hanja & Bon-gwan Work',
+  },
+  {
+    slug: 'korean-spicy-food-scoville-guide',
+    label: 'Korean Spicy Food Scoville Scale Guide',
+  },
+  {
+    slug: 'korean-dining-etiquette-complete-guide',
+    label: 'Korean Dining Etiquette & Table Manners',
+  },
+  {
+    slug: 'kpop-generations-1st-to-5th-gen-history',
+    label: 'History of K-Pop: 1st Gen to 5th Gen',
+  },
+];
+
 const GUIDE_LINKS = [
   {
     slug: 'bts-army-trivia',
@@ -84,34 +111,6 @@ const GUIDE_LINKS = [
     ko: '블랙핑크 블링크 완벽 지식 가이드',
     es: 'Guía de Lore de BLACKPINK',
     pt: 'Guia de Lore do BLACKPINK',
-  },
-  {
-    slug: 'stray-kids-stay-trivia',
-    en: 'Stray Kids STAY 5-Star Lore Guide',
-    ko: '스트레이 키즈 스테이 지식 가이드',
-    es: 'Guía de Lore de Stray Kids',
-    pt: 'Guia de Lore do Stray Kids',
-  },
-  {
-    slug: 'kpop-fandom-trivia',
-    en: 'K-Pop All-Fandom Ultimate Guide',
-    ko: 'K-Pop 올팬덤 종합 상식 가이드',
-    es: 'Guía Definitiva de Fandoms K-Pop',
-    pt: 'Guia Definitivo de Fandoms K-Pop',
-  },
-  {
-    slug: 'kdrama-trope-trivia',
-    en: 'K-Drama & Squid Game Lore Guide',
-    ko: 'K-드라마 & 오징어게임 해설 가이드',
-    es: 'Guía de K-Dramas y Squid Game',
-    pt: 'Guia de K-Dramas e Round 6',
-  },
-  {
-    slug: 'korean-spicy-food',
-    en: 'Korean Spicy Food & Street Food Guide',
-    ko: '한국 매운 음식 & 길거리 미식 가이드',
-    es: 'Guía de Comida Picante Coreana',
-    pt: 'Guia de Comida Picante Coreana',
   },
   {
     slug: 'korean-culture-iq',
@@ -203,6 +202,9 @@ export default function Footer() {
               <Link href={localizePath('/#quizzes', lang)} className="hover:text-slate-900 transition-colors">
                 {t.footer.allQuizzes}
               </Link>
+              <Link href="/articles" className="hover:text-slate-900 transition-colors font-semibold text-slate-900">
+                {lang === 'ko' ? '매거진' : lang === 'es' ? 'Artículos' : lang === 'pt' ? 'Artigos' : 'Articles'}
+              </Link>
               <Link href={localizePath('/korean-name', lang)} className="hover:text-slate-900 transition-colors font-semibold text-slate-900">
                 {lang === 'ko' ? '한국 이름 작명' : lang === 'es' ? 'Nombre Coreano' : lang === 'pt' ? 'Nome Coreano' : 'Korean Name'}
               </Link>
@@ -217,6 +219,9 @@ export default function Footer() {
               </Link>
               <Link href="/about" className="hover:text-slate-900 transition-colors">
                 {t.footer.aboutUs}
+              </Link>
+              <Link href="/contact" className="hover:text-slate-900 transition-colors">
+                {lang === 'ko' ? '문의하기' : lang === 'es' ? 'Contacto' : lang === 'pt' ? 'Contato' : 'Contact'}
               </Link>
               <Link href="/privacy" className="hover:text-slate-900 transition-colors">
                 {t.footer.privacyPolicy}
@@ -260,22 +265,40 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Verified Knowledge & Lore Guides (Direct Crawl Links for /guide/*) */}
+          {/* Column 3: Editorial Feature Guides + Lore Hub */}
           <div className="lg:col-span-3">
             <h3 className="text-xs font-semibold text-slate-900 mb-3">
               {lang === 'ko'
-                ? '팬덤 로어 & 해설 가이드북'
+                ? '에디토리얼 가이드 & 로어'
                 : lang === 'es'
-                ? 'Guías de Lore y Respuestas'
+                ? 'Guías Editoriales y Lore'
                 : lang === 'pt'
-                ? 'Guias de Lore e Respostas'
-                : 'Verified Fan Lore & Study Guides'}
+                ? 'Guias Editoriais e Lore'
+                : 'Editorial Guides & Fan Lore'}
             </h3>
             <ul className="space-y-2 text-xs font-normal text-slate-600">
               <li>
                 <Link
+                  href="/articles"
+                  className="font-semibold text-slate-900 hover:underline transition-colors block"
+                >
+                  All Korean Culture Articles (16)
+                </Link>
+              </li>
+              {EDITORIAL_ARTICLE_LINKS.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/articles/${item.slug}`}
+                    className="hover:text-slate-900 hover:underline transition-colors block truncate"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
                   href={localizePath('/guide', lang)}
-                  className="font-medium text-slate-900 hover:underline transition-colors block"
+                  className="font-medium text-slate-900 hover:underline transition-colors block pt-1"
                 >
                   {lang === 'ko'
                     ? '전체 지식 가이드 허브 보기'

@@ -3,15 +3,17 @@
 import { useGame } from '@/context/GameContext';
 import { useLanguage } from '@/context/LanguageContext';
 import { getLocalizedText } from '@/types/quiz';
-import { Zap, Flame, Trophy } from 'lucide-react';
+import { Zap, Flame } from 'lucide-react';
 
 export default function PlayerLevelCard() {
   const { lang } = useLanguage();
   const { xp, streak, currentLevel, progressPercent, xpToNextLevel } = useGame();
   const levelTitle = getLocalizedText(currentLevel, 'title', lang);
   const levelLabel =
-    lang === 'es' || lang === 'pt'
+    lang === 'es'
       ? `Nivel ${currentLevel.level}`
+      : lang === 'pt'
+      ? `Nível ${currentLevel.level}`
       : lang === 'ko'
       ? `레벨 ${currentLevel.level}`
       : `Level ${currentLevel.level}`;
@@ -94,16 +96,8 @@ export default function PlayerLevelCard() {
           </span>
         </span>
         <span className="flex items-center gap-1 text-slate-600 font-medium bg-slate-100 px-2 py-0.5 rounded-md">
-          <Trophy className="w-3.5 h-3.5 text-slate-500" />
-          <span>
-            {lang === 'es'
-              ? 'Top 12% Retador'
-              : lang === 'pt'
-              ? 'Top 12% Desafiante'
-              : lang === 'ko'
-              ? '상위 12% 랭커'
-              : 'Top 12% Challenger'}
-          </span>
+          <span>{currentLevel.badgeEmoji}</span>
+          <span>{levelLabel}</span>
         </span>
       </div>
     </div>

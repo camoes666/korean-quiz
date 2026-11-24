@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getLocalizedText, type Quiz } from '../types/quiz';
+import type { EditorialArticle } from '../types/article';
 import { type IdolGroupProfile } from '../data/idolChemistry';
 import { getTotalTriviaQuestionCount, getTriviaQuizzes } from '../data/quizzes';
 import { MAP_GROUPS, MAP_SPOTS } from '../data/mapSpots';
@@ -18,6 +19,12 @@ import {
   buildLocalizedUrl,
   type SiteLocale,
 } from './i18nRoutes';
+import {
+  INDEXED_LOCALES,
+  type IndexableRouteKind,
+  getRobotsForRoute,
+  isRouteIndexable,
+} from './indexingPolicy';
 
 type LocalizedStringMap = Record<SiteLocale, string>;
 
@@ -30,6 +37,7 @@ function alternateOgLocales(current: SiteLocale): string[] {
 }
 
 function buildPageMetadata(params: {
+  routeKind: IndexableRouteKind;
   basePath: string;
   locale: SiteLocale;
   title: string;
@@ -42,12 +50,19 @@ function buildPageMetadata(params: {
   const url = buildLocalizedUrl(params.basePath, params.locale);
   const ogImage = params.ogImage || '/images/og-banner.png';
   const ogTitle = params.ogTitle || params.title;
+  const indexable = isRouteIndexable(params.routeKind, params.locale);
+  const robots = getRobotsForRoute(params.routeKind, params.locale);
+  const alternates =
+    INDEXED_LOCALES.length > 1 && indexable
+      ? buildHreflangAlternates(params.basePath, params.locale)
+      : { canonical: url };
 
   return {
     title: params.title,
     description: params.description,
     ...(params.keywords ? { keywords: params.keywords } : {}),
-    alternates: buildHreflangAlternates(params.basePath, params.locale),
+    ...(robots ? { robots } : {}),
+    alternates,
     openGraph: {
       title: ogTitle,
       description: params.description,
@@ -92,6 +107,7 @@ const HOME_DESC: LocalizedStringMap = {
 
 export function getHomeMetadata(locale: SiteLocale): Metadata {
   return buildPageMetadata({
+    routeKind: 'home',
     basePath: '/',
     locale,
     title: pickLocale(HOME_TITLE, locale),
@@ -253,6 +269,7 @@ export function getKoreanNameFaq(locale: SiteLocale): FaqItem[] {
 
 export function getKoreanNameMetadata(locale: SiteLocale): Metadata {
   return buildPageMetadata({
+    routeKind: 'korean-name',
     basePath: '/korean-name',
     locale,
     title: pickLocale(KOREAN_NAME_TITLE, locale),
@@ -365,6 +382,7 @@ export function generateKoreanNameJsonLd(locale: SiteLocale) {
 export function getQuizMetadata(quiz: Quiz, locale: SiteLocale): Metadata {
   const seo = getQuizSeoData(quiz, locale);
   return buildPageMetadata({
+    routeKind: 'quiz',
     basePath: `/quiz/${quiz.slug}`,
     locale,
     title: seo.title,
@@ -393,6 +411,7 @@ const CHEMISTRY_HUB_DESC: LocalizedStringMap = {
 
 export function getChemistryHubMetadata(locale: SiteLocale): Metadata {
   return buildPageMetadata({
+    routeKind: 'chemistry-hub',
     basePath: '/chemistry',
     locale,
     title: pickLocale(CHEMISTRY_HUB_TITLE, locale),
@@ -555,6 +574,7 @@ export function getChemistryGroupMetadata(
       : `What is your 1:1 compatibility % with ${group.name} (${memberNames})? Enter your birthday and MBTI to check your Korean Saju Five Elements destiny score and full ${group.name} soulmate ranking!`;
 
   return buildPageMetadata({
+    routeKind: 'chemistry-group',
     basePath: `/chemistry/${group.id}`,
     locale,
     title,
@@ -688,6 +708,7 @@ const MAP_DESC: LocalizedStringMap = {
 
 export function getMapMetadata(locale: SiteLocale): Metadata {
   return buildPageMetadata({
+    routeKind: 'map-hub',
     basePath: '/map',
     locale,
     title: pickLocale(MAP_TITLE, locale),
@@ -848,6 +869,7 @@ export function getMapSpotMetadata(spot: MapSpot, locale: SiteLocale): Metadata 
       : `Visit ${spotName} in ${district}: exact address, real photos, 1-tap Naver & Kakao directions, fan tips, and nearby ${groupNames} spots.`;
 
   return buildPageMetadata({
+    routeKind: 'map-spot',
     basePath: `/map/${spot.slug}`,
     locale,
     title,
@@ -966,6 +988,7 @@ export function getMapCourseMetadata(
   const leadImage = spots[0]?.photos?.[0]?.url || '/images/og-banner.png';
 
   return buildPageMetadata({
+    routeKind: 'map-course',
     basePath: `/map/course/${course.slug}`,
     locale,
     title: `${titleText} | K-Pulse`,
@@ -1086,6 +1109,7 @@ const GUIDE_HUB_DESC: LocalizedStringMap = {
 
 export function getGuideHubMetadata(locale: SiteLocale): Metadata {
   return buildPageMetadata({
+    routeKind: 'guide-hub',
     basePath: '/guide',
     locale,
     title: pickLocale(GUIDE_HUB_TITLE, locale),
@@ -1165,6 +1189,7 @@ export function getGuideDetailMetadata(quiz: Quiz, locale: SiteLocale): Metadata
       : `Study guide & verified explanations for ${quiz.title}. Explore ${count} questions, correct answers, cultural context, and insider fun facts.`;
 
   return buildPageMetadata({
+    routeKind: 'guide-detail',
     basePath: `/guide/${quiz.slug}`,
     locale,
     title,
@@ -1234,4 +1259,152 @@ export function generateGuideDetailJsonLd(quiz: Quiz, locale: SiteLocale) {
   };
 
   return [faqSchema, breadcrumbSchema];
+}
+
+// ==================== EDITORIAL ARTICLES ====================
+
+export function getArticlesHubMetadata(): Metadata {
+  return buildPageMetadata({
+    routeKind: 'articles-hub',
+    basePath: '/articles',
+    locale: 'en',
+    title: 'Korean Culture, Travel & K-Pop Editorial Guides | K-Pulse',
+    description:
+      'In-depth original guides on Seoul K-Pop travel routes, Korean names and Saju Five Elements, dining etiquette, spicy food, and K-Pop fandom history.',
+    ogImage: '/images/og-banner.png',
+    keywords: [
+      'Korea travel guides for K-Pop fans',
+      'Korean names and Saju guide',
+      'Korean dining etiquette',
+      'Korean spicy food Scoville scale',
+      'K-Pop generations history',
+    ],
+  });
+}
+
+export function generateArticlesHubJsonLd(articles: EditorialArticle[]) {
+  const homeUrl = buildLocalizedUrl('/', 'en');
+  const hubUrl = buildLocalizedUrl('/articles', 'en');
+
+  const collectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Korean Culture, Travel & K-Pop Editorial Guides | K-Pulse',
+    url: hubUrl,
+    inLanguage: 'en',
+    mainEntity: {
+      '@type': 'ItemList',
+      numberOfItems: articles.length,
+      itemListElement: articles.map((article, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: article.title,
+        description: article.description,
+        url: buildLocalizedUrl(`/articles/${article.slug}`, 'en'),
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: homeUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Articles',
+        item: hubUrl,
+      },
+    ],
+  };
+
+  return [collectionSchema, breadcrumbSchema];
+}
+
+export function getArticleMetadata(article: EditorialArticle): Metadata {
+  return buildPageMetadata({
+    routeKind: 'article-detail',
+    basePath: `/articles/${article.slug}`,
+    locale: 'en',
+    title: `${article.title} | K-Pulse`,
+    ogTitle: article.title,
+    description: article.description,
+    ogType: 'article',
+    ogImage: '/images/og-banner.png',
+    keywords: article.keywords,
+  });
+}
+
+export function generateArticleJsonLd(
+  article: EditorialArticle,
+  wordCount: number
+) {
+  const homeUrl = buildLocalizedUrl('/', 'en');
+  const hubUrl = buildLocalizedUrl('/articles', 'en');
+  const pageUrl = buildLocalizedUrl(`/articles/${article.slug}`, 'en');
+
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: article.title,
+    description: article.description,
+    datePublished: article.publishedAt,
+    dateModified: article.updatedAt,
+    inLanguage: 'en',
+    wordCount,
+    articleSection: article.category,
+    keywords: article.keywords.join(', '),
+    image: `${BASE_URL}/images/og-banner.png`,
+    author: {
+      '@type': 'Organization',
+      name: article.author.name,
+      url: `${BASE_URL}/about`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'K-Pulse',
+      url: BASE_URL,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${BASE_URL}/images/og-banner.png`,
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': pageUrl,
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: homeUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Articles',
+        item: hubUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: article.title,
+        item: pageUrl,
+      },
+    ],
+  };
+
+  return [articleSchema, breadcrumbSchema];
 }

@@ -41,7 +41,8 @@ import {
   trackMapSaveSpot,
   trackMapStampSpot,
 } from '@/lib/analytics';
-import { localizePath } from '@/lib/i18nRoutes';
+import { localizePath, toSiteLocale } from '@/lib/i18nRoutes';
+import { getMapSpotFaq } from '@/lib/pageSeo';
 import type { Language } from '@/lib/translations';
 import SpotGallery from './SpotGallery';
 import TravelEssentialsBox from './TravelEssentialsBox';
@@ -248,6 +249,16 @@ export default function MapSpotDetailClient({
     () => areaSpots.find((s) => s.id === mapSelectedId) || spot,
     [areaSpots, mapSelectedId, spot]
   );
+
+  const nearbySpotList = useMemo(
+    () => nearbySpots.map((entry) => entry.spot),
+    [nearbySpots]
+  );
+
+  const localizedFaqs = useMemo(() => {
+    const resolved = getMapSpotFaq(spot, nearbySpotList, toSiteLocale(lang));
+    return resolved.length > 0 ? resolved : faqs;
+  }, [spot, nearbySpotList, lang, faqs]);
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-10 space-y-8">
@@ -604,13 +615,13 @@ export default function MapSpotDetailClient({
       </section>
 
       {/* Spot FAQ Section */}
-      {faqs.length > 0 && (
+      {localizedFaqs.length > 0 && (
         <section className="rounded-2xl bg-white border border-stone-200 p-5 sm:p-7 space-y-4">
           <h2 className="text-lg sm:text-xl font-bold text-slate-900">
             {copy.faqHeading}
           </h2>
           <dl className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {faqs.map((item) => (
+            {localizedFaqs.map((item) => (
               <div key={item.question} className="space-y-1.5">
                 <dt className="text-sm font-bold text-slate-900">
                   {item.question}
