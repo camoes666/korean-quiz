@@ -612,4 +612,332 @@ export const TRAVEL_ARTICLES: EditorialArticle[] = [
       },
     ],
   },
+  {
+    slug: 'stray-kids-seoul-1-day-stay-itinerary',
+    locale: 'en',
+    title:
+      'Complete 1-Day Stray Kids Seoul Itinerary: JYP Center, Olympic Park, Gwangjang Market & Nodeul Island',
+    subtitle:
+      'An east-to-west Seoul route linking JYP Entertainment in Seongnae-dong, Olympic Park’s Lone Tree and KSPO Dome, classic variety food markets, and Han River sunset ramen.',
+    description:
+      'Plan a 1-day Stray Kids Seoul itinerary covering JYP Entertainment Center, Olympic Park Lone Tree, Gwangjang Market, Myeongdong Kyoja, and Nodeul Island with subway tips.',
+    category: 'Korea Travel',
+    tags: ['Stray Kids', 'Seoul', 'Itinerary', 'K-Pop Map'],
+    keywords: [
+      'Stray Kids Seoul itinerary',
+      'JYP Entertainment Seongnae visit',
+      'Olympic Park Lone Tree Stray Kids',
+      'Nodeul Island Han River ramen',
+      'STAY Seoul tour',
+    ],
+    publishedAt: '2026-11-21',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '🧭',
+    accentBg: 'bg-red-50',
+    featured: false,
+    keyTakeaways: [
+      'Start on Seoul’s eastern edge before noon so JYP Entertainment Center and Olympic Park’s Lone Tree sit together in one easy 45-minute walking loop.',
+      'Ride Subway Line 5 directly from Dunchon-dong or Olympic Park straight into Euljiro 4-ga for Gwangjang Market—no complicated Han River transfers needed.',
+      'At Myeongdong Kyoja Main Branch, servers collect payment right when food arrives and offer free extra noodles and rice upon request.',
+      'Finish at Nodeul Island on Line 9 before dusk to cook convenience-store Han River ramyeon on the grass lawn while watching the sun drop behind the 63 Building.',
+    ],
+    intro: [
+      'Planning a Stray Kids day in Seoul quickly shows how spread out the group’s landmarks look on paper. JYP Entertainment’s headquarters anchors Gangdong-gu on the far eastern edge of the capital, traditional markets cluster inside historic Jongno and Jung-gu in the center, and Nodeul Island floats mid-river toward Yongsan. If you tackle those stops out of sequence, you burn an hour bouncing back and forth across subway transfers.',
+      'Thankfully, Seoul Metro Line 5 and Line 9 stitch this itinerary together into a surprisingly natural east-to-west progression. Beginning in quiet Seongnae-dong alongside Olympic Park gives you morning space for exterior agency photos and tree-lined walks before riding straight downtown for lunch at Gwangjang Market and Myeongdong Kyoja.',
+      'Every stop below relies on verified public street addresses, exact subway exits, realistic Korean won budgets, and neighborhood etiquette so visiting STAYs move smoothly through working studios, markets, and riverside parks.',
+    ],
+    sections: [
+      {
+        id: 'stay-route-overview',
+        heading: '1. Route Timing, Subway Exits & Estimated Budget',
+        paragraphs: [
+          'Seoul’s eastern neighborhoods wake gently compared with central shopping grids. Arriving outside JYP Entertainment around 10:00 AM gives you soft morning light across the building signage and open paths inside Olympic Park before lunchtime picnickers spread blankets on the grass.',
+          'For lunch, decide whether you want to graze small market bites at Gwangjang Market first and sit down later for hot kalguksu in Myeongdong, or split them across a late brunch and an early afternoon bowl. Pacing both prevents showing up too full for spicy noodles at the Han River.',
+        ],
+        table: {
+          caption: '1-Day Stray Kids Seoul Course: Timing, Addresses & Subway Access',
+          headers: ['Time Window', 'Stop & Korean Address', 'Subway Exit', 'Estimated Budget (KRW)'],
+          rows: [
+            [
+              '10:00 – 10:45',
+              'JYP Entertainment Center (205 Gangdong-daero, Gangdong-gu)',
+              'Line 5 Dunchon-dong Exit 3 (10-min walk)',
+              '₩5,000 – ₩9,000 (nearby cafe drink)',
+            ],
+            [
+              '10:50 – 11:45',
+              'Olympic Park Lone Tree & KSPO Dome (424 Olympic-ro, Songpa-gu)',
+              'Walk across street from JYP / Line 5·9 Olympic Park Exit 3',
+              'Free park entry',
+            ],
+            [
+              '12:30 – 13:45',
+              'Gwangjang Market (88 Changgyeonggung-ro, Jongno-gu)',
+              'Line 2·5 Euljiro 4-ga Exit 4 or Line 1 Jongno 5-ga Exit 8',
+              '₩8,000 – ₩14,000 (shared street food)',
+            ],
+            [
+              '14:15 – 15:15',
+              'Myeongdong Kyoja Main Branch (29 Myeongdong 10-gil, Jung-gu)',
+              'Line 4 Myeongdong Exit 8 (3-min walk)',
+              '₩11,000 – ₩12,000 (kalguksu or mandu)',
+            ],
+            [
+              '16:45 – 18:30',
+              'Nodeul Island Han River Lawn (445 Yangnyeong-ro, Yongsan-gu)',
+              'Line 9 Nodeul Exit 2 (8-min bridge walk)',
+              '₩5,000 – ₩10,000 (ramyeon & drink)',
+            ],
+          ],
+        },
+        callout: {
+          tone: 'tip',
+          title: 'Check KSPO Dome Concert Schedules Before Going',
+          body: 'Olympic Park hosts major weekend K-Pop concerts and arena festivals almost every Friday through Sunday. On concert days, merchandise queues and banner setups make KSPO Dome electric to see, though cafes near Olympic Park Station fill up fast—grab your coffee closer to Dunchon-dong or Seongnae-dong first.',
+        },
+      },
+      {
+        id: 'jyp-center-and-olympic-park',
+        heading: '2. Morning: JYP Entertainment Center & Olympic Park Loop',
+        paragraphs: [
+          'Ride Seoul Metro Line 5 to Dunchon-dong Station (Exit 3) or Line 9 to Hanseong Baekje Station, then follow Gangdong-daero along the edge of Olympic Park until you reach JYP Entertainment Center at 205 Gangdong-daero in Seongnae-dong. Home to Stray Kids, TWICE, and ITZY since the agency moved from Cheongdam in 2018, the building sits conspicuously across from the park’s north-east treeline.',
+          'Just like HYBE and YG, JYP Center is an active corporate workplace and studio building—its organic cafe and interior floors are closed to the general public. Snap photos respectfully from the wide public sidewalk across or beside the crosswalk without blocking staff vehicles entering the underground garage or leaning on security barriers.',
+          'Once you have your exterior photos, cross Gangdong-daero directly into Olympic Park (424 Olympic-ro, Songpa-gu). Follow the paved ridge paths into the center lawn to spot the iconic Olympic Park Lone Tree ("나홀로나무", Nahollo Namu), a solitary broad-crowned tree crowning a rolling grassy hill that regularly appears in Stray Kids outdoor vlogs and K-Pop photo shoots. From the hill, walk 15 minutes southeast past the Olympic Gymnastics Arena—KSPO Dome—where Stray Kids have headlined packed Seoul arena nights.',
+        ],
+        bullets: [
+          'Seongnae-dong cafe side streets: Behind JYP Center along Seongan-ro, independent bakeries and quiet brunch spots cater to neighborhood locals and often host Stray Kids comeback or member birthday cup-sleeve events.',
+          'Footwear note: Olympic Park spans more than 1.4 million square meters—wear cushioned walking sneakers rather than flat fashion boots if you plan to loop from the Lone Tree past Mongchon Earthen Fortress.',
+        ],
+      },
+      {
+        id: 'gwangjang-and-myeongdong-feast',
+        heading: '3. Midday: Gwangjang Market Missions & Myeongdong Kyoja',
+        paragraphs: [
+          'Walk back to Olympic Park Station or Dunchon-dong Station and ride Line 5 straight west without changing lines to Euljiro 4-ga Station (Exit 4), then stroll five minutes north to Gwangjang Market (88 Changgyeonggung-ro, Jongno-gu). This covered 1905 market gained extra love among international STAYs after Stray Kids filmed energetic street-food challenges winding between its sizzling griddles and steaming noodle counters.',
+          'After sampling market bites, ride one quick subway leg or walk 20 minutes southwest past Euljiro into central Myeongdong to visit Myeongdong Kyoja Main Branch (29 Myeongdong 10-gil, Jung-gu), tucked just off Exit 8 of Line 4 Myeongdong Station. Mentioned warmly by Stray Kids members including Felix and Seungmin as well as BTS’s RM, this Michelin-listed institution focuses on a tight four-item menu anchored by silky chicken-broth kalguksu (knife-cut wheat noodles) topped with minced pork wontons and plump steamed mandu.',
+        ],
+        subsections: [
+          {
+            heading: 'Pacing Both Meals Without Over-Ordering',
+            paragraphs: [
+              'Eating two full lunches back-to-back catches many travelers off guard. At Gwangjang Market, share one crispy mung-bean pancake (nokdu bindaetteok) and one tray of bite-sized mayak gimbap rather than ordering heavy stews, keeping room for a warm bowl at Myeongdong Kyoja afterward.',
+              'Inside Myeongdong Kyoja, notice two local quirks: staff collect your payment right when they drop off your tray (around ₩11,000 per dish), and the complimentary house cabbage kimchi packs an unusually punchy raw-garlic heat. Ask staff gently for "Myeon sari juseyo" (면 사리 주세요) if you want free extra noodles or steamed rice.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'nodeul-island-sunset',
+        heading: '4. Late Afternoon: Nodeul Island Sunset & Han River Ramyeon',
+        paragraphs: [
+          'From Myeongdong, take Line 4 two stops south to Dongjak Station and transfer to Line 9 one stop west to Nodeul Station (Exit 2), or hop on a southbound bus from Seoul Station directly onto the Hangang Bridge pedestrian deck. Both routes drop you onto Nodeul Island (445 Yangnyeong-ro, Yongsan-gu), a serene green cultural island anchored midway across the Han River.',
+          'Featured across K-Pop outdoor live clips and Stray Kids behind-the-scenes shoots, Nodeul Island pairs low brick music halls and bookstores with wide west-facing lawns overlooking Yeouido’s 63 Building and railway bridge trusses. As dusk settles, clouds turn pink and purple behind the skyline while cyclists cruise along the river deck.',
+          'Stop inside the island convenience store near the plaza steps to buy a paper-bowl ramyeon packet, bottled green tea, and an optional boiled egg or slice of cheese. Using the store’s outdoor induction hot-plate counter, tap your foil bowl onto the sensor button for four minutes of boiling broth, then carry the steaming tray out onto the tiered grass steps for a classic Seoul sunset picnic.',
+        ],
+        bullets: [
+          'Bring small tissues or wet wipes and a light windbreaker—river breezes cool down noticeably once the sun dips behind Yeouido, even in late spring.',
+          'Dispose of broth dregs properly at the convenience store liquid drain funnel before stacking empty paper bowls in the recycling rack.',
+        ],
+      },
+      {
+        id: 'optional-stay-extensions',
+        heading: '5. Optional Extra STAY Stops Around Greater Seoul & Beyond',
+        paragraphs: [
+          'If you have a second morning or plan regional train travel, three additional Stray Kids spots extend this itinerary cleanly without guesswork. Inside southwestern Seoul on Line 1/7 (Onsu Station) sits the School of Performing Arts Seoul—SOPA (14-1 Ori-ro 22ga-gil, Guro-gu)—famous for its mustard-yellow uniforms and attended by Hyunjin and I.N alongside BTS’s Jungkook.',
+          'On a relaxed evening outside central Seoul, ride the Gimpo Goldline out to Janggi Station to walk Gimpo Laveniche March Avenue (26 Taejang-ro 795beon-gil, Gimpo-si), the illuminated canal promenade in Lee Know’s hometown lined with waterfront cafes and dessert spots. And if you ride the KTX south to Busan, save an evening for I.N’s hometown favorite, Gwangalli Beach (219 Gwanganhaebyeon-ro, Suyeong-gu), especially on Saturday nights when drone light shows reflect off Gwangan Bridge.',
+        ],
+        callout: {
+          tone: 'etiquette',
+          title: 'Active High School Etiquette at SOPA',
+          body: 'SOPA is a working high school attended by teenagers every weekday. If you visit for a quick souvenir snapshot of the building sign, stand strictly outside the main gate along the public street—never walk onto campus grounds, peer through fences, or photograph students in uniform.',
+        },
+      },
+    ],
+    companionCta: {
+      eyebrow: 'Interactive Route Planner',
+      title: 'Open All 5 Stray Kids Stops on the K-Pulse Map',
+      description:
+        'Check verified pins, exterior gallery photos, leg-by-leg distances, and one-tap Naver Map, KakaoMap, and Google Maps links for the Stray Kids Seoul route.',
+      href: '/map/course/stray-kids-seoul-stay-tour',
+      buttonLabel: 'Launch Stray Kids Seoul Map',
+    },
+    relatedQuizSlugs: ['stray-kids-stay-trivia', 'which-stray-kids-member-are-you'],
+    sources: [
+      {
+        label: 'Visit Seoul Official Travel Guide',
+        detail: 'Olympic Park, Gwangjang Market, Myeongdong, and Nodeul Island transit and visitor access.',
+        url: 'https://english.visitseoul.net',
+      },
+      {
+        label: 'Michelin Guide Seoul',
+        detail: 'Myeongdong Kyoja Main Branch Bib Gourmand profile and menu notes.',
+        url: 'https://guide.michelin.com',
+      },
+      {
+        label: 'Korea Sports Promotion Foundation (KSPO) — Olympic Park',
+        detail: 'Walking grounds, Lone Tree hillside access, and KSPO Dome event area info.',
+      },
+    ],
+  },
+  {
+    slug: 'gangneung-gyeonggi-kpop-day-trips-from-seoul',
+    locale: 'en',
+    title:
+      'Best K-Pop Day Trips From Seoul: Jumunjin BTS Bus Stop (Gangneung), Ilsan Lake Park & Iryeong Station',
+    subtitle:
+      'How to reach South Korea’s iconic coastal album-cover stop by KTX-Eum plus half-day metro excursions into Gyeonggi-do for RM’s Ilsan bike loop, Spring Day’s railway, and idol hometowns.',
+    description:
+      'Plan easy K-Pop day trips from Seoul to the Jumunjin BTS Bus Stop in Gangneung, Ilsan Lake Park (RM), Iryeong Station (Spring Day MV), Gimpo Laveniche, and Sanbon.',
+    category: 'Korea Travel',
+    tags: ['Day Trips', 'Gangneung', 'BTS', 'K-Pop Map'],
+    keywords: [
+      'Jumunjin BTS bus stop from Seoul',
+      'Gangneung KTX BTS guide',
+      'Ilsan Lake Park RM Namjooning',
+      'Iryeong Station Spring Day MV',
+      'Korea K-Pop day trips from Seoul',
+    ],
+    publishedAt: '2026-11-25',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '🏖️',
+    accentBg: 'bg-sky-50',
+    featured: false,
+    keyTakeaways: [
+      'The Jumunjin BTS Bus Stop sits along Gangneung’s Hyangho Beach—easily visited in a single day from Seoul via the 2-hour KTX-Eum high-speed train plus a 35-minute local coastal bus or cab.',
+      'Closer to Seoul, Ilsan Lake Park (RM’s hometown "Namjooning" trail) and Sanbon Central Park (Jisoo’s hometown) require no train reservation—just a regular T-Money subway tap on Lines 3 and 4.',
+      'Iryeong Station in Yangju (famous from BTS’s "Spring Day" MV) sits along the restored Gyooe suburban rail corridor—always stay off active tracks and shoot strictly from permitted public platforms or exterior crossings.',
+      'Gimpo Laveniche March Avenue (Lee Know’s hometown) comes alive after sunset when canal bridges glow—making it a relaxed late-afternoon detour even on departure or arrival days near Gimpo Airport.',
+    ],
+    intro: [
+      'Once you check off HYBE, YG, and JYP inside Seoul, some of the most memorable K-Pop filming locations and idol hometown parks sit just outside city limits. On the east coast, deep turquoise waves crash steps behind the wooden bus shelter recreated for BTS’s "You Never Walk Alone" album jacket; north and south of Seoul across Gyeonggi-do, leafy lake paths, retro train platforms, and lantern-lit canals preserve quieter chapters of Korean pop history.',
+      'Many overseas visitors skip these stops thinking provincial Korea demands a rental car or guided bus tour. In reality, South Korea’s KTX-Eum eastbound rail corridor and suburban metro lines connect almost all of them cleanly on a regular transit card or single reserved train ticket.',
+      'Compare transit times, ticket costs, local bus connections, and essential safety rules below to pick the right half-day or full-day escape from Seoul.',
+    ],
+    sections: [
+      {
+        id: 'day-trip-comparison',
+        heading: '1. East Coast KTX vs. Suburban Metro Day Trips at a Glance',
+        paragraphs: [
+          'Match your choice to the hours you have free. Gangneung demands a dedicated full day (roughly 8 to 10 hours door-to-door), whereas Ilsan, Iryeong, Gimpo, and Sanbon fit effortlessly into a crisp morning or sunset half-day without packing an overnight bag.',
+        ],
+        table: {
+          caption: 'Five Verified K-Pop Day Trips From Central Seoul',
+          headers: ['Destination & Address', 'Artist / Era Tie-In', 'Transit From Seoul', 'Ideal Time Window'],
+          rows: [
+            [
+              'Jumunjin BTS Bus Stop (8-55 Hyangho-ri, Jumunjin-eup, Gangneung)',
+              'BTS "You Never Walk Alone" jacket cover',
+              'KTX-Eum to Gangneung (~2h, ~₩27,600) + Bus #300/#302 or taxi (~35m)',
+              'Full day (leave Seoul ~07:30–08:30)',
+            ],
+            [
+              'Ilsan Lake Park (595 Hosu-ro, Ilsandong-gu, Goyang)',
+              'RM hometown & original "Namjooning" trail',
+              'Seoul Metro Line 3 → Jeongbalsan Exit 1/2 (~45–55m)',
+              'Half day (morning or golden hour)',
+            ],
+            [
+              'Iryeong Station (647-5 Samsang-ri, Jangheung-myeon, Yangju)',
+              'BTS "Spring Day" MV snow-covered railway',
+              'Line 3 Gupabal/Daegok → suburban bus or Gyooe Line (~60–75m)',
+              'Half day (pair with Bukhansan foothills)',
+            ],
+            [
+              'Gimpo Laveniche March Ave (26 Taejang-ro 795beon-gil, Gimpo)',
+              'Stray Kids Lee Know hometown canal walk',
+              'Airport Railroad/Line 5 → Gimpo Goldline Janggi (~55m)',
+              'Late afternoon into evening lights',
+            ],
+            [
+              'Sanbon Central Park & Rodeo St (20 Sanbon-ro 323beon-gil, Gunpo)',
+              'BLACKPINK Jisoo school-days hometown',
+              'Seoul Metro Line 4 → Sanbon Exit 3 (~45m)',
+              'Afternoon stroll + local dinner',
+            ],
+          ],
+        },
+        callout: {
+          tone: 'tip',
+          title: 'Book Weekend Gangneung KTX-Eum Seats Early',
+          body: 'East Coast KTX-Eum trains departing Seoul Station and Cheongnyangni Station routinely sell out on Friday evenings, Saturday mornings, and Sunday afternoons. Reserve round-trip tickets via LetsKorail 2–3 weeks in advance—or target Tuesday through Thursday for quiet beach queues and effortless seat choice.',
+        },
+      },
+      {
+        id: 'gangneung-jumunjin-full-day',
+        heading: '2. Full Day in Gangneung: Jumunjin BTS Bus Stop & Coffee Coastline',
+        paragraphs: [
+          'Board an early morning KTX-Eum train at Seoul Station or Cheongnyangni Station bound for Gangneung Station (roughly 1 hour 50 minutes to 2 hours 10 minutes, around ₩27,600 each way in standard class). From the plaza outside Gangneung Station, ride city bus #300 or #302 north toward Jumunjin—or split a 30-minute metered taxi (roughly ₩22,000–₩28,000) straight to Hyangho Beach (8-55 Hyangho-ri, Jumunjin-eup).',
+          'Because the original prop shelter installed during BTS’s 2017 "You Never Walk Alone" jacket shoot was temporary, Gangneung City rebuilt and permanently maintained an exact wooden bus-stop replica overlooking the East Sea dunes—no buses actually stop at this commemorative shelter, meaning you can photograph freely beside the bright ocean horizon. On clear weekdays, expect a friendly 5- to 15-minute photo turn queue where fellow travelers happily swap camera duties.',
+          'Rather than boarding a train back immediately after ten minutes on the sand, turn Gangneung into a full coastal day. Ride south along the shoreline to Yeongjin Beach’s famous breakwater (featured in the K-Drama "Goblin"), visit Jumunjin Fish Market for fresh grilled fish or spicy seafood stew, and finish your afternoon along Anmok Beach Coffee Street—Korea’s celebrated oceanfront strip lined with three-story roasteries right beside Gangneung Station before catching an evening KTX back to Seoul.',
+        ],
+      },
+      {
+        id: 'ilsan-lake-park-rm',
+        heading: '3. Half-Day Escape: RM’s Ilsan Lake Park & "Namjooning" Route',
+        paragraphs: [
+          'Long before "Namjooning"—slowing down to bike beside water, read poetry, and visit quiet art spaces—became global ARMY vocabulary, RM grew up in Ilsan and spent teenage afternoons writing lyrics and cycling around Ilsan Lake Park (595 Hosu-ro, Ilsandong-gu, Goyang-si). Reaching it requires zero advance reservations: ride Seoul Metro Line 3 northwest straight to Jeongbalsan Station (Exits 1 or 2) and stroll five minutes across Lake Park Plaza.',
+          'The park loops nearly 4.7 kilometers around a vast artificial lake framed by weeping willows, lotus ponds, and paved red bicycle lanes. Download Goyang’s public bike app ("Tajo" or check rental kiosks near the main square in warmer months) or walk clockwise around Singing Fountain Plaza toward the traditional wooden Jeongja pavilion for peaceful greenery far calmer than central Myeongdong.',
+          'When you finish your loop, cross back toward Lafesta or Western Dom pedestrian streets beside Jeongbalsan Station, or pair the afternoon with the serene Baekseok and Jeongbalsan-dong book cafes that give Goyang its famously unhurried literary atmosphere.',
+        ],
+      },
+      {
+        id: 'iryeong-station-spring-day',
+        heading: '4. Yangju Iryeong Station: Retro "Spring Day" Railway & Safety Rules',
+        paragraphs: [
+          'North of Seoul in the forested valley between Bukhansan and Yangju lies Iryeong Station (647-5 Samsang-ri, Jangheung-myeon, Yangju-si)—the weathered green-and-white country train station featured in the snow-swept opening scenes of BTS’s 2017 "Spring Day" music video where V bends down along the iron tracks.',
+          'For nearly two decades after passenger trains paused in 2004, Iryeong stood silent as a nostalgic filming backdrop. Following regional revitalization of the suburban Gyooe Line linking Daegok, Iryeong, and Uijeongbu, visitors can check local Gyooe Line train timetables from Daegok Station (where Line 3 meets the GTX-A and Gyeongui-Jungang lines) or take suburban buses (#15-1 or #360 series from Gupabal Station Exit 2) directly through Jangheung’s mountain valley.',
+        ],
+        callout: {
+          tone: 'etiquette',
+          title: 'Active Railway Safety: Stay Off the Tracks',
+          body: 'Never step past yellow safety lines or stand between iron rails to recreate "Spring Day" poses. Following the Gyooe Line’s revival, diesel passenger trains and inspection cars run along this track corridor—keep all cameras strictly on designated station platforms, exterior pedestrian crossings, and public roadside viewpoints.',
+        },
+      },
+      {
+        id: 'gimpo-and-sanbon-suburbs',
+        heading: '5. Quick Sunset & Foodie Detours: Gimpo Laveniche & Sanbon',
+        paragraphs: [
+          'Two overlooked Gyeonggi-do towns reward fans staying near western Seoul or looking for authentic neighborhood food far from tourist menus. In Gimpo—Stray Kids dancer Lee Know’s hometown—board the sleek Gimpo Goldline light rail from Gimpo International Airport Station to Janggi Station and walk ten minutes to Gimpo Laveniche March Avenue (26 Taejang-ro 795beon-gil). Styled after European canal promenades, water channels reflect glowing pedestrian footbridges while families stroll past dessert cafes and casual restaurants at dusk.',
+          'On Seoul’s southern Line 4 corridor, 45 minutes from Myeongdong, sits Sanbon Station—center of Jisoo’s school-days hometown in Gunpo. Step out of Exit 3 onto Sanbon Rodeo Street and adjacent Sanbon Central Park (20 Sanbon-ro 323beon-gil), a lively pedestrian hub packed with budget Korean BBQ spots, student snack stalls, and quiet neighborhood benches where few overseas tour groups ever wander.',
+        ],
+        bullets: [
+          'Smart Gimpo Airport pairing: Because Gimpo Laveniche sits just ~25 minutes from Gimpo Airport on the Goldline, it makes an effortless evening meal walk if you fly domestically to Busan or Jeju the next morning.',
+          'Transit check: Your standard Seoul T-Money card covers Line 3 to Ilsan, Line 4 to Sanbon, and the Gimpo Goldline seamlessly with automatic subway transfer discounts.',
+        ],
+      },
+    ],
+    companionCta: {
+      eyebrow: 'Verified Regional Spots',
+      title: 'Explore All 30 K-Pop Spots Across Seoul, Gangwon & Gyeonggi',
+      description:
+        'Browse real photos, verified Korean road addresses, and one-tap Naver Map, KakaoMap, and Google Maps pins across every region.',
+      href: '/map',
+      buttonLabel: 'Open Interactive K-Pop Map',
+    },
+    relatedQuizSlugs: ['bts-army-trivia', 'stray-kids-stay-trivia', 'which-blackpink-member-are-you'],
+    sources: [
+      {
+        label: 'KORAIL (LetsKorail) — Gyeonggang Line KTX-Eum',
+        detail: 'Seoul/Cheongnyangni to Gangneung express train schedules, fares, and Gyooe Line regional updates.',
+        url: 'https://www.letskorail.com',
+      },
+      {
+        label: 'Visit Korea (Korea Tourism Organization) — Gangneung & Gyeonggi Guides',
+        detail: 'Hyangho Beach BTS Bus Stop location, Anmok Coffee Street, and Ilsan Lake Park visitor details.',
+        url: 'https://english.visitkorea.or.kr',
+      },
+      {
+        label: 'Gyeonggi Tourism Organization',
+        detail: 'Transit routes for Goyang Ilsan Lake Park, Yangju Jangheung valley, and Gimpo Laveniche.',
+      },
+    ],
+  },
 ];

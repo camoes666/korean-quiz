@@ -510,4 +510,275 @@ export const LANGUAGE_SAJU_ARTICLES: EditorialArticle[] = [
       },
     ],
   },
+  {
+    slug: 'korean-zodiac-12-animals-ddi-compatibility-guide',
+    locale: 'en',
+    title:
+      'Korean Zodiac (12 Ddi / 띠) Explained: Animals, Birth Years, Compatibility & Samjae',
+    subtitle:
+      'How Korea’s 12 zodiac animals cycle with the Five Elements every 60 years, why January–February birthdays need extra care, and what "4-year age gap," Samhap, and Samjae actually mean.',
+    description:
+      'Learn the 12 Korean zodiac animals (ddi), birth-year chart, 60-year color-animal cycle (including 2026 Red Horse), Samhap compatibility, and Samjae folklore.',
+    category: 'Names & Saju',
+    tags: ['Korean Zodiac', 'K-Saju', 'Compatibility', 'Culture'],
+    keywords: [
+      'Korean zodiac 12 animals ddi',
+      'Korean zodiac compatibility samhap',
+      'what is ddi-donggap Korea',
+      'Korean samjae meaning',
+      'Year of the Red Horse 2026 Korea',
+    ],
+    publishedAt: '2026-11-20',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '🐯',
+    accentBg: 'bg-amber-50',
+    featured: false,
+    keyTakeaways: [
+      'Korean "ddi" (띠) assigns one of 12 zodiac animals to your birth year—cycling in fixed order from Rat (쥐띠) through Pig (돼지띠).',
+      'Combining the 12 animals with the 10 Heavenly Stems creates a 60-year color-animal cycle (Yukship Gapja), marking milestone 60th birthdays called Hwangap (환갑) and making 2026 the Year of the Red Horse (병오년).',
+      'For January and early-February birthdays, casual conversation switches animals at Lunar New Year (Seollal), whereas classical Korean Saju readings switch at Ipchun (around February 4).',
+      'Compatibility sayings like "Samhap" (four-year triads) and "Samjae" (three cautious years) remain lively conversation starters rather than strict modern rules.',
+    ],
+    intro: [
+      'Ask a Korean friend when they were born and instead of giving a Western zodiac sign like Leo or Scorpio, they are just as likely to answer, "I’m a Dragon" or "We’re both Tigers." Known in Korean as "ddi" (띠, literally a sash or belt), the 12-animal zodiac cycle sits quietly underneath everything from family Lunar New Year small talk to idol birthday nicknames.',
+      'Although Korea shares the same foundational 12 animals seen across East Asia, Korean culture attaches distinct idioms, birthday customs, and compatibility proverbs to them. You will regularly hear older relatives praise a four-year age gap as ideal harmony ("사주에 딱 맞는 궁합"), joke about friends born twelve years apart sharing the same animal ("띠동갑"), or check whether their animal enters a traditional three-year caution cycle known as "Samjae."',
+      'Here is how the 12 Korean zodiac animals work, how to locate your birth year accurately, and what those colorful traditional pairings mean in real life.',
+    ],
+    sections: [
+      {
+        id: 'how-korean-ddi-works',
+        heading: '1. How Korean Ddi Works (Plus the January–February Cutoff)',
+        paragraphs: [
+          'Western horoscopes cycle through twelve constellations across twelve calendar months inside a single year. Korean ddi cycles across twelve consecutive years instead—meaning everyone born in the same cohort (such as Korea’s "97-line" Oxen or "00-line" Dragons) shares the exact same zodiac animal.',
+          'The tricky catch arrives every January and early February. On social calendar cards, most Koreans treat Seollal (Korean Lunar New Year, falling between late January and mid-February) as the day the zodiac animal hands off. However, formal Saju fortune-tellers and naming studios switch the Year Pillar strictly at Ipchun (입춘, Beginning of Spring), one of the 24 solar terms that consistently falls around February 3–5.',
+          'As a result, someone born on January 22, 1995 (before Seollal and Ipchun) is technically classified as a Dog (1994 cohort) under classical Saju even though pop-culture profiles often list them alongside 1995 Pigs. Checking both dates clears up why two astrology apps occasionally give early-year babies different animals.',
+        ],
+      },
+      {
+        id: 'twelve-animals-table',
+        heading: '2. All 12 Korean Zodiac Animals & Compatibility Triads',
+        paragraphs: [
+          'Korean names add "-ddi" (-띠) directly after each animal word—for example, "Horangi-ddi" (호랑이띠, Year of the Tiger) or "Yong-ddi" (용띠, Year of the Dragon). Notice also the eighth sign: while English translations split between "Sheep," "Goat," and "Ram," Korean uses one clear word, "Yang" (양띠).',
+        ],
+        table: {
+          caption: 'The 12 Korean Zodiac Animals (십이지신): Birth Years, Archetypes & Samhap Partners',
+          headers: ['Animal (Korean Ddi)', 'Recent Birth Years', 'Traditional Archetype', 'Classic Samhap Triad'],
+          rows: [
+            ['Rat (쥐띠 · 자)', '1972, 1984, 1996, 2008, 2020', 'Quick-witted, resourceful, observant planner', 'Rat · Dragon · Monkey'],
+            ['Ox (소띠 · 축)', '1973, 1985, 1997, 2009, 2021', 'Steady, patient, loyal, quietly resilient', 'Ox · Snake · Rooster'],
+            ['Tiger (호랑이띠 · 인)', '1974, 1986, 1998, 2010, 2022', 'Bold, protective, charismatic natural starter', 'Tiger · Horse · Dog'],
+            ['Rabbit (토끼띠 · 묘)', '1975, 1987, 1999, 2011, 2023', 'Gentle, tactful, artistic, perceptive diplomat', 'Rabbit · Sheep · Pig'],
+            ['Dragon (용띠 · 진)', '1976, 1988, 2000, 2012, 2024', 'Ambitious, magnetic, imaginative trailblazer', 'Dragon · Rat · Monkey'],
+            ['Snake (뱀띠 · 사)', '1977, 1989, 2001, 2013, 2025', 'Intuitive, calm, strategic, refined thinker', 'Snake · Ox · Rooster'],
+            ['Horse (말띠 · 오)', '1978, 1990, 2002, 2014, 2026', 'Energetic, expressive, freedom-loving traveler', 'Horse · Tiger · Dog'],
+            ['Sheep / Goat (양띠 · 미)', '1979, 1991, 2003, 2015, 2027', 'Warm-hearted, creative, empathetic peacemaker', 'Sheep · Rabbit · Pig'],
+            ['Monkey (원숭이띠 · 신)', '1980, 1992, 2004, 2016, 2028', 'Clever, playful, adaptable problem-solver', 'Monkey · Rat · Dragon'],
+            ['Rooster (닭띠 · 유)', '1981, 1993, 2005, 2017, 2029', 'Punctual, candid, detail-focused perfectionist', 'Rooster · Ox · Snake'],
+            ['Dog (개띠 · 술)', '1982, 1994, 2006, 2018, 2030', 'Sincere, protective, steadfast, fair-minded', 'Dog · Tiger · Horse'],
+            ['Pig (돼지띠 · 해)', '1983, 1995, 2007, 2019, 2031', 'Generous, warm, sincere, abundance-linked', 'Pig · Rabbit · Sheep'],
+          ],
+        },
+      },
+      {
+        id: 'sixty-year-color-cycle',
+        heading: '3. The 60-Year Color Cycle & Why 2026 Is the "Red Horse"',
+        paragraphs: [
+          'If you follow Korean New Year news, headlines rarely say simply "Year of the Horse." They say "2026 Byeong-o-nyeon: Year of the Red Horse" (병오년 붉은 말의 해). That color prefix comes from merging the 12 zodiac animals (Earthly Branches) with the 10 Heavenly Stems anchored to the Five Elements—Wood (Blue/Green, 청), Fire (Red, 적), Earth (Yellow, 황), Metal (White, 백), and Water (Black, 흑).',
+          'Because 10 stems and 12 animals advance together one step each year, it takes exactly 60 years (the least common multiple of 10 and 12) for the exact stem-and-animal combination to return. When a Korean reaches their 60th birthday (actually 61 in traditional counting, 60 completed international years), families celebrate Hwangap (환갑)—literally "returning to the starting stem and branch"—marking a full completed circle of life.',
+          'Inside the current stretch of the decade, 2024 was Gap-jin (Blue Dragon), 2025 was Eul-sa (Blue Snake), 2026 enters Byeong-o (Red Horse), and 2027 follows as Jeong-mi (Red Sheep)—linking energetic Fire-element vibrancy with each animal’s traits.',
+        ],
+      },
+      {
+        id: 'compatibility-samhap-and-samjae',
+        heading: '4. Compatibility Myths: Four-Year Age Gaps, Ddi-donggap & Samjae',
+        paragraphs: [
+          'Korean elders and matchmaking columns love tossing around three zodiac terms that sound mysterious until you see their simple wheel geometry:',
+        ],
+        bullets: [
+          'Samhap (삼합 · Four-Year Harmony Triads): Animals spaced four years apart on the 12-year wheel—like Tiger, Horse, and Dog, or Rat, Dragon, and Monkey—share complementary elemental energy. That geometric spacing inspired the famous old Korean saying, "Don’t even look at compatibility if you have a four-year age gap" (4살 차이는 궁합도 안 본다)!',
+          'Ddi-donggap (띠동갑 · 12-Year Same-Animal Bond): Two people born exactly 12, 24, or 36 years apart share the same ddi—often forming warm mentor-mentee rapport across generations.',
+          'Sangchung (상충 · Six-Year Opposites): Animals directly opposite each other across the 12-animal wheel (six years apart, like Rat and Horse or Rabbit and Rooster) traditionally represent contrasting instincts that require extra communication.',
+          'Samjae (삼재 · Three Cautious Years): Every 12 years, each Samhap triad passes through a three-year period traditionally regarded as a time to slow down major risks and look after health before stepping into a fresh cycle.',
+        ],
+        callout: {
+          tone: 'note',
+          title: 'How Modern Koreans Actually Treat Zodiac Rules',
+          body: 'Don’t worry if your birth year clashes on paper with a partner, friend, or favorite idol! Modern Korean astrologers remind people that Year-Pillar animals represent only one-eighth of a full Saju chart—real compatibility weighs your Day Master Five Element, month season, and personal communication habits far more than a simple animal proverb.',
+        },
+      },
+      {
+        id: 'ddi-in-kpop-and-daily-korea',
+        heading: '5. How Zodiac Lore Shows Up in K-Pop & Everyday Seoul',
+        paragraphs: [
+          'In everyday South Korea, zodiac animals remain affectionate shorthand. Friends joke proudly about belonging to the "Golden Pig" cohort (2007, celebrated for lucky abundance) or "Black Dragon" cohort (2012), while bakeries, stationery chains, and K-Beauty brands release limited-edition animal motifs every January ahead of Seollal.',
+          'K-Pop fandoms extend that animal lore right onto stage intros and merchandise. Same-year idol cliques ("95z" Pigs like BTS’s Jimin and V, "97z" Oxen including Jungkook, or "00z" Dragons like Stray Kids’ Hyunjin, HAN, Felix, and Seungmin) routinely sport official plush mascots or signature animal emojis in fan chats—making Korean zodiac literacy an unexpectedly fun lens for following group dynamics.',
+        ],
+      },
+    ],
+    companionCta: {
+      eyebrow: 'K-Saju × MBTI Compatibility',
+      title: 'Check Your Saju, MBTI & Zodiac Chemistry With 44 K-Pop Idols',
+      description:
+        'See how your birth year’s Korean Zodiac animal, Day Master Five Element, and MBTI type match up across BTS, BLACKPINK, Stray Kids, TWICE, ENHYPEN, aespa, and LE SSERAFIM.',
+      href: '/chemistry',
+      buttonLabel: 'Open Idol Chemistry Lab',
+    },
+    relatedQuizSlugs: ['korean-culture-iq', 'which-bts-member-is-your-soulmate'],
+    sources: [
+      {
+        label: 'Encyclopedia of Korean Culture (Academy of Korean Studies)',
+        detail: 'Traditional Sibijisin (12 Earthly Branches), Yukship Gapja 60-year cycle, and Hwangap customs.',
+        url: 'https://encykorea.aks.ac.kr',
+      },
+      {
+        label: 'National Folk Museum of Korea',
+        detail: 'Korean New Year (Seollal) zodiac traditions, Samhap compatibility lore, and Samjae folk beliefs.',
+        url: 'https://www.nfm.go.kr/english/index.do',
+      },
+    ],
+  },
+  {
+    slug: 'pure-korean-names-sun-urimal-meaning-guide',
+    locale: 'en',
+    title:
+      'Pure Korean Names (Sun-urimal / 순우리말) Explained: 16 Beautiful Native Names Without Hanja',
+    subtitle:
+      'Discover how native Hangul names with zero Chinese characters became modern Korean favorites—from timeless classics like Ha-neul and Seul-gi to poetic contemporary picks like Da-on and Ga-on.',
+    description:
+      'Explore 16 authentic pure Korean (sun-urimal) names without Hanja, their literal Hangul meanings, surname pairing tips, and pronunciation guide.',
+    category: 'Names & Saju',
+    tags: ['Korean Names', 'Pure Korean', 'Hangul', 'Language'],
+    keywords: [
+      'pure Korean names sun-urimal',
+      'Korean names without Hanja',
+      'native Korean name meanings',
+      'beautiful Hangul names',
+      'Korean nature names',
+    ],
+    publishedAt: '2026-11-23',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '🌸',
+    accentBg: 'bg-rose-50',
+    featured: false,
+    keyTakeaways: [
+      'Pure Korean names ("순우리말 이름", sun-urimal ireum) come strictly from native Korean vocabulary—carrying zero Sino-Korean Hanja characters on official birth registries.',
+      'Even without Hanja, pure Korean given names still attach to traditional family surnames (like Kim, Lee, or Park), leaving the Hanja field blank only on the given-name section.',
+      'Nature motifs—sky (Ha-neul), ocean (Ba-da), star (Byeol), spring (Bom), and morning dew (Yi-seul)—remain the most enduring native names across real school rosters and dramas.',
+      'Distinguish established given names from poetic words used mostly for bakeries, novels, or pets so your chosen Korean name sounds natural to native ears.',
+    ],
+    intro: [
+      'Roughly seven or eight out of ten South Koreans can write their given name in classical Hanja characters—each syllable drawn from Sino-Korean roots meaning wisdom, brightness, or grace. Yet listen closely to Korean classrooms, sports broadcasts, and idol profiles, and you steadily encounter names that need no Chinese character dictionary at all: Ha-neul ("sky"), Ba-da ("ocean"), Seul-gi ("wisdom"), Bo-ra ("purple"), or single-syllable Bom ("spring").',
+      'Known as "sun-urimal" (순우리말, literally "pure our language"), these native Korean names grew steadily from the 1970s Hangul pride movement into mainstream modern choices beloved for their lyrical warmth and immediate clarity in spoken Korean.',
+      'Whether you are curious about famous Korean names you hear in K-Pop and K-Dramas or picking an authentic Hangul name for yourself, understanding how pure Korean names work helps you spot real gems versus awkward inventions.',
+    ],
+    sections: [
+      {
+        id: 'what-is-sun-urimal-name',
+        heading: '1. What Makes a Pure Korean (Sun-urimal) Name Different?',
+        paragraphs: [
+          'Korean vocabulary resembles English in having two broad layers: native Korean words (like "물" mul for water or "해" hae for sun) and Sino-Korean words built from classical Chinese roots (like "수" 水 or "일" 日). Traditional Korean naming relied heavily on Sino-Korean Hanja so clan genealogies could track generational syllables and stroke counts.',
+          'Choosing a sun-urimal given name flips that tradition gently. On South Korea’s Electronic Family Relations Registry, parents enter the family surname with its usual Hanja (such as 金 for Kim or 李 for Lee) and register the given name strictly in Hangul with an empty Hanja field. Rather than translating abstract scholarly virtues, native names evoke sensory images Koreans feel instantaneously the moment they hear the word.',
+        ],
+      },
+      {
+        id: 'sixteen-authentic-pure-korean-names',
+        heading: '2. 16 Authentic Pure Korean Given Names & Real Meanings',
+        paragraphs: [
+          'Every entry below reflects genuine native Korean vocabulary actively used as personal names across South Korea—never literal translations of English words.',
+        ],
+        table: {
+          caption: '16 Pure Korean (Sun-urimal) Names: Hangul, Literal Meaning & Spoken Guide',
+          headers: ['Hangul (Romanized)', 'Native Korean Root Meaning', 'Common Vibe / Usage', 'Pronunciation Cue'],
+          rows: [
+            ['하늘 (Ha-neul)', 'Sky / Heavens', 'Unisex · Timeless classic', '"Ha-neul" (flat tight "eu")'],
+            ['바다 (Ba-da)', 'Ocean / Wide Sea', 'Mostly feminine / unisex', '"Bah-dah" (even cadence)'],
+            ['슬기 (Seul-gi)', 'Wisdom & resourcefulness', 'Feminine · Classic since 1980s', '"Seul-gee" (hard "g")'],
+            ['보라 (Bo-ra)', 'Purple / Violet hue', 'Feminine · Warm literary classic', '"Boh-rah"'],
+            ['하루 (Ha-ru)', 'A single precious day', 'Unisex · Gentle modern favorite', '"Ha-roo"'],
+            ['가온 (Ga-on)', 'The center / balanced heart of things', 'Unisex · Popular modern name', '"Gah-ohn"'],
+            ['다온 (Da-on)', 'All good things coming toward you', 'Unisex · Beloved 2010s–2020s pick', '"Dah-ohn"'],
+            ['봄 (Bom)', 'Springtime', 'Feminine · Crisp 1-syllable charm', '"Bohm" (also Bom-i with suffix)'],
+            ['별 (Byeol)', 'Bright star', 'Feminine / affectionate nickname', '"Byuhl"'],
+            ['나래 (Na-rae)', 'Wing (poetic literary form)', 'Feminine · Graceful sound', '"Nah-reh"'],
+            ['아름 (A-reum)', 'Beauty (from "areumdapda")', 'Feminine · Warm classic', '"Ah-reum"'],
+            ['다솜 (Da-som)', 'Deep affection / love (archaic root)', 'Feminine · Poetic heritage', '"Dah-sohm"'],
+            ['노을 (No-eul)', 'Evening sunset glow in the sky', 'Unisex · Lyric & artistic', '"Noh-eul"'],
+            ['마루 (Ma-ru)', 'Mountain crest / highest ridge', 'Masculine / unisex · Strong tone', '"Mah-roo"'],
+            ['소라 (So-ra)', 'Spiral conch shell by the sea', 'Feminine · Nostalgic classic', '"Soh-rah"'],
+            ['이슬 (Yi-seul)', 'Clear morning dew', 'Feminine · Pure imagery', '"Ee-seul" (soft initial "y")'],
+          ],
+        },
+      },
+      {
+        id: 'everyday-names-vs-poetic-nouns',
+        heading: '3. Everyday Human Names vs. Poetic Nouns for Cafes & Pets',
+        paragraphs: [
+          'Not every pretty pure Korean dictionary word sounds right as a person’s legal name. Overseas learners browsing aesthetic word lists often fall in love with words like "윤슬" (yunseul — sunlight sparkling on ripples), "미리내" (mirinae — Milky Way), "꽃비" (kkotbi — flower-petal rain), or "아라" (ara — archaic poetic word for sea).',
+        ],
+        subsections: [
+          {
+            heading: 'How Native Speakers Hear Poetic Words',
+            paragraphs: [
+              'While words like Yunseul or Ara occasionally appear as modern baby names or artist stage names, ultra-figurative compound nouns such as Kkotbi ("flower rain"), Nabi ("butterfly"), or Bori ("barley") usually strike Korean ears as boutique brand names, book titles, or beloved pet names rather than everyday office colleagues.',
+              'Two-syllable native words ending cleanly in a vowel or soft consonant—such as Ha-neul, Ga-on, Da-on, Ha-ru, Seul-gi, or Ma-ru—integrate seamlessly with Korean family surnames and conversational suffixes ("Ha-neul-ssi", "Ha-ru-ya") without sounding theatrical.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'pairing-surnames-and-legal-rules',
+        heading: '4. Pairing Surnames, Legal Limits & Acoustic Balance',
+        paragraphs: [
+          'Because roughly half of South Koreans carry single-syllable surnames like Kim (김), Lee (이), Park (박), Choi (최), or Jung (정), pure Korean given names pair effortlessly into the classic three-syllable rhythm: Kim Ha-neul (김하늘), Park Bo-ra (박보라), Kang Seul-gi (강슬기), or Lee Ha-ru (이하루).',
+          'Under South Korean birth registration rules established by the Supreme Court in 1993, newly registered given names are limited to five syllables total (excluding the surname)—though nearly every pure Korean given name sticks to two syllables (or occasionally one syllable like Bom or Byeol) for balanced everyday pronunciation.',
+        ],
+        callout: {
+          tone: 'tip',
+          title: 'Watch Out for Unintended Surname + Given Name Homophones',
+          body: 'Always read the surname and pure Korean given name aloud together before committing! For example, pairing the surname "고" (Go) with a cute word or pairing "신" (Shin) with certain nouns can accidentally form everyday words like "고구마" or "신발". Testing the full three-syllable flow aloud prevents awkward puns.',
+        },
+      },
+      {
+        id: 'pure-korean-names-in-pop-culture',
+        heading: '5. Pure Korean Names Across K-Pop, K-Dramas & Personal Study',
+        paragraphs: [
+          'Pop culture helped reintroduce sun-urimal names worldwide. Red Velvet’s Seulgi (Kang Seul-gi), S.E.S. trailblazer Bada (and choreographer Bada Lee), actress Han Ga-in and Kim Ha-neul characters across beloved dramas, plus stage names like IU collaborator Ha-neul or K-Pop mascot themes keep native Hangul names bright in global playlists.',
+          'If you want a Korean name for language class, travel reservations, or creative profiles, deciding between a classic Hanja name and a pure Korean name is strictly a question of personality: Hanja shines when you want historical character symbolism and a traditional red ink seal, while pure Korean shines when you love crisp nature imagery that every Korean speaker recognizes in half a heartbeat.',
+        ],
+        bullets: [
+          'Check Hangul sound harmony: Native names rich in open vowels (아, 오, 우) feel bright and approachable, while soft final consonants (ㄴ, ㄹ, ㅁ) add calm warmth.',
+          'Keep one consistent Romanization: Write "Ha-neul" or "Haneul" consistently on class badges and travel bookings so friends recognize your name instantly.',
+        ],
+      },
+    ],
+    companionCta: {
+      eyebrow: 'Interactive Naming Studio',
+      title: 'Generate Your Authentic Korean Name With Audio & Hanja Seal',
+      description:
+        'Test how traditional Korean surnames, Five Elements, and authentic two-syllable names pair with your birthday—and hear native Korean speech pronunciation aloud.',
+      href: '/korean-name',
+      buttonLabel: 'Open Korean Name Studio',
+    },
+    relatedQuizSlugs: ['korean-culture-iq'],
+    sources: [
+      {
+        label: 'National Institute of Korean Language (NIKL)',
+        detail: 'Standard native Korean vocabulary definitions (sun-urimal) and Hangul pronunciation rules.',
+        url: 'https://www.korean.go.kr/front_eng/main.do',
+      },
+      {
+        label: 'Supreme Court of Korea — Electronic Family Relations Registry',
+        detail: 'Rules on Hangul-only birth registration and five-syllable given-name length limits.',
+        url: 'https://efamily.scourt.go.kr',
+      },
+    ],
+  },
 ];

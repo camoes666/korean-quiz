@@ -24,12 +24,12 @@ const BANNED_PHRASES = [
 ];
 
 describe('editorial articles', () => {
-  it('provides 16 unique long-form guides evenly distributed across 4 categories', () => {
+  it('provides 24 unique long-form guides evenly distributed across 4 categories', () => {
     const articles = getAllArticles();
-    expect(articles).toHaveLength(16);
+    expect(articles).toHaveLength(24);
 
     const slugs = new Set(articles.map((a) => a.slug));
-    expect(slugs.size).toBe(16);
+    expect(slugs.size).toBe(24);
 
     const byCategory = articles.reduce<Record<string, number>>((acc, a) => {
       acc[a.category] = (acc[a.category] || 0) + 1;
@@ -37,10 +37,10 @@ describe('editorial articles', () => {
     }, {});
 
     expect(byCategory).toEqual({
-      'Korea Travel': 4,
-      'Names & Saju': 4,
-      'Food & Culture': 4,
-      'K-Pop & K-Drama': 4,
+      'Korea Travel': 6,
+      'Names & Saju': 6,
+      'Food & Culture': 6,
+      'K-Pop & K-Drama': 6,
     });
   });
 

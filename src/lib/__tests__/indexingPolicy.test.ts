@@ -95,13 +95,13 @@ describe('indexingPolicy', () => {
     expect(quizEs.alternates?.languages).toBeUndefined();
   });
 
-  it('produces a focused 52-URL sitemap with deterministic dates and no noindex URLs', () => {
+  it('produces a focused 60-URL sitemap with deterministic dates and no noindex URLs', () => {
     const entriesA = sitemap();
     const entriesB = sitemap();
     const urls = entriesA.map((e) => e.url);
 
-    expect(entriesA).toHaveLength(52);
-    expect(new Set(urls).size).toBe(52);
+    expect(entriesA).toHaveLength(60);
+    expect(new Set(urls).size).toBe(60);
 
     // Deterministic lastModified across calls
     expect(
@@ -134,7 +134,7 @@ describe('indexingPolicy', () => {
     expect(urls).toContain(`${BASE_URL}/privacy`);
     expect(urls).toContain(`${BASE_URL}/terms`);
 
-    // All 16 editorial articles, 18 quizzes, and 8 guides
+    // All 24 editorial articles, 18 quizzes, and 8 guides
     for (const a of getAllArticles()) {
       expect(urls).toContain(`${BASE_URL}/articles/${a.slug}`);
     }

@@ -518,4 +518,278 @@ export const FOOD_CULTURE_ARTICLES: EditorialArticle[] = [
       },
     ],
   },
+  {
+    slug: 'korean-convenience-store-food-guide-cu-gs25',
+    locale: 'en',
+    title:
+      'Korean Convenience Store (CU, GS25 & 7-Eleven) Food Guide: Iced Drinks, Gimbap Tricks & Han River Ramyeon',
+    subtitle:
+      'How Korea’s 24-hour convenience stores double as late-night kitchens—including the 1-2-3 triangle gimbap peel, 1+1 discount rules, Han River induction ramen machines, and viral idol combos.',
+    description:
+      'Master Korean convenience stores (CU, GS25, 7-Eleven, Emart24): 1+1 promo rules, opening triangle gimbap, pouch iced drinks, Han River ramen machines, and etiquette.',
+    category: 'Food & Culture',
+    tags: ['Convenience Store', 'Korean Food', 'Budget Travel', 'Seoul'],
+    keywords: [
+      'Korean convenience store food guide',
+      'CU GS25 7-Eleven Korea',
+      'how to open triangle gimbap',
+      'Han River ramen machine guide',
+      'Korean convenience store 1+1 rule',
+    ],
+    publishedAt: '2026-11-19',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '🏪',
+    accentBg: 'bg-sky-50',
+    featured: false,
+    keyTakeaways: [
+      'South Korea’s four major chains—CU, GS25, 7-Eleven, and Emart24—pack fresh daily lunchboxes, hot water dispensers, microwaves, and T-Money kiosks on nearly every city block.',
+      'For "1+1" (buy one get one) or "2+1" tags, you MUST physically bring all two or three items up to the cash register; leaving the free extra behind still charges regular price.',
+      'Open triangle gimbap (samgak gimbap) strictly in 1-2-3 numbered order so crisp seaweed wraps smoothly around seasoned rice without tearing.',
+      'Convenience stores along Hangang Parks (Yeouido, Banpo, Nodeul Island) stock foil ramen bowls made specifically for outdoor induction cookers—never put metallic foil bowls inside a microwave.',
+    ],
+    intro: [
+      'In Seoul, you are rarely more than a two-minute walk from glowing blue, purple, green, or gold convenience-store signage. Known locally as "pyeonuijeom" (편의점), South Korea’s 24-hour stores operate less like basic corner gas marts and more like ultra-efficient neighborhood pantries, snack bars, ATM booths, and picnic prep stations rolled into one.',
+      'Whether you arrive late after an international flight into Incheon, need an affordable ₩4,000 breakfast before riding the subway, or plan to join locals cooking bubbling noodles along the Han River at dusk, learning a handful of local pyeonuijeom habits unlocks half the fun of Korean street culture.',
+      'Here is how the major chains compare, what everyday items realistically cost, how to unwrap tricky packaging cleanly, and which viral idol combos are actually worth ordering.',
+    ],
+    sections: [
+      {
+        id: 'chains-and-promo-rules',
+        heading: '1. Korea’s Big Four Chains & How "1+1" / "2+1" Tags Actually Work',
+        paragraphs: [
+          'Four nationwide chains dominate Korean blocks: CU (purple-and-green, strong bakery/dessert collaborations and iconic Yonsei Cream Bread), GS25 (sky-blue, famous for rich "Youus" house-brand meals and viral idol snack tie-ins), 7-Eleven (ubiquitous across Jongno and tourism hubs), and Emart24 (deep golden-yellow, stocked with popular "No Brand" budget snacks).',
+          'Because stores refresh refrigerator shelves multiple times a day via cold-chain trucks, short-dated bento meals and sandwiches taste remarkably fresh—even at 2:00 AM. Look closely at shelf price tags before checking out: yellow or red "1+1" and "2+1" stickers signal promotional bundles that rotate on the first day of every month.',
+        ],
+        callout: {
+          tone: 'tip',
+          title: 'Do Not Leave the Free "1+1" Item on the Shelf',
+          body: 'Unlike Western supermarkets that automatically discount a single bottle by 50%, Korean convenience stores require you to carry BOTH items (for 1+1) or ALL THREE items (for 2+1) up to the register—the POS system deducts the free unit only when all barcodes scan together. Watch for "교차 가능" (mix-and-match allowed) tags if you want different flavors!',
+        },
+      },
+      {
+        id: 'staples-and-prices-table',
+        heading: '2. Essential Korean Convenience Store Staples & Realistic Prices',
+        paragraphs: [
+          'Eating well inside CU or GS25 costs a fraction of sit-down dining, making these shelves a lifesaver between sightseeing stops or late after concerts.',
+        ],
+        table: {
+          caption: 'Top Korean Convenience Store Items: Realistic KRW Prices & Prep Tips',
+          headers: ['Item (Korean Name)', 'Typical KRW Price', 'How to Prepare / Serve', 'Visitor Favorite Pick'],
+          rows: [
+            ['Samgak Gimbap (삼각김밥)', '₩1,200 – ₩1,800', 'Peel 1-2-3 wrapper; eat cold or microwave 15s', 'Tuna Mayo (참치마요) or Jeonju Bibim'],
+            ['Pouch Drink + Ice Cup (파우치 음료)', '₩1,800 – ₩2,800 total', 'Grab sealed ice cup from freezer + pour foil pouch', 'Iced Americano, Peach Iced Tea, Ade'],
+            ['Dosirak Meal Box (도시락)', '₩4,900 – ₩6,500', 'Remove lid/sauce packet; microwave 1m 30s – 2m', 'Pork Bulgogi or Baek Jong-won series'],
+            ['Cup / Foil Pack Ramyeon (라면)', '₩1,200 – ₩4,500', 'Store hot water tap OR Han River foil induction', 'Shin Ramyun, Jin Mild, Buldak Cream Carbo'],
+            ['Binggrae Banana Milk (바나나맛 우유)', '₩1,700 – ₩1,800', 'Peel foil cap & sip chilled with thin straw', 'Original yellow bottle (plus Strawberry/Melon)'],
+            ['Cup Tteokbokki / Crispy Chicken', '₩3,000 – ₩4,500', 'Add sauce + splash water; microwave ~2m', 'Giant Tteokbokki + mozzarella string cheese'],
+            ['Winter Hoppang / Sweet Potato', '₩1,500 – ₩2,500', 'Ask cashier or grab warm from heated glass case', 'Red bean or pizza hoppang; baked goguma'],
+          ],
+        },
+      },
+      {
+        id: 'triangle-gimbap-and-pouch-drinks',
+        heading: '3. Mastering Triangle Gimbap (1-2-3 Peel) & Pouch Iced Drinks',
+        paragraphs: [
+          'Two iconic convenience-store rituals trip up nearly every first-timer until someone demonstrates them once. First is triangle gimbap (samgak gimbap)—a plump rice pyramid kept separated from toasted gim seaweed by a thin plastic sleeve so the nori stays crisp rather than soggy.',
+          'Look at the bright number "1" printed at the top tip of the triangle. Pull that tab straight down the back seam all the way around the bottom crease without unwrapping the sides yet. Next, hold the top rice triangle firmly with one hand while sliding tab "2" gently outward to the left, then slide tab "3" outward to the right. The plastic slips cleanly away, leaving a crisp, unbroken seaweed triangle in your palm.',
+          'Second is Korea’s beloved iced pouch corner. Beside chilled juice fridges sits a sliding-door upright freezer stacked with plastic cups filled with solid clear ice cubes (in Regular and large "Venti" sizes) paired with colorful liquid drink pouches—from hazelnut coffee and sweet black Americano to green-grape ade and pomegranate iced tea. Pay for both the pouch and matching cup size at the counter, peel the cup’s foil seal, tear open the pouch spout, and pour!',
+        ],
+      },
+      {
+        id: 'han-river-ramyeon-and-combos',
+        heading: '4. Han River Ramyeon Machines & Viral Idol Snack Combos',
+        paragraphs: [
+          'One unforgettable Seoul evening tradition happens inside CU, GS25, and 7-Eleven kiosks built along Hangang River parks—including Yeouido, Banpo, Ttukseom, and Nodeul Island. At the register, purchase a "Han River Ramyeon" combo (typically ₩3,500–₩4,500, bundling a noodle packet, seasoning, disposable chopsticks, and a specially coated aluminum-foil paper bowl).',
+          'Carry your bowl outside to the row of digital induction stations along the park terrace. Pour noodles and seasoning flakes inside the dry foil bowl, scan its barcode (or select standard vs. cheese soup buttons depending on the machine), and set the bowl squarely atop the heating ring. The machine dispenses the exact measured hot water automatically and boils for roughly four minutes—watch closely so broth doesn’t boil over before topping it with raw egg or sliced cheese!',
+          'Inside city stores, fans also love assembling three classic convenience-store mashups:',
+        ],
+        bullets: [
+          '"Mark’s Meal" (마크정식 — GOT7 fan-born classic): Combine Giant Tteokbokki with instant Spaghetti cup noodles, chopped convenience-store sausage, and shredded mozzarella cheese for a creamy, savory-spicy feast.',
+          'Buldak Taming Combo: Pair spicy Carbonara or Original Buldak noodles with a ₩1,500 tuna-mayo triangle gimbap, two sticks of string cheese, and a carton of Binggrae Banana Milk on the side.',
+          '"Ashotchu" (아샷추 — Peach Iced Tea + Espresso Shot): Buy one Lipton/peach iced tea pouch plus one chilled espresso shot pouch and pour both into a large Venti ice cup for a crisp, sweet caffeine kick.',
+        ],
+      },
+      {
+        id: 'etiquette-trash-and-tmoney',
+        heading: '5. Store Seating, Trash Sorting & T-Money Services',
+        paragraphs: [
+          'Not every neighborhood store allows cooking ramyeon inside—compact city branches sometimes restrict hot water to cup noodles only or lack seating counters during late hours. Check for small window bar stools or outdoor plastic tables before peeling lids open, and note that under South Korean convenience-store regulations, drinking alcohol is permitted only at clearly marked exterior tables or designated store zones rather than walking down sidewalks.',
+          'Equally handy: practically every CU, GS25, and 7-Eleven sells physical T-Money transit cards (~₩3,000–₩5,000 empty) and reloads cash onto existing T-Money cards right at the cashier counter in seconds. Simply lay your card and KRW bills on the small counter tray and say "Chung-jeon haejuseyo" (충전 해주세요 — "Please top up").',
+        ],
+        callout: {
+          tone: 'etiquette',
+          title: 'Always Drain Leftover Broth & Ice Before Trashing',
+          body: 'Korean convenience stores sort waste strictly into liquids, plastics, cans, and general wrappers. Never toss a half-full ice cup or noodle soup bowl straight into a dry trash bag—pour leftover ice and broth down the small metal strainer sink built into the bin station first, rinse lightly if needed, and stack empty plastic cups neatly.',
+        },
+      },
+    ],
+    companionCta: {
+      eyebrow: 'Korean Food Personality',
+      title: 'Which Korean Comfort Food Matches Your Vibe?',
+      description:
+        'Find out whether your personality matches Spicy Tteokbokki, Savory Samgyeopsal, Warm Kimchi Jjigae, or Crispy Bindaetteok in under two minutes.',
+      href: '/quiz/which-korean-food-are-you',
+      buttonLabel: 'Take the Korean Food Quiz',
+    },
+    relatedQuizSlugs: ['which-korean-food-are-you', 'korean-spicy-food'],
+    sources: [
+      {
+        label: 'Visit Korea (Korea Tourism Organization) — Convenience Store Guide',
+        detail: 'Overview of Korean convenience store food prep, T-Money top-up services, and 1+1 discounts.',
+        url: 'https://english.visitkorea.or.kr',
+      },
+      {
+        label: 'Seoul Metropolitan Government — Hangang Park Visitor Facilities',
+        detail: 'Guidelines on riverside park convenience stores, waste sorting, and picnic zones.',
+        url: 'https://english.seoul.go.kr',
+      },
+    ],
+  },
+  {
+    slug: 'korean-cafe-culture-iced-americano-ordering-guide',
+    locale: 'en',
+    title:
+      'Korean Cafe Culture Guide: Iced Americano ("Eoljuka"), Kiosk Ordering, Desserts & Seoul Neighborhoods',
+    subtitle:
+      'Why South Korea runs on iced coffee in sub-zero winters, how to decode Korean specialty cafe menus, what to press on touchscreen kiosks, and which Seoul neighborhoods define modern cafe design.',
+    description:
+      'Navigate Korean cafe culture like a local: why Koreans love Iced Americano ("eoljuka"), menu translations, kiosk dine-in rules, Seoul cafe districts, and 1-drink etiquette.',
+    category: 'Food & Culture',
+    tags: ['Korean Cafes', 'Coffee Culture', 'Seoul', 'Etiquette'],
+    keywords: [
+      'Korean cafe culture guide',
+      'why Koreans drink iced americano winter',
+      'eoljuka meaning Korea',
+      'Korean cafe ordering phrases',
+      'best cafe neighborhoods Seoul',
+    ],
+    publishedAt: '2026-11-22',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '🧋',
+    accentBg: 'bg-amber-50',
+    featured: false,
+    keyTakeaways: [
+      'Seoul supports two distinct cafe tiers side by side: mega-value takeout chains (Mega Coffee, Compose, Paik’s) selling giant Iced Americanos for ₩1,500–₩2,000, and architectural dessert cafes averaging ₩6,000–₩8,500 per cup.',
+      'Koreans joke proudly about "Eoljuka" (얼죽아 — freezing to death yet drinking Iced Americano) because crisp chilled coffee cuts post-lunch heaviness fast.',
+      'At ordering kiosks, always distinguish between "매장" (Dine-in, served in reusable glass or ceramic mugs) and "포장" (Takeout in disposable cups).',
+      'Respect the "1인 1메뉴" (one drink per person) rule inside seated cafes and clear your own tray to the Return Zone before leaving.',
+    ],
+    intro: [
+      'Take ten steps down almost any side street in Seoul—from corporate Yeouido office towers to narrow residential hills in Mapo—and you pass three coffee shops before reaching the corner crosswalk. With tens of thousands of cafes packed across South Korea, coffee spaces function far beyond morning caffeine stops: they serve as living rooms for cramped apartment dwellers, quiet study halls for university students, meeting spots for friends, and curated architectural galleries.',
+      'Yet stepping inside your first Korean cafe brings subtle surprises. Touchscreen ordering kiosks rarely pause for small talk, drink names mix English loanwords with playful Korean acronyms, and customers wearing heavy winter puffers happily clutch frost-rimmed cups of Iced Americano even during January snowstorms.',
+      'Decoding Korean cafe slang, menu favorites, neighborhood personalities, and unspoken table manners lets you order comfortably in seconds.',
+    ],
+    sections: [
+      {
+        id: 'eoljuka-and-two-tier-cafes',
+        heading: '1. The "Eoljuka" (얼죽아) Phenomenon & Two-Tier Cafe Scene',
+        paragraphs: [
+          'Perhaps the single funniest Korean coffee idiom for visitors is "Eoljuka" (얼죽아)—short for "얼어 죽어도 아이스 아메리카노" ("Iced Americano even if I freeze to death"). Walk outside Gangnam Station in minus-five-degree winter wind and half of Seoul’s office workers still carry tall iced coffees rather than hot mugs. Locals favor Iced Americano (nicknamed simply "Ah-Ah", 아아) because it goes down fast during tight lunch breaks, refreshes palates after garlicky stews or barbecue, and never burns your tongue before jumping back onto a warm heated subway car.',
+          'Behind that obsession sits a dramatic two-tier industry. On one side stand hyper-efficient budget takeout chains—Mega MGC Coffee, Compose Coffee, and Paik’s Coffee—serving oversized 24-ounce Iced Americanos for ₩1,500 to ₩2,000 outside practically every subway exit. On the opposite side thrive multi-story design cafes and concept bakeries charging ₩6,000 to ₩8,500 per signature latte because you are also paying for sculptural interiors, natural sunlight, plush seating, and hours of relaxed conversation.',
+        ],
+      },
+      {
+        id: 'korean-cafe-menu-table',
+        heading: '2. Decoding a Korean Cafe Menu (Drinks & Bakery Classics)',
+        paragraphs: [
+          'Even when menus include English subtitles, several Korean cafe signatures don’t translate literally without context. Use the guide below to order with confidence.',
+        ],
+        table: {
+          caption: 'Korean Cafe Menu Essentials: Hangul, Flavor Profile & Realistic Prices',
+          headers: ['Menu Item (Hangul)', 'What It Actually Is', 'Typical KRW Price'],
+          rows: [
+            ['Iced Americano / "Ah-Ah" (아이스 아메리카노)', 'Double espresso over cold water & ice (ask "yeonhage" for lighter roast)', '₩1,500 (budget) – ₩6,000 (indie)'],
+            ['Einspanner (아인슈페너)', 'Rich espresso or latte topped with thick chilled whipped sweet cream', '₩5,500 – ₩7,000'],
+            ['Ashotchu (아샷추)', 'Sweet iced peach tea topped with a crisp espresso shot ("ah-shot-chu")', '₩3,000 – ₩5,000'],
+            ['Misugaru / Grain Latte (미숫가루 라떼)', 'Nutty roasted multi-grain powder shaken into sweet chilled milk', '₩4,500 – ₩6,000'],
+            ['Sogeum-ppang / Salt Bread (소금빵)', 'Crispy-bottomed butter roll baked around salted butter and flaky sea salt', '₩3,000 – ₩4,500'],
+            ['Bingsu (빙수 · 인절미 / 망고)', 'Snow-fine shaved milk ice topped with roasted soybean powder, mochi, or mango', '₩11,000 – ₩18,000 (shareable)'],
+            ['Croffle & Yakgwa Desserts (크로플 · 약과)', 'Croissant dough waffle-pressed crisp, or honey-glazed traditional pastry cookies', '₩4,000 – ₩6,000'],
+          ],
+        },
+      },
+      {
+        id: 'kiosk-ordering-and-phrases',
+        heading: '3. Kiosk Ordering, Vibrating Pagers & Essential Korean Phrases',
+        paragraphs: [
+          'At budget chains and busy city bakeries, staff often point customers toward a tall touchscreen kiosk near the doorway (switchable via an English flag icon in the corner). Pay careful attention to the very first screen prompt: "매장" (Maejang — Eating inside) versus "포장" (Pojang — Takeout). Because South Korea strictly regulates single-use plastics for seated patrons, selecting Dine-in serves your iced drink in a reusable glass or ceramic cup; never select Dine-in if you intend to walk out the door five minutes later.',
+          'Once paid, check your paper receipt for your order number—or, at larger cafes, pick up the palm-sized vibrating disc pager ("진동벨", jindongbel) handed to you. When it buzzes and flashes red, carry the buzzer back to the pickup counter to collect your tray.',
+        ],
+        bullets: [
+          '"Aiseu Amerikano han jan juseyo." (아이스 아메리카노 한 잔 주세요) — "One Iced Americano, please."',
+          '"Yeogiseo meokgo galgeyo." (여기서 먹고 갈게요) — "I’ll have it here (dine-in)."',
+          '"Pojang haejuseyo." (포장 해주세요) — "To go, please."',
+          '"Hwajangsil bimilbeonho mwoyeyo?" (화장실 비밀번호 뭐예요?) — "What is the restroom passcode?" (Many cafe receipts print a 4-digit restroom door code right at the bottom!)',
+        ],
+      },
+      {
+        id: 'four-seoul-cafe-districts',
+        heading: '4. Seoul’s Four Distinct Cafe Neighborhoods',
+        paragraphs: [
+          'If you love exploring neighborhoods by aesthetic mood, Seoul separates its cafe culture neatly across four signature districts:',
+        ],
+        subsections: [
+          {
+            heading: 'Seongsu-dong & Yeonnam-dong (Industrial Chic vs. Indie Alleyways)',
+            paragraphs: [
+              'Seongsu-dong—often dubbed Seoul’s Brooklyn—converts former brick shoe factories and mechanic warehouses into soaring sun-drenched roasteries and flagship bakery spaces near Line 2 Seongsu and Ttukseom stations.',
+              'Over in Mapo-gu beside Hongik University Exit 3, Yeonnam-dong (and neighboring Hapjeong/Yongsan alleys) packs cozy two-story pastel townhouses, specialty cheesecake shops, and rotating K-Pop idol birthday cup-sleeve cafes along leafy park paths.',
+            ],
+          },
+          {
+            heading: 'Ikseon-dong / Seochon & Apgujeong Dosan (Traditional Wood vs. Avant-Garde)',
+            paragraphs: [
+              'North of Jongno, century-old hanok courtyards in Ikseon-dong and Seochon wrap glass skylights over curved tiled roofs for tranquil roasted-tea lattes and soufflé pancakes. Across the river in Apgujeong Rodeo and Cheongdam, sculptural dessert galleries like Nudake inside HAUS DOSAN treat pastries like museum installations.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'unspoken-cafe-etiquette',
+        heading: '5. Unspoken Korean Cafe Rules: One Drink Per Person & Tray Returns',
+        paragraphs: [
+          'While Koreans regularly leave laptops, wallets, or phones on a table for two minutes while stepping up to use the restroom—a famous sign of low petty-theft rates—cafes still maintain clear house rules so seats turn over fairly in dense neighborhoods.',
+          'Check counter signs before settling in for a two-hour remote work session: some quiet neighborhood roasteries hang small "No Study Zone" (노스터디존) or "Wi-Fi / Outlet Limit 2 Hours" stickers near power strips to keep tables available for socializing guests.',
+        ],
+        callout: {
+          tone: 'etiquette',
+          title: 'Respect "1인 1메뉴" (One Drink Per Guest) & Return Your Tray',
+          body: 'Virtually every Korean cafe expects "1인 1메뉴" (il-in il-menyu)—one beverage ordered per seated person, rather than two guests sharing one latte while occupying a table. When finished, do not leave cups on the table; carry your tray to the "Return / 반납" counter, pour leftover liquid into the sink drain, and slide dirty glassware onto the rack.',
+        },
+      },
+    ],
+    companionCta: {
+      eyebrow: 'Everyday Culture Test',
+      title: 'Test Your Korean Culture & Daily Etiquette IQ',
+      description:
+        'Challenge yourself on everyday Korean manners, cafe customs, honorifics, and local travel habits across 30 explained questions.',
+      href: '/quiz/korean-culture-iq',
+      buttonLabel: 'Play Korean Culture Quiz',
+    },
+    relatedQuizSlugs: ['korean-culture-iq', 'which-korean-food-are-you'],
+    sources: [
+      {
+        label: 'Visit Seoul — Seoul Cafe & Dessert Districts Guide',
+        detail: 'Neighborhood overviews for Seongsu-dong, Yeonnam-dong, Ikseon-dong, and Apgujeong Rodeo.',
+        url: 'https://english.visitseoul.net',
+      },
+      {
+        label: 'Visit Korea (Korea Tourism Organization) — Korean Coffee & Dessert Culture',
+        detail: 'Overview of Korean cafe menu favorites (bingsu, grain lattes) and visitor ordering norms.',
+        url: 'https://english.visitkorea.or.kr',
+      },
+      {
+        label: 'Ministry of Environment (Republic of Korea)',
+        detail: 'Regulations restricting single-use disposable cups for seated dine-in cafe guests.',
+      },
+    ],
+  },
 ];

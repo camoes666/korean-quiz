@@ -490,4 +490,334 @@ export const KPOP_KDRAMA_ARTICLES: EditorialArticle[] = [
       },
     ],
   },
+  {
+    slug: 'first-time-kpop-concert-survival-guide-seoul-global',
+    locale: 'en',
+    title:
+      'First-Time K-Pop Concert Survival Guide: Ticketing, Lightstick Sync, Freebies & Major Seoul Venues',
+    subtitle:
+      'Everything newcomers need before attending a live K-Pop tour—from Korean fanclub presale verification and passport checks to Bluetooth lightstick pairing, freebie swaps, and Seoul’s top arenas.',
+    description:
+      'Prepare for your first K-Pop concert in Seoul or abroad: fanclub presales, passport rules, KSPO Dome & Gocheok Sky Dome guide, lightstick sync, freebies, and etiquette.',
+    category: 'K-Pop & K-Drama',
+    tags: ['Concerts', 'Lightsticks', 'Seoul Venues', 'Fandom Culture'],
+    keywords: [
+      'first K-Pop concert tips',
+      'K-Pop concert in Seoul guide',
+      'KSPO Dome Gocheok Sky Dome guide',
+      'K-Pop lightstick Bluetooth pairing',
+      'K-Pop concert freebies etiquette',
+    ],
+    publishedAt: '2026-11-20',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '🎤',
+    accentBg: 'bg-purple-50',
+    featured: false,
+    keyTakeaways: [
+      'For Seoul concerts, tickets are tied strictly to the buyer’s legal passport name—always bring your physical passport to wristband verification booths and verify membership presale verification windows early.',
+      'Pair your official lightstick to your exact seat inside the mobile app at your hotel before doors open, and pack fresh spare alkaline AAA batteries.',
+      'Seoul venues enforce much stricter anti-filming policies than North American or European stops—keep phones down when ushers signal and stay inside your assigned standing or seated grid.',
+      'K-Pop concerts run longer than Western arena shows—often 2.5 to 3.5 hours with extended ment talks and multi-song encores—so plan late-night Seoul transit exits ahead of time.',
+    ],
+    intro: [
+      'Stepping into your first K-Pop arena concert feels closer to entering a three-hour festival than watching a typical 90-minute pop set. Outside the gates hours before soundcheck, fans swap handmade photocard freebies in picnic blankets, line up for stadium merch tents, and test synchronized lightsticks glowing in unified colors across entire concourses.',
+      'Yet attending a K-Pop tour—especially if you fly to Seoul for a Korean tour stop—carries rules that trip up newcomers raised on standard North American or European arena shows. Ticket verification checks physical passports down to middle names, wireless lightstick pairing bogs down once 15,000 phones hit the same cell tower, and seating versus camera norms change sharply once you land in Korea.',
+      'Use this step-by-step field manual to navigate ticketing, venue transit, packing prep, and arena etiquette without stress.',
+    ],
+    sections: [
+      {
+        id: 'ticketing-presales-and-id-rules',
+        heading: '1. Fanclub Presales, Global Ticketing & Passport ID Rules',
+        paragraphs: [
+          'For high-demand groups, general public ticket sales often open with almost nothing left after fanclub presales conclude. Before tour dates go live, check whether the artist uses Weverse Membership (HYBE, YG, and partner labels) or FANS / Fanclub portals (JYP and others), and note that presale access requires completing a strict two-step "Presale Verification" window days before tickets actually drop.',
+          'Overseas buyers attending concerts inside South Korea book through English-language global portals—primarily Interpark Global, Melon Ticket Global, or YES24 Global—using international credit cards. Crucially, South Korea enforces strict anti-scalping ID checks at stadium entrances: the name printed on your ticket reservation MUST match your physical passport word for word (avoid typing nicknames or omitting middle names). Digital phone photos of passports are routinely rejected at wristband booths.',
+        ],
+      },
+      {
+        id: 'seoul-venues-table',
+        heading: '2. Major Seoul & Greater-Seoul K-Pop Venues Compared',
+        paragraphs: [
+          'Because Seoul Olympic Main Stadium is undergoing multi-year renovations, major domestic tours concentrate across five key arenas and stadiums across Seoul, Goyang, and Yeongjongdo.',
+        ],
+        table: {
+          caption: 'Key K-Pop Concert Venues Around Seoul: Capacity, Transit & Post-Show Tips',
+          headers: ['Venue', 'Approx. Capacity', 'Subway / Shuttle Access', 'Smart Exit Strategy'],
+          rows: [
+            [
+              'KSPO Dome (Olympic Park)',
+              '~15,000',
+              'Line 5 & 9 Olympic Park Station (Exit 3/4)',
+              'Walk 15m west to Mongchontoseong (Line 8) if Olympic Park station queues back up',
+            ],
+            [
+              'Gocheok Sky Dome',
+              '~16,000 – 20,000',
+              'Line 1 Guil Station (Exit 2, right outside dome)',
+              'Platform fills quickly after encores; grab snacks nearby for 20m to beat crowds',
+            ],
+            [
+              'Jamsil Indoor Stadium',
+              '~11,000',
+              'Line 2 & 9 Sports Complex Station (Exit 6/7)',
+              'Walk one stop toward Samseong or Sincheon for calmer Line 2 boarding',
+            ],
+            [
+              'Inspire Arena (Incheon)',
+              '~15,000',
+              'Airport Railroad Cargo Terminal / T2 + venue shuttle',
+              'Pre-book official shuttle passes or Kakao T early; remote island location',
+            ],
+            [
+              'Goyang Stadium',
+              '~40,000+',
+              'Line 3 Daehwa Station (Exit 3) / GTX-A KINTEX',
+              'Check GTX-A or Line 3 northbound/southbound direction signs carefully at dusk',
+            ],
+          ],
+        },
+      },
+      {
+        id: 'lightstick-sync-and-packing',
+        heading: '3. Lightstick Bluetooth Sync & Your Concert-Day Packing List',
+        paragraphs: [
+          'Nothing beats the moment arena house lights drop and 18,000 official lightsticks—ARMY Bombs, Nachimbongs, BI-Ping-Bongs, or Candybongs—ripple in synchronized waves. To make sure yours connects seamlessly, install the group’s official lightstick app and input your exact section, row, and seat number while sitting on hotel or home Wi-Fi before leaving for the stadium. Wait until you sit down inside the bowl? Spotty arena data often stalls app logins right before curtain.',
+          'Remember also that lightsticks draw surprising power over three-hour shows packed with wireless color changes. Cheap dollar-store batteries fade dim halfway through Act 2; load brand-new alkaline AAA batteries the morning of the concert and toss a spare set of three into your pocket.',
+        ],
+        callout: {
+          tone: 'tip',
+          title: 'Pack Fresh Alkaline AAA Batteries & Check Venue Bag Sizes',
+          body: 'Never store batteries inside your lightstick for months between tours—corrosion ruins battery cartridges permanently! Remove the cartridge after every show, keep three fresh alkaline AAAs sealed in your bag, and check clear-bag or A4-size pouch limits before leaving for overseas stadiums.',
+        },
+        bullets: [
+          'High-fidelity concert earplugs: Protect your ears from sustained screaming and sub-bass without muffling live vocals.',
+          'Slim portable phone power bank (10,000mAh) + short charging cable for digital tickets, Naver Map, and transit apps afterward.',
+          'Plastic Ziploc pouch or hard acrylic sleeve if trading photocards or carrying signed banner slogans home on crowded trains.',
+        ],
+      },
+      {
+        id: 'merch-freebies-and-encores',
+        heading: '4. Arriving Early: Merch Lines, Freebies & Marathon Encores',
+        paragraphs: [
+          'Even with assigned seats, fans routinely reach venues 3 to 5 hours early. Official merchandise tents often launch pre-order pickup windows via Weverse or venue QR queues in the morning so you don’t waste the afternoon standing in line—though photo-zone banners, sponsor booths, and fan-club photo ticket stations stay lively until doors open.',
+          'One hallmark of K-Pop concert culture is "freebies"—small handmade gift bags assembled by fellow fans containing custom stickers, beaded bracelets, candies, and unofficial mini-photocards. If someone hands you a small packet in line, smile and accept it warmly ("Thank you!"); bringing a handful of wrapped candies or small stickers to trade back makes breaking the ice effortless even when attending solo.',
+          'Budget stamina for the final stretch, too: after the main setlist wraps, Korean shows routinely deliver 20- to 40-minute "ment" speeches followed by high-energy double or triple encores where artists roam catwalks tossing signed balls and joking with fan banners.',
+        ],
+      },
+      {
+        id: 'seoul-vs-global-etiquette',
+        heading: '5. Concert Etiquette: Seoul Shows vs. Overseas World Tours',
+        paragraphs: [
+          'Behavior expectations shift noticeably between Western stadium dates and Seoul domestic shows. Overseas arena crowds stand for almost the entire setlist and film freely on smartphones. Inside Seoul venues like KSPO Dome or Gocheok Sky Dome, audiences remain seated throughout almost every song (except designated jumping encore moments so nobody blocks rows behind them) and sing fanchants in crisp unison during instrumental breaks.',
+          'Equally vital: check Seoul metro cutoffs ahead of weekend shows. Many Seoul subway branches stop running between 11:30 PM and midnight, so if a 6:00 PM concert stretches past 9:45 PM, walk briskly toward secondary station exits or map out late-night Owl Bus routes before crowds bottleneck outside.',
+        ],
+        callout: {
+          tone: 'etiquette',
+          title: 'Strict Camera Rules & Sightline Courtesy in Seoul',
+          body: 'Korean concert venues strictly prohibit DSLR cameras, zoom lenses, and often unauthorized smartphone filming during live shows—ushers patrolling aisles regularly eject repeat offenders without refunds. Keep phone screens dim, never raise lightsticks, headbands, or paper slogans higher than your forehead, and leave bulky plush backpacks under your seat.',
+        },
+      },
+    ],
+    companionCta: {
+      eyebrow: 'Fandom Readiness Check',
+      title: 'Test Your K-Pop Fandom & Concert Lore IQ',
+      description:
+        'Challenge yourself on lightstick nicknames, official fandom names, fanchant traditions, and music milestones across 30 explained trivia questions.',
+      href: '/quiz/kpop-fandom-trivia',
+      buttonLabel: 'Play All-Fandom Trivia Quiz',
+    },
+    relatedQuizSlugs: ['kpop-fandom-trivia', 'bts-army-trivia', 'stray-kids-stay-trivia'],
+    sources: [
+      {
+        label: 'Visit Seoul — Major Performance Venues & Transit',
+        detail: 'Subway routes and visitor information for Olympic Park KSPO Dome, Jamsil, and Gocheok Sky Dome.',
+        url: 'https://english.visitseoul.net',
+      },
+      {
+        label: 'Korea Sports Promotion Foundation (KSPO)',
+        detail: 'Olympic Park venue maps, KSPO Dome facilities, and event-day crowd guidance.',
+      },
+      {
+        label: 'Interpark Global & Melon Ticket Global Ticketing Guidelines',
+        detail: 'Official foreign-passport ID verification policies and electronic ticket pickup procedures.',
+      },
+    ],
+  },
+  {
+    slug: 'kpop-survival-shows-sixteen-iland-stray-kids-explained',
+    locale: 'en',
+    title:
+      'How K-Pop Survival Shows Built Today’s Biggest Groups: SIXTEEN, Stray Kids, I-LAND & Produce Explained',
+    subtitle:
+      'Why televised audition programs turned trainee evaluations into global pop hits—comparing single-agency debut shows with multi-agency project groups, 1-pick voting swings, and "evil editing."',
+    description:
+      'Understand K-Pop survival shows: SIXTEEN (TWICE), Stray Kids, I-LAND (ENHYPEN), Produce 101/48, Girls/Boys Planet—formats, 1-pick voting, and lasting legacy.',
+    category: 'K-Pop & K-Drama',
+    tags: ['Survival Shows', 'TWICE', 'Stray Kids', 'ENHYPEN'],
+    keywords: [
+      'K-Pop survival shows explained',
+      'SIXTEEN TWICE survival show',
+      'I-LAND ENHYPEN format',
+      'Stray Kids survival show history',
+      'K-Pop 1-pick voting evil editing',
+    ],
+    publishedAt: '2026-11-24',
+    updatedAt: '2026-11-25',
+    author: {
+      name: 'K-Pulse Editorial Team',
+      role: 'Korean Culture & K-Pop Research Desk',
+    },
+    coverEmoji: '📺',
+    accentBg: 'bg-pink-50',
+    featured: false,
+    keyTakeaways: [
+      'K-Pop survival shows invert the classic music-industry debut model: fans fall in love with trainees across 10+ episodes BEFORE debut day, creating massive day-one album sales.',
+      'Single-agency survival shows (SIXTEEN for TWICE, Stray Kids, I-LAND for ENHYPEN) build permanent long-term groups, whereas multi-agency programs (Produce, Boys Planet) form fixed-term project groups.',
+      'Understanding "Signal Song Centers" and the finale shift from multi-pick to "1-pick" voting explains why popular early contestants occasionally plunge in the final episode.',
+      'Even groups not formed on project shows carry deep survival-show DNA—from LE SSERAFIM and IVE featuring IZ*ONE alumni to SEVENTEEN and aespa stories.',
+    ],
+    intro: [
+      'In Western pop, audition shows mostly discover solo singers covering radio ballads in front of four spinning chairs. South Korean television twisted that blueprint into something far higher stakes: multi-month documentary competitions where teenage trainees perform original choreography, learn leadership under intense camera pressure, and fight for slots inside major idol lineups.',
+      'Whether you first heard of K-Pop through TWICE, Stray Kids, ENHYPEN, ZEROBASEONE, or ILLIT, nearly every modern era of Korean pop carries fingerprints from survival broadcasting. Fans who stayed up watching live finale streams years ago still remember exactly where they sat when final member seats were announced.',
+      'Breaking down how these formats work—and why television editing and voting math shape final lineups so dramatically—makes rewatching pre-debut eras ten times more revealing.',
+    ],
+    sections: [
+      {
+        id: 'why-survival-shows-work',
+        heading: '1. Why Survival Shows Became K-Pop’s Strongest Debut Engine',
+        paragraphs: [
+          'Launching a rookie K-Pop group silently from behind closed agency doors always carried massive financial risk: companies invest years of vocal, dance, and housing budgets before a single listener knows any trainee’s name.',
+          'Survival broadcasts solved that cold-start problem brilliantly. By turning monthly internal trainee evaluations into serialized primetime episodes complete with rehearsal sweat, teammate mentorship, and behind-the-scenes tears, viewers formed fierce emotional loyalty weeks before the debut single dropped. Groups stepping off a major survival finale regularly sold hundreds of thousands of albums in their very first week—skipping the years-long obscurity that once challenged 2nd- and early-3rd-generation rookies.',
+        ],
+      },
+      {
+        id: 'six-landmark-shows-table',
+        heading: '2. Six Landmark K-Pop Survival Shows Compared',
+        paragraphs: [
+          'Not all audition programs follow the same rules. Compare how six defining programs from 2015 onward balanced fan votes against agency producers.',
+        ],
+        table: {
+          caption: 'Six Defining K-Pop Survival Shows (2015–2023): Formats & Legacy Groups',
+          headers: ['Program (Year)', 'Agency / Network', 'Core Elimination Format', 'Debut Group(s) & Impact'],
+          rows: [
+            [
+              'SIXTEEN (2015)',
+              'JYP Entertainment / Mnet',
+              'Major vs. Minor necklace tiers; missions + viewer polls decided by J.Y. Park',
+              'TWICE (9 members, pioneering modern girl-group dominance)',
+            ],
+            [
+              'Produce 101 / 48 (2016–2018)',
+              'CJ ENM / Mnet (multi-agency)',
+              '101 trainees ranked A–F; pure viewer voting pyramid',
+              'I.O.I, Wanna One, IZ*ONE (IZ*ONE alumni later led IVE & LE SSERAFIM)',
+            ],
+            [
+              'Stray Kids (2017)',
+              'JYP Entertainment / Mnet',
+              'Team-vs-agency survival ("9 or none"); live finale vote returned eliminated members',
+              'Stray Kids (self-producing Bang Chan-led team model)',
+            ],
+            [
+              'I-LAND (2020)',
+              'BELIFT LAB (HYBE × CJ) / Mnet',
+              'Closed I-LAND cube vs. Ground; peer, producer & global votes combined',
+              'ENHYPEN (7 members; global Weverse-integrated debut)',
+            ],
+            [
+              'Girls / Boys Planet (2021–2023)',
+              'Mnet (global multi-agency)',
+              'Regional language cells + third-party audited global app voting',
+              'Kep1er, ZEROBASEONE (million-selling 5th-Gen project opener)',
+            ],
+            [
+              'R U Next? (2023)',
+              'BELIFT LAB / JTBC',
+              '7 rounds of vocal/concept evaluations mixing coach points & fan votes',
+              'ILLIT (5-member debut; global easy-listening streaming smash)',
+            ],
+          ],
+        },
+      },
+      {
+        id: 'agency-shows-vs-project-groups',
+        heading: '3. Permanent Agency Groups vs. Fixed-Term Project Groups',
+        paragraphs: [
+          'A crucial line separates single-agency debut shows from multi-agency project programs—explaining why some survival groups tour together for a decade while others disband right at their peak after 18 to 30 months.',
+        ],
+        subsections: [
+          {
+            heading: 'Single-Agency Blueprint: SIXTEEN, Stray Kids & I-LAND',
+            paragraphs: [
+              'When one agency already houses the trainees, survival shows act as the final team-building crucible for a permanent seven-year-plus group. In 2015’s SIXTEEN, JYP initially set seven seats for TWICE before adding Tzuyu on overwhelming audience support and bringing back Momo in the finale to lock in performance precision—creating the nine-member powerhouse that redefined Asia’s girl-group market. Two years later, Mnet’s Stray Kids inverted the competition completely: trainee leader Bang Chan personally assembled his own team (including producer partners Changbin and HAN), fighting J.Y. Park’s eliminations until live viewer votes brought Lee Know and Felix back into the debut mission.',
+              'Similarly, 2020’s I-LAND locked 23 trainees inside a futuristic architectural facility divided into upper-tier "I-LAND" and lower-tier "Ground," blending internal trainee voting, producer evaluations, and massive global fan votes to debut ENHYPEN’s seven-member lineup (six by global vote plus producer pick Sunoo).',
+            ],
+          },
+          {
+            heading: 'Multi-Agency Project Blueprint: Produce, Planet & Post-Disbandment Waves',
+            paragraphs: [
+              'Multi-agency shows pull hopefuls from dozens of independent labels onto temporary 1.5- to 2.5-year supergroup contracts like I.O.I, Wanna One, IZ*ONE, and ZEROBASEONE. Because trainees eventually return to their home agencies, every finale sparks bittersweet countdowns—yet their post-group careers reshape the entire industry. After IZ*ONE concluded in 2021, Chaewon and Sakura anchored LE SSERAFIM while Wonyoung and Yujin propelled IVE to chart dominance.',
+            ],
+          },
+        ],
+      },
+      {
+        id: 'voting-politics-and-evil-editing',
+        heading: '4. Decoding Survival Politics: Signal Songs, 1-Pick & "Evil Editing"',
+        paragraphs: [
+          'Watching a K-Pop survival episode without knowing three unspoken production mechanics feels like watching chess without knowing how knights move. First is the "Signal Song Center": every multi-group season opens with a massive theme performance where trainees evaluate into A–F tiers, and whoever wins the center spotlight routinely rides viral fancams straight into the debut lineup.',
+          'Second is "Evil Editing" ("악마의 편집", akma-ui pyeonjip): editors compress 72 hours of exhausted rehearsal footage into 12 tense minutes—occasionally inserting reaction shots or ominous cello stings out of chronological order to paint a stressed leader as selfish or indifferent. Savvy fans wait for unedited behind-the-scenes cams before judging any trainee’s personality.',
+        ],
+        callout: {
+          tone: 'note',
+          title: 'Why Multi-Pick vs. "1-Pick" Voting Flips Finales Overnight',
+          body: 'In early rounds, viewers vote for 6, 8, or 9 favorites simultaneously—so cheerful, universally liked "second-favorite" trainees rank safely in the Top 5. In the finale, rules suddenly drop to "1-Pick" (only ONE vote per person). Overnight, mild crowd-pleasers lose shared support while polarizing contestants with fiercely loyal core fans surge from #11 straight into the debut group!',
+        },
+      },
+      {
+        id: 'rewatching-pre-debut-eras',
+        heading: '5. Why Fans Still Rewatch Pre-Debut Survival Episodes Years Later',
+        paragraphs: [
+          'Long after a group upgrades from cramped practice basements to sold-out stadium world tours, new fans still circle back to watch SIXTEEN, Stray Kids, or I-LAND from Episode 1. Seeing teenage performers stumble over high notes, coach teammates after midnight, or weep when eliminated friends leave the dorm transforms polished stage personas into deeply relatable human stories.',
+          'Note also that following 2019 industry controversies around vote manipulation in earlier Produce seasons, South Korean broadcasters introduced strict third-party independent auditing firms to verify global survival tallies—ensuring modern global seasons run under transparent external oversight.',
+        ],
+        bullets: [
+          'Where to start gently: Watch iconic mission performances on official network YouTube channels first (like Stray Kids’ "Hellevator" or I-LAND’s "Into the I-LAND") before committing to full 10-episode binge watches.',
+          'Remember how much idols grow: Trainees filmed at 15 or 17 years old often transform dramatically in vocal confidence, songwriting skill, and teamwork within two years of debut.',
+        ],
+      },
+    ],
+    companionCta: {
+      eyebrow: 'Meet the Alumni',
+      title: 'Which ENHYPEN Member Matches Your Personality?',
+      description:
+        'See which of I-LAND’s seven ENHYPEN members shares your energy, stage intuition, and teamwork instincts in our 10-question personality quiz.',
+      href: '/quiz/which-enhypen-member-are-you',
+      buttonLabel: 'Take the ENHYPEN Quiz',
+    },
+    relatedQuizSlugs: [
+      'which-twice-member-are-you',
+      'which-stray-kids-member-are-you',
+      'which-enhypen-member-are-you',
+      'which-le-sserafim-member-are-you',
+    ],
+    sources: [
+      {
+        label: 'Billboard K-Pop Chart & Debut Archives',
+        detail: 'Debut timelines and global chart milestones for TWICE, Stray Kids, ENHYPEN, LE SSERAFIM, and ZEROBASEONE.',
+        url: 'https://www.billboard.com',
+      },
+      {
+        label: 'Korea Creative Content Agency (KOCCA)',
+        detail: 'Broadcast industry reports on Korean music audition formats and global OTT fandom participation.',
+      },
+      {
+        label: 'Korea Communications Standards Commission',
+        detail: 'Broadcast viewer-voting transparency standards and post-2019 external auditing reforms.',
+      },
+    ],
+  },
 ];

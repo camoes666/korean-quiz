@@ -173,7 +173,7 @@ const TRIVIA_LINKS = [
   },
 ];
 
-export default function Footer() {
+export default function Footer({ articleCount }: { articleCount?: number }) {
   const { t, lang } = useLanguage();
 
   const pickLabel = (item: { en: string; ko: string; es: string; pt: string }) =>
@@ -282,7 +282,7 @@ export default function Footer() {
                   href="/articles"
                   className="font-semibold text-slate-900 hover:underline transition-colors block"
                 >
-                  All Korean Culture Articles (16)
+                  All Korean Culture Articles{articleCount ? ` (${articleCount})` : ''}
                 </Link>
               </li>
               {EDITORIAL_ARTICLE_LINKS.map((item) => (

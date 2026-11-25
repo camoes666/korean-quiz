@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import type { SiteLocale } from './i18nRoutes';
 
-export const SITE_LAST_UPDATED = '2026-11-24';
+export const SITE_LAST_UPDATED = '2026-11-25';
 
 /**
  * Only index the primary English pages during AdSense review so multi-locale

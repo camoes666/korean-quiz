@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import HomeClient from '@/components/HomeClient';
-import { getFeaturedArticleSummaries } from '@/lib/articles';
+import { getAllArticles, getFeaturedArticleSummaries } from '@/lib/articles';
 import { PREFIX_LOCALES, isPrefixLocale } from '@/lib/i18nRoutes';
 import { getHomeMetadata } from '@/lib/pageSeo';
 
@@ -29,5 +29,11 @@ export default async function LocaleHomePage({ params }: LocaleHomeProps) {
     notFound();
   }
   const featuredArticles = getFeaturedArticleSummaries(6);
-  return <HomeClient featuredArticles={featuredArticles} />;
+  const totalArticleCount = getAllArticles().length;
+  return (
+    <HomeClient
+      featuredArticles={featuredArticles}
+      totalArticleCount={totalArticleCount}
+    />
+  );
 }

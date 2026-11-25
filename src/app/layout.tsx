@@ -7,6 +7,7 @@ import Footer from '@/components/Footer';
 import { LanguageProvider } from '@/context/LanguageContext';
 import { GameProvider } from '@/context/GameContext';
 import { GA_MEASUREMENT_ID } from '@/lib/analytics';
+import { getAllArticles } from '@/lib/articles';
 
 const ADSENSE_CLIENT_ID =
   process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID?.trim() || 'ca-pub-6731103569114139';
@@ -135,7 +136,7 @@ export default function RootLayout({
           <GameProvider>
             <Navbar />
             <div className="flex-1">{children}</div>
-            <Footer />
+            <Footer articleCount={getAllArticles().length} />
           </GameProvider>
         </LanguageProvider>
       </body>

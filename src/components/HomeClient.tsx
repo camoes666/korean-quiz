@@ -20,8 +20,10 @@ const CATEGORIES: Category[] = ['All', 'K-Pop', 'K-Drama', 'Food', 'Culture'];
 
 export default function HomeClient({
   featuredArticles = [],
+  totalArticleCount,
 }: {
   featuredArticles?: ArticleSummary[];
+  totalArticleCount?: number;
 }) {
   const { t, lang } = useLanguage();
   const { currentLevel, progressPercent, xpToNextLevel } = useGame();
@@ -519,7 +521,11 @@ export default function HomeClient({
               href="/articles"
               className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-slate-900 hover:text-rose-700 transition-colors shrink-0"
             >
-              <span>Browse All 16 Editorial Guides</span>
+              <span>
+                {totalArticleCount
+                  ? `Browse All ${totalArticleCount} Editorial Guides`
+                  : 'Browse All Editorial Guides'}
+              </span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
